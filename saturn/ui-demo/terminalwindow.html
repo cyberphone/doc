@@ -53,7 +53,7 @@ div.cardimage {width:212px;height:127px;border-style:groove;border-width:2px;bor
             toast('Empty PIN - Ignored');
         } else {
             if (pinErrors == 3) {
-                toast('Blocked');
+                toast('Card blocked due to previous PIN errors!');
             } else if (pin == '1234') {
                 var processing = document.getElementById('processing');
                 processing.style.left = ((window.innerWidth - processing.offsetWidth) / 2) + 'px';
@@ -67,6 +67,7 @@ div.cardimage {width:212px;height:127px;border-style:groove;border-width:2px;bor
                     processing.style.visibility = 'hidden';
                     document.getElementById('whitener').style.visibility = 'hidden';
                     success.style.visibility = 'visible';
+                    toast('Hit reload if you want to test again')
                 }, 2000);
             } else {
                 pinErrors++;
