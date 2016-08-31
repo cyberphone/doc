@@ -5,6 +5,23 @@ td.label {text-align:right;padding:2pt 3pt 3pt 0pt}
 td.field {padding:2pt 6pt 3pt 6pt;border-width:1px;border-style:solid;border-color:#808080;background-color:#fafafa;min-width:10em}
 td.pan {text-align:center;padding:5pt 0 0 0;font-size:9pt}
 div.cardimage {width:212px;height:127px;border-style:groove;border-width:2px;border-color:#C0C0C0;border-radius:15px;box-shadow:5px 5px 5px #D0D0D0;background-size:cover;background-repeat:no-repeat}
+span.marquee  {
+    display: inline-block;
+    white-space:nowrap;
+    animation-name: rollingtext;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    font-size:10pt;
+}
+
+
+/* Make it move */
+@keyframes rollingtext {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
 </style>
 <script type="text/javascript">
     'use strict';
@@ -93,6 +110,8 @@ div.cardimage {width:212px;height:127px;border-style:groove;border-width:2px;bor
         showPin();
         card.style.left = ((window.innerWidth - card.offsetWidth) / 2) + 'px';
         paydata.style.left = ((window.innerWidth - paydata.offsetWidth - document.getElementById('payfield').offsetWidth) / 2) + 'px';
+        document.getElementById('amount').style.maxWidth = document.getElementById('payfield').offsetWidth + 'px';
+        document.getElementById('amount').innerHTML = parent.showedAmount;
         var kbdTop = window.innerHeight - Math.floor(kbd.offsetHeight * 1.1);
         kbd.style.top = kbdTop + 'px';
         kbd.style.left = ((window.innerWidth - kbd.offsetWidth) / 2) + 'px';
@@ -123,7 +142,7 @@ div.cardimage {width:212px;height:127px;border-style:groove;border-width:2px;bor
     <table id='paydata' style='visibility:hidden;position:absolute'>
         <tr><td id='payfield' class='label'>Payee</td><td class='field' title='Common name of payee'>Demo Merchant</td></tr>
         <tr><td colspan='2' style='height:5pt'></td></tr>
-        <tr><td class='label'>Amount</td><td class='field' title='Amount to pay or reserve'>$1,999.25</td></tr>
+        <tr><td class='label'>Amount</td><td id='amount' class='field'  style='overflow:hidden;white-space:nowrap' title='Amount to pay or reserve'></td></tr>
         <tr><td colspan='2' style='height:5pt'></td></tr>
         <tr>
             <td class='label'>PIN</td>

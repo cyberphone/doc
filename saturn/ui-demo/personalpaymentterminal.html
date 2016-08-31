@@ -3,34 +3,48 @@
 body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','DejaVu Sans',Arial,'Liberation Sans';background-color:white}
     li {padding-bottom:6pt}
 </style>
+<script type="text/javascript">
+    'use strict';
+    const STANDARD_AMOUNT = '$\u200a1,999.25';
+    var showedAmount = STANDARD_AMOUNT;
+    function gasStationOrNot(gasStation) {
+        if (gasStation) {
+            showedAmount = '$\u200a200<br><span class="marquee"><i>Reserved</i>, actual payment will match tanked quantity</span>';
+        } else {
+            showedAmount = STANDARD_AMOUNT;
+        }
+        document.getElementById('payframe').src = document.getElementById('payframe').src;
+    }
+</script>
 </head><body>
-           <table style="border-collapse:collapse">
-               <tr>
-                   <td style="background-color:grey;color:white;padding:3pt;border-width:0 1px 0 1px;border-color:black;border-style:solid">&nbsp;Requester: demomerchant.com</td>
-                   <td rowspan="2" width="600"><div style="padding-left:50pt"><div style="font-weight:bold;text-align:center;padding-bottom:20pt">Personal Payment Terminal</div>
-                       The Web UI on the left side simulates the final step in an Android &quot;App&quot; based <i>Personal&nbsp;Payment&nbsp;Terminal</i> having the following core characteristics:
-                       <ul>
-                       <li>Eliminates the traditional payment terminal</li>
-                       <li>Supports most payee-initiated payment scenarios including:
-                           <ul>
-                               <li style="padding-top:3pt">Local payments in a shop using NFC/BLE</li>
-                               <li>Payments using the mobile Web</li>
-                               <li>Usage as a &quot;payment companion&quot; to a PC/Mac on the Web using NFC/BLE or QR-code</li>
-                           </ul></li>
-                       <li>Maintains a security-level comparable to EMV-cards</li>
-                       </ul>
-                            <div style="padding-top:20pt;font-size:8pt;font-style:italic">
-                                Note: The Personal Payment Terminal is NOT A PRODUCT; it is rather a
-                                technology demonstrator and verifier.<p>Several functions depend on
-                                mechanisms currently not available in Android and Chrome.
-                                The somewhat bold goal is converting these fully application-neutral additions to the mobile ecosystem
-                                into de-facto standards.</p>
-                            </div>
-                       </div></td>
-               </tr>
-               <tr>
-                   <td style="border-width:0 1px 1px 1px;border-color:black;border-style:solid"><iframe src="terminalwindow.html" width="360" height="600" style="border:none"/></td>
-               </tr>
-           </table>
-    </body>
+        <table style="border-collapse:collapse">
+            <tr>
+                <td style="background-color:grey;color:white;padding:3pt;border-width:0 1px 0 1px;border-color:black;border-style:solid">&nbsp;Requester: demomerchant.com</td>
+                <td rowspan="2" width="600"><div style="padding-left:50pt"><div style="font-weight:bold;text-align:center;padding-bottom:20pt">Personal Payment Terminal</div>
+                    The Web UI on the left side simulates the final step in an Android &quot;App&quot; based <i>Personal&nbsp;Payment&nbsp;Terminal</i> having the following core characteristics:
+                    <ul>
+                    <li>Eliminates the traditional payment terminal</li>
+                    <li>Supports most payee-initiated payment scenarios including:
+                        <ul>
+                            <li style="padding-top:3pt">Local payments in a shop using NFC/BLE</li>
+                            <li>Payments using the mobile Web</li>
+                            <li>Usage as a &quot;payment companion&quot; to a PC/Mac on the Web using NFC/BLE or QR-code</li>
+                        </ul></li>
+                    <li>Maintains a security-level comparable to EMV-cards</li>
+                    </ul>
+                    <input type='checkbox' onclick="gasStationOrNot(this.checked)"/>&nbsp;Automated gas station mode
+                        <div style="padding-top:20pt;font-size:8pt;font-style:italic">
+                            Note: The Personal Payment Terminal is NOT A PRODUCT; it is rather a
+                            technology demonstrator and verifier.<p>Several functions depend on
+                            mechanisms currently not available in Android and Chrome.
+                            The somewhat bold goal is converting these fully application-neutral additions to the mobile ecosystem
+                            into de-facto standards.</p>
+                        </div>
+                    </div></td>
+            </tr>
+            <tr>
+                <td style="border-width:0 1px 1px 1px;border-color:black;border-style:solid"><iframe id="payframe" src="terminalwindow.html" width="360" height="600" style="border:none"/></td>
+            </tr>
+        </table>
+</body>
 </html>
