@@ -123,13 +123,6 @@ span.marquee  {
         kbd.style.visibility = 'visible';
     }
 
-    window.addEventListener('pageshow', function (event) {
-        pinfield.innerHTML = "<span style='color:red'>Demo PIN = 1234</span>";
-        setTimeout(function () {
-            showPin();
-        }, 2000);
-    });
-
 </script>
 </head><body onload="positionElements()">
     <div id='whitener' style='width:100%;height:100%;z-index:5;position:absolute;visibility:hidden;opacity:0.6;background-color:grey;padding:0px'></div>

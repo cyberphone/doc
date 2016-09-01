@@ -9,7 +9,7 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
     var showedAmount = STANDARD_AMOUNT;
     function gasStationOrNot(gasStation) {
         if (gasStation) {
-            showedAmount = '$\u200a200<br><span class="marquee"><i>Reserved</i>, actual payment will match tanked quantity</span>';
+            showedAmount = '$\u200a200<br><span class="marquee"><i>Reserved</i>, actual payment will match fuel quantity</span>';
         } else {
             showedAmount = STANDARD_AMOUNT;
         }
@@ -32,6 +32,7 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
                         </ul></li>
                     <li>Maintains a security-level comparable to EMV-cards</li>
                     </ul>
+                    <div style="padding-bottom:5pt">Demo PIN: <span style="color:red">1234</span></div>
                     <input type='checkbox' onclick="gasStationOrNot(this.checked)" autocomplete="off"/>&nbsp;Automated gas station mode
                         <div style="padding-top:20pt;font-size:8pt;font-style:italic">
                             Note: The Personal Payment Terminal is NOT A PRODUCT; it is rather a
