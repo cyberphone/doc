@@ -1,17 +1,18 @@
 ﻿<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Personal Paymemt Terminal</title>
 <style type="text/css">
 body {margin:0px;padding:0px;font-size:12pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','DejaVu Sans',Arial,'Liberation Sans';background-color:white}
-td.label {text-align:right;padding:2pt 3pt 3pt 0pt}
-td.field {padding:2pt 6pt 3pt 6pt;border-width:1px;border-style:solid;border-color:#808080;background-color:#fafafa;min-width:10em}
+td.label {text-align:right;padding:3pt 3pt 3pt 0pt}
+td.field {padding:3pt 6pt 3pt 6pt;border-width:1px;border-style:solid;border-color:#808080;background-color:#fafafa;min-width:10em}
 td.pan {text-align:center;padding:5pt 0 0 0;font-size:9pt}
 div.cardimage {width:212px;height:127px;border-style:groove;border-width:2px;border-color:#C0C0C0;border-radius:15px;box-shadow:5px 5px 5px #D0D0D0;background-size:cover;background-repeat:no-repeat}
 span.marquee  {
     display: inline-block;
+    position:relative;
+    top:1pt;
     white-space:nowrap;
     animation-name: rollingtext;
-    animation-duration: 7s;
+    animation-duration: 12s;
     animation-timing-function: linear;
-    animation-delay: 2s;
     animation-iteration-count: infinite;
     font-size:10pt
 }
@@ -19,8 +20,11 @@ span.marquee  {
 
 /* Make it move */
 @keyframes rollingtext {
-    0%   { transform: translate(0, 0) }
-    100% { transform: translate(-100%, 0) }
+    0% {transform: translate(0, 0)}
+    40% {transform: translate(0, 0)}
+    65% { transform: translate(-105%, 0) }
+    75% { transform: translate(-105%, 0) }
+    100% { transform: translate(0, 0) }
 }
 </style>
 <script type="text/javascript">
@@ -49,7 +53,7 @@ span.marquee  {
         if (pin.length == 0) {
             pinfield.innerHTML = "<span style='color:#a0a0a0'>Please enter PIN</span>";
         } else {
-            var pwd = "<span style='font-size:10pt:padding-bottom:1pt'>";
+            var pwd = "<span style='font-size:10pt;position:relative;top:-1pt'>";
             for (var i = 0; i < pin.length; i++) {
                 pwd += '\u25cf\u2009';
             }
