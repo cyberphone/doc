@@ -11,7 +11,7 @@ span.marquee  {
     top:1pt;
     white-space:nowrap;
     animation-name: rollingtext;
-    animation-duration: 12s;
+    animation-duration: 10s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     font-size:10pt
@@ -20,11 +20,13 @@ span.marquee  {
 
 /* Make it move */
 @keyframes rollingtext {
-    0% {transform: translate(0, 0)}
-    40% {transform: translate(0, 0)}
-    65% { transform: translate(-105%, 0) }
-    75% { transform: translate(-105%, 0) }
-    100% { transform: translate(0, 0) }
+    0% {opacity:1;text-indent: 0em}
+    33% {opacity:1;text-indent: 0em}
+    75% {opacity:1;text-indent: -30em }
+    76% {opacity:0;text-indent: -30em }
+    77% {opacity:0;text-indent: 15em }
+    78% {opacity:1;text-indent: 15em }
+    100% {opacity:1;text-indent: 0em}
 }
 </style>
 <script type="text/javascript">
