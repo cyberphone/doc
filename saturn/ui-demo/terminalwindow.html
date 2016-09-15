@@ -2,7 +2,7 @@
 <style type="text/css">
 body {margin:0px;padding:0px;font-size:12pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','DejaVu Sans',Arial,'Liberation Sans';background-color:white}
 td.label {text-align:right;padding:3pt 3pt 3pt 0pt}
-td.field {padding:3pt 6pt 3pt 6pt;border-width:1px;border-style:solid;border-color:#808080;background-color:#fafafa;min-width:10em}
+td.field {min-width:11em;max-width:15em;padding:3pt 6pt 3pt 6pt;border-width:1px;border-style:solid;border-color:#808080;background-color:#fafafa;overflow:hidden;white-space:nowrap;box-sizing:border-box}
 td.pan {text-align:center;padding:5pt 0 0 0;font-size:9pt}
 div.cardimage {width:212px;height:127px;border-style:groove;border-width:2px;border-color:#C0C0C0;border-radius:15px;box-shadow:5px 5px 5px #D0D0D0;background-size:cover;background-repeat:no-repeat}
 span.marquee  {
@@ -64,11 +64,15 @@ span.marquee  {
     }
 
     function addDigit(digit) {
-        pinfield.innerHTML = pin.length == 0 ? digit : pinfield.innerHTML + digit;
-        pin += digit;
-        setTimeout(function () {
-            showPin();
-        }, 500);
+        if (pin.length < 16) {
+            pinfield.innerHTML = pin.length == 0 ? digit : pinfield.innerHTML + digit;
+            pin += digit;
+            setTimeout(function () {
+                showPin();
+            }, 500);
+        } else {
+            toast('PIN digit ignored');
+        }
     }
 
     function validatePin() {
@@ -115,9 +119,10 @@ span.marquee  {
         success.style.top = ((window.innerHeight - success.offsetHeight) / 2) + 'px';
         showPin();
         card.style.left = ((window.innerWidth - card.offsetWidth) / 2) + 'px';
-        paydata.style.left = ((window.innerWidth - paydata.offsetWidth - document.getElementById('payfield').offsetWidth) / 2) + 'px';
-        document.getElementById('amount').style.maxWidth = document.getElementById('payfield').offsetWidth + 'px';
-        document.getElementById('amount').innerHTML = parent.showedAmount;
+        paydata.style.left = ((window.innerWidth - paydata.offsetWidth - document.getElementById('payeelabel').offsetWidth) / 2) + 'px';
+        var fieldwidth = document.getElementById('payeefield').offsetWidth + 'px';
+        document.getElementById('amountfield').style.maxWidth = document.getElementById('pinfield').style.maxWidth = fieldwidth;
+        document.getElementById('amountfield').innerHTML = parent.showedAmount;
         var kbdTop = window.innerHeight - Math.floor(kbd.offsetHeight * 1.1);
         kbd.style.top = kbdTop + 'px';
         kbd.style.left = ((window.innerWidth - kbd.offsetWidth) / 2) + 'px';
@@ -139,9 +144,9 @@ span.marquee  {
     <div id='toaster' style='border-color:grey;border-style:solid;border-width:3px;text-align:center;font-size:10pt;z-index:8;background-color:#f0f0f0;position:absolute;visibility:hidden;padding:5pt 10pt 5pt 10pt'>Message...</div>
     <img src='saturnlogo.svg' style='width:20%' title='Saturn is it'>
     <table id='paydata' style='visibility:hidden;position:absolute'>
-        <tr><td id='payfield' class='label'>Payee</td><td class='field' title='Common name of payee'>Demo Merchant</td></tr>
+        <tr><td id='payeelabel' class='label'>Payee</td><td id='payeefield' class='field' title='Common name of payee'>Demo Merchant</td></tr>
         <tr><td colspan='2' style='height:5pt'></td></tr>
-        <tr><td class='label'>Amount</td><td id='amount' class='field'  style='overflow:hidden;white-space:nowrap' title='Amount to pay or reserve'></td></tr>
+        <tr><td class='label'>Amount</td><td id='amountfield' class='field' title='Amount to pay or reserve'></td></tr>
         <tr><td colspan='2' style='height:5pt'></td></tr>
         <tr>
             <td class='label'>PIN</td>
