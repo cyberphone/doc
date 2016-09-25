@@ -4,29 +4,29 @@ body {margin:0px;padding:0px;font-size:12pt;color:#000000;font-family:Verdana,'B
 td.label {text-align:right;padding:3pt 3pt 3pt 0pt}
 td.field {min-width:11em;max-width:15em;padding:3pt 6pt 3pt 6pt;border-width:1px;border-style:solid;border-color:#808080;background-color:#fafafa;overflow:hidden;white-space:nowrap;box-sizing:border-box}
 td.pan {text-align:center;padding:5pt 0 0 0;font-size:9pt}
-div.cardimage {width:212px;height:127px;border-style:groove;border-width:2px;border-color:#C0C0C0;border-radius:15px;box-shadow:5px 5px 5px #D0D0D0;background-size:cover;background-repeat:no-repeat}
+div.cardimage {width:212px;height:127px;border-style:groove;border-width:2px;border-color:#c0c0c0;border-radius:15px;box-shadow:5px 5px 5px #d0d0d0;background-size:cover;background-repeat:no-repeat}
 span.marquee  {
-    display: inline-block;
+    display:inline-block;
     position:relative;
     top:1pt;
     white-space:nowrap;
-    animation-name: rollingtext;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    animation-name:rollingtext;
+    animation-duration:10s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
     font-size:10pt
 }
 
 
 /* Make it move */
 @keyframes rollingtext {
-    0% {opacity:1;text-indent: 0em}
-    33% {opacity:1;text-indent: 0em}
-    75% {opacity:1;text-indent: -30em }
-    76% {opacity:0;text-indent: -30em }
-    77% {opacity:0;text-indent: 15em }
-    78% {opacity:1;text-indent: 15em }
-    100% {opacity:1;text-indent: 0em}
+    0% {opacity:1;text-indent:0em}
+    33% {opacity:1;text-indent:0em}
+    75% {opacity:1;text-indent:-30em }
+    76% {opacity:0;text-indent:-30em }
+    77% {opacity:0;text-indent:15em }
+    78% {opacity:1;text-indent:15em }
+    100% {opacity:1;text-indent:0em}
 }
 </style>
 <script type="text/javascript">
@@ -113,6 +113,8 @@ span.marquee  {
     function positionElements() {
         pinfield = document.getElementById('pinfield');
         card = document.getElementById('card');
+        card.rows[0].cells[0].children[0].style.backgroundImage = parent.cardUrl;
+        card.rows[1].cells[0].innerHTML = parent.pan;
         paydata = document.getElementById('paydata');
         kbd = document.getElementById('kbd');
         success = document.getElementById('success');
@@ -142,7 +144,7 @@ span.marquee  {
            <tr><td><img src='working.gif'></td><td>Processing&nbsp;Payment...&nbsp;&nbsp;</td></tr>
      </table>
     <div id='toaster' style='border-color:grey;border-style:solid;border-width:3px;text-align:center;font-size:10pt;z-index:8;background-color:#f0f0f0;position:absolute;visibility:hidden;padding:5pt 10pt 5pt 10pt'>Message...</div>
-    <img src='saturnlogo.svg' style='width:20%' title='Saturn is it'>
+    <img src='saturnlogo.svg' style='width:20%' title='Saturn is it!'>
     <table id='paydata' style='visibility:hidden;position:absolute'>
         <tr><td id='payeelabel' class='label'>Payee</td><td id='payeefield' class='field' title='Common name of payee'>Demo Merchant</td></tr>
         <tr><td colspan='2' style='height:5pt'></td></tr>
@@ -154,8 +156,8 @@ span.marquee  {
         </tr>
     </table>
     <table id='card' style='visibility:hidden;position:absolute'>
-        <tr><td><div class='cardimage' style='background-image:url(supercard.svg)' title='The selected card'></div></td></tr>
-        <tr><td class="pan"  title='Card number or similar account identifier'>6875 0567 4555 2109</td></tr>
+        <tr><td><div class='cardimage' title='The selected card'></div></td></tr>
+        <tr><td class="pan" title='Card number or similar account identifier'></td></tr>
     </table>
     <div id='kbd' style='visibility:hidden;position:absolute;width:88%' title='This part depends on the payment credential, it could for example refer to a biometric reader'>
         <svg xmlns="http://www.w3.org/2000/svg"

@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Personal Paymemt Terminal</title>
+<style type="text/css">
+body {margin:0px;padding:0px;font-size:12pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','DejaVu Sans',Arial,'Liberation Sans';background-color:white}
+td.pan {text-align:center;padding:5pt 0 0 0;font-size:9pt}
+div.cardimage {cursor:pointer;width:212px;height:127px;border-style:groove;border-width:2px;border-color:#c0c0c0;border-radius:15px;box-shadow:5px 5px 5px #d0d0d0;background-size:cover;background-repeat:no-repeat}
+</style>
+<script type="text/javascript">
+    'use strict';
+
+    function selectCard(id) {
+        var card = document.getElementById(id);
+        parent.selectCard(card.rows[0].cells[0].children[0].style.backgroundImage, card.rows[1].cells[0].innerHTML);
+    }
+
+    function positionElements() {
+        var selectText = document.getElementById('select-text');
+        var card = document.getElementById('card1');
+        var gutter = window.innerHeight - selectText.offsetHeight - card.offsetHeight * 2;
+        var left = ((window.innerWidth - card.offsetWidth) / 2) + 'px';
+        card.style.left = left;
+        card.style.top = Math.floor((gutter * 5) / 10) + 'px';
+        selectText.style.top = Math.floor((gutter * 2.5) / 9) + 'px';
+        selectText.style.visibility = 'visible';
+        card.style.visibility = 'visible';
+        card = document.getElementById('card2');
+        card.style.left = left;
+        card.style.top = Math.floor(((gutter * 7) / 10) + card.offsetHeight) + 'px';
+        card.style.visibility = 'visible';
+    }
+
+</script>
+</head><body onload="positionElements()">
+    <img src='saturnlogo.svg' style='width:20%' title='Saturn is it!'>
+    <div id='select-text' style='visibility:hidden;position:absolute;width:100%;text-align:center'>Select Payment Card</div>
+    <table id='card1' style='visibility:hidden;position:absolute'>
+        <tr><td><div class='cardimage' style='background-image:url(supercard.svg)' title='Click to select' onclick="selectCard('card1')"></div></td></tr>
+        <tr><td class="pan" title='Card number or similar account identifier'>6875 0567 4555 2109</td></tr>
+    </table>
+    <table id='card2' style='visibility:hidden;position:absolute'>
+        <tr><td><div class='cardimage' style='background-image:url(bankdirect.svg)' title='Click to select' onclick="selectCard('card2')"></div></td></tr>
+        <tr><td class="pan" title='Card number or similar account identifier'>8645-7800239403</td></tr>
+    </table>
+</body></html>

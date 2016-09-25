@@ -1,10 +1,12 @@
-﻿<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Personal Paymemt Terminal</title>
+﻿<!DOCTYPE html><html><head><meta charset="UTF-8"><link rel="icon" href="saturn.png" sizes="192x192"><title>Personal Paymemt Terminal</title>
 <style type="text/css">
 body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','DejaVu Sans',Arial,'Liberation Sans';background-color:white}
     li {padding-bottom:6pt}
 </style>
 <script type="text/javascript">
     'use strict';
+    var cardUrl = null;
+    var pan;
     var STANDARD_AMOUNT = '$\u200a1,999.25';
     var showedAmount = STANDARD_AMOUNT;
     function gasStationOrNot(gasStation) {
@@ -13,15 +15,25 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
         } else {
             showedAmount = STANDARD_AMOUNT;
         }
-        document.getElementById('payframe').src = document.getElementById('payframe').src;
+        document.getElementById('payframe').src = 'selectionwindow.html';
+    }
+    function selectCard(cardUrl, pan) {
+        this.cardUrl = cardUrl;
+        this.pan = pan;
+        document.getElementById('payframe').src = 'paymentwindow.html';
+    }
+    function init() {
+        if (!cardUrl) {
+            document.getElementById('payframe').src = 'selectionwindow.html';
+        }
     }
 </script>
-</head><body>
+</head><body onload="init()">
         <table style="border-collapse:collapse">
             <tr>
                 <td style="background-color:grey;color:white;padding:3pt;border-width:0 1px 0 1px;border-color:black;border-style:solid">&nbsp;Requester: demomerchant.com</td>
                 <td rowspan="2" width="600"><div style="padding-left:50pt"><div style="font-weight:bold;text-align:center;padding-bottom:20pt">Personal Payment Terminal</div>
-                    The Web UI on the left side simulates the final step in an Android &quot;App&quot; based <i>Personal&nbsp;Payment&nbsp;Terminal</i> having the following core characteristics:
+                    The Web UI on the left side simulates the primary steps in an Android &quot;App&quot; based <i>Personal&nbsp;Payment&nbsp;Terminal</i> having the following core characteristics:
                     <ul>
                     <li><i>Eliminates</i> the merchant payment terminal, holds virtual cards, and offers a consistent user experience</li>
                     <li>Supports most merchant initiated payment scenarios including:
@@ -39,12 +51,12 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
                             technology demonstrator and verifier.<p>Several functions depend on
                             mechanisms currently not available in Android and Chrome.
                             The somewhat bold goal is converting these fully application-neutral additions to the mobile ecosystem
-                            into de-facto standards.</p>
+                            into de-facto standards. The use of QR-code represents a &quot;workaround&quot;.</p>
                         </div>
                     </div></td>
             </tr>
             <tr>
-                <td style="border-width:0 1px 1px 1px;border-color:black;border-style:solid"><iframe id="payframe" src="terminalwindow.html" width="360" height="600" style="border:none"/></td>
+                <td style="border-width:0 1px 1px 1px;border-color:black;border-style:solid"><iframe id="payframe" width="360" height="600" style="border:none"/></td>
             </tr>
         </table>
 </body>
