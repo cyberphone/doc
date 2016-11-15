@@ -1,0 +1,719 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+
+<title>JSONSignatureDecoder (WebPKI.org Support)</title>
+
+<link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="JSONSignatureDecoder (WebPKI.org Support)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../org/webpki/json/JSONParser.html" title="class in org.webpki.json"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../org/webpki/json/JSONSignatureTypes.html" title="enum in org.webpki.json"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?org/webpki/json/JSONSignatureDecoder.html" target="_top">Frames</a></li>
+<li><a href="JSONSignatureDecoder.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">org.webpki.json</div>
+<h2 title="Class JSONSignatureDecoder" class="title">Class JSONSignatureDecoder</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>org.webpki.json.JSONSignatureDecoder</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="http://download.oracle.com/javase/7/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="strong">JSONSignatureDecoder</span>
+extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
+implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a></pre>
+<div class="block">Decoder for JCS signatures.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../serialized-form.html#org.webpki.json.JSONSignatureDecoder">Serialized Form</a></dd></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#ALGORITHM_JSON">ALGORITHM_JSON</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#CERTIFICATE_PATH_JSON">CERTIFICATE_PATH_JSON</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#CURVE_JSON">CURVE_JSON</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#E_JSON">E_JSON</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#EC_PUBLIC_KEY">EC_PUBLIC_KEY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#EXTENSIONS_JSON">EXTENSIONS_JSON</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#ISSUER_JSON">ISSUER_JSON</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#JWK_CRV_JSON">JWK_CRV_JSON</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#JWK_KTY_JSON">JWK_KTY_JSON</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#KEY_ID_JSON">KEY_ID_JSON</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#N_JSON">N_JSON</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#PEM_URL_JSON">PEM_URL_JSON</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#PUBLIC_KEY_JSON">PUBLIC_KEY_JSON</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#RSA_PUBLIC_KEY">RSA_PUBLIC_KEY</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#SERIAL_NUMBER_JSON">SERIAL_NUMBER_JSON</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#SIGNATURE_JSON">SIGNATURE_JSON</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#SIGNATURE_VERSION_ID">SIGNATURE_VERSION_ID</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#SIGNER_CERTIFICATE_JSON">SIGNER_CERTIFICATE_JSON</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#SUBJECT_JSON">SUBJECT_JSON</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#TYPE_JSON">TYPE_JSON</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#VALUE_JSON">VALUE_JSON</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#VERSION_JSON">VERSION_JSON</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#X_JSON">X_JSON</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#Y_JSON">Y_JSON</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/webpki/crypto/SignatureAlgorithms.html" title="interface in org.webpki.crypto">SignatureAlgorithms</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#getAlgorithm()">getAlgorithm</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#getCertificatePath()">getCertificatePath</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#getExtensions()">getExtensions</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#getKeyId()">getKeyId</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#getNormalizedData()">getNormalizedData</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#getPublicKey()">getPublicKey</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/webpki/json/JSONSignatureTypes.html" title="enum in org.webpki.json">JSONSignatureTypes</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#getSignatureType()">getSignatureType</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#getValue()">getValue</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#verify(org.webpki.json.JSONSignatureTypes)">verify</a></strong>(<a href="../../../org/webpki/json/JSONSignatureTypes.html" title="enum in org.webpki.json">JSONSignatureTypes</a>&nbsp;signatureType)</code>
+<div class="block">Simplified verify that only checks that there are no "keyId" or "extensions", and that the signature type matches.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONSignatureDecoder.html#verify(org.webpki.json.JSONVerifier)">verify</a></strong>(<a href="../../../org/webpki/json/JSONVerifier.html" title="class in org.webpki.json">JSONVerifier</a>&nbsp;verifier)</code>&nbsp;</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="ALGORITHM_JSON">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ALGORITHM_JSON</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> ALGORITHM_JSON</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.json.JSONSignatureDecoder.ALGORITHM_JSON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="CERTIFICATE_PATH_JSON">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CERTIFICATE_PATH_JSON</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CERTIFICATE_PATH_JSON</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.json.JSONSignatureDecoder.CERTIFICATE_PATH_JSON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="CURVE_JSON">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CURVE_JSON</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CURVE_JSON</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.json.JSONSignatureDecoder.CURVE_JSON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="E_JSON">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>E_JSON</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> E_JSON</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.json.JSONSignatureDecoder.E_JSON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="EC_PUBLIC_KEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>EC_PUBLIC_KEY</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> EC_PUBLIC_KEY</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.json.JSONSignatureDecoder.EC_PUBLIC_KEY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="EXTENSIONS_JSON">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>EXTENSIONS_JSON</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> EXTENSIONS_JSON</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.json.JSONSignatureDecoder.EXTENSIONS_JSON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ISSUER_JSON">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ISSUER_JSON</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> ISSUER_JSON</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.json.JSONSignatureDecoder.ISSUER_JSON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="JWK_CRV_JSON">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>JWK_CRV_JSON</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> JWK_CRV_JSON</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.json.JSONSignatureDecoder.JWK_CRV_JSON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="JWK_KTY_JSON">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>JWK_KTY_JSON</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> JWK_KTY_JSON</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.json.JSONSignatureDecoder.JWK_KTY_JSON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="KEY_ID_JSON">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>KEY_ID_JSON</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> KEY_ID_JSON</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.json.JSONSignatureDecoder.KEY_ID_JSON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="N_JSON">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>N_JSON</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> N_JSON</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.json.JSONSignatureDecoder.N_JSON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PEM_URL_JSON">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PEM_URL_JSON</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> PEM_URL_JSON</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.json.JSONSignatureDecoder.PEM_URL_JSON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PUBLIC_KEY_JSON">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PUBLIC_KEY_JSON</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> PUBLIC_KEY_JSON</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.json.JSONSignatureDecoder.PUBLIC_KEY_JSON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="RSA_PUBLIC_KEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>RSA_PUBLIC_KEY</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> RSA_PUBLIC_KEY</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.json.JSONSignatureDecoder.RSA_PUBLIC_KEY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="SERIAL_NUMBER_JSON">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SERIAL_NUMBER_JSON</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> SERIAL_NUMBER_JSON</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.json.JSONSignatureDecoder.SERIAL_NUMBER_JSON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="SIGNATURE_JSON">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SIGNATURE_JSON</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> SIGNATURE_JSON</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.json.JSONSignatureDecoder.SIGNATURE_JSON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="SIGNATURE_VERSION_ID">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SIGNATURE_VERSION_ID</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> SIGNATURE_VERSION_ID</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.json.JSONSignatureDecoder.SIGNATURE_VERSION_ID">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="SIGNER_CERTIFICATE_JSON">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SIGNER_CERTIFICATE_JSON</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> SIGNER_CERTIFICATE_JSON</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.json.JSONSignatureDecoder.SIGNER_CERTIFICATE_JSON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="SUBJECT_JSON">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SUBJECT_JSON</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> SUBJECT_JSON</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.json.JSONSignatureDecoder.SUBJECT_JSON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_JSON">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_JSON</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_JSON</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.json.JSONSignatureDecoder.TYPE_JSON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="VALUE_JSON">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>VALUE_JSON</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> VALUE_JSON</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.json.JSONSignatureDecoder.VALUE_JSON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="VERSION_JSON">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>VERSION_JSON</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> VERSION_JSON</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.json.JSONSignatureDecoder.VERSION_JSON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="X_JSON">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>X_JSON</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> X_JSON</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.json.JSONSignatureDecoder.X_JSON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="Y_JSON">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>Y_JSON</h4>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> Y_JSON</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.json.JSONSignatureDecoder.Y_JSON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getAlgorithm()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getAlgorithm</h4>
+<pre>public&nbsp;<a href="../../../org/webpki/crypto/SignatureAlgorithms.html" title="interface in org.webpki.crypto">SignatureAlgorithms</a>&nbsp;getAlgorithm()</pre>
+</li>
+</ul>
+<a name="getCertificatePath()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCertificatePath</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]&nbsp;getCertificatePath()
+                                     throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getExtensions()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getExtensions</h4>
+<pre>public&nbsp;<a href="../../../org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a>[]&nbsp;getExtensions()</pre>
+</li>
+</ul>
+<a name="getKeyId()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getKeyId</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getKeyId()</pre>
+</li>
+</ul>
+<a name="getNormalizedData()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getNormalizedData</h4>
+<pre>public&nbsp;byte[]&nbsp;getNormalizedData()</pre>
+</li>
+</ul>
+<a name="getPublicKey()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPublicKey</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;getPublicKey()
+                       throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getSignatureType()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSignatureType</h4>
+<pre>public&nbsp;<a href="../../../org/webpki/json/JSONSignatureTypes.html" title="enum in org.webpki.json">JSONSignatureTypes</a>&nbsp;getSignatureType()</pre>
+</li>
+</ul>
+<a name="getValue()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getValue</h4>
+<pre>public&nbsp;byte[]&nbsp;getValue()</pre>
+</li>
+</ul>
+<a name="verify(org.webpki.json.JSONSignatureTypes)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>verify</h4>
+<pre>public&nbsp;void&nbsp;verify(<a href="../../../org/webpki/json/JSONSignatureTypes.html" title="enum in org.webpki.json">JSONSignatureTypes</a>&nbsp;signatureType)
+            throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Simplified verify that only checks that there are no "keyId" or "extensions", and that the signature type matches.
+ Note that asymmetric key signatures are always checked for technical correctness.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>signatureType</code> - </dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="verify(org.webpki.json.JSONVerifier)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>verify</h4>
+<pre>public&nbsp;void&nbsp;verify(<a href="../../../org/webpki/json/JSONVerifier.html" title="class in org.webpki.json">JSONVerifier</a>&nbsp;verifier)
+            throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../org/webpki/json/JSONParser.html" title="class in org.webpki.json"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../org/webpki/json/JSONSignatureTypes.html" title="enum in org.webpki.json"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?org/webpki/json/JSONSignatureDecoder.html" target="_top">Frames</a></li>
+<li><a href="JSONSignatureDecoder.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small><i>2005-2016 WebPKI.org.</i></small></p>
+</body>
+</html>

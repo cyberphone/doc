@@ -1,0 +1,993 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+
+<title>HTTPSWrapper (WebPKI.org Support)</title>
+
+<link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="HTTPSWrapper (WebPKI.org Support)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev Class</li>
+<li>Next Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?org/webpki/net/HTTPSWrapper.html" target="_top">Frames</a></li>
+<li><a href="HTTPSWrapper.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">org.webpki.net</div>
+<h2 title="Class HTTPSWrapper" class="title">Class HTTPSWrapper</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>org.webpki.net.HTTPSWrapper</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<hr>
+<br>
+<pre>public class <span class="strong">HTTPSWrapper</span>
+extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+<div class="block">The HTTPSWrapper class makes it possible to establish HTTP/HTTPS connections 
+ to web servers and compose HTTP requests.                       <br><br>
+ 
+ When making HTTP requests, the wrapper class does the following:   <br>
+ - Sets up http connections to a web server.                        <br>
+ - Performs a GET or POST request to the server.                  <br>
+ - Receives the response from the Web Server.                       <br><br>
+
+ When making HTTPS requests, the wrapper class does the following:   <br>
+ - Initializes a trust store for verifying server certificates.      <br>
+ - Sets up https connections to an ssl enabled web server.           <br>
+ - Performs a GET or POST request to the server.                  <br>
+ - Configures the SSL client to allow:                   <br>&nbsp;&nbsp;&nbsp;
+     - Untrusted server certificates.                    <br>&nbsp;&nbsp;&nbsp;
+     - Server certificates with invalid validity period.<br>&nbsp;&nbsp;&nbsp;
+     - Server certificates which Common Name does not match the 
+   server DNS name.<br>
+ - Receives the response from the Web Server.                     <br><br>
+
+ In addition to the above mentioned features, the wrapper class makes it 
+ possible to set and get HTTP request_headers and use proxy (firewall) servers.      <br><br>
+
+ When posting data to a server, the default content-type is 
+ application/x-www-form-urlencoded                                <br><br>
+
+ Code example how to use the HTTPSWrapper.                            <br><br>
+
+ <PRE>
+ try 
+   {                    
+     HTTPSWrapper wrap = new HTTPSWrapper ();
+
+     // Allow untrusted server certificates. 
+     wrap.allowInvalidCert (true); 
+
+     // Set HTTP request header. Must be set before making the request. 
+     wrap.setHeader ("MyStuff", "IsGreat");    
+     
+     // If not called, the wrapper will use the Trust Store 
+     // supplied with the JRE. Must be called before making the request.
+     wrap.setTrustStore ("Path to my store", "passphrase");
+
+     // Make the request.                               
+     wrap.makeGetRequest ("https://www.example.com");   
+ 
+     // Read the server response as a byte array.          
+     byte[] data = wrap.getData ();
+    
+   }                                       
+ </PRE></div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#HTTPSWrapper()">HTTPSWrapper</a></strong>()</code>
+<div class="block">Constructs an HTTPSWrapper object.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#allowDiffHostNames(boolean)">allowDiffHostNames</a></strong>(boolean&nbsp;flag)</code>
+<div class="block">If true, client allows Common Name in server certificate
+ to differ from the server DNS name.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#allowInvalidCert(boolean)">allowInvalidCert</a></strong>(boolean&nbsp;flag)</code>
+<div class="block">If true, client allows server certificates that are either 
+ not valid yet or have expired.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#getCharacterEncoding()">getCharacterEncoding</a></strong>()</code>
+<div class="block">Gets content encoding of HTTP response.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#getContentLength()">getContentLength</a></strong>()</code>
+<div class="block">Gets content length from HTTP response.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#getContentType()">getContentType</a></strong>()</code>
+<div class="block">Gets content type of HTTP response.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#getData()">getData</a></strong>()</code>
+<div class="block">Gets server response data as byte array.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#getDataUTF8()">getDataUTF8</a></strong>()</code>
+<div class="block">Gets server response data as String in UTF-8 character encoding.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">LinkedHashMap</a>&lt;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://download.oracle.com/javase/7/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</a>&lt;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#getHeaders()">getHeaders</a></strong>()</code>
+<div class="block">Returns the response headers for this call.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#getHeaderValue(java.lang.String)">getHeaderValue</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Returns the value for the corresponding HTTP response header name.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#getHeaderValues(java.lang.String)">getHeaderValues</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Returns the values for the corresponding HTTP response header name.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#getRawContentType()">getRawContentType</a></strong>()</code>
+<div class="block">Gets content type of HTTP response.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#getResponseCode()">getResponseCode</a></strong>()</code>
+<div class="block">Returns the HTTP response code for the most recent request.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#getResponseMessage()">getResponseMessage</a></strong>()</code>
+<div class="block">Returns the HTTP response line for the most recent request.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#getServerCertificate()">getServerCertificate</a></strong>()</code>
+<div class="block">Gets server certificate from HTTPS response.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#main(java.lang.String[])">main</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;argv)</code>
+<div class="block">Command-line interface to the HTTPSWrapper.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#makeGetRequest(java.lang.String)">makeGetRequest</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;url)</code>
+<div class="block">Performs a GET request to the Web Server.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#makePostRequest(java.lang.String, byte[])">makePostRequest</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;url,
+               byte[]&nbsp;data)</code>
+<div class="block">Performs a POST request to the Web Server, posting data without any 
+ interpretation of character encoding.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#makePostRequestUTF8(java.lang.String, java.lang.String)">makePostRequestUTF8</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;url,
+                   <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;data)</code>
+<div class="block">Performs a POST request to the Web Server, posting data with
+ UTF-8 character encoding.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#setDefaultProxy(java.lang.String, int)">setDefaultProxy</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;host,
+               int&nbsp;port)</code>
+<div class="block">Sets up the default (app-wide) proxy host and port to use.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#setDefaultTrustStore(java.security.KeyStore)">setDefaultTrustStore</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/security/KeyStore.html?is-external=true" title="class or interface in java.security">KeyStore</a>&nbsp;trust_store)</code>
+<div class="block">Sets the default (app-wide) Trust Store to use.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#setDefaultTrustStore(java.lang.String, java.lang.String)">setDefaultTrustStore</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;store_name,
+                    <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;store_passphrase)</code>
+<div class="block">Sets the default (app-wide) Trust Store to use.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#setFollowRedirects(boolean)">setFollowRedirects</a></strong>(boolean&nbsp;flag)</code>
+<div class="block">Sets wheter or not the HTTPSWrapper should follow HTTP 3xx 
+ redirects or not.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#setHeader(java.lang.String, java.lang.String)">setHeader</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+         <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</code>
+<div class="block">Sets an HTTP header value for a succeeding request.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#setInteractiveMode(boolean)">setInteractiveMode</a></strong>(boolean&nbsp;flag)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#setKeyAlias(java.lang.String)">setKeyAlias</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key_alias)</code>
+<div class="block">Sets the Key Alias to use.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#setKeyStore(java.security.KeyStore, java.lang.String)">setKeyStore</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/security/KeyStore.html?is-external=true" title="class or interface in java.security">KeyStore</a>&nbsp;key_store,
+           <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key_store_password)</code>
+<div class="block">Sets the Key Store to use.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#setKeyStore(java.lang.String, java.lang.String)">setKeyStore</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key_store_file,
+           <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key_store_password)</code>
+<div class="block">Sets the Key Store to use.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#setProxy(java.lang.String, int)">setProxy</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;host,
+        int&nbsp;port)</code>
+<div class="block">Sets up the proxy host and port to use.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#setRequireSuccess(boolean)">setRequireSuccess</a></strong>(boolean&nbsp;flag)</code>
+<div class="block">If true, responses other HTTP than 200 (OK) will throw an exception.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#setServerCertificateRevocation(boolean)">setServerCertificateRevocation</a></strong>(boolean&nbsp;flag)</code>
+<div class="block">If true, enable server certificate revocation checks.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#setTimeout(int)">setTimeout</a></strong>(int&nbsp;timeout)</code>
+<div class="block">Sets the read timeout.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#setTrustStore(java.security.KeyStore)">setTrustStore</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/security/KeyStore.html?is-external=true" title="class or interface in java.security">KeyStore</a>&nbsp;trust_store)</code>
+<div class="block">Sets the Trust Store to use.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#setTrustStore(java.lang.String, java.lang.String)">setTrustStore</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;store_name,
+             <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;store_passphrase)</code>
+<div class="block">Sets the Trust Store to use.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#setUserIDPassword(java.lang.String, java.lang.String)">setUserIDPassword</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;user_id,
+                 <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;password)</code>&nbsp;</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="HTTPSWrapper()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>HTTPSWrapper</h4>
+<pre>public&nbsp;HTTPSWrapper()</pre>
+<div class="block">Constructs an HTTPSWrapper object.</div>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="allowDiffHostNames(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>allowDiffHostNames</h4>
+<pre>public&nbsp;void&nbsp;allowDiffHostNames(boolean&nbsp;flag)</pre>
+<div class="block">If true, client allows Common Name in server certificate
+ to differ from the server DNS name. Default value is false.<br><br>
+
+ This method affects all proceeding requests. <br><br></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>flag</code> - True to allow different host names, else false.</dd></dl>
+</li>
+</ul>
+<a name="allowInvalidCert(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>allowInvalidCert</h4>
+<pre>public&nbsp;void&nbsp;allowInvalidCert(boolean&nbsp;flag)</pre>
+<div class="block">If true, client allows server certificates that are either 
+ not valid yet or have expired. Default value is false.  <br><br>
+
+ This method affects all proceeding requests. <br><br></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>flag</code> - True to allow bad validity certificates, else false.</dd></dl>
+</li>
+</ul>
+<a name="getCharacterEncoding()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCharacterEncoding</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getCharacterEncoding()</pre>
+<div class="block">Gets content encoding of HTTP response.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The character encoding type of the HTTP response, or null if not available.</dd></dl>
+</li>
+</ul>
+<a name="getContentLength()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getContentLength</h4>
+<pre>public&nbsp;int&nbsp;getContentLength()</pre>
+<div class="block">Gets content length from HTTP response.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The length of the HTTP response, or -1 if length is not 
+ available.</dd></dl>
+</li>
+</ul>
+<a name="getContentType()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getContentType</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getContentType()</pre>
+<div class="block">Gets content type of HTTP response.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The <code>Content-Type</code> minus any extra information of the HTTP response, or null if not available.</dd></dl>
+</li>
+</ul>
+<a name="getData()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getData</h4>
+<pre>public&nbsp;byte[]&nbsp;getData()</pre>
+<div class="block">Gets server response data as byte array.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Byte array containing all received data as it was received from
+ the server, or null if no data was available.</dd></dl>
+</li>
+</ul>
+<a name="getDataUTF8()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDataUTF8</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getDataUTF8()
+                   throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Gets server response data as String in UTF-8 character encoding.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>String containing all received data in UTF-8 encoding, 
+ or null if no data was available.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If something unexpected happens...</dd></dl>
+</li>
+</ul>
+<a name="getHeaders()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getHeaders</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">LinkedHashMap</a>&lt;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://download.oracle.com/javase/7/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</a>&lt;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&gt;&nbsp;getHeaders()</pre>
+<div class="block">Returns the response headers for this call.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Structure containing all the headers and associated values for this call.</dd></dl>
+</li>
+</ul>
+<a name="getHeaderValue(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getHeaderValue</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getHeaderValue(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
+<div class="block">Returns the value for the corresponding HTTP response header name.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Name to search for in HTTP header.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Value for the requested name, or null if not found.  If multiple
+ values exist, only the first found is returned.</dd></dl>
+</li>
+</ul>
+<a name="getHeaderValues(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getHeaderValues</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;getHeaderValues(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
+<div class="block">Returns the values for the corresponding HTTP response header name.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Name to search for in HTTP header.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Values for the requested name, or null if not found.</dd></dl>
+</li>
+</ul>
+<a name="getRawContentType()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRawContentType</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getRawContentType()</pre>
+<div class="block">Gets content type of HTTP response.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The full <code>Content-Type</code> of the HTTP response, or null if not available.</dd></dl>
+</li>
+</ul>
+<a name="getResponseCode()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getResponseCode</h4>
+<pre>public&nbsp;int&nbsp;getResponseCode()</pre>
+<div class="block">Returns the HTTP response code for the most recent request.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The response code.</dd></dl>
+</li>
+</ul>
+<a name="getResponseMessage()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getResponseMessage</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getResponseMessage()</pre>
+<div class="block">Returns the HTTP response line for the most recent request.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The response message.</dd></dl>
+</li>
+</ul>
+<a name="getServerCertificate()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getServerCertificate</h4>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>&nbsp;getServerCertificate()</pre>
+<div class="block">Gets server certificate from HTTPS response.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Server certificate.</dd></dl>
+</li>
+</ul>
+<a name="main(java.lang.String[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>main</h4>
+<pre>public static&nbsp;void&nbsp;main(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;argv)
+                 throws <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
+<div class="block">Command-line interface to the HTTPSWrapper.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>argv</code> - Command line parameters</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code> - If something unexpected happens...</dd></dl>
+</li>
+</ul>
+<a name="makeGetRequest(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>makeGetRequest</h4>
+<pre>public&nbsp;void&nbsp;makeGetRequest(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;url)
+                    throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Performs a GET request to the Web Server.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>url</code> - Fully qualified URL to make connection to.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If something unexpected happens...</dd></dl>
+</li>
+</ul>
+<a name="makePostRequest(java.lang.String, byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>makePostRequest</h4>
+<pre>public&nbsp;void&nbsp;makePostRequest(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;url,
+                   byte[]&nbsp;data)
+                     throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Performs a POST request to the Web Server, posting data without any 
+ interpretation of character encoding.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>url</code> - Fully qualified URL to make connection to.</dd><dd><code>data</code> - Byte array to post to server.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If something unexpected happens...</dd></dl>
+</li>
+</ul>
+<a name="makePostRequestUTF8(java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>makePostRequestUTF8</h4>
+<pre>public&nbsp;void&nbsp;makePostRequestUTF8(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;url,
+                       <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;data)
+                         throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Performs a POST request to the Web Server, posting data with
+ UTF-8 character encoding.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>url</code> - Fully qualified URL to make connection to.</dd><dd><code>data</code> - String to post to server.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If something unexpected happens...</dd></dl>
+</li>
+</ul>
+<a name="setDefaultProxy(java.lang.String, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setDefaultProxy</h4>
+<pre>public static&nbsp;void&nbsp;setDefaultProxy(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;host,
+                   int&nbsp;port)
+                            throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Sets up the default (app-wide) proxy host and port to use. <br><br>
+       
+ This method affects all proceeding requests. <br><br></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>host</code> - Host name or IP address of proxy. <tt>null</tt> removes any previous setting.</dd><dd><code>port</code> - Port number for proxy connection.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If something unexpected happens...</dd></dl>
+</li>
+</ul>
+<a name="setDefaultTrustStore(java.security.KeyStore)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setDefaultTrustStore</h4>
+<pre>public static&nbsp;void&nbsp;setDefaultTrustStore(<a href="http://download.oracle.com/javase/7/docs/api/java/security/KeyStore.html?is-external=true" title="class or interface in java.security">KeyStore</a>&nbsp;trust_store)</pre>
+<div class="block">Sets the default (app-wide) Trust Store to use. The Trust Store is used to verify server 
+ certificates in SSL negotiations.<br><br>
+
+ If this method is not called the HTTPSWrapper will use the default 
+ JDK Trust Store. <br><br>
+
+ To set your own Trust Store this method must be called before making
+ either a GET or POST request.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>trust_store</code> - Initialized java KeyStore.</dd></dl>
+</li>
+</ul>
+<a name="setDefaultTrustStore(java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setDefaultTrustStore</h4>
+<pre>public static&nbsp;void&nbsp;setDefaultTrustStore(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;store_name,
+                        <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;store_passphrase)
+                                 throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Sets the default (app-wide) Trust Store to use. The Trust Store is used to verify server 
+ certificates in SSL negotiations.<br><br>
+
+ If this method is not called the HTTPSWrapper will use the default 
+ JDK Trust Store. <br><br></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>store_name</code> - Path to the Trust store file.</dd><dd><code>store_passphrase</code> - Passphrase to unlock Trust Store.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If something unexpected happens...</dd></dl>
+</li>
+</ul>
+<a name="setFollowRedirects(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setFollowRedirects</h4>
+<pre>public&nbsp;void&nbsp;setFollowRedirects(boolean&nbsp;flag)</pre>
+<div class="block">Sets wheter or not the HTTPSWrapper should follow HTTP 3xx 
+ redirects or not. Default is false.
+
+ This method affects all proceeding requests. <br><br></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>flag</code> - Whether or not to follow redirects automatically.</dd></dl>
+</li>
+</ul>
+<a name="setHeader(java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setHeader</h4>
+<pre>public&nbsp;void&nbsp;setHeader(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+             <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)
+               throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Sets an HTTP header value for a succeeding request. <br><br></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Name of header to set.</dd><dd><code>value</code> - Value associated with the header.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If something unexpected happens...</dd></dl>
+</li>
+</ul>
+<a name="setInteractiveMode(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setInteractiveMode</h4>
+<pre>public&nbsp;void&nbsp;setInteractiveMode(boolean&nbsp;flag)</pre>
+</li>
+</ul>
+<a name="setKeyAlias(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setKeyAlias</h4>
+<pre>public&nbsp;void&nbsp;setKeyAlias(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key_alias)</pre>
+<div class="block">Sets the Key Alias to use. The Key Alias is used to authenticate 
+ with using SSL.<br><br>
+
+ If this method is not called the HTTPSWrapper will look for the
+ first suitable key. <br><br>
+
+ his method must be called before making either a GET or POST request.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>key_alias</code> - name of selected key</dd></dl>
+</li>
+</ul>
+<a name="setKeyStore(java.security.KeyStore, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setKeyStore</h4>
+<pre>public&nbsp;void&nbsp;setKeyStore(<a href="http://download.oracle.com/javase/7/docs/api/java/security/KeyStore.html?is-external=true" title="class or interface in java.security">KeyStore</a>&nbsp;key_store,
+               <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key_store_password)</pre>
+<div class="block">Sets the Key Store to use. The Key Store is used to authenticate 
+ with using SSL.<br><br>
+
+ If this method is not called the HTTPSWrapper will use the default 
+ JDK Key Store (none). <br><br>
+
+ To set your own Key Store this method must be called before making
+ either a GET or POST request.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>key_store_password</code> - Password to private key</dd><dd><code>key_store</code> - Initialized java KeyStore.</dd></dl>
+</li>
+</ul>
+<a name="setKeyStore(java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setKeyStore</h4>
+<pre>public&nbsp;void&nbsp;setKeyStore(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key_store_file,
+               <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key_store_password)
+                 throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Sets the Key Store to use. The Key Store is used to authenticate 
+ with using SSL.<br><br>
+
+ If this method is not called the HTTPSWrapper will use the default 
+ JDK Key Store (none). <br><br>
+
+ To set your own Key Store this method must be called before making
+ either a GET or POST request.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>key_store_file</code> - PKCS #12 or Java Keystore file</dd><dd><code>key_store_password</code> - Password to private key</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If something unexpected happens...</dd></dl>
+</li>
+</ul>
+<a name="setProxy(java.lang.String, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setProxy</h4>
+<pre>public&nbsp;void&nbsp;setProxy(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;host,
+            int&nbsp;port)
+              throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Sets up the proxy host and port to use. <br><br>
+       
+ This method affects all proceeding requests. <br><br></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>host</code> - Host name or IP address of proxy. <tt>null</tt> removes any previous setting.</dd><dd><code>port</code> - Port number for proxy connection.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If something unexpected happens...</dd></dl>
+</li>
+</ul>
+<a name="setRequireSuccess(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setRequireSuccess</h4>
+<pre>public&nbsp;void&nbsp;setRequireSuccess(boolean&nbsp;flag)</pre>
+<div class="block">If true, responses other HTTP than 200 (OK) will throw an exception. <br><br>
+
+ This method affects all proceeding requests. <br><br></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>flag</code> - True to require success, else false.</dd></dl>
+</li>
+</ul>
+<a name="setServerCertificateRevocation(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setServerCertificateRevocation</h4>
+<pre>public&nbsp;void&nbsp;setServerCertificateRevocation(boolean&nbsp;flag)</pre>
+<div class="block">If true, enable server certificate revocation checks. <br><br>
+
+ This method affects all proceeding requests. <br><br></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>flag</code> - The flag, Yeah</dd></dl>
+</li>
+</ul>
+<a name="setTimeout(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setTimeout</h4>
+<pre>public&nbsp;void&nbsp;setTimeout(int&nbsp;timeout)</pre>
+<div class="block">Sets the read timeout. Default is forever.
+
+ This method affects all proceeding requests. <br><br></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>timeout</code> - Timeout in milliseconds.</dd></dl>
+</li>
+</ul>
+<a name="setTrustStore(java.security.KeyStore)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setTrustStore</h4>
+<pre>public&nbsp;void&nbsp;setTrustStore(<a href="http://download.oracle.com/javase/7/docs/api/java/security/KeyStore.html?is-external=true" title="class or interface in java.security">KeyStore</a>&nbsp;trust_store)</pre>
+<div class="block">Sets the Trust Store to use. The Trust Store is used to verify server 
+ certificates in SSL negotiations.<br><br>
+
+ If this method is not called the HTTPSWrapper will use the default 
+ JDK Trust Store. <br><br>
+
+ To set your own Trust Store this method must be called before making
+ either a GET or POST request.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>trust_store</code> - Initialized java KeyStore.</dd></dl>
+</li>
+</ul>
+<a name="setTrustStore(java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setTrustStore</h4>
+<pre>public&nbsp;void&nbsp;setTrustStore(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;store_name,
+                 <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;store_passphrase)
+                   throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Sets the Trust Store to use. The Trust Store is used to verify server 
+ certificates in SSL negotiations.<br><br>
+
+ If this method is not called the HTTPSWrapper will use the default 
+ JDK Trust Store. <br><br>
+
+ To set your own Trust Store this method must be called before making
+ either a GET or POST request.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>store_name</code> - Path to the Trust store file.</dd><dd><code>store_passphrase</code> - Passphrase to unlock Trust Store.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If something unexpected happens...</dd></dl>
+</li>
+</ul>
+<a name="setUserIDPassword(java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>setUserIDPassword</h4>
+<pre>public&nbsp;void&nbsp;setUserIDPassword(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;user_id,
+                     <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;password)</pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev Class</li>
+<li>Next Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?org/webpki/net/HTTPSWrapper.html" target="_top">Frames</a></li>
+<li><a href="HTTPSWrapper.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small><i>2005-2016 WebPKI.org.</i></small></p>
+</body>
+</html>
