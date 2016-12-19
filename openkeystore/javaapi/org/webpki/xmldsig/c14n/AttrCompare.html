@@ -102,17 +102,17 @@
 extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
 implements <a href="http://download.oracle.com/javase/7/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a></pre>
 <div class="block">Compares two attributes based on the C14n specification.
-
+ <p>
  <UL>
  <LI>Namespace nodes have a lesser document order position than attribute nodes.
  <LI> An element's namespace nodes are sorted lexicographically by
-   local name (the default namespace node, if one exists, has no
-   local name and is therefore lexicographically least).
+ local name (the default namespace node, if one exists, has no
+ local name and is therefore lexicographically least).
  <LI> An element's attribute nodes are sorted lexicographically with
-   namespace URI as the primary key and local name as the secondary
-   key (an empty namespace URI is lexicographically least).
+ namespace URI as the primary key and local name as the secondary
+ key (an empty namespace URI is lexicographically least).
  </UL>
-
+ <p>
  $todo$ Should we implement java.util.Comparator and import java.util.Arrays to use Arrays.sort(intarray);</div>
 <dl><dt><span class="strong">Author:</span></dt>
   <dd>Christian Geuer-Pollmann</dd></dl>
@@ -213,15 +213,15 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/util/Compa
 <pre>public&nbsp;int&nbsp;compare(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj0,
           <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj1)</pre>
 <div class="block">Compares two attributes based on the C14n specification.
-
+ <p>
  <UL>
  <LI>Namespace nodes have a lesser document order position than attribute nodes.
  <LI> An element's namespace nodes are sorted lexicographically by
-   local name (the default namespace node, if one exists, has no
-   local name and is therefore lexicographically least).
+ local name (the default namespace node, if one exists, has no
+ local name and is therefore lexicographically least).
  <LI> An element's attribute nodes are sorted lexicographically with
-   namespace URI as the primary key and local name as the secondary
-   key (an empty namespace URI is lexicographically least).
+ namespace URI as the primary key and local name as the secondary
+ key (an empty namespace URI is lexicographically least).
  </UL></div>
 <dl>
 <dt><strong>Specified by:</strong></dt>

@@ -96,55 +96,55 @@
 <br>
 <pre>public class <span class="strong">HTTPSWrapper</span>
 extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
-<div class="block">The HTTPSWrapper class makes it possible to establish HTTP/HTTPS connections 
+<div class="block">The HTTPSWrapper class makes it possible to establish HTTP/HTTPS connections
  to web servers and compose HTTP requests.                       <br><br>
- 
+ <p>
  When making HTTP requests, the wrapper class does the following:   <br>
  - Sets up http connections to a web server.                        <br>
  - Performs a GET or POST request to the server.                  <br>
  - Receives the response from the Web Server.                       <br><br>
-
+ <p>
  When making HTTPS requests, the wrapper class does the following:   <br>
  - Initializes a trust store for verifying server certificates.      <br>
  - Sets up https connections to an ssl enabled web server.           <br>
  - Performs a GET or POST request to the server.                  <br>
  - Configures the SSL client to allow:                   <br>&nbsp;&nbsp;&nbsp;
-     - Untrusted server certificates.                    <br>&nbsp;&nbsp;&nbsp;
-     - Server certificates with invalid validity period.<br>&nbsp;&nbsp;&nbsp;
-     - Server certificates which Common Name does not match the 
-   server DNS name.<br>
+ - Untrusted server certificates.                    <br>&nbsp;&nbsp;&nbsp;
+ - Server certificates with invalid validity period.<br>&nbsp;&nbsp;&nbsp;
+ - Server certificates which Common Name does not match the
+ server DNS name.<br>
  - Receives the response from the Web Server.                     <br><br>
-
- In addition to the above mentioned features, the wrapper class makes it 
+ <p>
+ In addition to the above mentioned features, the wrapper class makes it
  possible to set and get HTTP request_headers and use proxy (firewall) servers.      <br><br>
-
- When posting data to a server, the default content-type is 
+ <p>
+ When posting data to a server, the default content-type is
  application/x-www-form-urlencoded                                <br><br>
-
+ <p>
  Code example how to use the HTTPSWrapper.                            <br><br>
-
+ <p>
  <PRE>
- try 
-   {                    
-     HTTPSWrapper wrap = new HTTPSWrapper ();
-
-     // Allow untrusted server certificates. 
-     wrap.allowInvalidCert (true); 
-
-     // Set HTTP request header. Must be set before making the request. 
-     wrap.setHeader ("MyStuff", "IsGreat");    
-     
-     // If not called, the wrapper will use the Trust Store 
-     // supplied with the JRE. Must be called before making the request.
-     wrap.setTrustStore ("Path to my store", "passphrase");
-
-     // Make the request.                               
-     wrap.makeGetRequest ("https://www.example.com");   
- 
-     // Read the server response as a byte array.          
-     byte[] data = wrap.getData ();
-    
-   }                                       
+ try
+ {
+ HTTPSWrapper wrap = new HTTPSWrapper ();
+ <p>
+ // Allow untrusted server certificates.
+ wrap.allowInvalidCert (true);
+ <p>
+ // Set HTTP request header. Must be set before making the request.
+ wrap.setHeader ("MyStuff", "IsGreat");
+ <p>
+ // If not called, the wrapper will use the Trust Store
+ // supplied with the JRE. Must be called before making the request.
+ wrap.setTrustStore ("Path to my store", "passphrase");
+ <p>
+ // Make the request.
+ wrap.makeGetRequest ("https://www.example.com");
+ <p>
+ // Read the server response as a byte array.
+ byte[] data = wrap.getData ();
+ <p>
+ }
  </PRE></div>
 </li>
 </ul>
@@ -193,7 +193,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#allowInvalidCert(boolean)">allowInvalidCert</a></strong>(boolean&nbsp;flag)</code>
-<div class="block">If true, client allows server certificates that are either 
+<div class="block">If true, client allows server certificates that are either
  not valid yet or have expired.</div>
 </td>
 </tr>
@@ -285,7 +285,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#makePostRequest(java.lang.String, byte[])">makePostRequest</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;url,
                byte[]&nbsp;data)</code>
-<div class="block">Performs a POST request to the Web Server, posting data without any 
+<div class="block">Performs a POST request to the Web Server, posting data without any
  interpretation of character encoding.</div>
 </td>
 </tr>
@@ -320,7 +320,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../org/webpki/net/HTTPSWrapper.html#setFollowRedirects(boolean)">setFollowRedirects</a></strong>(boolean&nbsp;flag)</code>
-<div class="block">Sets wheter or not the HTTPSWrapper should follow HTTP 3xx 
+<div class="block">Sets wheter or not the HTTPSWrapper should follow HTTP 3xx
  redirects or not.</div>
 </td>
 </tr>
@@ -447,7 +447,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <pre>public&nbsp;void&nbsp;allowDiffHostNames(boolean&nbsp;flag)</pre>
 <div class="block">If true, client allows Common Name in server certificate
  to differ from the server DNS name. Default value is false.<br><br>
-
+ <p>
  This method affects all proceeding requests. <br><br></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>flag</code> - True to allow different host names, else false.</dd></dl>
 </li>
@@ -459,9 +459,9 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <li class="blockList">
 <h4>allowInvalidCert</h4>
 <pre>public&nbsp;void&nbsp;allowInvalidCert(boolean&nbsp;flag)</pre>
-<div class="block">If true, client allows server certificates that are either 
+<div class="block">If true, client allows server certificates that are either
  not valid yet or have expired. Default value is false.  <br><br>
-
+ <p>
  This method affects all proceeding requests. <br><br></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>flag</code> - True to allow bad validity certificates, else false.</dd></dl>
 </li>
@@ -485,7 +485,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <h4>getContentLength</h4>
 <pre>public&nbsp;int&nbsp;getContentLength()</pre>
 <div class="block">Gets content length from HTTP response.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd>The length of the HTTP response, or -1 if length is not 
+<dl><dt><span class="strong">Returns:</span></dt><dd>The length of the HTTP response, or -1 if length is not
  available.</dd></dl>
 </li>
 </ul>
@@ -521,7 +521,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getDataUTF8()
                    throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Gets server response data as String in UTF-8 character encoding.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd>String containing all received data in UTF-8 encoding, 
+<dl><dt><span class="strong">Returns:</span></dt><dd>String containing all received data in UTF-8 encoding,
  or null if no data was available.</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If something unexpected happens...</dd></dl>
@@ -644,7 +644,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <pre>public&nbsp;void&nbsp;makePostRequest(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;url,
                    byte[]&nbsp;data)
                      throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Performs a POST request to the Web Server, posting data without any 
+<div class="block">Performs a POST request to the Web Server, posting data without any
  interpretation of character encoding.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>url</code> - Fully qualified URL to make connection to.</dd><dd><code>data</code> - Byte array to post to server.</dd>
 <dt><span class="strong">Throws:</span></dt>
@@ -677,7 +677,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
                    int&nbsp;port)
                             throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Sets up the default (app-wide) proxy host and port to use. <br><br>
-       
+ <p>
  This method affects all proceeding requests. <br><br></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>host</code> - Host name or IP address of proxy. <tt>null</tt> removes any previous setting.</dd><dd><code>port</code> - Port number for proxy connection.</dd>
 <dt><span class="strong">Throws:</span></dt>
@@ -691,12 +691,12 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <li class="blockList">
 <h4>setDefaultTrustStore</h4>
 <pre>public static&nbsp;void&nbsp;setDefaultTrustStore(<a href="http://download.oracle.com/javase/7/docs/api/java/security/KeyStore.html?is-external=true" title="class or interface in java.security">KeyStore</a>&nbsp;trust_store)</pre>
-<div class="block">Sets the default (app-wide) Trust Store to use. The Trust Store is used to verify server 
+<div class="block">Sets the default (app-wide) Trust Store to use. The Trust Store is used to verify server
  certificates in SSL negotiations.<br><br>
-
- If this method is not called the HTTPSWrapper will use the default 
+ <p>
+ If this method is not called the HTTPSWrapper will use the default
  JDK Trust Store. <br><br>
-
+ <p>
  To set your own Trust Store this method must be called before making
  either a GET or POST request.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>trust_store</code> - Initialized java KeyStore.</dd></dl>
@@ -711,10 +711,10 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <pre>public static&nbsp;void&nbsp;setDefaultTrustStore(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;store_name,
                         <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;store_passphrase)
                                  throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Sets the default (app-wide) Trust Store to use. The Trust Store is used to verify server 
+<div class="block">Sets the default (app-wide) Trust Store to use. The Trust Store is used to verify server
  certificates in SSL negotiations.<br><br>
-
- If this method is not called the HTTPSWrapper will use the default 
+ <p>
+ If this method is not called the HTTPSWrapper will use the default
  JDK Trust Store. <br><br></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>store_name</code> - Path to the Trust store file.</dd><dd><code>store_passphrase</code> - Passphrase to unlock Trust Store.</dd>
 <dt><span class="strong">Throws:</span></dt>
@@ -728,9 +728,9 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <li class="blockList">
 <h4>setFollowRedirects</h4>
 <pre>public&nbsp;void&nbsp;setFollowRedirects(boolean&nbsp;flag)</pre>
-<div class="block">Sets wheter or not the HTTPSWrapper should follow HTTP 3xx 
+<div class="block">Sets wheter or not the HTTPSWrapper should follow HTTP 3xx
  redirects or not. Default is false.
-
+ <p>
  This method affects all proceeding requests. <br><br></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>flag</code> - Whether or not to follow redirects automatically.</dd></dl>
 </li>
@@ -766,12 +766,12 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <li class="blockList">
 <h4>setKeyAlias</h4>
 <pre>public&nbsp;void&nbsp;setKeyAlias(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key_alias)</pre>
-<div class="block">Sets the Key Alias to use. The Key Alias is used to authenticate 
+<div class="block">Sets the Key Alias to use. The Key Alias is used to authenticate
  with using SSL.<br><br>
-
+ <p>
  If this method is not called the HTTPSWrapper will look for the
  first suitable key. <br><br>
-
+ <p>
  his method must be called before making either a GET or POST request.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>key_alias</code> - name of selected key</dd></dl>
 </li>
@@ -784,12 +784,12 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <h4>setKeyStore</h4>
 <pre>public&nbsp;void&nbsp;setKeyStore(<a href="http://download.oracle.com/javase/7/docs/api/java/security/KeyStore.html?is-external=true" title="class or interface in java.security">KeyStore</a>&nbsp;key_store,
                <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key_store_password)</pre>
-<div class="block">Sets the Key Store to use. The Key Store is used to authenticate 
+<div class="block">Sets the Key Store to use. The Key Store is used to authenticate
  with using SSL.<br><br>
-
- If this method is not called the HTTPSWrapper will use the default 
+ <p>
+ If this method is not called the HTTPSWrapper will use the default
  JDK Key Store (none). <br><br>
-
+ <p>
  To set your own Key Store this method must be called before making
  either a GET or POST request.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>key_store_password</code> - Password to private key</dd><dd><code>key_store</code> - Initialized java KeyStore.</dd></dl>
@@ -804,12 +804,12 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <pre>public&nbsp;void&nbsp;setKeyStore(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key_store_file,
                <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key_store_password)
                  throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Sets the Key Store to use. The Key Store is used to authenticate 
+<div class="block">Sets the Key Store to use. The Key Store is used to authenticate
  with using SSL.<br><br>
-
- If this method is not called the HTTPSWrapper will use the default 
+ <p>
+ If this method is not called the HTTPSWrapper will use the default
  JDK Key Store (none). <br><br>
-
+ <p>
  To set your own Key Store this method must be called before making
  either a GET or POST request.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>key_store_file</code> - PKCS #12 or Java Keystore file</dd><dd><code>key_store_password</code> - Password to private key</dd>
@@ -827,7 +827,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
             int&nbsp;port)
               throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Sets up the proxy host and port to use. <br><br>
-       
+ <p>
  This method affects all proceeding requests. <br><br></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>host</code> - Host name or IP address of proxy. <tt>null</tt> removes any previous setting.</dd><dd><code>port</code> - Port number for proxy connection.</dd>
 <dt><span class="strong">Throws:</span></dt>
@@ -842,7 +842,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <h4>setRequireSuccess</h4>
 <pre>public&nbsp;void&nbsp;setRequireSuccess(boolean&nbsp;flag)</pre>
 <div class="block">If true, responses other HTTP than 200 (OK) will throw an exception. <br><br>
-
+ <p>
  This method affects all proceeding requests. <br><br></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>flag</code> - True to require success, else false.</dd></dl>
 </li>
@@ -855,7 +855,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <h4>setServerCertificateRevocation</h4>
 <pre>public&nbsp;void&nbsp;setServerCertificateRevocation(boolean&nbsp;flag)</pre>
 <div class="block">If true, enable server certificate revocation checks. <br><br>
-
+ <p>
  This method affects all proceeding requests. <br><br></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>flag</code> - The flag, Yeah</dd></dl>
 </li>
@@ -868,7 +868,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <h4>setTimeout</h4>
 <pre>public&nbsp;void&nbsp;setTimeout(int&nbsp;timeout)</pre>
 <div class="block">Sets the read timeout. Default is forever.
-
+ <p>
  This method affects all proceeding requests. <br><br></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>timeout</code> - Timeout in milliseconds.</dd></dl>
 </li>
@@ -880,12 +880,12 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <li class="blockList">
 <h4>setTrustStore</h4>
 <pre>public&nbsp;void&nbsp;setTrustStore(<a href="http://download.oracle.com/javase/7/docs/api/java/security/KeyStore.html?is-external=true" title="class or interface in java.security">KeyStore</a>&nbsp;trust_store)</pre>
-<div class="block">Sets the Trust Store to use. The Trust Store is used to verify server 
+<div class="block">Sets the Trust Store to use. The Trust Store is used to verify server
  certificates in SSL negotiations.<br><br>
-
- If this method is not called the HTTPSWrapper will use the default 
+ <p>
+ If this method is not called the HTTPSWrapper will use the default
  JDK Trust Store. <br><br>
-
+ <p>
  To set your own Trust Store this method must be called before making
  either a GET or POST request.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>trust_store</code> - Initialized java KeyStore.</dd></dl>
@@ -900,12 +900,12 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <pre>public&nbsp;void&nbsp;setTrustStore(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;store_name,
                  <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;store_passphrase)
                    throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Sets the Trust Store to use. The Trust Store is used to verify server 
+<div class="block">Sets the Trust Store to use. The Trust Store is used to verify server
  certificates in SSL negotiations.<br><br>
-
- If this method is not called the HTTPSWrapper will use the default 
+ <p>
+ If this method is not called the HTTPSWrapper will use the default
  JDK Trust Store. <br><br>
-
+ <p>
  To set your own Trust Store this method must be called before making
  either a GET or POST request.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>store_name</code> - Path to the Trust store file.</dd><dd><code>store_passphrase</code> - Passphrase to unlock Trust Store.</dd>

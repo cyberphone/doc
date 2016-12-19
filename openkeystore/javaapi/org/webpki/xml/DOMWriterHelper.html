@@ -97,7 +97,7 @@
 <pre>public class <span class="strong">DOMWriterHelper</span>
 extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">Utility class making creation of DOM documents easier in simple cases.
- <p>The DOMWriterHelper holds a cursor, the 
+ <p>The DOMWriterHelper holds a cursor, the
  <a name="current"><code><b>&quot;current element&quot;</b></code></a>,
  pointing at the last element created, to simplify building substructures
  and adding attributes.
@@ -105,7 +105,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
  do not necessarily act on the &quot;current element&quot; but on the last non-text element
  created or visited. This is a consequence of the simplified model we use in this class
  were elements either contain text or subelements (not both). This distinction makes
- <code>addXXXX</code> methods irrelevant when we are at a text element, instead we then let 
+ <code>addXXXX</code> methods irrelevant when we are at a text element, instead we then let
  it act on that text element's parent allowing code like
  <pre>
    helper.addChildElement(&quot;address&quot;);
@@ -114,33 +114,33 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
    helper.addString(&quot;state&quot;, &quot;CA&quot;);</pre>
  to create an element <code>address</code> with three subelements. If
  <code>addTextElement</code> had always operated on the &quot;current element&quot;,
- we would have had to insert <a href="../../../org/webpki/xml/DOMWriterHelper.html#getParent()"><code>getParent</code></a> between the 
+ we would have had to insert <a href="../../../org/webpki/xml/DOMWriterHelper.html#getParent()"><code>getParent</code></a> between the
  <code>addTextElement</code>s. As an additional consequence of this design,
  it wouldn't make sense to let <a href="../../../org/webpki/xml/DOMWriterHelper.html#getParent()"><code>getParent</code></a> operate
  on text elements. Hence <a href="../../../org/webpki/xml/DOMWriterHelper.html#getParent()"><code>getParent</code></a> will move the cursor
  to the parent's parent if the &quot;current element&quot; is a text element.
  <p>A more technical explanation of this would be that there are in fact two
- cursors, one &quot;element insertion cursor&quot; and one 
+ cursors, one &quot;element insertion cursor&quot; and one
  &quot;attribute setting cursor&quot;, and that <code>setXXXX</code> methods operate on the
  element pointed out by the &quot;attribute setting cursor&quot; while the
  navigation (<a href="../../../org/webpki/xml/DOMWriterHelper.html#getParent()"><code>getParent</code></a>) and element creation (<code>addXXXX</code>)
  methods operate on the &quot;element insertion cursor&quot;. Then all
- <code>addXXXX</code> methods and <a href="../../../org/webpki/xml/DOMWriterHelper.html#getParent()"><code>getParent</code></a> move the 
+ <code>addXXXX</code> methods and <a href="../../../org/webpki/xml/DOMWriterHelper.html#getParent()"><code>getParent</code></a> move the
  &quot;attribute setting cursor&quot; while only <a href="../../../org/webpki/xml/DOMWriterHelper.html#getParent()"><code>getParent</code></a>,
  <a href="../../../org/webpki/xml/DOMWriterHelper.html#addChildElement(java.lang.String)"><code>addChildElement</code></a> and <a href="../../../org/webpki/xml/DOMWriterHelper.html#addWrapped(org.webpki.xml.XMLObjectWrapper)"><code>addWrapped</code></a>
  also move the &quot;element insertion cursor&quot; (the &quot;attribute setting cursor&quot;
  will then point to the same element as the &quot;element insertion cursor&quot;).
- 
+ <p>
  <h3>A small example</h3>
  <pre>
    DOMWriterHelper helper = new DOMWriterHelper(doc, &quot;example:order&quot;);
- 
+
    helper.setNamespace(&quot;http://www.example.com/xml-schemas/order&quot;);
- 
+
    helper.addString(&quot;buyer&quot;, buyer);
- 
+
    helper.setIntAttribute(&quot;duns&quot;, buyerDUNS);
- 
+
    if(comment != null)
      helper.addString(&quot;comment&quot;, comment);
    ...</pre>
@@ -557,8 +557,8 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <pre>public&nbsp;void&nbsp;addDate(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
            <a href="http://download.oracle.com/javase/7/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</a>&nbsp;value)</pre>
 <div class="block">Add a text element to the current element.
- <p>The text content of the new element will be the 
- <code><a href="http://www.w3.org/TR/xmlschema-2/#date">date</a></code> 
+ <p>The text content of the new element will be the
+ <code><a href="http://www.w3.org/TR/xmlschema-2/#date">date</a></code>
  encoding of <i>value</i>.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - The name of the new element.</dd><dd><code>value</code> - The value of the new element.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="#current">DOMWriterHelper cursor state</a></dd></dl>
 </li>
@@ -572,8 +572,8 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <pre>public&nbsp;void&nbsp;addDateTime(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                <a href="http://download.oracle.com/javase/7/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</a>&nbsp;value)</pre>
 <div class="block">Add a text element to the current element.
- <p>The text content of the new element will be the 
- <code><a href="http://www.w3.org/TR/xmlschema-2/#dateTime">dateTime</a></code> 
+ <p>The text content of the new element will be the
+ <code><a href="http://www.w3.org/TR/xmlschema-2/#dateTime">dateTime</a></code>
  encoding of <i>value</i>.
  <p>The time value will be rounded to the nearest second (the precision
  of the Java <a href="http://download.oracle.com/javase/7/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util"><code>Date</code></a> class is milliseconds).</div>
@@ -625,7 +625,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
             int&nbsp;numberOfDecimals)</pre>
 <div class="block">Add a text element to the current element.
  <p>The text content of the new element will be <i>value</i> divided by 10000 and rounded/extended to
- the desired number of decimals. The rounding used is 
+ the desired number of decimals. The rounding used is
  <a href="http://download.oracle.com/javase/7/docs/api/java/math/BigDecimal.html?is-external=true#ROUND_HALF_UP" title="class or interface in java.math"><code>BigDecimal.ROUND_HALF_UP</code></a>, i.e. the standard method of rounding.
  <p>This datatype corresponds to <a href="http://www.microsoft.com/sql">MS SQL Server</a>'s
  <code>money</code> (and <code>smallmoney</code>) datatypes.</div>
@@ -641,7 +641,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <pre>public&nbsp;void&nbsp;addObject(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
              <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;value)</pre>
 <div class="block">Add a text element to the current element.
- <p>Uses the <i>value</i>'s <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang"><code>toString</code></a> function and is hence useful 
+ <p>Uses the <i>value</i>'s <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang"><code>toString</code></a> function and is hence useful
  when value is an object whos <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang"><code>toString</code></a> returns a suitably formatted
  string representation, for example a <a href="http://download.oracle.com/javase/7/docs/api/java/lang/StringBuffer.html?is-external=true" title="class or interface in java.lang"><code>StringBuffer</code></a>,
  <a href="http://download.oracle.com/javase/7/docs/api/java/math/BigInteger.html?is-external=true" title="class or interface in java.math"><code>BigInteger</code></a> or <a href="http://download.oracle.com/javase/7/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math"><code>BigDecimal</code></a>.</div>
@@ -657,7 +657,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <pre>public&nbsp;void&nbsp;addObjectConditional(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                         <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</pre>
 <div class="block">Add a text element to the current element if the value is non-null.
- <p>Uses the <i>value</i>'s <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang"><code>toString</code></a> function and is hence useful 
+ <p>Uses the <i>value</i>'s <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang"><code>toString</code></a> function and is hence useful
  when value is an object whos <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang"><code>toString</code></a> returns a suitably formatted
  string representation, for example a <a href="http://download.oracle.com/javase/7/docs/api/java/lang/StringBuffer.html?is-external=true" title="class or interface in java.lang"><code>StringBuffer</code></a>,
  <a href="http://download.oracle.com/javase/7/docs/api/java/math/BigInteger.html?is-external=true" title="class or interface in java.math"><code>BigInteger</code></a> or <a href="http://download.oracle.com/javase/7/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math"><code>BigDecimal</code></a>.</div>
@@ -837,8 +837,8 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <pre>public&nbsp;void&nbsp;setDateTimeAttribute(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                         <a href="http://download.oracle.com/javase/7/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</a>&nbsp;value)</pre>
 <div class="block">Set an attribute of the current element to a date.
- <p>The text content of the attribute will be the 
- <code><a href="http://www.w3.org/TR/xmlschema-2/#dateTime">dateTime</a></code> 
+ <p>The text content of the attribute will be the
+ <code><a href="http://www.w3.org/TR/xmlschema-2/#dateTime">dateTime</a></code>
  encoding of <i>value</i>.
  <p>The time value will be rounded to the nearest second (the precision
  of the Java <a href="http://download.oracle.com/javase/7/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util"><code>Date</code></a> class is milliseconds).</div>
@@ -877,7 +877,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
                      long&nbsp;value,
                      int&nbsp;numberOfDecimals)</pre>
 <div class="block">Set an attribute of the current element to a long divided by 10000 and rounded/extended to
- the desired number of decimals. The rounding used is 
+ the desired number of decimals. The rounding used is
  <a href="http://download.oracle.com/javase/7/docs/api/java/math/BigDecimal.html?is-external=true#ROUND_HALF_UP" title="class or interface in java.math"><code>BigDecimal.ROUND_HALF_UP</code></a>, i.e. the standard method of rounding.
  <p>This datatype corresponds to <a href="http://www.microsoft.com/sql">MS SQL Server</a>'s
  <code>money</code> (and <code>smallmoney</code>) datatypes.</div>
@@ -893,7 +893,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <pre>public&nbsp;void&nbsp;setObjectAttribute(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                       <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;value)</pre>
 <div class="block">Set an attribute of the current element.
- <p>Uses the <i>value</i>'s <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang"><code>toString</code></a> function and is hence useful 
+ <p>Uses the <i>value</i>'s <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang"><code>toString</code></a> function and is hence useful
  when value is an object whos <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang"><code>toString</code></a> returns a suitably formatted
  string representation, for example a <a href="http://download.oracle.com/javase/7/docs/api/java/lang/StringBuffer.html?is-external=true" title="class or interface in java.lang"><code>StringBuffer</code></a>,
  <a href="http://download.oracle.com/javase/7/docs/api/java/math/BigInteger.html?is-external=true" title="class or interface in java.math"><code>BigInteger</code></a> or <a href="http://download.oracle.com/javase/7/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math"><code>BigDecimal</code></a>.</div>

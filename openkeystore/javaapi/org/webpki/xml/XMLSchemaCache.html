@@ -100,11 +100,11 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
  <p>The schema cache is used to handle XML messages for an application, keeping
  some of the XML-related details out of the application code.
  <p>The schema cache stores the XML schemas/DTDs used by the application for
- fast and reliable access. In doing that, it also keeps track of what target 
+ fast and reliable access. In doing that, it also keeps track of what target
  namespaces are allowed to be used in messages (protecting the application from
  corrupt or unknown messages and schemas).
  <p>The schema cache also stores the association of specific XML elements to
- <a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml"><code>wrapper classes</code></a> that convert that element/message to and 
+ <a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml"><code>wrapper classes</code></a> that convert that element/message to and
  from XML form, allowing the application to access messages as Java objects.
  <p>The schema cache itself will not remember schemas or wrappers between sessions.
  <h3>A small example</h3>
@@ -113,23 +113,23 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
  <p><b>Initialization</b>
  <pre>
    XMLSchemaCache cache = new XMLSchemaCache ();
- 
+
    cache.addSchemaFromFile("b2b.xsd");
-   
+
    cache.addWrapper ("com.example.xmlwrappers.Order");
    cache.addWrapper ("com.example.xmlwrappers.RequestForQuote");
    cache.addWrapper ("com.example.xmlwrappers.Quote");
    cache.addWrapper ("com.example.xmlwrappers.Invoice");
  </pre>
  The <a href="../../../org/webpki/xml/XMLSchemaCache.html#addSchemaFromFile(java.lang.String)"><code>addSchemaFromFile method</code></a> parses the schema file
- to find it's target namespace. <a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml"><code>Wrapper classes</code></a> themselves provide 
+ to find it's target namespace. <a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml"><code>Wrapper classes</code></a> themselves provide
  information on what element (of what target namespace) they handle.
  <p><b>Use</b>
  <pre>
    public void processMessage(byte[] xmlMessage) throws ...
      {
        XMLObjectWrapper message = cache.wrap(xmlMessage);
- 
+
        if(message instanceof Order)
          {
            Order order = (Order)message;
@@ -138,7 +138,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
        else if(message instanceof RequestForQuote)
          {
            RequestForQuote rfq = (RequestForQuote)rfq;
-           Quote quote = new Quote(rfq.requestNumber(), 
+           Quote quote = new Quote(rfq.requestNumber(),
                                    erpSystem.getQuote(rfq.customer(), rfq.itemList()));
            sendMessage(quote.toXML());
          }

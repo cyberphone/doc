@@ -99,12 +99,12 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <div class="block">Utility class making traversal of DOM documents easier in simple cases.
  <p>This class holds the state of a cursor navigating the tree and provides
  a set of methods for accessing/converting the contents of elements.
- <p>The cursor is moved after a successful call to <code>getNext()</code>, 
- <code>get<i>Datatype</i>()</code> or <code>get<i>Datatype</i>Conditional()</code>, 
+ <p>The cursor is moved after a successful call to <code>getNext()</code>,
+ <code>get<i>Datatype</i>()</code> or <code>get<i>Datatype</i>Conditional()</code>,
  i.e. after the value is read.
- <p><a href="../../../org/webpki/xml/DOMReaderHelper.html#getChild()"><code>getChild</code></a> and the <a href="../../../org/webpki/xml/DOMReaderHelper.html#getAttributeHelper()"><code>DOMAttributeReaderHelper</code></a> 
+ <p><a href="../../../org/webpki/xml/DOMReaderHelper.html#getChild()"><code>getChild</code></a> and the <a href="../../../org/webpki/xml/DOMReaderHelper.html#getAttributeHelper()"><code>DOMAttributeReaderHelper</code></a>
  will act on the <a name="last"><code><b>&quot;last visited element&quot;</b></code></a>, hereby defined to mean the
- element that the cursor pointed at before the last <code>getNext()</code>, 
+ element that the cursor pointed at before the last <code>getNext()</code>,
  <code>get<i>Datatype</i>()</code> or <code>get<i>Datatype</i>Conditional()</code> call, if any.
  This allows code like
  <pre>   helper.getNext(&quot;orderline&quot;);
@@ -176,7 +176,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/webpki/xml/DOMAttributeReaderHelper.html" title="class in org.webpki.xml">DOMAttributeReaderHelper</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/webpki/xml/DOMReaderHelper.html#getAttributeHelper()">getAttributeHelper</a></strong>()</code>
-<div class="block">Get the <a href="../../../org/webpki/xml/DOMAttributeReaderHelper.html" title="class in org.webpki.xml"><code>DOMAttributeReaderHelper</code></a> of this 
+<div class="block">Get the <a href="../../../org/webpki/xml/DOMAttributeReaderHelper.html" title="class in org.webpki.xml"><code>DOMAttributeReaderHelper</code></a> of this
  <code>DOMReaderHelper</code>.</div>
 </td>
 </tr>
@@ -424,12 +424,12 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <li class="blockList">
 <h4>getAttributeHelper</h4>
 <pre>public&nbsp;<a href="../../../org/webpki/xml/DOMAttributeReaderHelper.html" title="class in org.webpki.xml">DOMAttributeReaderHelper</a>&nbsp;getAttributeHelper()</pre>
-<div class="block">Get the <a href="../../../org/webpki/xml/DOMAttributeReaderHelper.html" title="class in org.webpki.xml"><code>DOMAttributeReaderHelper</code></a> of this 
+<div class="block">Get the <a href="../../../org/webpki/xml/DOMAttributeReaderHelper.html" title="class in org.webpki.xml"><code>DOMAttributeReaderHelper</code></a> of this
  <code>DOMReaderHelper</code>.
  <p>The <a href="../../../org/webpki/xml/DOMAttributeReaderHelper.html" title="class in org.webpki.xml"><code>DOMAttributeReaderHelper</code></a> gives access
  to the attributes of the <a href="#last">&quot;last visited element&quot;</a>.
- <p>Please note that the DOMAttributeReaderHelper returned will follow this 
- DOMReaderHelper's cursor, i.e. it will always act on the current 
+ <p>Please note that the DOMAttributeReaderHelper returned will follow this
+ DOMReaderHelper's cursor, i.e. it will always act on the current
  <a href="../../../org/webpki/xml/DOMReaderHelper.html" title="class in org.webpki.xml"><code>&quot;last visited element&quot;</code></a>
  of this DOMReaderHelper.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>DOMAttributeReaderHelper</dd></dl>
@@ -829,7 +829,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <dt><span class="strong">Returns:</span></dt><dd>The current element.</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/util/NoSuchElementException.html?is-external=true" title="class or interface in java.util">NoSuchElementException</a></code> - If the current element's local name is not <i>name</i> or
-                               if there are no more elements.</dd></dl>
+                                if there are no more elements.</dd></dl>
 </li>
 </ul>
 <a name="getParent()">
@@ -852,7 +852,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
                  throws <a href="http://download.oracle.com/javase/7/docs/api/java/util/NoSuchElementException.html?is-external=true" title="class or interface in java.util">NoSuchElementException</a></pre>
 <div class="block">Get the text contents of the current <a href="http://download.oracle.com/javase/7/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom"><code>Element</code></a>.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>The text contents of the current <a href="http://download.oracle.com/javase/7/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom"><code>Element</code></a>,
-         null if the element is empty.</dd>
+ null if the element is empty.</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/util/NoSuchElementException.html?is-external=true" title="class or interface in java.util">NoSuchElementException</a></code> - if the current element has non-text content or
                                 if there is no current element.</dd></dl>
@@ -869,11 +869,11 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <div class="block">Get the text contents of the current <a href="http://download.oracle.com/javase/7/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom"><code>Element</code></a>, which must have local name <i>name</i>.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - The local element name expected.</dd>
 <dt><span class="strong">Returns:</span></dt><dd>The text contents of the current <a href="http://download.oracle.com/javase/7/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom"><code>Element</code></a>,
-         null if the element is empty.</dd>
+ null if the element is empty.</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/util/NoSuchElementException.html?is-external=true" title="class or interface in java.util">NoSuchElementException</a></code> - if the current element has non-text content,
-                               if it's local name is not <i>name</i> or
-                               if there is no current element.</dd></dl>
+                                if it's local name is not <i>name</i> or
+                                if there is no current element.</dd></dl>
 </li>
 </ul>
 <a name="getStringConditional(java.lang.String)">
@@ -887,11 +887,11 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <div class="block">Get the text contents of the current <a href="http://download.oracle.com/javase/7/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom"><code>Element</code></a>, if it exists, is non-empty and has local name <i>name</i>.
  <p>The cursor will only be moved forward if the local element name matches <i>name</i>.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - The local element name to test for.</dd>
-<dt><span class="strong">Returns:</span></dt><dd>The text contents of the current <a href="http://download.oracle.com/javase/7/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom"><code>Element</code></a>, if it exists, 
-         is non-empty and has local name <i>name</i>, null otherwise.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The text contents of the current <a href="http://download.oracle.com/javase/7/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom"><code>Element</code></a>, if it exists,
+ is non-empty and has local name <i>name</i>, null otherwise.</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/util/NoSuchElementException.html?is-external=true" title="class or interface in java.util">NoSuchElementException</a></code> - if the current element has local name <i>name</i> but
-                               has non-text content.</dd></dl>
+                                has non-text content.</dd></dl>
 </li>
 </ul>
 <a name="getXMLCookie()">
@@ -940,7 +940,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
  has local name <code><i>name</i></code> (and if exists at all).</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Name of element</dd>
 <dt><span class="strong">Returns:</span></dt><dd>true if the <a href="#last">&quot;last visited element&quot;</a> has more siblings,
-                  and the next sibling has local name <code><i>name</i></code>.</dd></dl>
+ and the next sibling has local name <code><i>name</i></code>.</dd></dl>
 </li>
 </ul>
 <a name="parseDate(java.lang.String)">

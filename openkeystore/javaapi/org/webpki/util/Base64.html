@@ -329,9 +329,9 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <pre>public&nbsp;Base64(boolean&nbsp;linebreak)</pre>
 <div class="block">Constructor.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>linebreak</code> - whether or not the base64 encoded data should
- be divided into several rows.
- <b>Warning:</b> Deviating from default values, might cause compatibility
- problems with other Base64 encoders/decoders.</dd></dl>
+                  be divided into several rows.
+                  <b>Warning:</b> Deviating from default values, might cause compatibility
+                  problems with other Base64 encoders/decoders.</dd></dl>
 </li>
 </ul>
 <a name="Base64(int)">
@@ -343,9 +343,9 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <pre>public&nbsp;Base64(int&nbsp;encCharsARow)</pre>
 <div class="block">Constructor.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>encCharsARow</code> - number of encoded characters before each
- linebreak.
- <b>Warning:</b> Deviating from default values, might cause compatibility
- problems with other Base64 encoders/decoders.</dd></dl>
+                     linebreak.
+                     <b>Warning:</b> Deviating from default values, might cause compatibility
+                     problems with other Base64 encoders/decoders.</dd></dl>
 </li>
 </ul>
 <a name="Base64(int, boolean)">
@@ -358,9 +358,9 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
       boolean&nbsp;padding)</pre>
 <div class="block">Constructor.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>encCharsARow</code> - number of encoded characters before each
- linebreak.
- <b>Warning:</b> Deviating from default values, might cause compatibility
- problems with other Base64 encoders/decoders.</dd><dd><code>padding</code> - whether or not the encoded base64 data should be padded at the end</dd></dl>
+                     linebreak.
+                     <b>Warning:</b> Deviating from default values, might cause compatibility
+                     problems with other Base64 encoders/decoders.</dd><dd><code>padding</code> - whether or not the encoded base64 data should be padded at the end</dd></dl>
 </li>
 </ul>
 </li>
@@ -398,7 +398,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <dt><span class="strong">Returns:</span></dt><dd>encoded data as a byte array</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if the input
- String contains non-ascii8 characters.</dd></dl>
+                     String contains non-ascii8 characters.</dd></dl>
 </li>
 </ul>
 <a name="getBase64BinaryFromUnicode(java.lang.String)">
@@ -416,7 +416,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <dt><span class="strong">Returns:</span></dt><dd>encoded data as a byte array</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if there
- is a problem converting Unicode to UTF-8.</dd></dl>
+                     is a problem converting Unicode to UTF-8.</dd></dl>
 </li>
 </ul>
 <a name="getBase64StringFromBinary(byte[])">
@@ -446,7 +446,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <dt><span class="strong">Returns:</span></dt><dd>encoded data as a String</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if the input
- String contains non-ascii8 characters.</dd></dl>
+                     String contains non-ascii8 characters.</dd></dl>
 </li>
 </ul>
 <a name="getBase64StringFromUnicode(java.lang.String)">
@@ -464,7 +464,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <dt><span class="strong">Returns:</span></dt><dd>encoded data as a String</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if there
- is a problem converting Unicode to UTF-8.</dd></dl>
+                     is a problem converting Unicode to UTF-8.</dd></dl>
 </li>
 </ul>
 <a name="getBinaryFromBase64Binary(byte[])">
@@ -497,8 +497,8 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <dt><span class="strong">Returns:</span></dt><dd>decoded data as a byte array</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if the input data isn't valid base64 data
- or if the input String contains characters
- other than ASCII8.</dd></dl>
+                     or if the input String contains characters
+                     other than ASCII8.</dd></dl>
 </li>
 </ul>
 <a name="getEncodedCharsPerRow()">
@@ -567,8 +567,8 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <dt><span class="strong">Returns:</span></dt><dd>decoded data as a String</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if the input data isn't valid base64 data
- or if the input String contains characters
- other than ASCII8.</dd></dl>
+                     or if the input String contains characters
+                     other than ASCII8.</dd></dl>
 </li>
 </ul>
 <a name="getUnicodeFromBase64Binary(byte[])">
@@ -586,7 +586,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <dt><span class="strong">Returns:</span></dt><dd>decoded data as a Unicode String</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if the input data isn't valid base64 data
- or if there is a problem converting UTF-8 to Unicode</dd></dl>
+                     or if there is a problem converting UTF-8 to Unicode</dd></dl>
 </li>
 </ul>
 <a name="getUnicodeFromBase64String(java.lang.String)">
@@ -604,7 +604,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <dt><span class="strong">Returns:</span></dt><dd>decoded data as a Unicode String</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if the input data isn't valid base64 data
- or if there is a problem converting UTF-8 to Unicode</dd></dl>
+                     or if there is a problem converting UTF-8 to Unicode</dd></dl>
 </li>
 </ul>
 <a name="main(java.lang.String[])">
