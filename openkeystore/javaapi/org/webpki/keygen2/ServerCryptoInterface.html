@@ -120,19 +120,19 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/io/Serializab
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerCryptoInterface.html#generateAndVerifySessionKey(java.security.interfaces.ECPublicKey, byte[], byte[], java.security.cert.X509Certificate, byte[])">generateAndVerifySessionKey</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/security/interfaces/ECPublicKey.html?is-external=true" title="class or interface in java.security.interfaces">ECPublicKey</a>&nbsp;client_ephemeral_key,
-                           byte[]&nbsp;kdf_data,
-                           byte[]&nbsp;attestation_arguments,
-                           <a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>&nbsp;device_certificate,
-                           byte[]&nbsp;session_attestation)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerCryptoInterface.html#generateAndVerifySessionKey(java.security.interfaces.ECPublicKey, byte[], byte[], java.security.cert.X509Certificate, byte[])">generateAndVerifySessionKey</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/security/interfaces/ECPublicKey.html?is-external=true" title="class or interface in java.security.interfaces">ECPublicKey</a>&nbsp;clientEphemeralKey,
+                           byte[]&nbsp;kdfData,
+                           byte[]&nbsp;attestationArguments,
+                           <a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>&nbsp;deviceCertificate,
+                           byte[]&nbsp;sessionAttestation)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/security/interfaces/ECPublicKey.html?is-external=true" title="class or interface in java.security.interfaces">ECPublicKey</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerCryptoInterface.html#generateEphemeralKey(org.webpki.crypto.KeyAlgorithms)">generateEphemeralKey</a></strong>(<a href="../../../org/webpki/crypto/KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a>&nbsp;ec_key_algorithm)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerCryptoInterface.html#generateEphemeralKey(org.webpki.crypto.KeyAlgorithms)">generateEphemeralKey</a></strong>(<a href="../../../org/webpki/crypto/KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a>&nbsp;ecKeyAlgorithm)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerCryptoInterface.html#generateKeyManagementAuthorization(java.security.PublicKey, byte[])">generateKeyManagementAuthorization</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;key_management_key,
+<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerCryptoInterface.html#generateKeyManagementAuthorization(java.security.PublicKey, byte[])">generateKeyManagementAuthorization</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;keyManagementKey,
                                   byte[]&nbsp;data)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -142,7 +142,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/io/Serializab
 <tr class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerCryptoInterface.html#mac(byte[], byte[])">mac</a></strong>(byte[]&nbsp;data,
-   byte[]&nbsp;key_modifier)</code>&nbsp;</td>
+   byte[]&nbsp;keyModifier)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -189,11 +189,11 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/io/Serializab
 <ul class="blockList">
 <li class="blockList">
 <h4>generateAndVerifySessionKey</h4>
-<pre>void&nbsp;generateAndVerifySessionKey(<a href="http://download.oracle.com/javase/7/docs/api/java/security/interfaces/ECPublicKey.html?is-external=true" title="class or interface in java.security.interfaces">ECPublicKey</a>&nbsp;client_ephemeral_key,
-                               byte[]&nbsp;kdf_data,
-                               byte[]&nbsp;attestation_arguments,
-                               <a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>&nbsp;device_certificate,
-                               byte[]&nbsp;session_attestation)
+<pre>void&nbsp;generateAndVerifySessionKey(<a href="http://download.oracle.com/javase/7/docs/api/java/security/interfaces/ECPublicKey.html?is-external=true" title="class or interface in java.security.interfaces">ECPublicKey</a>&nbsp;clientEphemeralKey,
+                               byte[]&nbsp;kdfData,
+                               byte[]&nbsp;attestationArguments,
+                               <a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>&nbsp;deviceCertificate,
+                               byte[]&nbsp;sessionAttestation)
                                  throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -205,7 +205,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/io/Serializab
 <ul class="blockList">
 <li class="blockList">
 <h4>generateEphemeralKey</h4>
-<pre><a href="http://download.oracle.com/javase/7/docs/api/java/security/interfaces/ECPublicKey.html?is-external=true" title="class or interface in java.security.interfaces">ECPublicKey</a>&nbsp;generateEphemeralKey(<a href="../../../org/webpki/crypto/KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a>&nbsp;ec_key_algorithm)
+<pre><a href="http://download.oracle.com/javase/7/docs/api/java/security/interfaces/ECPublicKey.html?is-external=true" title="class or interface in java.security.interfaces">ECPublicKey</a>&nbsp;generateEphemeralKey(<a href="../../../org/webpki/crypto/KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a>&nbsp;ecKeyAlgorithm)
                                  throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -217,7 +217,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/io/Serializab
 <ul class="blockList">
 <li class="blockList">
 <h4>generateKeyManagementAuthorization</h4>
-<pre>byte[]&nbsp;generateKeyManagementAuthorization(<a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;key_management_key,
+<pre>byte[]&nbsp;generateKeyManagementAuthorization(<a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;keyManagementKey,
                                         byte[]&nbsp;data)
                                           throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -243,7 +243,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>mac</h4>
 <pre>byte[]&nbsp;mac(byte[]&nbsp;data,
-         byte[]&nbsp;key_modifier)
+         byte[]&nbsp;keyModifier)
            throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>

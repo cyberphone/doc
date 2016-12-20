@@ -124,7 +124,7 @@ extends <a href="../../../org/webpki/json/JSONEncoder.html" title="class in org.
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../org/webpki/keygen2/KeyCreationResponseEncoder.html#KeyCreationResponseEncoder(org.webpki.keygen2.KeyCreationRequestDecoder)">KeyCreationResponseEncoder</a></strong>(<a href="../../../org/webpki/keygen2/KeyCreationRequestDecoder.html" title="class in org.webpki.keygen2">KeyCreationRequestDecoder</a>&nbsp;key_init_req)</code>&nbsp;</td>
+<td class="colOne"><code><strong><a href="../../../org/webpki/keygen2/KeyCreationResponseEncoder.html#KeyCreationResponseEncoder(org.webpki.keygen2.KeyCreationRequestDecoder)">KeyCreationResponseEncoder</a></strong>(<a href="../../../org/webpki/keygen2/KeyCreationRequestDecoder.html" title="class in org.webpki.keygen2">KeyCreationRequestDecoder</a>&nbsp;keyCreationRequestDecoder)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -143,7 +143,7 @@ extends <a href="../../../org/webpki/json/JSONEncoder.html" title="class in org.
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/KeyCreationResponseEncoder.html#addPublicKey(java.security.PublicKey, byte[], java.lang.String)">addPublicKey</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;public_key,
+<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/KeyCreationResponseEncoder.html#addPublicKey(java.security.PublicKey, byte[], java.lang.String)">addPublicKey</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey,
             byte[]&nbsp;attestation,
             <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id)</code>&nbsp;</td>
 </tr>
@@ -200,7 +200,7 @@ extends <a href="../../../org/webpki/json/JSONEncoder.html" title="class in org.
 <ul class="blockListLast">
 <li class="blockList">
 <h4>KeyCreationResponseEncoder</h4>
-<pre>public&nbsp;KeyCreationResponseEncoder(<a href="../../../org/webpki/keygen2/KeyCreationRequestDecoder.html" title="class in org.webpki.keygen2">KeyCreationRequestDecoder</a>&nbsp;key_init_req)
+<pre>public&nbsp;KeyCreationResponseEncoder(<a href="../../../org/webpki/keygen2/KeyCreationRequestDecoder.html" title="class in org.webpki.keygen2">KeyCreationRequestDecoder</a>&nbsp;keyCreationRequestDecoder)
                            throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -220,7 +220,7 @@ extends <a href="../../../org/webpki/json/JSONEncoder.html" title="class in org.
 <ul class="blockList">
 <li class="blockList">
 <h4>addPublicKey</h4>
-<pre>public&nbsp;void&nbsp;addPublicKey(<a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;public_key,
+<pre>public&nbsp;void&nbsp;addPublicKey(<a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey,
                 byte[]&nbsp;attestation,
                 <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;id)
                   throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>

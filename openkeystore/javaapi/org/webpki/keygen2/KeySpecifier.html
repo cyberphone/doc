@@ -120,15 +120,15 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../org/webpki/keygen2/KeySpecifier.html#KeySpecifier(org.webpki.crypto.KeyAlgorithms)">KeySpecifier</a></strong>(<a href="../../../org/webpki/crypto/KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a>&nbsp;key_algorithm)</code>&nbsp;</td>
+<td class="colOne"><code><strong><a href="../../../org/webpki/keygen2/KeySpecifier.html#KeySpecifier(org.webpki.crypto.KeyAlgorithms)">KeySpecifier</a></strong>(<a href="../../../org/webpki/crypto/KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a>&nbsp;keyAlgorithm)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><strong><a href="../../../org/webpki/keygen2/KeySpecifier.html#KeySpecifier(org.webpki.crypto.KeyAlgorithms, long)">KeySpecifier</a></strong>(<a href="../../../org/webpki/crypto/KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a>&nbsp;key_algorithm,
+<td class="colOne"><code><strong><a href="../../../org/webpki/keygen2/KeySpecifier.html#KeySpecifier(org.webpki.crypto.KeyAlgorithms, long)">KeySpecifier</a></strong>(<a href="../../../org/webpki/crypto/KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a>&nbsp;keyAlgorithm,
             long&nbsp;parameter)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><strong><a href="../../../org/webpki/keygen2/KeySpecifier.html#KeySpecifier(java.lang.String, byte[])">KeySpecifier</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uri,
-            byte[]&nbsp;optional_parameters)</code>&nbsp;</td>
+            byte[]&nbsp;optionalParameters)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -181,7 +181,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>KeySpecifier</h4>
-<pre>public&nbsp;KeySpecifier(<a href="../../../org/webpki/crypto/KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a>&nbsp;key_algorithm)</pre>
+<pre>public&nbsp;KeySpecifier(<a href="../../../org/webpki/crypto/KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a>&nbsp;keyAlgorithm)</pre>
 </li>
 </ul>
 <a name="KeySpecifier(org.webpki.crypto.KeyAlgorithms, long)">
@@ -190,7 +190,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>KeySpecifier</h4>
-<pre>public&nbsp;KeySpecifier(<a href="../../../org/webpki/crypto/KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a>&nbsp;key_algorithm,
+<pre>public&nbsp;KeySpecifier(<a href="../../../org/webpki/crypto/KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a>&nbsp;keyAlgorithm,
             long&nbsp;parameter)
              throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -204,7 +204,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <li class="blockList">
 <h4>KeySpecifier</h4>
 <pre>public&nbsp;KeySpecifier(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uri,
-            byte[]&nbsp;optional_parameters)
+            byte[]&nbsp;optionalParameters)
              throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>

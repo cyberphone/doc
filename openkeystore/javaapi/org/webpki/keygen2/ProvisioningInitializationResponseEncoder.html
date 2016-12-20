@@ -125,11 +125,11 @@ extends <a href="../../../org/webpki/json/JSONEncoder.html" title="class in org.
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><strong><a href="../../../org/webpki/keygen2/ProvisioningInitializationResponseEncoder.html#ProvisioningInitializationResponseEncoder(org.webpki.keygen2.ProvisioningInitializationRequestDecoder, java.security.interfaces.ECPublicKey, java.lang.String, java.util.Date, byte[], java.security.cert.X509Certificate[])">ProvisioningInitializationResponseEncoder</a></strong>(<a href="../../../org/webpki/keygen2/ProvisioningInitializationRequestDecoder.html" title="class in org.webpki.keygen2">ProvisioningInitializationRequestDecoder</a>&nbsp;prov_init_req,
-                                         <a href="http://download.oracle.com/javase/7/docs/api/java/security/interfaces/ECPublicKey.html?is-external=true" title="class or interface in java.security.interfaces">ECPublicKey</a>&nbsp;client_ephemeral_key,
-                                         <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;client_session_id,
-                                         <a href="http://download.oracle.com/javase/7/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</a>&nbsp;client_time,
+                                         <a href="http://download.oracle.com/javase/7/docs/api/java/security/interfaces/ECPublicKey.html?is-external=true" title="class or interface in java.security.interfaces">ECPublicKey</a>&nbsp;clientEphemeralKey,
+                                         <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;clientSessionId,
+                                         <a href="http://download.oracle.com/javase/7/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</a>&nbsp;clientTime,
                                          byte[]&nbsp;attestation,
-                                         <a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]&nbsp;device_certificate_path)</code>&nbsp;</td>
+                                         <a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]&nbsp;deviceCertificatePath)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -164,7 +164,7 @@ extends <a href="../../../org/webpki/json/JSONEncoder.html" title="class in org.
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ProvisioningInitializationResponseEncoder.html#setServerCertificate(java.security.cert.X509Certificate)">setServerCertificate</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>&nbsp;server_certificate)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ProvisioningInitializationResponseEncoder.html#setServerCertificate(java.security.cert.X509Certificate)">setServerCertificate</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>&nbsp;serverCertificate)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
@@ -208,11 +208,11 @@ extends <a href="../../../org/webpki/json/JSONEncoder.html" title="class in org.
 <li class="blockList">
 <h4>ProvisioningInitializationResponseEncoder</h4>
 <pre>public&nbsp;ProvisioningInitializationResponseEncoder(<a href="../../../org/webpki/keygen2/ProvisioningInitializationRequestDecoder.html" title="class in org.webpki.keygen2">ProvisioningInitializationRequestDecoder</a>&nbsp;prov_init_req,
-                                         <a href="http://download.oracle.com/javase/7/docs/api/java/security/interfaces/ECPublicKey.html?is-external=true" title="class or interface in java.security.interfaces">ECPublicKey</a>&nbsp;client_ephemeral_key,
-                                         <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;client_session_id,
-                                         <a href="http://download.oracle.com/javase/7/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</a>&nbsp;client_time,
+                                         <a href="http://download.oracle.com/javase/7/docs/api/java/security/interfaces/ECPublicKey.html?is-external=true" title="class or interface in java.security.interfaces">ECPublicKey</a>&nbsp;clientEphemeralKey,
+                                         <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;clientSessionId,
+                                         <a href="http://download.oracle.com/javase/7/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</a>&nbsp;clientTime,
                                          byte[]&nbsp;attestation,
-                                         <a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]&nbsp;device_certificate_path)
+                                         <a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]&nbsp;deviceCertificatePath)
                                           throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -274,7 +274,7 @@ extends <a href="../../../org/webpki/json/JSONEncoder.html" title="class in org.
 <ul class="blockList">
 <li class="blockList">
 <h4>setServerCertificate</h4>
-<pre>public&nbsp;void&nbsp;setServerCertificate(<a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>&nbsp;server_certificate)
+<pre>public&nbsp;void&nbsp;setServerCertificate(<a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>&nbsp;serverCertificate)
                           throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>

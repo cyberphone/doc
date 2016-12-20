@@ -179,7 +179,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#ServerState(org.webpki.keygen2.ServerCryptoInterface)">ServerState</a></strong>(<a href="../../../org/webpki/keygen2/ServerCryptoInterface.html" title="interface in org.webpki.keygen2">ServerCryptoInterface</a>&nbsp;server_crypto_interface)</code>&nbsp;</td>
+<td class="colOne"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#ServerState(org.webpki.keygen2.ServerCryptoInterface)">ServerState</a></strong>(<a href="../../../org/webpki/keygen2/ServerCryptoInterface.html" title="interface in org.webpki.keygen2">ServerCryptoInterface</a>&nbsp;serverCryptoInterface)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -198,61 +198,61 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/keygen2/ServerState.html" title="class in org.webpki.keygen2">ServerState</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#addFeatureQuery(java.lang.String)">addFeatureQuery</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;feature_type_uri)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#addFeatureQuery(java.lang.String)">addFeatureQuery</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;featureTypeUri)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/webpki/keygen2/ServerState.html" title="class in org.webpki.keygen2">ServerState</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#addImageAttributesQuery(java.lang.String)">addImageAttributesQuery</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;image_type_uri)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#addImageAttributesQuery(java.lang.String)">addImageAttributesQuery</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;imageTypeUri)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#addPostDeleteKey(java.lang.String, java.lang.String, java.security.cert.X509Certificate, java.security.PublicKey)">addPostDeleteKey</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;old_client_session_id,
-                <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;old_server_session_id,
-                <a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>&nbsp;old_key,
-                <a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;key_management_key)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#addPostDeleteKey(java.lang.String, java.lang.String, java.security.cert.X509Certificate, java.security.PublicKey)">addPostDeleteKey</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;oldClientSessionId,
+                <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;oldServerSessionId,
+                <a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>&nbsp;oldKey,
+                <a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;keyManagementKey)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#addPostUnlockKey(java.lang.String, java.lang.String, java.security.cert.X509Certificate, java.security.PublicKey)">addPostUnlockKey</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;old_client_session_id,
-                <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;old_server_session_id,
-                <a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>&nbsp;old_key,
-                <a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;key_management_key)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#addPostUnlockKey(java.lang.String, java.lang.String, java.security.cert.X509Certificate, java.security.PublicKey)">addPostUnlockKey</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;oldClientSessionId,
+                <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;oldServerSessionId,
+                <a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>&nbsp;oldKey,
+                <a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;keyManagementKey)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/keygen2/ServerState.html" title="class in org.webpki.keygen2">ServerState</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#addValuesQuery(java.lang.String)">addValuesQuery</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;values_type_uri)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#addValuesQuery(java.lang.String)">addValuesQuery</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;valuesTypeUri)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/webpki/keygen2/ServerState.Key.html" title="class in org.webpki.keygen2">ServerState.Key</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#createDevicePINProtectedKey(org.webpki.sks.AppUsage, org.webpki.keygen2.KeySpecifier)">createDevicePINProtectedKey</a></strong>(<a href="../../../org/webpki/sks/AppUsage.html" title="enum in org.webpki.sks">AppUsage</a>&nbsp;app_usage,
-                           <a href="../../../org/webpki/keygen2/KeySpecifier.html" title="class in org.webpki.keygen2">KeySpecifier</a>&nbsp;key_specifier)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#createDevicePINProtectedKey(org.webpki.sks.AppUsage, org.webpki.keygen2.KeySpecifier)">createDevicePINProtectedKey</a></strong>(<a href="../../../org/webpki/sks/AppUsage.html" title="enum in org.webpki.sks">AppUsage</a>&nbsp;appUsage,
+                           <a href="../../../org/webpki/keygen2/KeySpecifier.html" title="class in org.webpki.keygen2">KeySpecifier</a>&nbsp;keySpecifier)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/keygen2/ServerState.Key.html" title="class in org.webpki.keygen2">ServerState.Key</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#createKey(org.webpki.sks.AppUsage, org.webpki.keygen2.KeySpecifier, org.webpki.keygen2.ServerState.PINPolicy)">createKey</a></strong>(<a href="../../../org/webpki/sks/AppUsage.html" title="enum in org.webpki.sks">AppUsage</a>&nbsp;app_usage,
-         <a href="../../../org/webpki/keygen2/KeySpecifier.html" title="class in org.webpki.keygen2">KeySpecifier</a>&nbsp;key_specifier,
-         <a href="../../../org/webpki/keygen2/ServerState.PINPolicy.html" title="class in org.webpki.keygen2">ServerState.PINPolicy</a>&nbsp;pin_policy)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#createKey(org.webpki.sks.AppUsage, org.webpki.keygen2.KeySpecifier, org.webpki.keygen2.ServerState.PINPolicy)">createKey</a></strong>(<a href="../../../org/webpki/sks/AppUsage.html" title="enum in org.webpki.sks">AppUsage</a>&nbsp;appUsage,
+         <a href="../../../org/webpki/keygen2/KeySpecifier.html" title="class in org.webpki.keygen2">KeySpecifier</a>&nbsp;keySpecifier,
+         <a href="../../../org/webpki/keygen2/ServerState.PINPolicy.html" title="class in org.webpki.keygen2">ServerState.PINPolicy</a>&nbsp;pinPolicy)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/webpki/keygen2/ServerState.Key.html" title="class in org.webpki.keygen2">ServerState.Key</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#createKeyWithPresetPIN(org.webpki.sks.AppUsage, org.webpki.keygen2.KeySpecifier, org.webpki.keygen2.ServerState.PINPolicy, byte[])">createKeyWithPresetPIN</a></strong>(<a href="../../../org/webpki/sks/AppUsage.html" title="enum in org.webpki.sks">AppUsage</a>&nbsp;app_usage,
-                      <a href="../../../org/webpki/keygen2/KeySpecifier.html" title="class in org.webpki.keygen2">KeySpecifier</a>&nbsp;key_specifier,
-                      <a href="../../../org/webpki/keygen2/ServerState.PINPolicy.html" title="class in org.webpki.keygen2">ServerState.PINPolicy</a>&nbsp;pin_policy,
+<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#createKeyWithPresetPIN(org.webpki.sks.AppUsage, org.webpki.keygen2.KeySpecifier, org.webpki.keygen2.ServerState.PINPolicy, byte[])">createKeyWithPresetPIN</a></strong>(<a href="../../../org/webpki/sks/AppUsage.html" title="enum in org.webpki.sks">AppUsage</a>&nbsp;appUsage,
+                      <a href="../../../org/webpki/keygen2/KeySpecifier.html" title="class in org.webpki.keygen2">KeySpecifier</a>&nbsp;keySpecifier,
+                      <a href="../../../org/webpki/keygen2/ServerState.PINPolicy.html" title="class in org.webpki.keygen2">ServerState.PINPolicy</a>&nbsp;pinPolicy,
                       byte[]&nbsp;pin)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/keygen2/ServerState.PINPolicy.html" title="class in org.webpki.keygen2">ServerState.PINPolicy</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#createPINPolicy(org.webpki.sks.PassphraseFormat, int, int, int, org.webpki.keygen2.ServerState.PUKPolicy)">createPINPolicy</a></strong>(<a href="../../../org/webpki/sks/PassphraseFormat.html" title="enum in org.webpki.sks">PassphraseFormat</a>&nbsp;format,
-               int&nbsp;min_length,
-               int&nbsp;max_length,
-               int&nbsp;retry_limit,
-               <a href="../../../org/webpki/keygen2/ServerState.PUKPolicy.html" title="class in org.webpki.keygen2">ServerState.PUKPolicy</a>&nbsp;puk_policy)</code>&nbsp;</td>
+               int&nbsp;minLength,
+               int&nbsp;maxLength,
+               int&nbsp;retryLimit,
+               <a href="../../../org/webpki/keygen2/ServerState.PUKPolicy.html" title="class in org.webpki.keygen2">ServerState.PUKPolicy</a>&nbsp;pukPolicy)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/webpki/keygen2/ServerState.PUKPolicy.html" title="class in org.webpki.keygen2">ServerState.PUKPolicy</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#createPUKPolicy(byte[], org.webpki.sks.PassphraseFormat, int)">createPUKPolicy</a></strong>(byte[]&nbsp;puk,
                <a href="../../../org/webpki/sks/PassphraseFormat.html" title="enum in org.webpki.sks">PassphraseFormat</a>&nbsp;format,
-               int&nbsp;retry_limit)</code>&nbsp;</td>
+               int&nbsp;retryLimit)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/security/interfaces/ECPublicKey.html?is-external=true" title="class or interface in java.security.interfaces">ECPublicKey</a></code></td>
@@ -276,7 +276,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/webpki/keygen2/ServerState.ImagePreference.html" title="class in org.webpki.keygen2">ServerState.ImagePreference</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#getImagePreference(java.lang.String)">getImagePreference</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;image_type_uri)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#getImagePreference(java.lang.String)">getImagePreference</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;imageTypeUri)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/keygen2/ServerState.Key.html" title="class in org.webpki.keygen2">ServerState.Key</a>[]</code></td>
@@ -296,19 +296,19 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#getValuesCapability(java.lang.String)">getValuesCapability</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;values_type_uri)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#getValuesCapability(java.lang.String)">getValuesCapability</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;valuesTypeUri)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#isFeatureSupported(java.lang.String)">isFeatureSupported</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;feature_type_uri)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#isFeatureSupported(java.lang.String)">isFeatureSupported</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;featureTypeUri)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#setEphemeralKeyAlgorithm(org.webpki.crypto.KeyAlgorithms)">setEphemeralKeyAlgorithm</a></strong>(<a href="../../../org/webpki/crypto/KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a>&nbsp;ephemeral_key_algorithm)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#setEphemeralKeyAlgorithm(org.webpki.crypto.KeyAlgorithms)">setEphemeralKeyAlgorithm</a></strong>(<a href="../../../org/webpki/crypto/KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a>&nbsp;ephemeralKeyAlgorithm)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#setPreferredLanguages(java.lang.String[])">setPreferredLanguages</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;optional_language_list)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#setPreferredLanguages(java.lang.String[])">setPreferredLanguages</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;optionalLanguageList)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -321,28 +321,28 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#setTargetKeyContainerList(org.webpki.crypto.KeyContainerTypes[])">setTargetKeyContainerList</a></strong>(<a href="../../../org/webpki/crypto/KeyContainerTypes.html" title="enum in org.webpki.crypto">KeyContainerTypes</a>[]&nbsp;optional_key_container_list)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#setTargetKeyContainerList(org.webpki.crypto.KeyContainerTypes[])">setTargetKeyContainerList</a></strong>(<a href="../../../org/webpki/crypto/KeyContainerTypes.html" title="enum in org.webpki.crypto">KeyContainerTypes</a>[]&nbsp;optionalKeyContainerList)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#update(org.webpki.keygen2.CredentialDiscoveryResponseDecoder)">update</a></strong>(<a href="../../../org/webpki/keygen2/CredentialDiscoveryResponseDecoder.html" title="class in org.webpki.keygen2">CredentialDiscoveryResponseDecoder</a>&nbsp;credential_discovery_response)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#update(org.webpki.keygen2.CredentialDiscoveryResponseDecoder)">update</a></strong>(<a href="../../../org/webpki/keygen2/CredentialDiscoveryResponseDecoder.html" title="class in org.webpki.keygen2">CredentialDiscoveryResponseDecoder</a>&nbsp;credentialDiscoveryResponse)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#update(org.webpki.keygen2.InvocationResponseDecoder)">update</a></strong>(<a href="../../../org/webpki/keygen2/InvocationResponseDecoder.html" title="class in org.webpki.keygen2">InvocationResponseDecoder</a>&nbsp;invocation_response)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#update(org.webpki.keygen2.InvocationResponseDecoder)">update</a></strong>(<a href="../../../org/webpki/keygen2/InvocationResponseDecoder.html" title="class in org.webpki.keygen2">InvocationResponseDecoder</a>&nbsp;invocationResponse)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#update(org.webpki.keygen2.KeyCreationResponseDecoder)">update</a></strong>(<a href="../../../org/webpki/keygen2/KeyCreationResponseDecoder.html" title="class in org.webpki.keygen2">KeyCreationResponseDecoder</a>&nbsp;key_create_response)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#update(org.webpki.keygen2.KeyCreationResponseDecoder)">update</a></strong>(<a href="../../../org/webpki/keygen2/KeyCreationResponseDecoder.html" title="class in org.webpki.keygen2">KeyCreationResponseDecoder</a>&nbsp;keyCreationResponse)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#update(org.webpki.keygen2.ProvisioningFinalizationResponseDecoder)">update</a></strong>(<a href="../../../org/webpki/keygen2/ProvisioningFinalizationResponseDecoder.html" title="class in org.webpki.keygen2">ProvisioningFinalizationResponseDecoder</a>&nbsp;prov_final_response)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#update(org.webpki.keygen2.ProvisioningFinalizationResponseDecoder)">update</a></strong>(<a href="../../../org/webpki/keygen2/ProvisioningFinalizationResponseDecoder.html" title="class in org.webpki.keygen2">ProvisioningFinalizationResponseDecoder</a>&nbsp;provisioningFinalizationResponse)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#update(org.webpki.keygen2.ProvisioningInitializationResponseDecoder, java.security.cert.X509Certificate)">update</a></strong>(<a href="../../../org/webpki/keygen2/ProvisioningInitializationResponseDecoder.html" title="class in org.webpki.keygen2">ProvisioningInitializationResponseDecoder</a>&nbsp;prov_init_response,
-      <a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>&nbsp;server_certificate)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/keygen2/ServerState.html#update(org.webpki.keygen2.ProvisioningInitializationResponseDecoder, java.security.cert.X509Certificate)">update</a></strong>(<a href="../../../org/webpki/keygen2/ProvisioningInitializationResponseDecoder.html" title="class in org.webpki.keygen2">ProvisioningInitializationResponseDecoder</a>&nbsp;provisioningInitializationResponse,
+      <a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>&nbsp;serverCertificate)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -372,7 +372,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockListLast">
 <li class="blockList">
 <h4>ServerState</h4>
-<pre>public&nbsp;ServerState(<a href="../../../org/webpki/keygen2/ServerCryptoInterface.html" title="interface in org.webpki.keygen2">ServerCryptoInterface</a>&nbsp;server_crypto_interface)</pre>
+<pre>public&nbsp;ServerState(<a href="../../../org/webpki/keygen2/ServerCryptoInterface.html" title="interface in org.webpki.keygen2">ServerCryptoInterface</a>&nbsp;serverCryptoInterface)</pre>
 </li>
 </ul>
 </li>
@@ -389,7 +389,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>addFeatureQuery</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/keygen2/ServerState.html" title="class in org.webpki.keygen2">ServerState</a>&nbsp;addFeatureQuery(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;feature_type_uri)
+<pre>public&nbsp;<a href="../../../org/webpki/keygen2/ServerState.html" title="class in org.webpki.keygen2">ServerState</a>&nbsp;addFeatureQuery(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;featureTypeUri)
                             throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -401,7 +401,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>addImageAttributesQuery</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/keygen2/ServerState.html" title="class in org.webpki.keygen2">ServerState</a>&nbsp;addImageAttributesQuery(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;image_type_uri)
+<pre>public&nbsp;<a href="../../../org/webpki/keygen2/ServerState.html" title="class in org.webpki.keygen2">ServerState</a>&nbsp;addImageAttributesQuery(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;imageTypeUri)
                                     throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -413,10 +413,10 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>addPostDeleteKey</h4>
-<pre>public&nbsp;void&nbsp;addPostDeleteKey(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;old_client_session_id,
-                    <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;old_server_session_id,
-                    <a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>&nbsp;old_key,
-                    <a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;key_management_key)
+<pre>public&nbsp;void&nbsp;addPostDeleteKey(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;oldClientSessionId,
+                    <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;oldServerSessionId,
+                    <a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>&nbsp;oldKey,
+                    <a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;keyManagementKey)
                       throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -428,10 +428,10 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>addPostUnlockKey</h4>
-<pre>public&nbsp;void&nbsp;addPostUnlockKey(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;old_client_session_id,
-                    <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;old_server_session_id,
-                    <a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>&nbsp;old_key,
-                    <a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;key_management_key)
+<pre>public&nbsp;void&nbsp;addPostUnlockKey(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;oldClientSessionId,
+                    <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;oldServerSessionId,
+                    <a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>&nbsp;oldKey,
+                    <a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;keyManagementKey)
                       throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -443,7 +443,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>addValuesQuery</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/keygen2/ServerState.html" title="class in org.webpki.keygen2">ServerState</a>&nbsp;addValuesQuery(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;values_type_uri)
+<pre>public&nbsp;<a href="../../../org/webpki/keygen2/ServerState.html" title="class in org.webpki.keygen2">ServerState</a>&nbsp;addValuesQuery(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;valuesTypeUri)
                            throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -455,8 +455,8 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>createDevicePINProtectedKey</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/keygen2/ServerState.Key.html" title="class in org.webpki.keygen2">ServerState.Key</a>&nbsp;createDevicePINProtectedKey(<a href="../../../org/webpki/sks/AppUsage.html" title="enum in org.webpki.sks">AppUsage</a>&nbsp;app_usage,
-                                          <a href="../../../org/webpki/keygen2/KeySpecifier.html" title="class in org.webpki.keygen2">KeySpecifier</a>&nbsp;key_specifier)
+<pre>public&nbsp;<a href="../../../org/webpki/keygen2/ServerState.Key.html" title="class in org.webpki.keygen2">ServerState.Key</a>&nbsp;createDevicePINProtectedKey(<a href="../../../org/webpki/sks/AppUsage.html" title="enum in org.webpki.sks">AppUsage</a>&nbsp;appUsage,
+                                          <a href="../../../org/webpki/keygen2/KeySpecifier.html" title="class in org.webpki.keygen2">KeySpecifier</a>&nbsp;keySpecifier)
                                             throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -468,9 +468,9 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>createKey</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/keygen2/ServerState.Key.html" title="class in org.webpki.keygen2">ServerState.Key</a>&nbsp;createKey(<a href="../../../org/webpki/sks/AppUsage.html" title="enum in org.webpki.sks">AppUsage</a>&nbsp;app_usage,
-                        <a href="../../../org/webpki/keygen2/KeySpecifier.html" title="class in org.webpki.keygen2">KeySpecifier</a>&nbsp;key_specifier,
-                        <a href="../../../org/webpki/keygen2/ServerState.PINPolicy.html" title="class in org.webpki.keygen2">ServerState.PINPolicy</a>&nbsp;pin_policy)
+<pre>public&nbsp;<a href="../../../org/webpki/keygen2/ServerState.Key.html" title="class in org.webpki.keygen2">ServerState.Key</a>&nbsp;createKey(<a href="../../../org/webpki/sks/AppUsage.html" title="enum in org.webpki.sks">AppUsage</a>&nbsp;appUsage,
+                        <a href="../../../org/webpki/keygen2/KeySpecifier.html" title="class in org.webpki.keygen2">KeySpecifier</a>&nbsp;keySpecifier,
+                        <a href="../../../org/webpki/keygen2/ServerState.PINPolicy.html" title="class in org.webpki.keygen2">ServerState.PINPolicy</a>&nbsp;pinPolicy)
                           throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -482,9 +482,9 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>createKeyWithPresetPIN</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/keygen2/ServerState.Key.html" title="class in org.webpki.keygen2">ServerState.Key</a>&nbsp;createKeyWithPresetPIN(<a href="../../../org/webpki/sks/AppUsage.html" title="enum in org.webpki.sks">AppUsage</a>&nbsp;app_usage,
-                                     <a href="../../../org/webpki/keygen2/KeySpecifier.html" title="class in org.webpki.keygen2">KeySpecifier</a>&nbsp;key_specifier,
-                                     <a href="../../../org/webpki/keygen2/ServerState.PINPolicy.html" title="class in org.webpki.keygen2">ServerState.PINPolicy</a>&nbsp;pin_policy,
+<pre>public&nbsp;<a href="../../../org/webpki/keygen2/ServerState.Key.html" title="class in org.webpki.keygen2">ServerState.Key</a>&nbsp;createKeyWithPresetPIN(<a href="../../../org/webpki/sks/AppUsage.html" title="enum in org.webpki.sks">AppUsage</a>&nbsp;appUsage,
+                                     <a href="../../../org/webpki/keygen2/KeySpecifier.html" title="class in org.webpki.keygen2">KeySpecifier</a>&nbsp;keySpecifier,
+                                     <a href="../../../org/webpki/keygen2/ServerState.PINPolicy.html" title="class in org.webpki.keygen2">ServerState.PINPolicy</a>&nbsp;pinPolicy,
                                      byte[]&nbsp;pin)
                                        throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
@@ -498,10 +498,10 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <li class="blockList">
 <h4>createPINPolicy</h4>
 <pre>public&nbsp;<a href="../../../org/webpki/keygen2/ServerState.PINPolicy.html" title="class in org.webpki.keygen2">ServerState.PINPolicy</a>&nbsp;createPINPolicy(<a href="../../../org/webpki/sks/PassphraseFormat.html" title="enum in org.webpki.sks">PassphraseFormat</a>&nbsp;format,
-                                    int&nbsp;min_length,
-                                    int&nbsp;max_length,
-                                    int&nbsp;retry_limit,
-                                    <a href="../../../org/webpki/keygen2/ServerState.PUKPolicy.html" title="class in org.webpki.keygen2">ServerState.PUKPolicy</a>&nbsp;puk_policy)
+                                    int&nbsp;minLength,
+                                    int&nbsp;maxLength,
+                                    int&nbsp;retryLimit,
+                                    <a href="../../../org/webpki/keygen2/ServerState.PUKPolicy.html" title="class in org.webpki.keygen2">ServerState.PUKPolicy</a>&nbsp;pukPolicy)
                                       throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -515,7 +515,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>createPUKPolicy</h4>
 <pre>public&nbsp;<a href="../../../org/webpki/keygen2/ServerState.PUKPolicy.html" title="class in org.webpki.keygen2">ServerState.PUKPolicy</a>&nbsp;createPUKPolicy(byte[]&nbsp;puk,
                                     <a href="../../../org/webpki/sks/PassphraseFormat.html" title="enum in org.webpki.sks">PassphraseFormat</a>&nbsp;format,
-                                    int&nbsp;retry_limit)
+                                    int&nbsp;retryLimit)
                                       throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -575,7 +575,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>getImagePreference</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/keygen2/ServerState.ImagePreference.html" title="class in org.webpki.keygen2">ServerState.ImagePreference</a>&nbsp;getImagePreference(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;image_type_uri)
+<pre>public&nbsp;<a href="../../../org/webpki/keygen2/ServerState.ImagePreference.html" title="class in org.webpki.keygen2">ServerState.ImagePreference</a>&nbsp;getImagePreference(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;imageTypeUri)
                                                throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -623,7 +623,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>getValuesCapability</h4>
-<pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;getValuesCapability(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;values_type_uri)
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;getValuesCapability(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;valuesTypeUri)
                              throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -635,7 +635,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>isFeatureSupported</h4>
-<pre>public&nbsp;boolean&nbsp;isFeatureSupported(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;feature_type_uri)
+<pre>public&nbsp;boolean&nbsp;isFeatureSupported(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;featureTypeUri)
                            throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -647,7 +647,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>setEphemeralKeyAlgorithm</h4>
-<pre>public&nbsp;void&nbsp;setEphemeralKeyAlgorithm(<a href="../../../org/webpki/crypto/KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a>&nbsp;ephemeral_key_algorithm)</pre>
+<pre>public&nbsp;void&nbsp;setEphemeralKeyAlgorithm(<a href="../../../org/webpki/crypto/KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a>&nbsp;ephemeralKeyAlgorithm)</pre>
 </li>
 </ul>
 <a name="setPreferredLanguages(java.lang.String[])">
@@ -656,7 +656,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>setPreferredLanguages</h4>
-<pre>public&nbsp;void&nbsp;setPreferredLanguages(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;optional_language_list)</pre>
+<pre>public&nbsp;void&nbsp;setPreferredLanguages(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;optionalLanguageList)</pre>
 </li>
 </ul>
 <a name="setPrivacyEnabled(boolean)">
@@ -687,7 +687,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>setTargetKeyContainerList</h4>
-<pre>public&nbsp;void&nbsp;setTargetKeyContainerList(<a href="../../../org/webpki/crypto/KeyContainerTypes.html" title="enum in org.webpki.crypto">KeyContainerTypes</a>[]&nbsp;optional_key_container_list)
+<pre>public&nbsp;void&nbsp;setTargetKeyContainerList(<a href="../../../org/webpki/crypto/KeyContainerTypes.html" title="enum in org.webpki.crypto">KeyContainerTypes</a>[]&nbsp;optionalKeyContainerList)
                                throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -699,7 +699,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>update</h4>
-<pre>public&nbsp;void&nbsp;update(<a href="../../../org/webpki/keygen2/CredentialDiscoveryResponseDecoder.html" title="class in org.webpki.keygen2">CredentialDiscoveryResponseDecoder</a>&nbsp;credential_discovery_response)
+<pre>public&nbsp;void&nbsp;update(<a href="../../../org/webpki/keygen2/CredentialDiscoveryResponseDecoder.html" title="class in org.webpki.keygen2">CredentialDiscoveryResponseDecoder</a>&nbsp;credentialDiscoveryResponse)
             throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -711,7 +711,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>update</h4>
-<pre>public&nbsp;void&nbsp;update(<a href="../../../org/webpki/keygen2/InvocationResponseDecoder.html" title="class in org.webpki.keygen2">InvocationResponseDecoder</a>&nbsp;invocation_response)
+<pre>public&nbsp;void&nbsp;update(<a href="../../../org/webpki/keygen2/InvocationResponseDecoder.html" title="class in org.webpki.keygen2">InvocationResponseDecoder</a>&nbsp;invocationResponse)
             throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -723,7 +723,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>update</h4>
-<pre>public&nbsp;void&nbsp;update(<a href="../../../org/webpki/keygen2/KeyCreationResponseDecoder.html" title="class in org.webpki.keygen2">KeyCreationResponseDecoder</a>&nbsp;key_create_response)
+<pre>public&nbsp;void&nbsp;update(<a href="../../../org/webpki/keygen2/KeyCreationResponseDecoder.html" title="class in org.webpki.keygen2">KeyCreationResponseDecoder</a>&nbsp;keyCreationResponse)
             throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -735,7 +735,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>update</h4>
-<pre>public&nbsp;void&nbsp;update(<a href="../../../org/webpki/keygen2/ProvisioningFinalizationResponseDecoder.html" title="class in org.webpki.keygen2">ProvisioningFinalizationResponseDecoder</a>&nbsp;prov_final_response)
+<pre>public&nbsp;void&nbsp;update(<a href="../../../org/webpki/keygen2/ProvisioningFinalizationResponseDecoder.html" title="class in org.webpki.keygen2">ProvisioningFinalizationResponseDecoder</a>&nbsp;provisioningFinalizationResponse)
             throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -747,8 +747,8 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockListLast">
 <li class="blockList">
 <h4>update</h4>
-<pre>public&nbsp;void&nbsp;update(<a href="../../../org/webpki/keygen2/ProvisioningInitializationResponseDecoder.html" title="class in org.webpki.keygen2">ProvisioningInitializationResponseDecoder</a>&nbsp;prov_init_response,
-          <a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>&nbsp;server_certificate)
+<pre>public&nbsp;void&nbsp;update(<a href="../../../org/webpki/keygen2/ProvisioningInitializationResponseDecoder.html" title="class in org.webpki.keygen2">ProvisioningInitializationResponseDecoder</a>&nbsp;provisioningInitializationResponse,
+          <a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>&nbsp;serverCertificate)
             throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
