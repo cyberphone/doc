@@ -152,7 +152,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/util/Base64.html#getBase64BinaryFromBinary(byte[])">getBase64BinaryFromBinary</a></strong>(byte[]&nbsp;binary_blob)</code>
+<td class="colLast"><code><strong><a href="../../../org/webpki/util/Base64.html#getBase64BinaryFromBinary(byte[])">getBase64BinaryFromBinary</a></strong>(byte[]&nbsp;binaryBlob)</code>
 <div class="block">[Encoding] Converts a binary byte array to a base64 encoded byte array.</div>
 </td>
 </tr>
@@ -170,7 +170,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/util/Base64.html#getBase64StringFromBinary(byte[])">getBase64StringFromBinary</a></strong>(byte[]&nbsp;binary_blob)</code>
+<td class="colLast"><code><strong><a href="../../../org/webpki/util/Base64.html#getBase64StringFromBinary(byte[])">getBase64StringFromBinary</a></strong>(byte[]&nbsp;binaryBlob)</code>
 <div class="block">[Encoding] Converts a binary byte array to a base64 encoded String.</div>
 </td>
 </tr>
@@ -188,7 +188,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/util/Base64.html#getBinaryFromBase64Binary(byte[])">getBinaryFromBase64Binary</a></strong>(byte[]&nbsp;base64_ascii8_blob)</code>
+<td class="colLast"><code><strong><a href="../../../org/webpki/util/Base64.html#getBinaryFromBase64Binary(byte[])">getBinaryFromBase64Binary</a></strong>(byte[]&nbsp;base64Ascii8Blob)</code>
 <div class="block">[Decoding] Converts a base64 encoded byte array to a binary byte array.</div>
 </td>
 </tr>
@@ -221,7 +221,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/util/Base64.html#getStringFromBase64Binary(byte[])">getStringFromBase64Binary</a></strong>(byte[]&nbsp;base64_ascii8_blob)</code>
+<td class="colLast"><code><strong><a href="../../../org/webpki/util/Base64.html#getStringFromBase64Binary(byte[])">getStringFromBase64Binary</a></strong>(byte[]&nbsp;base64Ascii8Blob)</code>
 <div class="block">[Decoding] Converts a base64 encoded byte array to a String representation of the binary data.</div>
 </td>
 </tr>
@@ -377,10 +377,10 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <ul class="blockList">
 <li class="blockList">
 <h4>getBase64BinaryFromBinary</h4>
-<pre>public&nbsp;byte[]&nbsp;getBase64BinaryFromBinary(byte[]&nbsp;binary_blob)</pre>
+<pre>public&nbsp;byte[]&nbsp;getBase64BinaryFromBinary(byte[]&nbsp;binaryBlob)</pre>
 <div class="block">[Encoding] Converts a binary byte array to a base64 encoded byte array.
  For every 3 binary bytes, you'll get 4 base64 bytes.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>binary_blob</code> - uncoded data</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>binaryBlob</code> - uncoded data</dd>
 <dt><span class="strong">Returns:</span></dt><dd>encoded data as a byte array</dd></dl>
 </li>
 </ul>
@@ -425,10 +425,10 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <ul class="blockList">
 <li class="blockList">
 <h4>getBase64StringFromBinary</h4>
-<pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getBase64StringFromBinary(byte[]&nbsp;binary_blob)</pre>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getBase64StringFromBinary(byte[]&nbsp;binaryBlob)</pre>
 <div class="block">[Encoding] Converts a binary byte array to a base64 encoded String.
  For every 3 binary bytes, you'll get 4 base64 bytes.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>binary_blob</code> - uncoded data</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>binaryBlob</code> - uncoded data</dd>
 <dt><span class="strong">Returns:</span></dt><dd>encoded data as a String</dd></dl>
 </li>
 </ul>
@@ -473,7 +473,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <ul class="blockList">
 <li class="blockList">
 <h4>getBinaryFromBase64Binary</h4>
-<pre>public&nbsp;byte[]&nbsp;getBinaryFromBase64Binary(byte[]&nbsp;base64_ascii8_blob)
+<pre>public&nbsp;byte[]&nbsp;getBinaryFromBase64Binary(byte[]&nbsp;base64Ascii8Blob)
                                  throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">[Decoding] Converts a base64 encoded byte array to a binary byte array.
  For every 4 base64 bytes you'll get 3 binary bytes.</div>
@@ -543,7 +543,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <ul class="blockList">
 <li class="blockList">
 <h4>getStringFromBase64Binary</h4>
-<pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getStringFromBase64Binary(byte[]&nbsp;base64_ascii8_blob)
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getStringFromBase64Binary(byte[]&nbsp;base64Ascii8Blob)
                                  throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">[Decoding] Converts a base64 encoded byte array to a String representation of the binary data.
  For every 4 base64 bytes you'll get 3 binary bytes.</div>
