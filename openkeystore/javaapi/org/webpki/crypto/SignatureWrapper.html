@@ -149,13 +149,13 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static byte[]</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/crypto/SignatureWrapper.html#decodeDEREncodedECDSASignature(byte[], java.security.spec.ECParameterSpec)">decodeDEREncodedECDSASignature</a></strong>(byte[]&nbsp;der_coded_signature,
-                              <a href="http://download.oracle.com/javase/7/docs/api/java/security/spec/ECParameterSpec.html?is-external=true" title="class or interface in java.security.spec">ECParameterSpec</a>&nbsp;ec_parameters)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/crypto/SignatureWrapper.html#decodeDEREncodedECDSASignature(byte[], java.security.spec.ECParameterSpec)">decodeDEREncodedECDSASignature</a></strong>(byte[]&nbsp;derCodedSignature,
+                              <a href="http://download.oracle.com/javase/7/docs/api/java/security/spec/ECParameterSpec.html?is-external=true" title="class or interface in java.security.spec">ECParameterSpec</a>&nbsp;ecParameters)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static byte[]</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/crypto/SignatureWrapper.html#encodeDEREncodedECDSASignature(byte[], java.security.spec.ECParameterSpec)">encodeDEREncodedECDSASignature</a></strong>(byte[]&nbsp;concatendated_signature,
-                              <a href="http://download.oracle.com/javase/7/docs/api/java/security/spec/ECParameterSpec.html?is-external=true" title="class or interface in java.security.spec">ECParameterSpec</a>&nbsp;ec_parameters)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/crypto/SignatureWrapper.html#encodeDEREncodedECDSASignature(byte[], java.security.spec.ECParameterSpec)">encodeDEREncodedECDSASignature</a></strong>(byte[]&nbsp;concatendatedSignature,
+                              <a href="http://download.oracle.com/javase/7/docs/api/java/security/spec/ECParameterSpec.html?is-external=true" title="class or interface in java.security.spec">ECParameterSpec</a>&nbsp;ecParameters)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/security/Provider.html?is-external=true" title="class or interface in java.security">Provider</a></code></td>
@@ -163,7 +163,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/webpki/crypto/SignatureWrapper.html" title="class in org.webpki.crypto">SignatureWrapper</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/crypto/SignatureWrapper.html#setECDSASignatureEncoding(boolean)">setECDSASignatureEncoding</a></strong>(boolean&nbsp;der_encoded)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/crypto/SignatureWrapper.html#setECDSASignatureEncoding(boolean)">setECDSASignatureEncoding</a></strong>(boolean&nbsp;derEncoded)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
@@ -279,8 +279,8 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <ul class="blockList">
 <li class="blockList">
 <h4>decodeDEREncodedECDSASignature</h4>
-<pre>public static&nbsp;byte[]&nbsp;decodeDEREncodedECDSASignature(byte[]&nbsp;der_coded_signature,
-                                    <a href="http://download.oracle.com/javase/7/docs/api/java/security/spec/ECParameterSpec.html?is-external=true" title="class or interface in java.security.spec">ECParameterSpec</a>&nbsp;ec_parameters)
+<pre>public static&nbsp;byte[]&nbsp;decodeDEREncodedECDSASignature(byte[]&nbsp;derCodedSignature,
+                                    <a href="http://download.oracle.com/javase/7/docs/api/java/security/spec/ECParameterSpec.html?is-external=true" title="class or interface in java.security.spec">ECParameterSpec</a>&nbsp;ecParameters)
                                              throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -292,8 +292,8 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <ul class="blockList">
 <li class="blockList">
 <h4>encodeDEREncodedECDSASignature</h4>
-<pre>public static&nbsp;byte[]&nbsp;encodeDEREncodedECDSASignature(byte[]&nbsp;concatendated_signature,
-                                    <a href="http://download.oracle.com/javase/7/docs/api/java/security/spec/ECParameterSpec.html?is-external=true" title="class or interface in java.security.spec">ECParameterSpec</a>&nbsp;ec_parameters)
+<pre>public static&nbsp;byte[]&nbsp;encodeDEREncodedECDSASignature(byte[]&nbsp;concatendatedSignature,
+                                    <a href="http://download.oracle.com/javase/7/docs/api/java/security/spec/ECParameterSpec.html?is-external=true" title="class or interface in java.security.spec">ECParameterSpec</a>&nbsp;ecParameters)
                                              throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -314,7 +314,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <ul class="blockList">
 <li class="blockList">
 <h4>setECDSASignatureEncoding</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/crypto/SignatureWrapper.html" title="class in org.webpki.crypto">SignatureWrapper</a>&nbsp;setECDSASignatureEncoding(boolean&nbsp;der_encoded)</pre>
+<pre>public&nbsp;<a href="../../../org/webpki/crypto/SignatureWrapper.html" title="class in org.webpki.crypto">SignatureWrapper</a>&nbsp;setECDSASignatureEncoding(boolean&nbsp;derEncoded)</pre>
 </li>
 </ul>
 <a name="sign()">
