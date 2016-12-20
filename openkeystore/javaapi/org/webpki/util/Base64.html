@@ -233,7 +233,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/util/Base64.html#getUnicodeFromBase64Binary(byte[])">getUnicodeFromBase64Binary</a></strong>(byte[]&nbsp;base64_ascii8_blob)</code>
+<td class="colLast"><code><strong><a href="../../../org/webpki/util/Base64.html#getUnicodeFromBase64Binary(byte[])">getUnicodeFromBase64Binary</a></strong>(byte[]&nbsp;base64Ascii8Blob)</code>
 <div class="block">[Decoding] Converts a base64 encoded byte array to a Unicode String representation of the binary data (UTF-8).</div>
 </td>
 </tr>
@@ -477,7 +477,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
                                  throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">[Decoding] Converts a base64 encoded byte array to a binary byte array.
  For every 4 base64 bytes you'll get 3 binary bytes.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>base64_ascii8_blob</code> - encoded data</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>base64Ascii8Blob</code> - encoded data</dd>
 <dt><span class="strong">Returns:</span></dt><dd>decoded data as a byte array</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if the input data isn't valid base64 data</dd></dl>
@@ -547,7 +547,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
                                  throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">[Decoding] Converts a base64 encoded byte array to a String representation of the binary data.
  For every 4 base64 bytes you'll get 3 binary bytes.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>base64_ascii8_blob</code> - encoded data</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>base64Ascii8Blob</code> - encoded data</dd>
 <dt><span class="strong">Returns:</span></dt><dd>decoded data as a String</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if the input data isn't valid base64 data.</dd></dl>
@@ -577,12 +577,12 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <ul class="blockList">
 <li class="blockList">
 <h4>getUnicodeFromBase64Binary</h4>
-<pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getUnicodeFromBase64Binary(byte[]&nbsp;base64_ascii8_blob)
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getUnicodeFromBase64Binary(byte[]&nbsp;base64Ascii8Blob)
                                   throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">[Decoding] Converts a base64 encoded byte array to a Unicode String representation of the binary data (UTF-8).
  For every 4 base64 bytes you'll get 3 binary bytes. Note, however, that these bytes are UTF-8 bytes
  and is not equal to the length of the Unicode String.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>base64_ascii8_blob</code> - encoded data</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>base64Ascii8Blob</code> - encoded data</dd>
 <dt><span class="strong">Returns:</span></dt><dd>decoded data as a Unicode String</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if the input data isn't valid base64 data
