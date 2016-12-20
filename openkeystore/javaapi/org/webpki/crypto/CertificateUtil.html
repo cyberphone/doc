@@ -179,11 +179,11 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/crypto/CertificateUtil.html#getSortedPath(java.security.cert.X509Certificate[])">getSortedPath</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]&nbsp;inpath)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/crypto/CertificateUtil.html#getSortedPath(java.security.cert.X509Certificate[])">getSortedPath</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]&nbsp;certificatePath)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/crypto/CertificateUtil.html#getSortedPathFromBlobs(java.util.List)">getSortedPathFromBlobs</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;&nbsp;blobvector)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/crypto/CertificateUtil.html#getSortedPathFromBlobs(java.util.List)">getSortedPathFromBlobs</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;&nbsp;blobVector)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]</code></td>
@@ -374,7 +374,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <ul class="blockList">
 <li class="blockList">
 <h4>getSortedPath</h4>
-<pre>public static&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]&nbsp;getSortedPath(<a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]&nbsp;inpath)
+<pre>public static&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]&nbsp;getSortedPath(<a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]&nbsp;certificatePath)
                                        throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -386,7 +386,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <ul class="blockList">
 <li class="blockList">
 <h4>getSortedPathFromBlobs</h4>
-<pre>public static&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]&nbsp;getSortedPathFromBlobs(<a href="http://download.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;&nbsp;blobvector)
+<pre>public static&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]&nbsp;getSortedPathFromBlobs(<a href="http://download.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;byte[]&gt;&nbsp;blobVector)
                                                 throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
