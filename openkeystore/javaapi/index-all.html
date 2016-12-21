@@ -857,6 +857,11 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/ca/CA.html#createCert(org.webpki.ca.CertSpec, org.webpki.asn1.cert.DistinguishedName, java.math.BigInteger, java.util.Date, java.util.Date, org.webpki.crypto.AsymSignatureAlgorithms, org.webpki.crypto.AsymKeySignerInterface, java.security.PublicKey)">createCert(CertSpec, DistinguishedName, BigInteger, Date, Date, AsymSignatureAlgorithms, AsymKeySignerInterface, PublicKey)</a></span> - Method in class org.webpki.ca.<a href="./org/webpki/ca/CA.html" title="class in org.webpki.ca">CA</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#createCorePublicKey(java.security.PublicKey, org.webpki.crypto.AlgorithmPreferences)">createCorePublicKey(PublicKey, AlgorithmPreferences)</a></span> - Static method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
+<dd>
+<div class="block">Create a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
+ formatted public key object.</div>
+</dd>
 <dt><span class="strong"><a href="./org/webpki/keygen2/ServerState.html#createDevicePINProtectedKey(org.webpki.sks.AppUsage, org.webpki.keygen2.KeySpecifier)">createDevicePINProtectedKey(AppUsage, KeySpecifier)</a></span> - Method in class org.webpki.keygen2.<a href="./org/webpki/keygen2/ServerState.html" title="class in org.webpki.keygen2">ServerState</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/xml/DOMUtil.html#createDocument()">createDocument()</a></span> - Static method in class org.webpki.xml.<a href="./org/webpki/xml/DOMUtil.html" title="class in org.webpki.xml">DOMUtil</a></dt>
@@ -866,6 +871,16 @@
 <dt><span class="strong"><a href="./org/webpki/xml/DOMUtil.html#createDocumentBuilderFactory()">createDocumentBuilderFactory()</a></span> - Static method in class org.webpki.xml.<a href="./org/webpki/xml/DOMUtil.html" title="class in org.webpki.xml">DOMUtil</a></dt>
 <dd>
 <div class="block">Centralized DocumentBuilderFactory creator/implemenation</div>
+</dd>
+<dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#createEncryptionObject(byte[], org.webpki.json.encryption.DataEncryptionAlgorithms, java.security.PublicKey, org.webpki.json.encryption.KeyEncryptionAlgorithms)">createEncryptionObject(byte[], DataEncryptionAlgorithms, PublicKey, KeyEncryptionAlgorithms)</a></span> - Static method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
+<dd>
+<div class="block">Create a <a href="https://cyberphone.github.io/doc/security/jef.html" target="_blank">JEF</a>
+ public key encrypted object.</div>
+</dd>
+<dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#createEncryptionObject(byte[], org.webpki.json.encryption.DataEncryptionAlgorithms, java.lang.String, byte[])">createEncryptionObject(byte[], DataEncryptionAlgorithms, String, byte[])</a></span> - Static method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
+<dd>
+<div class="block">Create a <a href="https://cyberphone.github.io/doc/security/jef.html" target="_blank">JEF</a>
+ symmetric key encrypted object.</div>
 </dd>
 <dt><span class="strong"><a href="./org/webpki/util/HTMLHeader.html#createHTMLHeader(boolean, boolean, java.lang.String, java.lang.String)">createHTMLHeader(boolean, boolean, String, String)</a></span> - Static method in class org.webpki.util.<a href="./org/webpki/util/HTMLHeader.html" title="class in org.webpki.util">HTMLHeader</a></dt>
 <dd>&nbsp;</dd>
@@ -1364,7 +1379,9 @@
 <dt><span class="strong"><a href="./org/webpki/sks/SKSException.html#ERROR_USER_ABORT">ERROR_USER_ABORT</a></span> - Static variable in exception org.webpki.sks.<a href="./org/webpki/sks/SKSException.html" title="class in org.webpki.sks">SKSException</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#es6JsonNumberSerialization(double)">es6JsonNumberSerialization(double)</a></span> - Static method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Formats a number according to ES6.</div>
+</dd>
 <dt><span class="strong"><a href="./org/webpki/xmldsig/c14n/Constants.html#exceptionMessagesResourceBundleBase">exceptionMessagesResourceBundleBase</a></span> - Static variable in class org.webpki.xmldsig.c14n.<a href="./org/webpki/xmldsig/c14n/Constants.html" title="class in org.webpki.xmldsig.c14n">Constants</a></dt>
 <dd>
 <div class="block">Field exceptionMessagesResourceBundleBase is the location of the <CODE>ResourceBundle</CODE></div>
@@ -4456,22 +4473,30 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONSignatureDecoder.html#SERIAL_NUMBER_JSON">SERIAL_NUMBER_JSON</a></span> - Static variable in class org.webpki.json.<a href="./org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/webpki/json/JSONArrayWriter.html#serializeJSONArray(org.webpki.json.JSONOutputFormats)">serializeJSONArray(JSONOutputFormats)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONDecoder.html#serializeJSONDecoder(org.webpki.json.JSONOutputFormats)">serializeJSONDecoder(JSONOutputFormats)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONDecoder.html" title="class in org.webpki.json">JSONDecoder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONEncoder.html#serializeJSONDocument(org.webpki.json.JSONOutputFormats)">serializeJSONDocument(JSONOutputFormats)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONEncoder.html" title="class in org.webpki.json">JSONEncoder</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/webpki/json/JSONObjectReader.html#serializeJSONObject(org.webpki.json.JSONOutputFormats)">serializeJSONObject(JSONOutputFormats)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#serializeJSONObject(org.webpki.json.JSONOutputFormats)">serializeJSONObject(JSONOutputFormats)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/xmldsig/XPathCanonicalizer.html#serializeSubset(org.w3c.dom.Node, org.webpki.xmldsig.CanonicalizationAlgorithms)">serializeSubset(Node, CanonicalizationAlgorithms)</a></span> - Static method in class org.webpki.xmldsig.<a href="./org/webpki/xmldsig/XPathCanonicalizer.html" title="class in org.webpki.xmldsig">XPathCanonicalizer</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/xmldsig/XPathCanonicalizer.html#serializeSubset(org.w3c.dom.Node, org.webpki.xmldsig.CanonicalizationAlgorithms, java.lang.String)">serializeSubset(Node, CanonicalizationAlgorithms, String)</a></span> - Static method in class org.webpki.xmldsig.<a href="./org/webpki/xmldsig/XPathCanonicalizer.html" title="class in org.webpki.xmldsig">XPathCanonicalizer</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#serializeToString(org.webpki.json.JSONOutputFormats)">serializeToString(JSONOutputFormats)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
+<dt><span class="strong"><a href="./org/webpki/json/JSONArrayWriter.html#serializeToBytes(org.webpki.json.JSONOutputFormats)">serializeToBytes(JSONOutputFormats)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/webpki/json/JSONObjectReader.html#serializeToBytes(org.webpki.json.JSONOutputFormats)">serializeToBytes(JSONOutputFormats)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#serializeToBytes(org.webpki.json.JSONOutputFormats)">serializeToBytes(JSONOutputFormats)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
+<dd>
+<div class="block">Serialize current object writer to a Java <code>byte[]</code>.</div>
+</dd>
+<dt><span class="strong"><a href="./org/webpki/json/JSONArrayWriter.html#serializeToString(org.webpki.json.JSONOutputFormats)">serializeToString(JSONOutputFormats)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/webpki/json/JSONObjectReader.html#serializeToString(org.webpki.json.JSONOutputFormats)">serializeToString(JSONOutputFormats)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#serializeToString(org.webpki.json.JSONOutputFormats)">serializeToString(JSONOutputFormats)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
+<dd>
+<div class="block">Serialize current object writer to a Java <code>String</code>.</div>
+</dd>
 <dt><span class="strong"><a href="./org/webpki/keygen2/KeyGen2Constants.html#SERVER_CERT_FP_JSON">SERVER_CERT_FP_JSON</a></span> - Static variable in interface org.webpki.keygen2.<a href="./org/webpki/keygen2/KeyGen2Constants.html" title="interface in org.webpki.keygen2">KeyGen2Constants</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/webauth/WebAuthConstants.html#SERVER_CERT_FP_JSON">SERVER_CERT_FP_JSON</a></span> - Static variable in interface org.webpki.webauth.<a href="./org/webpki/webauth/WebAuthConstants.html" title="interface in org.webpki.webauth">WebAuthConstants</a></dt>
@@ -4549,9 +4574,13 @@
 <dt><span class="strong"><a href="./org/webpki/json/JSONArrayWriter.html#setArray(org.webpki.json.JSONArrayWriter)">setArray(JSONArrayWriter)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#setArray(java.lang.String)">setArray(String)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Set (create) a JSON array.</div>
+</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#setArray(java.lang.String, org.webpki.json.JSONArrayWriter)">setArray(String, JSONArrayWriter)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Set a JSON array.</div>
+</dd>
 <dt><span class="strong"><a href="./org/webpki/crypto/KeyStoreSigner.html#setAuthorityInfoAccessCAIssuersHandler(org.webpki.crypto.AuthorityInfoAccessCAIssuersSpi)">setAuthorityInfoAccessCAIssuersHandler(AuthorityInfoAccessCAIssuersSpi)</a></span> - Method in class org.webpki.crypto.<a href="./org/webpki/crypto/KeyStoreSigner.html" title="class in org.webpki.crypto">KeyStoreSigner</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/crypto/KeyStoreVerifier.html#setAuthorityInfoAccessCAIssuersHandler(org.webpki.crypto.AuthorityInfoAccessCAIssuersSpi)">setAuthorityInfoAccessCAIssuersHandler(AuthorityInfoAccessCAIssuersSpi)</a></span> - Method in class org.webpki.crypto.<a href="./org/webpki/crypto/KeyStoreVerifier.html" title="class in org.webpki.crypto">KeyStoreVerifier</a></dt>
@@ -4563,13 +4592,19 @@
 <dt><span class="strong"><a href="./org/webpki/json/JSONArrayWriter.html#setBigDecimal(java.math.BigDecimal, java.lang.Integer)">setBigDecimal(BigDecimal, Integer)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#setBigDecimal(java.lang.String, java.math.BigDecimal)">setBigDecimal(String, BigDecimal)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Set a <code>BigDecimal</code> property.</div>
+</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#setBigDecimal(java.lang.String, java.math.BigDecimal, java.lang.Integer)">setBigDecimal(String, BigDecimal, Integer)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Set a <code>BigDecimal</code> property.</div>
+</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONArrayWriter.html#setBigInteger(java.math.BigInteger)">setBigInteger(BigInteger)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#setBigInteger(java.lang.String, java.math.BigInteger)">setBigInteger(String, BigInteger)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Set a <code>BigInteger</code> property.</div>
+</dd>
 <dt><span class="strong"><a href="./org/webpki/xml/DOMWriterHelper.html#setBigIntegerAttribute(java.lang.String, java.math.BigInteger)">setBigIntegerAttribute(String, BigInteger)</a></span> - Method in class org.webpki.xml.<a href="./org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a></dt>
 <dd>
 <div class="block">Set an attribute of the current element.</div>
@@ -4577,9 +4612,13 @@
 <dt><span class="strong"><a href="./org/webpki/json/JSONArrayWriter.html#setBinary(byte[])">setBinary(byte[])</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#setBinary(java.lang.String, byte[])">setBinary(String, byte[])</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Set a <code>byte[]</code> property.</div>
+</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#setBinaryArray(java.lang.String, java.util.Vector)">setBinaryArray(String, Vector&lt;byte[]&gt;)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Set an array of <code>byte[]</code> property.</div>
+</dd>
 <dt><span class="strong"><a href="./org/webpki/xml/DOMWriterHelper.html#setBinaryAttribute(java.lang.String, byte[])">setBinaryAttribute(String, byte[])</a></span> - Method in class org.webpki.xml.<a href="./org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/keygen2/ServerState.Key.html#setBiometricProtection(org.webpki.sks.BiometricProtection)">setBiometricProtection(BiometricProtection)</a></span> - Method in class org.webpki.keygen2.<a href="./org/webpki/keygen2/ServerState.Key.html" title="class in org.webpki.keygen2">ServerState.Key</a></dt>
@@ -4587,7 +4626,9 @@
 <dt><span class="strong"><a href="./org/webpki/json/JSONArrayWriter.html#setBoolean(boolean)">setBoolean(boolean)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#setBoolean(java.lang.String, boolean)">setBoolean(String, boolean)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Set a <code>boolean</code> property.</div>
+</dd>
 <dt><span class="strong"><a href="./org/webpki/xml/DOMWriterHelper.html#setBooleanAttribute(java.lang.String, boolean)">setBooleanAttribute(String, boolean)</a></span> - Method in class org.webpki.xml.<a href="./org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a></dt>
 <dd>
 <div class="block">Set an attribute of the current element.</div>
@@ -4595,7 +4636,10 @@
 <dt><span class="strong"><a href="./org/webpki/ca/CertSpec.html#setCACertificateConstraint()">setCACertificateConstraint()</a></span> - Method in class org.webpki.ca.<a href="./org/webpki/ca/CertSpec.html" title="class in org.webpki.ca">CertSpec</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#setCertificatePath(java.security.cert.X509Certificate[])">setCertificatePath(X509Certificate[])</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Set a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
+ certificate path property.</div>
+</dd>
 <dt><span class="strong"><a href="./org/webpki/keygen2/ServerState.Key.html#setCertificatePath(java.security.cert.X509Certificate[])">setCertificatePath(X509Certificate[])</a></span> - Method in class org.webpki.keygen2.<a href="./org/webpki/keygen2/ServerState.Key.html" title="class in org.webpki.keygen2">ServerState.Key</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/sks/SecureKeyStore.html#setCertificatePath(int, java.security.cert.X509Certificate[], byte[])">setCertificatePath(int, X509Certificate[], byte[])</a></span> - Method in interface org.webpki.sks.<a href="./org/webpki/sks/SecureKeyStore.html" title="interface in org.webpki.sks">SecureKeyStore</a></dt>
@@ -4604,12 +4648,12 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/keygen2/ServerState.Key.html#setClonedKeyProtection(java.lang.String, java.lang.String, java.security.cert.X509Certificate, java.security.PublicKey)">setClonedKeyProtection(String, String, X509Certificate, PublicKey)</a></span> - Method in class org.webpki.keygen2.<a href="./org/webpki/keygen2/ServerState.Key.html" title="class in org.webpki.keygen2">ServerState.Key</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#setCorePublicKey(java.security.PublicKey, org.webpki.crypto.AlgorithmPreferences)">setCorePublicKey(PublicKey, AlgorithmPreferences)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONArrayWriter.html#setDateTime(java.util.Date, boolean)">setDateTime(Date, boolean)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#setDateTime(java.lang.String, java.util.Date, boolean)">setDateTime(String, Date, boolean)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Set a <code>dateTime</code> property.</div>
+</dd>
 <dt><span class="strong"><a href="./org/webpki/xml/DOMWriterHelper.html#setDateTimeAttribute(java.lang.String, java.util.Date)">setDateTimeAttribute(String, Date)</a></span> - Method in class org.webpki.xml.<a href="./org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a></dt>
 <dd>
 <div class="block">Set an attribute of the current element to a date.</div>
@@ -4633,7 +4677,9 @@
 <dt><span class="strong"><a href="./org/webpki/json/JSONArrayWriter.html#setDouble(double)">setDouble(double)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#setDouble(java.lang.String, double)">setDouble(String, double)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Set a <code>double</code> property.</div>
+</dd>
 <dt><span class="strong"><a href="./org/webpki/crypto/KeyStoreSigner.html#setECDSASignatureEncoding(boolean)">setECDSASignatureEncoding(boolean)</a></span> - Method in class org.webpki.crypto.<a href="./org/webpki/crypto/KeyStoreSigner.html" title="class in org.webpki.crypto">KeyStoreSigner</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/crypto/SignatureWrapper.html#setECDSASignatureEncoding(boolean)">setECDSASignatureEncoding(boolean)</a></span> - Method in class org.webpki.crypto.<a href="./org/webpki/crypto/SignatureWrapper.html" title="class in org.webpki.crypto">SignatureWrapper</a></dt>
@@ -4648,10 +4694,6 @@
 <dd>
 <div class="block">Sets number of encoded characters before each linebreak.</div>
 </dd>
-<dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#setEncryptionObject(byte[], org.webpki.json.encryption.DataEncryptionAlgorithms, java.security.PublicKey, org.webpki.json.encryption.KeyEncryptionAlgorithms)">setEncryptionObject(byte[], DataEncryptionAlgorithms, PublicKey, KeyEncryptionAlgorithms)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#setEncryptionObject(byte[], org.webpki.json.encryption.DataEncryptionAlgorithms, java.lang.String, byte[])">setEncryptionObject(byte[], DataEncryptionAlgorithms, String, byte[])</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/ca/CertSpec.html#setEndEntityConstraint()">setEndEntityConstraint()</a></span> - Method in class org.webpki.ca.<a href="./org/webpki/ca/CertSpec.html" title="class in org.webpki.ca">CertSpec</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/keygen2/ServerState.Key.html#setEndorsedAlgorithms(java.lang.String[])">setEndorsedAlgorithms(String[])</a></span> - Method in class org.webpki.keygen2.<a href="./org/webpki/keygen2/ServerState.Key.html" title="class in org.webpki.keygen2">ServerState.Key</a></dt>
@@ -4700,11 +4742,15 @@
 <dt><span class="strong"><a href="./org/webpki/json/JSONArrayWriter.html#setInt(int)">setInt(int)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#setInt(java.lang.String, int)">setInt(String, int)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Set an <code>int</code> property</div>
+</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONArrayWriter.html#setInt53(long)">setInt53(long)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#setInt53(java.lang.String, long)">setInt53(String, long)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Set a <code>long</code> property.</div>
+</dd>
 <dt><span class="strong"><a href="./org/webpki/xml/DOMWriterHelper.html#setIntAttribute(java.lang.String, int)">setIntAttribute(String, int)</a></span> - Method in class org.webpki.xml.<a href="./org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a></dt>
 <dd>
 <div class="block">Set an attribute of the current element.</div>
@@ -4782,21 +4828,31 @@
 <dt><span class="strong"><a href="./org/webpki/json/JSONArrayWriter.html#setNULL()">setNULL()</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#setNULL(java.lang.String)">setNULL(String)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Set a <code>null</code> property.</div>
+</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONArrayWriter.html#setNumberAsText(java.lang.String)">setNumberAsText(String)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#setNumberAsText(java.lang.String, java.lang.String)">setNumberAsText(String, String)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Bypass the normal number formatters.</div>
+</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONArrayWriter.html#setObject()">setObject()</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONArrayWriter.html#setObject(org.webpki.json.JSONObjectWriter)">setObject(JSONObjectWriter)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#setObject(java.lang.String, org.webpki.json.JSONObjectReader)">setObject(String, JSONObjectReader)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Set a JSON object.</div>
+</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#setObject(java.lang.String, org.webpki.json.JSONObjectWriter)">setObject(String, JSONObjectWriter)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Set a JSON object.</div>
+</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#setObject(java.lang.String)">setObject(String)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Set (create) a JSON object.</div>
+</dd>
 <dt><span class="strong"><a href="./org/webpki/xml/DOMWriterHelper.html#setObjectAttribute(java.lang.String, java.lang.Object)">setObjectAttribute(String, Object)</a></span> - Method in class org.webpki.xml.<a href="./org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a></dt>
 <dd>
 <div class="block">Set an attribute of the current element.</div>
@@ -4834,9 +4890,15 @@
 <dt><span class="strong"><a href="./org/webpki/securityproxy/ProxyServer.html#setProxyServerErrorFactory(java.lang.Class)">setProxyServerErrorFactory(Class&lt;? extends ProxyServerErrorFactory&gt;)</a></span> - Method in class org.webpki.securityproxy.<a href="./org/webpki/securityproxy/ProxyServer.html" title="class in org.webpki.securityproxy">ProxyServer</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#setPublicKey(java.security.PublicKey, org.webpki.crypto.AlgorithmPreferences)">setPublicKey(PublicKey, AlgorithmPreferences)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Set a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
+ public key property.</div>
+</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#setPublicKey(java.security.PublicKey)">setPublicKey(PublicKey)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Set a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
+ public key property.</div>
+</dd>
 <dt><span class="strong"><a href="./org/webpki/pdf/PDFSigner.html#setReason(java.lang.String)">setReason(String)</a></span> - Method in class org.webpki.pdf.<a href="./org/webpki/pdf/PDFSigner.html" title="class in org.webpki.pdf">PDFSigner</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/net/HTTPSWrapper.html#setRequireSuccess(boolean)">setRequireSuccess(boolean)</a></span> - Method in class org.webpki.net.<a href="./org/webpki/net/HTTPSWrapper.html" title="class in org.webpki.net">HTTPSWrapper</a></dt>
@@ -4865,7 +4927,8 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#setSignature(org.webpki.json.JSONSigner)">setSignature(JSONSigner)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
 <dd>
-<div class="block">Set signature property in JSON object.</div>
+<div class="block">Set <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
+ <code>"signature"</code>object.</div>
 </dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONAsymKeySigner.html#setSignatureAlgorithm(org.webpki.crypto.AsymSignatureAlgorithms)">setSignatureAlgorithm(AsymSignatureAlgorithms)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONAsymKeySigner.html" title="class in org.webpki.json">JSONAsymKeySigner</a></dt>
 <dd>&nbsp;</dd>
@@ -4880,9 +4943,13 @@
 <dt><span class="strong"><a href="./org/webpki/json/JSONArrayWriter.html#setString(java.lang.String)">setString(String)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#setString(java.lang.String, java.lang.String)">setString(String, String)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Set a <code>"string"</code> property</div>
+</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#setStringArray(java.lang.String, java.lang.String[])">setStringArray(String, String[])</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Set a <code>String[]</code> property.</div>
+</dd>
 <dt><span class="strong"><a href="./org/webpki/xml/DOMWriterHelper.html#setStringAttribute(java.lang.String, java.lang.String)">setStringAttribute(String, String)</a></span> - Method in class org.webpki.xml.<a href="./org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a></dt>
 <dd>
 <div class="block">Set an attribute of the current element.</div>
@@ -4926,7 +4993,9 @@
 <dt><span class="strong"><a href="./org/webpki/keygen2/ServerState.Key.html#setUpdatedKey(java.lang.String, java.lang.String, java.security.cert.X509Certificate, java.security.PublicKey)">setUpdatedKey(String, String, X509Certificate, PublicKey)</a></span> - Method in class org.webpki.keygen2.<a href="./org/webpki/keygen2/ServerState.Key.html" title="class in org.webpki.keygen2">ServerState.Key</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#setupForRewrite(java.lang.String)">setupForRewrite(String)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Prepares the current object writer for a <i>rewrite</i> of a property.</div>
+</dd>
 <dt><span class="strong"><a href="./org/webpki/keygen2/KeyCreationRequestDecoder.PINPolicy.html#setUserData(java.lang.Object)">setUserData(Object)</a></span> - Method in class org.webpki.keygen2.<a href="./org/webpki/keygen2/KeyCreationRequestDecoder.PINPolicy.html" title="class in org.webpki.keygen2">KeyCreationRequestDecoder.PINPolicy</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/keygen2/KeyCreationRequestDecoder.PUKPolicy.html#setUserData(java.lang.Object)">setUserData(Object)</a></span> - Method in class org.webpki.keygen2.<a href="./org/webpki/keygen2/KeyCreationRequestDecoder.PUKPolicy.html" title="class in org.webpki.keygen2">KeyCreationRequestDecoder.PUKPolicy</a></dt>
@@ -5179,10 +5248,14 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/json/encryption/KeyEncryptionAlgorithms.html#toString()">toString()</a></span> - Method in enum org.webpki.json.encryption.<a href="./org/webpki/json/encryption/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">KeyEncryptionAlgorithms</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/webpki/json/JSONArrayWriter.html#toString()">toString()</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONObjectReader.html#toString()">toString()</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#toString()">toString()</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Pretty print JSON of current object writer.</div>
+</dd>
 <dt><span class="strong"><a href="./org/webpki/json/v8dtoa/FastDtoaBuilder.html#toString()">toString()</a></span> - Method in class org.webpki.json.v8dtoa.<a href="./org/webpki/json/v8dtoa/FastDtoaBuilder.html" title="class in org.webpki.json.v8dtoa">FastDtoaBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/xml/XMLObjectWrapper.html#toString()">toString()</a></span> - Method in class org.webpki.xml.<a href="./org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a></dt>
