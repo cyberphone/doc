@@ -104,7 +104,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <div class="block">Creates JSON objects and performs serialization according to ES6.
  <p>
  Also provides built-in support for 
- <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS (JSON Cleartext Signatures)</a>
+ <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS (JSON Cleartext Signature)</a>
  and
 <a href="https://cyberphone.github.io/doc/security/jef.html" target="_blank">JEF (JSON Encryption Format)</a>
  encodings.</p></div>
@@ -284,7 +284,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectWriter.html#setDateTime(java.lang.String, java.util.Date, boolean)">setDateTime</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
            <a href="http://download.oracle.com/javase/7/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</a>&nbsp;dateTime,
            boolean&nbsp;forceUtc)</code>
-<div class="block">Set a <code>dateTime</code> property.</div>
+<div class="block">Set an ISO formatted <code>dateTime</code> property.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -298,7 +298,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectWriter.html#setInt(java.lang.String, int)">setInt</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
       int&nbsp;value)</code>
-<div class="block">Set an <code>int</code> property</div>
+<div class="block">Set an <code>int</code> property.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -367,7 +367,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectWriter.html#setString(java.lang.String, java.lang.String)">setString</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
          <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</code>
-<div class="block">Set a <code>"string"</code> property</div>
+<div class="block">Set a <code>"string"</code> property.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -471,7 +471,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
                                    <a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences)
                                             throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Create a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
- formatted public key object.
+ formatted public key object.<p>
  Typical use:
 <pre>
     setObject("myPublicKey", JSONObjectWriter.setCorePublicKey(myPublicKey, AlgorithmPreferences.JOSE);
@@ -483,7 +483,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
       <i>depends on the actual public key type and value</i>   
          .
     }
-</pre></div>
+</pre></p></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>publicKey</code> - Public key value</dd><dd><code>algorithmPreferences</code> - JOSE or SKS algorithm notation</dd>
 <dt><span class="strong">Returns:</span></dt><dd>New instance of <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a></dd>
 <dt><span class="strong">Throws:</span></dt>
@@ -540,8 +540,8 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>es6JsonNumberSerialization</h4>
 <pre>public static&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;es6JsonNumberSerialization(double&nbsp;value)
                                          throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Formats a number according to ES6.
- This code is emulating 7.1.12.1 of the EcmaScript V6 specification.</div>
+<div class="block">Formats a number according to ES6.<p>
+ This code is emulating 7.1.12.1 of the EcmaScript V6 specification.</p></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>value</code> - Value to be formatted</dd>
 <dt><span class="strong">Returns:</span></dt><dd>String representation</dd>
 <dt><span class="strong">Throws:</span></dt>
@@ -586,9 +586,9 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>setArray</h4>
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a>&nbsp;setArray(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
                          throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Set (create) a JSON array.
- This method creates an empty JSON array and links it to the current object through a property.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Of array</dd>
+<div class="block">Set (create) a JSON array.<p>
+ This method creates an empty JSON array and links it to the current object through a property.</p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd>
 <dt><span class="strong">Returns:</span></dt><dd>New instance of <a href="../../../org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json"><code>JSONArrayWriter</code></a></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -603,10 +603,10 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;setArray(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                         <a href="../../../org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a>&nbsp;arrayWriter)
                           throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Set a JSON array.
+<div class="block">Set a JSON array.<p>
  This method assigns a property name to an already created array writer
- which is useful for chaining complex JSON objects.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Of array</dd><dd><code>arrayWriter</code> - Array writer</dd>
+ which is useful for nested JSON objects.</p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd><dd><code>arrayWriter</code> - Array writer</dd>
 <dt><span class="strong">Returns:</span></dt><dd>Current instance of <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -621,12 +621,16 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;setBigDecimal(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                              <a href="http://download.oracle.com/javase/7/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;value)
                                throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Set a <code>BigDecimal</code> property.
- Note: this is an <i>emulated</i> type since there is no <code>BigDecimal</code> type in JSON</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Of property</dd><dd><code>value</code> - Value</dd>
+<div class="block">Set a <code>BigDecimal</code> property.<p>
+ Note: this is an <i>mapped</i> type since there is no <code>BigDecimal</code> type in JSON.</p><p>
+ Sample:
+ <pre>
+    "amount": "568790.25"
+ </pre></p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd><dd><code>value</code> - Value</dd>
 <dt><span class="strong">Returns:</span></dt><dd>Current instance of <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a></dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/json/JSONObjectWriter.html#setBigDecimal(java.lang.String, java.math.BigDecimal, java.lang.Integer)"><code>setBigDecimal(String, BigDecimal, Integer)</code></a></dd></dl>
 </li>
 </ul>
 <a name="setBigDecimal(java.lang.String, java.math.BigDecimal, java.lang.Integer)">
@@ -639,12 +643,12 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
                              <a href="http://download.oracle.com/javase/7/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;value,
                              <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;decimals)
                                throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Set a <code>BigDecimal</code> property.
- Note: this is an <i>emulated</i> type since there is no <code>BigDecimal</code> type in JSON.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Of property</dd><dd><code>value</code> - Value</dd><dd><code>decimals</code> - Number of fractional digits</dd>
+<div class="block">Set a <code>BigDecimal</code> property.<p>
+ Note: this is an <i>mapped</i> type since there is no <code>BigDecimal</code> type in JSON.</p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd><dd><code>value</code> - Value</dd><dd><code>decimals</code> - Number of fractional digits</dd>
 <dt><span class="strong">Returns:</span></dt><dd>Current instance of <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a></dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/json/JSONObjectWriter.html#setBigDecimal(java.lang.String, java.math.BigDecimal)"><code>setBigDecimal(String, BigDecimal)</code></a></dd></dl>
 </li>
 </ul>
 <a name="setBigInteger(java.lang.String, java.math.BigInteger)">
@@ -656,9 +660,13 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;setBigInteger(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                              <a href="http://download.oracle.com/javase/7/docs/api/java/math/BigInteger.html?is-external=true" title="class or interface in java.math">BigInteger</a>&nbsp;value)
                                throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Set a <code>BigInteger</code> property.
- Note: this is an <i>emulated</i> type since there is no <code>BigInteger</code> type in JSON</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Of property</dd><dd><code>value</code> - Value</dd>
+<div class="block">Set a <code>BigInteger</code> property.<p>
+ Note: this is an <i>mapped</i> type since there is no <code>BigInteger</code> type in JSON.</p><p>
+ Sample:
+ <pre>
+    "aPrettyHugeNumber": "94673335822222222222222222222222222222222222222222222"
+ </pre></p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd><dd><code>value</code> - Value</dd>
 <dt><span class="strong">Returns:</span></dt><dd>Current instance of <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -673,12 +681,16 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;setBinary(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                          byte[]&nbsp;value)
                            throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Set a <code>byte[]</code> property.
- This method utilizes Base64Url encoding.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Of property</dd><dd><code>value</code> - Array of bytes</dd>
+<div class="block">Set a <code>byte[]</code> property.<p>
+ This method utilizes Base64Url encoding.</p><p>
+ Sample:
+ <pre>
+    "nonce": "lNxNvAUEE8t7DSQBft93LVSXxKCiVjhbWWfyg023FCk"
+ </pre></p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd><dd><code>value</code> - Array of bytes</dd>
 <dt><span class="strong">Returns:</span></dt><dd>Current instance of <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a></dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/util/Base64URL.html#encode(byte[])"><code>Base64URL.encode(byte[])</code></a></dd></dl>
 </li>
 </ul>
 <a name="setBinaryArray(java.lang.String, java.util.Vector)">
@@ -690,12 +702,16 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;setBinaryArray(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                               <a href="http://download.oracle.com/javase/7/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</a>&lt;byte[]&gt;&nbsp;values)
                                 throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Set an array of <code>byte[]</code> property.
- This method puts each byte array (after Base64Url encoding) into a single JSON array.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Of property</dd><dd><code>values</code> - Vector holding arrays of bytes</dd>
+<div class="block">Set an array of <code>byte[]</code> property.<p>
+ This method puts each byte array (after Base64Url encoding) into a single JSON array.</p><p>
+ Sample:
+ <pre>
+    "blobs": ["lNxNvAUEE8t7DSQBft93LVSXxKCiVjhbWWfyg023FCk","LmTlQxXB3LgZrNLmhOfMaCnDizczC_RfQ6Kx8iNwfFA"]
+ </pre></p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd><dd><code>values</code> - Vector holding arrays of bytes</dd>
 <dt><span class="strong">Returns:</span></dt><dd>Current instance of <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a></dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/util/Base64URL.html#encode(byte[])"><code>Base64URL.encode(byte[])</code></a></dd></dl>
 </li>
 </ul>
 <a name="setBoolean(java.lang.String, boolean)">
@@ -707,8 +723,12 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;setBoolean(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                           boolean&nbsp;value)
                             throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Set a <code>boolean</code> property.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Of property</dd><dd><code>value</code> - Value</dd>
+<div class="block">Set a <code>boolean</code> property.<p>
+ Sample:
+ <pre>
+    "theEarthIsFlat": false
+ </pre></p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd><dd><code>value</code> - Value</dd>
 <dt><span class="strong">Returns:</span></dt><dd>Current instance of <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -724,10 +744,12 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
                                     throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Set a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
  certificate path property.
+ <p>Each path element (certificate) is base64url encoded and the path must be
+ <i>sorted</i> where certificate[i] is signed by certificate[i + 1].</p><p>
  Resulting JSON:
  <pre>
-    "certificatePath": ["base64url"{,...}]
-</pre></div>
+    "certificatePath": ["MIIETTCCAjWgAwIBAgIGAUoqo74...gfdd" {,...}]
+</pre></p></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>certificatePath</code> - Sorted certificate path array</dd>
 <dt><span class="strong">Returns:</span></dt><dd>Current instance of <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a></dd>
 <dt><span class="strong">Throws:</span></dt>
@@ -744,12 +766,16 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
                            <a href="http://download.oracle.com/javase/7/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</a>&nbsp;dateTime,
                            boolean&nbsp;forceUtc)
                              throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Set a <code>dateTime</code> property.
- Note: this is an <i>emulated</i> type since there is no <code>dateTime</code> type in JSON.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Of property</dd><dd><code>dateTime</code> - Value</dd><dd><code>forceUtc</code> - <code>true</code> for UTC, <code>false</code> for local time</dd>
+<div class="block">Set an ISO formatted <code>dateTime</code> property.<p>
+ Note: this is an <i>mapped</i> type since there is no <code>dateTime</code> type in JSON.</p><p>
+ Sample:
+ <pre>
+    "received": "2016-11-12T09:22:36Z"
+ </pre></p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd><dd><code>dateTime</code> - Date/time value</dd><dd><code>forceUtc</code> - <code>true</code> for UTC, <code>false</code> for local time</dd>
 <dt><span class="strong">Returns:</span></dt><dd>Current instance of <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a></dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/util/ISODateTime.html#formatDateTime(java.util.Date, boolean)"><code>ISODateTime.formatDateTime(Date, boolean)</code></a></dd></dl>
 </li>
 </ul>
 <a name="setDouble(java.lang.String, double)">
@@ -761,8 +787,12 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;setDouble(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                          double&nbsp;value)
                            throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Set a <code>double</code> property.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Of property</dd><dd><code>value</code> - Value</dd>
+<div class="block">Set a <code>double</code> property.<p>
+ Sample:
+ <pre>
+    "Planck's Constant": 6.62607004e-34
+ </pre></p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd><dd><code>value</code> - Value</dd>
 <dt><span class="strong">Returns:</span></dt><dd>Current instance of <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -777,8 +807,12 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;setInt(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                       int&nbsp;value)
                         throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Set an <code>int</code> property</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Of property</dd><dd><code>value</code> - Value</dd>
+<div class="block">Set an <code>int</code> property.<p>
+ Sample:
+ <pre>
+    "headCount": 300
+ </pre></p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd><dd><code>value</code> - Value</dd>
 <dt><span class="strong">Returns:</span></dt><dd>Current instance of <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -793,10 +827,15 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;setInt53(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                         long&nbsp;value)
                           throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Set a <code>long</code> property.
- Note that <code>long</code> are limited to 53 bits of precision.
- If you need higher precision use <code>BigInteger</code>.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Of property</dd><dd><code>value</code> - Value</dd>
+<div class="block">Set a <code>long</code> property.<p>
+ Sample:
+ <pre>
+    "quiteNegative": -800719925474099
+ </pre></p>
+ Note that <code>long</code> data is limited to 53 bits of precision
+ (exceeding this limit throws an exception).
+ If you need higher precision use <a href="../../../org/webpki/json/JSONObjectWriter.html#setBigInteger(java.lang.String, java.math.BigInteger)"><code>setBigInteger(String, BigInteger)</code></a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd><dd><code>value</code> - Value</dd>
 <dt><span class="strong">Returns:</span></dt><dd>Current instance of <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -810,11 +849,15 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>setNULL</h4>
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;setNULL(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
                          throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Set a <code>null</code> property.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Of property</dd>
+<div class="block">Set a <code>null</code> property.<p>
+ Sample:
+ <pre>
+    "myKnowledgeOfTheLispProgrammingLanguage": null
+ </pre></p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd>
 <dt><span class="strong">Returns:</span></dt><dd>Current instance of <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a></dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/json/JSONObjectReader.html#getIfNULL(java.lang.String)"><code>JSONObjectReader.getIfNULL(String)</code></a></dd></dl>
 </li>
 </ul>
 <a name="setNumberAsText(java.lang.String, java.lang.String)">
@@ -828,7 +871,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
                                  throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Bypass the normal number formatters.
  Primarily for testing.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Of property</dd><dd><code>value</code> - Text applied verbatim without quotes</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd><dd><code>value</code> - Text applied verbatim without quotes</dd>
 <dt><span class="strong">Returns:</span></dt><dd>Current instance of <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -842,9 +885,9 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>setObject</h4>
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;setObject(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
                            throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Set (create) a JSON object.
- This method creates an empty JSON object and links it to the current object through a property.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Of object</dd>
+<div class="block">Set (create) a JSON object.<p>
+ This method creates an empty JSON object and links it to the current object through a property.</p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd>
 <dt><span class="strong">Returns:</span></dt><dd>New instance of <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -859,10 +902,10 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;setObject(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                          <a href="../../../org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a>&nbsp;objectReader)
                            throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Set a JSON object.
+<div class="block">Set a JSON object.<p>
  This method assigns a property name to an already existing object reader
- which is useful for wrapping JSON objects.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Of object</dd><dd><code>objectReader</code> - Object reader</dd>
+ which is useful for wrapping JSON objects.</p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd><dd><code>objectReader</code> - Object reader</dd>
 <dt><span class="strong">Returns:</span></dt><dd>Current instance of <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -877,10 +920,10 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;setObject(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                          <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;objectWriter)
                            throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Set a JSON object.
+<div class="block">Set a JSON object.<p>
  This method assigns a property name to an already created object writer
- which is useful for chaining complex JSON objects.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Of object</dd><dd><code>objectWriter</code> - Object writer</dd>
+ which is useful for nested JSON objects.</p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd><dd><code>objectWriter</code> - Object writer</dd>
 <dt><span class="strong">Returns:</span></dt><dd>Current instance of <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -895,8 +938,9 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;setPublicKey(<a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey)
                               throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Set a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
- public key property.
- This is equivalent to <code>setPublicKey(publicKey, AlgorithmPreferences.JOSE_ACCEPT_PREFER)</code>.</div>
+ public key property.<p>
+ This method is equivalent to <a href="../../../org/webpki/json/JSONObjectWriter.html#setPublicKey(java.security.PublicKey, org.webpki.crypto.AlgorithmPreferences)"><code>setPublicKey(PublicKey, AlgorithmPreferences)</code></a>
+ using <a href="../../../org/webpki/crypto/AlgorithmPreferences.html#JOSE_ACCEPT_PREFER"><code>AlgorithmPreferences.JOSE_ACCEPT_PREFER</code></a> as second argument.</p></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>publicKey</code> - Public key value</dd>
 <dt><span class="strong">Returns:</span></dt><dd>Current instance of <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a></dd>
 <dt><span class="strong">Throws:</span></dt>
@@ -913,7 +957,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
                             <a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences)
                               throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Set a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
- public key property.
+ public key property.<p>
  Resulting JSON:
  <pre>
     "publicKey": {
@@ -921,7 +965,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
       <i>depends on the actual public key type and value</i>   
          .
     }
-</pre></div>
+</pre></p></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>publicKey</code> - Public key value</dd><dd><code>algorithmPreferences</code> - JOSE or SKS algorithm notation</dd>
 <dt><span class="strong">Returns:</span></dt><dd>Current instance of <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a></dd>
 <dt><span class="strong">Throws:</span></dt>
@@ -937,8 +981,8 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;setSignature(<a href="../../../org/webpki/json/JSONSigner.html" title="class in org.webpki.json">JSONSigner</a>&nbsp;signer)
                               throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Set <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
- <code>"signature"</code>object.
- This method performs all the processing needed for creating a JCS signature.</div>
+ <code>"signature"</code>object.<p>
+ This method performs all the processing needed for adding a JCS signature to the current object.</p></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>signer</code> - The interface to the signing key and type</dd>
 <dt><span class="strong">Returns:</span></dt><dd>Current instance of <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a></dd>
 <dt><span class="strong">Throws:</span></dt>
@@ -993,6 +1037,21 @@ import org.webpki.json.JSONSignatureDecoder;
         // Print document on the console
         System.out.println("Signed doc: " + json);
 
+<div id="verify" style="display:inline-block;background:#F8F8F8;border-width:1px;border-style:solid;border-color:grey;padding:10pt;box-shadow:3pt 3pt 3pt #D0D0D0">{
+  "<span style="color:#C00000">myProperty</span>": "<span style="color:#0000C0">Some data</span>",
+  "<span style="color:#C00000">signature</span>": {
+    "<span style="color:#C00000">algorithm</span>": "<span style="color:#0000C0">ES256</span>",
+    "<span style="color:#C00000">publicKey</span>": {
+      "<span style="color:#C00000">type</span>": "<span style="color:#0000C0">EC</span>",
+      "<span style="color:#C00000">curve</span>": "<span style="color:#0000C0">P-256</span>",
+      "<span style="color:#C00000">x</span>": "<span style="color:#0000C0">vlYxD4dtFJOp1_8_QUcieWCW-4KrLMmFL2rpkY1bQDs</span>",
+      "<span style="color:#C00000">y</span>": "<span style="color:#0000C0">fxEF70yJenP3SPHM9hv-EnvhG6nXr3_S-fDqoj-F6yM</span>"
+    },
+    "<span style="color:#C00000">value</span>": "<span style="color:#0000C0">gNfr9Es0cnc263tmOYMsctBhbdQUSn9K-Uk42kUMKn4gBUKu9SP4iqNCQd2h8QSePPGsKdkLILVJDBlAbkQ1eA</span>"
+  }
+}
+</div>    
+
         // Parse document
         JSONObjectReader reader = JSONParser.parse(json);
 
@@ -1015,8 +1074,12 @@ import org.webpki.json.JSONSignatureDecoder;
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;setString(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                          <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)
                            throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Set a <code>"string"</code> property</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Of property</dd><dd><code>value</code> - Value</dd>
+<div class="block">Set a <code>"string"</code> property.<p>
+ Sample:
+ <pre>
+    "statement": "Life is good!"
+ </pre></p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd><dd><code>value</code> - Value</dd>
 <dt><span class="strong">Returns:</span></dt><dd>Current instance of <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -1031,9 +1094,13 @@ import org.webpki.json.JSONSignatureDecoder;
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;setStringArray(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                               <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;values)
                                 throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Set a <code>String[]</code> property.
- This method puts each <code>String</code> into a single JSON array.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Of property</dd><dd><code>values</code> - Array of <code>String</code></dd>
+<div class="block">Set a <code>String[]</code> property.<p>
+ This method puts each <code>String</code> into a single JSON array.</p><p>
+ Sample:
+ <pre>
+    "usPresidents": ["Clinton","Bush","Obama","Trump"]
+ </pre></p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd><dd><code>values</code> - Array of <code>String</code></dd>
 <dt><span class="strong">Returns:</span></dt><dd>Current instance of <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>

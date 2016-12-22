@@ -104,7 +104,13 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <div class="block">JSON object reader.
  <p>
  Returned by the parser methods.
- Also provides built-in support for JCS (JSON Cleartext Signatures) decoding.</p></div>
+ Also provides built-in support for JCS (JSON Cleartext Signatures) decoding and
+<a href="https://cyberphone.github.io/doc/security/jef.html" target="_blank">JEF (JSON Encryption Format)</a>
+ encodings.</p>
+ <p>In addition,
+ there are static methods for converting
+ keys in <a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank">JWK</a>
+ format to their Java counterparts.</div>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../serialized-form.html#org.webpki.json.JSONObjectReader">Serialized Form</a></dd></dl>
 </li>
 </ul>
@@ -126,174 +132,272 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#checkForUnread()">checkForUnread</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#checkForUnread()">checkForUnread</a></strong>()</code>
+<div class="block">Check for unread data.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#clone()">clone</a></strong>()</code>
-<div class="block">Deep copy of JSON object</div>
+<div class="block">Deep copy of JSON object reader.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONArrayReader.html" title="class in org.webpki.json">JSONArrayReader</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getArray(java.lang.String)">getArray</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getArray(java.lang.String)">getArray</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Read a JSON array property.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getBigDecimal(java.lang.String)">getBigDecimal</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getBigDecimal(java.lang.String)">getBigDecimal</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Read a BigDecimal property.<br>
+ Note: Since JSON does not support a native BigDecimal type, this method builds on <i>mapping</i>.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getBigDecimal(java.lang.String, java.lang.Integer)">getBigDecimal</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-             <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;decimals)</code>&nbsp;</td>
+             <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;decimals)</code>
+<div class="block">Read a BigDecimal property.<br>
+ Note: Since JSON does not support a native BigDecimal type, this method builds on <i>mapping</i>.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/math/BigInteger.html?is-external=true" title="class or interface in java.math">BigInteger</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getBigInteger(java.lang.String)">getBigInteger</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getBigInteger(java.lang.String)">getBigInteger</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Read a BigInteger property.<br>
+ Note: Since JSON does not support a native BigInteger type, this method builds on <i>mapping</i>.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getBinary(java.lang.String)">getBinary</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getBinary(java.lang.String)">getBinary</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Read a base64url encoded JSON property.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</a>&lt;byte[]&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getBinaryArray(java.lang.String)">getBinaryArray</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getBinaryArray(java.lang.String)">getBinaryArray</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Read an array of base64url encoded JSON strings.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getBinaryConditional(java.lang.String)">getBinaryConditional</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getBinaryConditional(java.lang.String)">getBinaryConditional</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Conditionally read a base64url encoded JSON property.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getBoolean(java.lang.String)">getBoolean</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getBoolean(java.lang.String)">getBoolean</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Read JSON boolean property.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getBooleanConditional(java.lang.String)">getBooleanConditional</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getBooleanConditional(java.lang.String)">getBooleanConditional</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Conditionally read a JSON boolean property.<br></div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getBooleanConditional(java.lang.String, boolean)">getBooleanConditional</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                     boolean&nbsp;default_value)</code>&nbsp;</td>
+                     boolean&nbsp;defaultValue)</code>
+<div class="block">Conditionally read a JSON boolean property.<br></div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getCertificatePath()">getCertificatePath</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getCertificatePath()">getCertificatePath</a></strong>()</code>
+<div class="block">Read a certificate path in 
+ <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
+ format.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getCorePublicKey(org.webpki.crypto.AlgorithmPreferences)">getCorePublicKey</a></strong>(<a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getCorePublicKey(org.webpki.crypto.AlgorithmPreferences)">getCorePublicKey</a></strong>(<a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences)</code>
+<div class="block">Read and decode a public key in
+ <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
+ format.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getDateTime(java.lang.String)">getDateTime</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getDateTime(java.lang.String)">getDateTime</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Read a JSON dateTime property in ISO format.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getDouble(java.lang.String)">getDouble</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getDouble(java.lang.String)">getDouble</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Read a JSON double property.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONDecryptionDecoder.html" title="class in org.webpki.json">JSONDecryptionDecoder</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getEncryptionObject()">getEncryptionObject</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getEncryptionObject()">getEncryptionObject</a></strong>()</code>
+<div class="block">Read an object in
+ <a href="https://cyberphone.github.io/doc/security/jef.html" target="_blank">JEF</a>
+ format.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getIfNULL(java.lang.String)">getIfNULL</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getIfNULL(java.lang.String)">getIfNULL</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Conditionally read a JSON <code>null</code> property.<br>
+ Note: Only if the property contains a <code>null</code> the property is marked as "read".</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getInt(java.lang.String)">getInt</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getInt(java.lang.String)">getInt</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Read a JSON integer property.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getInt53(java.lang.String)">getInt53</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getInt53(java.lang.String)">getInt53</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Read a JSON long integer property.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONArrayReader.html" title="class in org.webpki.json">JSONArrayReader</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getJSONArrayReader()">getJSONArrayReader</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getJSONArrayReader()">getJSONArrayReader</a></strong>()</code>
+<div class="block">Get root array reader.<br>
+ If the outermost part of the JSON structure is an array, this method <b>must</b> be
+ called <i>immediately after parsing</i> in order to process the structure.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/security/KeyPair.html?is-external=true" title="class or interface in java.security">KeyPair</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getKeyPairFromJwk()">getKeyPairFromJwk</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getKeyPairFromJwk()">getKeyPairFromJwk</a></strong>()</code>
+<div class="block">Read a public and private key in a <a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank">JWK</a>.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getObject(java.lang.String)">getObject</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getObject(java.lang.String)">getObject</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Read a JSON object property.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getProperties()">getProperties</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getProperties()">getProperties</a></strong>()</code>
+<div class="block">Get JSON properties.<br></div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONTypes.html" title="enum in org.webpki.json">JSONTypes</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getPropertyType(java.lang.String)">getPropertyType</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getPropertyType(java.lang.String)">getPropertyType</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Get the native JSON type of a property.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getPublicKey()">getPublicKey</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getPublicKey()">getPublicKey</a></strong>()</code>
+<div class="block">Read and decode a public key in
+ <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
+ format.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getPublicKey(org.webpki.crypto.AlgorithmPreferences)">getPublicKey</a></strong>(<a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getPublicKey(org.webpki.crypto.AlgorithmPreferences)">getPublicKey</a></strong>(<a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences)</code>
+<div class="block">Read and decode a public key in
+ <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
+ format.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getPublicKeyFromJwk()">getPublicKeyFromJwk</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getPublicKeyFromJwk()">getPublicKeyFromJwk</a></strong>()</code>
+<div class="block">Read a public key in a <a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank">JWK</a>.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getSignature()">getSignature</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getSignature()">getSignature</a></strong>()</code>
+<div class="block">Read and decode a
+ <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
+ <code>"signature"</code> object.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getSignature(org.webpki.crypto.AlgorithmPreferences)">getSignature</a></strong>(<a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences)</code>
-<div class="block">Read and decode JCS signature object from the current JSON object.</div>
+<div class="block">Read and decode a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
+ <code>"signature"</code> object.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getString(java.lang.String)">getString</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getString(java.lang.String)">getString</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Read a JSON string property.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getStringArray(java.lang.String)">getStringArray</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getStringArray(java.lang.String)">getStringArray</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Read an array of JSON strings.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getStringArrayConditional(java.lang.String)">getStringArrayConditional</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getStringArrayConditional(java.lang.String)">getStringArrayConditional</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Conditionally read an array of JSON strings.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getStringConditional(java.lang.String)">getStringConditional</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getStringConditional(java.lang.String)">getStringConditional</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Conditionally read a JSON string property.<br>
+ Note: This method is equivalent to <code>getStringConditional(name, null)</code>.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#getStringConditional(java.lang.String, java.lang.String)">getStringConditional</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                    <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;default_value)</code>&nbsp;</td>
+                    <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;defaultValue)</code>
+<div class="block">Conditionally read a JSON string property.<br></div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#hasProperty(java.lang.String)">hasProperty</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#hasProperty(java.lang.String)">hasProperty</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Test if a property is present.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#removeProperty(java.lang.String)">removeProperty</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#removeProperty(java.lang.String)">removeProperty</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Remove a property.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#scanAway(java.lang.String)">scanAway</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#scanAway(java.lang.String)">scanAway</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Scan a property.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#serializeToBytes(org.webpki.json.JSONOutputFormats)">serializeToBytes</a></strong>(<a href="../../../org/webpki/json/JSONOutputFormats.html" title="enum in org.webpki.json">JSONOutputFormats</a>&nbsp;outputFormat)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#serializeToBytes(org.webpki.json.JSONOutputFormats)">serializeToBytes</a></strong>(<a href="../../../org/webpki/json/JSONOutputFormats.html" title="enum in org.webpki.json">JSONOutputFormats</a>&nbsp;outputFormat)</code>
+<div class="block">Serialize object reader to a Java <code>byte[]</code>.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#serializeToString(org.webpki.json.JSONOutputFormats)">serializeToString</a></strong>(<a href="../../../org/webpki/json/JSONOutputFormats.html" title="enum in org.webpki.json">JSONOutputFormats</a>&nbsp;outputFormat)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#serializeToString(org.webpki.json.JSONOutputFormats)">serializeToString</a></strong>(<a href="../../../org/webpki/json/JSONOutputFormats.html" title="enum in org.webpki.json">JSONOutputFormats</a>&nbsp;outputFormat)</code>
+<div class="block">Serialize object reader to a Java <code>String</code>.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#toString()">toString</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectReader.html#toString()">toString</a></strong>()</code>
+<div class="block">Pretty print JSON of object reader.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -325,8 +429,13 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>checkForUnread</h4>
 <pre>public&nbsp;void&nbsp;checkForUnread()
                     throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Check for unread data.
+ Throws an exception if any property or array element in the current object or
+ child objects have not been read.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/json/JSONObjectReader.html#scanAway(java.lang.String)"><code>scanAway(String)</code></a>, 
+<a href="../../../org/webpki/json/JSONObjectReader.html#getPropertyType(java.lang.String)"><code>getPropertyType(String)</code></a>, 
+<a href="../../../org/webpki/json/JSONObjectReader.html#getProperties()"><code>getProperties()</code></a></dd></dl>
 </li>
 </ul>
 <a name="clone()">
@@ -336,7 +445,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <li class="blockList">
 <h4>clone</h4>
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a>&nbsp;clone()</pre>
-<div class="block">Deep copy of JSON object</div>
+<div class="block">Deep copy of JSON object reader.</div>
 <dl>
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a></code>&nbsp;in class&nbsp;<code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
@@ -351,7 +460,10 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>getArray</h4>
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONArrayReader.html" title="class in org.webpki.json">JSONArrayReader</a>&nbsp;getArray(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
                          throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
+<div class="block">Read a JSON array property.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Array reader</dd>
+<dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -363,8 +475,13 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>getBigDecimal</h4>
 <pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;getBigDecimal(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
                          throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<div class="block">Read a BigDecimal property.<br>
+ Note: Since JSON does not support a native BigDecimal type, this method builds on <i>mapping</i>.
+ Note: This method is equivalent to <code>getBigDecimal(name, null)</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Java <code>BigInteger</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/json/JSONObjectWriter.html#setBigDecimal(java.lang.String, java.math.BigDecimal)"><code>JSONObjectWriter.setBigDecimal(String, BigDecimal)</code></a></dd></dl>
 </li>
 </ul>
 <a name="getBigDecimal(java.lang.String, java.lang.Integer)">
@@ -376,8 +493,12 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;getBigDecimal(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                        <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;decimals)
                          throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<div class="block">Read a BigDecimal property.<br>
+ Note: Since JSON does not support a native BigDecimal type, this method builds on <i>mapping</i>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd><dd><code>decimals</code> - Required number of fractional digits or <code>null</code> if unspecified</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Java <code>BigDecimal</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/json/JSONObjectWriter.html#setBigDecimal(java.lang.String, java.math.BigDecimal, java.lang.Integer)"><code>JSONObjectWriter.setBigDecimal(String, BigDecimal, Integer)</code></a></dd></dl>
 </li>
 </ul>
 <a name="getBigInteger(java.lang.String)">
@@ -388,8 +509,12 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>getBigInteger</h4>
 <pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/math/BigInteger.html?is-external=true" title="class or interface in java.math">BigInteger</a>&nbsp;getBigInteger(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
                          throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<div class="block">Read a BigInteger property.<br>
+ Note: Since JSON does not support a native BigInteger type, this method builds on <i>mapping</i>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Java <code>BigInteger</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/json/JSONObjectWriter.html#setBigInteger(java.lang.String, java.math.BigInteger)"><code>JSONObjectWriter.setBigInteger(String, BigInteger)</code></a></dd></dl>
 </li>
 </ul>
 <a name="getBinary(java.lang.String)">
@@ -400,8 +525,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>getBinary</h4>
 <pre>public&nbsp;byte[]&nbsp;getBinary(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
                  throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<div class="block">Read a base64url encoded JSON property.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Java <code>byte[]</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/json/JSONObjectWriter.html#setBinary(java.lang.String, byte[])"><code>JSONObjectWriter.setBinary(String, byte[])</code></a></dd></dl>
 </li>
 </ul>
 <a name="getBinaryArray(java.lang.String)">
@@ -412,7 +540,10 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>getBinaryArray</h4>
 <pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</a>&lt;byte[]&gt;&nbsp;getBinaryArray(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
                               throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
+<div class="block">Read an array of base64url encoded JSON strings.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Vector holding arrays of bytes</dd>
+<dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -424,8 +555,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>getBinaryConditional</h4>
 <pre>public&nbsp;byte[]&nbsp;getBinaryConditional(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
                             throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<div class="block">Conditionally read a base64url encoded JSON property.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Java <code>byte[]</code> or <code>null</code> if property is not present</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/json/JSONObjectWriter.html#setBinary(java.lang.String, byte[])"><code>JSONObjectWriter.setBinary(String, byte[])</code></a></dd></dl>
 </li>
 </ul>
 <a name="getBoolean(java.lang.String)">
@@ -436,8 +570,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>getBoolean</h4>
 <pre>public&nbsp;boolean&nbsp;getBoolean(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
                    throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<div class="block">Read JSON boolean property.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Java <code>boolean</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/json/JSONObjectWriter.html#setBoolean(java.lang.String, boolean)"><code>JSONObjectWriter.setBoolean(String, boolean)</code></a></dd></dl>
 </li>
 </ul>
 <a name="getBooleanConditional(java.lang.String)">
@@ -448,7 +585,10 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>getBooleanConditional</h4>
 <pre>public&nbsp;boolean&nbsp;getBooleanConditional(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
                               throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
+<div class="block">Conditionally read a JSON boolean property.<br></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The boolean if available else <code>false</code></dd>
+<dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -459,9 +599,12 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <li class="blockList">
 <h4>getBooleanConditional</h4>
 <pre>public&nbsp;boolean&nbsp;getBooleanConditional(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                            boolean&nbsp;default_value)
+                            boolean&nbsp;defaultValue)
                               throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
+<div class="block">Conditionally read a JSON boolean property.<br></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd><dd><code>defaultValue</code> - Default value</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The boolean if available else <code>defaultValue</code></dd>
+<dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -473,8 +616,15 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>getCertificatePath</h4>
 <pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]&nbsp;getCertificatePath()
                                      throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<div class="block">Read a certificate path in 
+ <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
+ format.
+ <p>The array elements (base64url encoded certificates),
+ <b>must</b> be supplied in <i>strict issuance order</i>
+ where certificate[i] is signed by certificate[i + 1].</p></div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Certificate path</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/json/JSONObjectWriter.html#setCertificatePath(java.security.cert.X509Certificate[])"><code>JSONObjectWriter.setCertificatePath(X509Certificate[])</code></a></dd></dl>
 </li>
 </ul>
 <a name="getCorePublicKey(org.webpki.crypto.AlgorithmPreferences)">
@@ -485,8 +635,14 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>getCorePublicKey</h4>
 <pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;getCorePublicKey(<a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences)
                            throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<div class="block">Read and decode a public key in
+ <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
+ format.
+ Note: this method assumes that the current object only holds the actual public key structure (no property).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>algorithmPreferences</code> - JOSE or SKS notation expected</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Java <code>PublicKey</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/json/JSONObjectWriter.html#createCorePublicKey(java.security.PublicKey, org.webpki.crypto.AlgorithmPreferences)"><code>JSONObjectWriter.createCorePublicKey(PublicKey,AlgorithmPreferences)</code></a></dd></dl>
 </li>
 </ul>
 <a name="getDateTime(java.lang.String)">
@@ -497,8 +653,13 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>getDateTime</h4>
 <pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;getDateTime(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
                               throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<div class="block">Read a JSON dateTime property in ISO format.
+ Note: Since JSON does not support a native dateTime type, this method builds on <i>mapping</i>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Java <code>GregorianCalendar</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/util/ISODateTime.html#parseDateTime(java.lang.String)"><code>ISODateTime.parseDateTime(String)</code></a>, 
+<a href="../../../org/webpki/json/JSONObjectWriter.html#setDateTime(java.lang.String, java.util.Date, boolean)"><code>JSONObjectWriter.setDateTime(String, Date, boolean)</code></a></dd></dl>
 </li>
 </ul>
 <a name="getDouble(java.lang.String)">
@@ -509,8 +670,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>getDouble</h4>
 <pre>public&nbsp;double&nbsp;getDouble(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
                  throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<div class="block">Read a JSON double property.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Java <code>double</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/json/JSONObjectWriter.html#setDouble(java.lang.String, double)"><code>JSONObjectWriter.setDouble(String, double)</code></a></dd></dl>
 </li>
 </ul>
 <a name="getEncryptionObject()">
@@ -521,8 +685,14 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>getEncryptionObject</h4>
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONDecryptionDecoder.html" title="class in org.webpki.json">JSONDecryptionDecoder</a>&nbsp;getEncryptionObject()
                                           throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<div class="block">Read an object in
+ <a href="https://cyberphone.github.io/doc/security/jef.html" target="_blank">JEF</a>
+ format.<p>
+ Note: this method assumes that the current object only holds a JEF structure.</p></div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>An object which can be used to retrieve the original (unencrypted) data</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/json/JSONObjectWriter.html#createEncryptionObject(byte[], org.webpki.json.encryption.DataEncryptionAlgorithms, java.security.PublicKey, org.webpki.json.encryption.KeyEncryptionAlgorithms)"><code>JSONObjectWriter.createEncryptionObject(byte[],DataEncryptionAlgorithms,PublicKey,KeyEncryptionAlgorithms)</code></a>, 
+<a href="../../../org/webpki/json/JSONObjectWriter.html#createEncryptionObject(byte[], org.webpki.json.encryption.DataEncryptionAlgorithms, java.lang.String, byte[])"><code>JSONObjectWriter.createEncryptionObject(byte[],DataEncryptionAlgorithms,String,byte[])</code></a></dd></dl>
 </li>
 </ul>
 <a name="getIfNULL(java.lang.String)">
@@ -533,8 +703,12 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>getIfNULL</h4>
 <pre>public&nbsp;boolean&nbsp;getIfNULL(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
                   throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<div class="block">Conditionally read a JSON <code>null</code> property.<br>
+ Note: Only if the property contains a <code>null</code> the property is marked as "read".</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> if <code>null</code> was found, else <code>false</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/json/JSONObjectReader.html#checkForUnread()"><code>checkForUnread()</code></a></dd></dl>
 </li>
 </ul>
 <a name="getInt(java.lang.String)">
@@ -545,8 +719,12 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>getInt</h4>
 <pre>public&nbsp;int&nbsp;getInt(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
            throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<div class="block">Read a JSON integer property.
+ This method only accepts true integer values.  I.e. 10.4 would throw an exception.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Java <code>int</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/json/JSONObjectWriter.html#setInt(java.lang.String, int)"><code>JSONObjectWriter.setInt(String, int)</code></a></dd></dl>
 </li>
 </ul>
 <a name="getInt53(java.lang.String)">
@@ -557,8 +735,13 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>getInt53</h4>
 <pre>public&nbsp;long&nbsp;getInt53(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
               throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<div class="block">Read a JSON long integer property.
+ This method only accepts true integer values.  I.e. 10.4 would throw an exception.
+ Note: Only 53 bits of precision is available</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Java <code>long</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/json/JSONObjectWriter.html#setInt53(java.lang.String, long)"><code>JSONObjectWriter.setInt53(String, long)</code></a></dd></dl>
 </li>
 </ul>
 <a name="getJSONArrayReader()">
@@ -568,6 +751,10 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <li class="blockList">
 <h4>getJSONArrayReader</h4>
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONArrayReader.html" title="class in org.webpki.json">JSONArrayReader</a>&nbsp;getJSONArrayReader()</pre>
+<div class="block">Get root array reader.<br>
+ If the outermost part of the JSON structure is an array, this method <b>must</b> be
+ called <i>immediately after parsing</i> in order to process the structure.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Array reader</dd></dl>
 </li>
 </ul>
 <a name="getKeyPairFromJwk()">
@@ -578,7 +765,10 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>getKeyPairFromJwk</h4>
 <pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/security/KeyPair.html?is-external=true" title="class or interface in java.security">KeyPair</a>&nbsp;getKeyPairFromJwk()
                           throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
+<div class="block">Read a public and private key in a <a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank">JWK</a>.<p>
+ Note: this method assumes that the current object only holds a JWK key structure.</p></div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Java <code>KeyPair</code></dd>
+<dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -590,7 +780,10 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>getObject</h4>
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a>&nbsp;getObject(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
                            throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
+<div class="block">Read a JSON object property.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Object reader</dd>
+<dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -601,6 +794,8 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <li class="blockList">
 <h4>getProperties</h4>
 <pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;getProperties()</pre>
+<div class="block">Get JSON properties.<br></div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>All properties of the current object</dd></dl>
 </li>
 </ul>
 <a name="getPropertyType(java.lang.String)">
@@ -611,8 +806,12 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>getPropertyType</h4>
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONTypes.html" title="enum in org.webpki.json">JSONTypes</a>&nbsp;getPropertyType(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
                           throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<div class="block">Get the native JSON type of a property.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd>
+<dt><span class="strong">Returns:</span></dt><dd>JSON type</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/json/JSONTypes.html" title="enum in org.webpki.json"><code>JSONTypes</code></a>, 
+<a href="../../../org/webpki/json/JSONObjectReader.html#hasProperty(java.lang.String)"><code>hasProperty(String)</code></a></dd></dl>
 </li>
 </ul>
 <a name="getPublicKey()">
@@ -623,8 +822,13 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>getPublicKey</h4>
 <pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;getPublicKey()
                        throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<div class="block">Read and decode a public key in
+ <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
+ format.
+ This method is equivalent to <code>getPublicKey(AlgorithmPreferences.JOSE_ACCEPT_PREFER)</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Java <code>PublicKey</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/json/JSONObjectWriter.html#setPublicKey(java.security.PublicKey)"><code>JSONObjectWriter.setPublicKey(PublicKey)</code></a></dd></dl>
 </li>
 </ul>
 <a name="getPublicKey(org.webpki.crypto.AlgorithmPreferences)">
@@ -635,8 +839,13 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>getPublicKey</h4>
 <pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;getPublicKey(<a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences)
                        throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<div class="block">Read and decode a public key in
+ <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
+ format.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>algorithmPreferences</code> - JOSE or SKS notation expected</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Java <code>PublicKey</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/json/JSONObjectWriter.html#setPublicKey(java.security.PublicKey)"><code>JSONObjectWriter.setPublicKey(PublicKey)</code></a></dd></dl>
 </li>
 </ul>
 <a name="getPublicKeyFromJwk()">
@@ -647,7 +856,10 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>getPublicKeyFromJwk</h4>
 <pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;getPublicKeyFromJwk()
                               throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
+<div class="block">Read a public key in a <a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank">JWK</a>.<p>
+ Note: this method assumes that the current object only holds a JWK public key structure.</p></div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Java <code>PublicKey</code></dd>
+<dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -659,8 +871,13 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>getSignature</h4>
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a>&nbsp;getSignature()
                                   throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<div class="block">Read and decode a
+ <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
+ <code>"signature"</code> object.
+ This method is equivalent to <code>getSignature(AlgorithmPreferences.JOSE_ACCEPT_PREFER)</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>An object which can be used to verify keys etc.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/json/JSONObjectWriter.html#setSignature(org.webpki.json.JSONSigner)"><code>JSONObjectWriter.setSignature(JSONSigner)</code></a></dd></dl>
 </li>
 </ul>
 <a name="getSignature(org.webpki.crypto.AlgorithmPreferences)">
@@ -671,10 +888,12 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>getSignature</h4>
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a>&nbsp;getSignature(<a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences)
                                   throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Read and decode JCS signature object from the current JSON object.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd>An object which can be used to verify keys etc.</dd>
+<div class="block">Read and decode a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
+ <code>"signature"</code> object.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>algorithmPreferences</code> - JOSE or SKS notation expected</dd>
+<dt><span class="strong">Returns:</span></dt><dd>An object which can be used to verify keys etc.</dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - In case there is something wrong with the signature</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/json/JSONObjectWriter.html#setSignature(org.webpki.json.JSONSigner)"><code>JSONObjectWriter.setSignature(JSONSigner)</code></a></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/json/JSONObjectWriter.html#setSignature(org.webpki.json.JSONSigner)"><code>JSONObjectWriter.setSignature(JSONSigner)</code></a></dd></dl>
 </li>
 </ul>
 <a name="getString(java.lang.String)">
@@ -685,8 +904,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>getString</h4>
 <pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getString(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
                  throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<div class="block">Read a JSON string property.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Java <code>String</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/json/JSONObjectWriter.html#setString(java.lang.String, java.lang.String)"><code>JSONObjectWriter.setString(String, String)</code></a></dd></dl>
 </li>
 </ul>
 <a name="getStringArray(java.lang.String)">
@@ -697,7 +919,10 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>getStringArray</h4>
 <pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;getStringArray(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
                         throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
+<div class="block">Read an array of JSON strings.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Array of <code>String</code></dd>
+<dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -709,7 +934,10 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>getStringArrayConditional</h4>
 <pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;getStringArrayConditional(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
                                    throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
+<div class="block">Conditionally read an array of JSON strings.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Array of <code>String</code> or <code>null</code> if property is not present</dd>
+<dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -721,7 +949,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>getStringConditional</h4>
 <pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getStringConditional(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
                             throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
+<div class="block">Conditionally read a JSON string property.<br>
+ Note: This method is equivalent to <code>getStringConditional(name, null)</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The <code>String</code> if available else <code>null</code></dd>
+<dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -732,9 +964,12 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <li class="blockList">
 <h4>getStringConditional</h4>
 <pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getStringConditional(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                          <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;default_value)
+                          <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;defaultValue)
                             throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
+<div class="block">Conditionally read a JSON string property.<br></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd><dd><code>defaultValue</code> - Default value including possibly <code>null</code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>The <code>String</code> if available else <code>defaultValue</code></dd>
+<dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -745,6 +980,9 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <li class="blockList">
 <h4>hasProperty</h4>
 <pre>public&nbsp;boolean&nbsp;hasProperty(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
+<div class="block">Test if a property is present.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd>
+<dt><span class="strong">Returns:</span></dt><dd><code>true</code> if object is present, else <code>false</code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/json/JSONObjectReader.html#getPropertyType(java.lang.String)"><code>getPropertyType(String)</code></a></dd></dl>
 </li>
 </ul>
 <a name="removeProperty(java.lang.String)">
@@ -755,7 +993,10 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>removeProperty</h4>
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a>&nbsp;removeProperty(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
                                 throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
+<div class="block">Remove a property.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Current instance of <a href="../../../org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json"><code>JSONObjectReader</code></a></dd>
+<dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -767,8 +1008,16 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>scanAway</h4>
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a>&nbsp;scanAway(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
                           throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<div class="block">Scan a property.
+ This method scans a property regardless of its type and it useful for dealing with
+ data where the type is unknown.
+ It also marks the property as "read" including possible child objects and arrays.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Current instance of <a href="../../../org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json"><code>JSONObjectReader</code></a></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/json/JSONObjectReader.html#checkForUnread()"><code>checkForUnread()</code></a>, 
+<a href="../../../org/webpki/json/JSONObjectReader.html#getPropertyType(java.lang.String)"><code>getPropertyType(String)</code></a>, 
+<a href="../../../org/webpki/json/JSONObjectReader.html#getProperties()"><code>getProperties()</code></a></dd></dl>
 </li>
 </ul>
 <a name="serializeToBytes(org.webpki.json.JSONOutputFormats)">
@@ -779,7 +1028,10 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>serializeToBytes</h4>
 <pre>public&nbsp;byte[]&nbsp;serializeToBytes(<a href="../../../org/webpki/json/JSONOutputFormats.html" title="enum in org.webpki.json">JSONOutputFormats</a>&nbsp;outputFormat)
                         throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
+<div class="block">Serialize object reader to a Java <code>byte[]</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>outputFormat</code> - Any JSONOutputFormats</dd>
+<dt><span class="strong">Returns:</span></dt><dd>JSON string data</dd>
+<dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -791,7 +1043,10 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>serializeToString</h4>
 <pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;serializeToString(<a href="../../../org/webpki/json/JSONOutputFormats.html" title="enum in org.webpki.json">JSONOutputFormats</a>&nbsp;outputFormat)
                          throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
+<div class="block">Serialize object reader to a Java <code>String</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>outputFormat</code> - Any JSONOutputFormats</dd>
+<dt><span class="strong">Returns:</span></dt><dd>JSON string data</dd>
+<dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -802,6 +1057,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <li class="blockList">
 <h4>toString</h4>
 <pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;toString()</pre>
+<div class="block">Pretty print JSON of object reader.</div>
 <dl>
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a></code>&nbsp;in class&nbsp;<code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
