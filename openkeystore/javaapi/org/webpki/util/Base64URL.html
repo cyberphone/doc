@@ -214,9 +214,9 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <pre>public static&nbsp;byte[]&nbsp;decode(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;base64url)
                      throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Converts a base64url encoded String to a byte array.<p>
- For every 4 base64 characters you'll get 3 binary bytes.</p></div>
+ For every 4 base64url characters you'll get 3 binary bytes.</p></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>base64url</code> - Encoded data</dd>
-<dt><span class="strong">Returns:</span></dt><dd>dDcoded data as a byte array</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Decoded data as a byte array</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If input data isn't valid base64url data</dd></dl>
 </li>
@@ -230,7 +230,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <pre>public static&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;encode(byte[]&nbsp;byteArray)
                      throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Converts a byte array to a base64url encoded String.<p>
- For every 3 binary bytes, you'll get 4 base64 characters.</p></div>
+ For every 3 binary bytes, you'll get 4 base64url characters.</p></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>byteArray</code> - Binary data</dd>
 <dt><span class="strong">Returns:</span></dt><dd>Encoded data as a String</dd>
 <dt><span class="strong">Throws:</span></dt>
