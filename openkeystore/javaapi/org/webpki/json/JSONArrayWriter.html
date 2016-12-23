@@ -101,8 +101,13 @@
 <pre>public class <span class="strong">JSONArrayWriter</span>
 extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
 implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a></pre>
-<div class="block">Creates JSON arrays.</div>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../serialized-form.html#org.webpki.json.JSONArrayWriter">Serialized Form</a></dd></dl>
+<div class="block">Writes JSON arrays.<p>
+ Data types are dealt with as in <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a>.</p></div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/json/JSONObjectWriter.html#setArray(java.lang.String)"><code>JSONObjectWriter.setArray(String)</code></a>, 
+<a href="../../../org/webpki/json/JSONArrayWriter.html#setArray()"><code>setArray()</code></a>, 
+<a href="../../../org/webpki/json/JSONArrayWriter.html#setArray(org.webpki.json.JSONArrayWriter)"><code>setArray(JSONArrayWriter)</code></a>, 
+<a href="../../../org/webpki/json/JSONArrayWriter.html#JSONArrayWriter()"><code>JSONArrayWriter()</code></a>, 
+<a href="../../../serialized-form.html#org.webpki.json.JSONArrayWriter">Serialized Form</a></dd></dl>
 </li>
 </ul>
 </div>
@@ -121,7 +126,9 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../org/webpki/json/JSONArrayWriter.html#JSONArrayWriter()">JSONArrayWriter</a></strong>()</code>&nbsp;</td>
+<td class="colOne"><code><strong><a href="../../../org/webpki/json/JSONArrayWriter.html#JSONArrayWriter()">JSONArrayWriter</a></strong>()</code>
+<div class="block">For creating a JSON array.</div>
+</td>
 </tr>
 </table>
 </li>
@@ -148,11 +155,15 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONArrayWriter.html#setArray()">setArray</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONArrayWriter.html#setArray()">setArray</a></strong>()</code>
+<div class="block">Create nested array.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONArrayWriter.html#setArray(org.webpki.json.JSONArrayWriter)">setArray</a></strong>(<a href="../../../org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a>&nbsp;writer)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONArrayWriter.html#setArray(org.webpki.json.JSONArrayWriter)">setArray</a></strong>(<a href="../../../org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a>&nbsp;writer)</code>
+<div class="block">Create nested array.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a></code></td>
@@ -245,6 +256,12 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <li class="blockList">
 <h4>JSONArrayWriter</h4>
 <pre>public&nbsp;JSONArrayWriter()</pre>
+<div class="block">For creating a JSON array.<p>
+ Note that this constructor can be used for creating a JSON structure where the
+ outermost part in an array as well as for array sub-objects.</p></div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/json/JSONObjectReader.html#getJSONArrayReader()"><code>JSONObjectReader.getJSONArrayReader()</code></a>, 
+<a href="../../../org/webpki/json/JSONObjectWriter.html#setArray(java.lang.String, org.webpki.json.JSONArrayWriter)"><code>JSONObjectWriter.setArray(String, JSONArrayWriter)</code></a>, 
+<a href="../../../org/webpki/json/JSONArrayWriter.html#setArray(org.webpki.json.JSONArrayWriter)"><code>setArray(JSONArrayWriter)</code></a></dd></dl>
 </li>
 </ul>
 </li>
@@ -287,7 +304,10 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>setArray</h4>
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a>&nbsp;setArray()
                          throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
+<div class="block">Create nested array.<p>
+ This method creates a new array writer at the current position.</p></div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Array writer</dd>
+<dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -299,7 +319,10 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>setArray</h4>
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a>&nbsp;setArray(<a href="../../../org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a>&nbsp;writer)
                          throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
+<div class="block">Create nested array.<p>
+ This method inserts an existing array writer at the current position.</p></div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Array writer</dd>
+<dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
