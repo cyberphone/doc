@@ -4,7 +4,6 @@ org.webpki.ca
 org.webpki.crypto
 org.webpki.json
 org.webpki.json.encryption
-org.webpki.json.v8dtoa
 org.webpki.keygen2
 org.webpki.net
 org.webpki.pdf
@@ -15,10 +14,6 @@ org.webpki.tools
 org.webpki.util
 org.webpki.webauth
 org.webpki.webutil
-org.webpki.webutil.certview
-org.webpki.webutil.locale
-org.webpki.webutil.xmlview
 org.webpki.xml
 org.webpki.xmldsig
-org.webpki.xmldsig.c14n
 org.webpki.xmlenc
