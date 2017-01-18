@@ -283,8 +283,8 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectWriter.html#setDateTime(java.lang.String, java.util.Date, boolean)">setDateTime</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-           <a href="http://download.oracle.com/javase/7/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</a>&nbsp;dateTime,
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONObjectWriter.html#setDateTime(java.lang.String, java.util.GregorianCalendar, boolean)">setDateTime</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+           <a href="http://download.oracle.com/javase/7/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;dateTime,
            boolean&nbsp;forceUtc)</code>
 <div class="block">Set an ISO formatted <code>dateTime</code> property.</div>
 </td>
@@ -759,14 +759,14 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
-<a name="setDateTime(java.lang.String, java.util.Date, boolean)">
+<a name="setDateTime(java.lang.String, java.util.GregorianCalendar, boolean)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setDateTime</h4>
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;setDateTime(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                           <a href="http://download.oracle.com/javase/7/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</a>&nbsp;dateTime,
+                           <a href="http://download.oracle.com/javase/7/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;dateTime,
                            boolean&nbsp;forceUtc)
                              throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Set an ISO formatted <code>dateTime</code> property.<p>
@@ -778,7 +778,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - Property</dd><dd><code>dateTime</code> - Date/time value</dd><dd><code>forceUtc</code> - <code>true</code> for UTC, <code>false</code> for local time</dd>
 <dt><span class="strong">Returns:</span></dt><dd>Current instance of <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a></dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/util/ISODateTime.html#formatDateTime(java.util.Date, boolean)"><code>ISODateTime.formatDateTime(Date, boolean)</code></a></dd></dl>
+<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/util/ISODateTime.html#formatDateTime(java.util.GregorianCalendar, boolean)"><code>ISODateTime.formatDateTime(GregorianCalendar, boolean)</code></a></dd></dl>
 </li>
 </ul>
 <a name="setDouble(java.lang.String, double)">

@@ -96,7 +96,7 @@
 <br>
 <pre>public class <span class="strong">JSONParser</span>
 extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
-<div class="block">Parses a JSON object given as a string into a DOM-like tree.</div>
+<div class="block">Parses JSON string/byte array data.</div>
 </li>
 </ul>
 </div>
@@ -117,11 +117,15 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONParser.html#parse(byte[])">parse</a></strong>(byte[]&nbsp;jsonUtf8)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONParser.html#parse(byte[])">parse</a></strong>(byte[]&nbsp;jsonBytes)</code>
+<div class="block">Parse JSON byte array data.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONParser.html#parse(java.lang.String)">parse</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;jsonString)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/json/JSONParser.html#parse(java.lang.String)">parse</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;jsonString)</code>
+<div class="block">Parse JSON string data.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -151,9 +155,12 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <ul class="blockList">
 <li class="blockList">
 <h4>parse</h4>
-<pre>public static&nbsp;<a href="../../../org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a>&nbsp;parse(byte[]&nbsp;jsonUtf8)
+<pre>public static&nbsp;<a href="../../../org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a>&nbsp;parse(byte[]&nbsp;jsonBytes)
                               throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
+<div class="block">Parse JSON byte array data.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>jsonBytes</code> - The data to be parsed in UTF-8</dd>
+<dt><span class="strong">Returns:</span></dt><dd>JSONObjectReader</dd>
+<dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
@@ -165,7 +172,10 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <h4>parse</h4>
 <pre>public static&nbsp;<a href="../../../org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a>&nbsp;parse(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;jsonString)
                               throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
+<div class="block">Parse JSON string data.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>jsonString</code> - The data to be parsed in UTF-8</dd>
+<dt><span class="strong">Returns:</span></dt><dd>JSONObjectReader</dd>
+<dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>

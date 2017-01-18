@@ -119,11 +119,11 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/ca/CertSpec.html#addCRLDistributionPointURI(java.lang.String)">addCRLDistributionPointURI(String)</a></span> - Method in class org.webpki.ca.<a href="./org/webpki/ca/CertSpec.html" title="class in org.webpki.ca">CertSpec</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/webpki/xml/DOMWriterHelper.html#addDate(java.lang.String, java.util.Date)">addDate(String, Date)</a></span> - Method in class org.webpki.xml.<a href="./org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a></dt>
+<dt><span class="strong"><a href="./org/webpki/xml/DOMWriterHelper.html#addDate(java.lang.String, java.util.GregorianCalendar)">addDate(String, GregorianCalendar)</a></span> - Method in class org.webpki.xml.<a href="./org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a></dt>
 <dd>
 <div class="block">Add a text element to the current element.</div>
 </dd>
-<dt><span class="strong"><a href="./org/webpki/xml/DOMWriterHelper.html#addDateTime(java.lang.String, java.util.Date)">addDateTime(String, Date)</a></span> - Method in class org.webpki.xml.<a href="./org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a></dt>
+<dt><span class="strong"><a href="./org/webpki/xml/DOMWriterHelper.html#addDateTime(java.lang.String, java.util.GregorianCalendar)">addDateTime(String, GregorianCalendar)</a></span> - Method in class org.webpki.xml.<a href="./org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a></dt>
 <dd>
 <div class="block">Add a text element to the current element.</div>
 </dd>
@@ -460,7 +460,7 @@
 <dd>&nbsp;</dd>
 <dt><a href="./org/webpki/webauth/AuthenticationResponseEncoder.html" title="class in org.webpki.webauth"><span class="strong">AuthenticationResponseEncoder</span></a> - Class in <a href="./org/webpki/webauth/package-summary.html">org.webpki.webauth</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/webpki/webauth/AuthenticationResponseEncoder.html#AuthenticationResponseEncoder(org.webpki.json.JSONX509Signer, org.webpki.webauth.AuthenticationRequestDecoder, java.lang.String, java.util.Date, java.security.cert.X509Certificate)">AuthenticationResponseEncoder(JSONX509Signer, AuthenticationRequestDecoder, String, Date, X509Certificate)</a></span> - Constructor for class org.webpki.webauth.<a href="./org/webpki/webauth/AuthenticationResponseEncoder.html" title="class in org.webpki.webauth">AuthenticationResponseEncoder</a></dt>
+<dt><span class="strong"><a href="./org/webpki/webauth/AuthenticationResponseEncoder.html#AuthenticationResponseEncoder(org.webpki.json.JSONX509Signer, org.webpki.webauth.AuthenticationRequestDecoder, java.lang.String, java.util.GregorianCalendar, java.security.cert.X509Certificate)">AuthenticationResponseEncoder(JSONX509Signer, AuthenticationRequestDecoder, String, GregorianCalendar, X509Certificate)</a></span> - Constructor for class org.webpki.webauth.<a href="./org/webpki/webauth/AuthenticationResponseEncoder.html" title="class in org.webpki.webauth">AuthenticationResponseEncoder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/webpki/crypto/AuthorityInfoAccessCAIssuersCache.html" title="class in org.webpki.crypto"><span class="strong">AuthorityInfoAccessCAIssuersCache</span></a> - Class in <a href="./org/webpki/crypto/package-summary.html">org.webpki.crypto</a></dt>
 <dd>&nbsp;</dd>
@@ -1241,9 +1241,9 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/keygen2/KeyGen2Constants.html#FORMAT_JSON">FORMAT_JSON</a></span> - Static variable in interface org.webpki.keygen2.<a href="./org/webpki/keygen2/KeyGen2Constants.html" title="interface in org.webpki.keygen2">KeyGen2Constants</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/webpki/xml/DOMWriterHelper.html#formatDate(java.util.Date)">formatDate(Date)</a></span> - Static method in class org.webpki.xml.<a href="./org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a></dt>
+<dt><span class="strong"><a href="./org/webpki/xml/DOMWriterHelper.html#formatDate(java.util.GregorianCalendar)">formatDate(GregorianCalendar)</a></span> - Static method in class org.webpki.xml.<a href="./org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/webpki/util/ISODateTime.html#formatDateTime(java.util.Date, boolean)">formatDateTime(Date, boolean)</a></span> - Static method in class org.webpki.util.<a href="./org/webpki/util/ISODateTime.html" title="class in org.webpki.util">ISODateTime</a></dt>
+<dt><span class="strong"><a href="./org/webpki/util/ISODateTime.html#formatDateTime(java.util.GregorianCalendar, boolean)">formatDateTime(GregorianCalendar, boolean)</a></span> - Static method in class org.webpki.util.<a href="./org/webpki/util/ISODateTime.html" title="class in org.webpki.util">ISODateTime</a></dt>
 <dd>
 <div class="block">Create an ISO formatted dateTime string.</div>
 </dd>
@@ -3228,7 +3228,7 @@
 </dd>
 <dt><a href="./org/webpki/json/JSONParser.html" title="class in org.webpki.json"><span class="strong">JSONParser</span></a> - Class in <a href="./org/webpki/json/package-summary.html">org.webpki.json</a></dt>
 <dd>
-<div class="block">Parses a JSON object given as a string into a DOM-like tree.</div>
+<div class="block">Parses JSON string/byte array data.</div>
 </dd>
 <dt><a href="./org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json"><span class="strong">JSONSignatureDecoder</span></a> - Class in <a href="./org/webpki/json/package-summary.html">org.webpki.json</a></dt>
 <dd>
@@ -3804,9 +3804,13 @@
 <dt><span class="strong"><a href="./org/webpki/json/JSONDecoderCache.html#parse(byte[])">parse(byte[])</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONDecoderCache.html" title="class in org.webpki.json">JSONDecoderCache</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONParser.html#parse(java.lang.String)">parse(String)</a></span> - Static method in class org.webpki.json.<a href="./org/webpki/json/JSONParser.html" title="class in org.webpki.json">JSONParser</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Parse JSON string data.</div>
+</dd>
 <dt><span class="strong"><a href="./org/webpki/json/JSONParser.html#parse(byte[])">parse(byte[])</a></span> - Static method in class org.webpki.json.<a href="./org/webpki/json/JSONParser.html" title="class in org.webpki.json">JSONParser</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Parse JSON byte array data.</div>
+</dd>
 <dt><span class="strong"><a href="./org/webpki/util/HTMLParser.html#parse(java.lang.String, org.webpki.util.HTMLParserURLRewriter)">parse(String, HTMLParserURLRewriter)</a></span> - Static method in class org.webpki.util.<a href="./org/webpki/util/HTMLParser.html" title="class in org.webpki.util">HTMLParser</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/xml/XMLSchemaCache.html#parse(byte[])">parse(byte[])</a></span> - Method in class org.webpki.xml.<a href="./org/webpki/xml/XMLSchemaCache.html" title="class in org.webpki.xml">XMLSchemaCache</a></dt>
@@ -3989,7 +3993,7 @@
 <dd>&nbsp;</dd>
 <dt><a href="./org/webpki/keygen2/ProvisioningInitializationResponseEncoder.html" title="class in org.webpki.keygen2"><span class="strong">ProvisioningInitializationResponseEncoder</span></a> - Class in <a href="./org/webpki/keygen2/package-summary.html">org.webpki.keygen2</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/webpki/keygen2/ProvisioningInitializationResponseEncoder.html#ProvisioningInitializationResponseEncoder(org.webpki.keygen2.ProvisioningInitializationRequestDecoder, java.security.interfaces.ECPublicKey, java.lang.String, java.util.Date, byte[], java.security.cert.X509Certificate[])">ProvisioningInitializationResponseEncoder(ProvisioningInitializationRequestDecoder, ECPublicKey, String, Date, byte[], X509Certificate[])</a></span> - Constructor for class org.webpki.keygen2.<a href="./org/webpki/keygen2/ProvisioningInitializationResponseEncoder.html" title="class in org.webpki.keygen2">ProvisioningInitializationResponseEncoder</a></dt>
+<dt><span class="strong"><a href="./org/webpki/keygen2/ProvisioningInitializationResponseEncoder.html#ProvisioningInitializationResponseEncoder(org.webpki.keygen2.ProvisioningInitializationRequestDecoder, java.security.interfaces.ECPublicKey, java.lang.String, java.util.GregorianCalendar, byte[], java.security.cert.X509Certificate[])">ProvisioningInitializationResponseEncoder(ProvisioningInitializationRequestDecoder, ECPublicKey, String, GregorianCalendar, byte[], X509Certificate[])</a></span> - Constructor for class org.webpki.keygen2.<a href="./org/webpki/keygen2/ProvisioningInitializationResponseEncoder.html" title="class in org.webpki.keygen2">ProvisioningInitializationResponseEncoder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/webpki/sks/ProvisioningSession.html" title="class in org.webpki.sks"><span class="strong">ProvisioningSession</span></a> - Class in <a href="./org/webpki/sks/package-summary.html">org.webpki.sks</a></dt>
 <dd>&nbsp;</dd>
@@ -4369,13 +4373,13 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/keygen2/ServerState.Key.html#setClonedKeyProtection(java.lang.String, java.lang.String, java.security.cert.X509Certificate, java.security.PublicKey)">setClonedKeyProtection(String, String, X509Certificate, PublicKey)</a></span> - Method in class org.webpki.keygen2.<a href="./org/webpki/keygen2/ServerState.Key.html" title="class in org.webpki.keygen2">ServerState.Key</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/webpki/json/JSONArrayWriter.html#setDateTime(java.util.Date, boolean)">setDateTime(Date, boolean)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a></dt>
+<dt><span class="strong"><a href="./org/webpki/json/JSONArrayWriter.html#setDateTime(java.util.GregorianCalendar, boolean)">setDateTime(GregorianCalendar, boolean)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#setDateTime(java.lang.String, java.util.Date, boolean)">setDateTime(String, Date, boolean)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
+<dt><span class="strong"><a href="./org/webpki/json/JSONObjectWriter.html#setDateTime(java.lang.String, java.util.GregorianCalendar, boolean)">setDateTime(String, GregorianCalendar, boolean)</a></span> - Method in class org.webpki.json.<a href="./org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
 <dd>
 <div class="block">Set an ISO formatted <code>dateTime</code> property.</div>
 </dd>
-<dt><span class="strong"><a href="./org/webpki/xml/DOMWriterHelper.html#setDateTimeAttribute(java.lang.String, java.util.Date)">setDateTimeAttribute(String, Date)</a></span> - Method in class org.webpki.xml.<a href="./org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a></dt>
+<dt><span class="strong"><a href="./org/webpki/xml/DOMWriterHelper.html#setDateTimeAttribute(java.lang.String, java.util.GregorianCalendar)">setDateTimeAttribute(String, GregorianCalendar)</a></span> - Method in class org.webpki.xml.<a href="./org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a></dt>
 <dd>
 <div class="block">Set an attribute of the current element to a date.</div>
 </dd>
@@ -4478,9 +4482,9 @@
 </dd>
 <dt><span class="strong"><a href="./org/webpki/net/HTTPSWrapper.html#setInteractiveMode(boolean)">setInteractiveMode(boolean)</a></span> - Method in class org.webpki.net.<a href="./org/webpki/net/HTTPSWrapper.html" title="class in org.webpki.net">HTTPSWrapper</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/webpki/keygen2/CredentialDiscoveryRequestEncoder.LookupDescriptor.html#setIssuedAfter(java.util.Date)">setIssuedAfter(Date)</a></span> - Method in class org.webpki.keygen2.<a href="./org/webpki/keygen2/CredentialDiscoveryRequestEncoder.LookupDescriptor.html" title="class in org.webpki.keygen2">CredentialDiscoveryRequestEncoder.LookupDescriptor</a></dt>
+<dt><span class="strong"><a href="./org/webpki/keygen2/CredentialDiscoveryRequestEncoder.LookupDescriptor.html#setIssuedAfter(java.util.GregorianCalendar)">setIssuedAfter(GregorianCalendar)</a></span> - Method in class org.webpki.keygen2.<a href="./org/webpki/keygen2/CredentialDiscoveryRequestEncoder.LookupDescriptor.html" title="class in org.webpki.keygen2">CredentialDiscoveryRequestEncoder.LookupDescriptor</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/webpki/keygen2/CredentialDiscoveryRequestEncoder.LookupDescriptor.html#setIssuedBefore(java.util.Date)">setIssuedBefore(Date)</a></span> - Method in class org.webpki.keygen2.<a href="./org/webpki/keygen2/CredentialDiscoveryRequestEncoder.LookupDescriptor.html" title="class in org.webpki.keygen2">CredentialDiscoveryRequestEncoder.LookupDescriptor</a></dt>
+<dt><span class="strong"><a href="./org/webpki/keygen2/CredentialDiscoveryRequestEncoder.LookupDescriptor.html#setIssuedBefore(java.util.GregorianCalendar)">setIssuedBefore(GregorianCalendar)</a></span> - Method in class org.webpki.keygen2.<a href="./org/webpki/keygen2/CredentialDiscoveryRequestEncoder.LookupDescriptor.html" title="class in org.webpki.keygen2">CredentialDiscoveryRequestEncoder.LookupDescriptor</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/crypto/CertificateFilter.html#setIssuer(javax.security.auth.x500.X500Principal)">setIssuer(X500Principal)</a></span> - Method in class org.webpki.crypto.<a href="./org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></dt>
 <dd>&nbsp;</dd>
@@ -4638,9 +4642,9 @@
 </dd>
 <dt><span class="strong"><a href="./org/webpki/keygen2/ServerState.Key.html#setServerSeed(byte[])">setServerSeed(byte[])</a></span> - Method in class org.webpki.keygen2.<a href="./org/webpki/keygen2/ServerState.Key.html" title="class in org.webpki.keygen2">ServerState.Key</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/webpki/keygen2/ProvisioningInitializationRequestEncoder.html#setServerTime(java.util.Date)">setServerTime(Date)</a></span> - Method in class org.webpki.keygen2.<a href="./org/webpki/keygen2/ProvisioningInitializationRequestEncoder.html" title="class in org.webpki.keygen2">ProvisioningInitializationRequestEncoder</a></dt>
+<dt><span class="strong"><a href="./org/webpki/keygen2/ProvisioningInitializationRequestEncoder.html#setServerTime(java.util.GregorianCalendar)">setServerTime(GregorianCalendar)</a></span> - Method in class org.webpki.keygen2.<a href="./org/webpki/keygen2/ProvisioningInitializationRequestEncoder.html" title="class in org.webpki.keygen2">ProvisioningInitializationRequestEncoder</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/webpki/webauth/AuthenticationRequestEncoder.html#setServerTime(java.util.Date)">setServerTime(Date)</a></span> - Method in class org.webpki.webauth.<a href="./org/webpki/webauth/AuthenticationRequestEncoder.html" title="class in org.webpki.webauth">AuthenticationRequestEncoder</a></dt>
+<dt><span class="strong"><a href="./org/webpki/webauth/AuthenticationRequestEncoder.html#setServerTime(java.util.GregorianCalendar)">setServerTime(GregorianCalendar)</a></span> - Method in class org.webpki.webauth.<a href="./org/webpki/webauth/AuthenticationRequestEncoder.html" title="class in org.webpki.webauth">AuthenticationRequestEncoder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/webpki/keygen2/ServerState.html#setServiceSpecificObject(java.lang.String, java.lang.Object)">setServiceSpecificObject(String, Object)</a></span> - Method in class org.webpki.keygen2.<a href="./org/webpki/keygen2/ServerState.html" title="class in org.webpki.keygen2">ServerState</a></dt>
 <dd>&nbsp;</dd>

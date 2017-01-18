@@ -238,15 +238,15 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xml/DOMWriterHelper.html#addDate(java.lang.String, java.util.Date)">addDate</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-       <a href="http://download.oracle.com/javase/7/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</a>&nbsp;value)</code>
+<td class="colLast"><code><strong><a href="../../../org/webpki/xml/DOMWriterHelper.html#addDate(java.lang.String, java.util.GregorianCalendar)">addDate</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+       <a href="http://download.oracle.com/javase/7/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;value)</code>
 <div class="block">Add a text element to the current element.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xml/DOMWriterHelper.html#addDateTime(java.lang.String, java.util.Date)">addDateTime</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-           <a href="http://download.oracle.com/javase/7/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</a>&nbsp;value)</code>
+<td class="colLast"><code><strong><a href="../../../org/webpki/xml/DOMWriterHelper.html#addDateTime(java.lang.String, java.util.GregorianCalendar)">addDateTime</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+           <a href="http://download.oracle.com/javase/7/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;value)</code>
 <div class="block">Add a text element to the current element.</div>
 </td>
 </tr>
@@ -333,7 +333,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xml/DOMWriterHelper.html#formatDate(java.util.Date)">formatDate</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</a>&nbsp;t)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/webpki/xml/DOMWriterHelper.html#formatDate(java.util.GregorianCalendar)">formatDate</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;t)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
@@ -374,8 +374,8 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xml/DOMWriterHelper.html#setDateTimeAttribute(java.lang.String, java.util.Date)">setDateTimeAttribute</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                    <a href="http://download.oracle.com/javase/7/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</a>&nbsp;value)</code>
+<td class="colLast"><code><strong><a href="../../../org/webpki/xml/DOMWriterHelper.html#setDateTimeAttribute(java.lang.String, java.util.GregorianCalendar)">setDateTimeAttribute</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                    <a href="http://download.oracle.com/javase/7/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;value)</code>
 <div class="block">Set an attribute of the current element to a date.</div>
 </td>
 </tr>
@@ -548,14 +548,14 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
               boolean&nbsp;indent_flag)</pre>
 </li>
 </ul>
-<a name="addDate(java.lang.String, java.util.Date)">
+<a name="addDate(java.lang.String, java.util.GregorianCalendar)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>addDate</h4>
 <pre>public&nbsp;void&nbsp;addDate(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-           <a href="http://download.oracle.com/javase/7/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</a>&nbsp;value)</pre>
+           <a href="http://download.oracle.com/javase/7/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;value)</pre>
 <div class="block">Add a text element to the current element.
  <p>The text content of the new element will be the
  <code><a href="http://www.w3.org/TR/xmlschema-2/#date">date</a></code>
@@ -563,20 +563,20 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - The name of the new element.</dd><dd><code>value</code> - The value of the new element.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="#current">DOMWriterHelper cursor state</a></dd></dl>
 </li>
 </ul>
-<a name="addDateTime(java.lang.String, java.util.Date)">
+<a name="addDateTime(java.lang.String, java.util.GregorianCalendar)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>addDateTime</h4>
 <pre>public&nbsp;void&nbsp;addDateTime(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-               <a href="http://download.oracle.com/javase/7/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</a>&nbsp;value)</pre>
+               <a href="http://download.oracle.com/javase/7/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;value)</pre>
 <div class="block">Add a text element to the current element.
  <p>The text content of the new element will be the
  <code><a href="http://www.w3.org/TR/xmlschema-2/#dateTime">dateTime</a></code>
  encoding of <i>value</i>.
  <p>The time value will be rounded to the nearest second (the precision
- of the Java <a href="http://download.oracle.com/javase/7/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util"><code>Date</code></a> class is milliseconds).</div>
+ of the Java <a href="http://download.oracle.com/javase/7/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util"><code>GregorianCalendar</code></a> class is milliseconds).</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - The name of the new element.</dd><dd><code>value</code> - The value of the new element.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="#current">DOMWriterHelper cursor state</a></dd></dl>
 </li>
 </ul>
@@ -747,13 +747,13 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <pre>public&nbsp;void&nbsp;FixStartElement()</pre>
 </li>
 </ul>
-<a name="formatDate(java.util.Date)">
+<a name="formatDate(java.util.GregorianCalendar)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>formatDate</h4>
-<pre>public static&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;formatDate(<a href="http://download.oracle.com/javase/7/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</a>&nbsp;t)</pre>
+<pre>public static&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;formatDate(<a href="http://download.oracle.com/javase/7/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;t)</pre>
 </li>
 </ul>
 <a name="getParent()">
@@ -828,20 +828,20 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - The name of the attribute.</dd><dd><code>value</code> - The value of the attribute.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="#current">DOMWriterHelper cursor state</a></dd></dl>
 </li>
 </ul>
-<a name="setDateTimeAttribute(java.lang.String, java.util.Date)">
+<a name="setDateTimeAttribute(java.lang.String, java.util.GregorianCalendar)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setDateTimeAttribute</h4>
 <pre>public&nbsp;void&nbsp;setDateTimeAttribute(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                        <a href="http://download.oracle.com/javase/7/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</a>&nbsp;value)</pre>
+                        <a href="http://download.oracle.com/javase/7/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;value)</pre>
 <div class="block">Set an attribute of the current element to a date.
  <p>The text content of the attribute will be the
  <code><a href="http://www.w3.org/TR/xmlschema-2/#dateTime">dateTime</a></code>
  encoding of <i>value</i>.
  <p>The time value will be rounded to the nearest second (the precision
- of the Java <a href="http://download.oracle.com/javase/7/docs/api/java/util/Date.html?is-external=true" title="class or interface in java.util"><code>Date</code></a> class is milliseconds).</div>
+ of the Java <a href="http://download.oracle.com/javase/7/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util"><code>GregorianCalendar</code></a> class is milliseconds).</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - The name of the attribute.</dd><dd><code>value</code> - The value of the attribute.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="#current">DOMWriterHelper cursor state</a></dd></dl>
 </li>
 </ul>
