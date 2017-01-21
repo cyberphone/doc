@@ -1,8 +1,8 @@
-<!DOCTYPE html><html><head><title>REST (.In.Peace)</title><meta http-equiv=Content-Type content="text/html; charset=utf-8"><style type="text/css">
+﻿<!DOCTYPE html><html><head><title>REST (.In.Peace)</title><meta http-equiv=Content-Type content="text/html; charset=utf-8"><style type="text/css">
 body {font-size:10pt;color:#000000;font-family:verdana,arial;background-color:white;margin:10pt}
 code {font-size:11pt;font-family:'Courier New',Courier}
 pre {margin-left:30pt;font-size:11pt;font-family:'Courier New',Courier}
-div {width:800pt;margin-top:10pt}
+div {width:800pt;margin-top:15pt}
 div.header {width:800pt;margin-top:10pt;margin-bottom:5pt;font-weight:bold}
 div.new {width:800pt;margin-top:5pt}
 
@@ -19,46 +19,46 @@ made during my fairly long journey with Web (HTTP) based business systems.
 You don't have to agree with it at all :-)
 </div>
 <div>
-Since everybody in IT who haven't slept under a rock the last 10 years know, REST has become almost synonmous with
+Since everybody in IT who haven't slept under a rock the last 10 years know, REST has become almost synonymous with
 good Web API design (although most developers tend to refer to their designs as &quot;REST-ful&quot; to permit
 some freedom of the interpretation what REST actually is...).
 </div>
 <div class="new">
 In spite of that, I have for a <i>certain class of applications</i> which we can
 call &quot;Transaction Systems&quot;
-come to the conclusion that REST may not nessesarli be the most logical choice.
-The reasons are briefly described in the following sections.  Transaction systems (using my vocabolary NB),
+come to the conclusion that REST may not always be the most logical choice for Web APIs.
+The reasons are briefly described in the following sections.  Transaction systems (using my vocabulary NB),
 for example include B2B order/invoicing and bank-to-bank payments.  
 </div>
 <div>
 <div class="header">Web Services, SOAP, and XML are Obsolete!</div>
 Indeed, after more than 10 years with SOAP, XML and XML Schemas, I have 
 decided to never (by free will at least) work with this more.
-However, that's not equivakent with &quot;<i>Everything was wrong with Web Services</i>&quot; which
+However, that's not equivalent to &quot;<i>Everything was wrong with Web Services</i>&quot; which
 REST advocates often claim.
-You can safely drop SOAP, XML can be replaced by JSON, but the underlaying
-RPC-concept still has plenty of milage which I will get back to in the end of this paper.
+You can safely drop SOAP, XML can be replaced by JSON, but the underlying
+RPC-concept still has plenty of mileage which I will get back to in the end of this paper.
 </div>
 <div>
 <div class="header">REST - Stateless Operation</div>
 Stateless operation is great but transactions are typically not stateless so it is hard
 to see that REST has anything special to offer here.
-Excisting, non-REST transaction systems usually do not depend on Web server state either.
+Existing, non-REST transaction systems usually do not depend on Web server state either.
 </div>
 <div>
 <div class="header">REST - Asynchronous Operation</div>
-This is a more complex issue but if I understand the philosophy REST correctly,
-a long-winding transaction request should preferable not block until it is ready, but return HTTP&nbsp;201
-and a header holding a URI to a location where the result may be quirued for.
+This is a more complex issue but if I understand the REST philosophy correctly,
+a slowly processing transaction request should not block until it is ready, but rather return HTTP&nbsp;202
+and a header holding a URI to a location where the result may be queried for.
 </div>
 <div class="new">
-IMHO, this greatly complicates the design in both ends; The server must
+IMHO, this greatly complicates the design in both ends; the server must
 still continue with the processing (albeit in the background) including
 dealing with possible time-outs, and then when a result is ready
 move it to a handler for the previously calculated URI.
 <div class="new">
 For clients <i>that are not browsers</i>, but &quot;Business Systems&quot;, it gets worse;
-after sending the request, the client needs to start a process for quiring the result using
+after sending the request, the client needs to start a process for querying the result using
 the previously received URI,
 and finally pairing the result with the original request.
 There may of course be a time-out here as well.
@@ -67,11 +67,11 @@ There may of course be a time-out here as well.
 To me this looks pretty much like reinvented SMTP, using HTTP and Web servers.
 </div>
 <div class="new">
-Recent EU directives (SCT Inst) require payment transactions to finisih in less than 10 seconds while
-card network operations already typically take less than 1 second which
-does not motivate asynchrounous operation.
+Recent EU directives (SCT Inst) require payment transactions to finish in less than 10 seconds while
+card network operations already typically take less than 1 second which (IMO)
+does not motivate asynchronous operation between &quot;machines&quot;.
 Of course there are some slow (mail based), systems out there which could benefit from a scheme
-like above but that does not (at all) imply that you need to buy into in the whole REST paradigm as well.
+like above but that does not (at all) imply that you need to buy into in the whole REST package as well.
 </div>
 <div>
 <div class="header">REST - HTTP Bindings</div>
@@ -84,11 +84,11 @@ In fact, REST appears to even be incompatible with
 </div>
 <div>
 <div class="header">REST - Serialization</div>
-A common feature of transacton systems, is storing transaction data.
-Since the meaning of a REST request is not uniquely defined by
+A common feature of transaction systems, is storing transaction data.
+Since the meaning (semantics) of a REST request is not uniquely defined by
 the &quot;payload&quot;, a complete store operation would (presumably)
 include HTTP verb, URI, and HTTP headers as well.
-Doable but also rather messy compared to &quot;old-school&quot; self contained XML messages.
+Doable but also rather messy compared to &quot;Old&nbsp;School&quot; self-contained XML messages.
 </div>
 <div class="header">REST - Signed Requests</div>
 Believe it or not, but <i>there is currently no established standard for signing REST requests</i>.
@@ -96,21 +96,21 @@ Believe it or not, but <i>there is currently no established standard for signing
 <div class="new">
 Well, when you look more closely into the matter, you will
 find that a major hurdle is that a <i>proper</i> signature scheme should sign <i>all
-elements</i> characterizing the meaning (sematics) of a
+elements</i> characterizing the semantics of a
 request which for REST also include HTTP verb, URI, and HTTP headers,
-making conicalization awkward. 
+making canonicalization awkward. 
 </div>
 <div class="new">
-Here is a scheme used by Amazon.com: 
+If you to the above add <i>countersigned</i> messages which are a useful feature in transaction
+systems, you end-up with an <i>ugly mixture</i> of JSON and non-JSON data.
+</div>
+<div class="new">
+An example of a REST signature scheme used by Amazon.com: 
 <a href="http://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-header-based-auth.html" target="_blank">
 http://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-header-based-auth.html</a>.
 </div>
-<div class="new">
-If you to the above add <i>countersigned</i> messages which is a useful feature in transaction
-systems, you end-up with an <i>ugly mixture</i> of JSON and non-JSON data.
-</div>
-<div style="font-size:15pt;margin:10pt;font-family:arial,verdana;text-align:center">
-Another Way Forward
+<div style="font-size:15pt;margin-top:30pt;font-family:arial,verdana;text-align:center">
+Another Take on &quot;Transaction Systems&quot; on the Web
 </div>
 <div>
 The following sections outline a scheme which I consider a viable alternative to
@@ -125,7 +125,7 @@ while &quot;hard&quot; errors return an applicable HTTP code like 400, 401, 404,
 plus a suitable text message for logging and debugging purposes.
 </div>
 <div class="new">
-POSTed messages are preferably <i>indempotent</i> within their validity time to facilitate secure <i>retransmission</i>.
+POSTed messages are preferably <i>idempotent</i> within their validity time to facilitate secure <i>retransmission</i>.
 </div>
 <div class="new">
 Below is an example of a POSTed transaction request:
@@ -149,7 +149,7 @@ A GET or POST response body follows the same pattern:
 <pre>
 HTTP/1.1 200 OK
 Content-Type: application/json
-Content-Length: 1234
+Content-Length: 9541
 
 {
   "@context":"some-name-space",
@@ -161,6 +161,7 @@ Content-Length: 1234
 }
 </pre>
 </div>
+
 <div>
 <div class="header">Message Serialization and Deserialization (Parsing)</div>
 <i style="margin-left:30pt"> JSON String</i><code> = JSON.stringify(</code><i>JavaScript Object</i><code>);&nbsp;&nbsp;// Who likes complexity?</code>
@@ -169,4 +170,22 @@ Content-Length: 1234
 <i style="margin-left:30pt">JavaScript Object</i><code> = JSON.parse(</code><i>JSON String Data</i><code>);&nbsp;&nbsp;// Not me! :-)</code>
 </div>
 
-<br>V0.7, A.Rundgren, 2016-08-05</body></html>
+<div>
+<div class="header">JSON Message Structure</div>
+One of the requirements, which probably stemmed from (too) many years with XML and XML Schema,
+was the ability recognizing the type of a message by including type information in the message itself.
+This allows you to process different messages through a single dispatcher mechanism as well
+as easing debugging and documentation.  The following message taken from the
+<a href="https://cyberphone.github.io/doc/saturn" target="_blank">Saturn</a>
+project shows an <i>example</i> of such a typing scheme:
+<div style="margin:8pt 0pt 0pt 30pt;font-size:8pt;word-break:break-all;width:700pt;background:#F8F8F8;border-width:1px;border-style:solid;border-color:grey;padding:10pt;box-shadow:3pt 3pt 3pt #D0D0D0">{<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#606060">@context</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">http://webpki.org/saturn/v3</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#606060">@qualifier</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">PayeeAuthority</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">authorityUrl</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">https://payments.bigbank.com/payees/86344</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">providerAuthorityUrl</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">https://payments.bigbank.com/authority</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">commonName</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">Demo Merchant</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">id</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">86344</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">publicKey</span>&quot;:&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">type</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">EC</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">curve</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">P-256</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">x</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">rZ344aiTaOATmLBOdfYThvnQu_zyB1aJZrbbbks2P9I</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">y</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">lKOvfJdgN8WqEbXMDYPRSMsPicm0Tk10pmer9LxvxLg</span>&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">timeStamp</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">2017-01-21T07:04:30Z</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">expires</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">2017-01-21T08:04:31Z</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">signature</span>&quot;:&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">algorithm</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">ES256</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">signerCertificate</span>&quot;:&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">issuer</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">CN=Payment Network Sub CA3,C=EU</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">serialNumber</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">1461174554959</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">subject</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">CN=Big Bank,2.5.4.5=#1306383936363430,C=DE</span>&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">certificatePath</span>&quot;:&nbsp;[&quot;<span style="color:#0000C0">MIIBtTCCAVmgAwIB....sApiD3jFnqaJhxCZ</span>&quot;,&quot;<span style="color:#0000C0">MIIDcjCCAVqgAwIB....e_-5TddhlTUMNPvw</span>&quot;],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">value</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">qP4qAYj4FW4j42Moq6wd2wzHGUN2_Pjd....R4nuX_Oi-aLznRJZiP_B-zSnRaMVsdMg</span>&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br></div>
+</div>
+<div>
+In the message above the <code>@context</code> property is essentially a counterpart to an XML name-space,
+while <code>@qualifier</code> holds a counterpart to an XML top-level element.
+In Saturn, <code>@context</code> is constant while <code>@qualifier</code> denotes actual message type.
+The point with having designated &quot;keywords&quot; for type information is that you can
+automate object instantiation. If you don't need that, simply reserving a <code>PayeeAuthority</code>
+property works equally well.
+</div>
+<div style="margin-top:30pt">V0.7, A.Rundgren, 2017-01-21</div></body></html>
