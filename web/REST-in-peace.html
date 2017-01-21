@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html><html><head><title>REST (.In.Peace)</title><meta http-equiv=Content-Type content="text/html; charset=utf-8"><style type="text/css">
 body {font-size:10pt;color:#000000;font-family:verdana,arial;background-color:white;margin:10pt}
-code {font-size:11pt;font-family:'Courier New',Courier}
-pre {margin-left:30pt;font-size:11pt;font-family:'Courier New',Courier}
+code {font-weight:bold;font-size:10pt;font-family:'Courier New',Courier}
+pre {margin-left:30pt;font-weight:bold;font-size:10pt;font-family:'Courier New',Courier}
 div {width:800pt;margin-top:15pt}
 div.header {width:800pt;margin-top:10pt;margin-bottom:5pt;font-weight:bold}
 div.new {width:800pt;margin-top:5pt}
@@ -20,8 +20,8 @@ You don't have to agree with it at all :-)
 </div>
 <div>
 Since everybody in IT who haven't slept under a rock the last 10 years know, REST has become almost synonymous with
-good Web API design (although most developers tend to refer to their designs as &quot;REST-ful&quot; to permit
-some freedom of the interpretation what REST actually is...).
+good Web API design (although most developers tend to refer to their designs as &quot;REST-ful&quot; to provide
+some latitude in the interpretation what REST actually is...).
 </div>
 <div class="new">
 In spite of that, I have for a <i>certain class of applications</i> which we can
@@ -102,7 +102,7 @@ making canonicalization awkward.
 </div>
 <div class="new">
 If you to the above add <i>countersigned</i> messages which are a useful feature in transaction
-systems, you end-up with an <i>ugly mixture</i> of JSON and non-JSON data.
+systems, you will end-up with an <i>ugly mixture</i> of JSON and non-JSON data.
 </div>
 <div class="new">
 An example of a REST signature scheme used by Amazon.com: 
@@ -164,10 +164,10 @@ Content-Length: 9541
 
 <div>
 <div class="header">Message Serialization and Deserialization (Parsing)</div>
-<i style="margin-left:30pt"> JSON String</i><code> = JSON.stringify(</code><i>JavaScript Object</i><code>);&nbsp;&nbsp;// Who likes complexity?</code>
+<i style="margin-left:30pt"> JSON String</i><code> = JSON.<font color="red">stringify</font>(</code><i>JavaScript Object</i><code>);&nbsp;&nbsp;<font color="grey">// Who likes complexity?</font></code>
 </div>
 <div class="new">
-<i style="margin-left:30pt">JavaScript Object</i><code> = JSON.parse(</code><i>JSON String Data</i><code>);&nbsp;&nbsp;// Not me! :-)</code>
+<i style="margin-left:30pt">JavaScript Object</i><code> = JSON.<font color="red">parse</font>(</code><i>JSON String Data</i><code>);&nbsp;&nbsp;<font color="grey">// Not me! :-)</font></code>
 </div>
 
 <div>
@@ -187,5 +187,53 @@ In Saturn, <code>@context</code> is constant while <code>@qualifier</code> denot
 The point with having designated &quot;keywords&quot; for type information is that you can
 automate object instantiation. If you don't need that, simply reserving a <code>PayeeAuthority</code>
 property works equally well.
+which does not only make them unreadable (by humans), but also disrupted the message typing scheme :-(
 </div>
+<div class="new">
+A major boon with typed (and self-contained) messages is that they become <i>independent of
+transport</i>, allowing them to be &quot;glued&quot; to an HTML page, sent over NFC,
+or be pushed through various proxies without loosing their meaning.
+</div>
+<div>
+<div class="header">Signed JSON Messages</div>
+Here I ran into serious issues since I wanted something that was not too different
+from XML DSig but possibly not requring mega-bytes of library code.
+IETF's JOSE WG recently defined a set of JSON-related cryptographic standards.
+Unfortunately the JOSE signature standard requires messages to be Base64Url-encoded
+which does not only make them unreadable (by humans), but also disrupted the message typing scheme :-(
+</div>
+<div class="new">
+As you can see in the previous JSON sample, another signature solution was created
+which (completely unintentional) and surprisingly,
+turned out to be compatible with recent versions of JavaScript as well!
+</div>
+<div class="new">
+For more information on the signature system turn to
+<a href="https://cyberphone.github.io/doc/security/jsonsignatures.html" target="_blank">https://cyberphone.github.io/doc/security/jsonsignatures.html</a>.
+</div>
+<div>
+<div class="header">Message Handlers and Decoders</div>
+The devised scheme does not specify whether all transactions should go to a single handler and URI,
+but in case you have more than one transaction (message) type you need to dispatch
+messages to the proper sub-handler.  This trivial using typed messages as
+illustrated by the following code:
+</div>
+<div class="new">
+<pre>
+<font color="blue">var</font> input = JSON.<font color="red">parse</font>(<font color="red">readRequest</font>(request));    <font color="grey">// "readRequest()" is a hypothenical metod</font>
+<font color="blue">var</font> output;
+<font color="blue">switch</font> (input['<font color="green">@qualifier</font>']) {
+<font color="blue">case</font> '<font color="green">Authorize</font>':
+    output = authorize(input);                   <font color="grey">// "authorize()" is a hypothenical metod</font>
+<font color="blue">break</font>;
+<font color="blue">case</font> '<font color="green">CommitPayment</font>':
+    output = commitPayment(input);               <font color="grey">// "commitPayment()" is a hypothenical metod</font>
+<font color="blue">break</font>;
+<font color="blue">default</font>:
+<font color="blue">throw new</font> TypeError('<font color="green">unrecognized message</font>');
+}
+writeResponse(response, JSON.stringify(output)); <font color="grey">// "writeResponse()" is a hypothenical metod</font>
+</pre>
+</div>
+
 <div style="margin-top:30pt">V0.7, A.Rundgren, 2017-01-21</div></body></html>
