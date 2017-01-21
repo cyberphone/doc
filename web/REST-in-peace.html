@@ -9,12 +9,12 @@ div.new {width:800pt;margin-top:5pt}
 </style></head><body>
 <div><img src="REST-in-peace.png" alt="N/A" style="display:block;margin-left:auto;margin-right:auto"></div>
 <div style="font-size:15pt;margin:10pt;font-family:arial,verdana;text-align:center">
-A Somewhat Critical Analysis of REST APIs as the &quot;Final Solution&quot;
+A Critical Analysis of REST APIs for &quot;Transaction Systems&quot;
 </div>
 <div>
 <i>Disclaimer</i>: This is not an
 <a href="https://martinfowler.com/articles/richardsonMaturityModel.html" target="_blank">academic paper</a>,
-it is simply a set of personal observations that I have
+it is simply a set of observations I have
 made during my fairly long journey with Web (HTTP) based business systems.
 You don't have to agree with it at all :-)
 </div>
@@ -190,16 +190,18 @@ The point with having designated &quot;keywords&quot; for type information is th
 automate object instantiation. If you don't need that, simply reserving a <code>PayeeAuthority</code>
 property works equally well.
 </div>
-<div class="new">
-A major boon with typed (and self-contained) messages is that they become <i>independent of
-transport</i>, allowing them to be embedded in HTML pages, sent over NFC,
-or be pushed through various proxies without loosing their meaning.
+<div>
+<div class="new" style="border-width:1pt;border-color:black;border-style:solid;padding:6pt 12pt 6pt 12pt;width:620pt;display:block;margin-left:auto;margin-right:auto">
+A major advantage with typed (and self-contained) messages is that they become <i>transport-independent</i>,
+allowing them to be embedded in HTML pages, sent over NFC,
+or be pushed through various proxies without loosing their meaning
+</div>
 </div>
 <div>
 <div class="header">Signed JSON (and JavaScript) Messages</div>
 Here I ran into serious issues since I had envisioned something similar to
 XML DSig but preferably not depending on megabytes of fairly intricate library code.
-IETF's JOSE WG recently defined a set of JSON-related cryptographic standards.
+IETF's JOSE WG recently defined a set of JSON-based cryptographic standards.
 Unfortunately the JOSE signature standard forces you to encode messages in Base64Url
 which does not only make them <i>unreadable by humans</i>, but also <i>disrupts the message typing scheme</i> :-(
 </div>
