@@ -32,12 +32,11 @@ for example include B2B order/invoicing and bank-to-bank payments.
 </div>
 <div>
 <div class="header">Web Services, SOAP, and XML are Obsolete!</div>
-Indeed, after more than 10 years with SOAP, XML and XML Schemas, I have 
-decided to never (by free will at least) work with this more.
-However, that's not equivalent to &quot;<i>Everything was wrong with Web Services</i>&quot; which
+Indeed, after more than 10 years with SOAP, XML and XML Schemas, I have finally closed that door.
+However, that's not equivalent to <i>&quot;Everything was wrong with Web Services&quot;</i> which
 REST advocates often claim.
-You can safely drop SOAP and replace XML with JSON, but the underlying
-RPC-concept still has plenty of mileage left, which is elaborated on a bit further down in this paper.
+You can safely drop SOAP and replace XML with JSON, but <i>the underlying
+RPC-concept still has plenty of mileage left</i>, which I have elaborated on a bit further down in this paper.
 </div>
 <div>
 <div class="header">REST - Stateless Operation</div>
@@ -123,7 +122,7 @@ REST based APIs for transaction systems using HTTP.
 <div class="header">HTTP Bindings</div>
 Requests containing (JSON formatted) transaction data should be invoked by HTTP POST
 while requests that only lookup existing data should use GET.
-Successful requests including &quot;soft&quot; errors like
+Successful requests including &quot;soft&quot; (handled) errors like
 &quot;Insufficient Funds&quot; should return HTTP&nbsp;200,
 while &quot;hard&quot; (non-recoverable) errors should return an applicable HTTP code like 400, 401, 404, 405, 500
 plus a suitable text message for logging and debugging purposes.
