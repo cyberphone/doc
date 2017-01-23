@@ -36,7 +36,7 @@ Indeed, after more than 10 years with SOAP, XML and XML Schemas, I have finally 
 However, that's not equivalent to <i>&quot;Everything was wrong with Web Services&quot;</i> which
 REST advocates often claim.
 You can safely drop SOAP and replace XML with JSON, but <i>the underlying
-RPC-concept still has plenty of mileage left</i>, which I have elaborated on a bit further down in this paper.
+RPC-concept still has plenty of mileage left</i>, which I have elaborated on <a href="#alternative">a bit further down</a> in this paper.
 </div>
 <div>
 <div class="header">REST - Stateless Operation</div>
@@ -110,7 +110,7 @@ An example of a REST signature scheme used by Amazon.com:
 <a href="http://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-header-based-auth.html" target="_blank">
 http://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-header-based-auth.html</a>.
 </div>
-<div style="font-size:15pt;margin-top:30pt;font-family:arial,verdana;text-align:center">
+<div id="alternative" style="font-size:15pt;margin-top:30pt;font-family:arial,verdana;text-align:center">
 Another Take on &quot;Transaction System&quot; APIs on the Web
 </div>
 <div>
@@ -181,7 +181,7 @@ Content-Length: 9541
     </tr></table>
 </div>
 <div>
-<div class="header">JSON Message Structure</div>
+<div id="messages" class="header">JSON Message Structure</div>
 One of the requirements, which probably stemmed from (too) many years with XML and XML Schema,
 was the ability recognizing the type of a message by including type information in the message itself.
 This allows you to process different messages through a single dispatcher mechanism as well
