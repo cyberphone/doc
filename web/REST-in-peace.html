@@ -78,8 +78,12 @@ Although not directly related to our class of applications it is still worth men
 that REST is claimed to not be limited to HTTP. This may be true, but
 it is not entirely obvious how a scheme based on <i>URIs</i>, <i>HTTP Header Parameters</i>,
 <i>HTTP Verbs</i>, and an <i>Optional Request Body</i>, could be translated to other transports.
-In fact, REST appears to be <i>incompatible</i> with
-<a href="https://tools.ietf.org/rfc/rfc6455.txt" target="_blank">WebSockets</a> which is another cool Web technology.
+</div>
+<div class="new">
+In fact, REST appears to be <i>entirely incompatible</i> with most other Web related transport methods including
+<a href="https://tools.ietf.org/rfc/rfc6455.txt" target="_blank">WebSockets</a>
+and
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage" target="_blank">postMessage()</a>.
 </div>
 <div>
 <div class="header">REST - Serialization</div>
@@ -87,7 +91,9 @@ A common feature of transaction systems, is storing transaction data.
 Since the meaning (semantics) of a REST request is not uniquely defined by
 the &quot;payload&quot;, a complete store operation would (presumably)
 include HTTP verb, URI, and HTTP headers as well.
-Quite doable but also rather messy compared to &quot;Old&nbsp;School&quot; self-contained XML messages.
+</div>
+<div class="new">
+It is for sure doable but it seems rather messy compared to serializing &quot;Old&nbsp;School&quot; typically self-contained XML messages.
 </div>
 <div>
 <div class="header">REST - Signed Requests</div>
@@ -121,7 +127,7 @@ The code examples are given in JavaScript.
 <div class="new">
 Note: If you are looking for an API you won't find one because the core
 is a <i>message-centric</i> concept, where &quot;self-sufficient&quot; messages are &quot;liberated&quot;
-from redundant HTTP verbs, URIs, and SOAP envelopes.
+from redundant HTTP verbs, URIs, and clunky SOAP envelopes.
 However, nothing prevents you from mapping APIs into messages!
 </div>
 <div>
