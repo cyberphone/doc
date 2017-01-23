@@ -78,7 +78,7 @@ Although not directly related to our class of applications it is still worth men
 that REST is claimed to not be limited to HTTP. This may be true, but
 it is not entirely obvious how a scheme based on <i>URIs</i>, <i>HTTP Header Parameters</i>,
 <i>HTTP Verbs</i>, and an <i>Optional Request Body</i>, could be translated to other transports.
-In fact, REST appears to be incompatible with
+In fact, REST appears to be <i>incompatible</i> with
 <a href="https://tools.ietf.org/rfc/rfc6455.txt" target="_blank">WebSockets</a> which is another cool Web technology.
 </div>
 <div>
@@ -115,11 +115,17 @@ Another Take on &quot;Transaction System&quot; APIs on the Web
 </div>
 <div>
 The following sections outline a scheme which I consider a viable alternative to
-REST based APIs for transaction systems using HTTP.
-    <i>The code examples are given in JavaScript</i>.
+REST based APIs.
+The code examples are given in JavaScript.
+</div>
+<div class="new">
+Note: If you are looking for an API you won't find one because the core
+is a <i>message-centric</i> concept, where &quot;self-sufficient&quot; messages are &quot;liberated&quot;
+from redudant HTTP verbs, URIs, and SOAP envelopes.
+However, nothing prevents you from mapping APIs into messages!
 </div>
 <div>
-<div class="header">HTTP Bindings</div>
+<div class="header">Sending Messages over HTTP</div>
 Requests containing (JSON formatted) transaction data should be invoked by HTTP POST
 while requests that only lookup existing data should use GET.
 Successful requests including &quot;soft&quot; (handled) errors like
@@ -266,4 +272,4 @@ This has been successfully verified in a number of proof-of-concept applications
 </div>
 </div>
 </div>
-<div style="margin-top:30pt">V0.4, A.Rundgren, 2017-01-22</div></body></html>
+<div style="margin-top:30pt">V0.5, A.Rundgren, 2017-01-23</div></body></html>
