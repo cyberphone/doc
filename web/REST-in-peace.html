@@ -19,16 +19,17 @@ made during my fairly long journey with Web (HTTP) based business systems.
 You don't have to agree with it at all :-)
 </div>
 <div>
+<div class="header">Introduction</div>
 Since everybody in IT who haven't slept under a rock the last 10 years know, REST has become almost synonymous with
 good Web API design (although most developers tend to refer to their designs as &quot;RESTful&quot; to provide
 some latitude in the interpretation what REST actually is...).
-</div>
 <div class="new">
 In spite of that, I have for a <i>certain class of applications</i> which we can
 call &quot;Transaction Systems&quot;
 come to the conclusion that REST may not always be the most logical choice for Web APIs.
 The reasons are briefly described in the following sections.  Transaction systems (using my vocabulary NB),
 for example include B2B order/invoicing and bank-to-bank payments.  
+</div>
 </div>
 <div>
 <div class="header">Web Services, SOAP, and XML are Obsolete!</div>
@@ -39,13 +40,13 @@ You can safely drop SOAP and replace XML with JSON, but <i>the underlying
 RPC-concept still has plenty of mileage left</i>, which I have elaborated on <a href="#alternative">a bit further down</a> in this paper.
 </div>
 <div>
-<div class="header">REST - Stateless Operation</div>
+<div class="header" id="rest-stateless">REST - Stateless Operation</div>
 Stateless operation is great but transactions are typically not stateless so it is hard
 to see that REST has anything special to offer here.
 Existing, non-REST transaction systems usually do not depend on Web server state either.
 </div>
 <div>
-<div class="header">REST - Asynchronous Operation</div>
+<div class="header" id="rest-asynchronous">REST - Asynchronous Operation</div>
 This is a more complex issue but if I understand the REST philosophy correctly,
 a slowly processing transaction request should not block until it is ready, but rather return HTTP&nbsp;202
 and a header holding a URI to a location where the result may be queried for.
@@ -73,7 +74,7 @@ Of course there are some slow (mainly mail based), transaction systems out there
 like above, but that does not (at all) imply that you need to buy into in the whole REST package as well.
 </div>
 <div>
-<div class="header">REST - HTTP Bindings</div>
+<div class="header" id="rest-httpbindings">REST - HTTP Bindings</div>
 Although not directly related to our class of applications it is still worth mentioning
 that REST is claimed to not be limited to HTTP. This may be true, but
 it is not entirely obvious how a scheme based on <i>URIs</i>, <i>HTTP Header Parameters</i>,
@@ -86,7 +87,7 @@ and
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage" target="_blank">postMessage()</a>.
 </div>
 <div>
-<div class="header">REST - Serialization</div>
+<div class="header" id="rest-serialization">REST - Serialization</div>
 A common feature of transaction systems, is storing transaction data.
 Since the meaning (semantics) of a REST request is not uniquely defined by
 the &quot;payload&quot;, a complete store operation would (presumably)
@@ -96,7 +97,7 @@ include HTTP verb, URI, and HTTP headers as well.
 It is for sure doable but it seems rather messy compared to serializing &quot;Old&nbsp;School&quot; typically self-contained XML messages.
 </div>
 <div>
-<div class="header">REST - Signed Requests</div>
+<div class="header" id="rest-signatures">REST - Signed Requests</div>
 Believe it or not, but <i>there is currently no established standard for signing REST requests</i>.
 </div>
 </div>
@@ -131,7 +132,7 @@ from limiting HTTP bindings, URIs, and clunky SOAP envelopes.
 However, nothing prevents you from mapping APIs into messages!
 </div>
 <div>
-<div class="header">Sending Messages over HTTP</div>
+<div class="header" id="http-operation">Sending Messages over HTTP</div>
 Requests containing (JSON formatted) transaction data should be invoked by HTTP POST
 while requests that only lookup existing data should use GET.
 Successful requests including &quot;soft&quot; (handled) errors like
@@ -178,7 +179,7 @@ Content-Length: 9541
 </div>
 
 <div>
-<div class="header">Message Serialization and Deserialization (Parsing)</div>
+<div class="header" id="serialization">Message Serialization and Deserialization (Parsing)</div>
 <table style="margin-left:30pt"><tr>
     <td><i> JSON String</i><code> = <span style="color:brown">JSON</span>.<span style="color:red">stringify</span>(</code><i>JavaScript Object</i><code>);</code></td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><code><span style="color:grey">// I don't like complexity!</span></code></td></tr>
@@ -187,7 +188,7 @@ Content-Length: 9541
     </tr></table>
 </div>
 <div>
-<div id="messages" class="header">JSON Message Structure</div>
+<div class="header" id="messages">JSON Message Structure</div>
 One of the requirements, which probably stemmed from (too) many years with XML and XML Schema,
 was the ability recognizing the type of a message by including type information in the message itself.
 This allows you to process different messages through a single dispatcher mechanism as well
@@ -213,7 +214,7 @@ or be pushed through various proxies without loosing their meaning.
 </div>
 <div style="margin-top:0pt">
 &nbsp;
-<div class="header">Signed JSON (and JavaScript) Messages</div>
+<div class="header" id="signatures">Signed JSON (and JavaScript) Messages</div>
 Here the project encountered serious problems since I had envisioned something similar to
 XML DSig but preferably not depending on megabytes of fairly intricate library code.
 IETF's JOSE WG recently defined a set of JSON-based cryptographic standards.
@@ -236,7 +237,7 @@ To maintain a &quot;style compatible&quot; messaging concept, a matching encrypt
 added to the plot: <a href="https://cyberphone.github.io/doc/security/jef.html" target="_blank">https://cyberphone.github.io/doc/security/jef.html</a>.
 </div>
 <div>
-<div class="header">Message Handlers and Decoders</div>
+<div class="header" id="handlers">Message Handlers and Decoders</div>
 The devised scheme does not specify whether all transaction requests should go to a single handler
 (servlet) and URI,
 but in the case a handler supports more than one transaction (message) type you need to dispatch
@@ -260,7 +261,7 @@ messages to the proper sub-handler.  This is trivial using typed messages:
 </pre>
 </div>
 <div>
-<div class="header">Other Uses of the Messaging Platform</div>
+<div class="header" id="applications">Other Uses of the Messaging Platform</div>
 Since the net result of the measures above, effectively is a &quot;Messaging Platform&quot;, it would
 probably be interesting if it could be used for something else than just the original (rather narrow) target, right?
 <div>
