@@ -8,118 +8,9 @@ div.header {font-size:14pt;width:800pt;margin-top:12pt;margin-bottom:5pt}
 div.new {width:800pt;margin-top:5pt}
 
 </style></head><body>
-<div><img src="REST-in-peace.png" alt="N/A" style="display:block;margin-left:auto;margin-right:auto"></div>
-<div style="font-size:16pt;margin:10pt;font-family:arial,verdana;text-align:center">
-A Critical Analysis of REST APIs for &quot;Transaction Systems&quot;
-</div>
-<div>
-<i>Disclaimer</i>: This is not an
-<a href="https://martinfowler.com/articles/richardsonMaturityModel.html" target="_blank">academic paper</a>,
-it is simply a set of observations I have
-made during my fairly long journey with Web (HTTP) based business systems.
-You don't have to agree with it at all :-)
-</div>
-<div>
-<div class="header">Introduction</div>
-Since everybody in IT who haven't slept under a rock the last 10 years know, REST has become almost synonymous with
-good Web API design (although most developers tend to refer to their designs as &quot;RESTful&quot; to provide
-some latitude in the interpretation what REST actually is...).
-<div class="new">
-In spite of that, I have for a <i>certain class of applications</i> which we can
-call &quot;Transaction Systems&quot;
-come to the conclusion that REST may not always be the most logical choice for Web APIs.
-The reasons are briefly described in the following sections.  Transaction systems (using my vocabulary NB),
-for example include B2B order/invoicing and bank-to-bank payments.  
-</div>
-</div>
-<div>
-<div class="header">Web Services, SOAP, and XML are Obsolete!</div>
-Indeed, after more than 10 years with SOAP, XML and XML Schemas, I have finally closed that door.
-However, that's not equivalent to <i>&quot;Everything was wrong with Web Services&quot;</i> which
-REST advocates often claim.
-You can safely drop SOAP and replace XML with JSON, but <i>the underlying
-RPC-concept still has plenty of mileage left</i>, which I have elaborated on <a href="#alternative">a bit further down</a> in this paper.
-</div>
-<div>
-<div class="header" id="rest-stateless">REST - Stateless Operation</div>
-Stateless operation is great but transactions are typically not stateless so it is hard
-to see that REST has anything special to offer here.
-Existing, non-REST transaction systems usually do not depend on Web server state either.
-</div>
-<div>
-<div class="header" id="rest-asynchronous">REST - Asynchronous Operation</div>
-This is a more complex issue but if I understand the REST philosophy correctly,
-a slowly processing transaction request should not block until it is ready, but rather return HTTP&nbsp;202
-and a header holding a URI to a location where the result may be queried for.
-</div>
-<div class="new">
-IMHO, this greatly complicates the design in both ends; the server must
-still continue with the processing (albeit in the background) including
-dealing with possible time-outs, and then when a result is ready
-move it to a handler for the previously calculated URI.
-<div class="new">
-For clients <i>that are not browsers</i>, but &quot;Business Systems&quot;, it gets worse;
-after sending the request, the client needs to start a process for querying the result using
-the previously received URI,
-and finally pairing the result with the original request.
-There may of course be a time-out here as well.
-</div>
-<div class="new">
-To me this looks pretty much like reinvented SMTP, using HTTP and Web servers.
-</div>
-<div class="new">
-Recent EU directives (SCT Inst) require payment transactions to finish in less than 10 seconds while
-card network operations already typically take less than 1 second which (IMO)
-does not motivate asynchronous operation between &quot;machines&quot;.
-Of course there are some slow (mainly mail based), transaction systems out there which could benefit from a scheme
-like above, but that does not (at all) imply that you need to buy into in the whole REST package as well.
-</div>
-<div>
-<div class="header" id="rest-httpbindings">REST - HTTP Bindings</div>
-Although not directly related to our class of applications it is still worth mentioning
-that REST is claimed to not be limited to HTTP. This may be true, but
-it is not entirely obvious how a scheme based on <i>URIs</i>, <i>HTTP Header Parameters</i>,
-<i>HTTP Verbs</i>, and an <i>Optional Request Body</i>, could be translated to other transports.
-</div>
-<div class="new">
-In fact, REST appears to be <i>entirely incompatible</i> with most other Web related transport methods including
-<a href="https://tools.ietf.org/rfc/rfc6455.txt" target="_blank">WebSocket</a>
-and
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage" target="_blank">postMessage()</a>.
-</div>
-<div>
-<div class="header" id="rest-serialization">REST - Serialization</div>
-A common feature of transaction systems, is storing transaction data.
-Since the meaning (semantics) of a REST request is not uniquely defined by
-the &quot;payload&quot;, a complete store operation would (presumably)
-include HTTP verb, URI, and HTTP headers as well.
-</div>
-<div class="new">
-It is for sure doable but it seems rather messy compared to serializing &quot;Old&nbsp;School&quot; typically self-contained XML messages.
-</div>
-<div>
-<div class="header" id="rest-signatures">REST - Signed Requests</div>
-Believe it or not, but <i>there is currently no established standard for signing REST requests</i>.
-</div>
-</div>
-<div class="new">
-Well, when you look more closely into the matter, you will
-find that a major hurdle is that a <i>proper</i> signature scheme should sign <i>all
-elements</i> characterizing the semantics of a
-request which for REST also include HTTP verb, URI, and HTTP headers,
-making canonicalization awkward. 
-</div>
-<div class="new">
-If you to the above add <i>countersigned</i> messages which are a useful feature in transaction
-systems, you will likely end-up with an <i>ugly mixture</i> of JSON and non-JSON data.
-</div>
-<div class="new">
-An example of a REST signature scheme used by Amazon.com: 
-<a href="http://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-header-based-auth.html" target="_blank">
-http://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-header-based-auth.html</a>.
-</div>
-<div id="alternative" style="font-size:16pt;margin-top:30pt;font-family:arial,verdana;text-align:center">
-YASMIN (Yet Another jSon MessagIng Notation)</div>
+<div><img src="yasmin-logo.svg" alt="N/A" style="width:300pt;display:block;margin-left:auto;margin-right:auto"></div>
+<div style="font-size:16pt;margin-top:10pt;font-family:arial,verdana;text-align:center">
+(Yet Another jSon MessagIng Notation)</div>
 <div>
 The following sections outline a scheme which I consider a viable alternative to
 REST based APIs.
@@ -139,7 +30,7 @@ This allows you to process different messages through a single dispatcher mechan
 as easing debugging and documentation.  The following message taken from the
 <a href="https://cyberphone.github.io/doc/saturn" target="_blank">Saturn</a>
 project shows an <i>example</i> of such a typing scheme:
-<div style="margin:8pt 0pt 0pt 30pt;font-size:8pt;word-break:break-all;width:700pt;background:#F8F8F8;border-width:1px;border-style:solid;border-color:grey;padding:10pt;box-shadow:3pt 3pt 3pt #D0D0D0">{<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#606060">@context</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">http://webpki.org/saturn/v3</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#606060">@qualifier</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">PayeeAuthority</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">authorityUrl</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">https://payments.bigbank.com/payees/86344</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">providerAuthorityUrl</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">https://payments.bigbank.com/authority</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">commonName</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">Demo Merchant</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">id</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">86344</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">publicKey</span>&quot;:&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">type</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">EC</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">curve</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">P-256</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">x</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">rZ344aiTaOATmLBOdfYThvnQu_zyB1aJZrbbbks2P9I</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">y</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">lKOvfJdgN8WqEbXMDYPRSMsPicm0Tk10pmer9LxvxLg</span>&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">timeStamp</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">2017-01-21T07:04:30Z</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">expires</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">2017-01-21T08:04:31Z</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">signature</span>&quot;:&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">algorithm</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">ES256</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">signerCertificate</span>&quot;:&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">issuer</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">CN=Payment Network Sub CA3,C=EU</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">serialNumber</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">1461174554959</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">subject</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">CN=Big Bank,2.5.4.5=#1306383936363430,C=DE</span>&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">certificatePath</span>&quot;:&nbsp;[&quot;<span style="color:#0000C0">MIIBtTCCAVmgAwIB....sApiD3jFnqaJhxCZ</span>&quot;,&quot;<span style="color:#0000C0">MIIDcjCCAVqgAwIB....e_-5TddhlTUMNPvw</span>&quot;],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">value</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">qP4qAYj4FW4j42Moq6wd2wzHGUN2_Pjd....R4nuX_Oi-aLznRJZiP_B-zSnRaMVsdMg</span>&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br></div>
+<div style="margin:8pt 0pt 0pt 30pt;font-size:9pt;word-break:break-all;width:700pt;background:#F8F8F8;border-width:1px;border-style:solid;border-color:grey;padding:10pt;box-shadow:3pt 3pt 3pt #D0D0D0">{<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#606060">@context</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">http://webpki.org/saturn/v3</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#606060">@qualifier</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">PayeeAuthority</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">authorityUrl</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">https://payments.bigbank.com/payees/86344</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">providerAuthorityUrl</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">https://payments.bigbank.com/authority</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">commonName</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">Demo Merchant</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">id</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">86344</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">publicKey</span>&quot;:&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">type</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">EC</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">curve</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">P-256</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">x</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">rZ344aiTaOATmLBOdfYThvnQu_zyB1aJZrbbbks2P9I</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">y</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">lKOvfJdgN8WqEbXMDYPRSMsPicm0Tk10pmer9LxvxLg</span>&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">timeStamp</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">2017-01-21T07:04:30Z</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">expires</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">2017-01-21T08:04:31Z</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">signature</span>&quot;:&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">algorithm</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">ES256</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">signerCertificate</span>&quot;:&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">issuer</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">CN=Payment Network Sub CA3,C=EU</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">serialNumber</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">1461174554959</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">subject</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">CN=Big Bank,2.5.4.5=#1306383936363430,C=DE</span>&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">certificatePath</span>&quot;:&nbsp;[&quot;<span style="color:#0000C0">MIIBtTCCAVmgAwIB....sApiD3jFnqaJhxCZ</span>&quot;,&quot;<span style="color:#0000C0">MIIDcjCCAVqgAwIB....e_-5TddhlTUMNPvw</span>&quot;],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">value</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">qP4qAYj4FW4j42Moq6wd2wzHGUN2_Pjd....R4nuX_Oi-aLznRJZiP_B-zSnRaMVsdMg</span>&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br></div>
 </div>
 <div>
 In the message above the <code>@context</code> property is essentially a counterpart to an XML name-space,
