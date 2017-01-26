@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html><html lang="en"><head><title>REST (.In.Peace)</title><meta http-equiv=Content-Type content="text/html; charset=utf-8"><style type="text/css">
+﻿<!DOCTYPE html><html lang="en"><head><title>YASMIN</title><meta http-equiv=Content-Type content="text/html; charset=utf-8"><style type="text/css">
 body {font-size:10pt;color:#000000;font-family:verdana,arial;background-color:white;margin:10pt}
 span.cmt {font-size: 10pt;font-family: verdana,arial;font-weight:normal;font-style:italic;color:gray}
 pre {margin-left:30pt}
@@ -7,17 +7,17 @@ div.header {font-size:14pt;width:800pt;margin-top:12pt;margin-bottom:5pt}
 div.new {width:800pt;margin-top:5pt}
 
 </style></head><body>
-<div><img src="yasmin-logo.svg" alt="N/A" style="width:210pt;display:block;margin-left:auto;margin-right:auto;margin-top:35pt;margin-bottom:30pt"></div>
+<div><img src="yasmin-logo.svg" title="YASMIN"alt="N/A" style="width:210pt;display:block;margin-left:auto;margin-right:auto;margin-top:35pt;margin-bottom:30pt"></div>
 <div>
 YASMIN (Yet Another jSon Message notatIoN), was designed to offer an alternative to
-<a href="https://en.wikipedia.org/wiki/Representational_state_transfer" target="_blank">REST</a> based APIs, bringing the following
+<a href="https://en.wikipedia.org/wiki/Representational_state_transfer" target="_blank">REST</a> based APIs, by bringing the following
 enhancements to the table:
 <ul>
 <li>Support for event based communication like
 <a href="https://tools.ietf.org/rfc/rfc6455.txt" target="_blank">WebSocket</a>
 and
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage" target="_blank">postMessage()</a></li>
-<li>Unified signature scheme for requests and responses</li>
+<li>Unified signature <i>option</i> for requests and responses</li>
 <li>Unified serialization and deserializing methods for requests and responses</li>
 </ul>
 </div>
@@ -26,8 +26,8 @@ Note: If you are looking for an API you won't find one because the core
 is a <i>message-centric</i> concept, where &quot;self-sufficient&quot; messages using
 <a href="https://tools.ietf.org/rfc/rfc7159.txt" target="_blank">JSON</a> syntax
 have been &quot;liberated&quot;
-from interfering HTTP bindings, URIs, and clunky SOAP envelopes.
-However, nothing prevents you from mapping APIs into messages!
+from interfering HTTP bindings, URIs, and clunky <a href="https://www.w3.org/TR/soap12/" target="_blank">SOAP</a> envelopes.
+   However, nothing prevents you from mapping APIs into messages!
 </div>
 <div class="new">
 Code examples are if not stated otherwise provided in JavaScript.
@@ -39,16 +39,15 @@ was the ability recognizing the <i>type</i> of a message (object) by including s
 This allows you to process different messages through a single dispatcher mechanism as well
 as easing debugging and documentation.  The following message taken from the
 <a href="https://cyberphone.github.io/doc/saturn" target="_blank">Saturn</a>
-project shows an <i>example</i> of such a typing scheme:
+project shows the <i>recommended</i> typing scheme:
 <div style="margin:10pt 0pt 0pt 30pt;font-size:9pt;word-break:break-all;width:700pt;background:#F8F8F8;border-width:1px;border-style:solid;border-color:grey;padding:10pt;box-shadow:3pt 3pt 3pt #D0D0D0">{<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#606060">@context</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">http://webpki.org/saturn/v3</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#606060">@qualifier</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">PayeeAuthority</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">authorityUrl</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">https://payments.bigbank.com/payees/86344</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">providerAuthorityUrl</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">https://payments.bigbank.com/authority</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">commonName</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">Demo Merchant</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">id</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">86344</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">publicKey</span>&quot;:&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">type</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">EC</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">curve</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">P-256</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">x</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">rZ344aiTaOATmLBOdfYThvnQu_zyB1aJZrbbbks2P9I</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">y</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">lKOvfJdgN8WqEbXMDYPRSMsPicm0Tk10pmer9LxvxLg</span>&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">timeStamp</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">2017-01-21T07:04:30Z</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">expires</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">2017-01-21T08:04:31Z</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">signature</span>&quot;:&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">algorithm</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">ES256</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">signerCertificate</span>&quot;:&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">issuer</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">CN=Payment Network Sub CA3,C=EU</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">serialNumber</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">1461174554959</span>&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">subject</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">CN=Big Bank,2.5.4.5=#1306383936363430,C=DE</span>&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">certificatePath</span>&quot;:&nbsp;[&quot;<span style="color:#0000C0">MIIBtTCCAVmgAwIB....sApiD3jFnqaJhxCZ</span>&quot;,&quot;<span style="color:#0000C0">MIIDcjCCAVqgAwIB....e_-5TddhlTUMNPvw</span>&quot;],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">value</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">qP4qAYj4FW4j42Moq6wd2wzHGUN2_Pjd....R4nuX_Oi-aLznRJZiP_B-zSnRaMVsdMg</span>&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br></div>
 </div>
 <div>
-In the message above the <code>@context</code> property is essentially a counterpart to an XML name-space,
-while <code>@qualifier</code> sort of emulates an XML top-level element.
-In Saturn, <code>@context</code> is constant while <code>@qualifier</code> denotes actual message type.
+The <code>@context</code> property is essentially a counterpart to an XML name-space,
+while <code>@qualifier</code> emulates an XML top-level element.
+In a typical implementation, <code>@context</code> is a constant while <code>@qualifier</code> denotes actual message type.
 The point with having designated &quot;keywords&quot; for type information is that you can
-automate object instantiation. If you don't need that, simply adding any suitable named
-property works equally well.
+automate object instantiation.
 </div>
 <div>
 <div class="new" style="border-width:1pt;border-color:black;border-style:solid;padding:6pt 12pt 6pt 12pt;width:620pt;display:block;margin-left:auto;margin-right:auto">
@@ -115,11 +114,12 @@ Content-Length: 9541
 </div>
 <div>
 <div class="header" id="signatures">Signed JSON (and JavaScript) Messages</div>
-Here the project encountered serious problems since I had envisioned something similar to
-XML DSig but preferably not depending on megabytes of fairly intricate library code.
-IETF's JOSE WG recently defined a set of JSON-based cryptographic standards.
-Unfortunately the JOSE signature standard forces you to encode messages in Base64Url
-which does not only make them <i>unreadable by humans</i>, but also <i>disrupts the message typing scheme</i> :-(
+The vision was to have something similar to
+<a href="https://www.w3.org/TR/xmldsig-core/" target="_blank">XML&nbsp;DSig</a>
+but preferably not depending on megabytes of fairly intricate library code.
+Although the IETF JOSE WG had recently defined a set of JSON based cryptographic standards,
+the JOSE signature scheme forced you to encode messages in <code>Base64Url</code>
+which did not only made them <i>unreadable by humans</i>, but also <i>disrupted the message typing scheme</i>.
 </div>
 <div>
 <div class="new" style="border-width:1pt;border-color:black;border-style:solid;padding:6pt 12pt 6pt 12pt;width:620pt;display:block;margin-left:auto;margin-right:auto">
