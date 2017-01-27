@@ -84,7 +84,7 @@ while requests that only lookup existing data should use GET (and any for the ap
 <div class="new">
 Successful requests including &quot;soft&quot; (handled) errors like
 &quot;Insufficient Funds&quot; should return HTTP&nbsp;200,
-while &quot;hard&quot; (non-recoverable) errors should return an applicable HTTP code like 400, 401, 404, 405, 500
+while &quot;hard&quot; (non-recoverable) errors should return an applicable HTTP 4xx or 5xx status code,
 plus a suitable text message for logging and debugging purposes.
 </div>
 <div class="new">
