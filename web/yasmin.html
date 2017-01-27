@@ -8,11 +8,10 @@ span.cmt {font-size: 10pt;font-family: verdana,arial;font-weight:normal;font-sty
 pre {margin-left:30pt}
 div {width:800pt;margin-top:15pt}
 div.fancybox {margin:10pt 0pt 0pt 30pt;font-size:9pt;word-break:break-all;width:700pt;background:#F8F8F8;border-width:1px;border-style:solid;border-color:grey;padding:10pt;box-shadow:3pt 3pt 3pt #D0D0D0}
-div.header {font-size:14pt;font-family:arial,verdana,helvetica;width:800pt;padding-top:6pt;padding-bottom:6pt;margin:0pt}
+div.header {font-size:14pt;font-family:arial,verdana,helvetica;width:800pt;padding-top:6pt;padding-bottom:8pt;margin:0pt}
 div.new {width:800pt;margin-top:6pt}
-
 </style></head><body>
-<div><img src="yasmin-logo.svg" title="YASMIN"alt="N/A" style="width:210pt;display:block;margin-left:auto;margin-right:auto;margin-top:35pt;margin-bottom:30pt"></div>
+<div><img src="yasmin-logo.svg" title="YASMIN"alt="N/A" style="width:250pt;display:block;margin-left:auto;margin-right:auto;margin-top:35pt;margin-bottom:30pt"></div>
 <div>
 <div class="header" id="messages">Introduction</div>
 YASMIN (Yet Another jSon Message notatIoN), was designed to offer an alternative to
@@ -28,7 +27,7 @@ and
 </ul>
 </div>
 <div class="new">
-Note: If you are looking for an API you won't find one because the core
+Note: If you are looking for an API you won't find one because YASMIN
 is a <i>message-centric</i> concept, where &quot;self-sufficient&quot; messages using
 <a href="https://tools.ietf.org/rfc/rfc7159.txt" target="_blank">JSON</a> syntax
 have been &quot;liberated&quot;
@@ -135,24 +134,25 @@ Content-Length: 9541
 </tr></table>
 </div>
 <div>
-<div class="header" id="signatures">Signed JSON (and JavaScript) Messages</div>
+<div class="header" id="signatures">Signed Messages</div>
 The vision was to have something similar to
 <a href="https://www.w3.org/TR/xmldsig-core/" target="_blank">XML&nbsp;DSig</a>
 but preferably not depending on megabytes of fairly intricate library code.
 Using the IETF JOSE suite of JSON based cryptographic standards would have been cool, but
-the JOSE signature scheme forces you encoding messages in Base64Url
+the <a href="https://tools.ietf.org/rfc/rfc7515.txt" target="_blank">JOSE signature scheme</a>
+forces you encoding messages in Base64Url
 which do not only make messages <i>unreadable by humans</i>, but worse,
 <i>disrupts the YASMIN message typing scheme</i>.
 </div>
 <div>
-<div class="new" style="border-width:1pt;border-color:black;border-style:solid;padding:6pt 12pt 6pt 12pt;width:620pt;display:block;margin-left:auto;margin-right:auto">
-Since existing JSON signature solutions did not fit the targeted scenarios,
+<div class="new" style="border-width:1pt;border-color:black;border-style:solid;padding:6pt 12pt 6pt 12pt;width:600pt;display:block;margin-left:auto;margin-right:auto">
+Since existing JSON signature solutions did not match YASMIN,
 a new signature scheme had to be developed which (completely unintentional),
 turned out to be compatible with recent versions of JavaScript as well!
 </div>
 </div>
 <div>
-For more information on the signature system turn to
+The signature system is described in:
 <a href="https://cyberphone.github.io/doc/security/jsonsignatures.html" target="_blank">https://cyberphone.github.io/doc/security/jsonsignatures.html</a>.
 </div>
 <div class="new">
@@ -226,23 +226,24 @@ HTTP requests should use TLS (HTTPS) to cater for privacy and end-point authenti
 <div class="header" id="applications">Implementations</div>
 <i>Unsigned</i> YASMIN messages can be created with any JSON tool.
 <div class="new">
-<i>Signed</i> YASMIN messages need specific library support which is available on GitHub    HTTP requests should use TLS (HTTPS) to cater for privacy and end-point authentication.
+<i>Signed</i> YASMIN messages need specific library support which is available on GitHub:
 </div>
-    The next time someone tells you that &quot;We just need a REST API&quot;, it might be
-worth spending a few hours investigating alternatives, including YASMIN.                   https://github.com/cyberphone/openkeystore
-</div>
-
-<div>
-<div class="header" id="finalword">Final Words</div>
-The next time someone tells you that &quot;We just need a REST API&quot;, it might be
-worth spending a few hours investigating alternatives, including YASMIN.
+<table class="tftable" style="margin-top:8pt">
+<tr><th>Language</th><th>URL</th></tr>
+<tr><td>Java</td><td><a href="https://github.com/cyberphone/openkeystore#api" target="_blank">https://github.com/cyberphone/openkeystore#api</a></td></tr>
+<tr><td>Node.js</td><td><a href="https://github.com/cyberphone/node-webpki.org" target="_blank">https://github.com/cyberphone/node-webpki.org</a></td></tr>
+<tr><td>Python</td><td><a href="https://github.com/cyberphone/openkeystore/tree/master/python" target="_blank">https://github.com/cyberphone/openkeystore/tree/master/python</a></td></tr>
+</table>
 </div>
 <div>
 <div class="header" id="dochist">Document History</div>
- <table class="tftable">
-    <tr><th>Date</th><th>Ver</th><th>Comment</th></tr>
-<tr><td>2016-08-03</td><td style="text-align:center">0.3</td><td>Initial publication in HTML5</td></tr>
- </table>
+<table class="tftable">
+<tr><th>Date</th><th>Ver</th><th>Comment</th></tr>
+<tr><td>2017-01-27</td><td style="text-align:center">0.5</td><td>Initial publication in HTML5</td></tr>
+</table>
 </div>
-<div style="margin-top:30pt">V0.51, A.Rundgren, 2017-01-24</div>
+<div>
+<div class="header" id="author">Author</div>
+Anders Rundgren (<code>anders.rundgren.net@gmail.com</code>), WebPKI.org
+</div>
 </body></html>
