@@ -159,6 +159,10 @@ The signature system is described in:
 To maintain a &quot;style compatible&quot; messaging concept, a matching encryption scheme was also
 added to the plot: <a href="https://cyberphone.github.io/doc/security/jef.html" target="_blank">https://cyberphone.github.io/doc/security/jef.html</a>.
 </div>
+<div class="new">
+Due to the fact that YASMIN messages are based on pure JSON, <i>countersigning</i> and <i>embedding</i> previous requests do not require any
+special arrangements.
+</div>
 <div>
 <div class="header" id="handlers">Message Handlers and Decoders</div>
 The devised scheme does not specify whether all requests should go to a single handler
@@ -172,10 +176,10 @@ messages to the appropriate sub-handler.  This is trivial using typed messages h
 <span style="color:blue">var</span> output;
 <span style="color:blue">switch</span> (input['<span style="color:green">@qualifier</span>']) {
   <span style="color:blue">case</span> '<span style="color:green">Authorize</span>':
-    output = <span style="color:red">authorize</span>(input);                     <span style="color:grey">// Hypothetical method: "authorize()"</span>
+    output = <span style="color:red">authorize</span>(input);                     <span style="color:grey">// Handler</span>
     <span style="color:blue">break</span>;
   <span style="color:blue">case</span> '<span style="color:green">CommitPayment</span>':
-    output = <span style="color:red">commitPayment</span>(input);                 <span style="color:grey">// Hypothetical method: "commitPayment()"</span>
+    output = <span style="color:red">commitPayment</span>(input);                 <span style="color:grey">// Handler</span>
     <span style="color:blue">break</span>;
   <span style="color:blue">default</span>:
     <span style="color:blue">throw new</span> <span style="color:brown">TypeError</span>('<span style="color:green">Unrecognized Message</span>');
