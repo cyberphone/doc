@@ -190,10 +190,11 @@ messages to the appropriate sub-handler.  This is trivial using typed messages h
 </div>
 <div>
 <div class="header" id="apimapping">Mapping Messages into APIs</div>
-In case you prefer APIs before messages, the following example in Java illustrates how this can be achieved using YASMIN:
+In case you prefer APIs before messages, the following fictitious example in Java illustrates how this <a href="#tools">could be achieved</a> using YASMIN:
 <pre>
-<span style="color:grey">@SimpleReturn</span>(<span style="color:blueviolet">name</span>=&quot;<span style="color:green">currentValue</span>&quot;)
-<span style="color:blue">public double</span> <span style="color:red">setFurnaceTemperature</span>(<span style="color:grey">@Param</span>("<span style="color:green">id</span>") <span style="color:brown">String</span> id, <span style="color:grey">@Param</span>("<span style="color:green">value</span>") <span style="color:blue">double</span> value) <span style="color:blue">throws</span> <span style="color:brown">IOException</span>;
+<span style="color:grey">@YMethod</span>
+<span style="color:grey">@YSimpleReturn</span>(<span style="color:blueviolet">name</span>=&quot;<span style="color:green">currentValue</span>&quot;)
+<span style="color:blue">public double</span> <span style="color:red">setFurnaceTemperature</span>(<span style="color:grey">@YParam</span>("<span style="color:green">id</span>") <span style="color:brown">String</span> id, <span style="color:grey">@YParam</span>("<span style="color:green">value</span>") <span style="color:blue">double</span> value) <span style="color:blue">throws</span> <span style="color:brown">IOException</span>;
 </pre>
 A request would presumably look like the following:
 <div class="fancybox">{
@@ -214,7 +215,7 @@ A matching response would then be:
 <br>}
 <br>
 </div>
-<div>Note: At the time of writing there are currently no specific tools available for creating YASMIN based APIs.</div>
+<div id="tools">Note: <i>At the time of writing there are currently no specific tools available for creating YASMIN based APIs</i>.</div>
 </div>
 <div>
 <div class="header" id="security">Security Considerations</div>
