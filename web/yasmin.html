@@ -11,9 +11,9 @@ div.fancybox {margin:10pt 0pt 0pt 30pt;font-size:9pt;word-break:break-all;width:
 div.header {font-size:14pt;font-family:arial,verdana,helvetica;width:800pt;padding-top:6pt;padding-bottom:8pt;margin:0pt}
 div.new {width:800pt;margin-top:6pt}
 </style></head><body>
-<div><img src="yasmin-logo.svg" title="YASMIN"alt="N/A" style="width:250pt;display:block;margin-left:auto;margin-right:auto;margin-top:35pt;margin-bottom:30pt"></div>
+<div><img src="yasmin-logo.svg" title="YASMIN" alt="N/A" style="width:250pt;display:block;margin-left:auto;margin-right:auto;margin-top:35pt;margin-bottom:30pt"></div>
 <div>
-<div class="header" id="messages">Introduction</div>
+<div class="header" id="introduction">Introduction</div>
 YASMIN (Yet Another jSon Message notatIoN), was designed to offer an alternative to
 <a href="https://en.wikipedia.org/wiki/Representational_state_transfer" target="_blank">REST</a> based APIs, by bringing the following
 enhancements to the table:
@@ -35,7 +35,7 @@ from interfering HTTP bindings, URIs, and clunky <a href="https://www.w3.org/TR/
    However, nothing prevents you from <a href="#apimapping">mapping APIs into messages</a>!
 </div>
 <div>
-<div class="header" id="messages">Use Cases</div>
+<div class="header" id="usecases">Use Cases</div>
 Although YASMIN was initially created for security-related client-applications
 like &quot;wallets&quot;, credential enrollment, etc., it should
 be equally applicable for quite different tasks including bank-to-bank transactions.
@@ -193,7 +193,7 @@ messages to the appropriate sub-handler.  This is trivial using typed messages h
 In case you prefer APIs before messages, the following example in Java illustrates how this can be achieved using YASMIN:
 <pre>
 <span style="color:grey">@SimpleReturn</span>(<span style="color:blueviolet">name</span>=&quot;<span style="color:green">currentValue</span>&quot;)
-<span style="color:blue">public double</span> <span style="color:red">setFurnaceTemperature</span>(<span style="color:brown">String</span> id, <span style="color:blue">double</span> value) <span style="color:blue">throws</span> <span style="color:brown">IOException</span>;
+<span style="color:blue">public double</span> <span style="color:red">setFurnaceTemperature</span>(<span style="color:grey">@Param</span>("<span style="color:green">id</span>") <span style="color:brown">String</span> id, <span style="color:grey">@Param</span>("<span style="color:green">value</span>") <span style="color:blue">double</span> value) <span style="color:blue">throws</span> <span style="color:brown">IOException</span>;
 </pre>
 A request would presumably look like the following:
 <div class="fancybox">{
@@ -228,7 +228,7 @@ Using signed messages is <i>recommended</i> for integrity and authentication pur
 HTTP requests should use TLS (HTTPS) to cater for privacy and end-point authentication.
 </div>
 <div>
-<div class="header" id="applications">Implementations</div>
+<div class="header" id="implementations">Implementations</div>
 <i>Unsigned</i> YASMIN messages can be created with any JSON tool.
 <div class="new">
 <i>Signed</i> YASMIN messages need specific library support, currently only available on GitHub:
@@ -241,7 +241,7 @@ HTTP requests should use TLS (HTTPS) to cater for privacy and end-point authenti
 </table>
 </div>
 <div>
-<div class="header" id="dochist">Document History</div>
+<div class="header" id="history">Document History</div>
 <table class="tftable">
 <tr><th>Date</th><th>Ver</th><th>Comment</th></tr>
 <tr><td>2017-01-27</td><td style="text-align:center">0.5</td><td>Initial publication in HTML5</td></tr>
