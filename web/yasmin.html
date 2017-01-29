@@ -193,7 +193,7 @@ messages to the appropriate sub-handler.  This is trivial using typed messages h
 In case you prefer APIs before messages, the following example in Java illustrates how this can be achieved using YASMIN:
 <pre>
 <span style="color:grey">@SimpleReturn</span>(<span style="color:blueviolet">name</span>=&quot;<span style="color:green">currentValue</span>&quot;)
-<span style="color:blue">public double</span> <span style="color:red">setFurnaceTemperature</span>(<span style="color:brown">String</span> id, <span style="color:blue">double</span> value) <span style="color:blue">throws</span> <span style="color:brown">YasminException</span>;
+<span style="color:blue">public double</span> <span style="color:red">setFurnaceTemperature</span>(<span style="color:brown">String</span> id, <span style="color:blue">double</span> value) <span style="color:blue">throws</span> <span style="color:brown">IOException</span>;
 </pre>
 A request would presumably look like the following:
 <div class="fancybox">{
