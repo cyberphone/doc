@@ -61,7 +61,7 @@ project shows the YASMIN typing scheme:
 <div>
 <i>Explanation:</i> The <code>@context</code> property is essentially a counterpart to an XML name-space,
 while <code>@qualifier</code> emulates an XML top-level element.
-In a typical implementation, <code>@context</code> is a URI constant,
+In a typical implementation, <code>@context</code> is a URI constant identifying &quot;audience&quot;, transport method, security considerations, etc.,
 while <code>@qualifier</code> denotes actual message type.
 </div>
 <div class="new">
@@ -190,7 +190,7 @@ messages to the appropriate sub-handler.  This is trivial using typed messages h
 </div>
 <div>
 <div class="header" id="apimapping">Mapping Messages into APIs</div>
-In case you prefer APIs before messages, the following fictitious example in Java illustrates how this <a href="#tools">could be achieved</a> using YASMIN:
+In case you prefer APIs before <a href="#messages">messages</a>, the following fictitious example in Java illustrates how this <a href="#tools">could be achieved</a> using YASMIN:
 <pre>
 <span style="color:grey">@YService</span>(&quot;<span style="color:green">https://iotstandards.org/device</span>&quot;)
 <span style="color:blue">public class</span> <span style="color:brown">MyService</span> {
