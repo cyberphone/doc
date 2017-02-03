@@ -6,11 +6,16 @@
 <title>EmbeddedHTTPResponseWrapper (WebPKI.org Support)</title>
 
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+<script type="text/javascript" src="../../../script.js"></script>
 </head>
 <body>
 <script type="text/javascript"><!--
-    if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="EmbeddedHTTPResponseWrapper (WebPKI.org Support)";
+    try {
+        if (location.href.indexOf('is-external=true') == -1) {
+            parent.document.title="EmbeddedHTTPResponseWrapper (WebPKI.org Support)";
+        }
+    }
+    catch(err) {
     }
 //-->
 </script>
@@ -18,9 +23,11 @@
 <div>JavaScript is disabled on your browser.</div>
 </noscript>
 <!-- ========= START OF TOP NAVBAR ======= -->
-<div class="topNav"><a name="navbar_top">
+<div class="topNav"><a name="navbar.top">
 <!--   -->
-</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+</a>
+<div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.top.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
@@ -34,15 +41,15 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../org/webpki/securityproxy/ClientRequestHandler.html" title="interface in org.webpki.securityproxy"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../org/webpki/securityproxy/HTTPResponseWrapper.html" title="class in org.webpki.securityproxy"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../org/webpki/securityproxy/ClientRequestHandler.html" title="interface in org.webpki.securityproxy"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../org/webpki/securityproxy/HTTPResponseWrapper.html" title="class in org.webpki.securityproxy"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../index.html?org/webpki/securityproxy/EmbeddedHTTPResponseWrapper.html" target="_top">Frames</a></li>
-<li><a href="EmbeddedHTTPResponseWrapper.html" target="_top">No Frames</a></li>
+<li><a href="EmbeddedHTTPResponseWrapper.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_top">
-<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -61,17 +68,17 @@
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#methods_inherited_from_class_org.webpki.securityproxy.HTTPResponseWrapper">Method</a></li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#methods.inherited.from.class.org.webpki.securityproxy.HTTPResponseWrapper">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li>Method</li>
 </ul>
 </div>
-<a name="skip-navbar_top">
+<a name="skip.navbar.top">
 <!--   -->
 </a></div>
 <!-- ========= END OF TOP NAVBAR ========= -->
@@ -82,7 +89,7 @@
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
-<li><a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
 <li><a href="../../../org/webpki/securityproxy/HTTPResponseWrapper.html" title="class in org.webpki.securityproxy">org.webpki.securityproxy.HTTPResponseWrapper</a></li>
@@ -99,17 +106,20 @@
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="http://download.oracle.com/javase/7/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>, <a href="../../../org/webpki/securityproxy/JavaResponseInterface.html" title="interface in org.webpki.securityproxy">JavaResponseInterface</a></dd>
+<dd><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>, <a href="../../../org/webpki/securityproxy/JavaResponseInterface.html" title="interface in org.webpki.securityproxy">JavaResponseInterface</a></dd>
 </dl>
 <hr>
 <br>
-<pre>public class <span class="strong">EmbeddedHTTPResponseWrapper</span>
+<pre>public class <span class="typeNameLabel">EmbeddedHTTPResponseWrapper</span>
 extends <a href="../../../org/webpki/securityproxy/HTTPResponseWrapper.html" title="class in org.webpki.securityproxy">HTTPResponseWrapper</a>
 implements <a href="../../../org/webpki/securityproxy/JavaResponseInterface.html" title="interface in org.webpki.securityproxy">JavaResponseInterface</a></pre>
 <div class="block">Security proxy object containing a local service's HTTP response.
  This version is supposed to be returned as a <a href="../../../org/webpki/securityproxy/JavaResponseInterface.html" title="interface in org.webpki.securityproxy"><code>JavaResponseInterface</code></a></div>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/securityproxy/ClientRequestHandler.html" title="interface in org.webpki.securityproxy"><code>ClientRequestHandler</code></a>, 
-<a href="../../../serialized-form.html#org.webpki.securityproxy.EmbeddedHTTPResponseWrapper">Serialized Form</a></dd></dl>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../org/webpki/securityproxy/ClientRequestHandler.html" title="interface in org.webpki.securityproxy"><code>ClientRequestHandler</code></a>, 
+<a href="../../../serialized-form.html#org.webpki.securityproxy.EmbeddedHTTPResponseWrapper">Serialized Form</a></dd>
+</dl>
 </li>
 </ul>
 </div>
@@ -118,29 +128,29 @@ implements <a href="../../../org/webpki/securityproxy/JavaResponseInterface.html
 <li class="blockList">
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
-<li class="blockList"><a name="constructor_summary">
+<li class="blockList"><a name="constructor.summary">
 <!--   -->
 </a>
 <h3>Constructor Summary</h3>
-<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
 <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../org/webpki/securityproxy/EmbeddedHTTPResponseWrapper.html#EmbeddedHTTPResponseWrapper(byte[], java.lang.String)">EmbeddedHTTPResponseWrapper</a></strong>(byte[]&nbsp;data,
-                           <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;mimeType)</code>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/securityproxy/EmbeddedHTTPResponseWrapper.html#EmbeddedHTTPResponseWrapper-byte:A-java.lang.String-">EmbeddedHTTPResponseWrapper</a></span>(byte[]&nbsp;data,
+                           <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;mimeType)</code>
 <div class="block">Normal HTTP return</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><strong><a href="../../../org/webpki/securityproxy/EmbeddedHTTPResponseWrapper.html#EmbeddedHTTPResponseWrapper(int, java.lang.String)">EmbeddedHTTPResponseWrapper</a></strong>(int&nbsp;error_status,
-                           <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;error_message)</code>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/securityproxy/EmbeddedHTTPResponseWrapper.html#EmbeddedHTTPResponseWrapper-int-java.lang.String-">EmbeddedHTTPResponseWrapper</a></span>(int&nbsp;error_status,
+                           <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;error_message)</code>
 <div class="block">For passing a HttpServletResponse "sendError"</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../org/webpki/securityproxy/EmbeddedHTTPResponseWrapper.html#EmbeddedHTTPResponseWrapper(java.lang.String)">EmbeddedHTTPResponseWrapper</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;redirect_url)</code>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/securityproxy/EmbeddedHTTPResponseWrapper.html#EmbeddedHTTPResponseWrapper-java.lang.String-">EmbeddedHTTPResponseWrapper</a></span>(<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;redirect_url)</code>
 <div class="block">For passing a HttpServletResponse "sendRedirect"</div>
 </td>
 </tr>
@@ -149,23 +159,23 @@ implements <a href="../../../org/webpki/securityproxy/JavaResponseInterface.html
 </ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
-<li class="blockList"><a name="method_summary">
+<li class="blockList"><a name="method.summary">
 <!--   -->
 </a>
 <h3>Method Summary</h3>
 <ul class="blockList">
-<li class="blockList"><a name="methods_inherited_from_class_org.webpki.securityproxy.HTTPResponseWrapper">
+<li class="blockList"><a name="methods.inherited.from.class.org.webpki.securityproxy.HTTPResponseWrapper">
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.webpki.securityproxy.<a href="../../../org/webpki/securityproxy/HTTPResponseWrapper.html" title="class in org.webpki.securityproxy">HTTPResponseWrapper</a></h3>
-<code><a href="../../../org/webpki/securityproxy/HTTPResponseWrapper.html#addHeader(java.lang.String, java.lang.String)">addHeader</a>, <a href="../../../org/webpki/securityproxy/HTTPResponseWrapper.html#isError()">isError</a></code></li>
+<code><a href="../../../org/webpki/securityproxy/HTTPResponseWrapper.html#addHeader-java.lang.String-java.lang.String-">addHeader</a>, <a href="../../../org/webpki/securityproxy/HTTPResponseWrapper.html#isError--">isError</a></code></li>
 </ul>
 <ul class="blockList">
-<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;java.lang.<a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</a></code></li>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
 </ul>
 </li>
 </ul>
@@ -177,43 +187,54 @@ implements <a href="../../../org/webpki/securityproxy/JavaResponseInterface.html
 <li class="blockList">
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
-<li class="blockList"><a name="constructor_detail">
+<li class="blockList"><a name="constructor.detail">
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="EmbeddedHTTPResponseWrapper(byte[], java.lang.String)">
+<a name="EmbeddedHTTPResponseWrapper-byte:A-java.lang.String-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>EmbeddedHTTPResponseWrapper</h4>
 <pre>public&nbsp;EmbeddedHTTPResponseWrapper(byte[]&nbsp;data,
-                           <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;mimeType)</pre>
+                                   <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;mimeType)</pre>
 <div class="block">Normal HTTP return</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>data</code> - The HTTP body</dd><dd><code>mimeType</code> - The MIME type</dd></dl>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>data</code> - The HTTP body</dd>
+<dd><code>mimeType</code> - The MIME type</dd>
+</dl>
 </li>
 </ul>
-<a name="EmbeddedHTTPResponseWrapper(int, java.lang.String)">
+<a name="EmbeddedHTTPResponseWrapper-int-java.lang.String-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>EmbeddedHTTPResponseWrapper</h4>
 <pre>public&nbsp;EmbeddedHTTPResponseWrapper(int&nbsp;error_status,
-                           <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;error_message)</pre>
+                                   <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;error_message)</pre>
 <div class="block">For passing a HttpServletResponse "sendError"</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>error_status</code> - HTTP error code</dd><dd><code>error_message</code> - HTTP status message</dd></dl>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>error_status</code> - HTTP error code</dd>
+<dd><code>error_message</code> - HTTP status message</dd>
+</dl>
 </li>
 </ul>
-<a name="EmbeddedHTTPResponseWrapper(java.lang.String)">
+<a name="EmbeddedHTTPResponseWrapper-java.lang.String-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>EmbeddedHTTPResponseWrapper</h4>
-<pre>public&nbsp;EmbeddedHTTPResponseWrapper(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;redirect_url)</pre>
+<pre>public&nbsp;EmbeddedHTTPResponseWrapper(<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;redirect_url)</pre>
 <div class="block">For passing a HttpServletResponse "sendRedirect"</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>redirect_url</code> - Arbitrary URL</dd></dl>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>redirect_url</code> - Arbitrary URL</dd>
+</dl>
 </li>
 </ul>
 </li>
@@ -224,9 +245,11 @@ implements <a href="../../../org/webpki/securityproxy/JavaResponseInterface.html
 </div>
 <!-- ========= END OF CLASS DATA ========= -->
 <!-- ======= START OF BOTTOM NAVBAR ====== -->
-<div class="bottomNav"><a name="navbar_bottom">
+<div class="bottomNav"><a name="navbar.bottom">
 <!--   -->
-</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+</a>
+<div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.bottom.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
@@ -240,15 +263,15 @@ implements <a href="../../../org/webpki/securityproxy/JavaResponseInterface.html
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../org/webpki/securityproxy/ClientRequestHandler.html" title="interface in org.webpki.securityproxy"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../org/webpki/securityproxy/HTTPResponseWrapper.html" title="class in org.webpki.securityproxy"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../org/webpki/securityproxy/ClientRequestHandler.html" title="interface in org.webpki.securityproxy"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../org/webpki/securityproxy/HTTPResponseWrapper.html" title="class in org.webpki.securityproxy"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../index.html?org/webpki/securityproxy/EmbeddedHTTPResponseWrapper.html" target="_top">Frames</a></li>
-<li><a href="EmbeddedHTTPResponseWrapper.html" target="_top">No Frames</a></li>
+<li><a href="EmbeddedHTTPResponseWrapper.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_bottom">
-<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -267,17 +290,17 @@ implements <a href="../../../org/webpki/securityproxy/JavaResponseInterface.html
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#methods_inherited_from_class_org.webpki.securityproxy.HTTPResponseWrapper">Method</a></li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#methods.inherited.from.class.org.webpki.securityproxy.HTTPResponseWrapper">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li>Method</li>
 </ul>
 </div>
-<a name="skip-navbar_bottom">
+<a name="skip.navbar.bottom">
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->

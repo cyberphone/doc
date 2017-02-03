@@ -6,21 +6,34 @@
 <title>ProxyServer (WebPKI.org Support)</title>
 
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+<script type="text/javascript" src="../../../script.js"></script>
 </head>
 <body>
 <script type="text/javascript"><!--
-    if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="ProxyServer (WebPKI.org Support)";
+    try {
+        if (location.href.indexOf('is-external=true') == -1) {
+            parent.document.title="ProxyServer (WebPKI.org Support)";
+        }
+    }
+    catch(err) {
     }
 //-->
+var methods = {"i0":10,"i1":10,"i2":9,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":9,"i10":10,"i11":10,"i12":10,"i13":10};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+var altColor = "altColor";
+var rowColor = "rowColor";
+var tableTab = "tableTab";
+var activeTableTab = "activeTableTab";
 </script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
 </noscript>
 <!-- ========= START OF TOP NAVBAR ======= -->
-<div class="topNav"><a name="navbar_top">
+<div class="topNav"><a name="navbar.top">
 <!--   -->
-</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+</a>
+<div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.top.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
@@ -34,15 +47,15 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../org/webpki/securityproxy/ProxyClient.html" title="class in org.webpki.securityproxy"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../org/webpki/securityproxy/ProxyServerErrorFactory.html" title="class in org.webpki.securityproxy"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../org/webpki/securityproxy/ProxyClient.html" title="class in org.webpki.securityproxy"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../org/webpki/securityproxy/ProxyServerErrorFactory.html" title="class in org.webpki.securityproxy"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../index.html?org/webpki/securityproxy/ProxyServer.html" target="_top">Frames</a></li>
-<li><a href="ProxyServer.html" target="_top">No Frames</a></li>
+<li><a href="ProxyServer.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_top">
-<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -60,18 +73,18 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
-<li><a href="#method_summary">Method</a></li>
+<li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
-<li><a href="#method_detail">Method</a></li>
+<li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
-<a name="skip-navbar_top">
+<a name="skip.navbar.top">
 <!--   -->
 </a></div>
 <!-- ========= END OF TOP NAVBAR ========= -->
@@ -82,7 +95,7 @@
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
-<li><a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
 <li>org.webpki.securityproxy.ProxyServer</li>
@@ -94,11 +107,14 @@
 <li class="blockList">
 <hr>
 <br>
-<pre>public class <span class="strong">ProxyServer</span>
-extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+<pre>public class <span class="typeNameLabel">ProxyServer</span>
+extends <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">Security proxy server core logic.
  Called by a proxy servlet application.</div>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/securityproxy/ProxyChannelServlet.html" title="class in org.webpki.securityproxy"><code>ProxyChannelServlet</code></a></dd></dl>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../org/webpki/securityproxy/ProxyChannelServlet.html" title="class in org.webpki.securityproxy"><code>ProxyChannelServlet</code></a></dd>
+</dl>
 </li>
 </ul>
 </div>
@@ -107,31 +123,31 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <li class="blockList">
 <!-- =========== FIELD SUMMARY =========== -->
 <ul class="blockList">
-<li class="blockList"><a name="field_summary">
+<li class="blockList"><a name="field.summary">
 <!--   -->
 </a>
 <h3>Field Summary</h3>
-<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
 <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/securityproxy/ProxyServer.html#PROXY_REMOTE_ADDRESS_PROPERTY">PROXY_REMOTE_ADDRESS_PROPERTY</a></strong></code>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/securityproxy/ProxyServer.html#PROXY_REMOTE_ADDRESS_PROPERTY">PROXY_REMOTE_ADDRESS_PROPERTY</a></span></code>
 <div class="block">web.xml servlet init parameter.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/securityproxy/ProxyServer.html#PROXY_SERVER_PORT_PROPERTY">PROXY_SERVER_PORT_PROPERTY</a></strong></code>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/securityproxy/ProxyServer.html#PROXY_SERVER_PORT_PROPERTY">PROXY_SERVER_PORT_PROPERTY</a></span></code>
 <div class="block">web.xml servlet init parameter.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/securityproxy/ProxyServer.html#PROXY_SERVICE_PROPERTY">PROXY_SERVICE_PROPERTY</a></strong></code>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/securityproxy/ProxyServer.html#PROXY_SERVICE_PROPERTY">PROXY_SERVICE_PROPERTY</a></span></code>
 <div class="block">web.xml servlet init parameter.</div>
 </td>
 </tr>
@@ -140,99 +156,99 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 </ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
-<li class="blockList"><a name="method_summary">
+<li class="blockList"><a name="method.summary">
 <!--   -->
 </a>
 <h3>Method Summary</h3>
-<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
-<tr class="altColor">
+<tr id="i0" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/securityproxy/ProxyServer.html#addUploadEventHandler(org.webpki.securityproxy.ServerUploadHandler)">addUploadEventHandler</a></strong>(<a href="../../../org/webpki/securityproxy/ServerUploadHandler.html" title="interface in org.webpki.securityproxy">ServerUploadHandler</a>&nbsp;handler)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/securityproxy/ProxyServer.html#addUploadEventHandler-org.webpki.securityproxy.ServerUploadHandler-">addUploadEventHandler</a></span>(<a href="../../../org/webpki/securityproxy/ServerUploadHandler.html" title="interface in org.webpki.securityproxy">ServerUploadHandler</a>&nbsp;handler)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/securityproxy/ProxyServer.html#deleteUploadEventHandler(org.webpki.securityproxy.ServerUploadHandler)">deleteUploadEventHandler</a></strong>(<a href="../../../org/webpki/securityproxy/ServerUploadHandler.html" title="interface in org.webpki.securityproxy">ServerUploadHandler</a>&nbsp;handler)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/securityproxy/ProxyServer.html#deleteUploadEventHandler-org.webpki.securityproxy.ServerUploadHandler-">deleteUploadEventHandler</a></span>(<a href="../../../org/webpki/securityproxy/ServerUploadHandler.html" title="interface in org.webpki.securityproxy">ServerUploadHandler</a>&nbsp;handler)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>static <a href="../../../org/webpki/securityproxy/ProxyServer.html" title="class in org.webpki.securityproxy">ProxyServer</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/securityproxy/ProxyServer.html#getInstance(java.lang.String)">getInstance</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name_of_service)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/securityproxy/ProxyServer.html#getInstance-java.lang.String-">getInstance</a></span>(<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name_of_service)</code>
 <div class="block">Create proxy service instance.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/webpki/securityproxy/JavaRequestInterface.html" title="interface in org.webpki.securityproxy">JavaRequestInterface</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/securityproxy/ProxyServer.html#getLastRequestObject()">getLastRequestObject</a></strong>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/securityproxy/ProxyServer.html#getLastRequestObject--">getLastRequestObject</a></span>()</code>
 <div class="block">Proxy server status method.</div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/securityproxy/ProxyServer.html#getProxyClientID()">getProxyClientID</a></strong>()</code>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/securityproxy/ProxyServer.html#getProxyClientID--">getProxyClientID</a></span>()</code>
 <div class="block">Proxy server status method.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/securityproxy/ProxyServer.html#getProxyQueueLength()">getProxyQueueLength</a></strong>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/securityproxy/ProxyServer.html#getProxyQueueLength--">getProxyQueueLength</a></span>()</code>
 <div class="block">Proxy server status method.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/securityproxy/ProxyServer.html#getRequestTimeouts()">getRequestTimeouts</a></strong>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/securityproxy/ProxyServer.html#getRequestTimeouts--">getRequestTimeouts</a></span>()</code>
 <div class="block">Proxy server status method.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/securityproxy/ProxyServer.html#getResponseTimeouts()">getResponseTimeouts</a></strong>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/securityproxy/ProxyServer.html#getResponseTimeouts--">getResponseTimeouts</a></span>()</code>
 <div class="block">Proxy server status method.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/securityproxy/ProxyServer.html#isReady()">isReady</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/securityproxy/ProxyServer.html#isReady--">isReady</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/securityproxy/ProxyServer.html#outputHTTPResponse(javax.servlet.http.HttpServletResponse, org.webpki.securityproxy.HTTPResponseWrapper)">outputHTTPResponse</a></strong>(<a href="http://download.oracle.com/javaee/6/api/javax/servlet/http/HttpServletResponse.html?is-external=true" title="class or interface in javax.servlet.http">HttpServletResponse</a>&nbsp;response,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/securityproxy/ProxyServer.html#outputHTTPResponse-javax.servlet.http.HttpServletResponse-org.webpki.securityproxy.HTTPResponseWrapper-">outputHTTPResponse</a></span>(<a href="http://download.oracle.com/javaee/6/api/javax/servlet/http/HttpServletResponse.html?is-external=true" title="class or interface in javax.servlet.http">HttpServletResponse</a>&nbsp;response,
                   <a href="../../../org/webpki/securityproxy/HTTPResponseWrapper.html" title="class in org.webpki.securityproxy">HTTPResponseWrapper</a>&nbsp;http_data)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/securityproxy/JavaResponseInterface.html" title="interface in org.webpki.securityproxy">JavaResponseInterface</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/securityproxy/ProxyServer.html#processCall(org.webpki.securityproxy.JavaRequestInterface)">processCall</a></strong>(<a href="../../../org/webpki/securityproxy/JavaRequestInterface.html" title="interface in org.webpki.securityproxy">JavaRequestInterface</a>&nbsp;proxy_request_object)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/securityproxy/ProxyServer.html#processCall-org.webpki.securityproxy.JavaRequestInterface-">processCall</a></span>(<a href="../../../org/webpki/securityproxy/JavaRequestInterface.html" title="interface in org.webpki.securityproxy">JavaRequestInterface</a>&nbsp;proxy_request_object)</code>
 <div class="block">Proxy external call handler.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/securityproxy/ProxyServer.html#processCall(org.webpki.securityproxy.JavaRequestInterface, javax.servlet.http.HttpServletResponse)">processCall</a></strong>(<a href="../../../org/webpki/securityproxy/JavaRequestInterface.html" title="interface in org.webpki.securityproxy">JavaRequestInterface</a>&nbsp;proxy_request_object,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/securityproxy/ProxyServer.html#processCall-org.webpki.securityproxy.JavaRequestInterface-javax.servlet.http.HttpServletResponse-">processCall</a></span>(<a href="../../../org/webpki/securityproxy/JavaRequestInterface.html" title="interface in org.webpki.securityproxy">JavaRequestInterface</a>&nbsp;proxy_request_object,
            <a href="http://download.oracle.com/javaee/6/api/javax/servlet/http/HttpServletResponse.html?is-external=true" title="class or interface in javax.servlet.http">HttpServletResponse</a>&nbsp;response)</code>
 <div class="block">Proxy external call handler.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/securityproxy/ProxyServer.html#resetProxy()">resetProxy</a></strong>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/securityproxy/ProxyServer.html#resetProxy--">resetProxy</a></span>()</code>
 <div class="block">Proxy server reset.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/securityproxy/ProxyServer.html#setProxyServerErrorFactory(java.lang.Class)">setProxyServerErrorFactory</a></strong>(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../org/webpki/securityproxy/ProxyServerErrorFactory.html" title="class in org.webpki.securityproxy">ProxyServerErrorFactory</a>&gt;&nbsp;error_container)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/securityproxy/ProxyServer.html#setProxyServerErrorFactory-java.lang.Class-">setProxyServerErrorFactory</a></span>(<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../org/webpki/securityproxy/ProxyServerErrorFactory.html" title="class in org.webpki.securityproxy">ProxyServerErrorFactory</a>&gt;&nbsp;error_container)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
-<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;java.lang.<a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</a></code></li>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
 </ul>
 </li>
 </ul>
@@ -244,7 +260,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <li class="blockList">
 <!-- ============ FIELD DETAIL =========== -->
 <ul class="blockList">
-<li class="blockList"><a name="field_detail">
+<li class="blockList"><a name="field.detail">
 <!--   -->
 </a>
 <h3>Field Detail</h3>
@@ -254,11 +270,14 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <ul class="blockList">
 <li class="blockList">
 <h4>PROXY_REMOTE_ADDRESS_PROPERTY</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> PROXY_REMOTE_ADDRESS_PROPERTY</pre>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> PROXY_REMOTE_ADDRESS_PROPERTY</pre>
 <div class="block">web.xml servlet init parameter.
  Optional remote IP address check for systems using shared ports.</div>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/securityproxy/ProxyChannelServlet.html" title="class in org.webpki.securityproxy"><code>ProxyChannelServlet</code></a>, 
-<a href="../../../constant-values.html#org.webpki.securityproxy.ProxyServer.PROXY_REMOTE_ADDRESS_PROPERTY">Constant Field Values</a></dd></dl>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../org/webpki/securityproxy/ProxyChannelServlet.html" title="class in org.webpki.securityproxy"><code>ProxyChannelServlet</code></a>, 
+<a href="../../../constant-values.html#org.webpki.securityproxy.ProxyServer.PROXY_REMOTE_ADDRESS_PROPERTY">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="PROXY_SERVER_PORT_PROPERTY">
@@ -267,11 +286,14 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <ul class="blockList">
 <li class="blockList">
 <h4>PROXY_SERVER_PORT_PROPERTY</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> PROXY_SERVER_PORT_PROPERTY</pre>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> PROXY_SERVER_PORT_PROPERTY</pre>
 <div class="block">web.xml servlet init parameter.
  Optional server port check for systems using shared ports.</div>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/securityproxy/ProxyChannelServlet.html" title="class in org.webpki.securityproxy"><code>ProxyChannelServlet</code></a>, 
-<a href="../../../constant-values.html#org.webpki.securityproxy.ProxyServer.PROXY_SERVER_PORT_PROPERTY">Constant Field Values</a></dd></dl>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../org/webpki/securityproxy/ProxyChannelServlet.html" title="class in org.webpki.securityproxy"><code>ProxyChannelServlet</code></a>, 
+<a href="../../../constant-values.html#org.webpki.securityproxy.ProxyServer.PROXY_SERVER_PORT_PROPERTY">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="PROXY_SERVICE_PROPERTY">
@@ -280,23 +302,26 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <ul class="blockListLast">
 <li class="blockList">
 <h4>PROXY_SERVICE_PROPERTY</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> PROXY_SERVICE_PROPERTY</pre>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> PROXY_SERVICE_PROPERTY</pre>
 <div class="block">web.xml servlet init parameter.
  Mandatory name of proxy service.
- An "Outer Service" must refer to the same name in <a href="../../../org/webpki/securityproxy/ProxyServer.html#getInstance(java.lang.String)"><code>getInstance(String)</code></a>.</div>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/securityproxy/ProxyChannelServlet.html" title="class in org.webpki.securityproxy"><code>ProxyChannelServlet</code></a>, 
-<a href="../../../constant-values.html#org.webpki.securityproxy.ProxyServer.PROXY_SERVICE_PROPERTY">Constant Field Values</a></dd></dl>
+ An "Outer Service" must refer to the same name in <a href="../../../org/webpki/securityproxy/ProxyServer.html#getInstance-java.lang.String-"><code>getInstance(String)</code></a>.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../org/webpki/securityproxy/ProxyChannelServlet.html" title="class in org.webpki.securityproxy"><code>ProxyChannelServlet</code></a>, 
+<a href="../../../constant-values.html#org.webpki.securityproxy.ProxyServer.PROXY_SERVICE_PROPERTY">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 </li>
 </ul>
 <!-- ============ METHOD DETAIL ========== -->
 <ul class="blockList">
-<li class="blockList"><a name="method_detail">
+<li class="blockList"><a name="method.detail">
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="addUploadEventHandler(org.webpki.securityproxy.ServerUploadHandler)">
+<a name="addUploadEventHandler-org.webpki.securityproxy.ServerUploadHandler-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -305,7 +330,7 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <pre>public&nbsp;void&nbsp;addUploadEventHandler(<a href="../../../org/webpki/securityproxy/ServerUploadHandler.html" title="interface in org.webpki.securityproxy">ServerUploadHandler</a>&nbsp;handler)</pre>
 </li>
 </ul>
-<a name="deleteUploadEventHandler(org.webpki.securityproxy.ServerUploadHandler)">
+<a name="deleteUploadEventHandler-org.webpki.securityproxy.ServerUploadHandler-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -314,20 +339,24 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <pre>public&nbsp;void&nbsp;deleteUploadEventHandler(<a href="../../../org/webpki/securityproxy/ServerUploadHandler.html" title="interface in org.webpki.securityproxy">ServerUploadHandler</a>&nbsp;handler)</pre>
 </li>
 </ul>
-<a name="getInstance(java.lang.String)">
+<a name="getInstance-java.lang.String-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getInstance</h4>
-<pre>public static&nbsp;<a href="../../../org/webpki/securityproxy/ProxyServer.html" title="class in org.webpki.securityproxy">ProxyServer</a>&nbsp;getInstance(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name_of_service)</pre>
+<pre>public static&nbsp;<a href="../../../org/webpki/securityproxy/ProxyServer.html" title="class in org.webpki.securityproxy">ProxyServer</a>&nbsp;getInstance(<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name_of_service)</pre>
 <div class="block">Create proxy service instance.
  Note that there can only be one instance of a specific named service running in a single JVM.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name_of_service</code> - Unique name</dd>
-<dt><span class="strong">Returns:</span></dt><dd>ProxyServer</dd></dl>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name_of_service</code> - Unique name</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>ProxyServer</dd>
+</dl>
 </li>
 </ul>
-<a name="getLastRequestObject()">
+<a name="getLastRequestObject--">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -336,24 +365,30 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <pre>public&nbsp;<a href="../../../org/webpki/securityproxy/JavaRequestInterface.html" title="interface in org.webpki.securityproxy">JavaRequestInterface</a>&nbsp;getLastRequestObject()</pre>
 <div class="block">Proxy server status method.
  <p></div>
-<dl><dt><span class="strong">Returns:</span></dt><dd>The last (if any) request object. Will be <code>null</code> if
- there has been no external access yet.</dd></dl>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The last (if any) request object. Will be <code>null</code> if
+ there has been no external access yet.</dd>
+</dl>
 </li>
 </ul>
-<a name="getProxyClientID()">
+<a name="getProxyClientID--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getProxyClientID</h4>
-<pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getProxyClientID()</pre>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getProxyClientID()</pre>
 <div class="block">Proxy server status method.
  <p></div>
-<dl><dt><span class="strong">Returns:</span></dt><dd>The instance ID of the proxy client. Will be <code>null</code> if
- the proxy client has not yet called the proxy server.</dd></dl>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The instance ID of the proxy client. Will be <code>null</code> if
+ the proxy client has not yet called the proxy server.</dd>
+</dl>
 </li>
 </ul>
-<a name="getProxyQueueLength()">
+<a name="getProxyQueueLength--">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -362,10 +397,13 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <pre>public&nbsp;int&nbsp;getProxyQueueLength()</pre>
 <div class="block">Proxy server status method.
  <p></div>
-<dl><dt><span class="strong">Returns:</span></dt><dd>The number of proxy channels that are in a waiting state.</dd></dl>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The number of proxy channels that are in a waiting state.</dd>
+</dl>
 </li>
 </ul>
-<a name="getRequestTimeouts()">
+<a name="getRequestTimeouts--">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -374,10 +412,13 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <pre>public&nbsp;int&nbsp;getRequestTimeouts()</pre>
 <div class="block">Proxy server status method.
  <p></div>
-<dl><dt><span class="strong">Returns:</span></dt><dd>The number of request timeout errors occurred so far.</dd></dl>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The number of request timeout errors occurred so far.</dd>
+</dl>
 </li>
 </ul>
-<a name="getResponseTimeouts()">
+<a name="getResponseTimeouts--">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -386,10 +427,13 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <pre>public&nbsp;int&nbsp;getResponseTimeouts()</pre>
 <div class="block">Proxy server status method.
  <p></div>
-<dl><dt><span class="strong">Returns:</span></dt><dd>The number of response timeout errors occurred so far.</dd></dl>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The number of response timeout errors occurred so far.</dd>
+</dl>
 </li>
 </ul>
-<a name="isReady()">
+<a name="isReady--">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -398,56 +442,66 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <pre>public&nbsp;boolean&nbsp;isReady()</pre>
 </li>
 </ul>
-<a name="outputHTTPResponse(javax.servlet.http.HttpServletResponse, org.webpki.securityproxy.HTTPResponseWrapper)">
+<a name="outputHTTPResponse-javax.servlet.http.HttpServletResponse-org.webpki.securityproxy.HTTPResponseWrapper-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>outputHTTPResponse</h4>
 <pre>public static&nbsp;void&nbsp;outputHTTPResponse(<a href="http://download.oracle.com/javaee/6/api/javax/servlet/http/HttpServletResponse.html?is-external=true" title="class or interface in javax.servlet.http">HttpServletResponse</a>&nbsp;response,
-                      <a href="../../../org/webpki/securityproxy/HTTPResponseWrapper.html" title="class in org.webpki.securityproxy">HTTPResponseWrapper</a>&nbsp;http_data)
-                               throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+                                      <a href="../../../org/webpki/securityproxy/HTTPResponseWrapper.html" title="class in org.webpki.securityproxy">HTTPResponseWrapper</a>&nbsp;http_data)
+                               throws <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+</dl>
 </li>
 </ul>
-<a name="processCall(org.webpki.securityproxy.JavaRequestInterface)">
+<a name="processCall-org.webpki.securityproxy.JavaRequestInterface-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>processCall</h4>
 <pre>public&nbsp;<a href="../../../org/webpki/securityproxy/JavaResponseInterface.html" title="interface in org.webpki.securityproxy">JavaResponseInterface</a>&nbsp;processCall(<a href="../../../org/webpki/securityproxy/JavaRequestInterface.html" title="interface in org.webpki.securityproxy">JavaRequestInterface</a>&nbsp;proxy_request_object)
-                                  throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+                                  throws <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Proxy external call handler.
  <p>
  This method forwards an external call through the proxy tunnel, as well
  as returning the associated response data.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>proxy_request_object</code> - The request data object.</dd>
-<dt><span class="strong">Returns:</span></dt><dd>A Java object</dd>
-<dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If something unexpected happens...</dd></dl>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>proxy_request_object</code> - The request data object.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>A Java object</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If something unexpected happens...</dd>
+</dl>
 </li>
 </ul>
-<a name="processCall(org.webpki.securityproxy.JavaRequestInterface, javax.servlet.http.HttpServletResponse)">
+<a name="processCall-org.webpki.securityproxy.JavaRequestInterface-javax.servlet.http.HttpServletResponse-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>processCall</h4>
 <pre>public&nbsp;void&nbsp;processCall(<a href="../../../org/webpki/securityproxy/JavaRequestInterface.html" title="interface in org.webpki.securityproxy">JavaRequestInterface</a>&nbsp;proxy_request_object,
-               <a href="http://download.oracle.com/javaee/6/api/javax/servlet/http/HttpServletResponse.html?is-external=true" title="class or interface in javax.servlet.http">HttpServletResponse</a>&nbsp;response)
-                 throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+                        <a href="http://download.oracle.com/javaee/6/api/javax/servlet/http/HttpServletResponse.html?is-external=true" title="class or interface in javax.servlet.http">HttpServletResponse</a>&nbsp;response)
+                 throws <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Proxy external call handler.
  <p>
  This method forwards an external call through the proxy tunnel, as well
  as returning the associated response data.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>proxy_request_object</code> - The request data object.</dd><dd><code>response</code> - The response object of the external call Servlet.</dd>
-<dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If something unexpected happens...</dd></dl>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>proxy_request_object</code> - The request data object.</dd>
+<dd><code>response</code> - The response object of the external call Servlet.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If something unexpected happens...</dd>
+</dl>
 </li>
 </ul>
-<a name="resetProxy()">
+<a name="resetProxy--">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -458,13 +512,13 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
  called by context destruction/reload in Servlets.</div>
 </li>
 </ul>
-<a name="setProxyServerErrorFactory(java.lang.Class)">
+<a name="setProxyServerErrorFactory-java.lang.Class-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>setProxyServerErrorFactory</h4>
-<pre>public&nbsp;void&nbsp;setProxyServerErrorFactory(<a href="http://download.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../org/webpki/securityproxy/ProxyServerErrorFactory.html" title="class in org.webpki.securityproxy">ProxyServerErrorFactory</a>&gt;&nbsp;error_container)</pre>
+<pre>public&nbsp;void&nbsp;setProxyServerErrorFactory(<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../org/webpki/securityproxy/ProxyServerErrorFactory.html" title="class in org.webpki.securityproxy">ProxyServerErrorFactory</a>&gt;&nbsp;error_container)</pre>
 </li>
 </ul>
 </li>
@@ -475,9 +529,11 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 </div>
 <!-- ========= END OF CLASS DATA ========= -->
 <!-- ======= START OF BOTTOM NAVBAR ====== -->
-<div class="bottomNav"><a name="navbar_bottom">
+<div class="bottomNav"><a name="navbar.bottom">
 <!--   -->
-</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+</a>
+<div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.bottom.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
@@ -491,15 +547,15 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../org/webpki/securityproxy/ProxyClient.html" title="class in org.webpki.securityproxy"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../org/webpki/securityproxy/ProxyServerErrorFactory.html" title="class in org.webpki.securityproxy"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../org/webpki/securityproxy/ProxyClient.html" title="class in org.webpki.securityproxy"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../org/webpki/securityproxy/ProxyServerErrorFactory.html" title="class in org.webpki.securityproxy"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../index.html?org/webpki/securityproxy/ProxyServer.html" target="_top">Frames</a></li>
-<li><a href="ProxyServer.html" target="_top">No Frames</a></li>
+<li><a href="ProxyServer.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_bottom">
-<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -517,18 +573,18 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
-<li><a href="#method_summary">Method</a></li>
+<li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
-<li><a href="#method_detail">Method</a></li>
+<li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
-<a name="skip-navbar_bottom">
+<a name="skip.navbar.bottom">
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->

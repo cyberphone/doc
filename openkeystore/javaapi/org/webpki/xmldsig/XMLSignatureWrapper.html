@@ -6,21 +6,34 @@
 <title>XMLSignatureWrapper (WebPKI.org Support)</title>
 
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+<script type="text/javascript" src="../../../script.js"></script>
 </head>
 <body>
 <script type="text/javascript"><!--
-    if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="XMLSignatureWrapper (WebPKI.org Support)";
+    try {
+        if (location.href.indexOf('is-external=true') == -1) {
+            parent.document.title="XMLSignatureWrapper (WebPKI.org Support)";
+        }
+    }
+    catch(err) {
     }
 //-->
+var methods = {"i0":9,"i1":9,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":9,"i9":9,"i10":9,"i11":10,"i12":9,"i13":9,"i14":9};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+var altColor = "altColor";
+var rowColor = "rowColor";
+var tableTab = "tableTab";
+var activeTableTab = "activeTableTab";
 </script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
 </noscript>
 <!-- ========= START OF TOP NAVBAR ======= -->
-<div class="topNav"><a name="navbar_top">
+<div class="topNav"><a name="navbar.top">
 <!--   -->
-</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+</a>
+<div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.top.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
@@ -34,15 +47,15 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../org/webpki/xmldsig/XMLEnvelopedInput.html" title="interface in org.webpki.xmldsig"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../org/webpki/xmldsig/XMLSigner.html" title="class in org.webpki.xmldsig"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../org/webpki/xmldsig/XMLEnvelopedInput.html" title="interface in org.webpki.xmldsig"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../org/webpki/xmldsig/XMLSigner.html" title="class in org.webpki.xmldsig"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../index.html?org/webpki/xmldsig/XMLSignatureWrapper.html" target="_top">Frames</a></li>
-<li><a href="XMLSignatureWrapper.html" target="_top">No Frames</a></li>
+<li><a href="XMLSignatureWrapper.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_top">
-<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -60,18 +73,18 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
-<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#method_summary">Method</a></li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
-<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#method_detail">Method</a></li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
-<a name="skip-navbar_top">
+<a name="skip.navbar.top">
 <!--   -->
 </a></div>
 <!-- ========= END OF TOP NAVBAR ========= -->
@@ -82,7 +95,7 @@
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
-<li><a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
 <li><a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">org.webpki.xml.XMLObjectWrapper</a></li>
@@ -99,14 +112,17 @@
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="http://download.oracle.com/javase/7/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a></dd>
+<dd><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a></dd>
 </dl>
 <hr>
 <br>
-<pre>public class <span class="strong">XMLSignatureWrapper</span>
+<pre>public class <span class="typeNameLabel">XMLSignatureWrapper</span>
 extends <a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a>
-implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a></pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../serialized-form.html#org.webpki.xmldsig.XMLSignatureWrapper">Serialized Form</a></dd></dl>
+implements <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../serialized-form.html#org.webpki.xmldsig.XMLSignatureWrapper">Serialized Form</a></dd>
+</dl>
 </li>
 </ul>
 </div>
@@ -115,279 +131,279 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <li class="blockList">
 <!-- =========== FIELD SUMMARY =========== -->
 <ul class="blockList">
-<li class="blockList"><a name="field_summary">
+<li class="blockList"><a name="field.summary">
 <!--   -->
 </a>
 <h3>Field Summary</h3>
-<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
 <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#ALGORITHM_ATTR">ALGORITHM_ATTR</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#ALGORITHM_ATTR">ALGORITHM_ATTR</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#CANONICALIZATION_METHOD_ELEM">CANONICALIZATION_METHOD_ELEM</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#CANONICALIZATION_METHOD_ELEM">CANONICALIZATION_METHOD_ELEM</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#DIGEST_METHOD_ELEM">DIGEST_METHOD_ELEM</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#DIGEST_METHOD_ELEM">DIGEST_METHOD_ELEM</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#DIGEST_VALUE_ELEM">DIGEST_VALUE_ELEM</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#DIGEST_VALUE_ELEM">DIGEST_VALUE_ELEM</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#EC_KEY_VALUE_ELEM">EC_KEY_VALUE_ELEM</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#EC_KEY_VALUE_ELEM">EC_KEY_VALUE_ELEM</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#EC_NAMED_CURVES_OID">EC_NAMED_CURVES_OID</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#EC_NAMED_CURVES_OID">EC_NAMED_CURVES_OID</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#ENVELOPED_URI">ENVELOPED_URI</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#ENVELOPED_URI">ENVELOPED_URI</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#EXPONENT_ELEM">EXPONENT_ELEM</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#EXPONENT_ELEM">EXPONENT_ELEM</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#ID_ATTR">ID_ATTR</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#ID_ATTR">ID_ATTR</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#KEY_INFO_ELEM">KEY_INFO_ELEM</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#KEY_INFO_ELEM">KEY_INFO_ELEM</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#KEY_NAME_ELEM">KEY_NAME_ELEM</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#KEY_NAME_ELEM">KEY_NAME_ELEM</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#KEY_VALUE_ELEM">KEY_VALUE_ELEM</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#KEY_VALUE_ELEM">KEY_VALUE_ELEM</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#MODULUS_ELEM">MODULUS_ELEM</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#MODULUS_ELEM">MODULUS_ELEM</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#NAMED_CURVE_ELEM">NAMED_CURVE_ELEM</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#NAMED_CURVE_ELEM">NAMED_CURVE_ELEM</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#OBJECT_ELEM">OBJECT_ELEM</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#OBJECT_ELEM">OBJECT_ELEM</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#PUBLIC_KEY_ELEM">PUBLIC_KEY_ELEM</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#PUBLIC_KEY_ELEM">PUBLIC_KEY_ELEM</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#REFERENCE_ELEM">REFERENCE_ELEM</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#REFERENCE_ELEM">REFERENCE_ELEM</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#RSA_KEY_VALUE_ELEM">RSA_KEY_VALUE_ELEM</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#RSA_KEY_VALUE_ELEM">RSA_KEY_VALUE_ELEM</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#SIGNATURE_ELEM">SIGNATURE_ELEM</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#SIGNATURE_ELEM">SIGNATURE_ELEM</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#SIGNATURE_METHOD_ELEM">SIGNATURE_METHOD_ELEM</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#SIGNATURE_METHOD_ELEM">SIGNATURE_METHOD_ELEM</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#SIGNATURE_VALUE_ELEM">SIGNATURE_VALUE_ELEM</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#SIGNATURE_VALUE_ELEM">SIGNATURE_VALUE_ELEM</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#SIGNED_INFO_ELEM">SIGNED_INFO_ELEM</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#SIGNED_INFO_ELEM">SIGNED_INFO_ELEM</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#TRANSFORM_ELEM">TRANSFORM_ELEM</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#TRANSFORM_ELEM">TRANSFORM_ELEM</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#TRANSFORMS_ELEM">TRANSFORMS_ELEM</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#TRANSFORMS_ELEM">TRANSFORMS_ELEM</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#URI_ATTR">URI_ATTR</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#URI_ATTR">URI_ATTR</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#X509_CERTIFICATE_ELEM">X509_CERTIFICATE_ELEM</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#X509_CERTIFICATE_ELEM">X509_CERTIFICATE_ELEM</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#X509_DATA_ELEM">X509_DATA_ELEM</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#X509_DATA_ELEM">X509_DATA_ELEM</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#X509_ISSUER_NAME_ELEM">X509_ISSUER_NAME_ELEM</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#X509_ISSUER_NAME_ELEM">X509_ISSUER_NAME_ELEM</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#X509_ISSUER_SERIAL_ELEM">X509_ISSUER_SERIAL_ELEM</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#X509_ISSUER_SERIAL_ELEM">X509_ISSUER_SERIAL_ELEM</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#X509_SERIAL_NUMBER_ELEM">X509_SERIAL_NUMBER_ELEM</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#X509_SERIAL_NUMBER_ELEM">X509_SERIAL_NUMBER_ELEM</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#X509_SUBJECT_NAME_ELEM">X509_SUBJECT_NAME_ELEM</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#X509_SUBJECT_NAME_ELEM">X509_SUBJECT_NAME_ELEM</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#XML_DSIG_NS">XML_DSIG_NS</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#XML_DSIG_NS">XML_DSIG_NS</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#XML_DSIG_NS_PREFIX">XML_DSIG_NS_PREFIX</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#XML_DSIG_NS_PREFIX">XML_DSIG_NS_PREFIX</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#XML_DSIG11_NS">XML_DSIG11_NS</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#XML_DSIG11_NS">XML_DSIG11_NS</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#XML_DSIG11_NS_PREFIX">XML_DSIG11_NS_PREFIX</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#XML_DSIG11_NS_PREFIX">XML_DSIG11_NS_PREFIX</a></span></code>&nbsp;</td>
 </tr>
 </table>
 </li>
 </ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
-<li class="blockList"><a name="constructor_summary">
+<li class="blockList"><a name="constructor.summary">
 <!--   -->
 </a>
 <h3>Constructor Summary</h3>
-<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
 <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#XMLSignatureWrapper()">XMLSignatureWrapper</a></strong>()</code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#XMLSignatureWrapper--">XMLSignatureWrapper</a></span>()</code>&nbsp;</td>
 </tr>
 </table>
 </li>
 </ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
-<li class="blockList"><a name="method_summary">
+<li class="blockList"><a name="method.summary">
 <!--   -->
 </a>
 <h3>Method Summary</h3>
-<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
-<tr class="altColor">
+<tr id="i0" class="altColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#addXMLSignature11NS(org.webpki.xml.DOMWriterHelper)">addXMLSignature11NS</a></strong>(<a href="../../../org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a>&nbsp;wr)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#addXMLSignature11NS-org.webpki.xml.DOMWriterHelper-">addXMLSignature11NS</a></span>(<a href="../../../org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a>&nbsp;wr)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#addXMLSignatureNS(org.webpki.xml.DOMWriterHelper)">addXMLSignatureNS</a></strong>(<a href="../../../org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a>&nbsp;wr)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#addXMLSignatureNS-org.webpki.xml.DOMWriterHelper-">addXMLSignatureNS</a></span>(<a href="../../../org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a>&nbsp;wr)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#element()">element</a></strong>()</code>
-<div class="block">The element in the <a href="../../../org/webpki/xml/XMLObjectWrapper.html#namespace()"><code>target namespace</code></a> that this class handles.</div>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#element--">element</a></span>()</code>
+<div class="block">The element in the <a href="../../../org/webpki/xml/XMLObjectWrapper.html#namespace--"><code>target namespace</code></a> that this class handles.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#fromXML(org.webpki.xml.DOMReaderHelper)">fromXML</a></strong>(<a href="../../../org/webpki/xml/DOMReaderHelper.html" title="class in org.webpki.xml">DOMReaderHelper</a>&nbsp;rd)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#fromXML-org.webpki.xml.DOMReaderHelper-">fromXML</a></span>(<a href="../../../org/webpki/xml/DOMReaderHelper.html" title="class in org.webpki.xml">DOMReaderHelper</a>&nbsp;rd)</code>
 <div class="block">Initialize the object from it's XML-encoding.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#getWrappedData()">getWrappedData</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#getWrappedData--">getWrappedData</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#hasQualifiedElements()">hasQualifiedElements</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#hasQualifiedElements--">hasQualifiedElements</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#init()">init</a></strong>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#init--">init</a></span>()</code>
 <div class="block">Init method called when the wrapper class is added to an
  <a href="../../../org/webpki/xml/XMLSchemaCache.html" title="class in org.webpki.xml"><code>XMLSchemaCache</code></a>.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#namespace()">namespace</a></strong>()</code>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#namespace--">namespace</a></span>()</code>
 <div class="block">The <a href="http://www.w3.org/TR/xmlschema-1/#key-targetNS">target namespace)</a>
  of the element that this class handles.</div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/math/BigInteger.html?is-external=true" title="class or interface in java.math">BigInteger</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#readCryptoBinary(org.webpki.xml.DOMReaderHelper, java.lang.String)">readCryptoBinary</a></strong>(<a href="../../../org/webpki/xml/DOMReaderHelper.html" title="class in org.webpki.xml">DOMReaderHelper</a>&nbsp;rd,
-                <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;element)</code>&nbsp;</td>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/math/BigInteger.html?is-external=true" title="class or interface in java.math">BigInteger</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#readCryptoBinary-org.webpki.xml.DOMReaderHelper-java.lang.String-">readCryptoBinary</a></span>(<a href="../../../org/webpki/xml/DOMReaderHelper.html" title="class in org.webpki.xml">DOMReaderHelper</a>&nbsp;rd,
+                <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;element)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#readPublicKey(org.webpki.xml.DOMReaderHelper)">readPublicKey</a></strong>(<a href="../../../org/webpki/xml/DOMReaderHelper.html" title="class in org.webpki.xml">DOMReaderHelper</a>&nbsp;rd)</code>&nbsp;</td>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#readPublicKey-org.webpki.xml.DOMReaderHelper-">readPublicKey</a></span>(<a href="../../../org/webpki/xml/DOMReaderHelper.html" title="class in org.webpki.xml">DOMReaderHelper</a>&nbsp;rd)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#readSortedX509DataSubset(org.webpki.xml.DOMReaderHelper)">readSortedX509DataSubset</a></strong>(<a href="../../../org/webpki/xml/DOMReaderHelper.html" title="class in org.webpki.xml">DOMReaderHelper</a>&nbsp;rd)</code>&nbsp;</td>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>static <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#readSortedX509DataSubset-org.webpki.xml.DOMReaderHelper-">readSortedX509DataSubset</a></span>(<a href="../../../org/webpki/xml/DOMReaderHelper.html" title="class in org.webpki.xml">DOMReaderHelper</a>&nbsp;rd)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#toXML(org.webpki.xml.DOMWriterHelper)">toXML</a></strong>(<a href="../../../org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a>&nbsp;wr)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#toXML-org.webpki.xml.DOMWriterHelper-">toXML</a></span>(<a href="../../../org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a>&nbsp;wr)</code>
 <div class="block">Get the XML-encoding of the object.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#writeCryptoBinary(org.webpki.xml.DOMWriterHelper, java.math.BigInteger, java.lang.String)">writeCryptoBinary</a></strong>(<a href="../../../org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a>&nbsp;wr,
-                 <a href="http://download.oracle.com/javase/7/docs/api/java/math/BigInteger.html?is-external=true" title="class or interface in java.math">BigInteger</a>&nbsp;value,
-                 <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;element)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#writeCryptoBinary-org.webpki.xml.DOMWriterHelper-java.math.BigInteger-java.lang.String-">writeCryptoBinary</a></span>(<a href="../../../org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a>&nbsp;wr,
+                 <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/math/BigInteger.html?is-external=true" title="class or interface in java.math">BigInteger</a>&nbsp;value,
+                 <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;element)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#writePublicKey(org.webpki.xml.DOMWriterHelper, java.security.PublicKey)">writePublicKey</a></strong>(<a href="../../../org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a>&nbsp;wr,
-              <a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#writePublicKey-org.webpki.xml.DOMWriterHelper-java.security.PublicKey-">writePublicKey</a></span>(<a href="../../../org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a>&nbsp;wr,
+              <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#writeX509DataSubset(org.webpki.xml.DOMWriterHelper, java.security.cert.X509Certificate[])">writeX509DataSubset</a></strong>(<a href="../../../org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a>&nbsp;wr,
-                   <a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]&nbsp;certificates)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html#writeX509DataSubset-org.webpki.xml.DOMWriterHelper-java.security.cert.X509Certificate:A-">writeX509DataSubset</a></span>(<a href="../../../org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a>&nbsp;wr,
+                   <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]&nbsp;certificates)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
-<li class="blockList"><a name="methods_inherited_from_class_org.webpki.xml.XMLObjectWrapper">
+<li class="blockList"><a name="methods.inherited.from.class.org.webpki.xml.XMLObjectWrapper">
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.webpki.xml.<a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a></h3>
-<code><a href="../../../org/webpki/xml/XMLObjectWrapper.html#addSchema(java.lang.String)">addSchema</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#addWrapper(java.lang.Class)">addWrapper</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#clearXMLCache()">clearXMLCache</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#equals(org.webpki.xml.XMLObjectWrapper)">equals</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#forcedDOMRewrite()">forcedDOMRewrite</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#getResource(java.lang.String)">getResource</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#getRootDocument()">getRootDocument</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#getRootElement()">getRootElement</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#getWrappedChildren()">getWrappedChildren</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#hasWrapper(org.w3c.dom.Element)">hasWrapper</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#inheritIndentFromParent()">inheritIndentFromParent</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#isWritten()">isWritten</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#setNameSpaceMode(boolean)">setNameSpaceMode</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#toString()">toString</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#validate()">validate</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#validate(org.webpki.xml.XMLSchemaCache)">validate</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#wrap(org.w3c.dom.Element)">wrap</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#writeXML()">writeXML</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#writeXML(java.io.OutputStream)">writeXML</a></code></li>
+<code><a href="../../../org/webpki/xml/XMLObjectWrapper.html#addSchema-java.lang.String-">addSchema</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#addWrapper-java.lang.Class-">addWrapper</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#clearXMLCache--">clearXMLCache</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#equals-org.webpki.xml.XMLObjectWrapper-">equals</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#forcedDOMRewrite--">forcedDOMRewrite</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#getResource-java.lang.String-">getResource</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#getRootDocument--">getRootDocument</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#getRootElement--">getRootElement</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#getWrappedChildren--">getWrappedChildren</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#hasWrapper-org.w3c.dom.Element-">hasWrapper</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#inheritIndentFromParent--">inheritIndentFromParent</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#isWritten--">isWritten</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#setNameSpaceMode-boolean-">setNameSpaceMode</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#toString--">toString</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#validate--">validate</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#validate-org.webpki.xml.XMLSchemaCache-">validate</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#wrap-org.w3c.dom.Element-">wrap</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#writeXML--">writeXML</a>, <a href="../../../org/webpki/xml/XMLObjectWrapper.html#writeXML-java.io.OutputStream-">writeXML</a></code></li>
 </ul>
 <ul class="blockList">
-<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;java.lang.<a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</a></code></li>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
 </ul>
 </li>
 </ul>
@@ -399,7 +415,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <li class="blockList">
 <!-- ============ FIELD DETAIL =========== -->
 <ul class="blockList">
-<li class="blockList"><a name="field_detail">
+<li class="blockList"><a name="field.detail">
 <!--   -->
 </a>
 <h3>Field Detail</h3>
@@ -409,8 +425,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>ALGORITHM_ATTR</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> ALGORITHM_ATTR</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.ALGORITHM_ATTR">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> ALGORITHM_ATTR</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.ALGORITHM_ATTR">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="CANONICALIZATION_METHOD_ELEM">
@@ -419,8 +438,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>CANONICALIZATION_METHOD_ELEM</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CANONICALIZATION_METHOD_ELEM</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.CANONICALIZATION_METHOD_ELEM">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CANONICALIZATION_METHOD_ELEM</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.CANONICALIZATION_METHOD_ELEM">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="DIGEST_METHOD_ELEM">
@@ -429,8 +451,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>DIGEST_METHOD_ELEM</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> DIGEST_METHOD_ELEM</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.DIGEST_METHOD_ELEM">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> DIGEST_METHOD_ELEM</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.DIGEST_METHOD_ELEM">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="DIGEST_VALUE_ELEM">
@@ -439,8 +464,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>DIGEST_VALUE_ELEM</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> DIGEST_VALUE_ELEM</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.DIGEST_VALUE_ELEM">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> DIGEST_VALUE_ELEM</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.DIGEST_VALUE_ELEM">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="EC_KEY_VALUE_ELEM">
@@ -449,8 +477,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>EC_KEY_VALUE_ELEM</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> EC_KEY_VALUE_ELEM</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.EC_KEY_VALUE_ELEM">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> EC_KEY_VALUE_ELEM</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.EC_KEY_VALUE_ELEM">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="EC_NAMED_CURVES_OID">
@@ -459,8 +490,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>EC_NAMED_CURVES_OID</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> EC_NAMED_CURVES_OID</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.EC_NAMED_CURVES_OID">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> EC_NAMED_CURVES_OID</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.EC_NAMED_CURVES_OID">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="ENVELOPED_URI">
@@ -469,8 +503,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>ENVELOPED_URI</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> ENVELOPED_URI</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.ENVELOPED_URI">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> ENVELOPED_URI</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.ENVELOPED_URI">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="EXPONENT_ELEM">
@@ -479,8 +516,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>EXPONENT_ELEM</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> EXPONENT_ELEM</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.EXPONENT_ELEM">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> EXPONENT_ELEM</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.EXPONENT_ELEM">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="ID_ATTR">
@@ -489,8 +529,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>ID_ATTR</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> ID_ATTR</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.ID_ATTR">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> ID_ATTR</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.ID_ATTR">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="KEY_INFO_ELEM">
@@ -499,8 +542,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>KEY_INFO_ELEM</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> KEY_INFO_ELEM</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.KEY_INFO_ELEM">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> KEY_INFO_ELEM</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.KEY_INFO_ELEM">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="KEY_NAME_ELEM">
@@ -509,8 +555,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>KEY_NAME_ELEM</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> KEY_NAME_ELEM</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.KEY_NAME_ELEM">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> KEY_NAME_ELEM</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.KEY_NAME_ELEM">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="KEY_VALUE_ELEM">
@@ -519,8 +568,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>KEY_VALUE_ELEM</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> KEY_VALUE_ELEM</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.KEY_VALUE_ELEM">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> KEY_VALUE_ELEM</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.KEY_VALUE_ELEM">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="MODULUS_ELEM">
@@ -529,8 +581,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>MODULUS_ELEM</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> MODULUS_ELEM</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.MODULUS_ELEM">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> MODULUS_ELEM</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.MODULUS_ELEM">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="NAMED_CURVE_ELEM">
@@ -539,8 +594,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>NAMED_CURVE_ELEM</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> NAMED_CURVE_ELEM</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.NAMED_CURVE_ELEM">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> NAMED_CURVE_ELEM</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.NAMED_CURVE_ELEM">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="OBJECT_ELEM">
@@ -549,8 +607,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>OBJECT_ELEM</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> OBJECT_ELEM</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.OBJECT_ELEM">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> OBJECT_ELEM</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.OBJECT_ELEM">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="PUBLIC_KEY_ELEM">
@@ -559,8 +620,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>PUBLIC_KEY_ELEM</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> PUBLIC_KEY_ELEM</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.PUBLIC_KEY_ELEM">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> PUBLIC_KEY_ELEM</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.PUBLIC_KEY_ELEM">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="REFERENCE_ELEM">
@@ -569,8 +633,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>REFERENCE_ELEM</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> REFERENCE_ELEM</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.REFERENCE_ELEM">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> REFERENCE_ELEM</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.REFERENCE_ELEM">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="RSA_KEY_VALUE_ELEM">
@@ -579,8 +646,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>RSA_KEY_VALUE_ELEM</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> RSA_KEY_VALUE_ELEM</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.RSA_KEY_VALUE_ELEM">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> RSA_KEY_VALUE_ELEM</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.RSA_KEY_VALUE_ELEM">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="SIGNATURE_ELEM">
@@ -589,8 +659,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>SIGNATURE_ELEM</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> SIGNATURE_ELEM</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.SIGNATURE_ELEM">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> SIGNATURE_ELEM</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.SIGNATURE_ELEM">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="SIGNATURE_METHOD_ELEM">
@@ -599,8 +672,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>SIGNATURE_METHOD_ELEM</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> SIGNATURE_METHOD_ELEM</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.SIGNATURE_METHOD_ELEM">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> SIGNATURE_METHOD_ELEM</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.SIGNATURE_METHOD_ELEM">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="SIGNATURE_VALUE_ELEM">
@@ -609,8 +685,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>SIGNATURE_VALUE_ELEM</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> SIGNATURE_VALUE_ELEM</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.SIGNATURE_VALUE_ELEM">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> SIGNATURE_VALUE_ELEM</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.SIGNATURE_VALUE_ELEM">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="SIGNED_INFO_ELEM">
@@ -619,8 +698,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>SIGNED_INFO_ELEM</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> SIGNED_INFO_ELEM</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.SIGNED_INFO_ELEM">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> SIGNED_INFO_ELEM</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.SIGNED_INFO_ELEM">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="TRANSFORM_ELEM">
@@ -629,8 +711,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>TRANSFORM_ELEM</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TRANSFORM_ELEM</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.TRANSFORM_ELEM">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TRANSFORM_ELEM</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.TRANSFORM_ELEM">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="TRANSFORMS_ELEM">
@@ -639,8 +724,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>TRANSFORMS_ELEM</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TRANSFORMS_ELEM</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.TRANSFORMS_ELEM">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TRANSFORMS_ELEM</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.TRANSFORMS_ELEM">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="URI_ATTR">
@@ -649,8 +737,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>URI_ATTR</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> URI_ATTR</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.URI_ATTR">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> URI_ATTR</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.URI_ATTR">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="X509_CERTIFICATE_ELEM">
@@ -659,8 +750,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>X509_CERTIFICATE_ELEM</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> X509_CERTIFICATE_ELEM</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.X509_CERTIFICATE_ELEM">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> X509_CERTIFICATE_ELEM</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.X509_CERTIFICATE_ELEM">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="X509_DATA_ELEM">
@@ -669,8 +763,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>X509_DATA_ELEM</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> X509_DATA_ELEM</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.X509_DATA_ELEM">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> X509_DATA_ELEM</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.X509_DATA_ELEM">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="X509_ISSUER_NAME_ELEM">
@@ -679,8 +776,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>X509_ISSUER_NAME_ELEM</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> X509_ISSUER_NAME_ELEM</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.X509_ISSUER_NAME_ELEM">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> X509_ISSUER_NAME_ELEM</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.X509_ISSUER_NAME_ELEM">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="X509_ISSUER_SERIAL_ELEM">
@@ -689,8 +789,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>X509_ISSUER_SERIAL_ELEM</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> X509_ISSUER_SERIAL_ELEM</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.X509_ISSUER_SERIAL_ELEM">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> X509_ISSUER_SERIAL_ELEM</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.X509_ISSUER_SERIAL_ELEM">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="X509_SERIAL_NUMBER_ELEM">
@@ -699,8 +802,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>X509_SERIAL_NUMBER_ELEM</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> X509_SERIAL_NUMBER_ELEM</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.X509_SERIAL_NUMBER_ELEM">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> X509_SERIAL_NUMBER_ELEM</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.X509_SERIAL_NUMBER_ELEM">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="X509_SUBJECT_NAME_ELEM">
@@ -709,8 +815,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>X509_SUBJECT_NAME_ELEM</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> X509_SUBJECT_NAME_ELEM</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.X509_SUBJECT_NAME_ELEM">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> X509_SUBJECT_NAME_ELEM</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.X509_SUBJECT_NAME_ELEM">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="XML_DSIG_NS">
@@ -719,8 +828,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>XML_DSIG_NS</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> XML_DSIG_NS</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.XML_DSIG_NS">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> XML_DSIG_NS</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.XML_DSIG_NS">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="XML_DSIG_NS_PREFIX">
@@ -729,8 +841,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>XML_DSIG_NS_PREFIX</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> XML_DSIG_NS_PREFIX</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.XML_DSIG_NS_PREFIX">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> XML_DSIG_NS_PREFIX</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.XML_DSIG_NS_PREFIX">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="XML_DSIG11_NS">
@@ -739,8 +854,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockList">
 <li class="blockList">
 <h4>XML_DSIG11_NS</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> XML_DSIG11_NS</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.XML_DSIG11_NS">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> XML_DSIG11_NS</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.XML_DSIG11_NS">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 <a name="XML_DSIG11_NS_PREFIX">
@@ -749,19 +867,22 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="blockListLast">
 <li class="blockList">
 <h4>XML_DSIG11_NS_PREFIX</h4>
-<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> XML_DSIG11_NS_PREFIX</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.XML_DSIG11_NS_PREFIX">Constant Field Values</a></dd></dl>
+<pre>public static final&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> XML_DSIG11_NS_PREFIX</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.xmldsig.XMLSignatureWrapper.XML_DSIG11_NS_PREFIX">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
 </li>
 </ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
-<li class="blockList"><a name="constructor_detail">
+<li class="blockList"><a name="constructor.detail">
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="XMLSignatureWrapper()">
+<a name="XMLSignatureWrapper--">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -774,11 +895,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 </ul>
 <!-- ============ METHOD DETAIL ========== -->
 <ul class="blockList">
-<li class="blockList"><a name="method_detail">
+<li class="blockList"><a name="method.detail">
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="addXMLSignature11NS(org.webpki.xml.DOMWriterHelper)">
+<a name="addXMLSignature11NS-org.webpki.xml.DOMWriterHelper-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -787,7 +908,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <pre>public static&nbsp;void&nbsp;addXMLSignature11NS(<a href="../../../org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a>&nbsp;wr)</pre>
 </li>
 </ul>
-<a name="addXMLSignatureNS(org.webpki.xml.DOMWriterHelper)">
+<a name="addXMLSignatureNS-org.webpki.xml.DOMWriterHelper-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -796,40 +917,44 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <pre>public static&nbsp;void&nbsp;addXMLSignatureNS(<a href="../../../org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a>&nbsp;wr)</pre>
 </li>
 </ul>
-<a name="element()">
+<a name="element--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>element</h4>
-<pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;element()</pre>
-<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../org/webpki/xml/XMLObjectWrapper.html#element()">XMLObjectWrapper</a></code></strong></div>
-<div class="block">The element in the <a href="../../../org/webpki/xml/XMLObjectWrapper.html#namespace()"><code>target namespace</code></a> that this class handles.</div>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;element()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../org/webpki/xml/XMLObjectWrapper.html#element--">XMLObjectWrapper</a></code></span></div>
+<div class="block">The element in the <a href="../../../org/webpki/xml/XMLObjectWrapper.html#namespace--"><code>target namespace</code></a> that this class handles.</div>
 <dl>
-<dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../../org/webpki/xml/XMLObjectWrapper.html#element()">element</a></code>&nbsp;in class&nbsp;<code><a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a></code></dd>
-<dt><span class="strong">Returns:</span></dt><dd>Element name</dd></dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../org/webpki/xml/XMLObjectWrapper.html#element--">element</a></code>&nbsp;in class&nbsp;<code><a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Element name</dd>
+</dl>
 </li>
 </ul>
-<a name="fromXML(org.webpki.xml.DOMReaderHelper)">
+<a name="fromXML-org.webpki.xml.DOMReaderHelper-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>fromXML</h4>
 <pre>protected&nbsp;void&nbsp;fromXML(<a href="../../../org/webpki/xml/DOMReaderHelper.html" title="class in org.webpki.xml">DOMReaderHelper</a>&nbsp;rd)
-                throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../org/webpki/xml/XMLObjectWrapper.html#fromXML(org.webpki.xml.DOMReaderHelper)">XMLObjectWrapper</a></code></strong></div>
+                throws <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../org/webpki/xml/XMLObjectWrapper.html#fromXML-org.webpki.xml.DOMReaderHelper-">XMLObjectWrapper</a></code></span></div>
 <div class="block">Initialize the object from it's XML-encoding.</div>
 <dl>
-<dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../../org/webpki/xml/XMLObjectWrapper.html#fromXML(org.webpki.xml.DOMReaderHelper)">fromXML</a></code>&nbsp;in class&nbsp;<code><a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a></code></dd>
-<dt><span class="strong">Parameters:</span></dt><dd><code>rd</code> - Helper</dd>
-<dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If something unexpected happens...</dd></dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../org/webpki/xml/XMLObjectWrapper.html#fromXML-org.webpki.xml.DOMReaderHelper-">fromXML</a></code>&nbsp;in class&nbsp;<code><a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>rd</code> - Helper</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If something unexpected happens...</dd>
+</dl>
 </li>
 </ul>
-<a name="getWrappedData()">
+<a name="getWrappedData--">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -838,7 +963,7 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <pre>public&nbsp;<a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a>&nbsp;getWrappedData()</pre>
 </li>
 </ul>
-<a name="hasQualifiedElements()">
+<a name="hasQualifiedElements--">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -846,143 +971,160 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <h4>hasQualifiedElements</h4>
 <pre>protected&nbsp;boolean&nbsp;hasQualifiedElements()</pre>
 <dl>
-<dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../../org/webpki/xml/XMLObjectWrapper.html#hasQualifiedElements()">hasQualifiedElements</a></code>&nbsp;in class&nbsp;<code><a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../org/webpki/xml/XMLObjectWrapper.html#hasQualifiedElements--">hasQualifiedElements</a></code>&nbsp;in class&nbsp;<code><a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="init()">
+<a name="init--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>init</h4>
 <pre>public&nbsp;void&nbsp;init()
-          throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../org/webpki/xml/XMLObjectWrapper.html#init()">XMLObjectWrapper</a></code></strong></div>
+          throws <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../org/webpki/xml/XMLObjectWrapper.html#init--">XMLObjectWrapper</a></code></span></div>
 <div class="block">Init method called when the wrapper class is added to an
  <a href="../../../org/webpki/xml/XMLSchemaCache.html" title="class in org.webpki.xml"><code>XMLSchemaCache</code></a>.
  The wrapper may override this method to autmatically register the
  schemas on which it depends.</div>
 <dl>
-<dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../../org/webpki/xml/XMLObjectWrapper.html#init()">init</a></code>&nbsp;in class&nbsp;<code><a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a></code></dd>
-<dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If something unexpected happens...</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../org/webpki/xml/XMLObjectWrapper.html#addSchema(java.lang.String)"><code>XMLObjectWrapper.addSchema(String)</code></a></dd></dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../org/webpki/xml/XMLObjectWrapper.html#init--">init</a></code>&nbsp;in class&nbsp;<code><a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a></code></dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If something unexpected happens...</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../org/webpki/xml/XMLObjectWrapper.html#addSchema-java.lang.String-"><code>XMLObjectWrapper.addSchema(String)</code></a></dd>
+</dl>
 </li>
 </ul>
-<a name="namespace()">
+<a name="namespace--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>namespace</h4>
-<pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;namespace()</pre>
-<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../org/webpki/xml/XMLObjectWrapper.html#namespace()">XMLObjectWrapper</a></code></strong></div>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;namespace()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../org/webpki/xml/XMLObjectWrapper.html#namespace--">XMLObjectWrapper</a></code></span></div>
 <div class="block">The <a href="http://www.w3.org/TR/xmlschema-1/#key-targetNS">target namespace)</a>
  of the element that this class handles.</div>
 <dl>
-<dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../../org/webpki/xml/XMLObjectWrapper.html#namespace()">namespace</a></code>&nbsp;in class&nbsp;<code><a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a></code></dd>
-<dt><span class="strong">Returns:</span></dt><dd>Namespace uri</dd></dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../org/webpki/xml/XMLObjectWrapper.html#namespace--">namespace</a></code>&nbsp;in class&nbsp;<code><a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Namespace uri</dd>
+</dl>
 </li>
 </ul>
-<a name="readCryptoBinary(org.webpki.xml.DOMReaderHelper, java.lang.String)">
+<a name="readCryptoBinary-org.webpki.xml.DOMReaderHelper-java.lang.String-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>readCryptoBinary</h4>
-<pre>public static&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/math/BigInteger.html?is-external=true" title="class or interface in java.math">BigInteger</a>&nbsp;readCryptoBinary(<a href="../../../org/webpki/xml/DOMReaderHelper.html" title="class in org.webpki.xml">DOMReaderHelper</a>&nbsp;rd,
-                          <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;element)
-                                   throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<pre>public static&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/math/BigInteger.html?is-external=true" title="class or interface in java.math">BigInteger</a>&nbsp;readCryptoBinary(<a href="../../../org/webpki/xml/DOMReaderHelper.html" title="class in org.webpki.xml">DOMReaderHelper</a>&nbsp;rd,
+                                          <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;element)
+                                   throws <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+</dl>
 </li>
 </ul>
-<a name="readPublicKey(org.webpki.xml.DOMReaderHelper)">
+<a name="readPublicKey-org.webpki.xml.DOMReaderHelper-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>readPublicKey</h4>
-<pre>public static&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;readPublicKey(<a href="../../../org/webpki/xml/DOMReaderHelper.html" title="class in org.webpki.xml">DOMReaderHelper</a>&nbsp;rd)
-                               throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<pre>public static&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;readPublicKey(<a href="../../../org/webpki/xml/DOMReaderHelper.html" title="class in org.webpki.xml">DOMReaderHelper</a>&nbsp;rd)
+                               throws <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+</dl>
 </li>
 </ul>
-<a name="readSortedX509DataSubset(org.webpki.xml.DOMReaderHelper)">
+<a name="readSortedX509DataSubset-org.webpki.xml.DOMReaderHelper-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>readSortedX509DataSubset</h4>
-<pre>public static&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]&nbsp;readSortedX509DataSubset(<a href="../../../org/webpki/xml/DOMReaderHelper.html" title="class in org.webpki.xml">DOMReaderHelper</a>&nbsp;rd)
-                                                  throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+<pre>public static&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]&nbsp;readSortedX509DataSubset(<a href="../../../org/webpki/xml/DOMReaderHelper.html" title="class in org.webpki.xml">DOMReaderHelper</a>&nbsp;rd)
+                                                  throws <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+</dl>
 </li>
 </ul>
-<a name="toXML(org.webpki.xml.DOMWriterHelper)">
+<a name="toXML-org.webpki.xml.DOMWriterHelper-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>toXML</h4>
 <pre>protected&nbsp;void&nbsp;toXML(<a href="../../../org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a>&nbsp;wr)
-              throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../org/webpki/xml/XMLObjectWrapper.html#toXML(org.webpki.xml.DOMWriterHelper)">XMLObjectWrapper</a></code></strong></div>
+              throws <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../org/webpki/xml/XMLObjectWrapper.html#toXML-org.webpki.xml.DOMWriterHelper-">XMLObjectWrapper</a></code></span></div>
 <div class="block">Get the XML-encoding of the object.
- <p>This method should only produce an <a href="http://download.oracle.com/javase/7/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom"><code>Element</code></a>,
+ <p>This method should only produce an <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom"><code>Element</code></a>,
  it should <b>not</b> be inserted into the document (as this
  method will not know where in the tree the caller intends to
  put the element). The document is passed as an argument only
  because it is needed to produce nodes. The caller is responsible
  for inserting the element into the tree.</div>
 <dl>
-<dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../../org/webpki/xml/XMLObjectWrapper.html#toXML(org.webpki.xml.DOMWriterHelper)">toXML</a></code>&nbsp;in class&nbsp;<code><a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a></code></dd>
-<dt><span class="strong">Parameters:</span></dt><dd><code>wr</code> - Helper</dd>
-<dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If something unexpected happens...</dd></dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../org/webpki/xml/XMLObjectWrapper.html#toXML-org.webpki.xml.DOMWriterHelper-">toXML</a></code>&nbsp;in class&nbsp;<code><a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>wr</code> - Helper</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If something unexpected happens...</dd>
+</dl>
 </li>
 </ul>
-<a name="writeCryptoBinary(org.webpki.xml.DOMWriterHelper, java.math.BigInteger, java.lang.String)">
+<a name="writeCryptoBinary-org.webpki.xml.DOMWriterHelper-java.math.BigInteger-java.lang.String-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>writeCryptoBinary</h4>
 <pre>public static&nbsp;void&nbsp;writeCryptoBinary(<a href="../../../org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a>&nbsp;wr,
-                     <a href="http://download.oracle.com/javase/7/docs/api/java/math/BigInteger.html?is-external=true" title="class or interface in java.math">BigInteger</a>&nbsp;value,
-                     <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;element)</pre>
+                                     <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/math/BigInteger.html?is-external=true" title="class or interface in java.math">BigInteger</a>&nbsp;value,
+                                     <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;element)</pre>
 </li>
 </ul>
-<a name="writePublicKey(org.webpki.xml.DOMWriterHelper, java.security.PublicKey)">
+<a name="writePublicKey-org.webpki.xml.DOMWriterHelper-java.security.PublicKey-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>writePublicKey</h4>
 <pre>public static&nbsp;void&nbsp;writePublicKey(<a href="../../../org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a>&nbsp;wr,
-                  <a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey)
-                           throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+                                  <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey)
+                           throws <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+</dl>
 </li>
 </ul>
-<a name="writeX509DataSubset(org.webpki.xml.DOMWriterHelper, java.security.cert.X509Certificate[])">
+<a name="writeX509DataSubset-org.webpki.xml.DOMWriterHelper-java.security.cert.X509Certificate:A-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>writeX509DataSubset</h4>
 <pre>public static&nbsp;void&nbsp;writeX509DataSubset(<a href="../../../org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a>&nbsp;wr,
-                       <a href="http://download.oracle.com/javase/7/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]&nbsp;certificates)
-                                throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+                                       <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]&nbsp;certificates)
+                                throws <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+</dl>
 </li>
 </ul>
 </li>
@@ -993,9 +1135,11 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 </div>
 <!-- ========= END OF CLASS DATA ========= -->
 <!-- ======= START OF BOTTOM NAVBAR ====== -->
-<div class="bottomNav"><a name="navbar_bottom">
+<div class="bottomNav"><a name="navbar.bottom">
 <!--   -->
-</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+</a>
+<div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.bottom.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
@@ -1009,15 +1153,15 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../org/webpki/xmldsig/XMLEnvelopedInput.html" title="interface in org.webpki.xmldsig"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../org/webpki/xmldsig/XMLSigner.html" title="class in org.webpki.xmldsig"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../org/webpki/xmldsig/XMLEnvelopedInput.html" title="interface in org.webpki.xmldsig"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../org/webpki/xmldsig/XMLSigner.html" title="class in org.webpki.xmldsig"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../index.html?org/webpki/xmldsig/XMLSignatureWrapper.html" target="_top">Frames</a></li>
-<li><a href="XMLSignatureWrapper.html" target="_top">No Frames</a></li>
+<li><a href="XMLSignatureWrapper.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_bottom">
-<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -1035,18 +1179,18 @@ implements <a href="http://download.oracle.com/javase/7/docs/api/java/io/Seriali
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
-<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#method_summary">Method</a></li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
-<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#method_detail">Method</a></li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
-<a name="skip-navbar_bottom">
+<a name="skip.navbar.bottom">
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->

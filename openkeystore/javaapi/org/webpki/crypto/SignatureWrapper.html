@@ -6,21 +6,34 @@
 <title>SignatureWrapper (WebPKI.org Support)</title>
 
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+<script type="text/javascript" src="../../../script.js"></script>
 </head>
 <body>
 <script type="text/javascript"><!--
-    if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="SignatureWrapper (WebPKI.org Support)";
+    try {
+        if (location.href.indexOf('is-external=true') == -1) {
+            parent.document.title="SignatureWrapper (WebPKI.org Support)";
+        }
+    }
+    catch(err) {
     }
 //-->
+var methods = {"i0":9,"i1":9,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+var altColor = "altColor";
+var rowColor = "rowColor";
+var tableTab = "tableTab";
+var activeTableTab = "activeTableTab";
 </script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
 </noscript>
 <!-- ========= START OF TOP NAVBAR ======= -->
-<div class="topNav"><a name="navbar_top">
+<div class="topNav"><a name="navbar.top">
 <!--   -->
-</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+</a>
+<div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.top.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
@@ -34,15 +47,15 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../org/webpki/crypto/SignatureAlgorithms.html" title="interface in org.webpki.crypto"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../org/webpki/crypto/SignerInterface.html" title="interface in org.webpki.crypto"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../org/webpki/crypto/SignatureAlgorithms.html" title="interface in org.webpki.crypto"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../org/webpki/crypto/SignerInterface.html" title="interface in org.webpki.crypto"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../index.html?org/webpki/crypto/SignatureWrapper.html" target="_top">Frames</a></li>
-<li><a href="SignatureWrapper.html" target="_top">No Frames</a></li>
+<li><a href="SignatureWrapper.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_top">
-<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -61,17 +74,17 @@
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#method_summary">Method</a></li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#method_detail">Method</a></li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
-<a name="skip-navbar_top">
+<a name="skip.navbar.top">
 <!--   -->
 </a></div>
 <!-- ========= END OF TOP NAVBAR ========= -->
@@ -82,7 +95,7 @@
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
-<li><a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
 <li>org.webpki.crypto.SignatureWrapper</li>
@@ -94,8 +107,8 @@
 <li class="blockList">
 <hr>
 <br>
-<pre>public class <span class="strong">SignatureWrapper</span>
-extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+<pre>public class <span class="typeNameLabel">SignatureWrapper</span>
+extends <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">Wrapper over java.security.Signature</div>
 </li>
 </ul>
@@ -105,89 +118,89 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <li class="blockList">
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
-<li class="blockList"><a name="constructor_summary">
+<li class="blockList"><a name="constructor.summary">
 <!--   -->
 </a>
 <h3>Constructor Summary</h3>
-<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
 <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../org/webpki/crypto/SignatureWrapper.html#SignatureWrapper(org.webpki.crypto.AsymSignatureAlgorithms, java.security.PrivateKey)">SignatureWrapper</a></strong>(<a href="../../../org/webpki/crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a>&nbsp;algorithm,
-                <a href="http://download.oracle.com/javase/7/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</a>&nbsp;privateKey)</code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/SignatureWrapper.html#SignatureWrapper-org.webpki.crypto.AsymSignatureAlgorithms-java.security.PrivateKey-">SignatureWrapper</a></span>(<a href="../../../org/webpki/crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a>&nbsp;algorithm,
+                <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</a>&nbsp;privateKey)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><strong><a href="../../../org/webpki/crypto/SignatureWrapper.html#SignatureWrapper(org.webpki.crypto.AsymSignatureAlgorithms, java.security.PrivateKey, java.lang.String)">SignatureWrapper</a></strong>(<a href="../../../org/webpki/crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a>&nbsp;algorithm,
-                <a href="http://download.oracle.com/javase/7/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</a>&nbsp;privateKey,
-                <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;provider)</code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/SignatureWrapper.html#SignatureWrapper-org.webpki.crypto.AsymSignatureAlgorithms-java.security.PrivateKey-java.lang.String-">SignatureWrapper</a></span>(<a href="../../../org/webpki/crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a>&nbsp;algorithm,
+                <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</a>&nbsp;privateKey,
+                <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;provider)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../org/webpki/crypto/SignatureWrapper.html#SignatureWrapper(org.webpki.crypto.AsymSignatureAlgorithms, java.security.PublicKey)">SignatureWrapper</a></strong>(<a href="../../../org/webpki/crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a>&nbsp;algorithm,
-                <a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey)</code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/SignatureWrapper.html#SignatureWrapper-org.webpki.crypto.AsymSignatureAlgorithms-java.security.PublicKey-">SignatureWrapper</a></span>(<a href="../../../org/webpki/crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a>&nbsp;algorithm,
+                <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><strong><a href="../../../org/webpki/crypto/SignatureWrapper.html#SignatureWrapper(org.webpki.crypto.AsymSignatureAlgorithms, java.security.PublicKey, java.lang.String)">SignatureWrapper</a></strong>(<a href="../../../org/webpki/crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a>&nbsp;algorithm,
-                <a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey,
-                <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;provider)</code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/SignatureWrapper.html#SignatureWrapper-org.webpki.crypto.AsymSignatureAlgorithms-java.security.PublicKey-java.lang.String-">SignatureWrapper</a></span>(<a href="../../../org/webpki/crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a>&nbsp;algorithm,
+                <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey,
+                <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;provider)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
 </ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
-<li class="blockList"><a name="method_summary">
+<li class="blockList"><a name="method.summary">
 <!--   -->
 </a>
 <h3>Method Summary</h3>
-<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
-<tr class="altColor">
+<tr id="i0" class="altColor">
 <td class="colFirst"><code>static byte[]</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/crypto/SignatureWrapper.html#decodeDEREncodedECDSASignature(byte[], java.security.spec.ECParameterSpec)">decodeDEREncodedECDSASignature</a></strong>(byte[]&nbsp;derCodedSignature,
-                              <a href="http://download.oracle.com/javase/7/docs/api/java/security/spec/ECParameterSpec.html?is-external=true" title="class or interface in java.security.spec">ECParameterSpec</a>&nbsp;ecParameters)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/SignatureWrapper.html#decodeDEREncodedECDSASignature-byte:A-java.security.spec.ECParameterSpec-">decodeDEREncodedECDSASignature</a></span>(byte[]&nbsp;derCodedSignature,
+                              <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/spec/ECParameterSpec.html?is-external=true" title="class or interface in java.security.spec">ECParameterSpec</a>&nbsp;ecParameters)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>static byte[]</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/crypto/SignatureWrapper.html#encodeDEREncodedECDSASignature(byte[], java.security.spec.ECParameterSpec)">encodeDEREncodedECDSASignature</a></strong>(byte[]&nbsp;concatenatedSignature,
-                              <a href="http://download.oracle.com/javase/7/docs/api/java/security/spec/ECParameterSpec.html?is-external=true" title="class or interface in java.security.spec">ECParameterSpec</a>&nbsp;ecParameters)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/SignatureWrapper.html#encodeDEREncodedECDSASignature-byte:A-java.security.spec.ECParameterSpec-">encodeDEREncodedECDSASignature</a></span>(byte[]&nbsp;concatenatedSignature,
+                              <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/spec/ECParameterSpec.html?is-external=true" title="class or interface in java.security.spec">ECParameterSpec</a>&nbsp;ecParameters)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="http://download.oracle.com/javase/7/docs/api/java/security/Provider.html?is-external=true" title="class or interface in java.security">Provider</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/crypto/SignatureWrapper.html#getProvider()">getProvider</a></strong>()</code>&nbsp;</td>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/Provider.html?is-external=true" title="class or interface in java.security">Provider</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/SignatureWrapper.html#getProvider--">getProvider</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/webpki/crypto/SignatureWrapper.html" title="class in org.webpki.crypto">SignatureWrapper</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/crypto/SignatureWrapper.html#setECDSASignatureEncoding(boolean)">setECDSASignatureEncoding</a></strong>(boolean&nbsp;derEncoded)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/SignatureWrapper.html#setECDSASignatureEncoding-boolean-">setECDSASignatureEncoding</a></span>(boolean&nbsp;derEncoded)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/crypto/SignatureWrapper.html#sign()">sign</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/SignatureWrapper.html#sign--">sign</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/webpki/crypto/SignatureWrapper.html" title="class in org.webpki.crypto">SignatureWrapper</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/crypto/SignatureWrapper.html#update(byte)">update</a></strong>(byte&nbsp;data)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/SignatureWrapper.html#update-byte-">update</a></span>(byte&nbsp;data)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/crypto/SignatureWrapper.html" title="class in org.webpki.crypto">SignatureWrapper</a></code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/crypto/SignatureWrapper.html#update(byte[])">update</a></strong>(byte[]&nbsp;data)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/SignatureWrapper.html#update-byte:A-">update</a></span>(byte[]&nbsp;data)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../org/webpki/crypto/SignatureWrapper.html#verify(byte[])">verify</a></strong>(byte[]&nbsp;signature)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/SignatureWrapper.html#verify-byte:A-">verify</a></span>(byte[]&nbsp;signature)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
-<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;java.lang.<a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</a></code></li>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
 </ul>
 </li>
 </ul>
@@ -199,116 +212,128 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <li class="blockList">
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
-<li class="blockList"><a name="constructor_detail">
+<li class="blockList"><a name="constructor.detail">
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="SignatureWrapper(org.webpki.crypto.AsymSignatureAlgorithms, java.security.PrivateKey)">
+<a name="SignatureWrapper-org.webpki.crypto.AsymSignatureAlgorithms-java.security.PrivateKey-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>SignatureWrapper</h4>
 <pre>public&nbsp;SignatureWrapper(<a href="../../../org/webpki/crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a>&nbsp;algorithm,
-                <a href="http://download.oracle.com/javase/7/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</a>&nbsp;privateKey)
-                 throws <a href="http://download.oracle.com/javase/7/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a>,
-                        <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+                        <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</a>&nbsp;privateKey)
+                 throws <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a>,
+                        <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd>
+<dd><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+</dl>
 </li>
 </ul>
-<a name="SignatureWrapper(org.webpki.crypto.AsymSignatureAlgorithms, java.security.PrivateKey, java.lang.String)">
+<a name="SignatureWrapper-org.webpki.crypto.AsymSignatureAlgorithms-java.security.PrivateKey-java.lang.String-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>SignatureWrapper</h4>
 <pre>public&nbsp;SignatureWrapper(<a href="../../../org/webpki/crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a>&nbsp;algorithm,
-                <a href="http://download.oracle.com/javase/7/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</a>&nbsp;privateKey,
-                <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;provider)
-                 throws <a href="http://download.oracle.com/javase/7/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a>,
-                        <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+                        <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</a>&nbsp;privateKey,
+                        <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;provider)
+                 throws <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a>,
+                        <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd>
+<dd><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+</dl>
 </li>
 </ul>
-<a name="SignatureWrapper(org.webpki.crypto.AsymSignatureAlgorithms, java.security.PublicKey)">
+<a name="SignatureWrapper-org.webpki.crypto.AsymSignatureAlgorithms-java.security.PublicKey-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>SignatureWrapper</h4>
 <pre>public&nbsp;SignatureWrapper(<a href="../../../org/webpki/crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a>&nbsp;algorithm,
-                <a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey)
-                 throws <a href="http://download.oracle.com/javase/7/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a>,
-                        <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+                        <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey)
+                 throws <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a>,
+                        <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd>
+<dd><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+</dl>
 </li>
 </ul>
-<a name="SignatureWrapper(org.webpki.crypto.AsymSignatureAlgorithms, java.security.PublicKey, java.lang.String)">
+<a name="SignatureWrapper-org.webpki.crypto.AsymSignatureAlgorithms-java.security.PublicKey-java.lang.String-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>SignatureWrapper</h4>
 <pre>public&nbsp;SignatureWrapper(<a href="../../../org/webpki/crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a>&nbsp;algorithm,
-                <a href="http://download.oracle.com/javase/7/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey,
-                <a href="http://download.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;provider)
-                 throws <a href="http://download.oracle.com/javase/7/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a>,
-                        <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+                        <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey,
+                        <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;provider)
+                 throws <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a>,
+                        <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd>
+<dd><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+</dl>
 </li>
 </ul>
 </li>
 </ul>
 <!-- ============ METHOD DETAIL ========== -->
 <ul class="blockList">
-<li class="blockList"><a name="method_detail">
+<li class="blockList"><a name="method.detail">
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="decodeDEREncodedECDSASignature(byte[], java.security.spec.ECParameterSpec)">
+<a name="decodeDEREncodedECDSASignature-byte:A-java.security.spec.ECParameterSpec-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>decodeDEREncodedECDSASignature</h4>
 <pre>public static&nbsp;byte[]&nbsp;decodeDEREncodedECDSASignature(byte[]&nbsp;derCodedSignature,
-                                    <a href="http://download.oracle.com/javase/7/docs/api/java/security/spec/ECParameterSpec.html?is-external=true" title="class or interface in java.security.spec">ECParameterSpec</a>&nbsp;ecParameters)
-                                             throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+                                                    <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/spec/ECParameterSpec.html?is-external=true" title="class or interface in java.security.spec">ECParameterSpec</a>&nbsp;ecParameters)
+                                             throws <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+</dl>
 </li>
 </ul>
-<a name="encodeDEREncodedECDSASignature(byte[], java.security.spec.ECParameterSpec)">
+<a name="encodeDEREncodedECDSASignature-byte:A-java.security.spec.ECParameterSpec-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>encodeDEREncodedECDSASignature</h4>
 <pre>public static&nbsp;byte[]&nbsp;encodeDEREncodedECDSASignature(byte[]&nbsp;concatenatedSignature,
-                                    <a href="http://download.oracle.com/javase/7/docs/api/java/security/spec/ECParameterSpec.html?is-external=true" title="class or interface in java.security.spec">ECParameterSpec</a>&nbsp;ecParameters)
-                                             throws <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+                                                    <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/spec/ECParameterSpec.html?is-external=true" title="class or interface in java.security.spec">ECParameterSpec</a>&nbsp;ecParameters)
+                                             throws <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+</dl>
 </li>
 </ul>
-<a name="getProvider()">
+<a name="getProvider--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getProvider</h4>
-<pre>public&nbsp;<a href="http://download.oracle.com/javase/7/docs/api/java/security/Provider.html?is-external=true" title="class or interface in java.security">Provider</a>&nbsp;getProvider()</pre>
+<pre>public&nbsp;<a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/Provider.html?is-external=true" title="class or interface in java.security">Provider</a>&nbsp;getProvider()</pre>
 </li>
 </ul>
-<a name="setECDSASignatureEncoding(boolean)">
+<a name="setECDSASignatureEncoding-boolean-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -317,56 +342,64 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <pre>public&nbsp;<a href="../../../org/webpki/crypto/SignatureWrapper.html" title="class in org.webpki.crypto">SignatureWrapper</a>&nbsp;setECDSASignatureEncoding(boolean&nbsp;derEncoded)</pre>
 </li>
 </ul>
-<a name="sign()">
+<a name="sign--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>sign</h4>
 <pre>public&nbsp;byte[]&nbsp;sign()
-            throws <a href="http://download.oracle.com/javase/7/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a>,
-                   <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+            throws <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a>,
+                   <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd>
+<dd><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+</dl>
 </li>
 </ul>
-<a name="update(byte)">
+<a name="update-byte-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>update</h4>
 <pre>public&nbsp;<a href="../../../org/webpki/crypto/SignatureWrapper.html" title="class in org.webpki.crypto">SignatureWrapper</a>&nbsp;update(byte&nbsp;data)
-                        throws <a href="http://download.oracle.com/javase/7/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd></dl>
+                        throws <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd>
+</dl>
 </li>
 </ul>
-<a name="update(byte[])">
+<a name="update-byte:A-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>update</h4>
 <pre>public&nbsp;<a href="../../../org/webpki/crypto/SignatureWrapper.html" title="class in org.webpki.crypto">SignatureWrapper</a>&nbsp;update(byte[]&nbsp;data)
-                        throws <a href="http://download.oracle.com/javase/7/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd></dl>
+                        throws <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd>
+</dl>
 </li>
 </ul>
-<a name="verify(byte[])">
+<a name="verify-byte:A-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>verify</h4>
 <pre>public&nbsp;boolean&nbsp;verify(byte[]&nbsp;signature)
-               throws <a href="http://download.oracle.com/javase/7/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a>,
-                      <a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl><dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd>
-<dd><code><a href="http://download.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+               throws <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a>,
+                      <a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd>
+<dd><code><a href="http://download.oracle.com/javase/$%7Bjavadoc-version%7D/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+</dl>
 </li>
 </ul>
 </li>
@@ -377,9 +410,11 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 </div>
 <!-- ========= END OF CLASS DATA ========= -->
 <!-- ======= START OF BOTTOM NAVBAR ====== -->
-<div class="bottomNav"><a name="navbar_bottom">
+<div class="bottomNav"><a name="navbar.bottom">
 <!--   -->
-</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+</a>
+<div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.bottom.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
@@ -393,15 +428,15 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../org/webpki/crypto/SignatureAlgorithms.html" title="interface in org.webpki.crypto"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../org/webpki/crypto/SignerInterface.html" title="interface in org.webpki.crypto"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../org/webpki/crypto/SignatureAlgorithms.html" title="interface in org.webpki.crypto"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../org/webpki/crypto/SignerInterface.html" title="interface in org.webpki.crypto"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../index.html?org/webpki/crypto/SignatureWrapper.html" target="_top">Frames</a></li>
-<li><a href="SignatureWrapper.html" target="_top">No Frames</a></li>
+<li><a href="SignatureWrapper.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_bottom">
-<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -420,17 +455,17 @@ extends <a href="http://download.oracle.com/javase/7/docs/api/java/lang/Object.h
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#method_summary">Method</a></li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#method_detail">Method</a></li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
-<a name="skip-navbar_bottom">
+<a name="skip.navbar.bottom">
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
