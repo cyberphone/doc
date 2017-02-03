@@ -197,7 +197,8 @@ In case you prefer APIs before messages, the following fictitious example in Jav
 
     <span style="color:grey">@YMethod</span>
     <span style="color:grey">@YSimpleReturn</span>(&quot;<span style="color:green">currentValue</span>&quot;)
-    <span style="color:blue">public double</span> <span style="color:red">setFurnaceTemperature</span>(<span style="color:grey">@YParam</span>("<span style="color:green">id</span>") <span style="color:brown">String</span> id, <span style="color:grey">@YParam</span>("<span style="color:green">value</span>") <span style="color:blue">double</span> value) <span style="color:blue">throws</span> <span style="color:brown">IOException</span> {
+    <span style="color:blue">public double</span> <span style="color:red">setFurnaceTemperature</span>(<span style="color:grey">@YParam</span>("<span style="color:green">deviceId</span>") <span style="color:brown">String</span> deviceId, 
+                                        <span style="color:grey">@YParam</span>("<span style="color:green">value</span>") <span style="color:blue">double</span> value) <span style="color:blue">throws</span> <span style="color:brown">IOException</span> {
 
         <i>Actual method code...</i>
 
@@ -208,7 +209,7 @@ A request message would presumably look like the following:
 <div class="fancybox">{
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#606060">@context</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">https://iotstandards.org/device</span>&quot;,
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#606060">@qualifier</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">setFurnaceTemperature</span>&quot;,
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">id</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">#3407-B</span>&quot;,
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">deviceId</span>&quot;:&nbsp;&quot;<span style="color:#0000C0">#3407-B</span>&quot;,
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span style="color:#C00000">value</span>&quot;:&nbsp;<span style="color:#008000">223.5</span>
 <br>}
 <br>
