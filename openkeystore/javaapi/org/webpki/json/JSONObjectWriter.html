@@ -1220,7 +1220,7 @@ import org.webpki.json.JSONSignatureDecoder;
     
         // Sign document
         writer.setSignature(new JSONAsymKeySigner(new AsymKeySignerInterface() {
-             @Override
+            @Override
             public byte[] signData (byte[] data, AsymSignatureAlgorithms algorithm) throws IOException {
                 try {
                     return new SignatureWrapper(algorithm, privateKey).update(data).sign();
@@ -1228,7 +1228,7 @@ import org.webpki.json.JSONSignatureDecoder;
                     throw new IOException(e);
                 }
             }
-             @Override
+            @Override
             public PublicKey getPublicKey() throws IOException {
                 return publicKey;
             }
