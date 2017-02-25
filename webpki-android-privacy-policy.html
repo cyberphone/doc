@@ -15,12 +15,17 @@ body {font-size:10pt;color:#000000;font-family:arial,verdana,helvetica;backgroun
     the App locally never implies calling external sites.
     </p>
     <p><b>Personal data:</b><br/>
-    If identity certificates has been requested, they are stored in the App's private data
+    If identity certificates have been requested, they are stored in the App's private data
     area, inaccessible by other applications.  Each time you use an identity certificate
     to login to a Web site, the App will ask if you agree and offer you an option to cancel
     as well as an option to not ask again for the particular site (based on domain name).
     </p><p>
     The demo CA used by WebPKI only stores issued certificates locally on a secure server.
+    </p><p>The Saturn payment demo doesn't save any personal information.</p>
+    <p><b>Device information:</b><br/>
+    The Device ID required to enroll identity certificates does not contain any personal
+    information but utilizes the device-specific ANDROID_ID for creating a secure channel
+    between the device and the CA.
     </p>
-    <p>The Saturn payment demo doesn't save any personal information.</p>
+    
 </body></html>
