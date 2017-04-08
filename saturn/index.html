@@ -1,50 +1,68 @@
 ﻿<!DOCTYPE html><html><head><meta charset="UTF-8"><link rel="icon" href="saturn.png" sizes="192x192"><title>Saturn - Payment Authorization System</title>
 <style type="text/css">
-body {font-size:10pt;color:#000000;font-family:arial,verdana,helvetica;background-color:white}
-a {color:blue;font-family:verdana,helvetica;text-decoration:none}
+body {margin:10pt;font-size:8pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','DejaVu Sans',Arial,'Liberation Sans';background-color:white}
+a {color:blue;text-decoration:none}
 li {margin-top:6pt}
 </style>
 </head><body>
+<div id='samples' style='box-shadow:3pt 3pt 3pt #D0D0D0;border-color:#a9a9a9;border-style:solid;border-width:1px;z-index:8;position:absolute;background-color:white;;visibility:hidden'>
+    <div style="border-color:#a9a9a9;border-style:solid;border-width:0px 0px 1px 0px;text-align:center;background-color:blanchedalmond;padding:4pt">Sample Runs (JSON Printouts)</div>
+    <div style="cursor:pointer;border-color:#a9a9a9;border-style:solid;border-width:0px 0px 0px 1px;text-align:right;font-weight:bold;z-index:9;position:absolute;right:0pt;top:0pt;padding:4pt" onclick="closeSamples()">X</div>
+    <div style='padding:4pt 8pt 4pt 8pt'>
+        <p><a href="https://cyberphone.github.io/doc/saturn/bank2bank-payment.html" target="_blank">Bank-to-Bank Payment Sample</a></p>
+        <p><a href="https://cyberphone.github.io/doc/saturn/card-payment.html" target="_blank">Card Payment Sample</a></p>
+        <p><a href="https://cyberphone.github.io/doc/saturn/hybrid-payment.html" target="_blank">Hybrid Payment Sample</a></p>
+        <p><a href="https://cyberphone.github.io/doc/saturn/bank2bank-payment-refunded.html" target="_blank">Bank-to-Bank Payment + Refund Sample</a></p>
+    </div>
+</div>
 <script type="text/javascript">
     if (document.location.href.startsWith('http:')) {
         document.location.href = 'https://cyberphone.github.io/doc/saturn/';
     }
+    function closeSamples() {
+        document.getElementById('samples').style.visibility = 'hidden';
+    }
+    function openSamples() {
+        var e = document.getElementById('samples');
+        e.style.top = (window.innerHeight / 2 - e.offsetHeight / 2) + 'px';
+        e.style.left = (document.getElementById('main').offsetLeft + document.getElementById('main').offsetWidth / 2 - e.offsetWidth / 2) + 'px';
+        e.style.visibility = 'visible';
+        return false;
+    }
 </script>
-           <div style="width:600pt">
+           <div id="main" style="width:600pt">
                <img src="github-saturnlogo.svg" style="margin-left:auto;margin-right:auto;display:block" />
-               <p style="font-size:15pt;text-align:center">Universal Payment Authorization System</p>
+               <p style="font-size:12pt;text-align:center">Universal Payment Authorization System</p>
                <ul>
                    <li>
                        <i>Decentralized operation</i> accomplishes similar goals as 3D Secure and
-                       “Tokenization” but <i>without registries or additional services</i>
+                       "Tokenization" but <i>without registries or additional services</i>
                    </li>
                    <li>
-                       Facilitates the design of brand/bank independent, “Rich UI” wallets, supporting
+                       Facilitates the design of brand/bank independent, "Rich UI" wallets, supporting
                        both card- and bank-to-bank payments
                    </li>
                    <li>
                        Equally applicable on the mobile Web, Locally in a shop, at Automated gas
-                       stations, or as a “PC companion” on the Web
+                       stations, or as a "PC companion" on the Web
                    </li>
                    <li>
                        <i>Eliminates</i> the traditional payment terminal and reduces merchant PCI
                        requirements to a minimum
                    </li>
-                   <li>Requires a <i>single</i> “Active” method on the issuer side to function</li>
+                   <li>Requires a <i>single</i> "Active" method on the issuer side to function</li>
                </ul>
            </div>
     <div style="margin-left:20pt">
 <p>Links</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://cyberphone.github.io/doc/saturn/saturn-v3-presentation.pdf" target="_blank">Presentation</a></p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://cyberphone.github.io/doc/saturn/ui-demo/personalpaymentterminal.html" target="_blank">Wallet UI Web Demo</a></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://cyberphone.github.io/doc/saturn/bank2bank-payment.html" target="_blank">Bank-to-Bank Payment Sample</a></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://cyberphone.github.io/doc/saturn/card-payment.html" target="_blank">Card Payment Sample</a></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://cyberphone.github.io/doc/saturn/hybrid-payment.html" target="_blank">Hybrid Payment Sample</a></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://cyberphone.github.io/doc/saturn/bank2bank-payment-refunded.html" target="_blank">Bank-to-Bank Payment + Refund Sample</a></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://test.webpki.org/webpay-merchant/home" target="_blank">Public Test Site</a></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)" onclick="openSamples()">Sample Runs (JSON Printouts)</a></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<i>Live</i>: <a href="https://test.webpki.org/webpay-merchant/home" target="_blank">Public Test Site</a></p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/cyberphone/saturn" target="_blank">Source Code</a></p>
 <p>Defensive Publications</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://cyberphone.github.io/doc/defensive-publications/payment-authorization-scheme.pdf" target="_blank">Payment Authorization Scheme</a></p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://cyberphone.github.io/doc/defensive-publications/authority-objects.pdf" target="_blank">Authority Objects</a></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<i>Live</i>: <a href="https://mobilepki.org/webpay-acquirer/" target="_blank">Authority Object Server</a></p>
     </div>
 </body></html>
