@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JOSE Signature Proposal</title>
+    <style type="text/css">
+        .header {
+            text-align: center;
+            font-size: 10pt;
+            font-weight: bold;
+            padding: 15pt;
+        }
+
+        td {
+            padding-bottom: 8pt;
+        }
+
+        li {margin-bottom:3pt}
+
+        .tftable {
+            border-collapse: collapse;
+            box-shadow: 3pt 3pt 3pt #D0D0D0;
+        }
+
+            .tftable td {
+                background-color: #FFFFE0;
+                padding: 3pt 4pt;
+                border-width: 1px;
+                border-style: solid;
+                border-color: #a9a9a9;
+            }
+
+            .tftable th {
+                padding: 4pt 3pt;
+                background: linear-gradient(to bottom, #eaeaea 14%,#fcfcfc 52%,#e5e5e5 89%);
+                text-align: center;
+                border-width: 1px;
+                border-style: solid;
+                border-color: #a9a9a9;
+            }
+
+        body {
+            margin: 10pt;
+            font-size: 8pt;
+            color: #000000;
+            font-family: Verdana,'Bitstream Vera Sans','DejaVu Sans',Arial,'Liberation Sans';
+            background-color: white;
+        }
+
+        code {
+            font-size: 9pt;
+        }
+
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        function convertToUTF8(string) {
+            var buffer = [];
+            for (var i = 0; i < string.length; i++) {
+                var c = string.charCodeAt(i);
+                if (c < 128) {
+                    buffer.push(c);
+                } else if ((c > 127) && (c < 2048)) {
+                    buffer.push((c >> 6) | 0xC0);
+                    buffer.push((c & 0x3F) | 0x80);
+                } else {
+                    buffer.push((c >> 12) | 0xE0);
+                    buffer.push(((c >> 6) & 0x3F) | 0x80);
+                    buffer.push((c & 0x3F) | 0x80);
+                }
+            }
+            return new Uint8Array(buffer);
+        }
+
+        function decodeBase64URL(encoded) {
+            var string = atob(encoded.replace(/-/g, '+').replace(/_/g, '/'));
+            var buffer = [];
+            for (var i = 0; i < string.length; i++) {
+                buffer.push(string.charCodeAt(i));
+            }
+            return new Uint8Array(buffer);
+        }
+
+        function verifySignature() {
+            var signedJsonObject = JSON.parse(document.getElementById("sigdata").value)
+            console.debug(JSON.stringify(signedJsonObject));
+            // Perform signature normalization
+            var clone = Object.assign({}, signedJsonObject.signature);     // Clone "signature" child object
+            var signature = decodeBase64URL(clone.value);                  // Get signature value
+            delete signedJsonObject.signature.value;                       // Remove signature "value" property from signed object
+            var data = convertToUTF8(JSON.stringify(signedJsonObject));    // Get normalized JSON string (signed data)
+            signedJsonObject.signature = clone;                            // Restore signed object
+            // Perform the actual crypto, here using W3C WebCrypto [WCRYPT]
+            crypto.subtle.importKey('jwk', clone.publicKey,
+                                    { name: 'ECDSA', namedCurve: clone.publicKey.crv },
+                                    true, ['verify']).then(function (publicKey) {
+                                        crypto.subtle.verify({ name: 'ECDSA', hash: { name: 'SHA-256' } },
+                                                             publicKey, signature, data).then(function (result) {
+                                                                 document.getElementById("result").innerHTML = "<b>SUCCESS!</b>";
+                                                             });
+                                    });
+        }
+
+        verifySignature();
+        function validate() {
+            document.getElementById("result").innerHTML = "Begun validation.  Won't leave this state if there are errors...";
+            setTimeout(verifySignature, 1000);
+        }
+    </script>
+</head>
+<body>
+    <table>
+    <tr><td class="header">JOSE (JWA+JWK) + ES6 Signature Sample</td></tr>
+    <tr><td><textarea id="sigdata" style="width:70em;height:20em">{
+  &quot;now&quot;: &quot;2017-04-12T09:22:36Z&quot;,
+  &quot;escapeMe&quot;: &quot;\u20ac$\u000F\u000aA'\u0042\u0022\u005c\\\&quot;\/&quot;,
+  &quot;numbers&quot;: [1e+30,4.5,6],
+  &quot;signature&quot;: {
+    &quot;algorithm&quot;: &quot;ES256&quot;,
+    &quot;publicKey&quot;: {
+      &quot;kty&quot;: &quot;EC&quot;,
+      &quot;crv&quot;: &quot;P-256&quot;,
+      &quot;x&quot;: &quot;mPUKT_bAWGHIhg0TpjjqVsP1rXWQu_vwVOHHtNkdYoA&quot;,
+      &quot;y&quot;: &quot;8BQAsImGeAS46fyWw5MhYfGTT0IjBpFw2SS34Dv4Irs&quot;
+    },
+    &quot;value&quot;: &quot;lg0wcJSBpHnr4zUP4bLwBtTHhHMWP_xlFyYUjNsLzKxWbsC_1bmUjlegQ91TYEZ3xyMIPYmswtmoW9SSYNc7Pg&quot;
+  }
+}</textarea></td></tr>
+        <tr><td id="result"><i>Waiting for validation command</i></td></tr>
+        <tr><td><input type="button" value="Validate" onclick="validate()"/></td></tr>
+        <tr><td>Worth noting:
+            <ul>
+            <li>Both the <i>data</i> and the <i>header</i> are provided in <i>clear text</i></li>
+            <li>&quot;Canonicalization&quot; is reduced to <code>JSON.stringify()</code></li>
+            <li>Public keys are featured in JWKs</li>
+            <li>This is <i>not</i> a full-blown signature validator!</li>
+           </ul></td></tr>
+    </table>
+</body>
+</html>
