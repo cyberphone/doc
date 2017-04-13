@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>JOSE Signature Proposal</title>
+    <title>JOSE/ECMA Signature Proposal</title>
     <style type="text/css">
         .header {
             text-align: center;
@@ -92,19 +92,21 @@
 
         function verifySignature() {
             var signedJsonObject = JSON.parse(document.getElementById("sigdata").value);
-            console.debug(JSON.stringify(signedJsonObject));
+            console.debug("Original:\n" + JSON.stringify(signedJsonObject));
             // Perform signature normalization
             var clone = Object.assign({}, signedJsonObject.signature);     // Clone "signature" child object
             var signature = decodeBase64URL(clone.value);                  // Get signature value
             delete signedJsonObject.signature.value;                       // Remove signature "value" property from signed object
-            var data = convertToUTF8(JSON.stringify(signedJsonObject));    // Get normalized JSON string (signed data)
+            var normalized = JSON.stringify(signedJsonObject);             // Canonicalization?  Who needs that :-)
             signedJsonObject.signature = clone;                            // Restore signed object
-            // Perform the actual crypto, here using W3C WebCrypto [WCRYPT]
+            console.debug("Normalized:\n" + normalized);
+            // Perform the actual crypto, here using W3C WebCrypto
             const ECDSA = { name: 'ECDSA', namedCurve: clone.publicKey.crv, hash: { name: 'SHA-256' } };
             crypto.subtle.importKey('jwk', clone.publicKey, ECDSA, true, ['verify']).then(function(publicKey) {
-                crypto.subtle.verify(ECDSA, publicKey, signature, data).then(function(result) {
+                console.debug("Succeeded importing public key");
+                crypto.subtle.verify(ECDSA, publicKey, signature, convertToUTF8(normalized)).then(function (result) {
                     if (result) {
-                        document.getElementById("result").innerHTML = "<b>SUCCESS!</b>";
+                        document.getElementById("result").innerHTML = "<b style='color:green'>SUCCESS!</b>";
                     } else {
                         bad("The signature did not validate");
                     }
@@ -124,7 +126,12 @@
 </head>
 <body>
     <table>
-    <tr><td class="header">JOSE (JWA+JWK) + ES6 Signature Sample</td></tr>
+    <tr><td class="header">JOSE (JWA+JWK) / ECMA (ES6) Signature Sample &amp; Validator</td></tr>
+        <tr><td>The following shows an enhanced version of
+            <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
+        making better use of the time proven JOSE stack.</td></tr>
+    <tr><td>The validator currently only works with <i>Chrome</i> and <i>Firefox</i>
+            due to some yet unresolved issues with WebCrypto.</td></tr>
     <tr><td><textarea id="sigdata" style="width:70em;height:20em">{
   &quot;now&quot;: &quot;2017-04-12T09:22:36Z&quot;,
   &quot;escapeMe&quot;: &quot;\u20ac$\u000F\u000aA'\u0042\u0022\u005c\\\&quot;\/&quot;,
@@ -145,7 +152,7 @@
         <tr><td>Worth noting:
             <ul>
             <li>Both the <i>data</i> and the <i>header</i> are provided in <i>clear text</i> (everything but the <code>value</code> property and whitespace is signed)</li>
-            <li>&quot;Canonicalization&quot; is reduced to <code>JSON.stringify()</code></li>
+            <li>&quot;Canonicalization&quot; is reduced to <code>JSON.stringify()</code> thanx to ES6 serialization</li>
             <li>Public keys are featured in JWKs</li>
             <li>This is <i>not</i> a full-blown signature validator!</li>
            </ul></td></tr>
