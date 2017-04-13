@@ -57,6 +57,8 @@
         }
     </style>
     <script>
+        "use strict";
+
         function convertToUTF8(string) {
             var buffer = [];
             for (var i = 0; i < string.length; i++) {
@@ -85,7 +87,7 @@
         }
 
         function verifySignature() {
-            var signedJsonObject = JSON.parse(document.getElementById("sigdata").value)
+            var signedJsonObject = JSON.parse(document.getElementById("sigdata").value);
             console.debug(JSON.stringify(signedJsonObject));
             // Perform signature normalization
             var clone = Object.assign({}, signedJsonObject.signature);     // Clone "signature" child object
@@ -104,7 +106,6 @@
                                     });
         }
 
-        verifySignature();
         function validate() {
             document.getElementById("result").innerHTML = "Begun validation.  Won't leave this state if there are errors...";
             setTimeout(verifySignature, 1000);
