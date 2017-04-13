@@ -144,7 +144,7 @@
         <tr><td><input type="button" value="Validate" onclick="validate()"/></td></tr>
         <tr><td>Worth noting:
             <ul>
-            <li>Both the <i>data</i> and the <i>header</i> are provided in <i>clear text</i></li>
+            <li>Both the <i>data</i> and the <i>header</i> are provided in <i>clear text</i> (everything but the <code>value</code> property and whitespace is signed)</li>
             <li>&quot;Canonicalization&quot; is reduced to <code>JSON.stringify()</code></li>
             <li>Public keys are featured in JWKs</li>
             <li>This is <i>not</i> a full-blown signature validator!</li>
