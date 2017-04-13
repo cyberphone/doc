@@ -86,6 +86,10 @@
             return new Uint8Array(buffer);
         }
 
+        function bad(errorString) {
+            document.getElementById("result").innerHTML = "<span style='color:red;font-weight:bold'>" + errorString + "</span>";
+        }
+
         function verifySignature() {
             var signedJsonObject = JSON.parse(document.getElementById("sigdata").value);
             console.debug(JSON.stringify(signedJsonObject));
@@ -96,18 +100,24 @@
             var data = convertToUTF8(JSON.stringify(signedJsonObject));    // Get normalized JSON string (signed data)
             signedJsonObject.signature = clone;                            // Restore signed object
             // Perform the actual crypto, here using W3C WebCrypto [WCRYPT]
-            crypto.subtle.importKey('jwk', clone.publicKey,
-                                    { name: 'ECDSA', namedCurve: clone.publicKey.crv },
-                                    true, ['verify']).then(function (publicKey) {
-                                        crypto.subtle.verify({ name: 'ECDSA', hash: { name: 'SHA-256' } },
-                                                             publicKey, signature, data).then(function (result) {
-                                                                 document.getElementById("result").innerHTML = "<b>SUCCESS!</b>";
-                                                             });
-                                    });
+            const ECDSA = { name: 'ECDSA', namedCurve: clone.publicKey.crv, hash: { name: 'SHA-256' } };
+            crypto.subtle.importKey('jwk', clone.publicKey, ECDSA, true, ['verify']).then(function(publicKey) {
+                crypto.subtle.verify(ECDSA, publicKey, signature, data).then(function(result) {
+                    if (result) {
+                        document.getElementById("result").innerHTML = "<b>SUCCESS!</b>";
+                    } else {
+                        bad("The signature did not validate");
+                    }
+                }, function() {
+                    bad("The verify method FAILED");
+                });
+            }, function() {
+                bad("Import of public key FAILED");
+            });
         }
 
         function validate() {
-            document.getElementById("result").innerHTML = "Begun validation.  Won't leave this state if there are errors...";
+            document.getElementById("result").innerHTML = "Begun validation.  May stop here if there are errors...";
             setTimeout(verifySignature, 1000);
         }
     </script>
