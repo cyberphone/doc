@@ -153,7 +153,8 @@
             <ul>
             <li>Both the <i>Data</i> and the <i>Header</i> are provided in <i>Clear text</i> (everything but the <code>value</code> property and whitespace is signed)</li>
             <li>&quot;Canonicalization&quot; is reduced to <code>JSON.stringify()</code> thanx to ES6 serialization</li>
-            <li>The <i>Public key</i> is featured in a <code>JWK</code></li>
+            <li>The <code>publicKey</code> is featured in a <code>JWK</code></li>
+            <li>The signed object is fully compatible with <code>JavaScript</code> making it usable in browsers as well</li>
            </ul></td></tr>
         <tr><td>No, this is <i>NOT</i> a full blown signature validator; it is just the bare bones. By design :-)</td></tr>
         <tr><td><i>Version 0.3, 2017-04-14, WebPKI.org</i></td></tr>
