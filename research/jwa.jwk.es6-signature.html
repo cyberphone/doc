@@ -151,11 +151,12 @@
         <tr><td><input type="button" value="Validate" onclick="validate()"/></td></tr>
         <tr><td>Worth noting:
             <ul>
-            <li>Both the <i>data</i> and the <i>header</i> are provided in <i>clear text</i> (everything but the <code>value</code> property and whitespace is signed)</li>
+            <li>Both the <i>Data</i> and the <i>Header</i> are provided in <i>Clear text</i> (everything but the <code>value</code> property and whitespace is signed)</li>
             <li>&quot;Canonicalization&quot; is reduced to <code>JSON.stringify()</code> thanx to ES6 serialization</li>
-            <li>Public keys are featured in JWKs</li>
-            <li>This is <i>not</i> a full-blown signature validator!</li>
+            <li>The Public key is featured in a <code>JWK</code></li>
            </ul></td></tr>
+        <tr><td>No, this is <i>NOT</i> a full blown signature validator; it is just the bare bones. By design :-)</td></tr>
+        <tr><td><i>Version 0.3, 2017-04-14, WebPKI.org</i></td></tr>
     </table>
 </body>
 </html>
