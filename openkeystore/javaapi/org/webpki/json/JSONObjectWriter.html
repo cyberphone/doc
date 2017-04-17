@@ -117,10 +117,11 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <div class="block">Creates JSON objects and performs serialization according to ES6.
  <p>
  Also provides built-in support for encoding
- <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS (JSON Cleartext Signature)</b></a>
- and
+ <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS (JSON Cleartext Signature)</b></a>, 
 <a href="https://cyberphone.github.io/doc/security/jef.html" target="_blank"><b>JEF (JSON Encryption Format)</b></a>
- constructs.</p></div>
+and
+<a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a>
+ objects.</p></div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../serialized-form.html#org.webpki.json.JSONObjectWriter">Serialized Form</a></dd>
@@ -214,7 +215,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectWriter.html#createCorePublicKey-java.security.PublicKey-org.webpki.crypto.AlgorithmPreferences-">createCorePublicKey</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey,
                    <a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences)</code>
 <div class="block">Create a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
- formatted public key object.</div>
+ (<a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a>) formatted public key.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -396,22 +397,22 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <tr id="i26" class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectWriter.html#setPublicKey-java.security.PublicKey-">setPublicKey</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey)</code>
-<div class="block">Set a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
- public key property.</div>
+<div class="block">Set a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
+ (<a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a>) formatted public key.</div>
 </td>
 </tr>
 <tr id="i27" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectWriter.html#setPublicKey-java.security.PublicKey-org.webpki.crypto.AlgorithmPreferences-">setPublicKey</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey,
             <a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences)</code>
-<div class="block">Set a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
- public key property.</div>
+<div class="block">Set a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
+ (<a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a>) formatted public key.</div>
 </td>
 </tr>
 <tr id="i28" class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectWriter.html#setSignature-org.webpki.json.JSONSigner-">setSignature</a></span>(<a href="../../../org/webpki/json/JSONSigner.html" title="class in org.webpki.json">JSONSigner</a>&nbsp;signer)</code>
-<div class="block">Set <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
+<div class="block">Set a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
  <code>"signature"</code>object.</div>
 </td>
 </tr>
@@ -530,7 +531,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
                                                    <a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences)
                                             throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Create a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
- formatted public key object.<p>
+ (<a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a>) formatted public key.<p>
  Typical use:
 <pre>
     setObject("myPublicKey", JSONObjectWriter.setCorePublicKey(myPublicKey, AlgorithmPreferences.JOSE);
@@ -1178,8 +1179,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>setPublicKey</h4>
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;setPublicKey(<a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey)
                               throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Set a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
- public key property.<p>
+<div class="block">Set a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
+ (<a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a>) formatted public key.<p>
  This method is equivalent to <a href="../../../org/webpki/json/JSONObjectWriter.html#setPublicKey-java.security.PublicKey-org.webpki.crypto.AlgorithmPreferences-"><code>setPublicKey(PublicKey, AlgorithmPreferences)</code></a>
  using <a href="../../../org/webpki/crypto/AlgorithmPreferences.html#JOSE_ACCEPT_PREFER"><code>AlgorithmPreferences.JOSE_ACCEPT_PREFER</code></a> as second argument.</p></div>
 <dl>
@@ -1201,8 +1202,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;setPublicKey(<a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey,
                                      <a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences)
                               throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Set a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
- public key property.<p>
+<div class="block">Set a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
+ (<a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a>) formatted public key.<p>
  Resulting JSON:
  <pre>
     "publicKey": {
@@ -1230,7 +1231,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>setSignature</h4>
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;setSignature(<a href="../../../org/webpki/json/JSONSigner.html" title="class in org.webpki.json">JSONSigner</a>&nbsp;signer)
                               throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Set <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
+<div class="block">Set a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
  <code>"signature"</code>object.<p>
  This method performs all the processing needed for adding a JCS signature to the current object.</p></div>
 <dl>
@@ -1290,17 +1291,17 @@ import org.webpki.json.JSONSignatureDecoder;
         // Print signed document on the console
         System.out.println(json);
 </pre>
-<div id="verify" style="display:inline-block;background:#F8F8F8;border-width:1px;border-style:solid;border-color:grey;padding:10pt;box-shadow:3pt 3pt 3pt #D0D0D0"><pre>{
+<div id="verify" style="display:inline-block;background:#F8F8F8;border-width:1px;border-style:solid;border-color:grey;padding:0pt 10pt 0pt 10pt;box-shadow:3pt 3pt 3pt #D0D0D0"><pre>{
   "<span style="color:#C00000">myProperty</span>": "<span style="color:#0000C0">Some data</span>",
   "<span style="color:#C00000">signature</span>": {
     "<span style="color:#C00000">algorithm</span>": "<span style="color:#0000C0">ES256</span>",
     "<span style="color:#C00000">publicKey</span>": {
-      "<span style="color:#C00000">type</span>": "<span style="color:#0000C0">EC</span>",
-      "<span style="color:#C00000">curve</span>": "<span style="color:#0000C0">P-256</span>",
+      "<span style="color:#C00000">kty</span>": "<span style="color:#0000C0">EC</span>",
+      "<span style="color:#C00000">crv</span>": "<span style="color:#0000C0">P-256</span>",
       "<span style="color:#C00000">x</span>": "<span style="color:#0000C0">vlYxD4dtFJOp1_8_QUcieWCW-4KrLMmFL2rpkY1bQDs</span>",
       "<span style="color:#C00000">y</span>": "<span style="color:#0000C0">fxEF70yJenP3SPHM9hv-EnvhG6nXr3_S-fDqoj-F6yM</span>"
     },
-    "<span style="color:#C00000">value</span>": "<span style="color:#0000C0">gNfr9Es0cnc263tmOYMsctBhbdQUSn9K-Uk42kUMKn4gBUKu9SP4iqNCQd2h8QSePPGsKdkLILVJDBlAbkQ1eA</span>"
+    "<span style="color:#C00000">value</span>": "<span style="color:#0000C0">23NSrdC9ol5N3-wYPxdV4w8Ylm_mhUNijbCuJ3G_DqWGiN5j8X5qZxyBo2yy8kGou4yBh74egauup7u2KYytLQ</span>"
   }
 }
 </pre></div>    

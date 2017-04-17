@@ -728,7 +728,7 @@
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONObjectWriter.html#createCorePublicKey-java.security.PublicKey-org.webpki.crypto.AlgorithmPreferences-">createCorePublicKey(PublicKey, AlgorithmPreferences)</a></span> - Static method in class org.webpki.json.<a href="org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
 <dd>
 <div class="block">Create a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
- formatted public key object.</div>
+ (<a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a>) formatted public key.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/keygen2/ServerState.html#createDevicePINProtectedKey-org.webpki.sks.AppUsage-org.webpki.keygen2.KeySpecifier-">createDevicePINProtectedKey(AppUsage, KeySpecifier)</a></span> - Method in class org.webpki.keygen2.<a href="org/webpki/keygen2/ServerState.html" title="class in org.webpki.keygen2">ServerState</a></dt>
 <dd>&nbsp;</dd>
@@ -794,6 +794,8 @@
 <dd>&nbsp;</dd>
 <dt><a href="org/webpki/keygen2/CredentialDiscoveryResponseEncoder.LookupResult.html" title="class in org.webpki.keygen2"><span class="typeNameLink">CredentialDiscoveryResponseEncoder.LookupResult</span></a> - Class in <a href="org/webpki/keygen2/package-summary.html">org.webpki.keygen2</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/webpki/json/JSONSignatureDecoder.html#CRV_JSON">CRV_JSON</a></span> - Static variable in class org.webpki.json.<a href="org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/sks/SecureKeyStore.html#CRYPTO_STRING_NOT_AVAILABLE">CRYPTO_STRING_NOT_AVAILABLE</a></span> - Static variable in interface org.webpki.sks.<a href="org/webpki/sks/SecureKeyStore.html" title="interface in org.webpki.sks">SecureKeyStore</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/webpki/crypto/CryptoAlgorithms.html" title="interface in org.webpki.crypto"><span class="typeNameLink">CryptoAlgorithms</span></a> - Interface in <a href="org/webpki/crypto/package-summary.html">org.webpki.crypto</a></dt>
@@ -803,8 +805,6 @@
 <dt><span class="memberNameLink"><a href="org/webpki/xml/DOMReaderHelper.html#current--">current()</a></span> - Method in class org.webpki.xml.<a href="org/webpki/xml/DOMReaderHelper.html" title="class in org.webpki.xml">DOMReaderHelper</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/xml/DOMWriterHelper.html#current--">current()</a></span> - Method in class org.webpki.xml.<a href="org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/json/JSONSignatureDecoder.html#CURVE_JSON">CURVE_JSON</a></span> - Static variable in class org.webpki.json.<a href="org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/webpki/crypto/CustomCryptoProvider.html" title="class in org.webpki.crypto"><span class="typeNameLink">CustomCryptoProvider</span></a> - Class in <a href="org/webpki/crypto/package-summary.html">org.webpki.crypto</a></dt>
 <dd>
@@ -1657,7 +1657,7 @@
 <dd>
 <div class="block">Read and decode a public key in
  <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
- format.</div>
+ (<a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a>) format.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/sks/DeviceInfo.html#getCryptoDataSize--">getCryptoDataSize()</a></span> - Method in class org.webpki.sks.<a href="org/webpki/sks/DeviceInfo.html" title="class in org.webpki.sks">DeviceInfo</a></dt>
 <dd>&nbsp;</dd>
@@ -2038,9 +2038,9 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/keygen2/KeyCreationRequestDecoder.html#getKeyObjects--">getKeyObjects()</a></span> - Method in class org.webpki.keygen2.<a href="org/webpki/keygen2/KeyCreationRequestDecoder.html" title="class in org.webpki.keygen2">KeyCreationRequestDecoder</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/json/JSONObjectReader.html#getKeyPairFromJwk--">getKeyPairFromJwk()</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></dt>
+<dt><span class="memberNameLink"><a href="org/webpki/json/JSONObjectReader.html#getKeyPair--">getKeyPair()</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></dt>
 <dd>
-<div class="block">Read a public and private key in a <a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a>.</div>
+<div class="block">Read a public and private key in <a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a> format.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/keygen2/KeySpecifier.html#getKeyParameters--">getKeyParameters()</a></span> - Method in class org.webpki.keygen2.<a href="org/webpki/keygen2/KeySpecifier.html" title="class in org.webpki.keygen2">KeySpecifier</a></dt>
 <dd>&nbsp;</dd>
@@ -2354,13 +2354,13 @@
 <dd>
 <div class="block">Read and decode a public key in
  <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
- format.</div>
+ (<a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a>) format.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONObjectReader.html#getPublicKey--">getPublicKey()</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></dt>
 <dd>
 <div class="block">Read and decode a public key in
  <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
- format.</div>
+ (<a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a>) format.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONSignatureDecoder.html#getPublicKey--">getPublicKey()</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a></dt>
 <dd>&nbsp;</dd>
@@ -2376,10 +2376,6 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/crypto/CertificateInfo.html#getPublicKeyData--">getPublicKeyData()</a></span> - Method in class org.webpki.crypto.<a href="org/webpki/crypto/CertificateInfo.html" title="class in org.webpki.crypto">CertificateInfo</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/json/JSONObjectReader.html#getPublicKeyFromJwk--">getPublicKeyFromJwk()</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></dt>
-<dd>
-<div class="block">Read a public key in a <a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a>.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/crypto/CertificateInfo.html#getPublicKeySize--">getPublicKeySize()</a></span> - Method in class org.webpki.crypto.<a href="org/webpki/crypto/CertificateInfo.html" title="class in org.webpki.crypto">CertificateInfo</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/crypto/KeyAlgorithms.html#getPublicKeySizeInBits--">getPublicKeySizeInBits()</a></span> - Method in enum org.webpki.crypto.<a href="org/webpki/crypto/KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a></dt>
@@ -3446,6 +3442,8 @@
 <dt><span class="memberNameLink"><a href="org/webpki/sks/SecureKeyStore.html#KMK_ROLL_OVER_AUTHORIZATION">KMK_ROLL_OVER_AUTHORIZATION</a></span> - Static variable in interface org.webpki.sks.<a href="org/webpki/sks/SecureKeyStore.html" title="interface in org.webpki.sks">SecureKeyStore</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/sks/SecureKeyStore.html#KMK_TARGET_KEY_REFERENCE">KMK_TARGET_KEY_REFERENCE</a></span> - Static variable in interface org.webpki.sks.<a href="org/webpki/sks/SecureKeyStore.html" title="interface in org.webpki.sks">SecureKeyStore</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/webpki/json/JSONSignatureDecoder.html#KTY_JSON">KTY_JSON</a></span> - Static variable in class org.webpki.json.<a href="org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <a name="I:L">
@@ -4647,13 +4645,13 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONObjectWriter.html#setPublicKey-java.security.PublicKey-org.webpki.crypto.AlgorithmPreferences-">setPublicKey(PublicKey, AlgorithmPreferences)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
 <dd>
-<div class="block">Set a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
- public key property.</div>
+<div class="block">Set a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
+ (<a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a>) formatted public key.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONObjectWriter.html#setPublicKey-java.security.PublicKey-">setPublicKey(PublicKey)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
 <dd>
-<div class="block">Set a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
- public key property.</div>
+<div class="block">Set a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
+ (<a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a>) formatted public key.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/pdf/PDFSigner.html#setReason-java.lang.String-">setReason(String)</a></span> - Method in class org.webpki.pdf.<a href="org/webpki/pdf/PDFSigner.html" title="class in org.webpki.pdf">PDFSigner</a></dt>
 <dd>&nbsp;</dd>
@@ -4683,7 +4681,7 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONObjectWriter.html#setSignature-org.webpki.json.JSONSigner-">setSignature(JSONSigner)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
 <dd>
-<div class="block">Set <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
+<div class="block">Set a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
  <code>"signature"</code>object.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONAsymKeySigner.html#setSignatureAlgorithm-org.webpki.crypto.AsymSignatureAlgorithms-">setSignatureAlgorithm(AsymSignatureAlgorithms)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONAsymKeySigner.html" title="class in org.webpki.json">JSONAsymKeySigner</a></dt>
