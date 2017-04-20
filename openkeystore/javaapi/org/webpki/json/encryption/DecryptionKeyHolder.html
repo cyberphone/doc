@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -127,9 +127,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/DecryptionKeyHolder.html#DecryptionKeyHolder-java.security.PublicKey-java.security.PrivateKey-org.webpki.json.encryption.KeyEncryptionAlgorithms-">DecryptionKeyHolder</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/DecryptionKeyHolder.html#DecryptionKeyHolder-java.security.PublicKey-java.security.PrivateKey-org.webpki.json.encryption.KeyEncryptionAlgorithms-java.lang.String-">DecryptionKeyHolder</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey,
                    <a href="https://docs.oracle.com/javase/8/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</a>&nbsp;privateKey,
-                   <a href="../../../../org/webpki/json/encryption/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">KeyEncryptionAlgorithms</a>&nbsp;keyEncryptionAlgorithm)</code>&nbsp;</td>
+                   <a href="../../../../org/webpki/json/encryption/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">KeyEncryptionAlgorithms</a>&nbsp;keyEncryptionAlgorithm,
+                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;optionalKeyId)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -151,10 +152,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/DecryptionKeyHolder.html#getKeyEncryptionAlgorithm--">getKeyEncryptionAlgorithm</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/DecryptionKeyHolder.html#getKeyId--">getKeyId</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/DecryptionKeyHolder.html#getPrivateKey--">getPrivateKey</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/DecryptionKeyHolder.html#getPublicKey--">getPublicKey</a></span>()</code>&nbsp;</td>
 </tr>
@@ -180,7 +185,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="DecryptionKeyHolder-java.security.PublicKey-java.security.PrivateKey-org.webpki.json.encryption.KeyEncryptionAlgorithms-">
+<a name="DecryptionKeyHolder-java.security.PublicKey-java.security.PrivateKey-org.webpki.json.encryption.KeyEncryptionAlgorithms-java.lang.String-">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -188,7 +193,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>DecryptionKeyHolder</h4>
 <pre>public&nbsp;DecryptionKeyHolder(<a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey,
                            <a href="https://docs.oracle.com/javase/8/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</a>&nbsp;privateKey,
-                           <a href="../../../../org/webpki/json/encryption/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">KeyEncryptionAlgorithms</a>&nbsp;keyEncryptionAlgorithm)</pre>
+                           <a href="../../../../org/webpki/json/encryption/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">KeyEncryptionAlgorithms</a>&nbsp;keyEncryptionAlgorithm,
+                           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;optionalKeyId)</pre>
 </li>
 </ul>
 </li>
@@ -206,6 +212,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getKeyEncryptionAlgorithm</h4>
 <pre>public&nbsp;<a href="../../../../org/webpki/json/encryption/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">KeyEncryptionAlgorithms</a>&nbsp;getKeyEncryptionAlgorithm()</pre>
+</li>
+</ul>
+<a name="getKeyId--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getKeyId</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getKeyId()</pre>
 </li>
 </ul>
 <a name="getPrivateKey--">
