@@ -48,7 +48,7 @@ var activeTableTab = "activeTableTab";
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../org/webpki/json/encryption/DecryptionKeyHolder.html" title="class in org.webpki.json.encryption"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../org/webpki/json/encryption/EncryptionCore.AuthEncResult.html" title="class in org.webpki.json.encryption"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../org/webpki/json/encryption/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?org/webpki/json/encryption/EncryptionCore.html" target="_top">Frames</a></li>
@@ -72,7 +72,7 @@ var activeTableTab = "activeTableTab";
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
@@ -109,35 +109,14 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public final class <span class="typeNameLabel">EncryptionCore</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+<div class="block">Core JEF (JSON Encryption Format) class.
+ Implements a subset of the RFC7516 (JWE) algorithms</div>
 </li>
 </ul>
 </div>
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
-<!-- ======== NESTED CLASS SUMMARY ======== -->
-<ul class="blockList">
-<li class="blockList"><a name="nested.class.summary">
-<!--   -->
-</a>
-<h3>Nested Class Summary</h3>
-<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
-<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Class and Description</th>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>static class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/EncryptionCore.AuthEncResult.html" title="class in org.webpki.json.encryption">EncryptionCore.AuthEncResult</a></span></code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/EncryptionCore.EcdhSenderResult.html" title="class in org.webpki.json.encryption">EncryptionCore.EcdhSenderResult</a></span></code>&nbsp;</td>
-</tr>
-</table>
-</li>
-</ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.summary">
@@ -156,54 +135,71 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                  byte[]&nbsp;key,
                  byte[]&nbsp;cipherText,
                  byte[]&nbsp;iv,
-                 byte[]&nbsp;authenticatedData,
-                 byte[]&nbsp;tag)</code>&nbsp;</td>
+                 byte[]&nbsp;authData,
+                 byte[]&nbsp;tag)</code>
+<div class="block">Decrypt using a symmetric key.</div>
+</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../org/webpki/json/encryption/EncryptionCore.AuthEncResult.html" title="class in org.webpki.json.encryption">EncryptionCore.AuthEncResult</a></code></td>
+<td class="colFirst"><code>static <a href="../../../../org/webpki/json/encryption/SymmetricEncryptionResult.html" title="class in org.webpki.json.encryption">SymmetricEncryptionResult</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/EncryptionCore.html#contentEncryption-org.webpki.json.encryption.DataEncryptionAlgorithms-byte:A-byte:A-byte:A-">contentEncryption</a></span>(<a href="../../../../org/webpki/json/encryption/DataEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">DataEncryptionAlgorithms</a>&nbsp;dataEncryptionAlgorithm,
                  byte[]&nbsp;key,
                  byte[]&nbsp;plainText,
-                 byte[]&nbsp;authenticatedData)</code>&nbsp;</td>
+                 byte[]&nbsp;authData)</code>
+<div class="block">Perform a symmetric key encryption.</div>
+</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>static byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/EncryptionCore.html#generateDataEncryptionKey-org.webpki.json.encryption.DataEncryptionAlgorithms-">generateDataEncryptionKey</a></span>(<a href="../../../../org/webpki/json/encryption/DataEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">DataEncryptionAlgorithms</a>&nbsp;dataEncryptionAlgorithm)</code>&nbsp;</td>
-</tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code>static boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/EncryptionCore.html#permittedDataEncryptionAlgorithm-org.webpki.json.encryption.DataEncryptionAlgorithms-">permittedDataEncryptionAlgorithm</a></span>(<a href="../../../../org/webpki/json/encryption/DataEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">DataEncryptionAlgorithms</a>&nbsp;algorithm)</code>&nbsp;</td>
-</tr>
-<tr id="i4" class="altColor">
-<td class="colFirst"><code>static boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/EncryptionCore.html#permittedKeyEncryptionAlgorithm-org.webpki.json.encryption.KeyEncryptionAlgorithms-">permittedKeyEncryptionAlgorithm</a></span>(<a href="../../../../org/webpki/json/encryption/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">KeyEncryptionAlgorithms</a>&nbsp;algorithm)</code>&nbsp;</td>
-</tr>
-<tr id="i5" class="rowColor">
-<td class="colFirst"><code>static byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/EncryptionCore.html#receiverKeyAgreement-org.webpki.json.encryption.KeyEncryptionAlgorithms-org.webpki.json.encryption.DataEncryptionAlgorithms-java.security.interfaces.ECPublicKey-java.security.PrivateKey-java.lang.String-">receiverKeyAgreement</a></span>(<a href="../../../../org/webpki/json/encryption/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">KeyEncryptionAlgorithms</a>&nbsp;keyEncryptionAlgorithm,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/EncryptionCore.html#receiverKeyAgreement-org.webpki.json.encryption.KeyEncryptionAlgorithms-org.webpki.json.encryption.DataEncryptionAlgorithms-java.security.interfaces.ECPublicKey-java.security.PrivateKey-byte:A-">receiverKeyAgreement</a></span>(<a href="../../../../org/webpki/json/encryption/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">KeyEncryptionAlgorithms</a>&nbsp;keyEncryptionAlgorithm,
                     <a href="../../../../org/webpki/json/encryption/DataEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">DataEncryptionAlgorithms</a>&nbsp;dataEncryptionAlgorithm,
                     <a href="https://docs.oracle.com/javase/8/docs/api/java/security/interfaces/ECPublicKey.html?is-external=true" title="class or interface in java.security.interfaces">ECPublicKey</a>&nbsp;receivedPublicKey,
                     <a href="https://docs.oracle.com/javase/8/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</a>&nbsp;privateKey,
-                    <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;providerName)</code>&nbsp;</td>
+                    byte[]&nbsp;encryptedKeyData)</code>
+<div class="block">Perform a receiver side ECDH operation.</div>
+</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>static byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/EncryptionCore.html#rsaDecryptKey-org.webpki.json.encryption.KeyEncryptionAlgorithms-byte:A-java.security.PrivateKey-java.lang.String-">rsaDecryptKey</a></span>(<a href="../../../../org/webpki/json/encryption/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">KeyEncryptionAlgorithms</a>&nbsp;keyEncryptionAlgorithm,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/EncryptionCore.html#rsaDecryptKey-org.webpki.json.encryption.KeyEncryptionAlgorithms-byte:A-java.security.PrivateKey-">rsaDecryptKey</a></span>(<a href="../../../../org/webpki/json/encryption/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">KeyEncryptionAlgorithms</a>&nbsp;keyEncryptionAlgorithm,
              byte[]&nbsp;encryptedKey,
-             <a href="https://docs.oracle.com/javase/8/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</a>&nbsp;privateKey,
-             <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;providerName)</code>&nbsp;</td>
+             <a href="https://docs.oracle.com/javase/8/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</a>&nbsp;privateKey)</code>
+<div class="block">Decrypt a symmetric key using an RSA cipher.</div>
+</td>
 </tr>
-<tr id="i7" class="rowColor">
-<td class="colFirst"><code>static byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/EncryptionCore.html#rsaEncryptKey-org.webpki.json.encryption.KeyEncryptionAlgorithms-byte:A-java.security.PublicKey-">rsaEncryptKey</a></span>(<a href="../../../../org/webpki/json/encryption/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">KeyEncryptionAlgorithms</a>&nbsp;keyEncryptionAlgorithm,
-             byte[]&nbsp;rawKey,
-             <a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey)</code>&nbsp;</td>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../org/webpki/json/encryption/AsymmetricEncryptionResult.html" title="class in org.webpki.json.encryption">AsymmetricEncryptionResult</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/EncryptionCore.html#rsaEncryptKey-org.webpki.json.encryption.KeyEncryptionAlgorithms-org.webpki.json.encryption.DataEncryptionAlgorithms-java.security.PublicKey-">rsaEncryptKey</a></span>(<a href="../../../../org/webpki/json/encryption/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">KeyEncryptionAlgorithms</a>&nbsp;keyEncryptionAlgorithm,
+             <a href="../../../../org/webpki/json/encryption/DataEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">DataEncryptionAlgorithms</a>&nbsp;dataEncryptionAlgorithm,
+             <a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey)</code>
+<div class="block">Generate a random key and encrypt it using an RSA cipher.</div>
+</td>
 </tr>
-<tr id="i8" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../org/webpki/json/encryption/EncryptionCore.EcdhSenderResult.html" title="class in org.webpki.json.encryption">EncryptionCore.EcdhSenderResult</a></code></td>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../org/webpki/json/encryption/AsymmetricEncryptionResult.html" title="class in org.webpki.json.encryption">AsymmetricEncryptionResult</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/EncryptionCore.html#senderKeyAgreement-org.webpki.json.encryption.KeyEncryptionAlgorithms-org.webpki.json.encryption.DataEncryptionAlgorithms-java.security.PublicKey-">senderKeyAgreement</a></span>(<a href="../../../../org/webpki/json/encryption/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">KeyEncryptionAlgorithms</a>&nbsp;keyEncryptionAlgorithm,
                   <a href="../../../../org/webpki/json/encryption/DataEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">DataEncryptionAlgorithms</a>&nbsp;dataEncryptionAlgorithm,
-                  <a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;staticKey)</code>&nbsp;</td>
+                  <a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;staticKey)</code>
+<div class="block">Perform a sender side ECDH operation.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/EncryptionCore.html#setAesProvider-java.lang.String-">setAesProvider</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;providerName)</code>
+<div class="block">Explicitly set provider for AES operations.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/EncryptionCore.html#setEcProvider-java.lang.String-">setEcProvider</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;providerName)</code>
+<div class="block">Explicitly set provider for EC operations.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/EncryptionCore.html#setRsaProvider-java.lang.String-">setRsaProvider</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;providerName)</code>
+<div class="block">Explicitly set provider for RSA operations.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -237,12 +233,22 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                                        byte[]&nbsp;key,
                                        byte[]&nbsp;cipherText,
                                        byte[]&nbsp;iv,
-                                       byte[]&nbsp;authenticatedData,
+                                       byte[]&nbsp;authData,
                                        byte[]&nbsp;tag)
                                 throws <a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></pre>
+<div class="block">Decrypt using a symmetric key.</div>
 <dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>dataEncryptionAlgorithm</code> - Algorithm to use</dd>
+<dd><code>key</code> - The encryption key</dd>
+<dd><code>cipherText</code> - The data to be decrypted</dd>
+<dd><code>iv</code> - Initialization Vector</dd>
+<dd><code>authData</code> - Additional input used for authentication puposes</dd>
+<dd><code>tag</code> - Authentication tag</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The data in clear</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code> - &nbsp;</dd>
 </dl>
 </li>
 </ul>
@@ -252,45 +258,26 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>contentEncryption</h4>
-<pre>public static&nbsp;<a href="../../../../org/webpki/json/encryption/EncryptionCore.AuthEncResult.html" title="class in org.webpki.json.encryption">EncryptionCore.AuthEncResult</a>&nbsp;contentEncryption(<a href="../../../../org/webpki/json/encryption/DataEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">DataEncryptionAlgorithms</a>&nbsp;dataEncryptionAlgorithm,
-                                                             byte[]&nbsp;key,
-                                                             byte[]&nbsp;plainText,
-                                                             byte[]&nbsp;authenticatedData)
-                                                      throws <a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></pre>
+<pre>public static&nbsp;<a href="../../../../org/webpki/json/encryption/SymmetricEncryptionResult.html" title="class in org.webpki.json.encryption">SymmetricEncryptionResult</a>&nbsp;contentEncryption(<a href="../../../../org/webpki/json/encryption/DataEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">DataEncryptionAlgorithms</a>&nbsp;dataEncryptionAlgorithm,
+                                                          byte[]&nbsp;key,
+                                                          byte[]&nbsp;plainText,
+                                                          byte[]&nbsp;authData)
+                                                   throws <a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></pre>
+<div class="block">Perform a symmetric key encryption.</div>
 <dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>dataEncryptionAlgorithm</code> - Algorithm to use</dd>
+<dd><code>key</code> - Encryption key</dd>
+<dd><code>plainText</code> - The data to be encrypted</dd>
+<dd><code>authData</code> - Additional input factor for authentication</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>A composite object including encrypted data</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code> - &nbsp;</dd>
 </dl>
 </li>
 </ul>
-<a name="generateDataEncryptionKey-org.webpki.json.encryption.DataEncryptionAlgorithms-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>generateDataEncryptionKey</h4>
-<pre>public static&nbsp;byte[]&nbsp;generateDataEncryptionKey(<a href="../../../../org/webpki/json/encryption/DataEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">DataEncryptionAlgorithms</a>&nbsp;dataEncryptionAlgorithm)</pre>
-</li>
-</ul>
-<a name="permittedDataEncryptionAlgorithm-org.webpki.json.encryption.DataEncryptionAlgorithms-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>permittedDataEncryptionAlgorithm</h4>
-<pre>public static&nbsp;boolean&nbsp;permittedDataEncryptionAlgorithm(<a href="../../../../org/webpki/json/encryption/DataEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">DataEncryptionAlgorithms</a>&nbsp;algorithm)</pre>
-</li>
-</ul>
-<a name="permittedKeyEncryptionAlgorithm-org.webpki.json.encryption.KeyEncryptionAlgorithms-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>permittedKeyEncryptionAlgorithm</h4>
-<pre>public static&nbsp;boolean&nbsp;permittedKeyEncryptionAlgorithm(<a href="../../../../org/webpki/json/encryption/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">KeyEncryptionAlgorithms</a>&nbsp;algorithm)</pre>
-</li>
-</ul>
-<a name="receiverKeyAgreement-org.webpki.json.encryption.KeyEncryptionAlgorithms-org.webpki.json.encryption.DataEncryptionAlgorithms-java.security.interfaces.ECPublicKey-java.security.PrivateKey-java.lang.String-">
+<a name="receiverKeyAgreement-org.webpki.json.encryption.KeyEncryptionAlgorithms-org.webpki.json.encryption.DataEncryptionAlgorithms-java.security.interfaces.ECPublicKey-java.security.PrivateKey-byte:A-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -300,17 +287,26 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                                           <a href="../../../../org/webpki/json/encryption/DataEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">DataEncryptionAlgorithms</a>&nbsp;dataEncryptionAlgorithm,
                                           <a href="https://docs.oracle.com/javase/8/docs/api/java/security/interfaces/ECPublicKey.html?is-external=true" title="class or interface in java.security.interfaces">ECPublicKey</a>&nbsp;receivedPublicKey,
                                           <a href="https://docs.oracle.com/javase/8/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</a>&nbsp;privateKey,
-                                          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;providerName)
+                                          byte[]&nbsp;encryptedKeyData)
                                    throws <a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a>,
                                           <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Perform a receiver side ECDH operation.</div>
 <dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>keyEncryptionAlgorithm</code> - The ECDH algorithm</dd>
+<dd><code>dataEncryptionAlgorithm</code> - The designated content encryption algorithm</dd>
+<dd><code>receivedPublicKey</code> - The sender's (usually ephemeral) public key</dd>
+<dd><code>privateKey</code> - The receiver's private key</dd>
+<dd><code>encryptedKeyData</code> - For ECDH+KW based operations only</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Shared secret</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code> - &nbsp;</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - &nbsp;</dd>
 </dl>
 </li>
 </ul>
-<a name="rsaDecryptKey-org.webpki.json.encryption.KeyEncryptionAlgorithms-byte:A-java.security.PrivateKey-java.lang.String-">
+<a name="rsaDecryptKey-org.webpki.json.encryption.KeyEncryptionAlgorithms-byte:A-java.security.PrivateKey-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -318,46 +314,108 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>rsaDecryptKey</h4>
 <pre>public static&nbsp;byte[]&nbsp;rsaDecryptKey(<a href="../../../../org/webpki/json/encryption/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">KeyEncryptionAlgorithms</a>&nbsp;keyEncryptionAlgorithm,
                                    byte[]&nbsp;encryptedKey,
-                                   <a href="https://docs.oracle.com/javase/8/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</a>&nbsp;privateKey,
-                                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;providerName)
+                                   <a href="https://docs.oracle.com/javase/8/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</a>&nbsp;privateKey)
                             throws <a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></pre>
+<div class="block">Decrypt a symmetric key using an RSA cipher.</div>
 <dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>keyEncryptionAlgorithm</code> - The algorithm to use</dd>
+<dd><code>encryptedKey</code> - Contains a symmetric key used for encrypting the data</dd>
+<dd><code>privateKey</code> - The RSA private key</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The key in plain text</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code> - &nbsp;</dd>
 </dl>
 </li>
 </ul>
-<a name="rsaEncryptKey-org.webpki.json.encryption.KeyEncryptionAlgorithms-byte:A-java.security.PublicKey-">
+<a name="rsaEncryptKey-org.webpki.json.encryption.KeyEncryptionAlgorithms-org.webpki.json.encryption.DataEncryptionAlgorithms-java.security.PublicKey-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>rsaEncryptKey</h4>
-<pre>public static&nbsp;byte[]&nbsp;rsaEncryptKey(<a href="../../../../org/webpki/json/encryption/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">KeyEncryptionAlgorithms</a>&nbsp;keyEncryptionAlgorithm,
-                                   byte[]&nbsp;rawKey,
-                                   <a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey)
-                            throws <a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></pre>
+<pre>public static&nbsp;<a href="../../../../org/webpki/json/encryption/AsymmetricEncryptionResult.html" title="class in org.webpki.json.encryption">AsymmetricEncryptionResult</a>&nbsp;rsaEncryptKey(<a href="../../../../org/webpki/json/encryption/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">KeyEncryptionAlgorithms</a>&nbsp;keyEncryptionAlgorithm,
+                                                       <a href="../../../../org/webpki/json/encryption/DataEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">DataEncryptionAlgorithms</a>&nbsp;dataEncryptionAlgorithm,
+                                                       <a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey)
+                                                throws <a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></pre>
+<div class="block">Generate a random key and encrypt it using an RSA cipher.</div>
 <dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>keyEncryptionAlgorithm</code> - Algorithm to use</dd>
+<dd><code>dataEncryptionAlgorithm</code> - The designated content encryption algorithm</dd>
+<dd><code>publicKey</code> - The RSA key</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>A composite object including the data encryption key</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code> - &nbsp;</dd>
 </dl>
 </li>
 </ul>
 <a name="senderKeyAgreement-org.webpki.json.encryption.KeyEncryptionAlgorithms-org.webpki.json.encryption.DataEncryptionAlgorithms-java.security.PublicKey-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>senderKeyAgreement</h4>
-<pre>public static&nbsp;<a href="../../../../org/webpki/json/encryption/EncryptionCore.EcdhSenderResult.html" title="class in org.webpki.json.encryption">EncryptionCore.EcdhSenderResult</a>&nbsp;senderKeyAgreement(<a href="../../../../org/webpki/json/encryption/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">KeyEncryptionAlgorithms</a>&nbsp;keyEncryptionAlgorithm,
-                                                                 <a href="../../../../org/webpki/json/encryption/DataEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">DataEncryptionAlgorithms</a>&nbsp;dataEncryptionAlgorithm,
-                                                                 <a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;staticKey)
-                                                          throws <a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a>,
-                                                                 <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>public static&nbsp;<a href="../../../../org/webpki/json/encryption/AsymmetricEncryptionResult.html" title="class in org.webpki.json.encryption">AsymmetricEncryptionResult</a>&nbsp;senderKeyAgreement(<a href="../../../../org/webpki/json/encryption/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">KeyEncryptionAlgorithms</a>&nbsp;keyEncryptionAlgorithm,
+                                                            <a href="../../../../org/webpki/json/encryption/DataEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">DataEncryptionAlgorithms</a>&nbsp;dataEncryptionAlgorithm,
+                                                            <a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;staticKey)
+                                                     throws <a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a>,
+                                                            <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Perform a sender side ECDH operation.</div>
 <dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>keyEncryptionAlgorithm</code> - The ECDH algorithm</dd>
+<dd><code>dataEncryptionAlgorithm</code> - The designated content encryption algorithm</dd>
+<dd><code>staticKey</code> - The receiver's (usually static) public key</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>A composite object including the (plain text) data encryption key</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code> - &nbsp;</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - &nbsp;</dd>
+</dl>
+</li>
+</ul>
+<a name="setAesProvider-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setAesProvider</h4>
+<pre>public static&nbsp;void&nbsp;setAesProvider(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;providerName)</pre>
+<div class="block">Explicitly set provider for AES operations.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>providerName</code> - Name of provider</dd>
+</dl>
+</li>
+</ul>
+<a name="setEcProvider-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setEcProvider</h4>
+<pre>public static&nbsp;void&nbsp;setEcProvider(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;providerName)</pre>
+<div class="block">Explicitly set provider for EC operations.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>providerName</code> - Name of provider</dd>
+</dl>
+</li>
+</ul>
+<a name="setRsaProvider-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>setRsaProvider</h4>
+<pre>public static&nbsp;void&nbsp;setRsaProvider(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;providerName)</pre>
+<div class="block">Explicitly set provider for RSA operations.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>providerName</code> - Name of provider</dd>
 </dl>
 </li>
 </ul>
@@ -388,7 +446,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../org/webpki/json/encryption/DecryptionKeyHolder.html" title="class in org.webpki.json.encryption"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../org/webpki/json/encryption/EncryptionCore.AuthEncResult.html" title="class in org.webpki.json.encryption"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../org/webpki/json/encryption/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?org/webpki/json/encryption/EncryptionCore.html" target="_top">Frames</a></li>
@@ -412,7 +470,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
