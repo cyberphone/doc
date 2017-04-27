@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9,"i6":9,"i7":9,"i8":9};
+var methods = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9,"i6":9,"i7":9,"i8":9,"i9":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -151,6 +151,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>static byte[]</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/EncryptionCore.html#generateRandom-int-">generateRandom</a></span>(int&nbsp;length)</code>
+<div class="block">Generate byte[] with random data.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/EncryptionCore.html#receiverKeyAgreement-org.webpki.json.encryption.KeyEncryptionAlgorithms-org.webpki.json.encryption.DataEncryptionAlgorithms-java.security.interfaces.ECPublicKey-java.security.PrivateKey-byte:A-">receiverKeyAgreement</a></span>(<a href="../../../../org/webpki/json/encryption/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">KeyEncryptionAlgorithms</a>&nbsp;keyEncryptionAlgorithm,
                     <a href="../../../../org/webpki/json/encryption/DataEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">DataEncryptionAlgorithms</a>&nbsp;dataEncryptionAlgorithm,
                     <a href="https://docs.oracle.com/javase/8/docs/api/java/security/interfaces/ECPublicKey.html?is-external=true" title="class or interface in java.security.interfaces">ECPublicKey</a>&nbsp;receivedPublicKey,
@@ -159,7 +165,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Perform a receiver side ECDH operation.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/EncryptionCore.html#rsaDecryptKey-org.webpki.json.encryption.KeyEncryptionAlgorithms-byte:A-java.security.PrivateKey-">rsaDecryptKey</a></span>(<a href="../../../../org/webpki/json/encryption/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">KeyEncryptionAlgorithms</a>&nbsp;keyEncryptionAlgorithm,
              byte[]&nbsp;encryptedKey,
@@ -167,7 +173,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Decrypt a symmetric key using an RSA cipher.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../org/webpki/json/encryption/AsymmetricEncryptionResult.html" title="class in org.webpki.json.encryption">AsymmetricEncryptionResult</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/EncryptionCore.html#rsaEncryptKey-org.webpki.json.encryption.KeyEncryptionAlgorithms-org.webpki.json.encryption.DataEncryptionAlgorithms-java.security.PublicKey-">rsaEncryptKey</a></span>(<a href="../../../../org/webpki/json/encryption/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">KeyEncryptionAlgorithms</a>&nbsp;keyEncryptionAlgorithm,
              <a href="../../../../org/webpki/json/encryption/DataEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">DataEncryptionAlgorithms</a>&nbsp;dataEncryptionAlgorithm,
@@ -175,7 +181,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Generate a random key and encrypt it using an RSA cipher.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../org/webpki/json/encryption/AsymmetricEncryptionResult.html" title="class in org.webpki.json.encryption">AsymmetricEncryptionResult</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/EncryptionCore.html#senderKeyAgreement-org.webpki.json.encryption.KeyEncryptionAlgorithms-org.webpki.json.encryption.DataEncryptionAlgorithms-java.security.PublicKey-">senderKeyAgreement</a></span>(<a href="../../../../org/webpki/json/encryption/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">KeyEncryptionAlgorithms</a>&nbsp;keyEncryptionAlgorithm,
                   <a href="../../../../org/webpki/json/encryption/DataEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">DataEncryptionAlgorithms</a>&nbsp;dataEncryptionAlgorithm,
@@ -183,19 +189,19 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Perform a sender side ECDH operation.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/EncryptionCore.html#setAesProvider-java.lang.String-">setAesProvider</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;providerName)</code>
 <div class="block">Explicitly set provider for AES operations.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/EncryptionCore.html#setEcProvider-java.lang.String-">setEcProvider</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;providerName)</code>
 <div class="block">Explicitly set provider for EC operations.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/webpki/json/encryption/EncryptionCore.html#setRsaProvider-java.lang.String-">setRsaProvider</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;providerName)</code>
 <div class="block">Explicitly set provider for RSA operations.</div>
@@ -274,6 +280,22 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd>A composite object including encrypted data</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code> - &nbsp;</dd>
+</dl>
+</li>
+</ul>
+<a name="generateRandom-int-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>generateRandom</h4>
+<pre>public static&nbsp;byte[]&nbsp;generateRandom(int&nbsp;length)</pre>
+<div class="block">Generate byte[] with random data.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>length</code> - Number of bytes</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>byte[]</dd>
 </dl>
 </li>
 </ul>

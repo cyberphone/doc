@@ -180,7 +180,7 @@ implements <a href="../../../org/webpki/crypto/EncryptionAlgorithms.html" title=
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>static <a href="../../../org/webpki/crypto/SymEncryptionAlgorithms.html" title="enum in org.webpki.crypto">SymEncryptionAlgorithms</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/SymEncryptionAlgorithms.html#getAlgorithmFromID-java.lang.String-">getAlgorithmFromID</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;algorithmId)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/SymEncryptionAlgorithms.html#getAlgorithmFromId-java.lang.String-">getAlgorithmFromId</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;algorithmId)</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
@@ -188,7 +188,7 @@ implements <a href="../../../org/webpki/crypto/EncryptionAlgorithms.html" title=
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/SymEncryptionAlgorithms.html#getJCEName--">getJCEName</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/SymEncryptionAlgorithms.html#getJceName--">getJceName</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>int</code></td>
@@ -196,15 +196,15 @@ implements <a href="../../../org/webpki/crypto/EncryptionAlgorithms.html" title=
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/SymEncryptionAlgorithms.html#getOID--">getOID</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/SymEncryptionAlgorithms.html#getOid--">getOid</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/SymEncryptionAlgorithms.html#internalIV--">internalIV</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/SymEncryptionAlgorithms.html#internalIv--">internalIv</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/SymEncryptionAlgorithms.html#isMandatorySKSAlgorithm--">isMandatorySKSAlgorithm</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/SymEncryptionAlgorithms.html#isMandatorySksAlgorithm--">isMandatorySksAlgorithm</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
@@ -212,7 +212,7 @@ implements <a href="../../../org/webpki/crypto/EncryptionAlgorithms.html" title=
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/SymEncryptionAlgorithms.html#needsIV--">needsIV</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/SymEncryptionAlgorithms.html#needsIv--">needsIv</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
@@ -349,13 +349,13 @@ the order they are declared.</div>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="getAlgorithmFromID-java.lang.String-">
+<a name="getAlgorithmFromId-java.lang.String-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getAlgorithmFromID</h4>
-<pre>public static&nbsp;<a href="../../../org/webpki/crypto/SymEncryptionAlgorithms.html" title="enum in org.webpki.crypto">SymEncryptionAlgorithms</a>&nbsp;getAlgorithmFromID(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;algorithmId)
+<h4>getAlgorithmFromId</h4>
+<pre>public static&nbsp;<a href="../../../org/webpki/crypto/SymEncryptionAlgorithms.html" title="enum in org.webpki.crypto">SymEncryptionAlgorithms</a>&nbsp;getAlgorithmFromId(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;algorithmId)
                                                   throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -379,16 +379,16 @@ the order they are declared.</div>
 </dl>
 </li>
 </ul>
-<a name="getJCEName--">
+<a name="getJceName--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getJCEName</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getJCEName()</pre>
+<h4>getJceName</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getJceName()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../org/webpki/crypto/CryptoAlgorithms.html#getJCEName--">getJCEName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../org/webpki/crypto/CryptoAlgorithms.html" title="interface in org.webpki.crypto">CryptoAlgorithms</a></code></dd>
+<dd><code><a href="../../../org/webpki/crypto/CryptoAlgorithms.html#getJceName--">getJceName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../org/webpki/crypto/CryptoAlgorithms.html" title="interface in org.webpki.crypto">CryptoAlgorithms</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -401,38 +401,38 @@ the order they are declared.</div>
 <pre>public&nbsp;int&nbsp;getKeyLength()</pre>
 </li>
 </ul>
-<a name="getOID--">
+<a name="getOid--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getOID</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getOID()</pre>
+<h4>getOid</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getOid()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../org/webpki/crypto/CryptoAlgorithms.html#getOID--">getOID</a></code>&nbsp;in interface&nbsp;<code><a href="../../../org/webpki/crypto/CryptoAlgorithms.html" title="interface in org.webpki.crypto">CryptoAlgorithms</a></code></dd>
+<dd><code><a href="../../../org/webpki/crypto/CryptoAlgorithms.html#getOid--">getOid</a></code>&nbsp;in interface&nbsp;<code><a href="../../../org/webpki/crypto/CryptoAlgorithms.html" title="interface in org.webpki.crypto">CryptoAlgorithms</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="internalIV--">
+<a name="internalIv--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>internalIV</h4>
-<pre>public&nbsp;boolean&nbsp;internalIV()</pre>
+<h4>internalIv</h4>
+<pre>public&nbsp;boolean&nbsp;internalIv()</pre>
 </li>
 </ul>
-<a name="isMandatorySKSAlgorithm--">
+<a name="isMandatorySksAlgorithm--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>isMandatorySKSAlgorithm</h4>
-<pre>public&nbsp;boolean&nbsp;isMandatorySKSAlgorithm()</pre>
+<h4>isMandatorySksAlgorithm</h4>
+<pre>public&nbsp;boolean&nbsp;isMandatorySksAlgorithm()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../org/webpki/crypto/CryptoAlgorithms.html#isMandatorySKSAlgorithm--">isMandatorySKSAlgorithm</a></code>&nbsp;in interface&nbsp;<code><a href="../../../org/webpki/crypto/CryptoAlgorithms.html" title="interface in org.webpki.crypto">CryptoAlgorithms</a></code></dd>
+<dd><code><a href="../../../org/webpki/crypto/CryptoAlgorithms.html#isMandatorySksAlgorithm--">isMandatorySksAlgorithm</a></code>&nbsp;in interface&nbsp;<code><a href="../../../org/webpki/crypto/CryptoAlgorithms.html" title="interface in org.webpki.crypto">CryptoAlgorithms</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -449,13 +449,13 @@ the order they are declared.</div>
 </dl>
 </li>
 </ul>
-<a name="needsIV--">
+<a name="needsIv--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>needsIV</h4>
-<pre>public&nbsp;boolean&nbsp;needsIV()</pre>
+<h4>needsIv</h4>
+<pre>public&nbsp;boolean&nbsp;needsIv()</pre>
 </li>
 </ul>
 <a name="needsPadding--">
