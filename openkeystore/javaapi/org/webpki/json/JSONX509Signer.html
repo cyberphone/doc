@@ -141,7 +141,16 @@ extends <a href="../../../org/webpki/json/JSONSigner.html" title="class in org.w
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONX509Signer.html#JSONX509Signer-org.webpki.crypto.SignerInterface-">JSONX509Signer</a></span>(<a href="../../../org/webpki/crypto/SignerInterface.html" title="interface in org.webpki.crypto">SignerInterface</a>&nbsp;signer)</code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONX509Signer.html#JSONX509Signer-java.security.PrivateKey-java.security.cert.X509Certificate:A-java.lang.String-">JSONX509Signer</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</a>&nbsp;privateKey,
+              <a href="https://docs.oracle.com/javase/8/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]&nbsp;certificatePath,
+              <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;provider)</code>
+<div class="block">Constructor for JCE based solutions.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONX509Signer.html#JSONX509Signer-org.webpki.crypto.SignerInterface-">JSONX509Signer</a></span>(<a href="../../../org/webpki/crypto/SignerInterface.html" title="interface in org.webpki.crypto">SignerInterface</a>&nbsp;signer)</code>
+<div class="block">Constructor for custom crypto solutions.</div>
+</td>
 </tr>
 </table>
 </li>
@@ -199,6 +208,27 @@ extends <a href="../../../org/webpki/json/JSONSigner.html" title="class in org.w
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
+<a name="JSONX509Signer-java.security.PrivateKey-java.security.cert.X509Certificate:A-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>JSONX509Signer</h4>
+<pre>public&nbsp;JSONX509Signer(<a href="https://docs.oracle.com/javase/8/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</a>&nbsp;privateKey,
+                      <a href="https://docs.oracle.com/javase/8/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]&nbsp;certificatePath,
+                      <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;provider)
+               throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Constructor for JCE based solutions.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>privateKey</code> - Private key</dd>
+<dd><code>certificatePath</code> - Certificate path</dd>
+<dd><code>provider</code> - Optional JCE provider or null</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - &nbsp;</dd>
+</dl>
+</li>
+</ul>
 <a name="JSONX509Signer-org.webpki.crypto.SignerInterface-">
 <!--   -->
 </a>
@@ -207,9 +237,12 @@ extends <a href="../../../org/webpki/json/JSONSigner.html" title="class in org.w
 <h4>JSONX509Signer</h4>
 <pre>public&nbsp;JSONX509Signer(<a href="../../../org/webpki/crypto/SignerInterface.html" title="interface in org.webpki.crypto">SignerInterface</a>&nbsp;signer)
                throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Constructor for custom crypto solutions.</div>
 <dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>signer</code> - Handle to implementation</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - &nbsp;</dd>
 </dl>
 </li>
 </ul>
