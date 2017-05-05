@@ -141,7 +141,15 @@ extends <a href="../../../org/webpki/json/JSONSigner.html" title="class in org.w
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONSymKeySigner.html#JSONSymKeySigner-org.webpki.crypto.SymKeySignerInterface-">JSONSymKeySigner</a></span>(<a href="../../../org/webpki/crypto/SymKeySignerInterface.html" title="interface in org.webpki.crypto">SymKeySignerInterface</a>&nbsp;signer)</code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONSymKeySigner.html#JSONSymKeySigner-byte:A-org.webpki.crypto.MACAlgorithms-">JSONSymKeySigner</a></span>(byte[]&nbsp;rawKey,
+                <a href="../../../org/webpki/crypto/MACAlgorithms.html" title="enum in org.webpki.crypto">MACAlgorithms</a>&nbsp;algorithm)</code>
+<div class="block">Constructor for JCE based solutions.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONSymKeySigner.html#JSONSymKeySigner-org.webpki.crypto.SymKeySignerInterface-">JSONSymKeySigner</a></span>(<a href="../../../org/webpki/crypto/SymKeySignerInterface.html" title="interface in org.webpki.crypto">SymKeySignerInterface</a>&nbsp;signer)</code>
+<div class="block">Constructor for custom crypto solutions.</div>
+</td>
 </tr>
 </table>
 </li>
@@ -191,6 +199,25 @@ extends <a href="../../../org/webpki/json/JSONSigner.html" title="class in org.w
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
+<a name="JSONSymKeySigner-byte:A-org.webpki.crypto.MACAlgorithms-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>JSONSymKeySigner</h4>
+<pre>public&nbsp;JSONSymKeySigner(byte[]&nbsp;rawKey,
+                        <a href="../../../org/webpki/crypto/MACAlgorithms.html" title="enum in org.webpki.crypto">MACAlgorithms</a>&nbsp;algorithm)
+                 throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Constructor for JCE based solutions.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>rawKey</code> - Key</dd>
+<dd><code>algorithm</code> - MAC algorithm</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - &nbsp;</dd>
+</dl>
+</li>
+</ul>
 <a name="JSONSymKeySigner-org.webpki.crypto.SymKeySignerInterface-">
 <!--   -->
 </a>
@@ -199,9 +226,12 @@ extends <a href="../../../org/webpki/json/JSONSigner.html" title="class in org.w
 <h4>JSONSymKeySigner</h4>
 <pre>public&nbsp;JSONSymKeySigner(<a href="../../../org/webpki/crypto/SymKeySignerInterface.html" title="interface in org.webpki.crypto">SymKeySignerInterface</a>&nbsp;signer)
                  throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Constructor for custom crypto solutions.</div>
 <dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>signer</code> - Handle to implementation</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - &nbsp;</dd>
 </dl>
 </li>
 </ul>

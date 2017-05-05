@@ -135,8 +135,13 @@ extends <a href="../../../org/webpki/json/JSONVerifier.html" title="class in org
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONSymKeyVerifier.html#JSONSymKeyVerifier-byte:A-">JSONSymKeyVerifier</a></span>(byte[]&nbsp;rawKey)</code>
+<div class="block">JCE based verifier for symmetric keys.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONSymKeyVerifier.html#JSONSymKeyVerifier-org.webpki.crypto.SymKeyVerifierInterface-">JSONSymKeyVerifier</a></span>(<a href="../../../org/webpki/crypto/SymKeyVerifierInterface.html" title="interface in org.webpki.crypto">SymKeyVerifierInterface</a>&nbsp;verifier)</code>
-<div class="block">Verifier for symmetric keys.</div>
+<div class="block">Custom crypto verifier for symmetric keys.</div>
 </td>
 </tr>
 </table>
@@ -176,6 +181,21 @@ extends <a href="../../../org/webpki/json/JSONVerifier.html" title="class in org
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
+<a name="JSONSymKeyVerifier-byte:A-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>JSONSymKeyVerifier</h4>
+<pre>public&nbsp;JSONSymKeyVerifier(byte[]&nbsp;rawKey)</pre>
+<div class="block">JCE based verifier for symmetric keys.
+ Note that you can access the received KeyId from <a href="../../../org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json"><code>JSONSignatureDecoder</code></a>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>rawKey</code> - Key</dd>
+</dl>
+</li>
+</ul>
 <a name="JSONSymKeyVerifier-org.webpki.crypto.SymKeyVerifierInterface-">
 <!--   -->
 </a>
@@ -183,11 +203,11 @@ extends <a href="../../../org/webpki/json/JSONVerifier.html" title="class in org
 <li class="blockList">
 <h4>JSONSymKeyVerifier</h4>
 <pre>public&nbsp;JSONSymKeyVerifier(<a href="../../../org/webpki/crypto/SymKeyVerifierInterface.html" title="interface in org.webpki.crypto">SymKeyVerifierInterface</a>&nbsp;verifier)</pre>
-<div class="block">Verifier for symmetric keys.
- Note that you can access the received KeyID from <a href="../../../org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json"><code>JSONSignatureDecoder</code></a>.</div>
+<div class="block">Custom crypto verifier for symmetric keys.
+ Note that you can access the received KeyIi from <a href="../../../org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json"><code>JSONSignatureDecoder</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>verifier</code> - Verifies that the key and signature value match.</dd>
+<dd><code>verifier</code> - Handle to implementation</dd>
 </dl>
 </li>
 </ul>
