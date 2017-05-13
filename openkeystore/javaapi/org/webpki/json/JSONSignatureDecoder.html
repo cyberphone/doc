@@ -706,7 +706,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <pre>public&nbsp;void&nbsp;verify(<a href="../../../org/webpki/json/JSONSignatureTypes.html" title="enum in org.webpki.json">JSONSignatureTypes</a>&nbsp;signatureType)
             throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Simplified verify that only checks that there are no "keyId" or "extensions", and that the signature type matches.
- Note that asymmetric key signatures are always checked for technical correctness.</div>
+ Note that asymmetric key signatures are always checked for technical correctness unless
+ you have specified false for requirePublicKeyInfo.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>signatureType</code> - Type of signature :-)</dd>
