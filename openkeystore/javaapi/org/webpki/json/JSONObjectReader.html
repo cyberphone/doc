@@ -124,7 +124,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  constructs.</p>
  <p>In addition,
  there are methods for reading
- keys supplied in the <a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK (JSON Web Key)</b></a>
+ keys supplied in the <a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK (JSON Web Key)</b></a>
  format.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -258,7 +258,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectReader.html#getCorePublicKey-org.webpki.crypto.AlgorithmPreferences-">getCorePublicKey</a></span>(<a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences)</code>
 <div class="block">Read and decode a public key in
  <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
- (<a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a>) format.</div>
+ (<a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK</b></a>) format.</div>
 </td>
 </tr>
 <tr id="i14" class="altColor">
@@ -308,70 +308,68 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <tr id="i21" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/KeyPair.html?is-external=true" title="class or interface in java.security">KeyPair</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectReader.html#getKeyPair--">getKeyPair</a></span>()</code>
-<div class="block">Read a public and private key in <a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a> format.</div>
+<div class="block">Read a public and private key in <a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK</b></a> format.</div>
 </td>
 </tr>
 <tr id="i22" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/KeyPair.html?is-external=true" title="class or interface in java.security">KeyPair</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectReader.html#getKeyPair-org.webpki.crypto.AlgorithmPreferences-">getKeyPair</a></span>(<a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences)</code>
+<div class="block">Read a public and private key in <a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK</b></a> format.</div>
+</td>
+</tr>
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectReader.html#getLong-java.lang.String-">getLong</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">Read a JSON long integer property.</div>
 </td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectReader.html#getObject-java.lang.String-">getObject</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">Read a JSON object property.</div>
 </td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectReader.html#getProperties--">getProperties</a></span>()</code>
 <div class="block">Get JSON properties.<br></div>
 </td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONTypes.html" title="enum in org.webpki.json">JSONTypes</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectReader.html#getPropertyType-java.lang.String-">getPropertyType</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">Get the native JSON type of a property.</div>
 </td>
 </tr>
-<tr id="i26" class="altColor">
+<tr id="i27" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectReader.html#getPublicKey--">getPublicKey</a></span>()</code>
 <div class="block">Read and decode a public key in
  <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
- (<a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a>) format.</div>
+ (<a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK</b></a>) format.</div>
 </td>
 </tr>
-<tr id="i27" class="rowColor">
+<tr id="i28" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectReader.html#getPublicKey-org.webpki.crypto.AlgorithmPreferences-">getPublicKey</a></span>(<a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences)</code>
 <div class="block">Read and decode a public key in
  <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
- (<a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a>) format.</div>
-</td>
-</tr>
-<tr id="i28" class="altColor">
-<td class="colFirst"><code><a href="../../../org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectReader.html#getSignature--">getSignature</a></span>()</code>
-<div class="block">Read and decode a
- <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
- <code>"signature"</code> object.</div>
+ (<a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK</b></a>) format.</div>
 </td>
 </tr>
 <tr id="i29" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectReader.html#getSignature-org.webpki.crypto.AlgorithmPreferences-">getSignature</a></span>(<a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectReader.html#getSignature-org.webpki.json.JSONSignatureDecoder.Options-">getSignature</a></span>(<a href="../../../org/webpki/json/JSONSignatureDecoder.Options.html" title="class in org.webpki.json">JSONSignatureDecoder.Options</a>&nbsp;options)</code>
 <div class="block">Read and decode a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
  <code>"signature"</code> object.</div>
 </td>
 </tr>
 <tr id="i30" class="altColor">
-<td class="colFirst"><code><a href="../../../org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectReader.html#getSignature-org.webpki.crypto.AlgorithmPreferences-boolean-">getSignature</a></span>(<a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences,
-            boolean&nbsp;requirePublicKeyInfo)</code>
-<div class="block">Read and decode a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
- <code>"signature"</code> object.</div>
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</a>&lt;<a href="../../../org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectReader.html#getSignatures-org.webpki.json.JSONSignatureDecoder.Options-">getSignatures</a></span>(<a href="../../../org/webpki/json/JSONSignatureDecoder.Options.html" title="class in org.webpki.json">JSONSignatureDecoder.Options</a>&nbsp;options)</code>
+<div class="block">Read and decode a
+ <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
+ <code>"signatures"</code> [] object.</div>
 </td>
 </tr>
 <tr id="i31" class="rowColor">
@@ -765,7 +763,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
                            throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Read and decode a public key in
  <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
- (<a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a>) format.
+ (<a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK</b></a>) format.
  Note: this method assumes that the current object only holds the actual public key structure (no property).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -942,9 +940,30 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>getKeyPair</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/security/KeyPair.html?is-external=true" title="class or interface in java.security">KeyPair</a>&nbsp;getKeyPair()
                    throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Read a public and private key in <a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a> format.<p>
+<div class="block">Read a public and private key in <a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK</b></a> format.<p>
+ Note: this method assumes that the current object only holds a JWK key structure.</p>
+ This method is equivalent to <code>getKeyPair(AlgorithmPreferences.JOSE)</code>.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Java <code>KeyPair</code></dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - &nbsp;</dd>
+</dl>
+</li>
+</ul>
+<a name="getKeyPair-org.webpki.crypto.AlgorithmPreferences-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getKeyPair</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/security/KeyPair.html?is-external=true" title="class or interface in java.security">KeyPair</a>&nbsp;getKeyPair(<a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences)
+                   throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Read a public and private key in <a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK</b></a> format.<p>
  Note: this method assumes that the current object only holds a JWK key structure.</p></div>
 <dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>algorithmPreferences</code> - JOSE or SKS notation expected</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>Java <code>KeyPair</code></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -1043,8 +1062,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
                        throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Read and decode a public key in
  <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
- (<a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a>) format.
- This method is equivalent to <code>getPublicKey(AlgorithmPreferences.JOSE_ACCEPT_PREFER)</code>.</div>
+ (<a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK</b></a>) format.
+ This method is equivalent to <code>getPublicKey(AlgorithmPreferences.JOSE)</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>Java <code>PublicKey</code></dd>
@@ -1065,7 +1084,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
                        throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Read and decode a public key in
  <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
- (<a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a>) format.</div>
+ (<a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK</b></a>) format.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>algorithmPreferences</code> - JOSE or SKS notation expected</dd>
@@ -1078,72 +1097,47 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 </dl>
 </li>
 </ul>
-<a name="getSignature--">
+<a name="getSignature-org.webpki.json.JSONSignatureDecoder.Options-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getSignature</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a>&nbsp;getSignature()
-                                  throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Read and decode a
- <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
- <code>"signature"</code> object.
- This method is equivalent to <code>getSignature(AlgorithmPreferences.JOSE_ACCEPT_PREFER)</code>.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>An object which can be used to verify keys etc.</dd>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - &nbsp;</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../org/webpki/json/JSONObjectWriter.html#setSignature-org.webpki.json.JSONSigner-"><code>JSONObjectWriter.setSignature(JSONSigner)</code></a></dd>
-</dl>
-</li>
-</ul>
-<a name="getSignature-org.webpki.crypto.AlgorithmPreferences-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getSignature</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a>&nbsp;getSignature(<a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences)
-                                  throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Read and decode a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
- <code>"signature"</code> object.
- This method is equivalent to <code>getSignature(AlgorithmPreferences, true)</code>.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>algorithmPreferences</code> - JOSE or SKS notation expected</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>An object which can be used to verify keys etc.</dd>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - &nbsp;</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../org/webpki/json/JSONObjectWriter.html#setSignature-org.webpki.json.JSONSigner-"><code>JSONObjectWriter.setSignature(JSONSigner)</code></a></dd>
-</dl>
-</li>
-</ul>
-<a name="getSignature-org.webpki.crypto.AlgorithmPreferences-boolean-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getSignature</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a>&nbsp;getSignature(<a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences,
-                                         boolean&nbsp;requirePublicKeyInfo)
+<pre>public&nbsp;<a href="../../../org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a>&nbsp;getSignature(<a href="../../../org/webpki/json/JSONSignatureDecoder.Options.html" title="class in org.webpki.json">JSONSignatureDecoder.Options</a>&nbsp;options)
                                   throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Read and decode a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
  <code>"signature"</code> object.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>algorithmPreferences</code> - JOSE or SKS notation expected</dd>
-<dd><code>requirePublicKeyInfo</code> - If public keys must be provided in a JWK or certificate path</dd>
+<dd><code>options</code> - Allowed/expected options</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>An object which can be used to verify keys etc.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - &nbsp;</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../org/webpki/json/JSONObjectWriter.html#setSignature-org.webpki.json.JSONSigner-"><code>JSONObjectWriter.setSignature(JSONSigner)</code></a></dd>
+<dd><a href="../../../org/webpki/json/JSONObjectWriter.html#setSignature-org.webpki.json.JSONSigner-"><code>JSONObjectWriter.setSignature(JSONSigner)</code></a>, 
+<a href="../../../org/webpki/json/JSONSignatureDecoder.Options.html" title="class in org.webpki.json"><code>JSONSignatureDecoder.Options</code></a></dd>
+</dl>
+</li>
+</ul>
+<a name="getSignatures-org.webpki.json.JSONSignatureDecoder.Options-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSignatures</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</a>&lt;<a href="../../../org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a>&gt;&nbsp;getSignatures(<a href="../../../org/webpki/json/JSONSignatureDecoder.Options.html" title="class in org.webpki.json">JSONSignatureDecoder.Options</a>&nbsp;options)
+                                           throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Read and decode a
+ <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
+ <code>"signatures"</code> [] object.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>options</code> - Allowed/expected options</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>List with signature objects</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - &nbsp;</dd>
 </dl>
 </li>
 </ul>

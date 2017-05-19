@@ -149,6 +149,8 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/crypto/CertificateSelection.html#addEntry-java.lang.String-java.security.cert.X509Certificate-">addEntry(String, X509Certificate)</a></span> - Method in class org.webpki.crypto.<a href="org/webpki/crypto/CertificateSelection.html" title="class in org.webpki.crypto">CertificateSelection</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/webpki/json/JSONSignatureDecoder.ExtensionHolder.html#addExtension-java.lang.Class-boolean-">addExtension(Class&lt;? extends JSONSignatureDecoder.Extension&gt;, boolean)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONSignatureDecoder.ExtensionHolder.html" title="class in org.webpki.json">JSONSignatureDecoder.ExtensionHolder</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/keygen2/ServerState.Key.html#addExtension-java.lang.String-byte:A-">addExtension(String, byte[])</a></span> - Method in class org.webpki.keygen2.<a href="org/webpki/keygen2/ServerState.Key.html" title="class in org.webpki.keygen2">ServerState.Key</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/sks/SecureKeyStore.html#addExtension-int-java.lang.String-byte-java.lang.String-byte:A-byte:A-">addExtension(int, String, byte, String, byte[], byte[])</a></span> - Method in interface org.webpki.sks.<a href="org/webpki/sks/SecureKeyStore.html" title="interface in org.webpki.sks">SecureKeyStore</a></dt>
@@ -738,7 +740,7 @@
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONObjectWriter.html#createCorePublicKey-java.security.PublicKey-org.webpki.crypto.AlgorithmPreferences-">createCorePublicKey(PublicKey, AlgorithmPreferences)</a></span> - Static method in class org.webpki.json.<a href="org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
 <dd>
 <div class="block">Create a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
- (<a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a>) formatted public key.</div>
+ (<a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK</b></a>) formatted public key.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/keygen2/ServerState.html#createDevicePINProtectedKey-org.webpki.sks.AppUsage-org.webpki.keygen2.KeySpecifier-">createDevicePINProtectedKey(AppUsage, KeySpecifier)</a></span> - Method in class org.webpki.keygen2.<a href="org/webpki/keygen2/ServerState.html" title="class in org.webpki.keygen2">ServerState</a></dt>
 <dd>&nbsp;</dd>
@@ -841,6 +843,8 @@
 <dt><span class="memberNameLink"><a href="org/webpki/asn1/DerDecoder.html#decode-byte:A-">decode(byte[])</a></span> - Static method in class org.webpki.asn1.<a href="org/webpki/asn1/DerDecoder.html" title="class in org.webpki.asn1">DerDecoder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/asn1/DerDecoder.html#decode-byte:A-int-">decode(byte[], int)</a></span> - Static method in class org.webpki.asn1.<a href="org/webpki/asn1/DerDecoder.html" title="class in org.webpki.asn1">DerDecoder</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/webpki/json/JSONSignatureDecoder.Extension.html#decode-org.webpki.json.JSONObjectReader-">decode(JSONObjectReader)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONSignatureDecoder.Extension.html" title="class in org.webpki.json">JSONSignatureDecoder.Extension</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/util/Base64URL.html#decode-java.lang.String-">decode(String)</a></span> - Static method in class org.webpki.util.<a href="org/webpki/util/Base64URL.html" title="class in org.webpki.util">Base64URL</a></dt>
 <dd>
@@ -1200,11 +1204,15 @@
 <dd>&nbsp;</dd>
 <dt><a href="org/webpki/crypto/ExtendedKeyUsages.html" title="enum in org.webpki.crypto"><span class="typeNameLink">ExtendedKeyUsages</span></a> - Enum in <a href="org/webpki/crypto/package-summary.html">org.webpki.crypto</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/webpki/json/JSONSignatureDecoder.Extension.html#Extension--">Extension()</a></span> - Constructor for class org.webpki.json.<a href="org/webpki/json/JSONSignatureDecoder.Extension.html" title="class in org.webpki.json">JSONSignatureDecoder.Extension</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="org/webpki/sks/Extension.html" title="class in org.webpki.sks"><span class="typeNameLink">Extension</span></a> - Class in <a href="org/webpki/sks/package-summary.html">org.webpki.sks</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/sks/Extension.html#Extension-byte-java.lang.String-byte:A-">Extension(byte, String, byte[])</a></span> - Constructor for class org.webpki.sks.<a href="org/webpki/sks/Extension.html" title="class in org.webpki.sks">Extension</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/keygen2/KeyGen2Constants.html#EXTENSION_DATA_JSON">EXTENSION_DATA_JSON</a></span> - Static variable in interface org.webpki.keygen2.<a href="org/webpki/keygen2/KeyGen2Constants.html" title="interface in org.webpki.keygen2">KeyGen2Constants</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/webpki/json/JSONSignatureDecoder.ExtensionHolder.html#ExtensionHolder--">ExtensionHolder()</a></span> - Constructor for class org.webpki.json.<a href="org/webpki/json/JSONSignatureDecoder.ExtensionHolder.html" title="class in org.webpki.json">JSONSignatureDecoder.ExtensionHolder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONSignatureDecoder.html#EXTENSIONS_JSON">EXTENSIONS_JSON</a></span> - Static variable in class org.webpki.json.<a href="org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a></dt>
 <dd>&nbsp;</dd>
@@ -1673,7 +1681,7 @@
 <dd>
 <div class="block">Read and decode a public key in
  <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
- (<a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a>) format.</div>
+ (<a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK</b></a>) format.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/sks/DeviceInfo.html#getCryptoDataSize--">getCryptoDataSize()</a></span> - Method in class org.webpki.sks.<a href="org/webpki/sks/DeviceInfo.html" title="class in org.webpki.sks">DeviceInfo</a></dt>
 <dd>&nbsp;</dd>
@@ -1838,6 +1846,8 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/crypto/CertificateFilter.html#getExtendedKeyUsageRules--">getExtendedKeyUsageRules()</a></span> - Method in class org.webpki.crypto.<a href="org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/webpki/json/JSONSignatureDecoder.html#getExtension-java.lang.String-">getExtension(String)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/sks/SecureKeyStore.html#getExtension-int-java.lang.String-">getExtension(int, String)</a></span> - Method in interface org.webpki.sks.<a href="org/webpki/sks/SecureKeyStore.html" title="interface in org.webpki.sks">SecureKeyStore</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/keygen2/ProvisioningFinalizationRequestDecoder.Extension.html#getExtensionData--">getExtensionData()</a></span> - Method in class org.webpki.keygen2.<a href="org/webpki/keygen2/ProvisioningFinalizationRequestDecoder.Extension.html" title="class in org.webpki.keygen2">ProvisioningFinalizationRequestDecoder.Extension</a></dt>
@@ -1858,13 +1868,13 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/sks/DeviceInfo.html#getExtensionDataSize--">getExtensionDataSize()</a></span> - Method in class org.webpki.sks.<a href="org/webpki/sks/DeviceInfo.html" title="class in org.webpki.sks">DeviceInfo</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/json/JSONSignatureDecoder.html#getExtensions--">getExtensions()</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/keygen2/ProvisioningFinalizationRequestDecoder.IssuedCredential.html#getExtensions--">getExtensions()</a></span> - Method in class org.webpki.keygen2.<a href="org/webpki/keygen2/ProvisioningFinalizationRequestDecoder.IssuedCredential.html" title="class in org.webpki.keygen2">ProvisioningFinalizationRequestDecoder.IssuedCredential</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/keygen2/ProvisioningFinalizationRequestDecoder.Extension.html#getExtensionType--">getExtensionType()</a></span> - Method in class org.webpki.keygen2.<a href="org/webpki/keygen2/ProvisioningFinalizationRequestDecoder.Extension.html" title="class in org.webpki.keygen2">ProvisioningFinalizationRequestDecoder.Extension</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/sks/KeyAttributes.html#getExtensionTypes--">getExtensionTypes()</a></span> - Method in class org.webpki.sks.<a href="org/webpki/sks/KeyAttributes.html" title="class in org.webpki.sks">KeyAttributes</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/webpki/json/JSONSignatureDecoder.Extension.html#getExtensionUri--">getExtensionUri()</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONSignatureDecoder.Extension.html" title="class in org.webpki.json">JSONSignatureDecoder.Extension</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/crypto/CertificateFilter.html#getFingerPrint--">getFingerPrint()</a></span> - Method in class org.webpki.crypto.<a href="org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></dt>
 <dd>&nbsp;</dd>
@@ -2064,9 +2074,13 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/keygen2/KeyCreationRequestDecoder.html#getKeyObjects--">getKeyObjects()</a></span> - Method in class org.webpki.keygen2.<a href="org/webpki/keygen2/KeyCreationRequestDecoder.html" title="class in org.webpki.keygen2">KeyCreationRequestDecoder</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/webpki/json/JSONObjectReader.html#getKeyPair-org.webpki.crypto.AlgorithmPreferences-">getKeyPair(AlgorithmPreferences)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></dt>
+<dd>
+<div class="block">Read a public and private key in <a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK</b></a> format.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONObjectReader.html#getKeyPair--">getKeyPair()</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></dt>
 <dd>
-<div class="block">Read a public and private key in <a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a> format.</div>
+<div class="block">Read a public and private key in <a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK</b></a> format.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/keygen2/KeySpecifier.html#getKeyParameters--">getKeyParameters()</a></span> - Method in class org.webpki.keygen2.<a href="org/webpki/keygen2/KeySpecifier.html" title="class in org.webpki.keygen2">KeySpecifier</a></dt>
 <dd>&nbsp;</dd>
@@ -2380,13 +2394,13 @@
 <dd>
 <div class="block">Read and decode a public key in
  <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
- (<a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a>) format.</div>
+ (<a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK</b></a>) format.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONObjectReader.html#getPublicKey--">getPublicKey()</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></dt>
 <dd>
 <div class="block">Read and decode a public key in
  <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
- (<a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a>) format.</div>
+ (<a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK</b></a>) format.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONSignatureDecoder.html#getPublicKey--">getPublicKey()</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a></dt>
 <dd>&nbsp;</dd>
@@ -2588,20 +2602,9 @@
 <dd>
 <div class="block">Gets the value for the sibling Element with the indicated name.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="org/webpki/json/JSONObjectReader.html#getSignature-org.webpki.crypto.AlgorithmPreferences-boolean-">getSignature(AlgorithmPreferences, boolean)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></dt>
+<dt><span class="memberNameLink"><a href="org/webpki/json/JSONObjectReader.html#getSignature-org.webpki.json.JSONSignatureDecoder.Options-">getSignature(JSONSignatureDecoder.Options)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></dt>
 <dd>
 <div class="block">Read and decode a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
- <code>"signature"</code> object.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/json/JSONObjectReader.html#getSignature-org.webpki.crypto.AlgorithmPreferences-">getSignature(AlgorithmPreferences)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></dt>
-<dd>
-<div class="block">Read and decode a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
- <code>"signature"</code> object.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/json/JSONObjectReader.html#getSignature--">getSignature()</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></dt>
-<dd>
-<div class="block">Read and decode a
- <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
  <code>"signature"</code> object.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/xmldsig/XMLEnvelopedInput.html#getSignature--">getSignature()</a></span> - Method in interface org.webpki.xmldsig.<a href="org/webpki/xmldsig/XMLEnvelopedInput.html" title="interface in org.webpki.xmldsig">XMLEnvelopedInput</a></dt>
@@ -2616,6 +2619,12 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/pdf/PDFVerifier.html#getSignatureName--">getSignatureName()</a></span> - Method in class org.webpki.pdf.<a href="org/webpki/pdf/PDFVerifier.html" title="class in org.webpki.pdf">PDFVerifier</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/webpki/json/JSONObjectReader.html#getSignatures-org.webpki.json.JSONSignatureDecoder.Options-">getSignatures(JSONSignatureDecoder.Options)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></dt>
+<dd>
+<div class="block">Read and decode a
+ <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
+ <code>"signatures"</code> [] object.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONSignatureDecoder.html#getSignatureType--">getSignatureType()</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/crypto/KeyStoreVerifier.html#getSignerCertificate--">getSignerCertificate()</a></span> - Method in class org.webpki.crypto.<a href="org/webpki/crypto/KeyStoreVerifier.html" title="class in org.webpki.crypto">KeyStoreVerifier</a></dt>
@@ -3300,6 +3309,18 @@
 <dd>
 <div class="block">Decoder for JCS signatures.</div>
 </dd>
+<dt><a href="org/webpki/json/JSONSignatureDecoder.Extension.html" title="class in org.webpki.json"><span class="typeNameLink">JSONSignatureDecoder.Extension</span></a> - Class in <a href="org/webpki/json/package-summary.html">org.webpki.json</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org/webpki/json/JSONSignatureDecoder.ExtensionHolder.html" title="class in org.webpki.json"><span class="typeNameLink">JSONSignatureDecoder.ExtensionHolder</span></a> - Class in <a href="org/webpki/json/package-summary.html">org.webpki.json</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org/webpki/json/JSONSignatureDecoder.KEY_ID_OPTIONS.html" title="enum in org.webpki.json"><span class="typeNameLink">JSONSignatureDecoder.KEY_ID_OPTIONS</span></a> - Enum in <a href="org/webpki/json/package-summary.html">org.webpki.json</a></dt>
+<dd>
+<div class="block">Parameter to Options</div>
+</dd>
+<dt><a href="org/webpki/json/JSONSignatureDecoder.Options.html" title="class in org.webpki.json"><span class="typeNameLink">JSONSignatureDecoder.Options</span></a> - Class in <a href="org/webpki/json/package-summary.html">org.webpki.json</a></dt>
+<dd>
+<div class="block">Signature decoding options.</div>
+</dd>
 <dt><a href="org/webpki/json/JSONSignatureTypes.html" title="enum in org.webpki.json"><span class="typeNameLink">JSONSignatureTypes</span></a> - Enum in <a href="org/webpki/json/package-summary.html">org.webpki.json</a></dt>
 <dd>
 <div class="block">Supported signature types</div>
@@ -3793,6 +3814,8 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/asn1/ASN1Util.html#oidValueSet-java.lang.String-org.webpki.asn1.BaseASN1Object-">oidValueSet(String, BaseASN1Object)</a></span> - Static method in class org.webpki.asn1.<a href="org/webpki/asn1/ASN1Util.html" title="class in org.webpki.asn1">ASN1Util</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/webpki/json/JSONSignatureDecoder.Options.html#Options--">Options()</a></span> - Constructor for class org.webpki.json.<a href="org/webpki/json/JSONSignatureDecoder.Options.html" title="class in org.webpki.json">JSONSignatureDecoder.Options</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="org/webpki/asn1/package-summary.html">org.webpki.asn1</a> - package org.webpki.asn1</dt>
 <dd>
 <div class="block">ASN.1 - Parses and Creates Data in ASN.1 Format</div>
@@ -3946,10 +3969,6 @@
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONSignatureDecoder.html#PEM_URL_JSON">PEM_URL_JSON</a></span> - Static variable in class org.webpki.json.<a href="org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/sks/SecureKeyStore.html#performHmac-int-java.lang.String-byte:A-byte:A-byte:A-">performHmac(int, String, byte[], byte[], byte[])</a></span> - Method in interface org.webpki.sks.<a href="org/webpki/sks/SecureKeyStore.html" title="interface in org.webpki.sks">SecureKeyStore</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/json/JSONVerifier.html#permitExtensions-boolean-">permitExtensions(boolean)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONVerifier.html" title="class in org.webpki.json">JSONVerifier</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/json/JSONVerifier.html#permitKeyId-boolean-">permitKeyId(boolean)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONVerifier.html" title="class in org.webpki.json">JSONVerifier</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/sks/SecureKeyStore.html#PIN_GROUPING_NONE">PIN_GROUPING_NONE</a></span> - Static variable in interface org.webpki.sks.<a href="org/webpki/sks/SecureKeyStore.html" title="interface in org.webpki.sks">SecureKeyStore</a></dt>
 <dd>&nbsp;</dd>
@@ -4380,6 +4399,8 @@
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONAsymKeySigner.html#setAlgorithmPreferences-org.webpki.crypto.AlgorithmPreferences-">setAlgorithmPreferences(AlgorithmPreferences)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONAsymKeySigner.html" title="class in org.webpki.json">JSONAsymKeySigner</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/webpki/json/JSONSignatureDecoder.Options.html#setAlgorithmPreferences-org.webpki.crypto.AlgorithmPreferences-">setAlgorithmPreferences(AlgorithmPreferences)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONSignatureDecoder.Options.html" title="class in org.webpki.json">JSONSignatureDecoder.Options</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONSymKeySigner.html#setAlgorithmPreferences-org.webpki.crypto.AlgorithmPreferences-">setAlgorithmPreferences(AlgorithmPreferences)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONSymKeySigner.html" title="class in org.webpki.json">JSONSymKeySigner</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONX509Signer.html#setAlgorithmPreferences-org.webpki.crypto.AlgorithmPreferences-">setAlgorithmPreferences(AlgorithmPreferences)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONX509Signer.html" title="class in org.webpki.json">JSONX509Signer</a></dt>
@@ -4541,7 +4562,7 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/crypto/CertificateFilter.html#setExtendedKeyUsageRules-java.lang.String:A-">setExtendedKeyUsageRules(String[])</a></span> - Method in class org.webpki.crypto.<a href="org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/json/JSONSigner.html#setExtensions-org.webpki.json.JSONObjectWriter:A-">setExtensions(JSONObjectWriter[])</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONSigner.html" title="class in org.webpki.json">JSONSigner</a></dt>
+<dt><span class="memberNameLink"><a href="org/webpki/json/JSONSigner.html#setExtensions-org.webpki.json.JSONObjectWriter-">setExtensions(JSONObjectWriter)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONSigner.html" title="class in org.webpki.json">JSONSigner</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/crypto/CertificateFilter.html#setFingerPrint-byte:A-">setFingerPrint(byte[])</a></span> - Method in class org.webpki.crypto.<a href="org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></dt>
 <dd>&nbsp;</dd>
@@ -4607,6 +4628,8 @@
 <dt><span class="memberNameLink"><a href="org/webpki/keygen2/KeyCreationRequestEncoder.html#setKeyAttestationAlgorithm-java.lang.String-">setKeyAttestationAlgorithm(String)</a></span> - Method in class org.webpki.keygen2.<a href="org/webpki/keygen2/KeyCreationRequestEncoder.html" title="class in org.webpki.keygen2">KeyCreationRequestEncoder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONSigner.html#setKeyId-java.lang.String-">setKeyId(String)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONSigner.html" title="class in org.webpki.json">JSONSigner</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/webpki/json/JSONSignatureDecoder.Options.html#setKeyIdOption-org.webpki.json.JSONSignatureDecoder.KEY_ID_OPTIONS-">setKeyIdOption(JSONSignatureDecoder.KEY_ID_OPTIONS)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONSignatureDecoder.Options.html" title="class in org.webpki.json">JSONSignatureDecoder.Options</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/keygen2/ProvisioningInitializationRequestEncoder.html#setKeyManagementKey-java.security.PublicKey-">setKeyManagementKey(PublicKey)</a></span> - Method in class org.webpki.keygen2.<a href="org/webpki/keygen2/ProvisioningInitializationRequestEncoder.html" title="class in org.webpki.keygen2">ProvisioningInitializationRequestEncoder</a></dt>
 <dd>&nbsp;</dd>
@@ -4700,6 +4723,8 @@
  be padded at the end to make sure every 3 uncoded bytes
  corresponds to 4 encoded ones.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/webpki/json/JSONSignatureDecoder.Options.html#setPermittedExtensions-org.webpki.json.JSONSignatureDecoder.ExtensionHolder-">setPermittedExtensions(JSONSignatureDecoder.ExtensionHolder)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONSignatureDecoder.Options.html" title="class in org.webpki.json">JSONSignatureDecoder.Options</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/keygen2/KeyCreationRequestDecoder.UserPINDescriptor.html#setPIN-java.lang.String-boolean-">setPIN(String, boolean)</a></span> - Method in class org.webpki.keygen2.<a href="org/webpki/keygen2/KeyCreationRequestDecoder.UserPINDescriptor.html" title="class in org.webpki.keygen2">KeyCreationRequestDecoder.UserPINDescriptor</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/sks/SecureKeyStore.html#setPin-int-byte:A-byte:A-">setPin(int, byte[], byte[])</a></span> - Method in interface org.webpki.sks.<a href="org/webpki/sks/SecureKeyStore.html" title="interface in org.webpki.sks">SecureKeyStore</a></dt>
@@ -4727,14 +4752,16 @@
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONObjectWriter.html#setPublicKey-java.security.PublicKey-org.webpki.crypto.AlgorithmPreferences-">setPublicKey(PublicKey, AlgorithmPreferences)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
 <dd>
 <div class="block">Set a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
- (<a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a>) formatted public key.</div>
+ (<a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK</b></a>) formatted public key.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONObjectWriter.html#setPublicKey-java.security.PublicKey-">setPublicKey(PublicKey)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
 <dd>
 <div class="block">Set a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
- (<a href="https://tools.ietf.org/rfc/rfc7517.txt" target="_blank"><b>JWK</b></a>) formatted public key.</div>
+ (<a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK</b></a>) formatted public key.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/pdf/PDFSigner.html#setReason-java.lang.String-">setReason(String)</a></span> - Method in class org.webpki.pdf.<a href="org/webpki/pdf/PDFSigner.html" title="class in org.webpki.pdf">PDFSigner</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/webpki/json/JSONSignatureDecoder.Options.html#setRequirePublicKeyInfo-boolean-">setRequirePublicKeyInfo(boolean)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONSignatureDecoder.Options.html" title="class in org.webpki.json">JSONSignatureDecoder.Options</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/net/HTTPSWrapper.html#setRequireSuccess-boolean-">setRequireSuccess(boolean)</a></span> - Method in class org.webpki.net.<a href="org/webpki/net/HTTPSWrapper.html" title="class in org.webpki.net">HTTPSWrapper</a></dt>
 <dd>
@@ -4779,6 +4806,11 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/pdf/PDFSigner.html#setSignatureGraphics-boolean-">setSignatureGraphics(boolean)</a></span> - Method in class org.webpki.pdf.<a href="org/webpki/pdf/PDFSigner.html" title="class in org.webpki.pdf">PDFSigner</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/webpki/json/JSONObjectWriter.html#setSignatures-java.util.Vector-">setSignatures(Vector&lt;JSONSigner&gt;)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
+<dd>
+<div class="block">Set a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
+ <code>"signatures"</code> [] object.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONArrayWriter.html#setString-java.lang.String-">setString(String)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONObjectWriter.html#setString-java.lang.String-java.lang.String-">setString(String, String)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
@@ -4866,6 +4898,8 @@
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONSignatureDecoder.html#SIGNATURE_VERSION_ID">SIGNATURE_VERSION_ID</a></span> - Static variable in class org.webpki.json.<a href="org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/webpki/crypto/SignatureAlgorithms.html" title="interface in org.webpki.crypto"><span class="typeNameLink">SignatureAlgorithms</span></a> - Interface in <a href="org/webpki/crypto/package-summary.html">org.webpki.crypto</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/webpki/json/JSONSignatureDecoder.html#SIGNATURES_JSON">SIGNATURES_JSON</a></span> - Static variable in class org.webpki.json.<a href="org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/webpki/crypto/SignatureWrapper.html" title="class in org.webpki.crypto"><span class="typeNameLink">SignatureWrapper</span></a> - Class in <a href="org/webpki/crypto/package-summary.html">org.webpki.crypto</a></dt>
 <dd>
@@ -5109,8 +5143,6 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/sks/DeviceInfo.html#TYPE_HSM">TYPE_HSM</a></span> - Static variable in class org.webpki.sks.<a href="org/webpki/sks/DeviceInfo.html" title="class in org.webpki.sks">DeviceInfo</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/json/JSONSignatureDecoder.html#TYPE_JSON">TYPE_JSON</a></span> - Static variable in class org.webpki.json.<a href="org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/keygen2/KeyGen2Constants.html#TYPE_JSON">TYPE_JSON</a></span> - Static variable in interface org.webpki.keygen2.<a href="org/webpki/keygen2/KeyGen2Constants.html" title="interface in org.webpki.keygen2">KeyGen2Constants</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/webauth/WebAuthConstants.html#TYPE_JSON">TYPE_JSON</a></span> - Static variable in interface org.webpki.webauth.<a href="org/webpki/webauth/WebAuthConstants.html" title="interface in org.webpki.webauth">WebAuthConstants</a></dt>
@@ -5309,6 +5341,10 @@
 <dd>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/webpki/json/JSONSignatureDecoder.KEY_ID_OPTIONS.html#valueOf-java.lang.String-">valueOf(String)</a></span> - Static method in enum org.webpki.json.<a href="org/webpki/json/JSONSignatureDecoder.KEY_ID_OPTIONS.html" title="enum in org.webpki.json">JSONSignatureDecoder.KEY_ID_OPTIONS</a></dt>
+<dd>
+<div class="block">Returns the enum constant of this type with the specified name.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONSignatureTypes.html#valueOf-java.lang.String-">valueOf(String)</a></span> - Static method in enum org.webpki.json.<a href="org/webpki/json/JSONSignatureTypes.html" title="enum in org.webpki.json">JSONSignatureTypes</a></dt>
 <dd>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
@@ -5435,6 +5471,11 @@ the order they are declared.</div>
 the order they are declared.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONOutputFormats.html#values--">values()</a></span> - Static method in enum org.webpki.json.<a href="org/webpki/json/JSONOutputFormats.html" title="enum in org.webpki.json">JSONOutputFormats</a></dt>
+<dd>
+<div class="block">Returns an array containing the constants of this enum type, in
+the order they are declared.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/webpki/json/JSONSignatureDecoder.KEY_ID_OPTIONS.html#values--">values()</a></span> - Static method in enum org.webpki.json.<a href="org/webpki/json/JSONSignatureDecoder.KEY_ID_OPTIONS.html" title="enum in org.webpki.json">JSONSignatureDecoder.KEY_ID_OPTIONS</a></dt>
 <dd>
 <div class="block">Returns an array containing the constants of this enum type, in
 the order they are declared.</div>
