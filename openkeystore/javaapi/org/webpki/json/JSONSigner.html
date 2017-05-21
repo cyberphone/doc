@@ -147,11 +147,15 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONSigner.html" title="class in org.webpki.json">JSONSigner</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONSigner.html#setExtensions-org.webpki.json.JSONObjectWriter-">setExtensions</a></span>(<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;extensions)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONSigner.html#setExtensions-org.webpki.json.JSONObjectWriter-">setExtensions</a></span>(<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;extensions)</code>
+<div class="block">Set &quot;extensions&quot; for this signature.</div>
+</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONSigner.html" title="class in org.webpki.json">JSONSigner</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONSigner.html#setKeyId-java.lang.String-">setKeyId</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;keyId)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONSigner.html#setKeyId-java.lang.String-">setKeyId</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;keyId)</code>
+<div class="block">Set &quot;keyId&quot; for this signature.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -192,9 +196,14 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>setExtensions</h4>
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONSigner.html" title="class in org.webpki.json">JSONSigner</a>&nbsp;setExtensions(<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;extensions)
                          throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Set &quot;extensions&quot; for this signature.</div>
 <dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>extensions</code> - A JSON object holding the extension properties and associated values</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - &nbsp;</dd>
 </dl>
 </li>
 </ul>
@@ -205,6 +214,19 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>setKeyId</h4>
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONSigner.html" title="class in org.webpki.json">JSONSigner</a>&nbsp;setKeyId(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;keyId)</pre>
+<div class="block">Set &quot;keyId&quot; for this signature.
+ Notes:<ul>
+ <li>keyId and in-line public key/certificate data are <i>mutually exclusive</i>.</li>
+ <li>And keyId with length zero (&quot;&quot;) is considered as a keyId
+  but no output is produced.  That is, this solution is to be used when
+  the signature key is <i>implicitly known</i> by the relying party.</li>
+ </ul></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>keyId</code> - The identifier</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this</dd>
+</dl>
 </li>
 </ul>
 </li>
