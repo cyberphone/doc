@@ -121,7 +121,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <li>Require public key info in line.  Default: true</li>
  <li>keyId option.  Default: FORBIDDEN</li>
  <li>Permitted extensions.  Default: none</li>
- </ul></div>
+ </ul>
+ In addition, the Options class is used for defining external readers for &quot;remoteKey&quot; support.</div>
 </li>
 </ul>
 </div>
@@ -171,7 +172,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONSignatureDecoder.Options.html" title="class in org.webpki.json">JSONSignatureDecoder.Options</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONSignatureDecoder.Options.html#setRemoteKeyReader-org.webpki.json.JSONRemoteKeys.Reader-">setRemoteKeyReader</a></span>(<a href="../../../org/webpki/json/JSONRemoteKeys.Reader.html" title="interface in org.webpki.json">JSONRemoteKeys.Reader</a>&nbsp;remoteKeyReader)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONSignatureDecoder.Options.html#setRemoteKeyReader-org.webpki.json.JSONRemoteKeys.Reader-">setRemoteKeyReader</a></span>(<a href="../../../org/webpki/json/JSONRemoteKeys.Reader.html" title="interface in org.webpki.json">JSONRemoteKeys.Reader</a>&nbsp;remoteKeyReader)</code>
+<div class="block">Define external &quot;remoteKey&quot; reader class.</div>
+</td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONSignatureDecoder.Options.html" title="class in org.webpki.json">JSONSignatureDecoder.Options</a></code></td>
@@ -250,6 +253,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>setRemoteKeyReader</h4>
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONSignatureDecoder.Options.html" title="class in org.webpki.json">JSONSignatureDecoder.Options</a>&nbsp;setRemoteKeyReader(<a href="../../../org/webpki/json/JSONRemoteKeys.Reader.html" title="interface in org.webpki.json">JSONRemoteKeys.Reader</a>&nbsp;remoteKeyReader)</pre>
+<div class="block">Define external &quot;remoteKey&quot; reader class.
+ If set, the signature decoder assumes that there is no in-line public key or certificate information to process.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>remoteKeyReader</code> - Interface</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this</dd>
+</dl>
 </li>
 </ul>
 <a name="setRequirePublicKeyInfo-boolean-">
