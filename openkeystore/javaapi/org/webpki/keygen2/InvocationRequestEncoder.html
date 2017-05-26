@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -140,8 +140,7 @@ extends <a href="../../../org/webpki/json/JSONEncoder.html" title="class in org.
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/keygen2/InvocationRequestEncoder.html#InvocationRequestEncoder-org.webpki.keygen2.ServerState-java.lang.String-java.lang.String-">InvocationRequestEncoder</a></span>(<a href="../../../org/webpki/keygen2/ServerState.html" title="class in org.webpki.keygen2">ServerState</a>&nbsp;serverState,
-                        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;submitUrl,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/keygen2/InvocationRequestEncoder.html#InvocationRequestEncoder-org.webpki.keygen2.ServerState-java.lang.String-">InvocationRequestEncoder</a></span>(<a href="../../../org/webpki/keygen2/ServerState.html" title="class in org.webpki.keygen2">ServerState</a>&nbsp;serverState,
                         <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;serverSessionId)</code>&nbsp;</td>
 </tr>
 </table>
@@ -173,17 +172,9 @@ extends <a href="../../../org/webpki/json/JSONEncoder.html" title="class in org.
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/keygen2/InvocationRequestEncoder.html#setAbortUrl-java.lang.String-">setAbortUrl</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;abortUrl)</code>&nbsp;</td>
-</tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/keygen2/InvocationRequestEncoder.html#setAction-org.webpki.keygen2.Action-">setAction</a></span>(<a href="../../../org/webpki/keygen2/Action.html" title="enum in org.webpki.keygen2">Action</a>&nbsp;action)</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/keygen2/InvocationRequestEncoder.html#setRequestSigner-org.webpki.crypto.SignerInterface-">setRequestSigner</a></span>(<a href="../../../org/webpki/crypto/SignerInterface.html" title="interface in org.webpki.crypto">SignerInterface</a>&nbsp;signer)</code>&nbsp;</td>
-</tr>
-<tr id="i5" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/keygen2/InvocationRequestEncoder.html#writeJSONData-org.webpki.json.JSONObjectWriter-">writeJSONData</a></span>(<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;wr)</code>
 <div class="block">INTERNAL USE ONLY.</div>
@@ -218,14 +209,13 @@ extends <a href="../../../org/webpki/json/JSONEncoder.html" title="class in org.
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="InvocationRequestEncoder-org.webpki.keygen2.ServerState-java.lang.String-java.lang.String-">
+<a name="InvocationRequestEncoder-org.webpki.keygen2.ServerState-java.lang.String-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>InvocationRequestEncoder</h4>
 <pre>public&nbsp;InvocationRequestEncoder(<a href="../../../org/webpki/keygen2/ServerState.html" title="class in org.webpki.keygen2">ServerState</a>&nbsp;serverState,
-                                <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;submitUrl,
                                 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;serverSessionId)
                          throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
@@ -259,15 +249,6 @@ extends <a href="../../../org/webpki/json/JSONEncoder.html" title="class in org.
 </dl>
 </li>
 </ul>
-<a name="setAbortUrl-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setAbortUrl</h4>
-<pre>public&nbsp;void&nbsp;setAbortUrl(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;abortUrl)</pre>
-</li>
-</ul>
 <a name="setAction-org.webpki.keygen2.Action-">
 <!--   -->
 </a>
@@ -291,20 +272,6 @@ extends <a href="../../../org/webpki/json/JSONEncoder.html" title="class in org.
 <dd><code><a href="../../../org/webpki/json/JSONEncoder.html#getContext--">getContext</a></code>&nbsp;in class&nbsp;<code><a href="../../../org/webpki/json/JSONEncoder.html" title="class in org.webpki.json">JSONEncoder</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The context name</dd>
-</dl>
-</li>
-</ul>
-<a name="setRequestSigner-org.webpki.crypto.SignerInterface-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setRequestSigner</h4>
-<pre>public&nbsp;void&nbsp;setRequestSigner(<a href="../../../org/webpki/crypto/SignerInterface.html" title="interface in org.webpki.crypto">SignerInterface</a>&nbsp;signer)
-                      throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
 </dl>
 </li>
 </ul>

@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -159,8 +159,7 @@ extends <a href="../../../org/webpki/json/JSONEncoder.html" title="class in org.
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/keygen2/ProvisioningInitializationRequestEncoder.html#ProvisioningInitializationRequestEncoder-org.webpki.keygen2.ServerState-java.lang.String-int-short-">ProvisioningInitializationRequestEncoder</a></span>(<a href="../../../org/webpki/keygen2/ServerState.html" title="class in org.webpki.keygen2">ServerState</a>&nbsp;serverState,
-                                        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;submitUrl,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/keygen2/ProvisioningInitializationRequestEncoder.html#ProvisioningInitializationRequestEncoder-org.webpki.keygen2.ServerState-int-short-">ProvisioningInitializationRequestEncoder</a></span>(<a href="../../../org/webpki/keygen2/ServerState.html" title="class in org.webpki.keygen2">ServerState</a>&nbsp;serverState,
                                         int&nbsp;sessionLifeTime,
                                         short&nbsp;sessionKeyLimit)</code>&nbsp;</td>
 </tr>
@@ -197,23 +196,13 @@ extends <a href="../../../org/webpki/json/JSONEncoder.html" title="class in org.
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/keygen2/ProvisioningInitializationRequestEncoder.html#setRequestSigner-org.webpki.crypto.SignerInterface-">setRequestSigner</a></span>(<a href="../../../org/webpki/crypto/SignerInterface.html" title="interface in org.webpki.crypto">SignerInterface</a>&nbsp;signer)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/keygen2/ProvisioningInitializationRequestEncoder.html#setServerTime-java.util.GregorianCalendar-">setServerTime</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;serverTime)</code>&nbsp;</td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/keygen2/ProvisioningInitializationRequestEncoder.html#setServerTime-java.util.GregorianCalendar-">setServerTime</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;serverTime)</code>&nbsp;</td>
-</tr>
-<tr id="i5" class="rowColor">
-<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/keygen2/ProvisioningInitializationRequestEncoder.html#setSessionKeyAlgorithm-java.lang.String-">setSessionKeyAlgorithm</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;sessionKeyAlgorithm)</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/keygen2/ProvisioningInitializationRequestEncoder.html#setVirtualEnvironment-byte:A-java.lang.String-java.lang.String-">setVirtualEnvironment</a></span>(byte[]&nbsp;veData,
-                     <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;type,
-                     <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;friendlyName)</code>&nbsp;</td>
-</tr>
-<tr id="i7" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/keygen2/ProvisioningInitializationRequestEncoder.html#writeJSONData-org.webpki.json.JSONObjectWriter-">writeJSONData</a></span>(<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;wr)</code>
 <div class="block">INTERNAL USE ONLY.</div>
@@ -248,14 +237,13 @@ extends <a href="../../../org/webpki/json/JSONEncoder.html" title="class in org.
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="ProvisioningInitializationRequestEncoder-org.webpki.keygen2.ServerState-java.lang.String-int-short-">
+<a name="ProvisioningInitializationRequestEncoder-org.webpki.keygen2.ServerState-int-short-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>ProvisioningInitializationRequestEncoder</h4>
 <pre>public&nbsp;ProvisioningInitializationRequestEncoder(<a href="../../../org/webpki/keygen2/ServerState.html" title="class in org.webpki.keygen2">ServerState</a>&nbsp;serverState,
-                                                <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;submitUrl,
                                                 int&nbsp;sessionLifeTime,
                                                 short&nbsp;sessionKeyLimit)
                                          throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
@@ -317,17 +305,6 @@ extends <a href="../../../org/webpki/json/JSONEncoder.html" title="class in org.
 <pre>public&nbsp;void&nbsp;setSessionKeyAlgorithm(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;sessionKeyAlgorithm)</pre>
 </li>
 </ul>
-<a name="setVirtualEnvironment-byte:A-java.lang.String-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setVirtualEnvironment</h4>
-<pre>public&nbsp;void&nbsp;setVirtualEnvironment(byte[]&nbsp;veData,
-                                  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;type,
-                                  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;friendlyName)</pre>
-</li>
-</ul>
 <a name="getContext--">
 <!--   -->
 </a>
@@ -342,20 +319,6 @@ extends <a href="../../../org/webpki/json/JSONEncoder.html" title="class in org.
 <dd><code><a href="../../../org/webpki/json/JSONEncoder.html#getContext--">getContext</a></code>&nbsp;in class&nbsp;<code><a href="../../../org/webpki/json/JSONEncoder.html" title="class in org.webpki.json">JSONEncoder</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The context name</dd>
-</dl>
-</li>
-</ul>
-<a name="setRequestSigner-org.webpki.crypto.SignerInterface-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setRequestSigner</h4>
-<pre>public&nbsp;void&nbsp;setRequestSigner(<a href="../../../org/webpki/crypto/SignerInterface.html" title="interface in org.webpki.crypto">SignerInterface</a>&nbsp;signer)
-                      throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
 </dl>
 </li>
 </ul>
