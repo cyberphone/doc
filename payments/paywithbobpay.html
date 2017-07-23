@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Ultra Basic Payment Handler Demo</title>
+    <script type="text/javascript">
+
+const methodData = [{
+  supportedMethods: ['https://emerald-eon.appspot.com/bobpay']
+}];
+
+const details = {
+  total: {
+    label: 'Total due',
+    amount: { currency: 'USD', value: '199.25' }
+  }
+};
+
+function validateResponse(response) {
+}
+
+async function w3cPaymentRequest() {
+  const payment = new PaymentRequest(methodData, details);
+  let paymentResponse;
+  try {
+    paymentResponse = await payment.show();
+    validateResponse(paymentResponse);
+    paymentResponse.complete('success');
+  } catch (err) {
+    console.error('FAILED, bad payment response!', err.message);
+    paymentResponse.complete('fail');
+  }
+}
+
+    </script>
+</head>
+<body>
+    <h3>Basic demo calling Google's &quot;bobpay&quot; sample</h3>
+    <input style="margin-top:20pt" type="button" value="Pay for some unspecified stuff" onclick="w3cPaymentRequest()"/>
+</body>
+</html>
