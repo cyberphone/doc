@@ -186,6 +186,7 @@ messages to the appropriate sub-handler.  This is trivial using typed messages h
 <div class="new">
 <pre>
 <span style="color:blue">var</span> input = <span style="color:brown">JSON</span>.<span style="color:red">parse</span>(<span style="color:red">readRequest</span>(request));      <span style="color:grey">// Hypothetical method: "readRequest()"</span>
+<span style="color:blue">if</span> (input['<span style="color:green">@context</span>'] != '<span style="color:green">https://example.com/system</span>') <span style="color:brown">TypeError</span>('<span style="color:green">Unrecognized Type</span>');
 <span style="color:blue">var</span> output;
 <span style="color:blue">switch</span> (input['<span style="color:green">@qualifier</span>']) {
   <span style="color:blue">case</span> '<span style="color:green">Authorize</span>':
