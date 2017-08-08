@@ -44,6 +44,8 @@ span.marquee  {
         }, 1000);
     }
 
+    var operation;
+    var payeefield;
     var pinfield;
     var paydata;
     var kbd;
@@ -112,6 +114,10 @@ span.marquee  {
     }
 
     function positionElements() {
+        operation = parent.DATA[parent.currentOperation];
+        document.getElementById('amountlabel').innerHTML = operation.amountlabel ? 'Amount' : 'Confirm';
+        payeefield = document.getElementById('payeefield');
+        payeefield.innerHTML = operation.provider;
         pinfield = document.getElementById('pinfield');
         card = document.getElementById('card');
         card.rows[0].cells[0].children[0].style.backgroundImage = parent.cardUrl;
@@ -123,9 +129,9 @@ span.marquee  {
         showPin();
         card.style.left = ((window.innerWidth - card.offsetWidth) / 2) + 'px';
         paydata.style.left = ((window.innerWidth - paydata.offsetWidth - document.getElementById('payeelabel').offsetWidth) / 2) + 'px';
-        var fieldwidth = document.getElementById('payeefield').offsetWidth + 'px';
+        var fieldwidth = payeefield.offsetWidth + 'px';
         document.getElementById('amountfield').style.maxWidth = document.getElementById('pinfield').style.maxWidth = fieldwidth;
-        document.getElementById('amountfield').innerHTML = parent.showedAmount;
+        document.getElementById('amountfield').innerHTML = operation.amount;
         var kbdTop = window.innerHeight - Math.floor(kbd.offsetHeight * 1.1);
         kbd.style.top = kbdTop + 'px';
         kbd.style.left = ((window.innerWidth - kbd.offsetWidth) / 2) + 'px';
@@ -149,7 +155,7 @@ span.marquee  {
     <table id='paydata' style='visibility:hidden;position:absolute'>
         <tr><td id='payeelabel' class='label'>Payee</td><td id='payeefield' class='field' title='Common name of payee'>Demo Merchant</td></tr>
         <tr><td colspan='2' style='height:5pt'></td></tr>
-        <tr><td class='label'>Amount</td><td id='amountfield' class='field' title='Amount to pay or reserve'></td></tr>
+        <tr><td id='amountlabel' class='label'>Amount</td><td id='amountfield' class='field' title='Amount to pay or reserve'></td></tr>
         <tr><td colspan='2' style='height:5pt'></td></tr>
         <tr>
             <td class='label'>PIN</td>

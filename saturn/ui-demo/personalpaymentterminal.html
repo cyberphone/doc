@@ -7,12 +7,28 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
     'use strict';
     var cardUrl = null;
     var pan;
-    const STANDARD_AMOUNT = '$\u200a1,999.25';
-    const GAS_STATION = '$\u200a200<br><span class="marquee"><i>Reserved</i>, actual payment will match fuel quantity</span>';
-    const SUBSCRIPTION = 'Subscription<br><span class="marquee"><i>Payee asks for the right to debit the account for its services</i></span>';
-    var showedAmount = STANDARD_AMOUNT;
-    function setMode(mode) {
-        showedAmount = mode;
+    var DATA = [
+        {
+            amount: '$\u200a1,999.25',
+            requesturl: 'demomerchant.com',
+            provider: 'Demo Merchant',
+            amountlabel: true
+        }, {
+            amount: '$\u200a200<br><span class="marquee"><i>Reserved</i>, actual payment will match fuel quantity</span>',
+            requesturl: 'total.fr',
+            provider: 'Total',
+            amountlabel: true
+    }, {
+            amount: 'Subscription<br><span class="marquee"><i>Payee asks for the right to debit the account for its services</i></span>',
+            requesturl: 't-mobile.com',
+            provider: 'T-Mobile',
+            amountlabel: false
+    }
+    ];
+    var currentOperation = 0;
+    function setOperation(operation) {
+        document.getElementById('requesturl').innerHTML = 'Requester: ' + DATA[operation].requesturl;
+        currentOperation = operation;
         document.getElementById('payframe').src = 'selectionwindow.html';
     }
     function selectCard(cardUrl, pan) {
@@ -23,13 +39,14 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
     function init() {
         if (!cardUrl) {
             document.getElementById('payframe').src = 'selectionwindow.html';
+            document.querySelector("input[name='mode']").checked = true;
         }
     }
 </script>
 </head><body onload="init()">
         <table style="border-collapse:collapse">
             <tr>
-                <td style="background-color:grey;color:white;padding:3pt;border-width:0 1px 0 1px;border-color:black;border-style:solid">&nbsp;Requester: demomerchant.com</td>
+                <td id="requesturl" style="background-color:grey;color:white;padding:3pt 0pt 3pt 10pt;border-width:0 1px 0 1px;border-color:black;border-style:solid">Requester: demomerchant.com</td>
                 <td rowspan="2" style="width:600pt"><div style="padding-left:50pt"><div style="font-weight:bold;text-align:center;padding-bottom:20pt">Personal Payment Terminal</div>
                     The Web UI on the left side simulates the primary steps in an Android &quot;App&quot; based <i>Personal&nbsp;Payment&nbsp;Terminal</i> having the following core characteristics:
                     <ul>
@@ -45,11 +62,11 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
                     </ul>
                     <div style="padding-bottom:5pt">Demo PIN: <span style="color:red">1234</span></div>
                     <table style="padding:0px;border-collapse:collapse"><tr><td style="padding-left:0px">Operation:</td>
-                        <td><input type="radio" onclick="setMode(STANDARD_AMOUNT)" name="mode" checked/></td>
+                        <td><input type="radio" onclick="setOperation(0)" name="mode" checked></td>
                         <td>Payment&nbsp;&nbsp;</td>
-                        <td><input type="radio" onclick="setMode(GAS_STATION)" name="mode"/></td>
+                        <td><input type="radio" onclick="setOperation(1)" name="mode"></td>
                         <td>Gas station&nbsp;&nbsp;</td>
-                        <td><input type="radio" onclick="setMode(SUBSCRIPTION)" name="mode" /></td>
+                        <td><input type="radio" onclick="setOperation(2)" name="mode"></td>
                         <td>Subscription</td>
                      </tr></table>
                     
