@@ -9,27 +9,38 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
     var pan;
     var DATA = [
         {
-            amount: '$\u200a1,999.25',
+            amount: '$\u200a135.25',
+            appurl: 'https://demomerchant.com/buy',
             requesturl: 'demomerchant.com',
+            demopage: 'demomerchant.html',
             provider: 'Demo Merchant',
             amountlabel: true
         }, {
             amount: '$\u200a200<br><span class="marquee"><i>Reserved</i>, actual payment will match fuel quantity</span>',
+            appurl: '&nbsp;',
             requesturl: 'total.fr',
+            demopage: 'gasstation.html',
             provider: 'Total',
             amountlabel: true
     }, {
             amount: 'Subscription<br><span class="marquee"><i>Payee asks for the right to debit the account for its services</i></span>',
+            appurl: 'https://t-mobile.com/invoicing',
             requesturl: 't-mobile.com',
+            demopage: 'subscription.html',
             provider: 'T-Mobile',
             amountlabel: false
     }
     ];
     var currentOperation = 0;
-    function setOperation(operation) {
-        document.getElementById('requesturl').innerHTML = 'Requester: ' + DATA[operation].requesturl;
-        currentOperation = operation;
+    function nextWindow() {
         document.getElementById('payframe').src = 'selectionwindow.html';
+        header('0 1px 0 1px', 'grey', 'white');
+        document.getElementById('requesturl').innerHTML = 'Requester: ' + DATA[currentOperation].requesturl;
+    }
+    function setOperation(operation) {
+        currentOperation = operation;
+        document.getElementById('requesturl').innerHTML = DATA[currentOperation].appurl;
+        document.getElementById('payframe').src = DATA[currentOperation].demopage;
     }
     function selectCard(cardUrl, pan) {
         this.cardUrl = cardUrl;
@@ -38,17 +49,23 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
     }
     function init() {
         if (!cardUrl) {
-            document.getElementById('payframe').src = 'selectionwindow.html';
+            document.getElementById('payframe').src = 'demomerchant.html';
             document.querySelector("input[name='mode']").checked = true;
         }
+    }
+    function header(borderWidth, backgroundColor, color) {
+        var style = document.getElementById('requesturl').style;
+        style.borderWidth = borderWidth;
+        style.backgroundColor = backgroundColor;
+        style.color = color;
     }
 </script>
 </head><body onload="init()">
         <table style="border-collapse:collapse">
             <tr>
-                <td id="requesturl" style="background-color:grey;color:white;padding:3pt 0pt 3pt 10pt;border-width:0 1px 0 1px;border-color:black;border-style:solid">Requester: demomerchant.com</td>
+                <td id="requesturl" style="padding:3pt 0pt 3pt 10pt;border-width:0 1px 0 1px;border-color:black;border-style:solid">https://demomerchant.com/buy</td>
                 <td rowspan="2" style="width:600pt"><div style="padding-left:50pt"><div style="font-weight:bold;text-align:center;padding-bottom:20pt">Personal Payment Terminal</div>
-                    The Web UI on the left side simulates the primary steps in an Android &quot;App&quot; based <i>Personal&nbsp;Payment&nbsp;Terminal</i> having the following core characteristics:
+                    The Web UI on the left side simulates the primary steps using an Android &quot;App&quot; based <i>Personal&nbsp;Payment&nbsp;Terminal</i> having the following core characteristics:
                     <ul>
                     <li><i>Eliminates</i> the merchant payment terminal and associated PCI compliance</li>
                     <li>Holds virtual cards and offers a <i>consistent user experience</i></li>
@@ -75,7 +92,9 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
                             technology demonstrator and verifier.<p>Several functions depend on
                             mechanisms currently not available in Android and Chrome.
                             The somewhat bold goal is converting these fully application-neutral additions to the mobile ecosystem
-                            into de-facto standards.</p><p>* The use of QR-code represents a &quot;workaround&quot;.</p>
+                            into de-facto standards.</p>
+                            <p>The Personal Payment Terminal is the client facing part of the Saturn payment authorization system.</p>
+                            <p>* The use of QR-code represents a &quot;workaround&quot;.</p>
                         </div>
                     </div></td>
             </tr>
