@@ -10,6 +10,7 @@ div {width:800pt;margin-top:15pt}
 div.fancybox {margin:10pt 0pt 0pt 30pt;font-size:9pt;word-break:break-all;width:700pt;background:#F8F8F8;border-width:1px;border-style:solid;border-color:grey;padding:10pt;box-shadow:3pt 3pt 3pt #D0D0D0}
 div.header {font-size:14pt;font-family:arial,verdana,helvetica;width:800pt;padding-top:6pt;padding-bottom:8pt;margin:0pt}
 div.new {width:800pt;margin-top:6pt}
+a {color:blue;font-family:verdana,helvetica;text-decoration:none}
 </style></head><body>
 <div><img src="yasmin-logo.svg" title="YASMIN" alt="N/A" style="width:250pt;display:block;margin-left:auto;margin-right:auto;margin-top:35pt;margin-bottom:30pt"></div>
 <div>
@@ -185,18 +186,18 @@ messages to the appropriate sub-handler.  This is trivial using typed messages h
 </div>
 <div class="new">
 <pre>
-<span style="color:blue">var</span> input = <span style="color:brown">JSON</span>.<span style="color:red">parse</span>(<span style="color:red">readRequest</span>(request));      <span style="color:grey">// Hypothetical method: "readRequest()"</span>
-<span style="color:blue">if</span> (input['<span style="color:green">@context</span>'] != '<span style="color:green">https://example.com/system</span>') <span style="color:brown">TypeError</span>('<span style="color:green">Unrecognized Type</span>');
-<span style="color:blue">var</span> output;
-<span style="color:blue">switch</span> (input['<span style="color:green">@qualifier</span>']) {
-  <span style="color:blue">case</span> '<span style="color:green">Authorize</span>':
+<span style="color:#0000C0">var</span> input = <span style="color:brown">JSON</span>.<span style="color:red">parse</span>(<span style="color:red">readRequest</span>(request));      <span style="color:grey">// Hypothetical method: "readRequest()"</span>
+<span style="color:#0000C0">if</span> (input['<span style="color:green">@context</span>'] != '<span style="color:green">https://example.com/system</span>') <span style="color:brown">TypeError</span>('<span style="color:green">Unrecognized Type</span>');
+<span style="color:#0000C0">var</span> output;
+<span style="color:#0000C0">switch</span> (input['<span style="color:green">@qualifier</span>']) {
+  <span style="color:#0000C0">case</span> '<span style="color:green">Authorize</span>':
     output = <span style="color:red">authorize</span>(input);                     <span style="color:grey">// Handler</span>
-    <span style="color:blue">break</span>;
-  <span style="color:blue">case</span> '<span style="color:green">CommitPayment</span>':
+    <span style="color:#0000C0">break</span>;
+  <span style="color:#0000C0">case</span> '<span style="color:green">CommitPayment</span>':
     output = <span style="color:red">commitPayment</span>(input);                 <span style="color:grey">// Handler</span>
-    <span style="color:blue">break</span>;
-  <span style="color:blue">default</span>:
-    <span style="color:blue">throw new</span> <span style="color:brown">TypeError</span>('<span style="color:green">Unrecognized Message</span>');
+    <span style="color:#0000C0">break</span>;
+  <span style="color:#0000C0">default</span>:
+    <span style="color:#0000C0">throw new</span> <span style="color:brown">TypeError</span>('<span style="color:green">Unrecognized Message</span>');
 }
 <span style="color:red">writeResponse</span>(response, <span style="color:brown">JSON</span>.<span style="color:red">stringify</span>(output));   <span style="color:grey">// Hypothetical method: "writeResponse()"</span>
 </pre>
@@ -206,12 +207,12 @@ messages to the appropriate sub-handler.  This is trivial using typed messages h
 In case you prefer APIs before <a href="#messages">messages</a>, the following fictitious example in Java illustrates how this <a href="#tools">could be achieved</a> using YASMIN:
 <pre>
 <span style="color:grey">@YService</span>(&quot;<span style="color:green">https://iotstandards.org/device</span>&quot;)
-<span style="color:blue">public class</span> <span style="color:brown">MyService</span> {
+<span style="color:#0000C0">public class</span> <span style="color:brown">MyService</span> {
 
     <span style="color:grey">@YMethod</span>
     <span style="color:grey">@YSimpleReturn</span>(&quot;<span style="color:green">currentValue</span>&quot;)
-    <span style="color:blue">public double</span> <span style="color:red">setFurnaceTemperature</span>(<span style="color:grey">@YParam</span>("<span style="color:green">deviceId</span>") <span style="color:brown">String</span> deviceId, 
-                                        <span style="color:grey">@YParam</span>("<span style="color:green">value</span>") <span style="color:blue">double</span> value) <span style="color:blue">throws</span> <span style="color:brown">IOException</span> {
+    <span style="color:#0000C0">public double</span> <span style="color:red">setFurnaceTemperature</span>(<span style="color:grey">@YParam</span>("<span style="color:green">deviceId</span>") <span style="color:brown">String</span> deviceId, 
+                                        <span style="color:grey">@YParam</span>("<span style="color:green">value</span>") <span style="color:#0000C0">double</span> value) <span style="color:#0000C0">throws</span> <span style="color:brown">IOException</span> {
 
         <i>Actual method code...</i>
 
