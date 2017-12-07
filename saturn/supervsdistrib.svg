@@ -1,4 +1,4 @@
-<svg width="1514" height="584" xmlns="http://www.w3.org/2000/svg">
+<svg width="1514" height="654" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <radialGradient id="super" spreadMethod="pad" cx="0.5" cy="0.5" r="1">
 <stop stop-color="#ffe100" offset="0"/>
@@ -189,7 +189,6 @@
 <tspan>Super</tspan>
 <tspan x="309" dy="1.2em">Provider</tspan>
 </text>
-<text x="755" y="300" font-family="Sans-serif" font-size="34" text-anchor="middle">Versus</text>
 <line x1="1455" y1="290" x2="1421.5" y2="415" stroke-width="1" stroke="#0000ff"/>
 <line x1="1455" y1="290" x2="1330" y2="506.5" stroke-width="1" stroke="#0000ff"/>
 <line x1="1455" y1="290" x2="1205" y2="540" stroke-width="1" stroke="#0000ff"/>
@@ -412,5 +411,17 @@
 <rect x="1376.5" y="145.49" width="90" height="10" stroke="#404040" stroke-width="1" fill="#f2f2f2"/>
 <rect x="1371.5" y="193.99" width="100" height="6" stroke="#404040" stroke-width="1" fill="#f2f2f2"/>
 <rect x="1376.5" y="187.99" width="90" height="6" stroke="#404040" stroke-width="1" fill="#f2f2f2"/>
+<g transform="translate(830,40) scale(0.4)">
+<g transform="rotate(-45.0 85.0 85.0)">
+<ellipse cx="85" cy="85" rx="100" ry="33" fill="#dd5454"/>
+<ellipse cx="85" cy="85" rx="78" ry="26" fill="#ffffff"/>
+</g>
+<circle cx="85" cy="85" r="60" fill="#6e9e3f"/>
+<text x="85" y="128" font-family="sans-serif" font-size="116" text-anchor="middle" fill="#ffffff">S</text>
+<text x="153" y="128" font-family="sans-serif" font-size="116" text-anchor="start" fill="#808080">aturn</text>
+<path fill="#dd5454" d="M 56.5,138.19 c 0,0 0,0 9.19,5.05  0,0 48,-30.5 77,-76.65  0,0 0,0 -4,-10.95  0,0 -22,50 -82.1,82.6 z"/>
+</g>
+<text x="309" y="640" font-family="Sans-serif" font-size="34" text-anchor="middle">&quot;Ruling Model&quot; - Centralized</text>
+<text x="1205" y="640" font-family="Sans-serif" font-size="34" text-anchor="middle">&quot;Challenger&quot; - Decentralized</text>
 </g>
 </svg>
