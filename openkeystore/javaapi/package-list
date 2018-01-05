@@ -3,7 +3,6 @@ org.webpki.asn1.cert
 org.webpki.ca
 org.webpki.crypto
 org.webpki.json
-org.webpki.json.encryption
 org.webpki.keygen2
 org.webpki.net
 org.webpki.pdf

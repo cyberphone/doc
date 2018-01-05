@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10};
+var methods = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -220,23 +220,20 @@ and
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectWriter.html#createEncryptionObject-byte:A-org.webpki.json.encryption.DataEncryptionAlgorithms-java.security.PublicKey-java.lang.String-org.webpki.json.encryption.KeyEncryptionAlgorithms-">createEncryptionObject</a></span>(byte[]&nbsp;unencryptedData,
-                      <a href="../../../org/webpki/json/encryption/DataEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">DataEncryptionAlgorithms</a>&nbsp;dataEncryptionAlgorithm,
-                      <a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;keyEncryptionKey,
-                      <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;optionalKeyId,
-                      <a href="../../../org/webpki/json/encryption/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">KeyEncryptionAlgorithms</a>&nbsp;keyEncryptionAlgorithm)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectWriter.html#createEncryptionObject-byte:A-org.webpki.json.DataEncryptionAlgorithms-org.webpki.json.JSONEncrypter-">createEncryptionObject</a></span>(byte[]&nbsp;unencryptedData,
+                      <a href="../../../org/webpki/json/DataEncryptionAlgorithms.html" title="enum in org.webpki.json">DataEncryptionAlgorithms</a>&nbsp;dataEncryptionAlgorithm,
+                      <a href="../../../org/webpki/json/JSONEncrypter.html" title="class in org.webpki.json">JSONEncrypter</a>&nbsp;encrypter)</code>
 <div class="block">Create a <a href="https://cyberphone.github.io/doc/security/jef.html" target="_blank"><b>JEF</b></a>
- public key encrypted object.</div>
+ encrypted object.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>static <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectWriter.html#createEncryptionObject-byte:A-org.webpki.json.encryption.DataEncryptionAlgorithms-java.lang.String-byte:A-">createEncryptionObject</a></span>(byte[]&nbsp;unencryptedData,
-                      <a href="../../../org/webpki/json/encryption/DataEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">DataEncryptionAlgorithms</a>&nbsp;dataEncryptionAlgorithm,
-                      <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;optionalKeyId,
-                      byte[]&nbsp;dataEncryptionKey)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectWriter.html#createEncryptionObject-byte:A-org.webpki.json.DataEncryptionAlgorithms-java.util.Vector-">createEncryptionObject</a></span>(byte[]&nbsp;unencryptedData,
+                      <a href="../../../org/webpki/json/DataEncryptionAlgorithms.html" title="enum in org.webpki.json">DataEncryptionAlgorithms</a>&nbsp;dataEncryptionAlgorithm,
+                      <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</a>&lt;<a href="../../../org/webpki/json/JSONEncrypter.html" title="class in org.webpki.json">JSONEncrypter</a>&gt;&nbsp;encrypters)</code>
 <div class="block">Create a <a href="https://cyberphone.github.io/doc/security/jef.html" target="_blank"><b>JEF</b></a>
- symmetric key encrypted object.</div>
+ encrypted object fo multiple recipients.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -370,39 +367,32 @@ and
 </tr>
 <tr id="i22" class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectWriter.html#setNumberAsText-java.lang.String-java.lang.String-">setNumberAsText</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-               <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</code>
-<div class="block">Bypass the normal number formatters.</div>
-</td>
-</tr>
-<tr id="i23" class="rowColor">
-<td class="colFirst"><code><a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectWriter.html#setObject-java.lang.String-">setObject</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">Set (create) a JSON object.</div>
 </td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectWriter.html#setObject-java.lang.String-org.webpki.json.JSONObjectReader-">setObject</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
          <a href="../../../org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a>&nbsp;objectReader)</code>
 <div class="block">Set a JSON object.</div>
 </td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectWriter.html#setObject-java.lang.String-org.webpki.json.JSONObjectWriter-">setObject</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
          <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;objectWriter)</code>
 <div class="block">Set a JSON object.</div>
 </td>
 </tr>
-<tr id="i26" class="altColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectWriter.html#setPublicKey-java.security.PublicKey-">setPublicKey</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey)</code>
 <div class="block">Set a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank">JCS</a>
  (<a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK</b></a>) formatted public key.</div>
 </td>
 </tr>
-<tr id="i27" class="rowColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectWriter.html#setPublicKey-java.security.PublicKey-org.webpki.crypto.AlgorithmPreferences-">setPublicKey</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey,
             <a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences)</code>
@@ -410,41 +400,41 @@ and
  (<a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK</b></a>) formatted public key.</div>
 </td>
 </tr>
-<tr id="i28" class="altColor">
+<tr id="i27" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectWriter.html#setSignature-org.webpki.json.JSONSigner-">setSignature</a></span>(<a href="../../../org/webpki/json/JSONSigner.html" title="class in org.webpki.json">JSONSigner</a>&nbsp;signer)</code>
 <div class="block">Set a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
  <code>"signature"</code>object.</div>
 </td>
 </tr>
-<tr id="i29" class="rowColor">
+<tr id="i28" class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectWriter.html#setSignatures-java.util.Vector-">setSignatures</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</a>&lt;<a href="../../../org/webpki/json/JSONSigner.html" title="class in org.webpki.json">JSONSigner</a>&gt;&nbsp;signers)</code>
 <div class="block">Set a <a href="https://cyberphone.github.io/doc/security/jcs.html" target="_blank"><b>JCS</b></a>
  <code>"signatures"</code> [] object.</div>
 </td>
 </tr>
-<tr id="i30" class="altColor">
+<tr id="i29" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectWriter.html#setString-java.lang.String-java.lang.String-">setString</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</code>
 <div class="block">Set a <code>"string"</code> property.</div>
 </td>
 </tr>
-<tr id="i31" class="rowColor">
+<tr id="i30" class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectWriter.html#setStringArray-java.lang.String-java.lang.String:A-">setStringArray</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
               <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;values)</code>
 <div class="block">Set a <code>String[]</code> property.</div>
 </td>
 </tr>
-<tr id="i32" class="altColor">
+<tr id="i31" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectWriter.html#setupForRewrite-java.lang.String-">setupForRewrite</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">Prepares the current object writer for a <i>rewrite</i> of a property.</div>
 </td>
 </tr>
-<tr id="i33" class="rowColor">
+<tr id="i32" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectWriter.html#toString--">toString</a></span>()</code>
 <div class="block">Pretty print JSON of current object writer.</div>
@@ -563,28 +553,24 @@ and
 </dl>
 </li>
 </ul>
-<a name="createEncryptionObject-byte:A-org.webpki.json.encryption.DataEncryptionAlgorithms-java.security.PublicKey-java.lang.String-org.webpki.json.encryption.KeyEncryptionAlgorithms-">
+<a name="createEncryptionObject-byte:A-org.webpki.json.DataEncryptionAlgorithms-org.webpki.json.JSONEncrypter-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>createEncryptionObject</h4>
 <pre>public static&nbsp;<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;createEncryptionObject(byte[]&nbsp;unencryptedData,
-                                                      <a href="../../../org/webpki/json/encryption/DataEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">DataEncryptionAlgorithms</a>&nbsp;dataEncryptionAlgorithm,
-                                                      <a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;keyEncryptionKey,
-                                                      <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;optionalKeyId,
-                                                      <a href="../../../org/webpki/json/encryption/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">KeyEncryptionAlgorithms</a>&nbsp;keyEncryptionAlgorithm)
+                                                      <a href="../../../org/webpki/json/DataEncryptionAlgorithms.html" title="enum in org.webpki.json">DataEncryptionAlgorithms</a>&nbsp;dataEncryptionAlgorithm,
+                                                      <a href="../../../org/webpki/json/JSONEncrypter.html" title="class in org.webpki.json">JSONEncrypter</a>&nbsp;encrypter)
                                                throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                                                       <a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></pre>
 <div class="block">Create a <a href="https://cyberphone.github.io/doc/security/jef.html" target="_blank"><b>JEF</b></a>
- public key encrypted object.</div>
+ encrypted object.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>unencryptedData</code> - Data to be encrypted</dd>
 <dd><code>dataEncryptionAlgorithm</code> - Data encryption algorithm</dd>
-<dd><code>keyEncryptionKey</code> - Key encryption key</dd>
-<dd><code>optionalKeyId</code> - If defined it replaces public key data</dd>
-<dd><code>keyEncryptionAlgorithm</code> - Key encryption algorithm</dd>
+<dd><code>encrypter</code> - Holds keys etc.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>New instance of <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -593,26 +579,24 @@ and
 </dl>
 </li>
 </ul>
-<a name="createEncryptionObject-byte:A-org.webpki.json.encryption.DataEncryptionAlgorithms-java.lang.String-byte:A-">
+<a name="createEncryptionObject-byte:A-org.webpki.json.DataEncryptionAlgorithms-java.util.Vector-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>createEncryptionObject</h4>
 <pre>public static&nbsp;<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;createEncryptionObject(byte[]&nbsp;unencryptedData,
-                                                      <a href="../../../org/webpki/json/encryption/DataEncryptionAlgorithms.html" title="enum in org.webpki.json.encryption">DataEncryptionAlgorithms</a>&nbsp;dataEncryptionAlgorithm,
-                                                      <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;optionalKeyId,
-                                                      byte[]&nbsp;dataEncryptionKey)
+                                                      <a href="../../../org/webpki/json/DataEncryptionAlgorithms.html" title="enum in org.webpki.json">DataEncryptionAlgorithms</a>&nbsp;dataEncryptionAlgorithm,
+                                                      <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</a>&lt;<a href="../../../org/webpki/json/JSONEncrypter.html" title="class in org.webpki.json">JSONEncrypter</a>&gt;&nbsp;encrypters)
                                                throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                                                       <a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></pre>
 <div class="block">Create a <a href="https://cyberphone.github.io/doc/security/jef.html" target="_blank"><b>JEF</b></a>
- symmetric key encrypted object.</div>
+ encrypted object fo multiple recipients.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>unencryptedData</code> - Data to be encrypted</dd>
 <dd><code>dataEncryptionAlgorithm</code> - Data encryption algorithm</dd>
-<dd><code>optionalKeyId</code> - Optional key id</dd>
-<dd><code>dataEncryptionKey</code> - Symmetric key</dd>
+<dd><code>encrypters</code> - Holds keys etc.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>New instance of <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -1093,28 +1077,6 @@ and
 </dl>
 </li>
 </ul>
-<a name="setNumberAsText-java.lang.String-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setNumberAsText</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;setNumberAsText(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                                        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)
-                                 throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Bypass the normal number formatters.
- Primarily for testing.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>name</code> - Property</dd>
-<dd><code>value</code> - Text applied verbatim without quotes</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>Current instance of <a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a></dd>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - &nbsp;</dd>
-</dl>
-</li>
-</ul>
 <a name="setObject-java.lang.String-">
 <!--   -->
 </a>
@@ -1280,7 +1242,7 @@ import org.webpki.json.JSONSignatureDecoder;
         writer.setString("myProperty", "Some data");
     
         // Sign document
-        writer.setSignature(privateKey, publicKey, null);
+        writer.setSignature(new JSONAsymKeySigner(privateKey, publicKey, null));
 
         // Serialize document
         String json = writer.toString();
@@ -1291,14 +1253,14 @@ import org.webpki.json.JSONSignatureDecoder;
 <div id="verify" style="display:inline-block;background:#F8F8F8;border-width:1px;border-style:solid;border-color:grey;padding:0pt 10pt 0pt 10pt;box-shadow:3pt 3pt 3pt #D0D0D0"><pre>{
   "<span style="color:#C00000">myProperty</span>": "<span style="color:#0000C0">Some data</span>",
   "<span style="color:#C00000">signature</span>": {
-    "<span style="color:#C00000">algorithm</span>": "<span style="color:#0000C0">ES256</span>",
-    "<span style="color:#C00000">publicKey</span>": {
+    "<span style="color:#C00000">alg</span>": "<span style="color:#0000C0">ES256</span>",
+    "<span style="color:#C00000">jwk</span>": {
       "<span style="color:#C00000">kty</span>": "<span style="color:#0000C0">EC</span>",
       "<span style="color:#C00000">crv</span>": "<span style="color:#0000C0">P-256</span>",
       "<span style="color:#C00000">x</span>": "<span style="color:#0000C0">vlYxD4dtFJOp1_8_QUcieWCW-4KrLMmFL2rpkY1bQDs</span>",
       "<span style="color:#C00000">y</span>": "<span style="color:#0000C0">fxEF70yJenP3SPHM9hv-EnvhG6nXr3_S-fDqoj-F6yM</span>"
     },
-    "<span style="color:#C00000">value</span>": "<span style="color:#0000C0">23NSrdC9ol5N3-wYPxdV4w8Ylm_mhUNijbCuJ3G_DqWGiN5j8X5qZxyBo2yy8kGou4yBh74egauup7u2KYytLQ</span>"
+    "<span style="color:#C00000">val</span>": "<span style="color:#0000C0">23NSrdC9ol5N3-wYPxdV4w8Ylm_mhUNijbCuJ3G_DqWGiN5j8X5qZxyBo2yy8kGou4yBh74egauup7u2KYytLQ</span>"
   }
 }
 </pre></div>    
@@ -1307,7 +1269,7 @@ import org.webpki.json.JSONSignatureDecoder;
         JSONObjectReader reader = JSONParser.parse(json);
     
         // Get and verify signature
-        JSONSignatureDecoder signature = reader.getSignature(new JSONSignatureDecoder.Options());
+        JSONSignatureDecoder signature = reader.getSignature(new JSONCryptoDecoder.Options());
         signature.verify(new JSONAsymKeyVerifier(publicKey));
     
         // Print document payload on the console
@@ -1484,6 +1446,6 @@ import org.webpki.json.JSONSignatureDecoder;
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>2005-2016 WebPKI.org.</i></small></p>
+<p class="legalCopy"><small><i>2005-2018 WebPKI.org.</i></small></p>
 </body>
 </html>

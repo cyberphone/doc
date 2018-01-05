@@ -47,7 +47,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../org/webpki/json/JSONVerifier.html" title="class in org.webpki.json"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../org/webpki/json/JSONX509Encrypter.html" title="class in org.webpki.json"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../org/webpki/json/JSONX509Verifier.html" title="class in org.webpki.json"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -173,11 +173,13 @@ extends <a href="../../../org/webpki/json/JSONSigner.html" title="class in org.w
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONX509Signer.html" title="class in org.webpki.json">JSONX509Signer</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONX509Signer.html#setSignatureAlgorithm-org.webpki.crypto.AsymSignatureAlgorithms-">setSignatureAlgorithm</a></span>(<a href="../../../org/webpki/crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a>&nbsp;algorithm)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONX509Signer.html#setRemoteKey-java.lang.String-">setRemoteKey</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;url)</code>
+<div class="block">Set remote key (&quot;x5u&quot;) indicator.</div>
+</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONX509Signer.html" title="class in org.webpki.json">JSONX509Signer</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONX509Signer.html#setSignatureCertificateAttributes-boolean-">setSignatureCertificateAttributes</a></span>(boolean&nbsp;flag)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONX509Signer.html#setSignatureAlgorithm-org.webpki.crypto.AsymSignatureAlgorithms-">setSignatureAlgorithm</a></span>(<a href="../../../org/webpki/crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a>&nbsp;algorithm)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -185,7 +187,7 @@ extends <a href="../../../org/webpki/json/JSONSigner.html" title="class in org.w
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.webpki.json.<a href="../../../org/webpki/json/JSONSigner.html" title="class in org.webpki.json">JSONSigner</a></h3>
-<code><a href="../../../org/webpki/json/JSONSigner.html#getNormalizedData--">getNormalizedData</a>, <a href="../../../org/webpki/json/JSONSigner.html#setExtensions-org.webpki.json.JSONObjectWriter-">setExtensions</a>, <a href="../../../org/webpki/json/JSONSigner.html#setKeyId-java.lang.String-">setKeyId</a></code></li>
+<code><a href="../../../org/webpki/json/JSONSigner.html#getNormalizedData--">getNormalizedData</a>, <a href="../../../org/webpki/json/JSONSigner.html#setExcluded-java.lang.String:A-">setExcluded</a>, <a href="../../../org/webpki/json/JSONSigner.html#setExtensions-org.webpki.json.JSONObjectWriter-">setExtensions</a>, <a href="../../../org/webpki/json/JSONSigner.html#setKeyId-java.lang.String-">setKeyId</a>, <a href="../../../org/webpki/json/JSONSigner.html#setOutputPublicKeyInfo-boolean-">setOutputPublicKeyInfo</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -263,22 +265,37 @@ extends <a href="../../../org/webpki/json/JSONSigner.html" title="class in org.w
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONX509Signer.html" title="class in org.webpki.json">JSONX509Signer</a>&nbsp;setAlgorithmPreferences(<a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences)</pre>
 </li>
 </ul>
-<a name="setSignatureAlgorithm-org.webpki.crypto.AsymSignatureAlgorithms-">
+<a name="setRemoteKey-java.lang.String-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>setSignatureAlgorithm</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/json/JSONX509Signer.html" title="class in org.webpki.json">JSONX509Signer</a>&nbsp;setSignatureAlgorithm(<a href="../../../org/webpki/crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a>&nbsp;algorithm)</pre>
+<h4>setRemoteKey</h4>
+<pre>public&nbsp;<a href="../../../org/webpki/json/JSONX509Signer.html" title="class in org.webpki.json">JSONX509Signer</a>&nbsp;setRemoteKey(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;url)
+                            throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Set remote key (&quot;x5u&quot;) indicator.
+ This method <i>suppress</i> the in-line certificate information.
+ Note that private key and certificate path must anyway be provided during <i>signing</i>
+ since the remote key indicator is simply generated &quot;as is&quot;.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>url</code> - Where the key lives</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - &nbsp;</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../org/webpki/json/JSONRemoteKeys.html" title="enum in org.webpki.json"><code>JSONRemoteKeys</code></a></dd>
+</dl>
 </li>
 </ul>
-<a name="setSignatureCertificateAttributes-boolean-">
+<a name="setSignatureAlgorithm-org.webpki.crypto.AsymSignatureAlgorithms-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>setSignatureCertificateAttributes</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/json/JSONX509Signer.html" title="class in org.webpki.json">JSONX509Signer</a>&nbsp;setSignatureCertificateAttributes(boolean&nbsp;flag)</pre>
+<h4>setSignatureAlgorithm</h4>
+<pre>public&nbsp;<a href="../../../org/webpki/json/JSONX509Signer.html" title="class in org.webpki.json">JSONX509Signer</a>&nbsp;setSignatureAlgorithm(<a href="../../../org/webpki/crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a>&nbsp;algorithm)</pre>
 </li>
 </ul>
 </li>
@@ -307,7 +324,7 @@ extends <a href="../../../org/webpki/json/JSONSigner.html" title="class in org.w
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../org/webpki/json/JSONVerifier.html" title="class in org.webpki.json"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../org/webpki/json/JSONX509Encrypter.html" title="class in org.webpki.json"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../org/webpki/json/JSONX509Verifier.html" title="class in org.webpki.json"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -348,6 +365,6 @@ extends <a href="../../../org/webpki/json/JSONSigner.html" title="class in org.w
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>2005-2016 WebPKI.org.</i></small></p>
+<p class="legalCopy"><small><i>2005-2018 WebPKI.org.</i></small></p>
 </body>
 </html>

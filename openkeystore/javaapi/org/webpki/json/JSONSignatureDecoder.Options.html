@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -168,15 +168,20 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONSignatureDecoder.Options.html" title="class in org.webpki.json">JSONSignatureDecoder.Options</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONSignatureDecoder.Options.html#setPermittedExtensions-org.webpki.json.JSONSignatureDecoder.ExtensionHolder-">setPermittedExtensions</a></span>(<a href="../../../org/webpki/json/JSONSignatureDecoder.ExtensionHolder.html" title="class in org.webpki.json">JSONSignatureDecoder.ExtensionHolder</a>&nbsp;extensionHolder)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONSignatureDecoder.Options.html#setPermittedExclusions-java.lang.String:A-">setPermittedExclusions</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;exclusions)</code>&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONSignatureDecoder.Options.html" title="class in org.webpki.json">JSONSignatureDecoder.Options</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONSignatureDecoder.Options.html#setRemoteKeyReader-org.webpki.json.JSONRemoteKeys.Reader-">setRemoteKeyReader</a></span>(<a href="../../../org/webpki/json/JSONRemoteKeys.Reader.html" title="interface in org.webpki.json">JSONRemoteKeys.Reader</a>&nbsp;remoteKeyReader)</code>
-<div class="block">Define external &quot;remoteKey&quot; reader class.</div>
-</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONSignatureDecoder.Options.html#setPermittedExtensions-org.webpki.json.JSONSignatureDecoder.ExtensionHolder-">setPermittedExtensions</a></span>(<a href="../../../org/webpki/json/JSONSignatureDecoder.ExtensionHolder.html" title="class in org.webpki.json">JSONSignatureDecoder.ExtensionHolder</a>&nbsp;extensionHolder)</code>&nbsp;</td>
 </tr>
 <tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="../../../org/webpki/json/JSONSignatureDecoder.Options.html" title="class in org.webpki.json">JSONSignatureDecoder.Options</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONSignatureDecoder.Options.html#setRemoteKeyReader-org.webpki.json.JSONRemoteKeys.Reader-org.webpki.json.JSONRemoteKeys-">setRemoteKeyReader</a></span>(<a href="../../../org/webpki/json/JSONRemoteKeys.Reader.html" title="interface in org.webpki.json">JSONRemoteKeys.Reader</a>&nbsp;remoteKeyReader,
+                  <a href="../../../org/webpki/json/JSONRemoteKeys.html" title="enum in org.webpki.json">JSONRemoteKeys</a>&nbsp;remoteKeyType)</code>
+<div class="block">Define external remote key reader class.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONSignatureDecoder.Options.html" title="class in org.webpki.json">JSONSignatureDecoder.Options</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONSignatureDecoder.Options.html#setRequirePublicKeyInfo-boolean-">setRequirePublicKeyInfo</a></span>(boolean&nbsp;flag)</code>&nbsp;</td>
 </tr>
@@ -237,6 +242,20 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONSignatureDecoder.Options.html" title="class in org.webpki.json">JSONSignatureDecoder.Options</a>&nbsp;setKeyIdOption(<a href="../../../org/webpki/json/JSONSignatureDecoder.KEY_ID_OPTIONS.html" title="enum in org.webpki.json">JSONSignatureDecoder.KEY_ID_OPTIONS</a>&nbsp;keyIdOption)</pre>
 </li>
 </ul>
+<a name="setPermittedExclusions-java.lang.String:A-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setPermittedExclusions</h4>
+<pre>public&nbsp;<a href="../../../org/webpki/json/JSONSignatureDecoder.Options.html" title="class in org.webpki.json">JSONSignatureDecoder.Options</a>&nbsp;setPermittedExclusions(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;exclusions)
+                                                    throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+</dl>
+</li>
+</ul>
 <a name="setPermittedExtensions-org.webpki.json.JSONSignatureDecoder.ExtensionHolder-">
 <!--   -->
 </a>
@@ -246,18 +265,20 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONSignatureDecoder.Options.html" title="class in org.webpki.json">JSONSignatureDecoder.Options</a>&nbsp;setPermittedExtensions(<a href="../../../org/webpki/json/JSONSignatureDecoder.ExtensionHolder.html" title="class in org.webpki.json">JSONSignatureDecoder.ExtensionHolder</a>&nbsp;extensionHolder)</pre>
 </li>
 </ul>
-<a name="setRemoteKeyReader-org.webpki.json.JSONRemoteKeys.Reader-">
+<a name="setRemoteKeyReader-org.webpki.json.JSONRemoteKeys.Reader-org.webpki.json.JSONRemoteKeys-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setRemoteKeyReader</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/json/JSONSignatureDecoder.Options.html" title="class in org.webpki.json">JSONSignatureDecoder.Options</a>&nbsp;setRemoteKeyReader(<a href="../../../org/webpki/json/JSONRemoteKeys.Reader.html" title="interface in org.webpki.json">JSONRemoteKeys.Reader</a>&nbsp;remoteKeyReader)</pre>
-<div class="block">Define external &quot;remoteKey&quot; reader class.
+<pre>public&nbsp;<a href="../../../org/webpki/json/JSONSignatureDecoder.Options.html" title="class in org.webpki.json">JSONSignatureDecoder.Options</a>&nbsp;setRemoteKeyReader(<a href="../../../org/webpki/json/JSONRemoteKeys.Reader.html" title="interface in org.webpki.json">JSONRemoteKeys.Reader</a>&nbsp;remoteKeyReader,
+                                                       <a href="../../../org/webpki/json/JSONRemoteKeys.html" title="enum in org.webpki.json">JSONRemoteKeys</a>&nbsp;remoteKeyType)</pre>
+<div class="block">Define external remote key reader class.
  If set, the signature decoder assumes that there is no in-line public key or certificate information to process.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>remoteKeyReader</code> - Interface</dd>
+<dd><code>remoteKeyType</code> - Expected type</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>this</dd>
 </dl>
@@ -339,6 +360,6 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>2005-2016 WebPKI.org.</i></small></p>
+<p class="legalCopy"><small><i>2005-2018 WebPKI.org.</i></small></p>
 </body>
 </html>

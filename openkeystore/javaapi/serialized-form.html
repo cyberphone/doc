@@ -144,6 +144,15 @@
 </li>
 </ul>
 </li>
+<li class="blockList"><a name="org.webpki.json.JSONAsymKeyEncrypter">
+<!--   -->
+</a>
+<h3>Class <a href="org/webpki/json/JSONAsymKeyEncrypter.html" title="class in org.webpki.json">org.webpki.json.JSONAsymKeyEncrypter</a> extends <a href="org/webpki/json/JSONEncrypter.html" title="class in org.webpki.json">JSONEncrypter</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+</li>
 <li class="blockList"><a name="org.webpki.json.JSONAsymKeySigner">
 <!--   -->
 </a>
@@ -164,17 +173,9 @@
 <h4>signer</h4>
 <pre><a href="org/webpki/crypto/AsymKeySignerInterface.html" title="interface in org.webpki.crypto">AsymKeySignerInterface</a> signer</pre>
 </li>
-<li class="blockList">
+<li class="blockListLast">
 <h4>publicKey</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a> publicKey</pre>
-</li>
-<li class="blockList">
-<h4>uri</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> uri</pre>
-</li>
-<li class="blockListLast">
-<h4>format</h4>
-<pre><a href="org/webpki/json/JSONRemoteKeys.html" title="enum in org.webpki.json">JSONRemoteKeys</a> format</pre>
 </li>
 </ul>
 </li>
@@ -199,6 +200,15 @@
 </ul>
 </li>
 </ul>
+</li>
+<li class="blockList"><a name="org.webpki.json.JSONCryptoDecoder">
+<!--   -->
+</a>
+<h3>Class <a href="org/webpki/json/JSONCryptoDecoder.html" title="class in org.webpki.json">org.webpki.json.JSONCryptoDecoder</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
 </li>
 <li class="blockList"><a name="org.webpki.json.JSONDecoder">
 <!--   -->
@@ -259,6 +269,62 @@
 <li class="blockListLast">
 <h4>root</h4>
 <pre>org.webpki.json.JSONObject root</pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="org.webpki.json.JSONEncrypter">
+<!--   -->
+</a>
+<h3>Class <a href="org/webpki/json/JSONEncrypter.html" title="class in org.webpki.json">org.webpki.json.JSONEncrypter</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>extensions</h4>
+<pre><a href="org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a> extensions</pre>
+</li>
+<li class="blockList">
+<h4>keyId</h4>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> keyId</pre>
+</li>
+<li class="blockList">
+<h4>outputPublicKeyInfo</h4>
+<pre>boolean outputPublicKeyInfo</pre>
+</li>
+<li class="blockList">
+<h4>keyEncryptionAlgorithm</h4>
+<pre><a href="org/webpki/json/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json">KeyEncryptionAlgorithms</a> keyEncryptionAlgorithm</pre>
+</li>
+<li class="blockList">
+<h4>dataEncryptionKey</h4>
+<pre>byte[] dataEncryptionKey</pre>
+</li>
+<li class="blockList">
+<h4>publicKey</h4>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a> publicKey</pre>
+</li>
+<li class="blockList">
+<h4>provider</h4>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> provider</pre>
+</li>
+<li class="blockList">
+<h4>remoteUrl</h4>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> remoteUrl</pre>
+</li>
+<li class="blockList">
+<h4>remoteKeyFormat</h4>
+<pre><a href="org/webpki/json/JSONRemoteKeys.html" title="enum in org.webpki.json">JSONRemoteKeys</a> remoteKeyFormat</pre>
+</li>
+<li class="blockListLast">
+<h4>algorithmPreferences</h4>
+<pre><a href="org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a> algorithmPreferences</pre>
 </li>
 </ul>
 </li>
@@ -370,7 +436,7 @@
 </li>
 <li class="blockList">
 <h4>options</h4>
-<pre><a href="org/webpki/json/JSONSignatureDecoder.Options.html" title="class in org.webpki.json">JSONSignatureDecoder.Options</a> options</pre>
+<pre><a href="org/webpki/json/JSONCryptoDecoder.Options.html" title="class in org.webpki.json">JSONCryptoDecoder.Options</a> options</pre>
 </li>
 <li class="blockListLast">
 <h4>extensions</h4>
@@ -394,11 +460,27 @@
 <ul class="blockList">
 <li class="blockList">
 <h4>extensions</h4>
-<pre><a href="org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a> extensions</pre>
+<pre><a href="org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a> extensions</pre>
+</li>
+<li class="blockList">
+<h4>excluded</h4>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[] excluded</pre>
 </li>
 <li class="blockList">
 <h4>keyId</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> keyId</pre>
+</li>
+<li class="blockList">
+<h4>outputPublicKeyInfo</h4>
+<pre>boolean outputPublicKeyInfo</pre>
+</li>
+<li class="blockList">
+<h4>remoteUrl</h4>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> remoteUrl</pre>
+</li>
+<li class="blockList">
+<h4>remoteKeyFormat</h4>
+<pre><a href="org/webpki/json/JSONRemoteKeys.html" title="enum in org.webpki.json">JSONRemoteKeys</a> remoteKeyFormat</pre>
 </li>
 <li class="blockList">
 <h4>normalizedData</h4>
@@ -411,6 +493,15 @@
 </ul>
 </li>
 </ul>
+</li>
+<li class="blockList"><a name="org.webpki.json.JSONSymKeyEncrypter">
+<!--   -->
+</a>
+<h3>Class <a href="org/webpki/json/JSONSymKeyEncrypter.html" title="class in org.webpki.json">org.webpki.json.JSONSymKeyEncrypter</a> extends <a href="org/webpki/json/JSONEncrypter.html" title="class in org.webpki.json">JSONEncrypter</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
 </li>
 <li class="blockList"><a name="org.webpki.json.JSONSymKeySigner">
 <!--   -->
@@ -476,6 +567,26 @@
 </li>
 </ul>
 </li>
+<li class="blockList"><a name="org.webpki.json.JSONX509Encrypter">
+<!--   -->
+</a>
+<h3>Class <a href="org/webpki/json/JSONX509Encrypter.html" title="class in org.webpki.json">org.webpki.json.JSONX509Encrypter</a> extends <a href="org/webpki/json/JSONEncrypter.html" title="class in org.webpki.json">JSONEncrypter</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>1L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList">
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockListLast">
+<h4>certificatePath</h4>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[] certificatePath</pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="blockList"><a name="org.webpki.json.JSONX509Signer">
 <!--   -->
 </a>
@@ -496,13 +607,9 @@
 <h4>signer</h4>
 <pre><a href="org/webpki/crypto/SignerInterface.html" title="interface in org.webpki.crypto">SignerInterface</a> signer</pre>
 </li>
-<li class="blockList">
+<li class="blockListLast">
 <h4>certificatePath</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[] certificatePath</pre>
-</li>
-<li class="blockListLast">
-<h4>outputSignatureCertificateAttributes</h4>
-<pre>boolean outputSignatureCertificateAttributes</pre>
 </li>
 </ul>
 </li>
@@ -2414,6 +2521,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>2005-2016 WebPKI.org.</i></small></p>
+<p class="legalCopy"><small><i>2005-2018 WebPKI.org.</i></small></p>
 </body>
 </html>
