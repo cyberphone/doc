@@ -138,15 +138,21 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONDecryptionDecoder.html#getDecryptedData-byte:A-">getDecryptedData</a></span>(byte[]&nbsp;dataDecryptionKey)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONDecryptionDecoder.html#getDecryptedData-byte:A-">getDecryptedData</a></span>(byte[]&nbsp;dataDecryptionKey)</code>
+<div class="block">Decrypt data based on a specific symmetric key.</div>
+</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONDecryptionDecoder.html#getDecryptedData-java.security.PrivateKey-">getDecryptedData</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</a>&nbsp;privateKey)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONDecryptionDecoder.html#getDecryptedData-java.security.PrivateKey-">getDecryptedData</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</a>&nbsp;privateKey)</code>
+<div class="block">Decrypt data based on a specific private key.</div>
+</td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONDecryptionDecoder.html#getDecryptedData-java.util.Vector-">getDecryptedData</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</a>&lt;<a href="../../../org/webpki/json/DecryptionKeyHolder.html" title="class in org.webpki.json">DecryptionKeyHolder</a>&gt;&nbsp;decryptionKeys)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONDecryptionDecoder.html#getDecryptedData-java.util.Vector-">getDecryptedData</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</a>&lt;<a href="../../../org/webpki/json/DecryptionKeyHolder.html" title="class in org.webpki.json">DecryptionKeyHolder</a>&gt;&nbsp;decryptionKeys)</code>
+<div class="block">Decrypt data based on a collection of possible [private] keys.</div>
+</td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json">KeyEncryptionAlgorithms</a></code></td>
@@ -217,10 +223,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public&nbsp;byte[]&nbsp;getDecryptedData(byte[]&nbsp;dataDecryptionKey)
                         throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                                <a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></pre>
+<div class="block">Decrypt data based on a specific symmetric key.</div>
 <dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>dataDecryptionKey</code> - Symmetric key</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Decrypted data</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - &nbsp;</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code> - &nbsp;</dd>
 </dl>
 </li>
 </ul>
@@ -233,10 +244,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public&nbsp;byte[]&nbsp;getDecryptedData(<a href="https://docs.oracle.com/javase/8/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</a>&nbsp;privateKey)
                         throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                                <a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></pre>
+<div class="block">Decrypt data based on a specific private key.</div>
 <dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>privateKey</code> - The private key</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Decrypted data</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - &nbsp;</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code> - &nbsp;</dd>
 </dl>
 </li>
 </ul>
@@ -249,10 +265,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public&nbsp;byte[]&nbsp;getDecryptedData(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</a>&lt;<a href="../../../org/webpki/json/DecryptionKeyHolder.html" title="class in org.webpki.json">DecryptionKeyHolder</a>&gt;&nbsp;decryptionKeys)
                         throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                                <a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></pre>
+<div class="block">Decrypt data based on a collection of possible [private] keys.</div>
 <dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>decryptionKeys</code> - Collection</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Decrypted data</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - &nbsp;</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code> - &nbsp;</dd>
 </dl>
 </li>
 </ul>

@@ -141,9 +141,8 @@ extends <a href="../../../org/webpki/json/JSONEncrypter.html" title="class in or
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONAsymKeyEncrypter.html#JSONAsymKeyEncrypter-java.security.PublicKey-org.webpki.json.KeyEncryptionAlgorithms-java.lang.String-">JSONAsymKeyEncrypter</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey,
-                    <a href="../../../org/webpki/json/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json">KeyEncryptionAlgorithms</a>&nbsp;keyEncryptionAlgorithm,
-                    <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;provider)</code>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONAsymKeyEncrypter.html#JSONAsymKeyEncrypter-java.security.PublicKey-org.webpki.json.KeyEncryptionAlgorithms-">JSONAsymKeyEncrypter</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey,
+                    <a href="../../../org/webpki/json/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json">KeyEncryptionAlgorithms</a>&nbsp;keyEncryptionAlgorithm)</code>
 <div class="block">Constructor for JCE based solutions.</div>
 </td>
 </tr>
@@ -197,22 +196,20 @@ extends <a href="../../../org/webpki/json/JSONEncrypter.html" title="class in or
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="JSONAsymKeyEncrypter-java.security.PublicKey-org.webpki.json.KeyEncryptionAlgorithms-java.lang.String-">
+<a name="JSONAsymKeyEncrypter-java.security.PublicKey-org.webpki.json.KeyEncryptionAlgorithms-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>JSONAsymKeyEncrypter</h4>
 <pre>public&nbsp;JSONAsymKeyEncrypter(<a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;publicKey,
-                            <a href="../../../org/webpki/json/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json">KeyEncryptionAlgorithms</a>&nbsp;keyEncryptionAlgorithm,
-                            <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;provider)
+                            <a href="../../../org/webpki/json/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json">KeyEncryptionAlgorithms</a>&nbsp;keyEncryptionAlgorithm)
                      throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Constructor for JCE based solutions.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>publicKey</code> - Public key used for encrypting the key</dd>
 <dd><code>keyEncryptionAlgorithm</code> - The algorithm used for encrypting the key</dd>
-<dd><code>provider</code> - Optional JCE provider or null</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - &nbsp;</dd>
 </dl>
@@ -235,11 +232,11 @@ extends <a href="../../../org/webpki/json/JSONEncrypter.html" title="class in or
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONAsymKeyEncrypter.html" title="class in org.webpki.json">JSONAsymKeyEncrypter</a>&nbsp;setRemoteKey(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;url)
                                   throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Set remote key (&quot;jku&quot;) indicator.
- This method <i>suppress</i> the in-line public key information.
+ This method <i>suppresses</i> the in-line public key information.
  Note that the public key must anyway be provided during <i>encryption</i>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>url</code> - Where the key lives</dd>
+<dd><code>url</code> - Where the key (JWK key set) resides</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>this</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
