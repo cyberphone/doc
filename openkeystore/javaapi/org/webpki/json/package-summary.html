@@ -92,7 +92,9 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../org/webpki/json/JSONRemoteKeys.Reader.html" title="interface in org.webpki.json">JSONRemoteKeys.Reader</a></td>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">For reading "jku" and "x5u" data</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -106,77 +108,81 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/json/DecryptionKeyHolder.html" title="class in org.webpki.json">DecryptionKeyHolder</a></td>
-<td class="colLast">
-<div class="block">JEF (JSON Encryption Format) support.</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><a href="../../../org/webpki/json/JSONArrayReader.html" title="class in org.webpki.json">JSONArrayReader</a></td>
 <td class="colLast">
 <div class="block">Reads JSON array elements.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a></td>
 <td class="colLast">
 <div class="block">Writes JSON arrays.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../org/webpki/json/JSONAsymKeyEncrypter.html" title="class in org.webpki.json">JSONAsymKeyEncrypter</a></td>
 <td class="colLast">
 <div class="block">Initiatiator object for asymmetric key encryptions.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../org/webpki/json/JSONAsymKeySigner.html" title="class in org.webpki.json">JSONAsymKeySigner</a></td>
 <td class="colLast">
 <div class="block">Initiatiator object for asymmetric key signatures.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../org/webpki/json/JSONAsymKeyVerifier.html" title="class in org.webpki.json">JSONAsymKeyVerifier</a></td>
 <td class="colLast">
 <div class="block">Initiatiator object for asymmetric key signature verifiers.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../org/webpki/json/JSONCryptoDecoder.html" title="class in org.webpki.json">JSONCryptoDecoder</a></td>
 <td class="colLast">
 <div class="block">Common crypto decoder classes for JEF and JCS.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../org/webpki/json/JSONCryptoDecoder.Extension.html" title="class in org.webpki.json">JSONCryptoDecoder.Extension</a></td>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">For building "crit" decoders</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../org/webpki/json/JSONCryptoDecoder.ExtensionHolder.html" title="class in org.webpki.json">JSONCryptoDecoder.ExtensionHolder</a></td>
+<td class="colLast">
+<div class="block">Holds list of supported "crit" extension decoders.</div>
+</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONCryptoDecoder.ExtensionHolder.html" title="class in org.webpki.json">JSONCryptoDecoder.ExtensionHolder</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><a href="../../../org/webpki/json/JSONCryptoDecoder.Options.html" title="class in org.webpki.json">JSONCryptoDecoder.Options</a></td>
 <td class="colLast">
 <div class="block">Common JEF/JCS decoding options.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../org/webpki/json/JSONDecoder.html" title="class in org.webpki.json">JSONDecoder</a></td>
 <td class="colLast">
 <div class="block">Base class for java classes which can be created from specific JSON object types.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../org/webpki/json/JSONDecoderCache.html" title="class in org.webpki.json">JSONDecoderCache</a></td>
 <td class="colLast">
 <div class="block">Stores <a href="../../../org/webpki/json/JSONDecoder.html" title="class in org.webpki.json"><code>JSONDecoder</code></a> classes for automatic instantiation during parsing.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../org/webpki/json/JSONDecryptionDecoder.html" title="class in org.webpki.json">JSONDecryptionDecoder</a></td>
 <td class="colLast">
 <div class="block">Holds parsed JEF (JSON Encryption Format) data.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../org/webpki/json/JSONDecryptionDecoder.DecryptionKeyHolder.html" title="class in org.webpki.json">JSONDecryptionDecoder.DecryptionKeyHolder</a></td>
+<td class="colLast">
+<div class="block">JEF (JSON Encryption Format) support.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -263,22 +269,6 @@
 <div class="block">Initiatiator object for X.509 signature verifiers.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/json/NumberCachedPowers.html" title="class in org.webpki.json">NumberCachedPowers</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/json/NumberDoubleHelper.html" title="class in org.webpki.json">NumberDoubleHelper</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/json/NumberFastDtoa.html" title="class in org.webpki.json">NumberFastDtoa</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/json/NumberFastDtoaBuilder.html" title="class in org.webpki.json">NumberFastDtoaBuilder</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
 </tbody>
 </table>
 </li>
@@ -311,7 +301,7 @@
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../org/webpki/json/JSONRemoteKeys.html" title="enum in org.webpki.json">JSONRemoteKeys</a></td>
 <td class="colLast">
-<div class="block">Enum and interface to &quot;remoteKey&quot;.</div>
+<div class="block">Enum and interface to "jku" and "x5u";.</div>
 </td>
 </tr>
 <tr class="altColor">

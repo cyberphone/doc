@@ -840,11 +840,7 @@
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/crypto/SignatureWrapper.html#decodeDEREncodedECDSASignature-byte:A-java.security.spec.ECParameterSpec-">decodeDEREncodedECDSASignature(byte[], ECParameterSpec)</a></span> - Static method in class org.webpki.crypto.<a href="org/webpki/crypto/SignatureWrapper.html" title="class in org.webpki.crypto">SignatureWrapper</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="org/webpki/json/DecryptionKeyHolder.html" title="class in org.webpki.json"><span class="typeNameLink">DecryptionKeyHolder</span></a> - Class in <a href="org/webpki/json/package-summary.html">org.webpki.json</a></dt>
-<dd>
-<div class="block">JEF (JSON Encryption Format) support.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/json/DecryptionKeyHolder.html#DecryptionKeyHolder-java.security.PublicKey-java.security.PrivateKey-org.webpki.json.KeyEncryptionAlgorithms-java.lang.String-">DecryptionKeyHolder(PublicKey, PrivateKey, KeyEncryptionAlgorithms, String)</a></span> - Constructor for class org.webpki.json.<a href="org/webpki/json/DecryptionKeyHolder.html" title="class in org.webpki.json">DecryptionKeyHolder</a></dt>
+<dt><span class="memberNameLink"><a href="org/webpki/json/JSONDecryptionDecoder.DecryptionKeyHolder.html#DecryptionKeyHolder-java.security.PublicKey-java.security.PrivateKey-org.webpki.json.KeyEncryptionAlgorithms-java.lang.String-">DecryptionKeyHolder(PublicKey, PrivateKey, KeyEncryptionAlgorithms, String)</a></span> - Constructor for class org.webpki.json.<a href="org/webpki/json/JSONDecryptionDecoder.DecryptionKeyHolder.html" title="class in org.webpki.json">JSONDecryptionDecoder.DecryptionKeyHolder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/asn1/ASN1BitString.html#deepCompare-org.webpki.asn1.BaseASN1Object-">deepCompare(BaseASN1Object)</a></span> - Method in class org.webpki.asn1.<a href="org/webpki/asn1/ASN1BitString.html" title="class in org.webpki.asn1">ASN1BitString</a></dt>
 <dd>&nbsp;</dd>
@@ -975,8 +971,6 @@
 <div class="block">Creates a <code>DOMWriterHelper</code> wrapping an <code>XMLObjectWrapper</code>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/securityproxy/ProxyChannelServlet.html#doPost-javax.servlet.http.HttpServletRequest-javax.servlet.http.HttpServletResponse-">doPost(HttpServletRequest, HttpServletResponse)</a></span> - Method in class org.webpki.securityproxy.<a href="org/webpki/securityproxy/ProxyChannelServlet.html" title="class in org.webpki.securityproxy">ProxyChannelServlet</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/json/NumberFastDtoa.html#dtoa-double-org.webpki.json.NumberFastDtoaBuilder-">dtoa(double, NumberFastDtoaBuilder)</a></span> - Static method in class org.webpki.json.<a href="org/webpki/json/NumberFastDtoa.html" title="class in org.webpki.json">NumberFastDtoa</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/webpki/asn1/DumpASN1.html" title="class in org.webpki.asn1"><span class="typeNameLink">DumpASN1</span></a> - Class in <a href="org/webpki/asn1/package-summary.html">org.webpki.asn1</a></dt>
 <dd>
@@ -1249,8 +1243,6 @@
 <div class="block">Forces the use of a specific implementation</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/asn1/ASN1Constants.html#FORM_MASK">FORM_MASK</a></span> - Static variable in interface org.webpki.asn1.<a href="org/webpki/asn1/ASN1Constants.html" title="interface in org.webpki.asn1">ASN1Constants</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/json/NumberFastDtoaBuilder.html#format--">format()</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/NumberFastDtoaBuilder.html" title="class in org.webpki.json">NumberFastDtoaBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/keygen2/KeyGen2Constants.html#FORMAT_JSON">FORMAT_JSON</a></span> - Static variable in interface org.webpki.keygen2.<a href="org/webpki/keygen2/KeyGen2Constants.html" title="interface in org.webpki.keygen2">KeyGen2Constants</a></dt>
 <dd>&nbsp;</dd>
@@ -1721,7 +1713,7 @@
 <dd>
 <div class="block">Decrypt data based on a specific private key.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="org/webpki/json/JSONDecryptionDecoder.html#getDecryptedData-java.util.Vector-">getDecryptedData(Vector&lt;DecryptionKeyHolder&gt;)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONDecryptionDecoder.html" title="class in org.webpki.json">JSONDecryptionDecoder</a></dt>
+<dt><span class="memberNameLink"><a href="org/webpki/json/JSONDecryptionDecoder.html#getDecryptedData-java.util.Vector-">getDecryptedData(Vector&lt;JSONDecryptionDecoder.DecryptionKeyHolder&gt;)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONDecryptionDecoder.html" title="class in org.webpki.json">JSONDecryptionDecoder</a></dt>
 <dd>
 <div class="block">Decrypt data based on a collection of possible [private] keys.</div>
 </dd>
@@ -2028,7 +2020,7 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/crypto/KeyContainerTypes.html#getKeyContainerType-java.lang.String-">getKeyContainerType(String)</a></span> - Static method in enum org.webpki.crypto.<a href="org/webpki/crypto/KeyContainerTypes.html" title="enum in org.webpki.crypto">KeyContainerTypes</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/json/DecryptionKeyHolder.html#getKeyEncryptionAlgorithm--">getKeyEncryptionAlgorithm()</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/DecryptionKeyHolder.html" title="class in org.webpki.json">DecryptionKeyHolder</a></dt>
+<dt><span class="memberNameLink"><a href="org/webpki/json/JSONDecryptionDecoder.DecryptionKeyHolder.html#getKeyEncryptionAlgorithm--">getKeyEncryptionAlgorithm()</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONDecryptionDecoder.DecryptionKeyHolder.html" title="class in org.webpki.json">JSONDecryptionDecoder.DecryptionKeyHolder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONDecryptionDecoder.html#getKeyEncryptionAlgorithm--">getKeyEncryptionAlgorithm()</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONDecryptionDecoder.html" title="class in org.webpki.json">JSONDecryptionDecoder</a></dt>
 <dd>&nbsp;</dd>
@@ -2040,7 +2032,7 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/sks/SecureKeyStore.html#getKeyHandle-int-java.lang.String-">getKeyHandle(int, String)</a></span> - Method in interface org.webpki.sks.<a href="org/webpki/sks/SecureKeyStore.html" title="interface in org.webpki.sks">SecureKeyStore</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/json/DecryptionKeyHolder.html#getKeyId--">getKeyId()</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/DecryptionKeyHolder.html" title="class in org.webpki.json">DecryptionKeyHolder</a></dt>
+<dt><span class="memberNameLink"><a href="org/webpki/json/JSONDecryptionDecoder.DecryptionKeyHolder.html#getKeyId--">getKeyId()</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONDecryptionDecoder.DecryptionKeyHolder.html" title="class in org.webpki.json">JSONDecryptionDecoder.DecryptionKeyHolder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONDecryptionDecoder.html#getKeyId--">getKeyId()</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONDecryptionDecoder.html" title="class in org.webpki.json">JSONDecryptionDecoder</a></dt>
 <dd>&nbsp;</dd>
@@ -2306,7 +2298,7 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/keygen2/InvocationRequestDecoder.html#getPrivacyEnabledFlag--">getPrivacyEnabledFlag()</a></span> - Method in class org.webpki.keygen2.<a href="org/webpki/keygen2/InvocationRequestDecoder.html" title="class in org.webpki.keygen2">InvocationRequestDecoder</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/json/DecryptionKeyHolder.html#getPrivateKey--">getPrivateKey()</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/DecryptionKeyHolder.html" title="class in org.webpki.json">DecryptionKeyHolder</a></dt>
+<dt><span class="memberNameLink"><a href="org/webpki/json/JSONDecryptionDecoder.DecryptionKeyHolder.html#getPrivateKey--">getPrivateKey()</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONDecryptionDecoder.DecryptionKeyHolder.html" title="class in org.webpki.json">JSONDecryptionDecoder.DecryptionKeyHolder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/keygen2/ProvisioningFinalizationRequestDecoder.IssuedCredential.html#getPrivateKeyMac--">getPrivateKeyMac()</a></span> - Method in class org.webpki.keygen2.<a href="org/webpki/keygen2/ProvisioningFinalizationRequestDecoder.IssuedCredential.html" title="class in org.webpki.keygen2">ProvisioningFinalizationRequestDecoder.IssuedCredential</a></dt>
 <dd>&nbsp;</dd>
@@ -2372,7 +2364,7 @@
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/crypto/AsymKeySignerInterface.html#getPublicKey--">getPublicKey()</a></span> - Method in interface org.webpki.crypto.<a href="org/webpki/crypto/AsymKeySignerInterface.html" title="interface in org.webpki.crypto">AsymKeySignerInterface</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/json/DecryptionKeyHolder.html#getPublicKey--">getPublicKey()</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/DecryptionKeyHolder.html" title="class in org.webpki.json">DecryptionKeyHolder</a></dt>
+<dt><span class="memberNameLink"><a href="org/webpki/json/JSONDecryptionDecoder.DecryptionKeyHolder.html#getPublicKey--">getPublicKey()</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONDecryptionDecoder.DecryptionKeyHolder.html" title="class in org.webpki.json">JSONDecryptionDecoder.DecryptionKeyHolder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONDecryptionDecoder.html#getPublicKey--">getPublicKey()</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONDecryptionDecoder.html" title="class in org.webpki.json">JSONDecryptionDecoder</a></dt>
 <dd>&nbsp;</dd>
@@ -3240,9 +3232,13 @@
 <div class="block">Common crypto decoder classes for JEF and JCS.</div>
 </dd>
 <dt><a href="org/webpki/json/JSONCryptoDecoder.Extension.html" title="class in org.webpki.json"><span class="typeNameLink">JSONCryptoDecoder.Extension</span></a> - Class in <a href="org/webpki/json/package-summary.html">org.webpki.json</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">For building "crit" decoders</div>
+</dd>
 <dt><a href="org/webpki/json/JSONCryptoDecoder.ExtensionHolder.html" title="class in org.webpki.json"><span class="typeNameLink">JSONCryptoDecoder.ExtensionHolder</span></a> - Class in <a href="org/webpki/json/package-summary.html">org.webpki.json</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Holds list of supported "crit" extension decoders.</div>
+</dd>
 <dt><a href="org/webpki/json/JSONCryptoDecoder.KEY_ID_OPTIONS.html" title="enum in org.webpki.json"><span class="typeNameLink">JSONCryptoDecoder.KEY_ID_OPTIONS</span></a> - Enum in <a href="org/webpki/json/package-summary.html">org.webpki.json</a></dt>
 <dd>
 <div class="block">Parameter to Options</div>
@@ -3266,6 +3262,10 @@
 <dt><a href="org/webpki/json/JSONDecryptionDecoder.html" title="class in org.webpki.json"><span class="typeNameLink">JSONDecryptionDecoder</span></a> - Class in <a href="org/webpki/json/package-summary.html">org.webpki.json</a></dt>
 <dd>
 <div class="block">Holds parsed JEF (JSON Encryption Format) data.</div>
+</dd>
+<dt><a href="org/webpki/json/JSONDecryptionDecoder.DecryptionKeyHolder.html" title="class in org.webpki.json"><span class="typeNameLink">JSONDecryptionDecoder.DecryptionKeyHolder</span></a> - Class in <a href="org/webpki/json/package-summary.html">org.webpki.json</a></dt>
+<dd>
+<div class="block">JEF (JSON Encryption Format) support.</div>
 </dd>
 <dt><a href="org/webpki/json/JSONEncoder.html" title="class in org.webpki.json"><span class="typeNameLink">JSONEncoder</span></a> - Class in <a href="org/webpki/json/package-summary.html">org.webpki.json</a></dt>
 <dd>
@@ -3313,10 +3313,12 @@
 </dd>
 <dt><a href="org/webpki/json/JSONRemoteKeys.html" title="enum in org.webpki.json"><span class="typeNameLink">JSONRemoteKeys</span></a> - Enum in <a href="org/webpki/json/package-summary.html">org.webpki.json</a></dt>
 <dd>
-<div class="block">Enum and interface to &quot;remoteKey&quot;.</div>
+<div class="block">Enum and interface to "jku" and "x5u";.</div>
 </dd>
 <dt><a href="org/webpki/json/JSONRemoteKeys.Reader.html" title="interface in org.webpki.json"><span class="typeNameLink">JSONRemoteKeys.Reader</span></a> - Interface in <a href="org/webpki/json/package-summary.html">org.webpki.json</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">For reading "jku" and "x5u" data</div>
+</dd>
 <dt><a href="org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json"><span class="typeNameLink">JSONSignatureDecoder</span></a> - Class in <a href="org/webpki/json/package-summary.html">org.webpki.json</a></dt>
 <dd>
 <div class="block">Decoder for JCS signatures.</div>
@@ -3775,26 +3777,6 @@
 <dt><span class="memberNameLink"><a href="org/webpki/crypto/CertificateFilter.html#nullCheck-java.lang.Object-">nullCheck(Object)</a></span> - Method in class org.webpki.crypto.<a href="org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/keygen2/CredentialDiscoveryRequestEncoder.LookupDescriptor.html#nullCheck-java.lang.Object-">nullCheck(Object)</a></span> - Method in class org.webpki.keygen2.<a href="org/webpki/keygen2/CredentialDiscoveryRequestEncoder.LookupDescriptor.html" title="class in org.webpki.keygen2">CredentialDiscoveryRequestEncoder.LookupDescriptor</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="org/webpki/json/NumberCachedPowers.html" title="class in org.webpki.json"><span class="typeNameLink">NumberCachedPowers</span></a> - Class in <a href="org/webpki/json/package-summary.html">org.webpki.json</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/json/NumberCachedPowers.html#NumberCachedPowers--">NumberCachedPowers()</a></span> - Constructor for class org.webpki.json.<a href="org/webpki/json/NumberCachedPowers.html" title="class in org.webpki.json">NumberCachedPowers</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="org/webpki/json/NumberDoubleHelper.html" title="class in org.webpki.json"><span class="typeNameLink">NumberDoubleHelper</span></a> - Class in <a href="org/webpki/json/package-summary.html">org.webpki.json</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/json/NumberDoubleHelper.html#NumberDoubleHelper--">NumberDoubleHelper()</a></span> - Constructor for class org.webpki.json.<a href="org/webpki/json/NumberDoubleHelper.html" title="class in org.webpki.json">NumberDoubleHelper</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="org/webpki/json/NumberFastDtoa.html" title="class in org.webpki.json"><span class="typeNameLink">NumberFastDtoa</span></a> - Class in <a href="org/webpki/json/package-summary.html">org.webpki.json</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/json/NumberFastDtoa.html#NumberFastDtoa--">NumberFastDtoa()</a></span> - Constructor for class org.webpki.json.<a href="org/webpki/json/NumberFastDtoa.html" title="class in org.webpki.json">NumberFastDtoa</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="org/webpki/json/NumberFastDtoaBuilder.html" title="class in org.webpki.json"><span class="typeNameLink">NumberFastDtoaBuilder</span></a> - Class in <a href="org/webpki/json/package-summary.html">org.webpki.json</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/json/NumberFastDtoaBuilder.html#NumberFastDtoaBuilder--">NumberFastDtoaBuilder()</a></span> - Constructor for class org.webpki.json.<a href="org/webpki/json/NumberFastDtoaBuilder.html" title="class in org.webpki.json">NumberFastDtoaBuilder</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/json/NumberFastDtoa.html#numberToString-double-">numberToString(double)</a></span> - Static method in class org.webpki.json.<a href="org/webpki/json/NumberFastDtoa.html" title="class in org.webpki.json">NumberFastDtoa</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/json/NumberFastDtoa.html#numberToString-double-org.webpki.json.NumberFastDtoaBuilder-">numberToString(double, NumberFastDtoaBuilder)</a></span> - Static method in class org.webpki.json.<a href="org/webpki/json/NumberFastDtoa.html" title="class in org.webpki.json">NumberFastDtoa</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/asn1/ASN1Constants.html#NUMERICSTRING">NUMERICSTRING</a></span> - Static variable in interface org.webpki.asn1.<a href="org/webpki/asn1/ASN1Constants.html" title="interface in org.webpki.asn1">ASN1Constants</a></dt>
 <dd>&nbsp;</dd>
@@ -4255,8 +4237,6 @@
 <dt><span class="memberNameLink"><a href="org/webpki/webauth/WebAuthConstants.html#REQUESTED_CLIENT_FEATURES_JSON">REQUESTED_CLIENT_FEATURES_JSON</a></span> - Static variable in interface org.webpki.webauth.<a href="org/webpki/webauth/WebAuthConstants.html" title="interface in org.webpki.webauth">WebAuthConstants</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONDecryptionDecoder.html#require-boolean-">require(boolean)</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/JSONDecryptionDecoder.html" title="class in org.webpki.json">JSONDecryptionDecoder</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/json/NumberFastDtoaBuilder.html#reset--">reset()</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/NumberFastDtoaBuilder.html" title="class in org.webpki.json">NumberFastDtoaBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/securityproxy/ProxyServer.html#resetProxy--">resetProxy()</a></span> - Method in class org.webpki.securityproxy.<a href="org/webpki/securityproxy/ProxyServer.html" title="class in org.webpki.securityproxy">ProxyServer</a></dt>
 <dd>
@@ -5144,8 +5124,6 @@
 <div class="block">Pretty print JSON of current object writer.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/KeyEncryptionAlgorithms.html#toString--">toString()</a></span> - Method in enum org.webpki.json.<a href="org/webpki/json/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json">KeyEncryptionAlgorithms</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/json/NumberFastDtoaBuilder.html#toString--">toString()</a></span> - Method in class org.webpki.json.<a href="org/webpki/json/NumberFastDtoaBuilder.html" title="class in org.webpki.json">NumberFastDtoaBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/xml/XMLObjectWrapper.html#toString--">toString()</a></span> - Method in class org.webpki.xml.<a href="org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a></dt>
 <dd>
