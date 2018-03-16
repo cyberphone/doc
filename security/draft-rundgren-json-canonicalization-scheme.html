@@ -625,7 +625,7 @@ difficult achieving full interoperability with respect to numeric data.
 <a href="#rfc.section.3.2.3">3.2.3.</a> <a href="#json.sorting.properties" id="json.sorting.properties">Sorting of Object Properties</a>
 </h1>
 <p id="rfc.section.3.2.3.p.1">Although the previous step indeed 
-normalizes the representation of primitive data types, the result would 
+normalized the representation of primitive data types, the result would 
 not qualify as "canonicalized" since the properties are not in lexical 
 (alphabetical) order.  <br><br> Applied to the sample in <a href="#json.serialization.data" class="xref">Section 3.2.2</a>, a properly canonicalized version should (with a line wrap added for display purposes only), read as: </p>
 <pre>  {"escaping":"\u20ac$\u000f\nA'B\"\\\\\"/","numbers":[1e+30,
@@ -639,7 +639,7 @@ not qualify as "canonicalized" since the properties are not in lexical
 <p id="rfc.section.3.2.3.p.4">The rules for lexical sorting of JSON properties according to JCS are as follows: </p>
 
 <ul>
-<li>Properties are sorted in a recursive manner which means that a found JSON <samp>Object</samp> type MUST be subject to sorting as well.  </li>
+<li>Properties are sorted in a recursive manner which means that a found JSON child <samp>Object</samp> type MUST be subject to sorting as well.  </li>
 <li>JSON <samp>Array</samp> data MUST also be checked for the presence of sortable JSON <samp>Object</samp> elements, but array element order MUST NOT be changed.  </li>
 </ul>
 
