@@ -551,18 +551,21 @@ interpreted as described in BCP 14 <a href="#RFC2119" class="xref">[RFC2119]</a>
 <a href="#rfc.section.3.1">3.1.</a> <a href="#json.datacreation" id="json.datacreation">Creation of JSON Data</a>
 </h1>
 <p id="rfc.section.3.1.p.1">In order to canonicalize JSON data, an internal representation of the JSON data is needed.  This can be performed by: </p>
+<p></p>
 
 <ul>
 <li>Parsing externally supplied JSON data which MUST conform to <a href="#RFC8259" class="xref">[RFC8259]</a>.  </li>
 <li>Creating JSON data programmatically.  </li>
 </ul>
 
-<p> Irrespective of method used, the internal representation of JSON data MUST be compatible with ES6 which means that: </p>
+<p> </p>
+<p id="rfc.section.3.1.p.3">Irrespective of method used, the internal representation of JSON data MUST be compatible both with ES6 and <a href="#RFC8259" class="xref">[RFC8259]</a> which implies the following: </p>
+<p></p>
 
 <ul>
 <li>There MUST NOT be any duplicate property names within an <samp>Object</samp>.  </li>
 <li>Data of the type <samp>String</samp> MUST be expressible as UNICODE <a href="#UNICODE" class="xref">[UNICODE]</a> strings.  </li>
-<li>Data of the type <samp>Number</samp> MUST be expressible as IEEE-754 <a href="#IEEE754" class="xref">[IEEE754]</a> double precision values.  <br><br> Note: If the target system offers higher precision, this MUST NOT be utilized when serializing the <samp>Number</samp> type.  </li>
+<li>Data of the type <samp>Number</samp> MUST be expressible as IEEE-754 <a href="#IEEE754" class="xref">[IEEE754]</a> double precision values.  </li>
 </ul>
 
 <p> </p>
