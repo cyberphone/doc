@@ -396,7 +396,7 @@
 
   <meta name="dct.creator" content="Rundgren, A.">
   <meta name="dct.identifier" content="urn:ietf:id:draft-rundgren-json-canonicalization-scheme-00">
-  <meta name="dct.issued" scheme="ISO8601" content="2018-15">
+  <meta name="dct.issued" scheme="ISO8601" content="2018-17">
   <meta name="dct.abstract" content="Cryptographic operations like hashing and signing depend on that the target data does not change during serialization, transport, or parsing.  By applying the rules defined by JCS (JSON Canonicalization Scheme), data provided in the JSON ">
   <meta name="description" content="Cryptographic operations like hashing and signing depend on that the target data does not change during serialization, transport, or parsing.  By applying the rules defined by JCS (JSON Canonicalization Scheme), data provided in the JSON ">
 
@@ -417,10 +417,10 @@
 </tr>
 <tr>
 <td class="left">Intended status: Standards Track</td>
-<td class="right">March 15, 2018</td>
+<td class="right">March 17, 2018</td>
 </tr>
 <tr>
-<td class="left">Expires: September 16, 2018</td>
+<td class="left">Expires: September 18, 2018</td>
 <td class="right"></td>
 </tr>
 
@@ -451,7 +451,7 @@ documents as Internet-Drafts.  The list of current Internet-Drafts is at
  and may be updated, replaced, or obsoleted by other documents at any 
 time.  It is inappropriate to use Internet-Drafts as reference material 
 or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on September 16, 2018.</p>
+<p>This Internet-Draft will expire on September 18, 2018.</p>
 <h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
 <p>Copyright (c) 2018 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal 
@@ -583,7 +583,7 @@ steps needed in order to create a canonicalized version of internal JSON
 <pre>  {
     "escaping": "\u20ac$\u000F\u000aA'\u0042\u0022\u005c\\\"\/",
     "other":  [null, true, false],
-    "numbers": [1E30,4.50,6,2e-3,0.000000000000000000000000001]
+    "numbers": [1E30, 4.50, 6, 2e-3, 0.000000000000000000000000001]
   }</pre>
 <p></p>
 <p id="rfc.section.3.2.2.p.3">If you subsequently serialize the object created by the operation above using an serializer compliant with ES6's <samp>JSON.stringify()</samp>, the result would (with a line wrap added for display purposes only), be rather divergent with respect to data representation: </p>
@@ -614,10 +614,10 @@ it MUST be serialized "as&nbsp;is" unless it is equivalent to
 <li>Data of the type <samp>Number</samp>, MUST be serialized according to Section <a href="#ES6" class="xref">7.1.12.1</a>
  of ES6; for maximum interoperability preferably including the "Note 2" 
 enhancement as well.  The latter is implemented by for example Google's 
-V8 <a href="#V8" class="xref">[V8]</a>.  <br><br> Due to the relative complexity of this part, it is not included in this specification.  <br><br> Note that ES6 builds on the IEEE-754 <a href="#IEEE754" class="xref">[IEEE754]</a> double precision standard for storing <samp>Number</samp>
- data.  If the target JSON system uses another format it may be 
-difficult achieving full interoperability with respect to numeric data. 
- <br><br> <a href="#ieee754.test" class="xref">Appendix B</a> holds a set of test values.  </li>
+V8 <a href="#V8" class="xref">[V8]</a>.  <br><br> Due to the relative complexity of this part, it is not included in this specification.  <br><br> Note that ES6 builds on the IEEE-754 <a href="#IEEE754" class="xref">[IEEE754]</a> double precision standard for storing <samp>Number</samp> data.  If the target JSON system uses internal another format, it MUST (when targeting the JSON <samp>Number</samp>
+ type), always convert the internal representation of a value to its 
+closest IEEE-754 double precision counterpart.  Higher precision can be 
+supported by using proprietary data schemes, where the JSON <samp>String</samp> type is used as a holder.  <br><br> <a href="#ieee754.test" class="xref">Appendix B</a> holds a set of test values.  </li>
 </ul>
 
 <p> </p>
