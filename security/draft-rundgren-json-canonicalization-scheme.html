@@ -617,7 +617,7 @@ it MUST be serialized "as&nbsp;is" unless it is equivalent to
 <li>Data of the type <samp>Number</samp>, MUST be serialized according to Section <a href="#ES6" class="xref">7.1.12.1</a>
  of ES6; for maximum interoperability preferably including the "Note 2" 
 enhancement as well.  The latter is implemented by for example Google's 
-V8 <a href="#V8" class="xref">[V8]</a>.  <br><br> Due to the relative complexity of this part, it is not included in this specification.  <br><br> Note that ES6 builds on the IEEE-754 <a href="#IEEE754" class="xref">[IEEE754]</a> double precision standard for storing <samp>Number</samp> data.  If the target JSON system uses internal another format, it MUST (when targeting the JSON <samp>Number</samp>
+V8 <a href="#V8" class="xref">[V8]</a>.  <br><br> Due to the relative complexity of this part, it is not included in this specification.  <br><br> Note that ES6 builds on the IEEE-754 <a href="#IEEE754" class="xref">[IEEE754]</a> double precision standard for storing <samp>Number</samp> data.  If the target JSON system uses another internal format, it MUST (when targeting the JSON <samp>Number</samp>
  type), always convert the internal representation of a value to its 
 closest IEEE-754 double precision counterpart.  Higher precision can be 
 supported by using proprietary data schemes, where the JSON <samp>String</samp> type is used as a holder.  <br><br> <a href="#ieee754.test" class="xref">Appendix B</a> holds a set of test values.  </li>
