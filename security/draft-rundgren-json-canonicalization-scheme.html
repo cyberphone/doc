@@ -396,7 +396,7 @@
 
   <meta name="dct.creator" content="Rundgren, A.">
   <meta name="dct.identifier" content="urn:ietf:id:draft-rundgren-json-canonicalization-scheme-00">
-  <meta name="dct.issued" scheme="ISO8601" content="2018-18">
+  <meta name="dct.issued" scheme="ISO8601" content="2018-19">
   <meta name="dct.abstract" content="Cryptographic operations like hashing and signing depend on that the target data does not change during serialization, transport, or parsing.  By applying the rules defined by JCS (JSON Canonicalization Scheme), data provided in the JSON ">
   <meta name="description" content="Cryptographic operations like hashing and signing depend on that the target data does not change during serialization, transport, or parsing.  By applying the rules defined by JCS (JSON Canonicalization Scheme), data provided in the JSON ">
 
@@ -417,10 +417,10 @@
 </tr>
 <tr>
 <td class="left">Intended status: Standards Track</td>
-<td class="right">March 18, 2018</td>
+<td class="right">March 19, 2018</td>
 </tr>
 <tr>
-<td class="left">Expires: September 19, 2018</td>
+<td class="left">Expires: September 20, 2018</td>
 <td class="right"></td>
 </tr>
 
@@ -451,7 +451,7 @@ documents as Internet-Drafts.  The list of current Internet-Drafts is at
  and may be updated, replaced, or obsoleted by other documents at any 
 time.  It is inappropriate to use Internet-Drafts as reference material 
 or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on September 19, 2018.</p>
+<p>This Internet-Draft will expire on September 20, 2018.</p>
 <h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
 <p>Copyright (c) 2018 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal 
@@ -629,7 +629,7 @@ supported by using proprietary data schemes, where the JSON <samp>String</samp> 
 </h1>
 <p id="rfc.section.3.2.3.p.1">Although the previous step indeed 
 normalized the representation of primitive JSON data types, the result 
-would not qualify as "canonicalized" since <samp>Object</samp> properties are not in lexical (alphabetical) order.  <br><br> Applied to the sample in <a href="#json.serialization.data" class="xref">Section 3.2.2</a>, a properly canonicalized version should (with a line wrap added for display purposes only), read as: </p>
+would not qualify as "canonicalized" since <samp>Object</samp> properties are not in lexicographic (alphabetical) order.  <br><br> Applied to the sample in <a href="#json.serialization.data" class="xref">Section 3.2.2</a>, a properly canonicalized version should (with a line wrap added for display purposes only), read as: </p>
 <pre>  {"escaping":"\u20ac$\u000f\nA'B\"\\\\\"/","numbers":[1e+30,
   4.5,6,0.002,1e-27],"other":[null,true,false]}</pre>
 <p></p>
@@ -638,7 +638,7 @@ would not qualify as "canonicalized" since <samp>Object</samp> properties are no
 <ul class="empty"><li>Note: \u20ac denotes the Euro character, which not <br> being ASCII, is currently not displayable in RFCs.  </li></ul>
 
 <p> </p>
-<p id="rfc.section.3.2.3.p.4">The rules for lexical sorting of JSON properties according to JCS are as follows: </p>
+<p id="rfc.section.3.2.3.p.4">The rules for lexicographic sorting of JSON properties according to JCS are as follows: </p>
 
 <ul>
 <li>
@@ -657,8 +657,8 @@ would not qualify as "canonicalized" since <samp>Object</samp> properties are no
  valid index for both strings, or their lengths are different, or both. 
  If they have different values at one or more index positions, let k be 
 the smallest such index; then the string whose value at position k has 
-the smaller value, as determined by using the &lt; operator, lexically 
-precedes the other string.  <br><br> If there is no index position at which they differ, then the shorter string lexically precedes the longer string.  </li>
+the smaller value, as determined by using the &lt; operator, 
+lexicographically precedes the other string.  <br><br> If there is no index position at which they differ, then the shorter string lexicographically precedes the longer string.  </li>
 </ul>
 
 <p> </p>
