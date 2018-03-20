@@ -380,12 +380,13 @@
 <link href="#rfc.section.3.2.2" rel="Chapter" title="3.2.2 Serialization of Primitive Data Types">
 <link href="#rfc.section.3.2.3" rel="Chapter" title="3.2.3 Sorting of Object Properties">
 <link href="#rfc.section.3.2.4" rel="Chapter" title="3.2.4 UTF-8 Generation">
-<link href="#rfc.section.4" rel="Chapter" title="4 IANA Considerations">
-<link href="#rfc.section.5" rel="Chapter" title="5 Security Considerations">
-<link href="#rfc.section.6" rel="Chapter" title="6 Acknowledgements">
-<link href="#rfc.references" rel="Chapter" title="7 References">
-<link href="#rfc.references.1" rel="Chapter" title="7.1 Normative References">
-<link href="#rfc.references.2" rel="Chapter" title="7.2 Informal References">
+<link href="#rfc.section.4" rel="Chapter" title="4 Alternative Uses of Canonicalized JSON">
+<link href="#rfc.section.5" rel="Chapter" title="5 IANA Considerations">
+<link href="#rfc.section.6" rel="Chapter" title="6 Security Considerations">
+<link href="#rfc.section.7" rel="Chapter" title="7 Acknowledgements">
+<link href="#rfc.references" rel="Chapter" title="8 References">
+<link href="#rfc.references.1" rel="Chapter" title="8.1 Normative References">
+<link href="#rfc.references.2" rel="Chapter" title="8.2 Informal References">
 <link href="#rfc.appendix.A" rel="Chapter" title="A ES6 Canonicalizer">
 <link href="#rfc.appendix.B" rel="Chapter" title="B Sample Number Serializations">
 <link href="#rfc.appendix.C" rel="Chapter" title="C Other JSON Canonicalization Efforts">
@@ -489,17 +490,19 @@ Simplified BSD License.</p>
 </li>
 <li>3.2.4.   <a href="#rfc.section.3.2.4">UTF-8 Generation</a>
 </li>
-</ul></ul><li>4.   <a href="#rfc.section.4">IANA Considerations</a>
+</ul></ul><li>4.   <a href="#rfc.section.4">Alternative Uses of Canonicalized JSON</a>
 </li>
-<li>5.   <a href="#rfc.section.5">Security Considerations</a>
+<li>5.   <a href="#rfc.section.5">IANA Considerations</a>
 </li>
-<li>6.   <a href="#rfc.section.6">Acknowledgements</a>
+<li>6.   <a href="#rfc.section.6">Security Considerations</a>
 </li>
-<li>7.   <a href="#rfc.references">References</a>
+<li>7.   <a href="#rfc.section.7">Acknowledgements</a>
 </li>
-<ul><li>7.1.   <a href="#rfc.references.1">Normative References</a>
+<li>8.   <a href="#rfc.references">References</a>
 </li>
-<li>7.2.   <a href="#rfc.references.2">Informal References</a>
+<ul><li>8.1.   <a href="#rfc.references.1">Normative References</a>
+</li>
+<li>8.2.   <a href="#rfc.references.2">Informal References</a>
 </li>
 </ul><li>Appendix A.   <a href="#rfc.appendix.A">ES6 Canonicalizer</a>
 </li>
@@ -690,23 +693,31 @@ result would be incompatible with this specification.  </p>
 <p></p>
 <p id="rfc.section.3.2.4.p.3">This data is intended to be usable as interoperable input to cryptographic functions.  </p>
 <h1 id="rfc.section.4">
-<a href="#rfc.section.4">4.</a> <a href="#IANA" id="IANA">IANA Considerations</a>
+<a href="#rfc.section.4">4.</a> <a href="#json.alt" id="json.alt">Alternative Uses of Canonicalized JSON</a>
 </h1>
-<p id="rfc.section.4.p.1">This document has no IANA actions.  </p>
+<p id="rfc.section.4.p.1">Since the result from the canonicalization process (see <a href="#json.utf8" class="xref">Section 3.2.4</a>),
+ is fully valid JSON, it can also be used as "Wire&nbsp;Format".  
+However, this is just an option since cryptographic schemes based on 
+JCS, in most cases would not depend on that externally supplied JSON 
+data already is canonicalized.  <br><br> In fact, the ES6 standard way of serializing objects using <samp>JSON.stringify()</samp> produces a (for developers), more logical format, where properties are kept in the order they were created or received.  </p>
 <h1 id="rfc.section.5">
-<a href="#rfc.section.5">5.</a> <a href="#Security" id="Security">Security Considerations</a>
+<a href="#rfc.section.5">5.</a> <a href="#IANA" id="IANA">IANA Considerations</a>
 </h1>
-<p id="rfc.section.5.p.1">JSON parsers MUST check that input data conforms to the JSON <a href="#RFC8259" class="xref">[RFC8259]</a> specification.  </p>
+<p id="rfc.section.5.p.1">This document has no IANA actions.  </p>
 <h1 id="rfc.section.6">
-<a href="#rfc.section.6">6.</a> <a href="#Acknowledgements" id="Acknowledgements">Acknowledgements</a>
+<a href="#rfc.section.6">6.</a> <a href="#Security" id="Security">Security Considerations</a>
 </h1>
-<p id="rfc.section.6.p.1">Building on ES6 number normalization was 
+<p id="rfc.section.6.p.1">JSON parsers MUST check that input data conforms to the JSON <a href="#RFC8259" class="xref">[RFC8259]</a> specification.  </p>
+<h1 id="rfc.section.7">
+<a href="#rfc.section.7">7.</a> <a href="#Acknowledgements" id="Acknowledgements">Acknowledgements</a>
+</h1>
+<p id="rfc.section.7.p.1">Building on ES6 number normalization was 
 originally proposed by James Manger. This ultimately led to the adoption
  of the entire ES6 JSON processing model.  <br><br> Other people who have contributed to this specification include Richard Gibson and Mike Samuel.  </p>
 <h1 id="rfc.references">
-<a href="#rfc.references">7.</a> References</h1>
+<a href="#rfc.references">8.</a> References</h1>
 <h1 id="rfc.references.1">
-<a href="#rfc.references.1">7.1.</a> Normative References</h1>
+<a href="#rfc.references.1">8.1.</a> Normative References</h1>
 <table><tbody>
 <tr>
 <td class="reference"><b id="ES6">[ES6]</b></td>
@@ -740,7 +751,7 @@ originally proposed by James Manger. This ultimately led to the adoption
 </tr>
 </tbody></table>
 <h1 id="rfc.references.2">
-<a href="#rfc.references.2">7.2.</a> Informal References</h1>
+<a href="#rfc.references.2">8.2.</a> Informal References</h1>
 <table><tbody>
 <tr>
 <td class="reference"><b id="NODEJS">[NODEJS]</b></td>
