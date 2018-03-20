@@ -699,7 +699,11 @@ result would be incompatible with this specification.  </p>
  is fully valid JSON, it can also be used as "Wire&nbsp;Format".  
 However, this is just an option since cryptographic schemes based on 
 JCS, in most cases would not depend on that externally supplied JSON 
-data already is canonicalized.  <br><br> In fact, the ES6 standard way of serializing objects using <samp>JSON.stringify()</samp> produces a (for developers), more logical format, where properties are kept in the order they were created or received.  </p>
+data already is canonicalized.  <br><br> In fact, the ES6 standard way of serializing objects using <samp>JSON.stringify()</samp>
+ produces a (for developers), more logical format, where properties are 
+kept in the order they were created or received.  If message size 
+constraints are moderate, you may even "Pretty&nbsp;Print" JSON data on 
+the wire.  </p>
 <h1 id="rfc.section.5">
 <a href="#rfc.section.5">5.</a> <a href="#IANA" id="IANA">IANA Considerations</a>
 </h1>
