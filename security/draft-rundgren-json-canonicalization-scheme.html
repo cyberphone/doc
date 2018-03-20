@@ -779,56 +779,56 @@ originally proposed by James Manger. This ultimately led to the adoption
 algorithm.  Using the full power of ES6 would reduce the code size 
 considerably but would also be more difficult to follow by non-experts. 
  </p>
-<pre>var canonicalize = function(object) {
-
-    var buffer = '';
-    serialize(object);
-    return buffer;
-
-    function serialize(object) {
-        if (object === null || typeof object !== 'object') {
-            /////////////////////////////////////////////////
-            // Primitive data type - Use ES6/JSON          //
-            /////////////////////////////////////////////////
-            buffer += JSON.stringify(object);
-
-        } else if (Array.isArray(object)) {
-            /////////////////////////////////////////////////
-            // Array - Maintain element order              //
-            /////////////////////////////////////////////////
-            buffer += '[';
-            let next = false;
-            object.forEach((element) =&gt; {
-                if (next) {
-                    buffer += ',';
-                }
-                next = true;
-                // Recursive call
-                serialize(element);
-            });
-            buffer += ']';
-
-        } else {
-            /////////////////////////////////////////////////
-            // Object - Sort properties before serializing //
-            /////////////////////////////////////////////////
-            buffer += '{';
-            let next = false;
-            Object.keys(object).sort().forEach((property) =&gt; {
-                if (next) {
-                    buffer += ',';
-                }
-                next = true;
-                // Properties are just strings - Use ES6/JSON
-                buffer += JSON.stringify(property);
-                buffer += ':';
-                // Recursive call
-                serialize(object[property]);
-            });
-            buffer += '}';
-        }
-    }
-};</pre>
+<pre>  var canonicalize = function(object) {
+  
+      var buffer = '';
+      serialize(object);
+      return buffer;
+  
+      function serialize(object) {
+          if (object === null || typeof object !== 'object') {
+              /////////////////////////////////////////////////
+              // Primitive data type - Use ES6/JSON          //
+              /////////////////////////////////////////////////
+              buffer += JSON.stringify(object);
+  
+          } else if (Array.isArray(object)) {
+              /////////////////////////////////////////////////
+              // Array - Maintain element order              //
+              /////////////////////////////////////////////////
+              buffer += '[';
+              let next = false;
+              object.forEach((element) =&gt; {
+                  if (next) {
+                      buffer += ',';
+                  }
+                  next = true;
+                  // Recursive call
+                  serialize(element);
+              });
+              buffer += ']';
+  
+          } else {
+              /////////////////////////////////////////////////
+              // Object - Sort properties before serializing //
+              /////////////////////////////////////////////////
+              buffer += '{';
+              let next = false;
+              Object.keys(object).sort().forEach((property) =&gt; {
+                  if (next) {
+                      buffer += ',';
+                  }
+                  next = true;
+                  // Properties are just strings - Use ES6/JSON
+                  buffer += JSON.stringify(property);
+                  buffer += ':';
+                  // Recursive call
+                  serialize(object[property]);
+              });
+              buffer += '}';
+          }
+      }
+  };</pre>
 <p></p>
 <h1 id="rfc.appendix.B">
 <a href="#rfc.appendix.B">Appendix B.</a> <a href="#ieee754.test" id="ieee754.test">Sample Number Serializations</a>
