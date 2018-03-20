@@ -783,40 +783,46 @@ considerably but would also be more difficult to follow by non-experts.
     return buffer;
 
     function serialize(object) {
-        if (object !== null &amp;&amp; typeof object === 'object') {
-            if (Array.isArray(object)) {
-                // Array - Maintain element order
-                buffer += '[';
-                let next = false;
-                object.forEach((element) =&gt; {
-                    if (next) {
-                        buffer += ',';
-                    }
-                    next = true;
-                    // Recursive call
-                    serialize(element);
-                });
-                buffer += ']';
-            } else {
-                // Object - Sort properties before serializing
-                buffer += '{';
-                let next = false;
-                Object.keys(object).sort().forEach((property) =&gt; {
-                    if (next) {
-                        buffer += ',';
-                    }
-                    next = true;
-                    // Properties are just strings - Use ES6/JSON
-                    buffer += JSON.stringify(property);
-                    buffer += ':';
-                    // Recursive call
-                    serialize(object[property]);
-                });
-                buffer += '}';
-            }
-        } else {
-            // Primitive data type - Use ES6/JSON
+        if (object === null || typeof object !== 'object') {
+            /////////////////////////////////////////////////
+            // Primitive data type - Use ES6/JSON          //
+            /////////////////////////////////////////////////
             buffer += JSON.stringify(object);
+
+        } else if (Array.isArray(object)) {
+            /////////////////////////////////////////////////
+            // Array - Maintain element order              //
+            /////////////////////////////////////////////////
+            buffer += '[';
+            let next = false;
+            object.forEach((element) =&gt; {
+                if (next) {
+                    buffer += ',';
+                }
+                next = true;
+                // Recursive call
+                serialize(element);
+            });
+            buffer += ']';
+
+        } else {
+            /////////////////////////////////////////////////
+            // Object - Sort properties before serializing //
+            /////////////////////////////////////////////////
+            buffer += '{';
+            let next = false;
+            Object.keys(object).sort().forEach((property) =&gt; {
+                if (next) {
+                    buffer += ',';
+                }
+                next = true;
+                // Properties are just strings - Use ES6/JSON
+                buffer += JSON.stringify(property);
+                buffer += ':';
+                // Recursive call
+                serialize(object[property]);
+            });
+            buffer += '}';
         }
     }
 };</pre>
