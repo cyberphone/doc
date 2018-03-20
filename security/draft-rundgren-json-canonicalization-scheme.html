@@ -388,6 +388,7 @@
 <link href="#rfc.references.2" rel="Chapter" title="7.2 Informal References">
 <link href="#rfc.appendix.A" rel="Chapter" title="A ES6 Canonicalizer">
 <link href="#rfc.appendix.B" rel="Chapter" title="B Sample Number Serializations">
+<link href="#rfc.appendix.C" rel="Chapter" title="C Other JSON Canonicalization Efforts">
 <link href="#rfc.authors" rel="Chapter">
 
 
@@ -502,6 +503,8 @@ Simplified BSD License.</p>
 </ul><li>Appendix A.   <a href="#rfc.appendix.A">ES6 Canonicalizer</a>
 </li>
 <li>Appendix B.   <a href="#rfc.appendix.B">Sample Number Serializations</a>
+</li>
+<li>Appendix C.   <a href="#rfc.appendix.C">Other JSON Canonicalization Efforts</a>
 </li>
 <li><a href="#rfc.authors">Author's Address</a>
 </li>
@@ -662,7 +665,15 @@ lexicographically precedes the other string.  <br><br> If there is no index posi
 </ul>
 
 <p> </p>
-<p><a href="#canonicalize.js" class="xref">Appendix A</a> shows the code for an ES6 based canonicalizer, compatible with this specification.  </p>
+<p id="rfc.section.3.2.3.p.6">The rationale for basing the sort 
+algorithm on UCS2/UTF-16 code units is that it maps directly to the 
+string type in ECMAScript, Java, .NET and Python&nbsp;3.  Systems using 
+another representation of string data will need to convert JSON 
+properties into arrays of UCS2/UTF-16 code units before sorting.  <br><br>
+ Note: for the purpose obtaining a deterministic property order, sorting
+ on UTF-8 or UTF-32 encoded data would indeed also have worked, but the 
+result would be incompatible with this specification.  </p>
+<p><a href="#canonicalize.js" class="xref">Appendix A</a> shows the code for an ES6 based canonicalizer, matching JCS.  </p>
 <h1 id="rfc.section.3.2.4">
 <a href="#rfc.section.3.2.4">3.2.4.</a> <a href="#json.utf8" id="json.utf8">UTF-8 Generation</a>
 </h1>
@@ -760,7 +771,11 @@ originally proposed by James Manger. This ultimately led to the adoption
 <h1 id="rfc.appendix.A">
 <a href="#rfc.appendix.A">Appendix A.</a> <a href="#canonicalize.js" id="canonicalize.js">ES6 Canonicalizer</a>
 </h1>
-<p id="rfc.section.A.p.1">Below is a functionally complete example of a JCS compliant canonicalizer for usage with ES6 based systems.  </p>
+<p id="rfc.section.A.p.1">Below is a functionally complete example of a JCS compliant canonicalizer for usage with ES6 based systems.  <br><br>
+ Note: The primary purpose of this code is highlighting the sorting 
+algorithm.  Using the full power of ES6 would reduce the code size 
+considerably but would also be more difficult to follow by non-experts. 
+ </p>
 <pre>var canonicalize = function(object) {
 
     var buffer = '';
@@ -854,6 +869,23 @@ originally proposed by James Manger. This ultimately led to the adoption
 | 41b3de4355555557 | 333333333.33333343       |                   |
 |-----------------------------------------------------------------|</pre>
 <p></p>
+<h1 id="rfc.appendix.C">
+<a href="#rfc.appendix.C">Appendix C.</a> <a href="#json.other" id="json.other">Other JSON Canonicalization Efforts</a>
+</h1>
+<p id="rfc.section.C.p.1">There are (and have been) other efforts creating "Canonicalized JSON".  Below is a list of URLs to some of them: </p>
+
+<ul>
+<li>
+<a href="https://tools.ietf.org/html/draft-staykov-hu-json-canonical-form-00">https://tools.ietf.org/html/draft-staykov-hu-json-canonical-form-00</a> </li>
+<li>
+<a href="https://gibson042.github.io/canonicaljson-spec/">https://gibson042.github.io/canonicaljson-spec/</a> </li>
+<li>
+<a href="https://www.npmjs.com/package/canonical-json">https://www.npmjs.com/package/canonical-json</a> </li>
+<li>
+<a href="http://wiki.laptop.org/go/Canonical_JSON">http://wiki.laptop.org/go/Canonical_JSON</a> </li>
+</ul>
+
+<p> </p>
 <h1 id="rfc.authors"><a href="#rfc.authors">Author's Address</a></h1>
 <div class="avoidbreak">
   <address class="vcard">
