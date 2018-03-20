@@ -619,7 +619,7 @@ U+000D which MUST be serialized as \b, \t, \n, \f and \r respectively.  <br><br>
  If the Unicode value is outside of the ASCII control character range, 
 it MUST be serialized "as&nbsp;is" unless it is equivalent to 
 U+005C&nbsp;(\) or U+0022&nbsp;(") which MUST be serialized as \\ and \"
- respectively.  <br><br> Finally, the serialized string value MUST be put within quotes (").  </li>
+ respectively.  <br><br> Finally, the serialized string value MUST be enclosed in double quotes (").  </li>
 <li>Data of the type <samp>Number</samp>, MUST be serialized according to Section <a href="#ES6" class="xref">7.1.12.1</a>
  of ES6; for maximum interoperability preferably including the "Note 2" 
 enhancement as well.  The latter is implemented by for example Google's 
