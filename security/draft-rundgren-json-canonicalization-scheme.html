@@ -378,6 +378,9 @@
 <link href="#rfc.section.3.2" rel="Chapter" title="3.2 JSON Canonicalization">
 <link href="#rfc.section.3.2.1" rel="Chapter" title="3.2.1 Whitespace Handling">
 <link href="#rfc.section.3.2.2" rel="Chapter" title="3.2.2 Serialization of Primitive Data Types">
+<link href="#rfc.section.3.2.2.1" rel="Chapter" title="3.2.2.1 Serialization of Null and Boolean">
+<link href="#rfc.section.3.2.2.2" rel="Chapter" title="3.2.2.2 Serialization of String">
+<link href="#rfc.section.3.2.2.3" rel="Chapter" title="3.2.2.3 Serialization of Number">
 <link href="#rfc.section.3.2.3" rel="Chapter" title="3.2.3 Sorting of Object Properties">
 <link href="#rfc.section.3.2.4" rel="Chapter" title="3.2.4 UTF-8 Generation">
 <link href="#rfc.section.4" rel="Chapter" title="4 Canonicalized JSON as &quot;Wire Format&quot;">
@@ -387,8 +390,8 @@
 <link href="#rfc.references" rel="Chapter" title="8 References">
 <link href="#rfc.references.1" rel="Chapter" title="8.1 Normative References">
 <link href="#rfc.references.2" rel="Chapter" title="8.2 Informal References">
-<link href="#rfc.appendix.A" rel="Chapter" title="A ES6 Canonicalizer">
-<link href="#rfc.appendix.B" rel="Chapter" title="B Sample Number Serializations">
+<link href="#rfc.appendix.A" rel="Chapter" title="A ES6 Sample Canonicalizer">
+<link href="#rfc.appendix.B" rel="Chapter" title="B Number Serialization Samples">
 <link href="#rfc.appendix.C" rel="Chapter" title="C Other JSON Canonicalization Efforts">
 <link href="#rfc.appendix.D" rel="Chapter" title="D Development Portal">
 <link href="#rfc.authors" rel="Chapter">
@@ -486,7 +489,13 @@ Simplified BSD License.</p>
 </li>
 <li>3.2.2.   <a href="#rfc.section.3.2.2">Serialization of Primitive Data Types</a>
 </li>
-<li>3.2.3.   <a href="#rfc.section.3.2.3">Sorting of Object Properties</a>
+<ul><li>3.2.2.1.   <a href="#rfc.section.3.2.2.1">Serialization of Null and Boolean</a>
+</li>
+<li>3.2.2.2.   <a href="#rfc.section.3.2.2.2">Serialization of String</a>
+</li>
+<li>3.2.2.3.   <a href="#rfc.section.3.2.2.3">Serialization of Number</a>
+</li>
+</ul><li>3.2.3.   <a href="#rfc.section.3.2.3">Sorting of Object Properties</a>
 </li>
 <li>3.2.4.   <a href="#rfc.section.3.2.4">UTF-8 Generation</a>
 </li>
@@ -504,9 +513,9 @@ Simplified BSD License.</p>
 </li>
 <li>8.2.   <a href="#rfc.references.2">Informal References</a>
 </li>
-</ul><li>Appendix A.   <a href="#rfc.appendix.A">ES6 Canonicalizer</a>
+</ul><li>Appendix A.   <a href="#rfc.appendix.A">ES6 Sample Canonicalizer</a>
 </li>
-<li>Appendix B.   <a href="#rfc.appendix.B">Sample Number Serializations</a>
+<li>Appendix B.   <a href="#rfc.appendix.B">Number Serialization Samples</a>
 </li>
 <li>Appendix C.   <a href="#rfc.appendix.C">Other JSON Canonicalization Efforts</a>
 </li>
@@ -573,8 +582,8 @@ interpreted as described in BCP 14 <a href="#RFC2119" class="xref">[RFC2119]</a>
 
 <ul>
 <li>There MUST NOT be any duplicate property names within an <samp>Object</samp>.  </li>
-<li>Data of the type <samp>String</samp> MUST be expressible as UNICODE <a href="#UNICODE" class="xref">[UNICODE]</a> strings.  </li>
-<li>Data of the type <samp>Number</samp> MUST be expressible as IEEE-754 <a href="#IEEE754" class="xref">[IEEE754]</a> double precision values.  </li>
+<li>Data of the type <samp>String</samp> MUST be expressible as Unicode <a href="#UNICODE" class="xref">[UNICODE]</a> strings.  Also see <a href="#json.ser.string" class="xref">Section 3.2.2.2</a>.  </li>
+<li>Data of the type <samp>Number</samp> MUST be expressible as IEEE-754 <a href="#IEEE754" class="xref">[IEEE754]</a> double precision values.  Also see <a href="#json.ser.number" class="xref">Section 3.2.2.3</a>.  </li>
 </ul>
 
 <p> </p>
@@ -609,11 +618,17 @@ steps needed in order to create a canonicalized version of internal JSON
 <p> </p>
 <p id="rfc.section.3.2.2.p.6">The reason for the huge difference between
  the parsed data and its serialized counterpart, is due to a wider 
-tolerance on input data (as defined by <a href="#RFC8259" class="xref">[RFC8259]</a>) than on output data (as defined by ES6).  <br><br> For serializing primitive JSON data types according to JCS (which fully relies on the ES6 scheme), the following rules apply: </p>
-
-<ul>
-<li>The literals <samp>null</samp>, <samp>true</samp>, and <samp>false</samp> present no challenge since they already have a fixed definition in JSON <a href="#RFC8259" class="xref">[RFC8259]</a>.  </li>
-<li>For data of the type <samp>String</samp> (which includes <samp>Object</samp> property names as well), each character MUST be serialized as described in Section <a href="#ES6" class="xref">24.3.2.2</a> of ES6.  <br><br>
+tolerance on input data (as defined by <a href="#RFC8259" class="xref">[RFC8259]</a>) than on output data (as defined by ES6).  <br><br>
+ The following sub sections describe serialization of primitive JSON 
+data types according to JCS.  This part is identical to that of ES6.  </p>
+<h1 id="rfc.section.3.2.2.1">
+<a href="#rfc.section.3.2.2.1">3.2.2.1.</a> <a href="#json.ser.literals" id="json.ser.literals">Serialization of Null and Boolean</a>
+</h1>
+<p id="rfc.section.3.2.2.1.p.1">The literals <samp>null</samp>, <samp>true</samp>, and <samp>false</samp> present no challenge since they already have a fixed definition in JSON <a href="#RFC8259" class="xref">[RFC8259]</a>.  </p>
+<h1 id="rfc.section.3.2.2.2">
+<a href="#rfc.section.3.2.2.2">3.2.2.2.</a> <a href="#json.ser.string" id="json.ser.string">Serialization of String</a>
+</h1>
+<p id="rfc.section.3.2.2.2.p.1">For data of the type <samp>String</samp> (which includes <samp>Object</samp> property names as well), each character MUST be serialized as described in Section <a href="#ES6" class="xref">24.3.2.2</a> of ES6.  <br><br>
  If the Unicode value falls within the traditional ASCII control 
 character range (U+0000 through U+001F), it MUST be serialized using 
 lowercase hexadecimal Unicode notation (\uhhhh) unless it is in the set 
@@ -622,17 +637,23 @@ U+000D which MUST be serialized as \b, \t, \n, \f and \r respectively.  <br><br>
  If the Unicode value is outside of the ASCII control character range, 
 it MUST be serialized "as&nbsp;is" unless it is equivalent to 
 U+005C&nbsp;(\) or U+0022&nbsp;(") which MUST be serialized as \\ and \"
- respectively.  <br><br> Finally, the serialized string value MUST be enclosed in double quotes (").  </li>
-<li>Data of the type <samp>Number</samp> MUST be serialized according to Section <a href="#ES6" class="xref">7.1.12.1</a>
+ respectively.  <br><br> Finally, the serialized string value MUST be enclosed in double quotes (").  <br><br>
+ Note that many JSON systems permit the use of invalid Unicode data like
+ "lone&nbsp;surrogates" (e.g. U+DEAD), which also is dealt with in a 
+platform specific way.  Since this leads to interoperability issues 
+including broken signatures, such usages MUST be avoided.  <br><br> Note
+ that although the Unicode standard offers a possibility combining 
+certain characters into one, referred to as "Unicode Normalization" (<a href="https://www.unicode.org/reports/tr15/">https://www.unicode.org/reports/tr15/</a>), such functionality MUST be delegated to the application layer which already is the case for most other uses of JSON.  </p>
+<h1 id="rfc.section.3.2.2.3">
+<a href="#rfc.section.3.2.2.3">3.2.2.3.</a> <a href="#json.ser.number" id="json.ser.number">Serialization of Number</a>
+</h1>
+<p id="rfc.section.3.2.2.3.p.1">Data of the type <samp>Number</samp> MUST be serialized according to Section <a href="#ES6" class="xref">7.1.12.1</a>
  of ES6; for maximum interoperability preferably including the "Note 2" 
 enhancement as well.  The latter is implemented by for example Google's 
 V8 <a href="#V8" class="xref">[V8]</a>.  <br><br> Due to the relative complexity of this part, it is not included in this specification.  <br><br> Note that ES6 builds on the IEEE-754 <a href="#IEEE754" class="xref">[IEEE754]</a> double precision standard for storing <samp>Number</samp> data.  If the target JSON system uses another internal format, it MUST (when targeting the JSON <samp>Number</samp>
  type), always convert the internal representation of a value to its 
 closest IEEE-754 double precision counterpart.  Higher precision can be 
-supported by using proprietary data schemes, where the JSON <samp>String</samp> type is used as a holder.  <br><br> <a href="#ieee754.test" class="xref">Appendix B</a> holds a set of test values.  </li>
-</ul>
-
-<p> </p>
+supported by using proprietary data schemes, where the JSON <samp>String</samp> type is used as a holder.  <br><br> <a href="#ieee754.test" class="xref">Appendix B</a> holds a set of IEEE-754 sample values and their corresponding JSON serialization.  </p>
 <h1 id="rfc.section.3.2.3">
 <a href="#rfc.section.3.2.3">3.2.3.</a> <a href="#json.sorting.properties" id="json.sorting.properties">Sorting of Object Properties</a>
 </h1>
@@ -717,7 +738,7 @@ the wire.  </p>
 </h1>
 <p id="rfc.section.7.p.1">Building on ES6 number normalization was 
 originally proposed by James Manger. This ultimately led to the adoption
- of the entire ES6 JSON processing model.  <br><br> Other people who have contributed to this specification include Richard Gibson and Mike Samuel.  </p>
+ of the entire ES6 JSON processing model.  <br><br> Other people who have contributed to this specification include Mike Samuel, Richard Gibson, Scott Ananian and Michal Wadas.  </p>
 <h1 id="rfc.references">
 <a href="#rfc.references">8.</a> References</h1>
 <h1 id="rfc.references.1">
@@ -787,7 +808,7 @@ originally proposed by James Manger. This ultimately led to the adoption
 </tr>
 </tbody></table>
 <h1 id="rfc.appendix.A">
-<a href="#rfc.appendix.A">Appendix A.</a> <a href="#canonicalize.js" id="canonicalize.js">ES6 Canonicalizer</a>
+<a href="#rfc.appendix.A">Appendix A.</a> <a href="#canonicalize.js" id="canonicalize.js">ES6 Sample Canonicalizer</a>
 </h1>
 <p id="rfc.section.A.p.1">Below is a functionally complete example of a JCS compliant canonicalizer for usage with ES6 based systems.  <br><br>
  Note: The primary purpose of this code is highlighting the sorting 
@@ -846,9 +867,11 @@ considerably but would also be more difficult to follow by non-experts.
   };</pre>
 <p></p>
 <h1 id="rfc.appendix.B">
-<a href="#rfc.appendix.B">Appendix B.</a> <a href="#ieee754.test" id="ieee754.test">Sample Number Serializations</a>
+<a href="#rfc.appendix.B">Appendix B.</a> <a href="#ieee754.test" id="ieee754.test">Number Serialization Samples</a>
 </h1>
-<p id="rfc.section.B.p.1">The following table holds a set of ES6 <samp>Number</samp> serializations including some edge cases.  The field  "ES6&nbsp;Internal" refers to the internal ES6 representation of the <samp>Number</samp> data type which is based on the IEEE-754 <a href="#IEEE754" class="xref">[IEEE754]</a> standard using 64-bit (double precision) values, here expressed in hexadecimal.  </p>
+<p id="rfc.section.B.p.1">The following table holds a set of ES6 <samp>Number</samp>
+ serialization samples, including some edge cases.  The field  
+"ES6&nbsp;Internal" refers to the internal ES6 representation of the <samp>Number</samp> data type which is based on the IEEE-754 <a href="#IEEE754" class="xref">[IEEE754]</a> standard using 64-bit (double precision) values, here expressed in hexadecimal.  </p>
 <pre>|=================================================================|
 |   ES6 Internal   |   JSON Representation    |      Comment      |
 |=================================================================|
