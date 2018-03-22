@@ -613,7 +613,7 @@ steps needed in order to create a canonicalized version of internal JSON
   }</pre>
 <p></p>
 <p id="rfc.section.3.2.2.p.3">If you subsequently serialize the object created by the operation above using an serializer compliant with ES6's <samp>JSON.stringify()</samp>, the result would (with a line wrap added for display purposes only), be rather divergent with respect to data representation: </p>
-<pre style="padding:1em 0.5em">  {"escaping":"€$\u000f\nA'B\"\\\\\"/","other":[null,true,
+<pre style="padding:1em 0.5em">  {"escaping":"&#x20AC;$\u000f\nA'B\"\\\\\"/","other":[null,true,
   false],"numbers":[1e+30,4.5,6,0.002,1e-27]}</pre>
 <p> </p>
 <p id="rfc.section.3.2.2.p.6">The reason for the huge difference between
@@ -660,7 +660,7 @@ supported by using proprietary data schemes, where the JSON <samp>String</samp> 
 <p id="rfc.section.3.2.3.p.1">Although the previous step indeed 
 normalized the representation of primitive JSON data types, the result 
 would not qualify as "canonicalized" since <samp>Object</samp> properties are not in lexicographic (alphabetical) order.  <br><br> Applied to the sample in <a href="#json.serialization.data" class="xref">Section 3.2.2</a>, a properly canonicalized version should (with a line wrap added for display purposes only), read as: </p>
-<pre style="padding:1em 0.5em">  {"escaping":"€$\u000f\nA'B\"\\\\\"/","numbers":[1e+30,
+<pre style="padding:1em 0.5em">  {"escaping":"&#x20AC;$\u000f\nA'B\"\\\\\"/","numbers":[1e+30,
   4.5,6,0.002,1e-27],"other":[null,true,false]}</pre>
 <p> </p>
 <p id="rfc.section.3.2.3.p.4">The rules for lexicographic sorting of JSON properties according to JCS are as follows: </p>
