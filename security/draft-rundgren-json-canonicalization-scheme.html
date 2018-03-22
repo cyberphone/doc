@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head profile="http://www.w3.org/2006/03/hcard http://dublincore.org/documents/2008/08/04/dc-html/">
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
 
   <title>JSON Canonicalization Scheme (JCS) </title>
 
@@ -391,17 +391,17 @@ border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,ver
 <link href="#rfc.section.3.2.2.3" rel="Chapter" title="3.2.2.3 Serialization of Number">
 <link href="#rfc.section.3.2.3" rel="Chapter" title="3.2.3 Sorting of Object Properties">
 <link href="#rfc.section.3.2.4" rel="Chapter" title="3.2.4 UTF-8 Generation">
-<link href="#rfc.section.4" rel="Chapter" title="4 Canonicalized JSON as &quot;Wire Format&quot;">
-<link href="#rfc.section.5" rel="Chapter" title="5 IANA Considerations">
-<link href="#rfc.section.6" rel="Chapter" title="6 Security Considerations">
-<link href="#rfc.section.7" rel="Chapter" title="7 Acknowledgements">
-<link href="#rfc.references" rel="Chapter" title="8 References">
-<link href="#rfc.references.1" rel="Chapter" title="8.1 Normative References">
-<link href="#rfc.references.2" rel="Chapter" title="8.2 Informal References">
+<link href="#rfc.section.4" rel="Chapter" title="4 IANA Considerations">
+<link href="#rfc.section.5" rel="Chapter" title="5 Security Considerations">
+<link href="#rfc.section.6" rel="Chapter" title="6 Acknowledgements">
+<link href="#rfc.references" rel="Chapter" title="7 References">
+<link href="#rfc.references.1" rel="Chapter" title="7.1 Normative References">
+<link href="#rfc.references.2" rel="Chapter" title="7.2 Informal References">
 <link href="#rfc.appendix.A" rel="Chapter" title="A ES6 Sample Canonicalizer">
 <link href="#rfc.appendix.B" rel="Chapter" title="B Number Serialization Samples">
-<link href="#rfc.appendix.C" rel="Chapter" title="C Other JSON Canonicalization Efforts">
-<link href="#rfc.appendix.D" rel="Chapter" title="D Development Portal">
+<link href="#rfc.appendix.C" rel="Chapter" title="C Canonicalized JSON as &quot;Wire Format&quot;">
+<link href="#rfc.appendix.D" rel="Chapter" title="D Other JSON Canonicalization Efforts">
+<link href="#rfc.appendix.E" rel="Chapter" title="E Development Portal">
 <link href="#rfc.authors" rel="Chapter">
 
 
@@ -507,27 +507,27 @@ Simplified BSD License.</p>
 </li>
 <li >3.2.4.   <a href="#rfc.section.3.2.4">UTF-8 Generation</a>
 </li>
-</ul></ul><li>4.   <a href="#rfc.section.4">Canonicalized JSON as "Wire Format"</a>
+</ul></ul><li>4.   <a href="#rfc.section.4">IANA Considerations</a>
 </li>
-<li >5.   <a href="#rfc.section.5">IANA Considerations</a>
+<li >5.   <a href="#rfc.section.5">Security Considerations</a>
 </li>
-<li >6.   <a href="#rfc.section.6">Security Considerations</a>
+<li >6.   <a href="#rfc.section.6">Acknowledgements</a>
 </li>
-<li >7.   <a href="#rfc.section.7">Acknowledgements</a>
+<li >7.   <a href="#rfc.references">References</a>
 </li>
-<li >8.   <a href="#rfc.references">References</a>
+<ul><li>7.1.   <a href="#rfc.references.1">Normative References</a>
 </li>
-<ul><li>8.1.   <a href="#rfc.references.1">Normative References</a>
-</li>
-<li >8.2.   <a href="#rfc.references.2">Informal References</a>
+<li >7.2.   <a href="#rfc.references.2">Informal References</a>
 </li>
 </ul><li>Appendix A.   <a href="#rfc.appendix.A">ES6 Sample Canonicalizer</a>
 </li>
 <li >Appendix B.   <a href="#rfc.appendix.B">Number Serialization Samples</a>
 </li>
-<li >Appendix C.   <a href="#rfc.appendix.C">Other JSON Canonicalization Efforts</a>
+<li >Appendix C.   <a href="#rfc.appendix.C">Canonicalized JSON as "Wire Format"</a>
 </li>
-<li >Appendix D.   <a href="#rfc.appendix.D">Development Portal</a>
+<li >Appendix D.   <a href="#rfc.appendix.D">Other JSON Canonicalization Efforts</a>
+</li>
+<li >Appendix E.   <a href="#rfc.appendix.E">Development Portal</a>
 </li>
 <li ><a href="#rfc.authors">Author's Address</a>
 </li>
@@ -592,6 +592,7 @@ interpreted as described in BCP 14 <a href="#RFC2119" class="xref">[RFC2119]</a>
 </ul>
 
 <p> </p>
+<p id="rfc.section.3.1.p.5">These restrictions on JSON data are also compliant with I-JSON <a href="#RFC7493" class="xref">[RFC7493]</a>.  </p>
 <h1 id="rfc.section.3.2">
 <a href="#rfc.section.3.2">3.2.</a> <a href="#json.canonicalization" id="json.canonicalization">JSON Canonicalization</a>
 </h1>
@@ -690,11 +691,11 @@ position at which they differ, then the shorter string lexicographically
 <p id="rfc.section.3.2.3.p.6">The rationale for basing the sort 
 algorithm on UCS2/UTF-16 code units is that it maps directly to the 
 string type in ECMAScript, Java, .NET and Python&nbsp;3.  Systems using 
-another representation of string data will need to convert JSON 
-properties into arrays of UCS2/UTF-16 code units before sorting.  <br><br>
+another representation of string data will need to convert JSON property
+ strings into arrays of UCS2/UTF-16 code units before sorting.  <br><br>
  Note: for the purpose obtaining a deterministic property order, sorting
- on UTF-8 or UTF-32 encoded data would indeed also have worked, but the 
-result would be incompatible with this specification.  </p>
+ on UTF-8 or UTF-32 encoded data would also work, but the result would 
+differ (and thus be incompatible with this specification).  </p>
 <p><a href="#canonicalize.js" class="xref">Appendix A</a> shows the code for an ES6 based canonicalizer, matching JCS.  </p>
 <h1 id="rfc.section.3.2.4">
 <a href="#rfc.section.3.2.4">3.2.4.</a> <a href="#json.utf8" id="json.utf8">UTF-8 Generation</a>
@@ -708,48 +709,28 @@ result would be incompatible with this specification.  </p>
   7d</pre>
 <p></p>
 <p id="rfc.section.3.2.4.p.3">This data is intended to be usable as interoperable input to cryptographic functions.  </p>
+<p id="rfc.section.3.2.4.p.4">For other uses see <a href="#json.wireformat" class="xref">Appendix C</a>.  </p>
 <h1 id="rfc.section.4">
-<a href="#rfc.section.4">4.</a> <a href="#json.wireformat" id="json.wireformat">Canonicalized JSON as "Wire Format"</a>
+<a href="#rfc.section.4">4.</a> <a href="#IANA" id="IANA">IANA Considerations</a>
 </h1>
-<p id="rfc.section.4.p.1">Since the result from the canonicalization process (see <a href="#json.utf8" class="xref">Section 3.2.4</a>),
- is fully valid JSON, it can also be used as "Wire&nbsp;Format".  
-However, this is just an option since cryptographic schemes based on 
-JCS, in most cases would not depend on that externally supplied JSON 
-data already is canonicalized.  <br><br> In fact, the ES6 standard way of serializing objects using <samp>JSON.stringify()</samp>
- produces a (for humans), more "logical" format, where properties are 
-kept in the order they were created or received.  The example below 
-shows an address record which could benefit from ES6 standard 
-serialization: </p>
-<pre style="padding:1em 0.5em">  {
-    "Name": "John Doe",
-    "Address": "2000 Sunset Boulevard",
-    "City": "Los Angeles",
-    "Zip": "90001",
-    "State": "CA"
-  }</pre>
-<p></p>
-<p id="rfc.section.4.p.3">If message size constraints are moderate, you may even "Pretty&nbsp;Print" JSON data on the wire.  </p>
+<p id="rfc.section.4.p.1">This document has no IANA actions.  </p>
 <h1 id="rfc.section.5">
-<a href="#rfc.section.5">5.</a> <a href="#IANA" id="IANA">IANA Considerations</a>
+<a href="#rfc.section.5">5.</a> <a href="#Security" id="Security">Security Considerations</a>
 </h1>
-<p id="rfc.section.5.p.1">This document has no IANA actions.  </p>
+<p id="rfc.section.5.p.1">JSON parsers MUST check that input data conforms to the JSON <a href="#RFC8259" class="xref">[RFC8259]</a> specification.  </p>
 <h1 id="rfc.section.6">
-<a href="#rfc.section.6">6.</a> <a href="#Security" id="Security">Security Considerations</a>
+<a href="#rfc.section.6">6.</a> <a href="#Acknowledgements" id="Acknowledgements">Acknowledgements</a>
 </h1>
-<p id="rfc.section.6.p.1">JSON parsers MUST check that input data conforms to the JSON <a href="#RFC8259" class="xref">[RFC8259]</a> specification.  </p>
-<h1 id="rfc.section.7">
-<a href="#rfc.section.7">7.</a> <a href="#Acknowledgements" id="Acknowledgements">Acknowledgements</a>
-</h1>
-<p id="rfc.section.7.p.1">Building on ES6 <samp>Number</samp> 
+<p id="rfc.section.6.p.1">Building on ES6 <samp>Number</samp> 
 normalization was originally proposed by James Manger. This ultimately 
 led to the adoption of the entire ES6 JSON processing model.  <br><br> 
 Other people who have contributed with valuable input to this 
 specification include Mike Samuel, Richard Gibson, Scott Ananian and 
 Michal Wadas.  </p>
 <h1 id="rfc.references">
-<a href="#rfc.references">8.</a> References</h1>
+<a href="#rfc.references">7.</a> References</h1>
 <h1 id="rfc.references.1">
-<a href="#rfc.references.1">8.1.</a> Normative References</h1>
+<a href="#rfc.references.1">7.1.</a> Normative References</h1>
 <table><tbody>
 <tr>
 <td class="reference"><b id="ES6">[ES6]</b></td>
@@ -783,7 +764,7 @@ Michal Wadas.  </p>
 </tr>
 </tbody></table>
 <h1 id="rfc.references.2">
-<a href="#rfc.references.2">8.2.</a> Informal References</h1>
+<a href="#rfc.references.2">7.2.</a> Informal References</h1>
 <table><tbody>
 <tr>
 <td class="reference"><b id="NODEJS">[NODEJS]</b></td>
@@ -797,6 +778,11 @@ Michal Wadas.  </p>
 <td class="reference"><b id="RFC4648">[RFC4648]</b></td>
 <td class="top">
 <a>Josefsson, S.</a>, "<a href="https://tools.ietf.org/html/rfc4648">The Base16, Base32, and Base64 Data Encodings</a>", RFC 4648, DOI 10.17487/RFC4648, October 2006.</td>
+</tr>
+<tr>
+<td class="reference"><b id="RFC7493">[RFC7493]</b></td>
+<td class="top">
+<a>Bray, T.</a>, "<a href="https://tools.ietf.org/html/rfc7493">The I-JSON Message Format</a>", RFC 7493, DOI 10.17487/RFC7493, March 2015.</td>
 </tr>
 <tr>
 <td class="reference"><b id="RFC7515">[RFC7515]</b></td>
@@ -903,9 +889,35 @@ considerably but would also be more difficult to follow by non-experts.
 </table>
 <p></p>
 <h1 id="rfc.appendix.C">
-<a href="#rfc.appendix.C">Appendix C.</a> <a href="#json.other" id="json.other">Other JSON Canonicalization Efforts</a>
+<a href="#rfc.appendix.C">Appendix C.</a> <a href="#json.wireformat" id="json.wireformat">Canonicalized JSON as "Wire Format"</a>
 </h1>
-<p id="rfc.section.C.p.1">There are (and have been) other efforts creating "Canonical JSON".  Below is a list of URLs to some of them: </p>
+<p id="rfc.section.C.p.1">Since the result from the canonicalization process (see <a href="#json.utf8" class="xref">Section 3.2.4</a>),
+ is fully valid JSON, it can also be used as "Wire&nbsp;Format".  
+However, this is just an option since cryptographic schemes based on 
+JCS, in most cases would not depend on that externally supplied JSON 
+data already is canonicalized.  <br><br> In fact, the ES6 standard way of serializing objects using <samp>JSON.stringify()</samp>
+ produces a (for humans), more "logical" format, where properties are 
+kept in the order they were created or received.  The example below 
+shows an address record which could benefit from ES6 standard 
+serialization: </p>
+<pre style="padding:1em 0.5em">  {
+    "Name": "John Doe",
+    "Address": "2000 Sunset Boulevard",
+    "City": "Los Angeles",
+    "Zip": "90001",
+    "State": "CA"
+  }</pre>
+<p></p>
+<p id="rfc.section.C.p.3">Using canonicalization the properties above 
+would be output in the order "Address", "City", "Name", "State" and 
+"Zip", which probably is somewhat less appealing.  </p>
+<p id="rfc.section.C.p.4">If message size is not a concern, you may even
+ "Pretty&nbsp;Print" JSON data on the wire since whitespace is ignored 
+regardless of chosed format.  </p>
+<h1 id="rfc.appendix.D">
+<a href="#rfc.appendix.D">Appendix D.</a> <a href="#json.other" id="json.other">Other JSON Canonicalization Efforts</a>
+</h1>
+<p id="rfc.section.D.p.1">There are (and have been) other efforts creating "Canonical JSON".  Below is a list of URLs to some of them: </p>
 
 <ul><li>
 <a href="https://tools.ietf.org/html/draft-staykov-hu-json-canonical-form-00">https://tools.ietf.org/html/draft-staykov-hu-json-canonical-form-00</a> </li>
@@ -918,10 +930,10 @@ considerably but would also be more difficult to follow by non-experts.
 </ul>
 
 <p> </p>
-<h1 id="rfc.appendix.D">
-<a href="#rfc.appendix.D">Appendix D.</a> <a href="#json.dev" id="json.dev">Development Portal</a>
+<h1 id="rfc.appendix.E">
+<a href="#rfc.appendix.E">Appendix E.</a> <a href="#json.dev" id="json.dev">Development Portal</a>
 </h1>
-<p id="rfc.section.D.p.1">The JSC specification is currently developed at <a href="https://github.com/cyberphone/json-canonicalization">https://github.com/cyberphone/json-canonicalization</a>.  <br><br> The portal also provides software for testing.  </p>
+<p id="rfc.section.E.p.1">The JSC specification is currently developed at <a href="https://github.com/cyberphone/json-canonicalization">https://github.com/cyberphone/json-canonicalization</a>.  <br><br> The portal also provides software for testing.  </p>
 <h1 id="rfc.authors"><a href="#rfc.authors">Author's Address</a></h1>
 <div class="avoidbreak">
   <address class="vcard">
