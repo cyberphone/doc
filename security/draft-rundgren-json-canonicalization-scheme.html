@@ -400,8 +400,9 @@ border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,ver
 <link href="#rfc.appendix.A" rel="Chapter" title="A ES6 Sample Canonicalizer">
 <link href="#rfc.appendix.B" rel="Chapter" title="B Number Serialization Samples">
 <link href="#rfc.appendix.C" rel="Chapter" title="C Canonicalized JSON as &quot;Wire Format&quot;">
-<link href="#rfc.appendix.D" rel="Chapter" title="D Other JSON Canonicalization Efforts">
-<link href="#rfc.appendix.E" rel="Chapter" title="E Development Portal">
+<link href="#rfc.appendix.D" rel="Chapter" title="D Dealing with Big Numbers">
+<link href="#rfc.appendix.E" rel="Chapter" title="E Other JSON Canonicalization Efforts">
+<link href="#rfc.appendix.F" rel="Chapter" title="F Development Portal">
 <link href="#rfc.authors" rel="Chapter">
 
 
@@ -410,7 +411,7 @@ border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,ver
 
   <meta name="dct.creator" content="Rundgren, A.">
   <meta name="dct.identifier" content="urn:ietf:id:draft-rundgren-json-canonicalization-scheme-00">
-  <meta name="dct.issued" scheme="ISO8601" content="2018-21">
+  <meta name="dct.issued" scheme="ISO8601" content="2018-22">
   <meta name="dct.abstract" content="Cryptographic operations like hashing and signing depend on that the target data does not change during serialization, transport, or parsing.  By applying the rules defined by JCS (JSON Canonicalization Scheme), data provided in the JSON ">
   <meta name="description" content="Cryptographic operations like hashing and signing depend on that the target data does not change during serialization, transport, or parsing.  By applying the rules defined by JCS (JSON Canonicalization Scheme), data provided in the JSON ">
 
@@ -431,10 +432,10 @@ border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,ver
 </tr>
 <tr>
 <td class="left">Intended status: Standards Track</td>
-<td class="right">March 21, 2018</td>
+<td class="right">March 22, 2018</td>
 </tr>
 <tr>
-<td class="left">Expires: September 22, 2018</td>
+<td class="left">Expires: September 23, 2018</td>
 <td class="right"></td>
 </tr>
 
@@ -465,7 +466,7 @@ documents as Internet-Drafts.  The list of current Internet-Drafts is at
  and may be updated, replaced, or obsoleted by other documents at any 
 time.  It is inappropriate to use Internet-Drafts as reference material 
 or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on September 22, 2018.</p><p><i>Note: this document has been slightly "enhanced" to make it more readable.</i></p>
+<p>This Internet-Draft will expire on September 23, 2018.</p><p><i>Note: this document has been slightly "enhanced" to make it more readable.</i></p>
 <h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
 <p>Copyright (c) 2018 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal 
@@ -525,9 +526,11 @@ Simplified BSD License.</p>
 </li>
 <li >Appendix C.   <a href="#rfc.appendix.C">Canonicalized JSON as "Wire Format"</a>
 </li>
-<li >Appendix D.   <a href="#rfc.appendix.D">Other JSON Canonicalization Efforts</a>
+<li >Appendix D.   <a href="#rfc.appendix.D">Dealing with Big Numbers</a>
 </li>
-<li >Appendix E.   <a href="#rfc.appendix.E">Development Portal</a>
+<li >Appendix E.   <a href="#rfc.appendix.E">Other JSON Canonicalization Efforts</a>
+</li>
+<li >Appendix F.   <a href="#rfc.appendix.F">Development Portal</a>
 </li>
 <li ><a href="#rfc.authors">Author's Address</a>
 </li>
@@ -561,6 +564,7 @@ this particular effort would succeed. The reasons are twofold: </p>
 <p id="rfc.section.1.p.4">The JCS specification describes how JSON 
 serializing rules compliant with ES6, can be used for supporting 
 "Crypto&nbsp;Safe" JSON.  </p>
+<p id="rfc.section.1.p.5">JCS is compatible with some existing systems relying on JSON canonicalization such as JWK Thumbprint <a href="#RFC7638" class="xref">[RFC7638]</a> and Keybase <a href="#KEYBASE" class="xref">[KEYBASE]</a>.  </p>
 <h1 id="rfc.section.2">
 <a href="#rfc.section.2">2.</a> <a href="#Terminology" id="Terminology">Terminology</a>
 </h1>
@@ -579,7 +583,7 @@ interpreted as described in BCP 14 <a href="#RFC2119" class="xref">[RFC2119]</a>
 <p></p>
 
 <ul><li>Parsing externally supplied JSON data which MUST conform to <a href="#RFC8259" class="xref">[RFC8259]</a>.  </li>
-<li style="margin-top:0.8em">Creating JSON data programmatically.  </li>
+<li style="margin-top:0.8em">Programmatic creation of JSON data.  </li>
 </ul>
 
 <p> </p>
@@ -602,7 +606,7 @@ steps needed in order to create a canonicalized version of internal JSON
 <h1 id="rfc.section.3.2.1">
 <a href="#rfc.section.3.2.1">3.2.1.</a> <a href="#json.whitespace" id="json.whitespace">Whitespace Handling</a>
 </h1>
-<p id="rfc.section.3.2.1.p.1">Whitespace between elements MUST NOT be emitted when JCS is targeted.  </p>
+<p id="rfc.section.3.2.1.p.1">Whitespace between elements MUST NOT be emitted.  </p>
 <h1 id="rfc.section.3.2.2">
 <a href="#rfc.section.3.2.2">3.2.2.</a> <a href="#json.serialization.data" id="json.serialization.data">Serialization of Primitive Data Types</a>
 </h1>
@@ -651,10 +655,7 @@ certain characters into one, referred to as "Unicode Normalization" (<a href="ht
 <p id="rfc.section.3.2.2.3.p.1">Data of the type <samp>Number</samp> MUST be serialized according to Section <a href="#ES6" class="xref">7.1.12.1</a>
  of ES6; for maximum interoperability preferably including the "Note 2" 
 enhancement as well.  The latter is implemented by for example Google's 
-V8 <a href="#V8" class="xref">[V8]</a>.  <br><br> Due to the relative complexity of this part, it is not included in this specification.  <br><br> Note that ES6 builds on the IEEE-754 <a href="#IEEE754" class="xref">[IEEE754]</a> double precision standard for storing <samp>Number</samp> data.  If the target JSON system uses another internal format, it MUST (when targeting the JSON <samp>Number</samp>
- type), always convert the internal representation of a value to its 
-closest IEEE-754 double precision counterpart.  Higher precision can be 
-supported by using proprietary data schemes, where the JSON <samp>String</samp> type is used as a holder.  <br><br> <a href="#ieee754.test" class="xref">Appendix B</a> holds a set of IEEE-754 sample values and their corresponding JSON serialization.  </p>
+V8 <a href="#V8" class="xref">[V8]</a>.  <br><br> Due to the relative complexity of this part, it is not included in this specification.  <br><br> Note that ES6 builds on the IEEE-754 <a href="#IEEE754" class="xref">[IEEE754]</a> double precision standard for storing <samp>Number</samp> data.  <a href="#ieee754.test" class="xref">Appendix B</a> holds a set of IEEE-754 sample values and their corresponding JSON serialization.  <br><br> Occasionally applications need higher precision or longer integers than offered by the current implementation of <samp>Number</samp> in ES6 (and most other JSON systems as well).  <a href="#json.bignumbers" class="xref">Appendix D</a> outlines how this can be achieved in a portable and extensible way.  </p>
 <h1 id="rfc.section.3.2.3">
 <a href="#rfc.section.3.2.3">3.2.3.</a> <a href="#json.sorting.properties" id="json.sorting.properties">Sorting of Object Properties</a>
 </h1>
@@ -767,8 +768,16 @@ Michal Wadas.  </p>
 <a href="#rfc.references.2">7.2.</a> Informal References</h1>
 <table><tbody>
 <tr>
+<td class="reference"><b id="KEYBASE">[KEYBASE]</b></td>
+<td class="top">"<a href="https://keybase.io/docs/api/1.0/canonical_packings#json">Keybase</a>"</td>
+</tr>
+<tr>
 <td class="reference"><b id="NODEJS">[NODEJS]</b></td>
 <td class="top">"<a href="https://nodejs.org/">Node.js</a>"</td>
+</tr>
+<tr>
+<td class="reference"><b id="OPENAPI">[OPENAPI]</b></td>
+<td class="top">"<a href="https://www.openapis.org/">The OpenAPI Initiative</a>"</td>
 </tr>
 <tr>
 <td class="reference"><b id="OPENKEY">[OPENKEY]</b></td>
@@ -788,6 +797,11 @@ Michal Wadas.  </p>
 <td class="reference"><b id="RFC7515">[RFC7515]</b></td>
 <td class="top">
 <a>Jones, M.</a>, <a>Bradley, J.</a> and <a>N. Sakimura</a>, "<a href="https://tools.ietf.org/html/rfc7515">JSON Web Signature (JWS)</a>", RFC 7515, DOI 10.17487/RFC7515, May 2015.</td>
+</tr>
+<tr>
+<td class="reference"><b id="RFC7638">[RFC7638]</b></td>
+<td class="top">
+<a>Jones, M.</a> and <a>N. Sakimura</a>, "<a href="https://tools.ietf.org/html/rfc7638">JSON Web Key (JWK) Thumbprint</a>", RFC 7638, DOI 10.17487/RFC7638, September 2015.</td>
 </tr>
 <tr>
 <td class="reference"><b id="V8">[V8]</b></td>
@@ -819,7 +833,7 @@ considerably but would also be more difficult to follow by non-experts.
               <span style="color:#808080">/////////////////////////////////////////////////</span>
               <span style="color:#808080">// Primitive data type - Use ES6/JSON          //</span>
               <span style="color:#808080">/////////////////////////////////////////////////</span>
-              buffer += <span style="color:brown">JSON</span>.stringify(object);
+              buffer += JSON.stringify(object);
   
           } <span style="color:blue">else</span> <span style="color:blue">if</span> (<span style="color:brown">Array</span>.isArray(object)) {
               <span style="color:#808080">/////////////////////////////////////////////////</span>
@@ -849,7 +863,7 @@ considerably but would also be more difficult to follow by non-experts.
                   }
                   next = <span style="color:blue">true</span>;
                   <span style="color:#808080">// Properties are just strings - Use ES6/JSON</span>
-                  buffer += <span style="color:brown">JSON</span>.stringify(property);
+                  buffer += JSON.stringify(property);
                   buffer += <span style="color:green">':'</span>;
                   <span style="color:#808080">// Recursive call</span>
                   serialize(object[property]);
@@ -896,10 +910,9 @@ considerably but would also be more difficult to follow by non-experts.
 However, this is just an option since cryptographic schemes based on 
 JCS, in most cases would not depend on that externally supplied JSON 
 data already is canonicalized.  <br><br> In fact, the ES6 standard way of serializing objects using <samp>JSON.stringify()</samp>
- produces a (for humans), more "logical" format, where properties are 
-kept in the order they were created or received.  The example below 
-shows an address record which could benefit from ES6 standard 
-serialization: </p>
+ produces a more "logical" format, where properties are kept in the 
+order they were created or received.  The example below shows an address
+ record which could benefit from ES6 standard serialization: </p>
 <pre style="padding:1em 0.5em">  {
     "Name": "John Doe",
     "Address": "2000 Sunset Boulevard",
@@ -910,14 +923,51 @@ serialization: </p>
 <p></p>
 <p id="rfc.section.C.p.3">Using canonicalization the properties above 
 would be output in the order "Address", "City", "Name", "State" and 
-"Zip", which probably is somewhat less appealing.  </p>
-<p id="rfc.section.C.p.4">If message size is not a concern, you may even
- "Pretty&nbsp;Print" JSON data on the wire since whitespace is ignored 
-regardless of chosed format.  </p>
+"Zip", which adds fuzziness to the data from a human (developer or 
+technical support), perspective.  </p>
+<p id="rfc.section.C.p.4">Note that if message size is not a concern, 
+you may even "Pretty&nbsp;Print" JSON data on the wire, since whitespace
+ is ignored regardless of format chosen.  </p>
 <h1 id="rfc.appendix.D">
-<a href="#rfc.appendix.D">Appendix D.</a> <a href="#json.other" id="json.other">Other JSON Canonicalization Efforts</a>
+<a href="#rfc.appendix.D">Appendix D.</a> <a href="#json.bignumbers" id="json.bignumbers">Dealing with Big Numbers</a>
 </h1>
-<p id="rfc.section.D.p.1">There are (and have been) other efforts creating "Canonical JSON".  Below is a list of URLs to some of them: </p>
+<p id="rfc.section.D.p.1">There are two major issues associated with the JSON <samp>Number</samp> type, here illustrated by the following sample object: </p>
+<pre style="padding:1em 0.5em">  {
+    "giantNumber": 1.4e+9999,
+    "payMeThis": 26000.33,
+    "int64Max": 9223372036854775807
+  }</pre>
+<p></p>
+<p id="rfc.section.D.p.3">Although the sample above conforms to JSON (according to <a href="#RFC8259" class="xref">[RFC8259]</a>), there are some practical hurdles to consider: </p>
+<p></p>
+
+<ul><li>Standard JSON parsers rarely process "giantNumber" in a meaningful 
+way.  64-bit integers like "int64Max" normally pass through parsers, but
+ in most systems (including ES6), at the expense of loss of precision.  </li>
+<li style="margin-top:0.8em">Even if a parser would accept such objects, a remaining issue is 
+that you typically would use different math and code for handling 
+"giantNumber" and "int64Max".  In addition, monetary data like 
+"payMeThis" would preferably not rely on a floating point scheme due to 
+rounding issues with respect to decimal arithmetic.  <br><br> The (to the author NB), only known way handling this kind of "overloading" of the <samp>Number</samp>
+ type (at least in an extensible manner), is through mapping mechanisms,
+ instructing parsers what to do with different properties based on their
+ name.  However, this greatly limits the value of using the <samp>Number</samp> type outside of its original somewhat constrained, JavaScript context.  </li>
+</ul>
+
+<p> </p>
+<p id="rfc.section.D.p.5">For using JCS (or actually any application 
+intended for usage by multiple parties potentially using independently 
+developed software), it is therefore RECOMMENDED to rather wrap numbers 
+that do not have a natural place in the current JSON ecosystem, using 
+the JSON <samp>String</samp> type.  This is close to a de-facto standard for open systems.  Aided by a mapping system; be it programmatic like </p>
+<pre style="padding:1em 0.5em">  <span style="color:blue">var</span> obj = <span style="color:brown">JSON</span>.parse(<span style="color:green">'{"giantNumber": "1.4e+9999"}'</span>);
+  <span style="color:blue">var</span> biggie = <span style="color:blue">new</span> BigNum(obj.giantNumber);</pre>
+<p></p>
+<p id="rfc.section.D.p.7">or declarative schemes like OpenAPI <a href="#OPENAPI" class="xref">[OPENAPI]</a>, there are no real limits, not even when using ES6.  </p>
+<h1 id="rfc.appendix.E">
+<a href="#rfc.appendix.E">Appendix E.</a> <a href="#json.other" id="json.other">Other JSON Canonicalization Efforts</a>
+</h1>
+<p id="rfc.section.E.p.1">There are (and have been) other efforts creating "Canonical JSON".  Below is a list of URLs to some of them: </p>
 
 <ul><li>
 <a href="https://tools.ietf.org/html/draft-staykov-hu-json-canonical-form-00">https://tools.ietf.org/html/draft-staykov-hu-json-canonical-form-00</a> </li>
@@ -930,10 +980,10 @@ regardless of chosed format.  </p>
 </ul>
 
 <p> </p>
-<h1 id="rfc.appendix.E">
-<a href="#rfc.appendix.E">Appendix E.</a> <a href="#json.dev" id="json.dev">Development Portal</a>
+<h1 id="rfc.appendix.F">
+<a href="#rfc.appendix.F">Appendix F.</a> <a href="#json.dev" id="json.dev">Development Portal</a>
 </h1>
-<p id="rfc.section.E.p.1">The JSC specification is currently developed at <a href="https://github.com/cyberphone/json-canonicalization">https://github.com/cyberphone/json-canonicalization</a>.  <br><br> The portal also provides software for testing.  </p>
+<p id="rfc.section.F.p.1">The JSC specification is currently developed at <a href="https://github.com/cyberphone/json-canonicalization">https://github.com/cyberphone/json-canonicalization</a>.  <br><br> The portal also provides software for testing.  </p>
 <h1 id="rfc.authors"><a href="#rfc.authors">Author's Address</a></h1>
 <div class="avoidbreak">
   <address class="vcard">
