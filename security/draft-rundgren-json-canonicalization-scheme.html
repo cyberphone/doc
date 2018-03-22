@@ -402,7 +402,7 @@
 
   <meta name="dct.creator" content="Rundgren, A.">
   <meta name="dct.identifier" content="urn:ietf:id:draft-rundgren-json-canonicalization-scheme-00">
-  <meta name="dct.issued" scheme="ISO8601" content="2018-20">
+  <meta name="dct.issued" scheme="ISO8601" content="2018-21">
   <meta name="dct.abstract" content="Cryptographic operations like hashing and signing depend on that the target data does not change during serialization, transport, or parsing.  By applying the rules defined by JCS (JSON Canonicalization Scheme), data provided in the JSON ">
   <meta name="description" content="Cryptographic operations like hashing and signing depend on that the target data does not change during serialization, transport, or parsing.  By applying the rules defined by JCS (JSON Canonicalization Scheme), data provided in the JSON ">
 
@@ -423,10 +423,10 @@
 </tr>
 <tr>
 <td class="left">Intended status: Standards Track</td>
-<td class="right">March 20, 2018</td>
+<td class="right">March 21, 2018</td>
 </tr>
 <tr>
-<td class="left">Expires: September 21, 2018</td>
+<td class="left">Expires: September 22, 2018</td>
 <td class="right"></td>
 </tr>
 
@@ -457,7 +457,7 @@ documents as Internet-Drafts.  The list of current Internet-Drafts is at
  and may be updated, replaced, or obsoleted by other documents at any 
 time.  It is inappropriate to use Internet-Drafts as reference material 
 or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on September 21, 2018.</p>
+<p>This Internet-Draft will expire on September 22, 2018.</p>
 <h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
 <p>Copyright (c) 2018 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal 
@@ -545,10 +545,10 @@ ECMAScript (aka JavaScript) version 6 <a href="#ES6" class="xref">[ES6]</a>, fro
 extensive Web Services security standards), may rightfully wonder why 
 this particular effort would succeed. The reasons are twofold: </p>
 
-<ol>
+<ul>
 <li>JSON is a considerably simpler format than XML, as well as lacking support for the powerful (but complex) namespace concept.</li>
 <li>ES6 compatible JSON serialization is already supported by most Web browsers, Node.js <a href="#NODEJS" class="xref">[NODEJS]</a>, as well as by third party libraries like Open&nbsp;Keystore <a href="#OPENKEY" class="xref">[OPENKEY]</a> giving the proposed canonicalization scheme a head start.  </li>
-</ol>
+</ul>
 
 <p> </p>
 <p id="rfc.section.1.p.4">The JCS specification describes how JSON 
@@ -688,7 +688,9 @@ would not qualify as "canonicalized" since <samp>Object</samp> properties are no
  If they have different values at one or more index positions, let k be 
 the smallest such index; then the string whose value at position k has 
 the smaller value, as determined by using the &lt; operator, 
-lexicographically precedes the other string.  <br><br> If there is no index position at which they differ, then the shorter string lexicographically precedes the longer string.  </li>
+lexicographically precedes the other string.  If there is no index 
+position at which they differ, then the shorter string lexicographically
+ precedes the longer string.  </li>
 </ul>
 
 <p> </p>
