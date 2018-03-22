@@ -6,6 +6,14 @@
 
   <style type="text/css" title="Xml2Rfc (sans serif)">
   /*<![CDATA[*/
+
+  
+.tftable {border-collapse: collapse}
+.tftable th {font-size:10pt;background-color: #f0f0f0;
+border-width:1px;padding:4pt 10pt 4pt 10pt;
+border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,verdana,helvetica}
+.tftable tr {background-color:#FFFFE0}
+.tftable td {border-width:1px;padding:4pt 8pt 4pt 8pt;border-style:solid;border-color:#a9a9a9}
 	  a {
 	  text-decoration: none;
 	  }
@@ -117,7 +125,7 @@
 	  }
 	  pre {
 	  margin-left: 3em;
-	  background-color: lightyellow;
+	  background-color: #f0f0f0;
 	  padding: .25em;
 	  }
 	  pre.text2 {
@@ -457,7 +465,7 @@ documents as Internet-Drafts.  The list of current Internet-Drafts is at
  and may be updated, replaced, or obsoleted by other documents at any 
 time.  It is inappropriate to use Internet-Drafts as reference material 
 or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on September 22, 2018.</p>
+<p>This Internet-Draft will expire on September 22, 2018.</p><p><i>Note: this document has been slightly "enhanced" to make it more readable.</i></p>
 <h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
 <p>Copyright (c) 2018 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal 
@@ -477,51 +485,51 @@ Simplified BSD License.</p>
 
   	<li>1.   <a href="#rfc.section.1">Introduction</a>
 </li>
-<li>2.   <a href="#rfc.section.2">Terminology</a>
+<li >2.   <a href="#rfc.section.2">Terminology</a>
 </li>
-<li>3.   <a href="#rfc.section.3">Detailed Operation</a>
+<li >3.   <a href="#rfc.section.3">Detailed Operation</a>
 </li>
 <ul><li>3.1.   <a href="#rfc.section.3.1">Creation of JSON Data</a>
 </li>
-<li>3.2.   <a href="#rfc.section.3.2">JSON Canonicalization</a>
+<li >3.2.   <a href="#rfc.section.3.2">JSON Canonicalization</a>
 </li>
 <ul><li>3.2.1.   <a href="#rfc.section.3.2.1">Whitespace Handling</a>
 </li>
-<li>3.2.2.   <a href="#rfc.section.3.2.2">Serialization of Primitive Data Types</a>
+<li >3.2.2.   <a href="#rfc.section.3.2.2">Serialization of Primitive Data Types</a>
 </li>
 <ul><li>3.2.2.1.   <a href="#rfc.section.3.2.2.1">Serialization of Null and Boolean</a>
 </li>
-<li>3.2.2.2.   <a href="#rfc.section.3.2.2.2">Serialization of String</a>
+<li >3.2.2.2.   <a href="#rfc.section.3.2.2.2">Serialization of String</a>
 </li>
-<li>3.2.2.3.   <a href="#rfc.section.3.2.2.3">Serialization of Number</a>
+<li >3.2.2.3.   <a href="#rfc.section.3.2.2.3">Serialization of Number</a>
 </li>
 </ul><li>3.2.3.   <a href="#rfc.section.3.2.3">Sorting of Object Properties</a>
 </li>
-<li>3.2.4.   <a href="#rfc.section.3.2.4">UTF-8 Generation</a>
+<li >3.2.4.   <a href="#rfc.section.3.2.4">UTF-8 Generation</a>
 </li>
 </ul></ul><li>4.   <a href="#rfc.section.4">Canonicalized JSON as "Wire Format"</a>
 </li>
-<li>5.   <a href="#rfc.section.5">IANA Considerations</a>
+<li >5.   <a href="#rfc.section.5">IANA Considerations</a>
 </li>
-<li>6.   <a href="#rfc.section.6">Security Considerations</a>
+<li >6.   <a href="#rfc.section.6">Security Considerations</a>
 </li>
-<li>7.   <a href="#rfc.section.7">Acknowledgements</a>
+<li >7.   <a href="#rfc.section.7">Acknowledgements</a>
 </li>
-<li>8.   <a href="#rfc.references">References</a>
+<li >8.   <a href="#rfc.references">References</a>
 </li>
 <ul><li>8.1.   <a href="#rfc.references.1">Normative References</a>
 </li>
-<li>8.2.   <a href="#rfc.references.2">Informal References</a>
+<li >8.2.   <a href="#rfc.references.2">Informal References</a>
 </li>
 </ul><li>Appendix A.   <a href="#rfc.appendix.A">ES6 Sample Canonicalizer</a>
 </li>
-<li>Appendix B.   <a href="#rfc.appendix.B">Number Serialization Samples</a>
+<li >Appendix B.   <a href="#rfc.appendix.B">Number Serialization Samples</a>
 </li>
-<li>Appendix C.   <a href="#rfc.appendix.C">Other JSON Canonicalization Efforts</a>
+<li >Appendix C.   <a href="#rfc.appendix.C">Other JSON Canonicalization Efforts</a>
 </li>
-<li>Appendix D.   <a href="#rfc.appendix.D">Development Portal</a>
+<li >Appendix D.   <a href="#rfc.appendix.D">Development Portal</a>
 </li>
-<li><a href="#rfc.authors">Author's Address</a>
+<li ><a href="#rfc.authors">Author's Address</a>
 </li>
 
 
@@ -545,9 +553,8 @@ ECMAScript (aka JavaScript) version 6 <a href="#ES6" class="xref">[ES6]</a>, fro
 extensive Web Services security standards), may rightfully wonder why 
 this particular effort would succeed. The reasons are twofold: </p>
 
-<ul>
-<li>JSON is a considerably simpler format than XML, as well as lacking support for the powerful (but complex) namespace concept.</li>
-<li>ES6 compatible JSON serialization is already supported by most Web browsers, Node.js <a href="#NODEJS" class="xref">[NODEJS]</a>, as well as by third party libraries like Open&nbsp;Keystore <a href="#OPENKEY" class="xref">[OPENKEY]</a> giving the proposed canonicalization scheme a head start.  </li>
+<ul><li>JSON is a considerably simpler format than XML, as well as lacking support for the powerful (but complex) namespace concept.</li>
+<li style="margin-top:0.8em">ES6 compatible JSON serialization is already supported by most Web browsers, Node.js <a href="#NODEJS" class="xref">[NODEJS]</a>, as well as by third party libraries like Open&nbsp;Keystore <a href="#OPENKEY" class="xref">[OPENKEY]</a> giving the proposed canonicalization scheme a head start.  </li>
 </ul>
 
 <p> </p>
@@ -571,19 +578,17 @@ interpreted as described in BCP 14 <a href="#RFC2119" class="xref">[RFC2119]</a>
 <p id="rfc.section.3.1.p.1">In order to canonicalize JSON data, an internal representation of the JSON data is needed.  This can be achieved by: </p>
 <p></p>
 
-<ul>
-<li>Parsing externally supplied JSON data which MUST conform to <a href="#RFC8259" class="xref">[RFC8259]</a>.  </li>
-<li>Creating JSON data programmatically.  </li>
+<ul><li>Parsing externally supplied JSON data which MUST conform to <a href="#RFC8259" class="xref">[RFC8259]</a>.  </li>
+<li style="margin-top:0.8em">Creating JSON data programmatically.  </li>
 </ul>
 
 <p> </p>
 <p id="rfc.section.3.1.p.3">Irrespective of method used, the internal representation of JSON data MUST be compatible both with ES6 and <a href="#RFC8259" class="xref">[RFC8259]</a> which implies the following: </p>
 <p></p>
 
-<ul>
-<li>There MUST NOT be any duplicate property names within an <samp>Object</samp>.  </li>
-<li>Data of the type <samp>String</samp> MUST be expressible as Unicode <a href="#UNICODE" class="xref">[UNICODE]</a> strings.  Also see <a href="#json.ser.string" class="xref">Section 3.2.2.2</a>.  </li>
-<li>Data of the type <samp>Number</samp> MUST be expressible as IEEE-754 <a href="#IEEE754" class="xref">[IEEE754]</a> double precision values.  Also see <a href="#json.ser.number" class="xref">Section 3.2.2.3</a>.  </li>
+<ul><li>There MUST NOT be any duplicate property names within an <samp>Object</samp>.  </li>
+<li style="margin-top:0.8em">Data of the type <samp>String</samp> MUST be expressible as Unicode <a href="#UNICODE" class="xref">[UNICODE]</a> strings.  Also see <a href="#json.ser.string" class="xref">Section 3.2.2.2</a>.  </li>
+<li style="margin-top:0.8em">Data of the type <samp>Number</samp> MUST be expressible as IEEE-754 <a href="#IEEE754" class="xref">[IEEE754]</a> double precision values.  Also see <a href="#json.ser.number" class="xref">Section 3.2.2.3</a>.  </li>
 </ul>
 
 <p> </p>
@@ -601,20 +606,15 @@ steps needed in order to create a canonicalized version of internal JSON
 <a href="#rfc.section.3.2.2">3.2.2.</a> <a href="#json.serialization.data" id="json.serialization.data">Serialization of Primitive Data Types</a>
 </h1>
 <p id="rfc.section.3.2.2.p.1">Assume that you parse a JSON object like the following: </p>
-<pre>  {
+<pre style="padding:1em 0.5em">  {
     "escaping": "\u20ac$\u000F\u000aA'\u0042\u0022\u005c\\\"\/",
     "other":  [null, true, false],
     "numbers": [1E30, 4.50, 6, 2e-3, 0.000000000000000000000000001]
   }</pre>
 <p></p>
 <p id="rfc.section.3.2.2.p.3">If you subsequently serialize the object created by the operation above using an serializer compliant with ES6's <samp>JSON.stringify()</samp>, the result would (with a line wrap added for display purposes only), be rather divergent with respect to data representation: </p>
-<pre>  {"escaping":"\u20ac$\u000f\nA'B\"\\\\\"/","other":[null,true,
+<pre style="padding:1em 0.5em">  {"escaping":"€$\u000f\nA'B\"\\\\\"/","other":[null,true,
   false],"numbers":[1e+30,4.5,6,0.002,1e-27]}</pre>
-<p></p>
-<p></p>
-
-<ul class="empty"><li>Note: \u20ac denotes the Euro character, which not <br> being ASCII, is currently not displayable in RFCs.  </li></ul>
-
 <p> </p>
 <p id="rfc.section.3.2.2.p.6">The reason for the huge difference between
  the parsed data and its serialized counterpart, is due to a wider 
@@ -660,30 +660,23 @@ supported by using proprietary data schemes, where the JSON <samp>String</samp> 
 <p id="rfc.section.3.2.3.p.1">Although the previous step indeed 
 normalized the representation of primitive JSON data types, the result 
 would not qualify as "canonicalized" since <samp>Object</samp> properties are not in lexicographic (alphabetical) order.  <br><br> Applied to the sample in <a href="#json.serialization.data" class="xref">Section 3.2.2</a>, a properly canonicalized version should (with a line wrap added for display purposes only), read as: </p>
-<pre>  {"escaping":"\u20ac$\u000f\nA'B\"\\\\\"/","numbers":[1e+30,
+<pre style="padding:1em 0.5em">  {"escaping":"€$\u000f\nA'B\"\\\\\"/","numbers":[1e+30,
   4.5,6,0.002,1e-27],"other":[null,true,false]}</pre>
-<p></p>
-<p></p>
-
-<ul class="empty"><li>Note: \u20ac denotes the Euro character, which not <br> being ASCII, is currently not displayable in RFCs.  </li></ul>
-
 <p> </p>
 <p id="rfc.section.3.2.3.p.4">The rules for lexicographic sorting of JSON properties according to JCS are as follows: </p>
 
-<ul>
-<li>
+<ul><li>
 <samp>Object</samp> properties are sorted in a recursive manner which means that a found JSON child <samp>Object</samp> type MUST be subject to sorting as well.  </li>
-<li>JSON <samp>Array</samp> data MUST also be checked for the presence of sortable JSON <samp>Object</samp> elements, but array element order MUST NOT be changed.  </li>
+<li style="margin-top:0.8em">JSON <samp>Array</samp> data MUST also be checked for the presence of sortable JSON <samp>Object</samp> elements, but array element order MUST NOT be changed.  </li>
 </ul>
 
 <p> </p>
 <p id="rfc.section.3.2.3.p.5">When a JSON <samp>Object</samp> is about to have its properties sorted, the following measures MUST be performed: </p>
 
-<ul>
-<li>Property strings to be sorted depend on that strings are represented
+<ul><li>Property strings to be sorted depend on that strings are represented
  as arrays of 16-bit unsigned integers where each integer holds a single
  UCS2/UTF-16 <a href="#UNICODE" class="xref">[UNICODE]</a> code unit.  The sorting is based on pure value comparisons, independent of locale settings.  </li>
-<li>Property strings either have different values at some index that is a
+<li style="margin-top:0.8em">Property strings either have different values at some index that is a
  valid index for both strings, or their lengths are different, or both. 
  If they have different values at one or more index positions, let k be 
 the smallest such index; then the string whose value at position k has 
@@ -707,7 +700,7 @@ result would be incompatible with this specification.  </p>
 <a href="#rfc.section.3.2.4">3.2.4.</a> <a href="#json.utf8" id="json.utf8">UTF-8 Generation</a>
 </h1>
 <p id="rfc.section.3.2.4.p.1">Finally, the resulting string data MUST be converted into an UTF-8 formatted array.  <br><br> Applied to the sample in <a href="#json.sorting.properties" class="xref">Section 3.2.3</a> this should yield the following bytes here shown in hexadecimal notation: </p>
-<pre>  7b 22 65 73 63 61 70 69 6e 67 22 3a 22 e2 82 ac 24 5c 75 30
+<pre style="padding:1em 0.5em">  7b 22 65 73 63 61 70 69 6e 67 22 3a 22 e2 82 ac 24 5c 75 30
   30 30 66 5c 6e 41 27 42 5c 22 5c 5c 5c 5c 5c 22 2f 22 2c 22
   6e 75 6d 62 65 72 73 22 3a 5b 31 65 2b 33 30 2c 34 2e 35 2c
   36 2c 30 2e 30 30 32 2c 31 65 2d 32 37 5d 2c 22 6f 74 68 65
@@ -723,10 +716,19 @@ result would be incompatible with this specification.  </p>
 However, this is just an option since cryptographic schemes based on 
 JCS, in most cases would not depend on that externally supplied JSON 
 data already is canonicalized.  <br><br> In fact, the ES6 standard way of serializing objects using <samp>JSON.stringify()</samp>
- produces a (for developers), more logical format, where properties are 
-kept in the order they were created or received.  If message size 
-constraints are moderate, you may even "Pretty&nbsp;Print" JSON data on 
-the wire.  </p>
+ produces a (for humans), more "logical" format, where properties are 
+kept in the order they were created or received.  The example below 
+shows an address record which could benefit from ES6 standard 
+serialization: </p>
+<pre style="padding:1em 0.5em">  {
+    "Name": "John Doe",
+    "Address": "2000 Sunset Boulevard",
+    "City": "Los Angeles",
+    "Zip": "90001",
+    "State": "CA"
+  }</pre>
+<p></p>
+<p id="rfc.section.4.p.3">If message size constraints are moderate, you may even "Pretty&nbsp;Print" JSON data on the wire.  </p>
 <h1 id="rfc.section.5">
 <a href="#rfc.section.5">5.</a> <a href="#IANA" id="IANA">IANA Considerations</a>
 </h1>
@@ -738,9 +740,12 @@ the wire.  </p>
 <h1 id="rfc.section.7">
 <a href="#rfc.section.7">7.</a> <a href="#Acknowledgements" id="Acknowledgements">Acknowledgements</a>
 </h1>
-<p id="rfc.section.7.p.1">Building on ES6 number normalization was 
-originally proposed by James Manger. This ultimately led to the adoption
- of the entire ES6 JSON processing model.  <br><br> Other people who have contributed to this specification include Mike Samuel, Richard Gibson, Scott Ananian and Michal Wadas.  </p>
+<p id="rfc.section.7.p.1">Building on ES6 <samp>Number</samp> 
+normalization was originally proposed by James Manger. This ultimately 
+led to the adoption of the entire ES6 JSON processing model.  <br><br> 
+Other people who have contributed with valuable input to this 
+specification include Mike Samuel, Richard Gibson, Scott Ananian and 
+Michal Wadas.  </p>
 <h1 id="rfc.references">
 <a href="#rfc.references">8.</a> References</h1>
 <h1 id="rfc.references.1">
@@ -817,53 +822,53 @@ originally proposed by James Manger. This ultimately led to the adoption
 algorithm.  Using the full power of ES6 would reduce the code size 
 considerably but would also be more difficult to follow by non-experts. 
  </p>
-<pre>  var canonicalize = function(object) {
+<pre style="padding:1em 0.5em">  <span style="color:blue">var</span> canonicalize = <span style="color:blue">function</span>(object) {
   
-      var buffer = '';
+      <span style="color:blue">var</span> buffer = <span style="color:green">''</span>;
       serialize(object);
-      return buffer;
+      <span style="color:blue">return</span> buffer;
   
-      function serialize(object) {
-          if (object === null || typeof object !== 'object') {
-              /////////////////////////////////////////////////
-              // Primitive data type - Use ES6/JSON          //
-              /////////////////////////////////////////////////
-              buffer += JSON.stringify(object);
+      <span style="color:blue">function</span> serialize(object) {
+          <span style="color:blue">if</span> (object === <span style="color:blue">null</span> || <span style="color:blue">typeof</span> object !== <span style="color:green">'object'</span>) {
+              <span style="color:#808080">/////////////////////////////////////////////////</span>
+              <span style="color:#808080">// Primitive data type - Use ES6/JSON          //</span>
+              <span style="color:#808080">/////////////////////////////////////////////////</span>
+              buffer += <span style="color:brown">JSON</span>.stringify(object);
   
-          } else if (Array.isArray(object)) {
-              /////////////////////////////////////////////////
-              // Array - Maintain element order              //
-              /////////////////////////////////////////////////
-              buffer += '[';
-              let next = false;
+          } <span style="color:blue">else</span> <span style="color:blue">if</span> (<span style="color:brown">Array</span>.isArray(object)) {
+              <span style="color:#808080">/////////////////////////////////////////////////</span>
+              <span style="color:#808080">// Array - Maintain element order              //</span>
+              <span style="color:#808080">/////////////////////////////////////////////////</span>
+              buffer += <span style="color:green">'['</span>;
+              <span style="color:blue">let</span> next = <span style="color:blue">false</span>;
               object.forEach((element) =&gt; {
-                  if (next) {
-                      buffer += ',';
+                  <span style="color:blue">if</span> (next) {
+                      buffer += <span style="color:green">','</span>;
                   }
-                  next = true;
-                  // Recursive call
+                  next = <span style="color:blue">true</span>;
+                  <span style="color:#808080">// Recursive call</span>
                   serialize(element);
               });
-              buffer += ']';
+              buffer += <span style="color:green">']'</span>;
   
-          } else {
-              /////////////////////////////////////////////////
-              // Object - Sort properties before serializing //
-              /////////////////////////////////////////////////
-              buffer += '{';
-              let next = false;
-              Object.keys(object).sort().forEach((property) =&gt; {
-                  if (next) {
-                      buffer += ',';
+          } <span style="color:blue">else</span> {
+              <span style="color:#808080">/////////////////////////////////////////////////</span>
+              <span style="color:#808080">// Object - Sort properties before serializing //</span>
+              <span style="color:#808080">/////////////////////////////////////////////////</span>
+              buffer += <span style="color:green">'{'</span>;
+              <span style="color:blue">let</span> next = <span style="color:blue">false</span>;
+              <span style="color:brown">Object</span>.keys(object).sort().forEach((property) =&gt; {
+                  <span style="color:blue">if</span> (next) {
+                      buffer += <span style="color:green">','</span>;
                   }
-                  next = true;
-                  // Properties are just strings - Use ES6/JSON
-                  buffer += JSON.stringify(property);
-                  buffer += ':';
-                  // Recursive call
+                  next = <span style="color:blue">true</span>;
+                  <span style="color:#808080">// Properties are just strings - Use ES6/JSON</span>
+                  buffer += <span style="color:brown">JSON</span>.stringify(property);
+                  buffer += <span style="color:green">':'</span>;
+                  <span style="color:#808080">// Recursive call</span>
                   serialize(object[property]);
               });
-              buffer += '}';
+              buffer += <span style="color:green">'}'</span>;
           }
       }
   };</pre>
@@ -874,63 +879,41 @@ considerably but would also be more difficult to follow by non-experts.
 <p id="rfc.section.B.p.1">The following table holds a set of ES6 <samp>Number</samp>
  serialization samples, including some edge cases.  The field  
 "ES6&nbsp;Internal" refers to the internal ES6 representation of the <samp>Number</samp> data type which is based on the IEEE-754 <a href="#IEEE754" class="xref">[IEEE754]</a> standard using 64-bit (double precision) values, here expressed in hexadecimal.  </p>
-<pre>|=================================================================|
-|   ES6 Internal   |   JSON Representation    |      Comment      |
-|=================================================================|
-| 0000000000000000 | 0                        | Zero              |
-|-----------------------------------------------------------------|
-| 8000000000000000 | 0                        | Minus zero        |
-|-----------------------------------------------------------------|
-| 0000000000000001 | 5e-324                   | Smallest positive |
-|-----------------------------------------------------------------|
-| 8000000000000001 | -5e-324                  | Smallest negative |
-|-----------------------------------------------------------------|
-| 7fefffffffffffff | 1.7976931348623157e+308  | Largest positive  |
-|-----------------------------------------------------------------|
-| ffefffffffffffff | -1.7976931348623157e+308 | Largest negative  |
-|-----------------------------------------------------------------|
-| 7fffffffffffffff |                          | Error (NaN)       |
-|-----------------------------------------------------------------|
-| 7ff0000000000000 |                          | Error (Infinity)  |
-|-----------------------------------------------------------------|
-| 44b52d02c7e14af5 | 9.999999999999997e+22    |                   |
-|-----------------------------------------------------------------|
-| 44b52d02c7e14af6 | 1e+23                    |                   |
-|-----------------------------------------------------------------|
-| 44b52d02c7e14af7 | 1.0000000000000001e+23   |                   |
-|-----------------------------------------------------------------|
-| 444b1ae4d6e2ef4e | 999999999999999700000    |                   |
-|-----------------------------------------------------------------|
-| 444b1ae4d6e2ef4f | 999999999999999900000    |                   |
-|-----------------------------------------------------------------|
-| 444b1ae4d6e2ef50 | 1e+21                    |                   |
-|-----------------------------------------------------------------|
-| 444b1ae4d6e2ef51 | 1.0000000000000001e+21   |                   |
-|-----------------------------------------------------------------|
-| 41b3de4355555553 | 333333333.3333332        |                   |
-|-----------------------------------------------------------------|
-| 41b3de4355555554 | 333333333.33333325       |                   |
-|-----------------------------------------------------------------|
-| 41b3de4355555555 | 333333333.3333333        |                   |
-|-----------------------------------------------------------------|
-| 41b3de4355555556 | 333333333.3333334        |                   |
-|-----------------------------------------------------------------|
-| 41b3de4355555557 | 333333333.33333343       |                   |
-|-----------------------------------------------------------------|</pre>
+<table style="margin-left:3em" class="tftable"><tr><th>ES6 Internal</th><th>JSON Representation</th><th>Comment</th></tr>
+<tr><td><tt style="font-size:12pt">0000000000000000</tt></td><td>0                       </td><td>Zero             </td></tr>
+<tr><td><tt style="font-size:12pt">8000000000000000</tt></td><td>0                       </td><td>Minus zero       </td></tr>
+<tr><td><tt style="font-size:12pt">0000000000000001</tt></td><td>5e-324                  </td><td>Smallest positive</td></tr>
+<tr><td><tt style="font-size:12pt">8000000000000001</tt></td><td>-5e-324                 </td><td>Smallest negative</td></tr>
+<tr><td><tt style="font-size:12pt">7fefffffffffffff</tt></td><td>1.7976931348623157e+308 </td><td>Largest positive </td></tr>
+<tr><td><tt style="font-size:12pt">ffefffffffffffff</tt></td><td>-1.7976931348623157e+308</td><td>Largest negative </td></tr>
+<tr><td><tt style="font-size:12pt">7fffffffffffffff</tt></td><td>                        </td><td>Error (NaN)      </td></tr>
+<tr><td><tt style="font-size:12pt">7ff0000000000000</tt></td><td>                        </td><td>Error (Infinity) </td></tr>
+<tr><td><tt style="font-size:12pt">44b52d02c7e14af5</tt></td><td>9.999999999999997e+22   </td><td>                 </td></tr>
+<tr><td><tt style="font-size:12pt">44b52d02c7e14af6</tt></td><td>1e+23                   </td><td>                 </td></tr>
+<tr><td><tt style="font-size:12pt">44b52d02c7e14af7</tt></td><td>1.0000000000000001e+23  </td><td>                 </td></tr>
+<tr><td><tt style="font-size:12pt">444b1ae4d6e2ef4e</tt></td><td>999999999999999700000   </td><td>                 </td></tr>
+<tr><td><tt style="font-size:12pt">444b1ae4d6e2ef4f</tt></td><td>999999999999999900000   </td><td>                 </td></tr>
+<tr><td><tt style="font-size:12pt">444b1ae4d6e2ef50</tt></td><td>1e+21                   </td><td>                 </td></tr>
+<tr><td><tt style="font-size:12pt">444b1ae4d6e2ef51</tt></td><td>1.0000000000000001e+21  </td><td>                 </td></tr>
+<tr><td><tt style="font-size:12pt">41b3de4355555553</tt></td><td>333333333.3333332       </td><td>                 </td></tr>
+<tr><td><tt style="font-size:12pt">41b3de4355555554</tt></td><td>333333333.33333325      </td><td>                 </td></tr>
+<tr><td><tt style="font-size:12pt">41b3de4355555555</tt></td><td>333333333.3333333       </td><td>                 </td></tr>
+<tr><td><tt style="font-size:12pt">41b3de4355555556</tt></td><td>333333333.3333334       </td><td>                 </td></tr>
+<tr><td><tt style="font-size:12pt">41b3de4355555557</tt></td><td>333333333.33333343      </td><td>                 </td></tr>
+</table>
 <p></p>
 <h1 id="rfc.appendix.C">
 <a href="#rfc.appendix.C">Appendix C.</a> <a href="#json.other" id="json.other">Other JSON Canonicalization Efforts</a>
 </h1>
 <p id="rfc.section.C.p.1">There are (and have been) other efforts creating "Canonical JSON".  Below is a list of URLs to some of them: </p>
 
-<ul>
-<li>
+<ul><li>
 <a href="https://tools.ietf.org/html/draft-staykov-hu-json-canonical-form-00">https://tools.ietf.org/html/draft-staykov-hu-json-canonical-form-00</a> </li>
-<li>
+<li style="margin-top:0.8em">
 <a href="https://gibson042.github.io/canonicaljson-spec/">https://gibson042.github.io/canonicaljson-spec/</a> </li>
-<li>
+<li style="margin-top:0.8em">
 <a href="https://www.npmjs.com/package/canonical-json">https://www.npmjs.com/package/canonical-json</a> </li>
-<li>
+<li style="margin-top:0.8em">
 <a href="http://wiki.laptop.org/go/Canonical_JSON">http://wiki.laptop.org/go/Canonical_JSON</a> </li>
 </ul>
 
