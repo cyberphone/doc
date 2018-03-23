@@ -944,22 +944,20 @@ you may even "Pretty&nbsp;Print" JSON data on the wire, since whitespace
 <ul><li>Standard JSON parsers rarely process "giantNumber" in a meaningful 
 way.  64-bit integers like "int64Max" normally pass through parsers, but
  in most systems (including ES6), at the expense of loss of precision.  </li>
-<li style="margin-top:0.8em">Even if a parser would accept such objects, a remaining issue is 
-that you typically would use different math and code for handling 
-"giantNumber" and "int64Max".  In addition, monetary data like 
-"payMeThis" would preferably not rely on a floating point scheme due to 
-rounding issues with respect to decimal arithmetic.  <br><br> The (to the author NB), only known way handling this kind of "overloading" of the <samp>Number</samp>
+<li style="margin-top:0.8em">Another issue is that parsers typically would use different schemes 
+for handling "giantNumber" and "int64Max".  In addition, monetary data 
+like "payMeThis" would presumably not rely on a floating point scheme 
+due to rounding issues with respect to decimal arithmetic.  <br><br> The (to the author NB), only known way handling this kind of "overloading" of the <samp>Number</samp>
  type (at least in an extensible manner), is through mapping mechanisms,
  instructing parsers what to do with different properties based on their
  name.  However, this greatly limits the value of using the <samp>Number</samp> type outside of its original somewhat constrained, JavaScript context.  </li>
 </ul>
 
 <p> </p>
-<p id="rfc.section.D.p.5">For using JCS (or actually any application 
-intended for usage by multiple parties potentially using independently 
-developed software), it is therefore RECOMMENDED to rather wrap numbers 
-that do not have a natural place in the current JSON ecosystem, using 
-the JSON <samp>String</samp> type.  This is close to a de-facto standard for open systems.  Aided by a mapping system; be it programmatic like </p>
+<p id="rfc.section.D.p.5">For usage with JCS (and in fact any 
+application intended for usage by multiple parties potentially using 
+independently developed software), numbers that do not have a natural 
+place in the current JSON ecosystem MUST be wrapped using the JSON <samp>String</samp> type.  This is close to a de-facto standard for open systems.  Aided by a mapping system; be it programmatic like </p>
 <pre style="padding:1em 0.5em">  <span style="color:blue">var</span> obj = <span style="color:brown">JSON</span>.parse(<span style="color:green">'{"giantNumber": "1.4e+9999"}'</span>);
   <span style="color:blue">var</span> biggie = <span style="color:blue">new</span> BigNum(obj.giantNumber);</pre>
 <p></p>
