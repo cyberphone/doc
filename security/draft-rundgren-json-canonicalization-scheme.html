@@ -411,7 +411,7 @@ border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,ver
 
   <meta name="dct.creator" content="Rundgren, A.">
   <meta name="dct.identifier" content="urn:ietf:id:draft-rundgren-json-canonicalization-scheme-00">
-  <meta name="dct.issued" scheme="ISO8601" content="2018-22">
+  <meta name="dct.issued" scheme="ISO8601" content="2018-24">
   <meta name="dct.abstract" content="Cryptographic operations like hashing and signing depend on that the target data does not change during serialization, transport, or parsing.  By applying the rules defined by JCS (JSON Canonicalization Scheme), data provided in the JSON ">
   <meta name="description" content="Cryptographic operations like hashing and signing depend on that the target data does not change during serialization, transport, or parsing.  By applying the rules defined by JCS (JSON Canonicalization Scheme), data provided in the JSON ">
 
@@ -432,10 +432,10 @@ border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,ver
 </tr>
 <tr>
 <td class="left">Intended status: Standards Track</td>
-<td class="right">March 22, 2018</td>
+<td class="right">March 24, 2018</td>
 </tr>
 <tr>
-<td class="left">Expires: September 23, 2018</td>
+<td class="left">Expires: September 25, 2018</td>
 <td class="right"></td>
 </tr>
 
@@ -466,7 +466,7 @@ documents as Internet-Drafts.  The list of current Internet-Drafts is at
  and may be updated, replaced, or obsoleted by other documents at any 
 time.  It is inappropriate to use Internet-Drafts as reference material 
 or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on September 23, 2018.</p><p><i>Note: this document has been slightly "enhanced" to make it more readable.</i></p>
+<p>This Internet-Draft will expire on September 25, 2018.</p><p><i>Note: this document has been slightly "enhanced" to make it more readable.</i></p>
 <h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
 <p>Copyright (c) 2018 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal 
@@ -606,20 +606,20 @@ steps needed in order to create a canonicalized version of internal JSON
 <h1 id="rfc.section.3.2.1">
 <a href="#rfc.section.3.2.1">3.2.1.</a> <a href="#json.whitespace" id="json.whitespace">Whitespace Handling</a>
 </h1>
-<p id="rfc.section.3.2.1.p.1">Whitespace between elements MUST NOT be emitted.  </p>
+<p id="rfc.section.3.2.1.p.1">Whitespace between JSON elements MUST NOT be emitted.  </p>
 <h1 id="rfc.section.3.2.2">
 <a href="#rfc.section.3.2.2">3.2.2.</a> <a href="#json.serialization.data" id="json.serialization.data">Serialization of Primitive Data Types</a>
 </h1>
 <p id="rfc.section.3.2.2.p.1">Assume that you parse a JSON object like the following: </p>
 <pre style="padding:1em 0.5em">  {
-    "escaping": "\u20ac$\u000F\u000aA'\u0042\u0022\u005c\\\"\/",
-    "other":  [null, true, false],
-    "numbers": [1E30, 4.50, 6, 2e-3, 0.000000000000000000000000001]
+    "<span style="color:crimson">escaping</span>": "<span style="color:royalblue">\u20ac$\u000F\u000aA'\u0042\u0022\u005c\\\"\/</span>",
+    "<span style="color:crimson">other</span>":  [<span style="color:green">null</span>, <span style="color:green">true</span>, <span style="color:green">false</span>],
+    "<span style="color:crimson">numbers</span>": [<span style="color:green">1E30</span>, <span style="color:green">4.50</span>, <span style="color:green">6</span>, <span style="color:green">2e-3</span>, <span style="color:green">0.000000000000000000000000001</span>]
   }</pre>
 <p></p>
 <p id="rfc.section.3.2.2.p.3">If you subsequently serialize the object created by the operation above using an serializer compliant with ES6's <samp>JSON.stringify()</samp>, the result would (with a line wrap added for display purposes only), be rather divergent with respect to data representation: </p>
-<pre style="padding:1em 0.5em">  {"escaping":"&#x20AC;$\u000f\nA'B\"\\\\\"/","other":[null,true,
-  false],"numbers":[1e+30,4.5,6,0.002,1e-27]}</pre>
+<pre style="padding:1em 0.5em">  {"<span style="color:crimson">escaping</span>":"<span style="color:royalblue">&#x20AC;$\u000f\nA'B\"\\\\\"/</span>","<span style="color:crimson">other</span>":[<span style="color:green">null</span>,<span style="color:green">true</span>,
+  <span style="color:green">false</span>],"<span style="color:crimson">numbers</span>":[<span style="color:green">1e+30</span>,<span style="color:green">4.5</span>,<span style="color:green">6</span>,<span style="color:green">0.002</span>,<span style="color:green">1e-27</span>]}</pre>
 <p> </p>
 <p id="rfc.section.3.2.2.p.6">The reason for the huge difference between
  the parsed data and its serialized counterpart, is due to a wider 
@@ -655,15 +655,15 @@ certain characters into one, referred to as "Unicode Normalization" (<a href="ht
 <p id="rfc.section.3.2.2.3.p.1">Data of the type <samp>Number</samp> MUST be serialized according to Section <a href="#ES6" class="xref">7.1.12.1</a>
  of ES6; for maximum interoperability preferably including the "Note 2" 
 enhancement as well.  The latter is implemented by for example Google's 
-V8 <a href="#V8" class="xref">[V8]</a>.  <br><br> Due to the relative complexity of this part, it is not included in this specification.  <br><br> Note that ES6 builds on the IEEE-754 <a href="#IEEE754" class="xref">[IEEE754]</a> double precision standard for storing <samp>Number</samp> data.  <a href="#ieee754.test" class="xref">Appendix B</a> holds a set of IEEE-754 sample values and their corresponding JSON serialization.  <br><br> Occasionally applications need higher precision or longer integers than offered by the current implementation of <samp>Number</samp> in ES6 (and most other JSON systems as well).  <a href="#json.bignumbers" class="xref">Appendix D</a> outlines how this can be achieved in a portable and extensible way.  </p>
+V8 <a href="#V8" class="xref">[V8]</a>.  <br><br> Due to the relative complexity of this part, it is not included in this specification.  <br><br> Note that ES6 builds on the IEEE-754 <a href="#IEEE754" class="xref">[IEEE754]</a> double precision standard for storing <samp>Number</samp> data.  <a href="#ieee754.test" class="xref">Appendix B</a> holds a set of IEEE-754 sample values and their corresponding JSON serialization.  <br><br> Occasionally applications need higher precision or longer integers than offered by the current implementation of <samp>Number</samp> in ES6 (and in most other JSON systems as well).  <a href="#json.bignumbers" class="xref">Appendix D</a> outlines how this can be achieved in a portable and extensible way.  </p>
 <h1 id="rfc.section.3.2.3">
 <a href="#rfc.section.3.2.3">3.2.3.</a> <a href="#json.sorting.properties" id="json.sorting.properties">Sorting of Object Properties</a>
 </h1>
 <p id="rfc.section.3.2.3.p.1">Although the previous step indeed 
 normalized the representation of primitive JSON data types, the result 
 would not qualify as "canonicalized" since <samp>Object</samp> properties are not in lexicographic (alphabetical) order.  <br><br> Applied to the sample in <a href="#json.serialization.data" class="xref">Section 3.2.2</a>, a properly canonicalized version should (with a line wrap added for display purposes only), read as: </p>
-<pre style="padding:1em 0.5em">  {"escaping":"&#x20AC;$\u000f\nA'B\"\\\\\"/","numbers":[1e+30,
-  4.5,6,0.002,1e-27],"other":[null,true,false]}</pre>
+<pre style="padding:1em 0.5em">  {"<span style="color:crimson">escaping</span>":"<span style="color:royalblue">&#x20AC;$\u000f\nA'B\"\\\\\"/</span>","<span style="color:crimson">numbers</span>":[<span style="color:green">1e+30</span>,
+  <span style="color:green">4.5</span>,<span style="color:green">6</span>,<span style="color:green">0.002</span>,<span style="color:green">1e-27</span>],"<span style="color:crimson">other</span>":[<span style="color:green">null</span>,<span style="color:green">true</span>,<span style="color:green">false</span>]}</pre>
 <p> </p>
 <p id="rfc.section.3.2.3.p.4">The rules for lexicographic sorting of JSON properties according to JCS are as follows: </p>
 
@@ -914,11 +914,11 @@ data already is canonicalized.  <br><br> In fact, the ES6 standard way of serial
 order they were created or received.  The example below shows an address
  record which could benefit from ES6 standard serialization: </p>
 <pre style="padding:1em 0.5em">  {
-    "Name": "John Doe",
-    "Address": "2000 Sunset Boulevard",
-    "City": "Los Angeles",
-    "Zip": "90001",
-    "State": "CA"
+    "<span style="color:crimson">Name</span>": "<span style="color:royalblue">John Doe</span>",
+    "<span style="color:crimson">Address</span>": "<span style="color:royalblue">2000 Sunset Boulevard</span>",
+    "<span style="color:crimson">City</span>": "<span style="color:royalblue">Los Angeles</span>",
+    "<span style="color:crimson">Zip</span>": "<span style="color:royalblue">90001</span>",
+    "<span style="color:crimson">State</span>": "<span style="color:royalblue">CA</span>"
   }</pre>
 <p></p>
 <p id="rfc.section.C.p.3">Using canonicalization the properties above 
@@ -933,9 +933,9 @@ you may even "Pretty&nbsp;Print" JSON data on the wire, since whitespace
 </h1>
 <p id="rfc.section.D.p.1">There are two major issues associated with the JSON <samp>Number</samp> type, here illustrated by the following sample object: </p>
 <pre style="padding:1em 0.5em">  {
-    "giantNumber": 1.4e+9999,
-    "payMeThis": 26000.33,
-    "int64Max": 9223372036854775807
+    "<span style="color:crimson">giantNumber</span>": <span style="color:green">1.4e+9999</span>,
+    "<span style="color:crimson">payMeThis</span>": <span style="color:green">26000.33</span>,
+    "<span style="color:crimson">int64Max</span>": <span style="color:green">9223372036854775807</span>
   }</pre>
 <p></p>
 <p id="rfc.section.D.p.3">Although the sample above conforms to JSON (according to <a href="#RFC8259" class="xref">[RFC8259]</a>), there are some practical hurdles to consider: </p>
@@ -946,7 +946,7 @@ way.  64-bit integers like "int64Max" normally pass through parsers, but
  in most systems (including ES6), at the expense of loss of precision.  </li>
 <li style="margin-top:0.8em">Another issue is that parsers typically would use different schemes 
 for handling "giantNumber" and "int64Max".  In addition, monetary data 
-like "payMeThis" would presumably not rely on a floating point scheme 
+like "payMeThis" would presumably not rely on a floating point system 
 due to rounding issues with respect to decimal arithmetic.  <br><br> The (to the author NB), only known way handling this kind of "overloading" of the <samp>Number</samp>
  type (at least in an extensible manner), is through mapping mechanisms,
  instructing parsers what to do with different properties based on their
@@ -954,10 +954,10 @@ due to rounding issues with respect to decimal arithmetic.  <br><br> The (to the
 </ul>
 
 <p> </p>
-<p id="rfc.section.D.p.5">For usage with JCS (and in fact any 
-application intended for usage by multiple parties potentially using 
-independently developed software), numbers that do not have a natural 
-place in the current JSON ecosystem MUST be wrapped using the JSON <samp>String</samp> type.  This is close to a de-facto standard for open systems.  Aided by a mapping system; be it programmatic like </p>
+<p id="rfc.section.D.p.5">For usage with JCS (and in fact for any usage 
+of JSON by multiple parties potentially using independently developed 
+software), numbers that do not have a natural place in the current JSON 
+ecosystem MUST be wrapped using the JSON <samp>String</samp> type.  This is close to a de-facto standard for open systems.  <br><br> Aided by a mapping system; be it programmatic like </p>
 <pre style="padding:1em 0.5em">  <span style="color:blue">var</span> obj = <span style="color:brown">JSON</span>.parse(<span style="color:green">'{"giantNumber": "1.4e+9999"}'</span>);
   <span style="color:blue">var</span> biggie = <span style="color:blue">new</span> BigNum(obj.giantNumber);</pre>
 <p></p>
