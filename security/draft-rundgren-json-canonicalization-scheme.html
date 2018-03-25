@@ -691,17 +691,17 @@ position at which they differ, then the shorter string lexicographically
 <p> </p>
 <p id="rfc.section.3.2.3.p.6">The rationale for basing the sort 
 algorithm on UCS2/UTF-16 code units is that it maps directly to the 
-string type in ECMAScript, Java, .NET and Python&nbsp;3.  Systems using 
-another representation of string data will need to convert JSON property
- strings into arrays of UCS2/UTF-16 code units before sorting.  <br><br>
- Note: for the purpose obtaining a deterministic property order, sorting
- on UTF-8 or UTF-32 encoded data would also work, but the result would 
+string type in ECMAScript, Java and .NET.  Systems using another 
+representation of string data will need to convert JSON property strings
+ into arrays of UCS2/UTF-16 code units before sorting.  <br><br> Note: 
+for the purpose obtaining a deterministic property order, sorting on 
+UTF-8 or UTF-32 encoded data would also work, but the result would 
 differ (and thus be incompatible with this specification).  </p>
 <p><a href="#canonicalize.js" class="xref">Appendix A</a> shows the code for an ES6 based canonicalizer, matching JCS.  </p>
 <h1 id="rfc.section.3.2.4">
 <a href="#rfc.section.3.2.4">3.2.4.</a> <a href="#json.utf8" id="json.utf8">UTF-8 Generation</a>
 </h1>
-<p id="rfc.section.3.2.4.p.1">Finally, the resulting string data MUST be converted into an UTF-8 formatted array.  <br><br> Applied to the sample in <a href="#json.sorting.properties" class="xref">Section 3.2.3</a> this should yield the following bytes here shown in hexadecimal notation: </p>
+<p id="rfc.section.3.2.4.p.1">Finally, the resulting JSON string data MUST be encoded in UTF-8.  <br><br> Applied to the sample in <a href="#json.sorting.properties" class="xref">Section 3.2.3</a> this should yield the following bytes here shown in hexadecimal notation: </p>
 <pre style="padding:1em 0.5em">  7b 22 65 73 63 61 70 69 6e 67 22 3a 22 e2 82 ac 24 5c 75 30
   30 30 66 5c 6e 41 27 42 5c 22 5c 5c 5c 5c 5c 22 2f 22 2c 22
   6e 75 6d 62 65 72 73 22 3a 5b 31 65 2b 33 30 2c 34 2e 35 2c
