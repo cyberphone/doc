@@ -846,7 +846,9 @@ considerably but would also be more difficult to follow by non-experts.
                       buffer += <span style="color:green">','</span>;
                   }
                   next = <span style="color:blue">true</span>;
-                  <span style="color:#808080">// Recursive call</span>
+                  <span style="color:#808080">/////////////////////////////////////////</span>
+                  <span style="color:#808080">// Array element - Recursive expansion //</span>
+                  <span style="color:#808080">/////////////////////////////////////////</span>
                   serialize(element);
               });
               buffer += <span style="color:green">']'</span>;
@@ -862,10 +864,14 @@ considerably but would also be more difficult to follow by non-experts.
                       buffer += <span style="color:green">','</span>;
                   }
                   next = <span style="color:blue">true</span>;
-                  <span style="color:#808080">// Properties are just strings - Use ES6/JSON</span>
+                  <span style="color:#808080">///////////////////////////////////////////////</span>
+                  <span style="color:#808080">// Property names are strings - Use ES6/JSON //</span>
+                  <span style="color:#808080">///////////////////////////////////////////////</span>
                   buffer += <span style="color:brown">JSON</span>.stringify(property);
                   buffer += <span style="color:green">':'</span>;
-                  <span style="color:#808080">// Recursive call</span>
+                  <span style="color:#808080">//////////////////////////////////////////</span>
+                  <span style="color:#808080">// Property value - Recursive expansion //</span>
+                  <span style="color:#808080">//////////////////////////////////////////</span>
                   serialize(object[property]);
               });
               buffer += <span style="color:green">'}'</span>;
