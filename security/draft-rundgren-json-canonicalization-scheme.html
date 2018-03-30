@@ -411,7 +411,7 @@ border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,ver
 
   <meta name="dct.creator" content="Rundgren, A.">
   <meta name="dct.identifier" content="urn:ietf:id:draft-rundgren-json-canonicalization-scheme-00">
-  <meta name="dct.issued" scheme="ISO8601" content="2018-29">
+  <meta name="dct.issued" scheme="ISO8601" content="2018-30">
   <meta name="dct.abstract" content="Cryptographic operations like hashing and signing depend on that the target data does not change during serialization, transport, or parsing.  By applying the rules defined by JCS (JSON Canonicalization Scheme), data provided in the JSON ">
   <meta name="description" content="Cryptographic operations like hashing and signing depend on that the target data does not change during serialization, transport, or parsing.  By applying the rules defined by JCS (JSON Canonicalization Scheme), data provided in the JSON ">
 
@@ -432,10 +432,10 @@ border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,ver
 </tr>
 <tr>
 <td class="left">Intended status: Standards Track</td>
-<td class="right">March 29, 2018</td>
+<td class="right">March 30, 2018</td>
 </tr>
 <tr>
-<td class="left">Expires: September 30, 2018</td>
+<td class="left">Expires: October 1, 2018</td>
 <td class="right"></td>
 </tr>
 
@@ -453,8 +453,8 @@ target data does not change during serialization, transport, or parsing.
 data provided in the JSON <a href="#RFC8259" class="xref">[RFC8259]</a> 
 format can be exchanged "as is", while still being subject to secure 
 cryptographic operations.  JCS achieves this by exploiting the strict 
-operation of the JSON serialization method defined in ECMAScript 
-beginning with version 6 <a href="#ES6" class="xref">[ES6]</a>.  </p>
+serialization of JSON data defined in ECMAScript, beginning with version
+ 6 <a href="#ES6" class="xref">[ES6]</a>.  </p>
 <p>The intended audiences of this document are JSON tool vendors, as well as designers of JSON based cryptographic solutions.  </p>
 <h1 id="rfc.status"><a href="#rfc.status">Status of This Memo</a></h1>
 <p>This Internet-Draft is submitted in full conformance with the provisions of BCP 78 and BCP 79.</p>
@@ -466,7 +466,7 @@ documents as Internet-Drafts.  The list of current Internet-Drafts is at
  and may be updated, replaced, or obsoleted by other documents at any 
 time.  It is inappropriate to use Internet-Drafts as reference material 
 or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on September 30, 2018.</p><p><i>Note: this document has been slightly "enhanced" to make it more readable.</i></p>
+<p>This Internet-Draft will expire on October 1, 2018.</p><p><i>Note: this document has been slightly "enhanced" to make it more readable.</i></p>
 <h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
 <p>Copyright (c) 2018 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal 
@@ -562,8 +562,8 @@ this particular effort would succeed. The reasons are twofold: </p>
 
 <p> </p>
 <p id="rfc.section.1.p.4">The JCS specification describes how JSON 
-serializing rules compliant with ES6 combined with an elementary sorting
- scheme, can be used for supporting "Crypto&nbsp;Safe" JSON.  </p>
+serializing rules compliant with ES6 combined with an <i>elementary sorting
+ scheme</i>, can be used for supporting "Crypto&nbsp;Safe" JSON.  </p>
 <p id="rfc.section.1.p.5">JCS is compatible with some existing systems relying on JSON canonicalization such as JWK Thumbprint <a href="#RFC7638" class="xref">[RFC7638]</a> and Keybase <a href="#KEYBASE" class="xref">[KEYBASE]</a>.  </p>
 <h1 id="rfc.section.2">
 <a href="#rfc.section.2">2.</a> <a href="#Terminology" id="Terminology">Terminology</a>
@@ -963,9 +963,9 @@ due to rounding issues with respect to decimal arithmetic.  <br><br> The (to the
 </ul>
 
 <p> </p>
-<p id="rfc.section.D.p.5">For usage with JCS (and in fact for any usage 
+<p id="rfc.section.D.p.5">For usage with JCS (<i>and in fact for any usage 
 of JSON by multiple parties potentially using independently developed 
-software), numbers that do not have a natural place in the current JSON 
+software</i>), numbers that do not have a natural place in the current JSON 
 ecosystem MUST be wrapped using the JSON <samp>String</samp> type.  This is close to a de-facto standard for open systems.  <br><br> Aided by a mapping system; be it programmatic like </p>
 <pre style="padding:1em 0.5em">  <span style="color:blue">var</span> obj = <span style="color:brown">JSON</span>.parse(<span style="color:green">'{"giantNumber": "1.4e+9999"}'</span>);
   <span style="color:blue">var</span> biggie = <span style="color:blue">new</span> BigNum(obj.giantNumber);</pre>
