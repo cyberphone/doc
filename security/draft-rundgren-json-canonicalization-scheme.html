@@ -411,7 +411,6 @@ border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,ver
 
   <meta name="dct.creator" content="Rundgren, A.">
   <meta name="dct.identifier" content="urn:ietf:id:draft-rundgren-json-canonicalization-scheme-00">
-  <meta name="dct.issued" scheme="ISO8601" content="2018-30">
   <meta name="dct.abstract" content="Cryptographic operations like hashing and signing depend on that the target data does not change during serialization, transport, or parsing.  By applying the rules defined by JCS (JSON Canonicalization Scheme), data provided in the JSON ">
   <meta name="description" content="Cryptographic operations like hashing and signing depend on that the target data does not change during serialization, transport, or parsing.  By applying the rules defined by JCS (JSON Canonicalization Scheme), data provided in the JSON ">
 
@@ -432,10 +431,8 @@ border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,ver
 </tr>
 <tr>
 <td class="left">Intended status: Standards Track</td>
-<td class="right">March 30, 2018</td>
 </tr>
 <tr>
-<td class="left">Expires: October 1, 2018</td>
 <td class="right"></td>
 </tr>
 
@@ -466,7 +463,6 @@ documents as Internet-Drafts.  The list of current Internet-Drafts is at
  and may be updated, replaced, or obsoleted by other documents at any 
 time.  It is inappropriate to use Internet-Drafts as reference material 
 or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on October 1, 2018.</p><p><i>Note: this document has been slightly "enhanced" to make it more readable.</i></p>
 <h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
 <p>Copyright (c) 2018 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal 
@@ -612,14 +608,14 @@ steps needed in order to create a canonicalized version of internal JSON
 </h1>
 <p id="rfc.section.3.2.2.p.1">Assume that you parse a JSON object like the following: </p>
 <pre style="padding:1em 0.5em">  {
-    "<span style="color:crimson">escaping</span>": "<span style="color:royalblue">\u20ac$\u000F\u000aA'\u0042\u0022\u005c\\\"\/</span>",
-    "<span style="color:crimson">other</span>":  [<span style="color:green">null</span>, <span style="color:green">true</span>, <span style="color:green">false</span>],
-    "<span style="color:crimson">numbers</span>": [<span style="color:green">1E30</span>, <span style="color:green">4.50</span>, <span style="color:green">6</span>, <span style="color:green">2e-3</span>, <span style="color:green">0.000000000000000000000000001</span>]
+    "<span style="color:brown">escaping</span>": "<span style="color:royalblue">\u20ac$\u000F\u000aA'\u0042\u0022\u005c\\\"\/</span>",
+    "<span style="color:brown">other</span>":  [<span style="color:green">null</span>, <span style="color:green">true</span>, <span style="color:green">false</span>],
+    "<span style="color:brown">numbers</span>": [<span style="color:green">1E30</span>, <span style="color:green">4.50</span>, <span style="color:green">6</span>, <span style="color:green">2e-3</span>, <span style="color:green">0.000000000000000000000000001</span>]
   }</pre>
 <p></p>
 <p id="rfc.section.3.2.2.p.3">If you subsequently serialize the object created by the operation above using an serializer compliant with ES6's <samp>JSON.stringify()</samp>, the result would (with a line wrap added for display purposes only), be rather divergent with respect to data representation: </p>
-<pre style="padding:1em 0.5em">  {"<span style="color:crimson">escaping</span>":"<span style="color:royalblue">&#x20AC;$\u000f\nA'B\"\\\\\"/</span>","<span style="color:crimson">other</span>":[<span style="color:green">null</span>,<span style="color:green">true</span>,
-  <span style="color:green">false</span>],"<span style="color:crimson">numbers</span>":[<span style="color:green">1e+30</span>,<span style="color:green">4.5</span>,<span style="color:green">6</span>,<span style="color:green">0.002</span>,<span style="color:green">1e-27</span>]}</pre>
+<pre style="padding:1em 0.5em">  {"<span style="color:brown">escaping</span>":"<span style="color:royalblue">&#x20AC;$\u000f\nA'B\"\\\\\"/</span>","<span style="color:brown">other</span>":[<span style="color:green">null</span>,<span style="color:green">true</span>,
+  <span style="color:green">false</span>],"<span style="color:brown">numbers</span>":[<span style="color:green">1e+30</span>,<span style="color:green">4.5</span>,<span style="color:green">6</span>,<span style="color:green">0.002</span>,<span style="color:green">1e-27</span>]}</pre>
 <p> </p>
 <p id="rfc.section.3.2.2.p.6">The reason for the huge difference between
  the parsed data and its serialized counterpart, is due to a wider 
@@ -662,8 +658,8 @@ V8 <a href="#V8" class="xref">[V8]</a>.  <br><br> Due to the relative complexity
 <p id="rfc.section.3.2.3.p.1">Although the previous step indeed 
 normalized the representation of primitive JSON data types, the result 
 would not qualify as "canonicalized" since <samp>Object</samp> properties are not in lexicographic (alphabetical) order.  <br><br> Applied to the sample in <a href="#json.serialization.data" class="xref">Section 3.2.2</a>, a properly canonicalized version should (with a line wrap added for display purposes only), read as: </p>
-<pre style="padding:1em 0.5em">  {"<span style="color:crimson">escaping</span>":"<span style="color:royalblue">&#x20AC;$\u000f\nA'B\"\\\\\"/</span>","<span style="color:crimson">numbers</span>":[<span style="color:green">1e+30</span>,
-  <span style="color:green">4.5</span>,<span style="color:green">6</span>,<span style="color:green">0.002</span>,<span style="color:green">1e-27</span>],"<span style="color:crimson">other</span>":[<span style="color:green">null</span>,<span style="color:green">true</span>,<span style="color:green">false</span>]}</pre>
+<pre style="padding:1em 0.5em">  {"<span style="color:brown">escaping</span>":"<span style="color:royalblue">&#x20AC;$\u000f\nA'B\"\\\\\"/</span>","<span style="color:brown">numbers</span>":[<span style="color:green">1e+30</span>,
+  <span style="color:green">4.5</span>,<span style="color:green">6</span>,<span style="color:green">0.002</span>,<span style="color:green">1e-27</span>],"<span style="color:brown">other</span>":[<span style="color:green">null</span>,<span style="color:green">true</span>,<span style="color:green">false</span>]}</pre>
 <p> </p>
 <p id="rfc.section.3.2.3.p.4">The rules for lexicographic sorting of JSON properties according to JCS are as follows: </p>
 
@@ -886,26 +882,28 @@ considerably but would also be more difficult to follow by non-experts.
  serialization samples, including some edge cases.  The field  
 "ES6&nbsp;Internal" refers to the internal ES6 representation of the <samp>Number</samp> data type which is based on the IEEE-754 <a href="#IEEE754" class="xref">[IEEE754]</a> standard using 64-bit (double precision) values, here expressed in hexadecimal.  </p>
 <table style="margin-left:3em" class="tftable"><tr><th>ES6 Internal</th><th>JSON Representation</th><th>Comment</th></tr>
-<tr><td><tt style="font-size:12pt">0000000000000000</tt></td><td>0                       </td><td>Zero             </td></tr>
-<tr><td><tt style="font-size:12pt">8000000000000000</tt></td><td>0                       </td><td>Minus zero       </td></tr>
-<tr><td><tt style="font-size:12pt">0000000000000001</tt></td><td>5e-324                  </td><td>Smallest positive</td></tr>
-<tr><td><tt style="font-size:12pt">8000000000000001</tt></td><td>-5e-324                 </td><td>Smallest negative</td></tr>
-<tr><td><tt style="font-size:12pt">7fefffffffffffff</tt></td><td>1.7976931348623157e+308 </td><td>Largest positive </td></tr>
-<tr><td><tt style="font-size:12pt">ffefffffffffffff</tt></td><td>-1.7976931348623157e+308</td><td>Largest negative </td></tr>
-<tr><td><tt style="font-size:12pt">7fffffffffffffff</tt></td><td>                        </td><td>Error (NaN)      </td></tr>
-<tr><td><tt style="font-size:12pt">7ff0000000000000</tt></td><td>                        </td><td>Error (Infinity) </td></tr>
-<tr><td><tt style="font-size:12pt">44b52d02c7e14af5</tt></td><td>9.999999999999997e+22   </td><td>                 </td></tr>
-<tr><td><tt style="font-size:12pt">44b52d02c7e14af6</tt></td><td>1e+23                   </td><td>                 </td></tr>
-<tr><td><tt style="font-size:12pt">44b52d02c7e14af7</tt></td><td>1.0000000000000001e+23  </td><td>                 </td></tr>
-<tr><td><tt style="font-size:12pt">444b1ae4d6e2ef4e</tt></td><td>999999999999999700000   </td><td>                 </td></tr>
-<tr><td><tt style="font-size:12pt">444b1ae4d6e2ef4f</tt></td><td>999999999999999900000   </td><td>                 </td></tr>
-<tr><td><tt style="font-size:12pt">444b1ae4d6e2ef50</tt></td><td>1e+21                   </td><td>                 </td></tr>
-<tr><td><tt style="font-size:12pt">444b1ae4d6e2ef51</tt></td><td>1.0000000000000001e+21  </td><td>                 </td></tr>
-<tr><td><tt style="font-size:12pt">41b3de4355555553</tt></td><td>333333333.3333332       </td><td>                 </td></tr>
-<tr><td><tt style="font-size:12pt">41b3de4355555554</tt></td><td>333333333.33333325      </td><td>                 </td></tr>
-<tr><td><tt style="font-size:12pt">41b3de4355555555</tt></td><td>333333333.3333333       </td><td>                 </td></tr>
-<tr><td><tt style="font-size:12pt">41b3de4355555556</tt></td><td>333333333.3333334       </td><td>                 </td></tr>
-<tr><td><tt style="font-size:12pt">41b3de4355555557</tt></td><td>333333333.33333343      </td><td>                 </td></tr>
+<tr><td><tt style="font-size:12pt">0000000000000000</tt></td><td>0                       </td><td>Zero               </td></tr>
+<tr><td><tt style="font-size:12pt">8000000000000000</tt></td><td>0                       </td><td>Minus zero         </td></tr>
+<tr><td><tt style="font-size:12pt">0000000000000001</tt></td><td>5e-324                  </td><td>Smallest pos number</td></tr>
+<tr><td><tt style="font-size:12pt">8000000000000001</tt></td><td>-5e-324                 </td><td>Smallest neg number</td></tr>
+<tr><td><tt style="font-size:12pt">7fefffffffffffff</tt></td><td>1.7976931348623157e+308 </td><td>Largest pos number </td></tr>
+<tr><td><tt style="font-size:12pt">ffefffffffffffff</tt></td><td>-1.7976931348623157e+308</td><td>Largest neg number </td></tr>
+<tr><td><tt style="font-size:12pt">433fffffffffffff</tt></td><td>9007199254740991        </td><td>Largest pos integer</td></tr>
+<tr><td><tt style="font-size:12pt">c33fffffffffffff</tt></td><td>-9007199254740991       </td><td>Largest neg integer</td></tr>
+<tr><td><tt style="font-size:12pt">7fffffffffffffff</tt></td><td>                        </td><td>Error (NaN)        </td></tr>
+<tr><td><tt style="font-size:12pt">7ff0000000000000</tt></td><td>                        </td><td>Error (Infinity)   </td></tr>
+<tr><td><tt style="font-size:12pt">44b52d02c7e14af5</tt></td><td>9.999999999999997e+22   </td><td>                   </td></tr>
+<tr><td><tt style="font-size:12pt">44b52d02c7e14af6</tt></td><td>1e+23                   </td><td>                   </td></tr>
+<tr><td><tt style="font-size:12pt">44b52d02c7e14af7</tt></td><td>1.0000000000000001e+23  </td><td>                   </td></tr>
+<tr><td><tt style="font-size:12pt">444b1ae4d6e2ef4e</tt></td><td>999999999999999700000   </td><td>                   </td></tr>
+<tr><td><tt style="font-size:12pt">444b1ae4d6e2ef4f</tt></td><td>999999999999999900000   </td><td>                   </td></tr>
+<tr><td><tt style="font-size:12pt">444b1ae4d6e2ef50</tt></td><td>1e+21                   </td><td>                   </td></tr>
+<tr><td><tt style="font-size:12pt">444b1ae4d6e2ef51</tt></td><td>1.0000000000000001e+21  </td><td>                   </td></tr>
+<tr><td><tt style="font-size:12pt">41b3de4355555553</tt></td><td>333333333.3333332       </td><td>                   </td></tr>
+<tr><td><tt style="font-size:12pt">41b3de4355555554</tt></td><td>333333333.33333325      </td><td>                   </td></tr>
+<tr><td><tt style="font-size:12pt">41b3de4355555555</tt></td><td>333333333.3333333       </td><td>                   </td></tr>
+<tr><td><tt style="font-size:12pt">41b3de4355555556</tt></td><td>333333333.3333334       </td><td>                   </td></tr>
+<tr><td><tt style="font-size:12pt">41b3de4355555557</tt></td><td>333333333.33333343      </td><td>                   </td></tr>
 </table>
 <p></p>
 <h1 id="rfc.appendix.C">
@@ -920,11 +918,11 @@ data already is canonicalized</i>.  <br><br> In fact, the ES6 standard way of se
 order they were created or received.  The example below shows an address
  record which could benefit from ES6 standard serialization: </p>
 <pre style="padding:1em 0.5em">  {
-    "<span style="color:crimson">Name</span>": "<span style="color:royalblue">John Doe</span>",
-    "<span style="color:crimson">Address</span>": "<span style="color:royalblue">2000 Sunset Boulevard</span>",
-    "<span style="color:crimson">City</span>": "<span style="color:royalblue">Los Angeles</span>",
-    "<span style="color:crimson">Zip</span>": "<span style="color:royalblue">90001</span>",
-    "<span style="color:crimson">State</span>": "<span style="color:royalblue">CA</span>"
+    "<span style="color:brown">Name</span>": "<span style="color:royalblue">John Doe</span>",
+    "<span style="color:brown">Address</span>": "<span style="color:royalblue">2000 Sunset Boulevard</span>",
+    "<span style="color:brown">City</span>": "<span style="color:royalblue">Los Angeles</span>",
+    "<span style="color:brown">Zip</span>": "<span style="color:royalblue">90001</span>",
+    "<span style="color:brown">State</span>": "<span style="color:royalblue">CA</span>"
   }</pre>
 <p></p>
 <p id="rfc.section.C.p.3">Using canonicalization the properties above 
@@ -942,9 +940,9 @@ you may even "Pretty&nbsp;Print" JSON data on the wire, since whitespace
 </h1>
 <p id="rfc.section.D.p.1">There are two major issues associated with the JSON <samp>Number</samp> type, here illustrated by the following sample object: </p>
 <pre style="padding:1em 0.5em">  {
-    "<span style="color:crimson">giantNumber</span>": <span style="color:green">1.4e+9999</span>,
-    "<span style="color:crimson">payMeThis</span>": <span style="color:green">26000.33</span>,
-    "<span style="color:crimson">int64Max</span>": <span style="color:green">9223372036854775807</span>
+    "<span style="color:brown">giantNumber</span>": <span style="color:green">1.4e+9999</span>,
+    "<span style="color:brown">payMeThis</span>": <span style="color:green">26000.33</span>,
+    "<span style="color:brown">int64Max</span>": <span style="color:green">9223372036854775807</span>
   }</pre>
 <p></p>
 <p id="rfc.section.D.p.3">Although the sample above conforms to JSON (according to <a href="#RFC8259" class="xref">[RFC8259]</a>), there are some practical hurdles to consider: </p>
