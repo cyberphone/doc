@@ -411,7 +411,7 @@ border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,ver
 
   <meta name="dct.creator" content="Rundgren, A.">
   <meta name="dct.identifier" content="urn:ietf:id:draft-rundgren-json-canonicalization-scheme-00">
-  <meta name="dct.issued" scheme="ISO8601" content="2018-31">
+  <meta name="dct.issued" scheme="ISO8601" content="2018-02">
   <meta name="dct.abstract" content="Cryptographic operations like hashing and signing depend on that the target data does not change during serialization, transport, or parsing.  By applying the rules defined by JCS (JSON Canonicalization Scheme), data provided in the JSON ">
   <meta name="description" content="Cryptographic operations like hashing and signing depend on that the target data does not change during serialization, transport, or parsing.  By applying the rules defined by JCS (JSON Canonicalization Scheme), data provided in the JSON ">
 
@@ -432,10 +432,10 @@ border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,ver
 </tr>
 <tr>
 <td class="left">Intended status: Standards Track</td>
-<td class="right">Mars 31, 2018</td>
+<td class="right">April 2, 2018</td>
 </tr>
 <tr>
-<td class="left">Expires: October 2, 2018</td>
+<td class="left">Expires: October 4, 2018</td>
 <td class="right"></td>
 </tr>
 
@@ -466,7 +466,7 @@ documents as Internet-Drafts.  The list of current Internet-Drafts is at
  and may be updated, replaced, or obsoleted by other documents at any 
 time.  It is inappropriate to use Internet-Drafts as reference material 
 or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on October 2, 2018.</p><p><i>Note: this document has been slightly "enhanced" to make it more readable.</i></p>
+<p>This Internet-Draft will expire on October 4, 2018.</p><p><i>Note: this document has been slightly "enhanced" to make it more readable.</i></p>
 <h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
 <p>Copyright (c) 2018 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal 
@@ -582,12 +582,12 @@ interpreted as described in BCP 14 <a href="#RFC2119" class="xref">[RFC2119]</a>
 <p id="rfc.section.3.1.p.1">In order to canonicalize JSON data, an internal representation of the JSON data is needed.  This can be achieved by: </p>
 <p></p>
 
-<ul><li>Parsing externally supplied JSON data which MUST conform to <a href="#RFC8259" class="xref">[RFC8259]</a>.  </li>
+<ul><li>Parsing externally supplied JSON data.  </li>
 <li style="margin-top:0.8em">Programmatic creation of JSON data.  </li>
 </ul>
 
 <p> </p>
-<p id="rfc.section.3.1.p.3">Irrespective of method used, the internal representation of JSON data MUST be compatible both with ES6 and <a href="#RFC8259" class="xref">[RFC8259]</a> which implies the following: </p>
+<p id="rfc.section.3.1.p.3">Irrespective of method used, the JSON data MUST be compatible both with ES6 and I-JSON <a href="#RFC7493" class="xref">[RFC7493]</a>, which implies the following: </p>
 <p></p>
 
 <ul><li>There MUST NOT be any duplicate property names within an <samp>Object</samp>.  </li>
@@ -596,7 +596,6 @@ interpreted as described in BCP 14 <a href="#RFC2119" class="xref">[RFC2119]</a>
 </ul>
 
 <p> </p>
-<p id="rfc.section.3.1.p.5">These restrictions on JSON data are also compliant with I-JSON <a href="#RFC7493" class="xref">[RFC7493]</a>.  </p>
 <h1 id="rfc.section.3.2">
 <a href="#rfc.section.3.2">3.2.</a> <a href="#json.canonicalization" id="json.canonicalization">JSON Canonicalization</a>
 </h1>
@@ -614,12 +613,13 @@ steps needed in order to create a canonicalized version of internal JSON
 <pre style="padding:1em 0.5em">  {
     "<span style="color:brown">escaping</span>": "<span style="color:royalblue">\u20ac$\u000F\u000aA'\u0042\u0022\u005c\\\"\/</span>",
     "<span style="color:brown">other</span>":  [<span style="color:green">null</span>, <span style="color:green">true</span>, <span style="color:green">false</span>],
-    "<span style="color:brown">numbers</span>": [<span style="color:green">1E30</span>, <span style="color:green">4.50</span>, <span style="color:green">6</span>, <span style="color:green">2e-3</span>, <span style="color:green">0.000000000000000000000000001</span>]
+    "<span style="color:brown">numbers</span>": [<span style="color:green">1E30</span>, <span style="color:green">4.50</span>, <span style="color:green">333333333.33333329</span>,
+                <span style="color:green">2e-3</span>, <span style="color:green">0.000000000000000000000000001</span>]
   }</pre>
 <p></p>
 <p id="rfc.section.3.2.2.p.3">If you subsequently serialize the object created by the operation above using an serializer compliant with ES6's <samp>JSON.stringify()</samp>, the result would (with a line wrap added for display purposes only), be rather divergent with respect to data representation: </p>
 <pre style="padding:1em 0.5em">  {"<span style="color:brown">escaping</span>":"<span style="color:royalblue">&#x20AC;$\u000f\nA'B\"\\\\\"/</span>","<span style="color:brown">other</span>":[<span style="color:green">null</span>,<span style="color:green">true</span>,
-  <span style="color:green">false</span>],"<span style="color:brown">numbers</span>":[<span style="color:green">1e+30</span>,<span style="color:green">4.5</span>,<span style="color:green">6</span>,<span style="color:green">0.002</span>,<span style="color:green">1e-27</span>]}</pre>
+  <span style="color:green">false</span>],"<span style="color:brown">numbers</span>":[<span style="color:green">1e+30</span>,<span style="color:green">4.5</span>,<span style="color:green">333333333.3333333</span>,<span style="color:green">0.002</span>,<span style="color:green">1e-27</span>]}</pre>
 <p> </p>
 <p id="rfc.section.3.2.2.p.6">The reason for the huge difference between
  the parsed data and its serialized counterpart, is due to a wider 
@@ -663,7 +663,7 @@ V8 <a href="#V8" class="xref">[V8]</a>.  <br><br> Due to the relative complexity
 normalized the representation of primitive JSON data types, the result 
 would not qualify as "canonicalized" since <samp>Object</samp> properties are not in lexicographic (alphabetical) order.  <br><br> Applied to the sample in <a href="#json.serialization.data" class="xref">Section 3.2.2</a>, a properly canonicalized version should (with a line wrap added for display purposes only), read as: </p>
 <pre style="padding:1em 0.5em">  {"<span style="color:brown">escaping</span>":"<span style="color:royalblue">&#x20AC;$\u000f\nA'B\"\\\\\"/</span>","<span style="color:brown">numbers</span>":[<span style="color:green">1e+30</span>,
-  <span style="color:green">4.5</span>,<span style="color:green">6</span>,<span style="color:green">0.002</span>,<span style="color:green">1e-27</span>],"<span style="color:brown">other</span>":[<span style="color:green">null</span>,<span style="color:green">true</span>,<span style="color:green">false</span>]}</pre>
+  <span style="color:green">4.5</span>,<span style="color:green">333333333.3333333</span>,<span style="color:green">0.002</span>,<span style="color:green">1e-27</span>],"<span style="color:brown">other</span>":[<span style="color:green">null</span>,<span style="color:green">true</span>,<span style="color:green">false</span>]}</pre>
 <p> </p>
 <p id="rfc.section.3.2.3.p.4">The rules for lexicographic sorting of JSON properties according to JCS are as follows: </p>
 
@@ -705,9 +705,9 @@ differ (and thus be incompatible with this specification).  </p>
 <pre style="padding:1em 0.5em">  7b 22 65 73 63 61 70 69 6e 67 22 3a 22 e2 82 ac 24 5c 75 30
   30 30 66 5c 6e 41 27 42 5c 22 5c 5c 5c 5c 5c 22 2f 22 2c 22
   6e 75 6d 62 65 72 73 22 3a 5b 31 65 2b 33 30 2c 34 2e 35 2c
-  36 2c 30 2e 30 30 32 2c 31 65 2d 32 37 5d 2c 22 6f 74 68 65
-  72 22 3a 5b 6e 75 6c 6c 2c 74 72 75 65 2c 66 61 6c 73 65 5d
-  7d</pre>
+  33 33 33 33 33 33 33 33 33 2e 33 33 33 33 33 33 33 2c 30 2e
+  30 30 32 2c 31 65 2d 32 37 5d 2c 22 6f 74 68 65 72 22 3a 5b
+  6e 75 6c 6c 2c 74 72 75 65 2c 66 61 6c 73 65 5d 7d</pre>
 <p></p>
 <p id="rfc.section.3.2.4.p.3">This data is intended to be usable as interoperable input to cryptographic functions.  </p>
 <p id="rfc.section.3.2.4.p.4">For other uses see <a href="#json.wireformat" class="xref">Appendix C</a>.  </p>
@@ -749,6 +749,11 @@ Michal Wadas.  </p>
 <a>Bradner, S.</a>, "<a href="https://tools.ietf.org/html/rfc2119">Key words for use in RFCs to Indicate Requirement Levels</a>", BCP 14, RFC 2119, DOI 10.17487/RFC2119, March 1997.</td>
 </tr>
 <tr>
+<td class="reference"><b id="RFC7493">[RFC7493]</b></td>
+<td class="top">
+<a>Bray, T.</a>, "<a href="https://tools.ietf.org/html/rfc7493">The I-JSON Message Format</a>", RFC 7493, DOI 10.17487/RFC7493, March 2015.</td>
+</tr>
+<tr>
 <td class="reference"><b id="RFC8174">[RFC8174]</b></td>
 <td class="top">
 <a>Leiba, B.</a>, "<a href="https://tools.ietf.org/html/rfc8174">Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words</a>", BCP 14, RFC 8174, DOI 10.17487/RFC8174, May 2017.</td>
@@ -787,11 +792,6 @@ Michal Wadas.  </p>
 <td class="reference"><b id="RFC4648">[RFC4648]</b></td>
 <td class="top">
 <a>Josefsson, S.</a>, "<a href="https://tools.ietf.org/html/rfc4648">The Base16, Base32, and Base64 Data Encodings</a>", RFC 4648, DOI 10.17487/RFC4648, October 2006.</td>
-</tr>
-<tr>
-<td class="reference"><b id="RFC7493">[RFC7493]</b></td>
-<td class="top">
-<a>Bray, T.</a>, "<a href="https://tools.ietf.org/html/rfc7493">The I-JSON Message Format</a>", RFC 7493, DOI 10.17487/RFC7493, March 2015.</td>
 </tr>
 <tr>
 <td class="reference"><b id="RFC7515">[RFC7515]</b></td>
