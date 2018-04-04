@@ -921,16 +921,16 @@ data already is canonicalized</i>.  <br><br> In fact, the ES6 standard way of se
 order they were created or received.  The example below shows an address
  record which could benefit from ES6 standard serialization: </p>
 <pre style="padding:1em 0.5em">  {
-    "<span style="color:brown">Name</span>": "<span style="color:royalblue">John Doe</span>",
-    "<span style="color:brown">Address</span>": "<span style="color:royalblue">2000 Sunset Boulevard</span>",
-    "<span style="color:brown">City</span>": "<span style="color:royalblue">Los Angeles</span>",
-    "<span style="color:brown">Zip</span>": "<span style="color:royalblue">90001</span>",
-    "<span style="color:brown">State</span>": "<span style="color:royalblue">CA</span>"
+    "<span style="color:brown">name</span>": "<span style="color:royalblue">John Doe</span>",
+    "<span style="color:brown">address</span>": "<span style="color:royalblue">2000 Sunset Boulevard</span>",
+    "<span style="color:brown">city</span>": "<span style="color:royalblue">Los Angeles</span>",
+    "<span style="color:brown">zip</span>": "<span style="color:royalblue">90001</span>",
+    "<span style="color:brown">state</span>": "<span style="color:royalblue">CA</span>"
   }</pre>
 <p></p>
 <p id="rfc.section.C.p.3">Using canonicalization the properties above 
-would be output in the order "Address", "City", "Name", "State" and 
-"Zip", which adds fuzziness to the data from a human (developer or 
+would be output in the order "address", "city", "name", "state" and 
+"zip", which adds fuzziness to the data from a human (developer or 
 technical support), perspective.  </p>
 <p id="rfc.section.C.p.4">That is, for many applications, 
 canonicalization would only be used internally for creating a "hashable"
