@@ -621,8 +621,10 @@ steps needed in order to create a canonicalized version of internal JSON
   "<span style="color:royalblue">\u20ac$\u000f\nA'B\"\\\\\"/</span>","<span style="color:brown">literals</span>":[<span style="color:green">null</span>,<span style="color:green">true</span>,<span style="color:green">false</span>]}</pre>
 <p> </p>
 <p id="rfc.section.3.2.2.p.6">The reason for the huge difference between
- the parsed data and its serialized counterpart, is due to a wider 
-tolerance on input data (as defined by <a href="#RFC8259" class="xref">[RFC8259]</a>) than on output data (as defined by ES6).  <br><br>
+ the parsed data and its serialized counterpart, is due to a wide 
+tolerance on input data (as defined by <a href="#RFC8259" class="xref">[RFC8259]</a>),
+ while output data (as defined by ES6), has a fixed representation.  As 
+can be seen by the example, numbers are subject to rounding as well.  <br><br>
  The following sub sections describe serialization of primitive JSON 
 data types according to JCS.  This part is identical to that of ES6.  </p>
 <h1 id="rfc.section.3.2.2.1">
