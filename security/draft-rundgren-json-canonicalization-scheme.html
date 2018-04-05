@@ -547,15 +547,15 @@ accomplishing this is converting the data into a format which has a
 simple and fixed representation like Base64Url <a href="#RFC4648" class="xref">[RFC4648]</a> which for example have been used in JWS <a href="#RFC7515" class="xref">[RFC7515]</a>.  Another solution is creating a canonicalized version of the target data with XML Signature <a href="#XMLDSIG" class="xref">[XMLDSIG]</a> as a prime example.  </p>
 <p id="rfc.section.1.p.2">Since the objective was keeping the data "as 
 is", the canonicalization method was selected.  For reasons outlined in 
-this document, JCS also depends on serialization of JSON data compatible
- with ECMAScript (aka JavaScript), beginning with version 6 <a href="#ES6" class="xref">[ES6]</a>, from now on simply referred to as "ES6".  </p>
+this document, JCS depends heavily on serialization of JSON data 
+compatible with ECMAScript (aka JavaScript), beginning with version 6 <a href="#ES6" class="xref">[ES6]</a>, from now on simply referred to as "ES6".  </p>
 <p id="rfc.section.1.p.3">Seasoned XML developers recalling difficulties
  getting signatures to validate (due to different interpretations of the
  quite intricate XML canonicalization rules as well as of the equally 
 extensive Web Services security standards), may rightfully wonder why 
 this particular effort would succeed. The reasons are twofold: </p>
 
-<ul><li>JSON is a considerably simpler format than XML, as well as lacking support for the powerful (but complex) namespace concept.</li>
+<ul><li>JSON is a considerably simpler format than XML, as well as lacking support for the powerful (but complex) namespace concept.  </li>
 <li style="margin-top:0.8em">ES6 compatible JSON serialization is already supported by most Web browsers, Node.js <a href="#NODEJS" class="xref">[NODEJS]</a>, as well as by third party libraries like Open&nbsp;Keystore <a href="#OPENKEY" class="xref">[OPENKEY]</a>, giving the proposed canonicalization scheme a head start.  </li>
 </ul>
 
@@ -656,7 +656,7 @@ certain characters into one, referred to as "Unicode Normalization" (<a href="ht
 <p id="rfc.section.3.2.2.3.p.1">Data of the type <samp>Number</samp> MUST be serialized according to Section <a href="#ES6" class="xref">7.1.12.1</a>
  of ES6; for maximum interoperability preferably including the "Note 2" 
 enhancement as well.  The latter is implemented by for example Google's 
-V8 <a href="#V8" class="xref">[V8]</a>.  <br><br> Due to the relative complexity of this part, it is not included in this specification.  <br><br> Note that ES6 builds on the IEEE-754 <a href="#IEEE754" class="xref">[IEEE754]</a> double precision standard for storing <samp>Number</samp> data.  <a href="#json.ieee754.test" class="xref">Appendix B</a> holds a set of IEEE-754 sample values and their corresponding JSON serialization.  <br><br> Occasionally applications need higher precision or longer integers than offered by the current implementation of <samp>Number</samp> in ES6 (and in most other JSON systems as well).  <a href="#json.bignumbers" class="xref">Appendix D</a> outlines how this can be achieved in a portable and extensible way.  </p>
+V8 <a href="#V8" class="xref">[V8]</a>.  <br><br> Due to the relative complexity of this part, it is not included in this specification.  <br><br> Note that ES6 builds on the IEEE-754 <a href="#IEEE754" class="xref">[IEEE754]</a> double precision standard for storing <samp>Number</samp> data.  <a href="#json.ieee754.test" class="xref">Appendix B</a> holds a set of IEEE-754 sample values and their corresponding JSON serialization.  <br><br> Occasionally applications need higher precision or longer integers than offered by the current implementation of JSON <samp>Number</samp> in ES6.  <a href="#json.bignumbers" class="xref">Appendix D</a> outlines how this can be achieved in a portable and extensible way.  </p>
 <h1 id="rfc.section.3.2.3">
 <a href="#rfc.section.3.2.3">3.2.3.</a> <a href="#json.sorting.properties" id="json.sorting.properties">Sorting of Object Properties</a>
 </h1>
