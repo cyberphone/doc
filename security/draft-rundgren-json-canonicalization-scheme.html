@@ -411,7 +411,7 @@ border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,ver
 
   <meta name="dct.creator" content="Rundgren, A.">
   <meta name="dct.identifier" content="urn:ietf:id:draft-rundgren-json-canonicalization-scheme-00">
-  <meta name="dct.issued" scheme="ISO8601" content="2018-05">
+  <meta name="dct.issued" scheme="ISO8601" content="2018-14">
   <meta name="dct.abstract" content="Cryptographic operations like hashing and signing depend on that the target data does not change during serialization, transport, or parsing.  By applying the rules defined by JCS (JSON Canonicalization Scheme), data provided in the JSON ">
   <meta name="description" content="Cryptographic operations like hashing and signing depend on that the target data does not change during serialization, transport, or parsing.  By applying the rules defined by JCS (JSON Canonicalization Scheme), data provided in the JSON ">
 
@@ -432,10 +432,10 @@ border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,ver
 </tr>
 <tr>
 <td class="left">Intended status: Standards Track</td>
-<td class="right">April 5, 2018</td>
+<td class="right">April 14, 2018</td>
 </tr>
 <tr>
-<td class="left">Expires: October 7, 2018</td>
+<td class="left">Expires: October 16, 2018</td>
 <td class="right"></td>
 </tr>
 
@@ -465,7 +465,7 @@ documents as Internet-Drafts.  The list of current Internet-Drafts is at
  and may be updated, replaced, or obsoleted by other documents at any 
 time.  It is inappropriate to use Internet-Drafts as reference material 
 or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on October 7, 2018.</p><p><i>Note: this document has been slightly "enhanced" to make it more readable.</i></p>
+<p>This Internet-Draft will expire on October 16, 2018.</p><p><i>Note: this document has been slightly "enhanced" to make it more readable.</i></p>
 <h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
 <p>Copyright (c) 2018 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal 
@@ -618,7 +618,7 @@ steps needed in order to create a canonicalized version of internal JSON
 <p></p>
 <p id="rfc.section.3.2.2.p.3">If you subsequently serialize the object created by the operation above using an serializer compliant with ES6's <samp>JSON.stringify()</samp>, the result would (with a line wrap added for display purposes only), be rather divergent with respect to data representation: </p>
 <pre style="padding:1em 0.5em">  {"<span style="color:brown">numbers</span>":[<span style="color:green">1e+30</span>,<span style="color:green">4.5</span>,<span style="color:green">333333333.3333333</span>,<span style="color:green">0.002</span>,<span style="color:green">1e-27</span>],"<span style="color:brown">escaping</span>":
-  "<span style="color:royalblue">\u20ac$\u000f\nA'B\"\\\\\"/</span>","<span style="color:brown">literals</span>":[<span style="color:green">null</span>,<span style="color:green">true</span>,<span style="color:green">false</span>]}</pre>
+  "<span style="color:royalblue">&#x20AC;$\u000f\nA'B\"\\\\\"/</span>","<span style="color:brown">literals</span>":[<span style="color:green">null</span>,<span style="color:green">true</span>,<span style="color:green">false</span>]}</pre>
 <p> </p>
 <p id="rfc.section.3.2.2.p.6">The reason for the huge difference between
  the parsed data and its serialized counterpart, is due to a wide 
