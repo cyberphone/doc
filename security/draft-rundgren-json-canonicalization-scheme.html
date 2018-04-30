@@ -383,7 +383,7 @@ border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,ver
 <link href="#rfc.section.2" rel="Chapter" title="2 Terminology">
 <link href="#rfc.section.3" rel="Chapter" title="3 Detailed Operation">
 <link href="#rfc.section.3.1" rel="Chapter" title="3.1 Creation of JSON Data">
-<link href="#rfc.section.3.2" rel="Chapter" title="3.2 JSON Canonicalization">
+<link href="#rfc.section.3.2" rel="Chapter" title="3.2 Canonicalization of JSON Data">
 <link href="#rfc.section.3.2.1" rel="Chapter" title="3.2.1 Whitespace Handling">
 <link href="#rfc.section.3.2.2" rel="Chapter" title="3.2.2 Serialization of Primitive Data Types">
 <link href="#rfc.section.3.2.2.1" rel="Chapter" title="3.2.2.1 Serialization of Null and Boolean">
@@ -411,7 +411,7 @@ border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,ver
 
   <meta name="dct.creator" content="Rundgren, A.">
   <meta name="dct.identifier" content="urn:ietf:id:draft-rundgren-json-canonicalization-scheme-00">
-  <meta name="dct.issued" scheme="ISO8601" content="2018-26">
+  <meta name="dct.issued" scheme="ISO8601" content="2018-29">
   <meta name="dct.abstract" content="Cryptographic operations like hashing and signing depend on that the target data does not change during serialization, transport, or parsing.  By applying the rules defined by JCS (JSON Canonicalization Scheme), data provided in the JSON ">
   <meta name="description" content="Cryptographic operations like hashing and signing depend on that the target data does not change during serialization, transport, or parsing.  By applying the rules defined by JCS (JSON Canonicalization Scheme), data provided in the JSON ">
 
@@ -432,10 +432,10 @@ border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,ver
 </tr>
 <tr>
 <td class="left">Intended status: Standards Track</td>
-<td class="right">April 26, 2018</td>
+<td class="right">April 29, 2018</td>
 </tr>
 <tr>
-<td class="left">Expires: October 28, 2018</td>
+<td class="left">Expires: October 31, 2018</td>
 <td class="right"></td>
 </tr>
 
@@ -465,7 +465,7 @@ documents as Internet-Drafts.  The list of current Internet-Drafts is at
  and may be updated, replaced, or obsoleted by other documents at any 
 time.  It is inappropriate to use Internet-Drafts as reference material 
 or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on October 28, 2018.</p><p><i>Note: this document has been slightly "enhanced" to make it more readable.</i></p>
+<p>This Internet-Draft will expire on October 31, 2018.</p><p><i>Note: this document has been slightly "enhanced" to make it more readable.</i></p>
 <h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
 <p>Copyright (c) 2018 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal 
@@ -491,7 +491,7 @@ Simplified BSD License.</p>
 </li>
 <ul><li>3.1.   <a href="#rfc.section.3.1">Creation of JSON Data</a>
 </li>
-<li >3.2.   <a href="#rfc.section.3.2">JSON Canonicalization</a>
+<li >3.2.   <a href="#rfc.section.3.2">Canonicalization of JSON Data</a>
 </li>
 <ul><li>3.2.1.   <a href="#rfc.section.3.2.1">Whitespace Handling</a>
 </li>
@@ -597,7 +597,7 @@ interpreted as described in BCP 14 <a href="#RFC2119" class="xref">[RFC2119]</a>
 
 <p> </p>
 <h1 id="rfc.section.3.2">
-<a href="#rfc.section.3.2">3.2.</a> <a href="#json.canonicalization" id="json.canonicalization">JSON Canonicalization</a>
+<a href="#rfc.section.3.2">3.2.</a> <a href="#json.canonicalization" id="json.canonicalization">Canonicalization of JSON Data</a>
 </h1>
 <p id="rfc.section.3.2.p.1">The following sub sections describe all the 
 steps needed in order to create a canonicalized version of internal JSON
