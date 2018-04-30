@@ -386,9 +386,9 @@ border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,ver
 <link href="#rfc.section.3.2" rel="Chapter" title="3.2 Canonicalization of JSON Data">
 <link href="#rfc.section.3.2.1" rel="Chapter" title="3.2.1 Whitespace Handling">
 <link href="#rfc.section.3.2.2" rel="Chapter" title="3.2.2 Serialization of Primitive Data Types">
-<link href="#rfc.section.3.2.2.1" rel="Chapter" title="3.2.2.1 Serialization of Null and Boolean">
-<link href="#rfc.section.3.2.2.2" rel="Chapter" title="3.2.2.2 Serialization of String">
-<link href="#rfc.section.3.2.2.3" rel="Chapter" title="3.2.2.3 Serialization of Number">
+<link href="#rfc.section.3.2.2.1" rel="Chapter" title="3.2.2.1 Serialization of Literals">
+<link href="#rfc.section.3.2.2.2" rel="Chapter" title="3.2.2.2 Serialization of Strings">
+<link href="#rfc.section.3.2.2.3" rel="Chapter" title="3.2.2.3 Serialization of Numbers">
 <link href="#rfc.section.3.2.3" rel="Chapter" title="3.2.3 Sorting of Object Properties">
 <link href="#rfc.section.3.2.4" rel="Chapter" title="3.2.4 UTF-8 Generation">
 <link href="#rfc.section.4" rel="Chapter" title="4 IANA Considerations">
@@ -411,7 +411,7 @@ border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,ver
 
   <meta name="dct.creator" content="Rundgren, A.">
   <meta name="dct.identifier" content="urn:ietf:id:draft-rundgren-json-canonicalization-scheme-00">
-  <meta name="dct.issued" scheme="ISO8601" content="2018-29">
+  <meta name="dct.issued" scheme="ISO8601" content="2018-30">
   <meta name="dct.abstract" content="Cryptographic operations like hashing and signing depend on that the target data does not change during serialization, transport, or parsing.  By applying the rules defined by JCS (JSON Canonicalization Scheme), data provided in the JSON ">
   <meta name="description" content="Cryptographic operations like hashing and signing depend on that the target data does not change during serialization, transport, or parsing.  By applying the rules defined by JCS (JSON Canonicalization Scheme), data provided in the JSON ">
 
@@ -432,10 +432,10 @@ border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,ver
 </tr>
 <tr>
 <td class="left">Intended status: Standards Track</td>
-<td class="right">April 29, 2018</td>
+<td class="right">April 30, 2018</td>
 </tr>
 <tr>
-<td class="left">Expires: October 31, 2018</td>
+<td class="left">Expires: November 1, 2018</td>
 <td class="right"></td>
 </tr>
 
@@ -465,7 +465,7 @@ documents as Internet-Drafts.  The list of current Internet-Drafts is at
  and may be updated, replaced, or obsoleted by other documents at any 
 time.  It is inappropriate to use Internet-Drafts as reference material 
 or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on October 31, 2018.</p><p><i>Note: this document has been slightly "enhanced" to make it more readable.</i></p>
+<p>This Internet-Draft will expire on November 1, 2018.</p><p><i>Note: this document has been slightly "enhanced" to make it more readable.</i></p>
 <h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
 <p>Copyright (c) 2018 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal 
@@ -497,11 +497,11 @@ Simplified BSD License.</p>
 </li>
 <li >3.2.2.   <a href="#rfc.section.3.2.2">Serialization of Primitive Data Types</a>
 </li>
-<ul><li>3.2.2.1.   <a href="#rfc.section.3.2.2.1">Serialization of Null and Boolean</a>
+<ul><li>3.2.2.1.   <a href="#rfc.section.3.2.2.1">Serialization of Literals</a>
 </li>
-<li >3.2.2.2.   <a href="#rfc.section.3.2.2.2">Serialization of String</a>
+<li >3.2.2.2.   <a href="#rfc.section.3.2.2.2">Serialization of Strings</a>
 </li>
-<li >3.2.2.3.   <a href="#rfc.section.3.2.2.3">Serialization of Number</a>
+<li >3.2.2.3.   <a href="#rfc.section.3.2.2.3">Serialization of Numbers</a>
 </li>
 </ul><li>3.2.3.   <a href="#rfc.section.3.2.3">Sorting of Object Properties</a>
 </li>
@@ -611,31 +611,33 @@ steps needed in order to create a canonicalized version of internal JSON
 </h1>
 <p id="rfc.section.3.2.2.p.1">Assume that you parse a JSON object like the following: </p>
 <pre style="padding:1em 0.5em">  {
-    "<span style="color:brown">numbers</span>": [<span style="color:green">1E30</span>, <span style="color:green">4.50</span>, <span style="color:green">333333333.33333329</span>,
+    "<span style="color:brown">numbers</span>": [<span style="color:green">333333333.33333329</span>, <span style="color:green">1E30</span>, <span style="color:green">4.50</span>,
                 <span style="color:green">2e-3</span>, <span style="color:green">0.000000000000000000000000001</span>],
-    "<span style="color:brown">escaping</span>": "<span style="color:royalblue">\u20ac$\u000F\u000aA'\u0042\u0022\u005c\\\"\/</span>",
+    "<span style="color:brown">string</span>": "<span style="color:royalblue">\u20ac$\u000F\u000aA'\u0042\u0022\u005c\\\"\/</span>",
     "<span style="color:brown">literals</span>": [<span style="color:green">null</span>, <span style="color:green">true</span>, <span style="color:green">false</span>]
   }</pre>
 <p></p>
-<p id="rfc.section.3.2.2.p.3">If you subsequently serialize the object created by the operation above using an serializer compliant with ES6's <samp>JSON.stringify()</samp>, the result would (with a line wrap added for display purposes only), be rather divergent with respect to data representation: </p>
-<pre style="padding:1em 0.5em">  {"<span style="color:brown">numbers</span>":[<span style="color:green">1e+30</span>,<span style="color:green">4.5</span>,<span style="color:green">333333333.3333333</span>,<span style="color:green">0.002</span>,<span style="color:green">1e-27</span>],"<span style="color:brown">escaping</span>":
+<p id="rfc.section.3.2.2.p.3">If you subsequently serialize the object created by the operation above using an serializer compliant with ES6's <samp>JSON.stringify()</samp>,
+ the result would (with a line wrap added for display purposes only), be
+ rather divergent with respect to representation of data: </p>
+<pre style="padding:1em 0.5em">  {"<span style="color:brown">numbers</span>":[<span style="color:green">333333333.3333333</span>,<span style="color:green">1e+30</span>,<span style="color:green">4.5</span>,<span style="color:green">0.002</span>,<span style="color:green">1e-27</span>],"<span style="color:brown">string</span>":
   "<span style="color:royalblue">&#x20AC;$\u000f\nA'B\"\\\\\"/</span>","<span style="color:brown">literals</span>":[<span style="color:green">null</span>,<span style="color:green">true</span>,<span style="color:green">false</span>]}</pre>
 <p> </p>
-<p id="rfc.section.3.2.2.p.6">The reason for the huge difference between
- the parsed data and its serialized counterpart, is due to a wide 
-tolerance on input data (as defined by <a href="#RFC8259" class="xref">[RFC8259]</a>),
+<p id="rfc.section.3.2.2.p.6">The reason for the notable difference 
+between the parsed data and its serialized counterpart, is due to a wide
+ tolerance on input data (as defined by <a href="#RFC8259" class="xref">[RFC8259]</a>),
  while output data (as defined by ES6), has a fixed representation.  As 
 can be seen by the example, numbers are subject to rounding as well.  <br><br>
  The following sub sections describe serialization of primitive JSON 
 data types according to JCS.  This part is identical to that of ES6.  </p>
 <h1 id="rfc.section.3.2.2.1">
-<a href="#rfc.section.3.2.2.1">3.2.2.1.</a> <a href="#json.ser.literals" id="json.ser.literals">Serialization of Null and Boolean</a>
+<a href="#rfc.section.3.2.2.1">3.2.2.1.</a> <a href="#json.ser.literals" id="json.ser.literals">Serialization of Literals</a>
 </h1>
-<p id="rfc.section.3.2.2.1.p.1">The literals <samp>null</samp>, <samp>true</samp>, and <samp>false</samp> present no challenge since they already have a fixed definition in JSON <a href="#RFC8259" class="xref">[RFC8259]</a>.  </p>
+<p id="rfc.section.3.2.2.1.p.1">The JSON literals <samp>null</samp>, <samp>true</samp>, and <samp>false</samp> present no challenge since they already have a fixed definition in JSON <a href="#RFC8259" class="xref">[RFC8259]</a>.  </p>
 <h1 id="rfc.section.3.2.2.2">
-<a href="#rfc.section.3.2.2.2">3.2.2.2.</a> <a href="#json.ser.string" id="json.ser.string">Serialization of String</a>
+<a href="#rfc.section.3.2.2.2">3.2.2.2.</a> <a href="#json.ser.string" id="json.ser.string">Serialization of Strings</a>
 </h1>
-<p id="rfc.section.3.2.2.2.p.1">For data of the type <samp>String</samp> (which includes <samp>Object</samp> property names as well), each character MUST be serialized as described in Section <a href="#ES6" class="xref">24.3.2.2</a> of ES6.  <br><br>
+<p id="rfc.section.3.2.2.2.p.1">For JSON data of the type <samp>String</samp> (which includes <samp>Object</samp> property names as well), each character MUST be serialized as described in Section <a href="#ES6" class="xref">24.3.2.2</a> of ES6.  <br><br>
  If the Unicode value falls within the traditional ASCII control 
 character range (U+0000 through U+001F), it MUST be serialized using 
 lowercase hexadecimal Unicode notation (\uhhhh) unless it is in the set 
@@ -652,9 +654,9 @@ including broken signatures, such usages MUST be avoided.  <br><br> Note
  that although the Unicode standard offers a possibility combining 
 certain characters into one, referred to as "Unicode Normalization" (<a href="https://www.unicode.org/reports/tr15/">https://www.unicode.org/reports/tr15/</a>), such functionality MUST be delegated to the application layer which already is the case for most other uses of JSON.  </p>
 <h1 id="rfc.section.3.2.2.3">
-<a href="#rfc.section.3.2.2.3">3.2.2.3.</a> <a href="#json.ser.number" id="json.ser.number">Serialization of Number</a>
+<a href="#rfc.section.3.2.2.3">3.2.2.3.</a> <a href="#json.ser.number" id="json.ser.number">Serialization of Numbers</a>
 </h1>
-<p id="rfc.section.3.2.2.3.p.1">Data of the type <samp>Number</samp> MUST be serialized according to Section <a href="#ES6" class="xref">7.1.12.1</a>
+<p id="rfc.section.3.2.2.3.p.1">JSON data of the type <samp>Number</samp> MUST be serialized according to Section <a href="#ES6" class="xref">7.1.12.1</a>
  of ES6; for maximum interoperability preferably including the "Note 2" 
 enhancement as well.  The latter is implemented by for example Google's 
 V8 <a href="#V8" class="xref">[V8]</a>.  <br><br> Due to the relative complexity of this part, it is not included in this specification.  <br><br> Note that ES6 builds on the IEEE-754 <a href="#IEEE754" class="xref">[IEEE754]</a> double precision standard for storing <samp>Number</samp> data.  <a href="#json.ieee754.test" class="xref">Appendix B</a> holds a set of IEEE-754 sample values and their corresponding JSON serialization.  <br><br> Occasionally applications need higher precision or longer integers than offered by the current implementation of JSON <samp>Number</samp> in ES6.  <a href="#json.bignumbers" class="xref">Appendix D</a> outlines how this can be achieved in a portable and extensible way.  </p>
@@ -664,8 +666,8 @@ V8 <a href="#V8" class="xref">[V8]</a>.  <br><br> Due to the relative complexity
 <p id="rfc.section.3.2.3.p.1">Although the previous step indeed 
 normalized the representation of primitive JSON data types, the result 
 would not qualify as "canonicalized" since <samp>Object</samp> properties are not in lexicographic (alphabetical) order.  <br><br> Applied to the sample in <a href="#json.serialization.data" class="xref">Section 3.2.2</a>, a properly canonicalized version should (with a line wrap added for display purposes only), read as: </p>
-<pre style="padding:1em 0.5em">  {"<span style="color:brown">escaping</span>":"<span style="color:royalblue">&#x20AC;$\u000f\nA'B\"\\\\\"/</span>","<span style="color:brown">literals</span>":[<span style="color:green">null</span>,<span style="color:green">true</span>,
-  <span style="color:green">false</span>],"<span style="color:brown">numbers</span>":[<span style="color:green">1e+30</span>,<span style="color:green">4.5</span>,<span style="color:green">333333333.3333333</span>,<span style="color:green">0.002</span>,<span style="color:green">1e-27</span>]}</pre>
+<pre style="padding:1em 0.5em">  {"<span style="color:brown">literals</span>":[<span style="color:green">null</span>,<span style="color:green">true</span>,<span style="color:green">false</span>],"<span style="color:brown">numbers</span>":[<span style="color:green">333333333.3333333</span>,
+  <span style="color:green">1e+30</span>,<span style="color:green">4.5</span>,<span style="color:green">0.002</span>,<span style="color:green">1e-27</span>],"<span style="color:brown">string</span>":"<span style="color:royalblue">&#x20AC;$\u000f\nA'B\"\\\\\"/</span>"}</pre>
 <p> </p>
 <p id="rfc.section.3.2.3.p.4">The rules for lexicographic sorting of JSON properties according to JCS are as follows: </p>
 
@@ -704,12 +706,12 @@ differ (and thus be incompatible with this specification).  </p>
 <a href="#rfc.section.3.2.4">3.2.4.</a> <a href="#json.utf8" id="json.utf8">UTF-8 Generation</a>
 </h1>
 <p id="rfc.section.3.2.4.p.1">Finally, in order to create a platform independent representation, the resulting JSON string data MUST be encoded in UTF-8.  <br><br> Applied to the sample in <a href="#json.sorting.properties" class="xref">Section 3.2.3</a> this should yield the following bytes here shown in hexadecimal notation: </p>
-<pre style="padding:1em 0.5em">  7b 22 65 73 63 61 70 69 6e 67 22 3a 22 e2 82 ac 24 5c 75 30
-  30 30 66 5c 6e 41 27 42 5c 22 5c 5c 5c 5c 5c 22 2f 22 2c 22
-  6c 69 74 65 72 61 6c 73 22 3a 5b 6e 75 6c 6c 2c 74 72 75 65
-  2c 66 61 6c 73 65 5d 2c 22 6e 75 6d 62 65 72 73 22 3a 5b 31
-  65 2b 33 30 2c 34 2e 35 2c 33 33 33 33 33 33 33 33 33 2e 33
-  33 33 33 33 33 33 2c 30 2e 30 30 32 2c 31 65 2d 32 37 5d 7d</pre>
+<pre style="padding:1em 0.5em">  7b 22 6c 69 74 65 72 61 6c 73 22 3a 5b 6e 75 6c 6c 2c 74 72
+  75 65 2c 66 61 6c 73 65 5d 2c 22 6e 75 6d 62 65 72 73 22 3a
+  5b 33 33 33 33 33 33 33 33 33 2e 33 33 33 33 33 33 33 2c 31
+  65 2b 33 30 2c 34 2e 35 2c 30 2e 30 30 32 2c 31 65 2d 32 37
+  5d 2c 22 73 74 72 69 6e 67 22 3a 22 e2 82 ac 24 5c 75 30 30
+  30 66 5c 6e 41 27 42 5c 22 5c 5c 5c 5c 5c 22 2f 22 7d</pre>
 <p></p>
 <p id="rfc.section.3.2.4.p.3">This data is intended to be usable as input to cryptographic functions.  </p>
 <p id="rfc.section.3.2.4.p.4">For other uses see <a href="#json.wireformat" class="xref">Appendix C</a>.  </p>
@@ -826,12 +828,12 @@ considerably but would also be more difficult to follow by non-experts.
  </p>
 <pre style="padding:1em 0.5em">  <span style="color:blue">var</span> canonicalize = <span style="color:blue">function</span>(object) {
   
-      <span style="color:blue">var</span> buffer = <span style="color:green">''</span>;
+      <span style="color:blue">var</span> buffer = '<span style="color:green"></span>';
       serialize(object);
       <span style="color:blue">return</span> buffer;
   
       <span style="color:blue">function</span> serialize(object) {
-          <span style="color:blue">if</span> (object === <span style="color:blue">null</span> || <span style="color:blue">typeof</span> object !== <span style="color:green">'object'</span>) {
+          <span style="color:blue">if</span> (object === <span style="color:blue">null</span> || <span style="color:blue">typeof</span> object !== '<span style="color:green">object</span>') {
               <span style="color:#808080">/////////////////////////////////////////////////</span>
               <span style="color:#808080">// Primitive data type - Use ES6/JSON          //</span>
               <span style="color:#808080">/////////////////////////////////////////////////</span>
@@ -841,11 +843,11 @@ considerably but would also be more difficult to follow by non-experts.
               <span style="color:#808080">/////////////////////////////////////////////////</span>
               <span style="color:#808080">// Array - Maintain element order              //</span>
               <span style="color:#808080">/////////////////////////////////////////////////</span>
-              buffer += <span style="color:green">'['</span>;
+              buffer += '<span style="color:green">[</span>';
               <span style="color:blue">let</span> next = <span style="color:blue">false</span>;
               object.forEach((element) =&gt; {
                   <span style="color:blue">if</span> (next) {
-                      buffer += <span style="color:green">','</span>;
+                      buffer += '<span style="color:green">,</span>';
                   }
                   next = <span style="color:blue">true</span>;
                   <span style="color:#808080">/////////////////////////////////////////</span>
@@ -853,30 +855,30 @@ considerably but would also be more difficult to follow by non-experts.
                   <span style="color:#808080">/////////////////////////////////////////</span>
                   serialize(element);
               });
-              buffer += <span style="color:green">']'</span>;
+              buffer += '<span style="color:green">]</span>';
   
           } <span style="color:blue">else</span> {
               <span style="color:#808080">/////////////////////////////////////////////////</span>
               <span style="color:#808080">// Object - Sort properties before serializing //</span>
               <span style="color:#808080">/////////////////////////////////////////////////</span>
-              buffer += <span style="color:green">'{'</span>;
+              buffer += '<span style="color:green">{</span>';
               <span style="color:blue">let</span> next = <span style="color:blue">false</span>;
               <span style="color:brown">Object</span>.keys(object).sort().forEach((property) =&gt; {
                   <span style="color:blue">if</span> (next) {
-                      buffer += <span style="color:green">','</span>;
+                      buffer += '<span style="color:green">,</span>';
                   }
                   next = <span style="color:blue">true</span>;
                   <span style="color:#808080">///////////////////////////////////////////////</span>
                   <span style="color:#808080">// Property names are strings - Use ES6/JSON //</span>
                   <span style="color:#808080">///////////////////////////////////////////////</span>
                   buffer += <span style="color:brown">JSON</span>.stringify(property);
-                  buffer += <span style="color:green">':'</span>;
+                  buffer += '<span style="color:green">:</span>';
                   <span style="color:#808080">//////////////////////////////////////////</span>
                   <span style="color:#808080">// Property value - Recursive expansion //</span>
                   <span style="color:#808080">//////////////////////////////////////////</span>
                   serialize(object[property]);
               });
-              buffer += <span style="color:green">'}'</span>;
+              buffer += '<span style="color:green">}</span>';
           }
       }
   };</pre>
@@ -971,7 +973,7 @@ due to rounding issues with respect to decimal arithmetic.  <br><br> The (to the
 of JSON by multiple parties potentially using independently developed 
 software</i>), numbers that do not have a natural place in the current JSON 
 ecosystem MUST be wrapped using the JSON <samp>String</samp> type.  This is close to a de-facto standard for open systems.  <br><br> Aided by a mapping system; be it programmatic like </p>
-<pre style="padding:1em 0.5em">  <span style="color:blue">var</span> obj = <span style="color:brown">JSON</span>.parse(<span style="color:green">'{"giantNumber": "1.4e+9999"}'</span>);
+<pre style="padding:1em 0.5em">  <span style="color:blue">var</span> obj = <span style="color:brown">JSON</span>.parse('<span style="color:green">{"giantNumber": "1.4e+9999"}</span>');
   <span style="color:blue">var</span> biggie = <span style="color:blue">new</span> BigNum(obj.giantNumber);</pre>
 <p></p>
 <p id="rfc.section.D.p.7">or declarative schemes like OpenAPI <a href="#OPENAPI" class="xref">[OPENAPI]</a>, there are no real limits, not even when using ES6.  </p>
