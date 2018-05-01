@@ -606,7 +606,7 @@ data elaborated on in the previous section.  </p>
 <h1 id="rfc.section.3.2.1">
 <a href="#rfc.section.3.2.1">3.2.1.</a> <a href="#json.whitespace" id="json.whitespace">Whitespace Handling</a>
 </h1>
-<p id="rfc.section.3.2.1.p.1">Whitespace between JSON elements MUST NOT be emitted.  </p>
+<p id="rfc.section.3.2.1.p.1">Possible whitespace between JSON elements MUST be ignored (not emitted).  </p>
 <h1 id="rfc.section.3.2.2">
 <a href="#rfc.section.3.2.2">3.2.2.</a> <a href="#json.serialization.data" id="json.serialization.data">Serialization of Primitive Data Types</a>
 </h1>
@@ -624,9 +624,9 @@ data elaborated on in the previous section.  </p>
 <pre style="padding:1em 0.5em">  {"<span style="color:brown">numbers</span>":[<span style="color:green">333333333.3333333</span>,<span style="color:green">1e+30</span>,<span style="color:green">4.5</span>,<span style="color:green">0.002</span>,<span style="color:green">1e-27</span>],"<span style="color:brown">string</span>":
   "<span style="color:royalblue">&#x20AC;$\u000f\nA'B\"\\\\\"/</span>","<span style="color:brown">literals</span>":[<span style="color:green">null</span>,<span style="color:green">true</span>,<span style="color:green">false</span>]}</pre>
 <p> </p>
-<p id="rfc.section.3.2.2.p.6">The reason for the notable difference 
-between the parsed data and its serialized counterpart, is due to a wide
- tolerance on input data (as defined by JSON <a href="#RFC8259" class="xref">[RFC8259]</a>),
+<p id="rfc.section.3.2.2.p.6">The reason for the difference between the 
+parsed data and its serialized counterpart, is due to a wide tolerance 
+on input data (as defined by JSON <a href="#RFC8259" class="xref">[RFC8259]</a>),
  while output data (as defined by ES6), has a fixed representation.  As 
 can be seen by the example, numbers are subject to rounding as well.  <br><br>
  The following sub sections describe serialization of primitive JSON 
@@ -941,8 +941,8 @@ technical support), perspective.  </p>
 canonicalization would only be used internally for creating a "hashable"
  representation of the data needed for cryptographic operations.  </p>
 <p id="rfc.section.C.p.5">Note that if message size is not a concern, 
-you may even "Pretty&nbsp;Print" JSON data on the wire, since whitespace
- is ignored regardless of format chosen.  </p>
+you may even send "Pretty&nbsp;Printed" JSON data on the wire (since 
+whitespace always is ignored by the canonicalization process).  </p>
 <h1 id="rfc.appendix.D">
 <a href="#rfc.appendix.D">Appendix D.</a> <a href="#json.bignumbers" id="json.bignumbers">Dealing with Big Numbers</a>
 </h1>
