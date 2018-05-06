@@ -1,9 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head profile="http://www.w3.org/2006/03/hcard http://dublincore.org/documents/2008/08/04/dc-html/">
   <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
-  
-  <link rel="icon" href="../webpkiorg.png" sizes="192x192"> 
-  <title>JSON Canonicalization Scheme (JCS) </title>
+
+  <link rel="icon" href="../webpkiorg.png" sizes="192x192"><title>JSON Canonicalization Scheme (JCS) </title>
 
   <style type="text/css" title="Xml2Rfc (sans serif)">
   /*<![CDATA[*/
@@ -412,7 +411,7 @@ border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,ver
 
   <meta name="dct.creator" content="Rundgren, A.">
   <meta name="dct.identifier" content="urn:ietf:id:draft-rundgren-json-canonicalization-scheme-00">
-  <meta name="dct.issued" scheme="ISO8601" content="2018-01">
+  <meta name="dct.issued" scheme="ISO8601" content="2018-05">
   <meta name="dct.abstract" content="Cryptographic operations like hashing and signing depend on that the target data does not change during serialization, transport, or parsing.  By applying the rules defined by JCS (JSON Canonicalization Scheme), data provided in the JSON ">
   <meta name="description" content="Cryptographic operations like hashing and signing depend on that the target data does not change during serialization, transport, or parsing.  By applying the rules defined by JCS (JSON Canonicalization Scheme), data provided in the JSON ">
 
@@ -433,10 +432,10 @@ border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,ver
 </tr>
 <tr>
 <td class="left">Intended status: Standards Track</td>
-<td class="right">May 1, 2018</td>
+<td class="right">May 5, 2018</td>
 </tr>
 <tr>
-<td class="left">Expires: November 2, 2018</td>
+<td class="left">Expires: November 6, 2018</td>
 <td class="right"></td>
 </tr>
 
@@ -466,7 +465,7 @@ documents as Internet-Drafts.  The list of current Internet-Drafts is at
  and may be updated, replaced, or obsoleted by other documents at any 
 time.  It is inappropriate to use Internet-Drafts as reference material 
 or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on November 2, 2018.</p><p><i>Note: this document has been slightly "enhanced" to make it more readable.</i></p>
+<p>This Internet-Draft will expire on November 6, 2018.</p><p><i>Note: this document has been slightly "enhanced" to make it more readable.</i></p>
 <h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
 <p>Copyright (c) 2018 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal 
@@ -897,8 +896,8 @@ the code size considerably but would also be more difficult to follow by
 <tr><td><tt style="font-size:12pt">8000000000000001</tt></td><td>-5e-324                 </td><td>Smallest neg number</td></tr>
 <tr><td><tt style="font-size:12pt">7fefffffffffffff</tt></td><td>1.7976931348623157e+308 </td><td>Largest pos number </td></tr>
 <tr><td><tt style="font-size:12pt">ffefffffffffffff</tt></td><td>-1.7976931348623157e+308</td><td>Largest neg number </td></tr>
-<tr><td><tt style="font-size:12pt">433fffffffffffff</tt></td><td>9007199254740991        </td><td>Largest pos integer</td></tr>
-<tr><td><tt style="font-size:12pt">c33fffffffffffff</tt></td><td>-9007199254740991       </td><td>Largest neg integer</td></tr>
+<tr><td><tt style="font-size:12pt">4340000000000000</tt></td><td>9007199254740992        </td><td>Largest pos integer</td></tr>
+<tr><td><tt style="font-size:12pt">c340000000000000</tt></td><td>-9007199254740992       </td><td>Largest neg integer</td></tr>
 <tr><td><tt style="font-size:12pt">7fffffffffffffff</tt></td><td>                        </td><td>Error (NaN)        </td></tr>
 <tr><td><tt style="font-size:12pt">7ff0000000000000</tt></td><td>                        </td><td>Error (Infinity)   </td></tr>
 <tr><td><tt style="font-size:12pt">44b52d02c7e14af5</tt></td><td>9.999999999999997e+22   </td><td>                   </td></tr>
