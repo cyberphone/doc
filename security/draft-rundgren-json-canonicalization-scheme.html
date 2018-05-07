@@ -974,7 +974,7 @@ of JSON by multiple parties potentially using independently developed
 software</i>), numbers that do not have a natural place in the current JSON 
 ecosystem MUST be wrapped using the JSON <samp>String</samp> type.  This is close to a de-facto standard for open systems.  <br><br> Aided by a mapping system; be it programmatic like </p>
 <pre style="padding:1em 0.5em">  <span style="color:blue">var</span> obj = <span style="color:brown">JSON</span>.parse('<span style="color:green">{"giantNumber": "1.4e+9999"}</span>');
-  <span style="color:blue">var</span> biggie = <span style="color:blue">new</span> BigNum(obj.giantNumber);</pre>
+  <span style="color:blue">var</span> biggie = <span style="color:blue">new</span> <span style="color:brown">BigNumber</span>(obj.giantNumber);</pre>
 <p></p>
 <p id="rfc.section.D.p.7">or declarative schemes like OpenAPI <a href="#OPENAPI" class="xref">[OPENAPI]</a>, there are no real limits, not even when using ES6.  </p>
 <h1 id="rfc.appendix.E">
