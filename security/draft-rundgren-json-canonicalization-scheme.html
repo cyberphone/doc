@@ -989,7 +989,8 @@ always realistic.  Fortunately JCS support can be performed through
 externally supplied canonicalizer software, enabling signature creation 
 schemes like the following: </p>
 
-<ol><li>Create data to be signed. Serialize the data using <i>existing</i> JSON tools.  </li>
+<ol><li>Create data to be signed.  </li>
+<li style="margin-top:0.8em">Serialize the data using <i>existing</i> JSON tools.  </li>
 <li style="margin-top:0.8em">Let the external canonicalizer process the serialized data and return canonicalized result data.  </li>
 <li style="margin-top:0.8em">Sign the canonicalized data.  </li>
 <li style="margin-top:0.8em">Add the resulting signature value to the original JSON data through a designated signature property.  </li>
@@ -1007,9 +1008,12 @@ schemes like the following: </p>
  using the algorithm and key used for creating the signature.  </li>
 </ol>
 
-<p> A canonicalizer like above is effectively only a "filter", 
-potentially usable with a multitude of quite different cryptographic 
-schemes.  </p>
+<p> </p>
+<p id="rfc.section.E.p.2">A canonicalizer like above is effectively only
+ a "filter", potentially usable with a multitude of quite different 
+cryptographic schemes.  <br><br> Using an integrated canonicalizer, you 
+would eliminate the serialization and parsing step before the 
+canonicalization, for both processes.  </p>
 <h1 id="rfc.appendix.F">
 <a href="#rfc.appendix.F">Appendix F.</a> <a href="#json.otherefforts" id="json.otherefforts">Other JSON Canonicalization Efforts</a>
 </h1>
