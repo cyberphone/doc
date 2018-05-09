@@ -989,19 +989,19 @@ always realistic.  Fortunately JCS support can be performed through an
 external process, enabling signature creation schemes like the 
 following: </p>
 
-<ol><li>Create data to be signed using existing JSON tools.  Serialize the data.  </li>
+<ol><li>Create data to be signed. Serialize the data using <i>existing</i> JSON tools.  </li>
 <li style="margin-top:0.8em">Let the external canonicalizer process the serialized data and return canonicalized result data.  </li>
 <li style="margin-top:0.8em">Sign the canonicalized data.  </li>
 <li style="margin-top:0.8em">Add the resulting signature value to the original JSON data through a designated signature property.  </li>
-<li style="margin-top:0.8em">Serialize the completed (now signed) JSON object.  </li>
+<li style="margin-top:0.8em">Serialize the completed (now signed) JSON object using <i>existing</i> JSON tools.  </li>
 </ol>
 
 <p> A compatible signature verification scheme would then be as follows: </p>
 
-<ol><li>Parse the signed JSON data using existing JSON tools.  </li>
+<ol><li>Parse the signed JSON data using <i>existing</i> JSON tools.  </li>
 <li style="margin-top:0.8em">Read and save the signature value from the designated signature property.  </li>
 <li style="margin-top:0.8em">Remove the signature property from the parsed JSON object.  </li>
-<li style="margin-top:0.8em">Serialize the remaining JSON data using existing JSON tools.  </li>
+<li style="margin-top:0.8em">Serialize the remaining JSON data using <i>existing</i> JSON tools.  </li>
 <li style="margin-top:0.8em">Let the external canonicalizer process the serialized data and return canonicalized result data.  </li>
 <li style="margin-top:0.8em">Verify that the canonicalized data matches the saved signature value
  using the algorithm and key used for creating the signature.  </li>
