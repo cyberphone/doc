@@ -401,8 +401,9 @@ border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,ver
 <link href="#rfc.appendix.B" rel="Chapter" title="B Number Serialization Samples">
 <link href="#rfc.appendix.C" rel="Chapter" title="C Canonicalized JSON as &quot;Wire Format&quot;">
 <link href="#rfc.appendix.D" rel="Chapter" title="D Dealing with Big Numbers">
-<link href="#rfc.appendix.E" rel="Chapter" title="E Other JSON Canonicalization Efforts">
-<link href="#rfc.appendix.F" rel="Chapter" title="F Development Portal">
+<link href="#rfc.appendix.E" rel="Chapter" title="E Implementation Guidelines">
+<link href="#rfc.appendix.F" rel="Chapter" title="F Other JSON Canonicalization Efforts">
+<link href="#rfc.appendix.G" rel="Chapter" title="G Development Portal">
 <link href="#rfc.authors" rel="Chapter">
 
 
@@ -411,7 +412,7 @@ border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,ver
 
   <meta name="dct.creator" content="Rundgren, A.">
   <meta name="dct.identifier" content="urn:ietf:id:draft-rundgren-json-canonicalization-scheme-00">
-  <meta name="dct.issued" scheme="ISO8601" content="2018-07">
+  <meta name="dct.issued" scheme="ISO8601" content="2018-09">
   <meta name="dct.abstract" content="Cryptographic operations like hashing and signing depend on that the target data does not change during serialization, transport, or parsing.  By applying the rules defined by JCS (JSON Canonicalization Scheme), data provided in the JSON ">
   <meta name="description" content="Cryptographic operations like hashing and signing depend on that the target data does not change during serialization, transport, or parsing.  By applying the rules defined by JCS (JSON Canonicalization Scheme), data provided in the JSON ">
 
@@ -432,10 +433,10 @@ border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,ver
 </tr>
 <tr>
 <td class="left">Intended status: Standards Track</td>
-<td class="right">May 7, 2018</td>
+<td class="right">May 9, 2018</td>
 </tr>
 <tr>
-<td class="left">Expires: November 8, 2018</td>
+<td class="left">Expires: November 10, 2018</td>
 <td class="right"></td>
 </tr>
 
@@ -453,7 +454,7 @@ target data does not change during serialization, transport, or parsing.
 data provided in the JSON <a href="#RFC8259" class="xref">[RFC8259]</a> 
 format can be exchanged "as is", while still being subject to secure 
 cryptographic operations.  JCS achieves this by combining the strict 
-serialization of JSON data defined in ECMAScript <a href="#ES6" class="xref">[ES6]</a> with a platform independent sorting scheme.  </p>
+serialization of JSON primitives defined in ECMAScript <a href="#ES6" class="xref">[ES6]</a> with a platform independent sorting scheme.  </p>
 <p>The intended audiences of this document are JSON tool vendors, as well as designers of JSON based cryptographic solutions.  </p>
 <h1 id="rfc.status"><a href="#rfc.status">Status of This Memo</a></h1>
 <p>This Internet-Draft is submitted in full conformance with the provisions of BCP 78 and BCP 79.</p>
@@ -465,7 +466,7 @@ documents as Internet-Drafts.  The list of current Internet-Drafts is at
  and may be updated, replaced, or obsoleted by other documents at any 
 time.  It is inappropriate to use Internet-Drafts as reference material 
 or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on November 8, 2018.</p><p><i>Note: this document has been slightly "enhanced" to make it more readable.</i></p>
+<p>This Internet-Draft will expire on November 10, 2018.</p><p><i>Note: this document has been slightly "enhanced" to make it more readable.</i></p>
 <h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
 <p>Copyright (c) 2018 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal 
@@ -527,9 +528,11 @@ Simplified BSD License.</p>
 </li>
 <li >Appendix D.   <a href="#rfc.appendix.D">Dealing with Big Numbers</a>
 </li>
-<li >Appendix E.   <a href="#rfc.appendix.E">Other JSON Canonicalization Efforts</a>
+<li >Appendix E.   <a href="#rfc.appendix.E">Implementation Guidelines</a>
 </li>
-<li >Appendix F.   <a href="#rfc.appendix.F">Development Portal</a>
+<li >Appendix F.   <a href="#rfc.appendix.F">Other JSON Canonicalization Efforts</a>
+</li>
+<li >Appendix G.   <a href="#rfc.appendix.G">Development Portal</a>
 </li>
 <li ><a href="#rfc.authors">Author's Address</a>
 </li>
@@ -547,7 +550,7 @@ accomplishing this is converting the data into a format which has a
 simple and fixed representation like Base64Url <a href="#RFC4648" class="xref">[RFC4648]</a> which for example have been used in JWS <a href="#RFC7515" class="xref">[RFC7515]</a>.  Another solution is creating a canonicalized version of the target data with XML Signature <a href="#XMLDSIG" class="xref">[XMLDSIG]</a> as a prime example.  </p>
 <p id="rfc.section.1.p.2">Since the objective was keeping the data "as 
 is", the canonicalization method was selected.  For avoiding 
-"reinventing the wheel", JCS relies on serialization of JSON data 
+"reinventing the wheel", JCS relies on serialization of JSON primitives 
 compatible with ECMAScript (aka JavaScript) beginning with version 6 <a href="#ES6" class="xref">[ES6]</a>, from now on simply referred to as "ES6".  </p>
 <p id="rfc.section.1.p.3">Seasoned XML developers recalling difficulties
  getting signatures to validate (usually due to different 
@@ -557,7 +560,7 @@ rightfully wonder why this particular effort would succeed. The reasons
 are twofold: </p>
 
 <ul><li>JSON is a considerably simpler format than XML, as well as lacking support for the powerful (but complex) namespace concept.  </li>
-<li style="margin-top:0.8em">ES6 compatible JSON serialization is already supported by most Web browsers, Node.js <a href="#NODEJS" class="xref">[NODEJS]</a>, as well as by third party libraries like Open&nbsp;Keystore <a href="#OPENKEY" class="xref">[OPENKEY]</a>, giving the proposed canonicalization scheme a head start.  </li>
+<li style="margin-top:0.8em">ES6 compatible JSON serialization is already supported by most Web browsers, Node.js <a href="#NODEJS" class="xref">[NODEJS]</a>, as well as by third party libraries like Open&nbsp;Keystore <a href="#OPENKEY" class="xref">[OPENKEY]</a>, giving the proposed canonicalization scheme a head start.  Also see <a href="#impl.guidelines" class="xref">Appendix E</a>.  </li>
 </ul>
 
 <p> </p>
@@ -730,8 +733,8 @@ differ (and thus be incompatible with this specification).  </p>
 normalization was originally proposed by James Manger. This ultimately 
 led to the adoption of the entire ES6 serialization scheme for JSON 
 primitives.  <br><br> Other people who have contributed with valuable 
-input to this specification include Michal Wadas, Mike Miller, Mike 
-Samuel, Richard Gibson and Scott Ananian.  </p>
+input to this specification include Mike Jones, Mike Miller, Mike 
+Samuel, Michal Wadas, Richard Gibson and Scott Ananian.  </p>
 <h1 id="rfc.references">
 <a href="#rfc.references">7.</a> References</h1>
 <h1 id="rfc.references.1">
@@ -978,9 +981,39 @@ ecosystem MUST be wrapped using the JSON <samp>String</samp> type.  This is clos
 <p></p>
 <p id="rfc.section.D.p.7">or declarative schemes like OpenAPI <a href="#OPENAPI" class="xref">[OPENAPI]</a>, there are no real limits, not even when using ES6.  </p>
 <h1 id="rfc.appendix.E">
-<a href="#rfc.appendix.E">Appendix E.</a> <a href="#json.otherefforts" id="json.otherefforts">Other JSON Canonicalization Efforts</a>
+<a href="#rfc.appendix.E">Appendix E.</a> <a href="#impl.guidelines" id="impl.guidelines">Implementation Guidelines</a>
 </h1>
-<p id="rfc.section.E.p.1">There are (and have been) other efforts creating "Canonical JSON".  Below is a list of URLs to some of them: </p>
+<p id="rfc.section.E.p.1">The optimal solution is integrating support 
+for JCS directly in JSON parsers and serializers.  However, this is not 
+always realistic.  Fortunately JCS support can be performed through an 
+external process, enabling signature creation schemes like the 
+following: </p>
+
+<ol><li>Create data to be signed using existing JSON tools.  Serialize the data.  </li>
+<li style="margin-top:0.8em">Let the external canonicalizer process the serialized data and return canonicalized result data.  </li>
+<li style="margin-top:0.8em">Sign the canonicalized data.  </li>
+<li style="margin-top:0.8em">Add the resulting signature value to the original JSON data through a designated signature property.  </li>
+<li style="margin-top:0.8em">Serialize the completed (now signed) JSON object.  </li>
+</ol>
+
+<p> A compatible signature verification scheme would then be as follows: </p>
+
+<ol><li>Parse the signed JSON data using existing JSON tools.  </li>
+<li style="margin-top:0.8em">Read and save the signature value from the designated signature property.  </li>
+<li style="margin-top:0.8em">Remove the signature property from the parsed JSON object.  </li>
+<li style="margin-top:0.8em">Serialize the remaining JSON data using existing JSON tools.  </li>
+<li style="margin-top:0.8em">Let the external canonicalizer process the serialized data and return canonicalized result data.  </li>
+<li style="margin-top:0.8em">Verify that the canonicalized data matches the saved signature value
+ using the algorithm and key used for creating the signature.  </li>
+</ol>
+
+<p> A canonicalizer like above is effectively only a "filter", 
+potentially usable with a multitude of quite different cryptographic 
+schemes.  </p>
+<h1 id="rfc.appendix.F">
+<a href="#rfc.appendix.F">Appendix F.</a> <a href="#json.otherefforts" id="json.otherefforts">Other JSON Canonicalization Efforts</a>
+</h1>
+<p id="rfc.section.F.p.1">There are (and have been) other efforts creating "Canonical JSON".  Below is a list of URLs to some of them: </p>
 
 <ul><li>
 <a href="https://tools.ietf.org/html/draft-staykov-hu-json-canonical-form-00">https://tools.ietf.org/html/draft-staykov-hu-json-canonical-form-00</a> </li>
@@ -993,10 +1026,10 @@ ecosystem MUST be wrapped using the JSON <samp>String</samp> type.  This is clos
 </ul>
 
 <p> </p>
-<h1 id="rfc.appendix.F">
-<a href="#rfc.appendix.F">Appendix F.</a> <a href="#json.development" id="json.development">Development Portal</a>
+<h1 id="rfc.appendix.G">
+<a href="#rfc.appendix.G">Appendix G.</a> <a href="#json.development" id="json.development">Development Portal</a>
 </h1>
-<p id="rfc.section.F.p.1">The JSC specification is currently developed at <a href="https://github.com/cyberphone/json-canonicalization">https://github.com/cyberphone/json-canonicalization</a>.  <br><br> The portal also provides software for testing.  </p>
+<p id="rfc.section.G.p.1">The JSC specification is currently developed at <a href="https://github.com/cyberphone/json-canonicalization">https://github.com/cyberphone/json-canonicalization</a>.  <br><br> The portal also provides software for testing.  </p>
 <h1 id="rfc.authors"><a href="#rfc.authors">Author's Address</a></h1>
 <div class="avoidbreak">
   <address class="vcard">
