@@ -985,9 +985,9 @@ ecosystem MUST be wrapped using the JSON <samp>String</samp> type.  This is clos
 </h1>
 <p id="rfc.section.E.p.1">The optimal solution is integrating support 
 for JCS directly in JSON parsers and serializers.  However, this is not 
-always realistic.  Fortunately JCS support can be performed through an 
-external process, enabling signature creation schemes like the 
-following: </p>
+always realistic.  Fortunately JCS support can be performed through 
+externally supplied canonicalizer software, enabling signature creation 
+schemes like the following: </p>
 
 <ol><li>Create data to be signed. Serialize the data using <i>existing</i> JSON tools.  </li>
 <li style="margin-top:0.8em">Let the external canonicalizer process the serialized data and return canonicalized result data.  </li>
