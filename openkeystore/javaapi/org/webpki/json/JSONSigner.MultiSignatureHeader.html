@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 
-<title>JSONX509Encrypter (WebPKI.org Support)</title>
+<title>JSONSigner.MultiSignatureHeader (WebPKI.org Support)</title>
 
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
@@ -12,13 +12,13 @@
 <script type="text/javascript"><!--
     try {
         if (location.href.indexOf('is-external=true') == -1) {
-            parent.document.title="JSONX509Encrypter (WebPKI.org Support)";
+            parent.document.title="JSONSigner.MultiSignatureHeader (WebPKI.org Support)";
         }
     }
     catch(err) {
     }
 //-->
-var methods = {"i0":10};
+var methods = {"i0":10,"i1":10,"i2":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -47,12 +47,12 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../org/webpki/json/JSONVerifier.html" title="class in org.webpki.json"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../org/webpki/json/JSONX509Signer.html" title="class in org.webpki.json"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../org/webpki/json/JSONSigner.html" title="class in org.webpki.json"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../org/webpki/json/JSONSymKeyEncrypter.html" title="class in org.webpki.json"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../index.html?org/webpki/json/JSONX509Encrypter.html" target="_top">Frames</a></li>
-<li><a href="JSONX509Encrypter.html" target="_top">No&nbsp;Frames</a></li>
+<li><a href="../../../index.html?org/webpki/json/JSONSigner.MultiSignatureHeader.html" target="_top">Frames</a></li>
+<li><a href="JSONSigner.MultiSignatureHeader.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_top">
 <li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
@@ -91,19 +91,14 @@ var activeTableTab = "activeTableTab";
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
 <div class="subTitle">org.webpki.json</div>
-<h2 title="Class JSONX509Encrypter" class="title">Class JSONX509Encrypter</h2>
+<h2 title="Class JSONSigner.MultiSignatureHeader" class="title">Class JSONSigner.MultiSignatureHeader</h2>
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
 <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../org/webpki/json/JSONEncrypter.html" title="class in org.webpki.json">org.webpki.json.JSONEncrypter</a></li>
-<li>
-<ul class="inheritance">
-<li>org.webpki.json.JSONX509Encrypter</li>
-</ul>
-</li>
+<li>org.webpki.json.JSONSigner.MultiSignatureHeader</li>
 </ul>
 </li>
 </ul>
@@ -111,18 +106,13 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <dl>
-<dt>All Implemented Interfaces:</dt>
-<dd><a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a></dd>
+<dt>Enclosing class:</dt>
+<dd><a href="../../../org/webpki/json/JSONSigner.html" title="class in org.webpki.json">JSONSigner</a></dd>
 </dl>
 <hr>
 <br>
-<pre>public class <span class="typeNameLabel">JSONX509Encrypter</span>
-extends <a href="../../../org/webpki/json/JSONEncrypter.html" title="class in org.webpki.json">JSONEncrypter</a></pre>
-<div class="block">Initiator object for certificate based encryptions.</div>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../serialized-form.html#org.webpki.json.JSONX509Encrypter">Serialized Form</a></dd>
-</dl>
+<pre>public static class <span class="typeNameLabel">JSONSigner.MultiSignatureHeader</span>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 </li>
 </ul>
 </div>
@@ -141,10 +131,7 @@ extends <a href="../../../org/webpki/json/JSONEncrypter.html" title="class in or
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONX509Encrypter.html#JSONX509Encrypter-java.security.cert.X509Certificate:A-org.webpki.json.KeyEncryptionAlgorithms-">JSONX509Encrypter</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]&nbsp;certificatePath,
-                 <a href="../../../org/webpki/json/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json">KeyEncryptionAlgorithms</a>&nbsp;keyEncryptionAlgorithm)</code>
-<div class="block">Constructor for JCE based solutions.</div>
-</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONSigner.MultiSignatureHeader.html#MultiSignatureHeader-org.webpki.json.JSONCryptoHelper.Options-">MultiSignatureHeader</a></span>(<a href="../../../org/webpki/json/JSONCryptoHelper.Options.html" title="class in org.webpki.json">JSONCryptoHelper.Options</a>&nbsp;optionalFormatVerifier)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -162,19 +149,19 @@ extends <a href="../../../org/webpki/json/JSONEncrypter.html" title="class in or
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code><a href="../../../org/webpki/json/JSONX509Encrypter.html" title="class in org.webpki.json">JSONX509Encrypter</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONX509Encrypter.html#setRemoteKey-java.lang.String-">setRemoteKey</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;url)</code>
-<div class="block">Set remote key (&quot;x5u&quot;) indicator.</div>
-</td>
+<td class="colFirst"><code><a href="../../../org/webpki/json/JSONSigner.MultiSignatureHeader.html" title="class in org.webpki.json">JSONSigner.MultiSignatureHeader</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONSigner.MultiSignatureHeader.html#setExcluded-java.lang.String:A-">setExcluded</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;excluded)</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="../../../org/webpki/json/JSONSigner.MultiSignatureHeader.html" title="class in org.webpki.json">JSONSigner.MultiSignatureHeader</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONSigner.MultiSignatureHeader.html#setExtensions-org.webpki.json.JSONCryptoHelper.ExtensionHolder-">setExtensions</a></span>(<a href="../../../org/webpki/json/JSONCryptoHelper.ExtensionHolder.html" title="class in org.webpki.json">JSONCryptoHelper.ExtensionHolder</a>&nbsp;extensionHolder)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code><a href="../../../org/webpki/json/JSONSigner.MultiSignatureHeader.html" title="class in org.webpki.json">JSONSigner.MultiSignatureHeader</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONSigner.MultiSignatureHeader.html#setGlobalAlgorithm-org.webpki.crypto.SignatureAlgorithms-org.webpki.crypto.AlgorithmPreferences-">setGlobalAlgorithm</a></span>(<a href="../../../org/webpki/crypto/SignatureAlgorithms.html" title="interface in org.webpki.crypto">SignatureAlgorithms</a>&nbsp;signatureAlgorithm,
+                  <a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences)</code>&nbsp;</td>
 </tr>
 </table>
-<ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.org.webpki.json.JSONEncrypter">
-<!--   -->
-</a>
-<h3>Methods inherited from class&nbsp;org.webpki.json.<a href="../../../org/webpki/json/JSONEncrypter.html" title="class in org.webpki.json">JSONEncrypter</a></h3>
-<code><a href="../../../org/webpki/json/JSONEncrypter.html#setExtensions-org.webpki.json.JSONObjectWriter-">setExtensions</a>, <a href="../../../org/webpki/json/JSONEncrypter.html#setKeyId-java.lang.String-">setKeyId</a>, <a href="../../../org/webpki/json/JSONEncrypter.html#setOutputPublicKeyInfo-boolean-">setOutputPublicKeyInfo</a></code></li>
-</ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
@@ -196,23 +183,13 @@ extends <a href="../../../org/webpki/json/JSONEncrypter.html" title="class in or
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="JSONX509Encrypter-java.security.cert.X509Certificate:A-org.webpki.json.KeyEncryptionAlgorithms-">
+<a name="MultiSignatureHeader-org.webpki.json.JSONCryptoHelper.Options-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>JSONX509Encrypter</h4>
-<pre>public&nbsp;JSONX509Encrypter(<a href="https://docs.oracle.com/javase/8/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]&nbsp;certificatePath,
-                         <a href="../../../org/webpki/json/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json">KeyEncryptionAlgorithms</a>&nbsp;keyEncryptionAlgorithm)
-                  throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Constructor for JCE based solutions.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>certificatePath</code> - Certificate path used for encrypting the key</dd>
-<dd><code>keyEncryptionAlgorithm</code> - The algorithm used for encrypting the key</dd>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - &nbsp;</dd>
-</dl>
+<h4>MultiSignatureHeader</h4>
+<pre>public&nbsp;MultiSignatureHeader(<a href="../../../org/webpki/json/JSONCryptoHelper.Options.html" title="class in org.webpki.json">JSONCryptoHelper.Options</a>&nbsp;optionalFormatVerifier)</pre>
 </li>
 </ul>
 </li>
@@ -223,26 +200,46 @@ extends <a href="../../../org/webpki/json/JSONEncrypter.html" title="class in or
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="setRemoteKey-java.lang.String-">
+<a name="setExcluded-java.lang.String:A-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setExcluded</h4>
+<pre>public&nbsp;<a href="../../../org/webpki/json/JSONSigner.MultiSignatureHeader.html" title="class in org.webpki.json">JSONSigner.MultiSignatureHeader</a>&nbsp;setExcluded(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;excluded)
+                                            throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="setExtensions-org.webpki.json.JSONCryptoHelper.ExtensionHolder-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setExtensions</h4>
+<pre>public&nbsp;<a href="../../../org/webpki/json/JSONSigner.MultiSignatureHeader.html" title="class in org.webpki.json">JSONSigner.MultiSignatureHeader</a>&nbsp;setExtensions(<a href="../../../org/webpki/json/JSONCryptoHelper.ExtensionHolder.html" title="class in org.webpki.json">JSONCryptoHelper.ExtensionHolder</a>&nbsp;extensionHolder)
+                                              throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="setGlobalAlgorithm-org.webpki.crypto.SignatureAlgorithms-org.webpki.crypto.AlgorithmPreferences-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>setRemoteKey</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/json/JSONX509Encrypter.html" title="class in org.webpki.json">JSONX509Encrypter</a>&nbsp;setRemoteKey(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;url)
-                               throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Set remote key (&quot;x5u&quot;) indicator.
- This method <i>suppresses</i> the in-line certificate data.
- Note that the certificate path must anyway be provided during <i>encryption</i>.</div>
+<h4>setGlobalAlgorithm</h4>
+<pre>public&nbsp;<a href="../../../org/webpki/json/JSONSigner.MultiSignatureHeader.html" title="class in org.webpki.json">JSONSigner.MultiSignatureHeader</a>&nbsp;setGlobalAlgorithm(<a href="../../../org/webpki/crypto/SignatureAlgorithms.html" title="interface in org.webpki.crypto">SignatureAlgorithms</a>&nbsp;signatureAlgorithm,
+                                                          <a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences)
+                                                   throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>url</code> - Where the (PEM) certificate path resides</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>this</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - &nbsp;</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../org/webpki/json/JSONRemoteKeys.html" title="enum in org.webpki.json"><code>JSONRemoteKeys</code></a></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -272,12 +269,12 @@ extends <a href="../../../org/webpki/json/JSONEncrypter.html" title="class in or
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../org/webpki/json/JSONVerifier.html" title="class in org.webpki.json"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../org/webpki/json/JSONX509Signer.html" title="class in org.webpki.json"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../org/webpki/json/JSONSigner.html" title="class in org.webpki.json"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../org/webpki/json/JSONSymKeyEncrypter.html" title="class in org.webpki.json"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../index.html?org/webpki/json/JSONX509Encrypter.html" target="_top">Frames</a></li>
-<li><a href="JSONX509Encrypter.html" target="_top">No&nbsp;Frames</a></li>
+<li><a href="../../../index.html?org/webpki/json/JSONSigner.MultiSignatureHeader.html" target="_top">Frames</a></li>
+<li><a href="JSONSigner.MultiSignatureHeader.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_bottom">
 <li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
