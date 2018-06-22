@@ -407,12 +407,12 @@ border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,ver
 <link href="#rfc.authors" rel="Chapter">
 
 
-  <meta name="generator" content="xml2rfc version 2.9.6 - https://tools.ietf.org/tools/xml2rfc">
+  <meta name="generator" content="xml2rfc version 2.9.8 - https://tools.ietf.org/tools/xml2rfc">
   <link rel="schema.dct" href="http://purl.org/dc/terms/">
 
   <meta name="dct.creator" content="Rundgren, A.">
-  <meta name="dct.identifier" content="urn:ietf:id:draft-rundgren-json-canonicalization-scheme-00">
-  <meta name="dct.issued" scheme="ISO8601" content="2018-11">
+  <meta name="dct.identifier" content="urn:ietf:id:draft-rundgren-json-canonicalization-scheme-01">
+  <meta name="dct.issued" scheme="ISO8601" content="2018-22">
   <meta name="dct.abstract" content="Cryptographic operations like hashing and signing depend on that the target data does not change during serialization, transport, or parsing.  By applying the rules defined by JCS (JSON Canonicalization Scheme), data provided in the JSON ">
   <meta name="description" content="Cryptographic operations like hashing and signing depend on that the target data does not change during serialization, transport, or parsing.  By applying the rules defined by JCS (JSON Canonicalization Scheme), data provided in the JSON ">
 
@@ -432,11 +432,11 @@ border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,ver
 <td class="right">Independent</td>
 </tr>
 <tr>
-<td class="left">Intended status: Standards Track</td>
-<td class="right">May 11, 2018</td>
+<td class="left">Intended status: Informational</td>
+<td class="right">June 22, 2018</td>
 </tr>
 <tr>
-<td class="left">Expires: November 12, 2018</td>
+<td class="left">Expires: December 24, 2018</td>
 <td class="right"></td>
 </tr>
 
@@ -445,7 +445,7 @@ border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,ver
   </table>
 
   <p class="title">JSON Canonicalization Scheme (JCS) <br>
-  <span class="filename">draft-rundgren-json-canonicalization-scheme-00</span></p>
+  <span class="filename">draft-rundgren-json-canonicalization-scheme-01</span></p>
   
   <h1 id="rfc.abstract"><a href="#rfc.abstract">Abstract</a></h1>
 <p>Cryptographic operations like hashing and signing depend on that the 
@@ -466,7 +466,7 @@ documents as Internet-Drafts.  The list of current Internet-Drafts is at
  and may be updated, replaced, or obsoleted by other documents at any 
 time.  It is inappropriate to use Internet-Drafts as reference material 
 or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on November 12, 2018.</p><p><i>Note: this document has been slightly "enhanced" to make it more readable.</i></p>
+<p>This Internet-Draft will expire on December 24, 2018.</p><p><i>Note: this document has been slightly "enhanced" to make it more readable.</i></p>
 <h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
 <p>Copyright (c) 2018 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal 
@@ -681,11 +681,12 @@ would not qualify as "canonicalized" since <samp>Object</samp> properties are no
 </ul>
 
 <p> </p>
-<p id="rfc.section.3.2.3.p.5">When a JSON <samp>Object</samp> is about to have its properties sorted, the following measures MUST be performed: </p>
+<p id="rfc.section.3.2.3.p.5">When a JSON <samp>Object</samp> is about to have its properties sorted, the following measures MUST be adhered to: </p>
 
-<ul><li>Property strings to be sorted depend on that strings are represented
- as arrays of 16-bit unsigned integers where each integer holds a single
- UCS2/UTF-16 <a href="#UNICODE" class="xref">[UNICODE]</a> code unit.  The sorting is based on pure value comparisons, independent of locale settings.  </li>
+<ul><li>The sorting process is applied to the internal representation of property strings.  That is, their state before serialization.  </li>
+<li style="margin-top:0.8em">Property strings to be sorted depend on that strings are internally 
+represented as arrays of 16&#8209;bit unsigned integers where each integer 
+holds a single UCS2/UTF-16 <a href="#UNICODE" class="xref">[UNICODE]</a> code unit.  The sorting is based on pure value comparisons, independent of locale settings.  </li>
 <li style="margin-top:0.8em">Property strings either have different values at some index that is a
  valid index for both strings, or their lengths are different, or both. 
  If they have different values at one or more index positions, let k be 
