@@ -1,35 +1,5 @@
-﻿<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Personal Paymemt Terminal</title>
-<style type="text/css">
-body {margin:0px;padding:0px;font-size:12pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','DejaVu Sans',Arial,'Liberation Sans';background-color:white}
-td.label {text-align:right;padding:3pt 3pt 3pt 0pt}
-td.field {min-width:11em;max-width:15em;padding:3pt 6pt 3pt 6pt;border-width:1px;border-style:solid;border-color:#808080;background-color:#fafafa;overflow:hidden;white-space:nowrap;box-sizing:border-box}
-td.pan {text-align:center;padding:5pt 0 0 0;font-size:9pt}
-div.cardimage {width:212px;height:127px;border-style:groove;border-width:2px;border-color:#c0c0c0;border-radius:15px;box-shadow:5px 5px 5px #d0d0d0;background-size:cover;background-repeat:no-repeat}
-span.marquee  {
-    display:inline-block;
-    position:relative;
-    top:1pt;
-    white-space:nowrap;
-    animation-name:rollingtext;
-    animation-duration:10s;
-    animation-timing-function:linear;
-    animation-iteration-count:infinite;
-    font-size:10pt;
-    color:blue
-}
-
-
-/* Make it move */
-@keyframes rollingtext {
-    0% {opacity:1;text-indent:0em}
-    33% {opacity:1;text-indent:0em}
-    75% {opacity:1;text-indent:-30em }
-    76% {opacity:0;text-indent:-30em }
-    77% {opacity:0;text-indent:15em }
-    78% {opacity:1;text-indent:15em }
-    100% {opacity:1;text-indent:0em}
-}
-</style>
+﻿<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Personal Payment Terminal</title>
+<link rel="stylesheet" type="text/css" href="style.css">
 <script type="text/javascript">
     'use strict';
 
@@ -121,7 +91,7 @@ span.marquee  {
         pinfield = document.getElementById('pinfield');
         card = document.getElementById('card');
         card.rows[0].cells[0].children[0].style.backgroundImage = parent.cardUrl;
-        card.rows[1].cells[0].innerHTML = parent.pan;
+        card.rows[1].cells[0].innerHTML = parent.balance;
         paydata = document.getElementById('paydata');
         kbd = document.getElementById('kbd');
         success = document.getElementById('success');
@@ -163,8 +133,8 @@ span.marquee  {
         </tr>
     </table>
     <table id='card' style='visibility:hidden;position:absolute'>
-        <tr><td><div class='cardimage' title='The selected card'></div></td></tr>
-        <tr><td class="pan" title='Card number or similar account identifier'></td></tr>
+        <tr><td><div class='cardimage' title='The selected card' style="cursor:auto"></div></td></tr>
+        <tr><td class="balance" title='Account balance'></td></tr>
     </table>
     <div id='kbd' style='visibility:hidden;position:absolute;width:88%' title='This part depends on the payment credential, it could for example refer to a biometric reader'>
         <svg xmlns="http://www.w3.org/2000/svg"

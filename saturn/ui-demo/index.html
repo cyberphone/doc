@@ -6,7 +6,7 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
 <script type="text/javascript">
     'use strict';
     var cardUrl = null;
-    var pan;
+    var balance;
     var DATA = [
         {
             amount: '\u20ac\u200a135.25',
@@ -42,9 +42,9 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
         document.getElementById('requesturl').innerHTML = DATA[currentOperation].appurl;
         document.getElementById('payframe').src = DATA[currentOperation].demopage;
     }
-    function selectCard(cardUrl, pan) {
+    function selectCard(cardUrl, balance) {
         this.cardUrl = cardUrl;
-        this.pan = pan;
+        this.balance = balance;
         document.getElementById('payframe').src = 'paymentwindow.html';
     }
     function init() {

@@ -1,0 +1,28 @@
+body {margin:0px;padding:0px;font-size:12pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','DejaVu Sans',Arial,'Liberation Sans';background-color:white}
+td.label {text-align:right;padding:3pt 3pt 3pt 0pt}
+td.field {min-width:11em;max-width:15em;padding:3pt 6pt 3pt 6pt;border-width:1px;border-style:solid;border-color:#808080;background-color:#fafafa;overflow:hidden;white-space:nowrap;box-sizing:border-box}
+td.balance {text-align:center;padding:5pt 0 0 0}
+div.cardimage {cursor:pointer;width:212px;height:127px;border-style:groove;border-width:2px;border-color:#c0c0c0;border-radius:15px;box-shadow:5px 5px 5px #d0d0d0;background-size:cover;background-repeat:no-repeat}
+span.marquee  {
+    display:inline-block;
+    position:relative;
+    top:1pt;
+    white-space:nowrap;
+    animation-name:rollingtext;
+    animation-duration:10s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+    font-size:10pt;
+    color:blue
+}
+
+/* Make it move */
+@keyframes rollingtext {
+    0% {opacity:1;text-indent:0em}
+    33% {opacity:1;text-indent:0em}
+    75% {opacity:1;text-indent:-30em }
+    76% {opacity:0;text-indent:-30em }
+    77% {opacity:0;text-indent:15em }
+    78% {opacity:1;text-indent:15em }
+    100% {opacity:1;text-indent:0em}
+}

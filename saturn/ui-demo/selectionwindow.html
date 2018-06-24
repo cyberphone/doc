@@ -1,9 +1,5 @@
-﻿<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Personal Paymemt Terminal</title>
-<style type="text/css">
-body {margin:0px;padding:0px;font-size:12pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','DejaVu Sans',Arial,'Liberation Sans';background-color:white}
-td.pan {text-align:center;padding:5pt 0 0 0;font-size:9pt}
-div.cardimage {cursor:pointer;width:212px;height:127px;border-style:groove;border-width:2px;border-color:#c0c0c0;border-radius:15px;box-shadow:5px 5px 5px #d0d0d0;background-size:cover;background-repeat:no-repeat}
-</style>
+﻿<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Personal Payment Terminal</title>
+<link rel="stylesheet" type="text/css" href="style.css">
 <script type="text/javascript">
     'use strict';
 
@@ -34,10 +30,10 @@ div.cardimage {cursor:pointer;width:212px;height:127px;border-style:groove;borde
     <div id='select-text' style='visibility:hidden;position:absolute;width:100%;text-align:center'>Select Account</div>
     <table id='card1' style='visibility:hidden;position:absolute'>
         <tr><td><div class='cardimage' style='background-image:url(supercard.svg)' title='Click to select' onclick="selectCard('card1')"></div></td></tr>
-        <tr><td class="pan" title='Card number or similar account identifier'>6875 0567 4555 2109</td></tr>
+        <tr><td class="balance" title='Account balance'>Balance: &#x20ac;&#x200a;267</td></tr>
     </table>
     <table id='card2' style='visibility:hidden;position:absolute'>
         <tr><td><div class='cardimage' style='background-image:url(bankdirect.svg)' title='Click to select' onclick="selectCard('card2')"></div></td></tr>
-        <tr><td class="pan" title='Card number or similar account identifier'>8645-7800239403</td></tr>
+        <tr><td class="balance" title='Account balance'>Balance: &#x20ac;&#x200a;3580</td></tr>
     </table>
 </body></html>
