@@ -3,9 +3,28 @@
 <script type="text/javascript">
     'use strict';
 
-    function selectCard(id) {
+    function toast(message, element) {
+        var toaster = document.getElementById('toaster');
+        toaster.innerHTML = message;
+		if (element == undefined) {
+			toaster.style.top = ((window.innerHeight - toaster.offsetHeight) / 2) + 'px';
+		} else {
+			toaster.style.top = (element.getBoundingClientRect().top - toaster.offsetHeight - 20) + 'px';
+		}
+        toaster.style.left = ((window.innerWidth - toaster.offsetWidth) / 2) + 'px';
+        toaster.style.visibility = 'visible';
+        setTimeout(function () {
+            toaster.style.visibility = 'hidden';
+        }, 1000);
+    }
+
+	function transactionList(element) {
+		toast('Transaction history is not available<br>in the GUI demo', element);
+	}
+
+	function selectCard(id) {
         var card = document.getElementById(id);
-        parent.selectCard(card.rows[0].cells[0].children[0].style.backgroundImage, card.rows[1].cells[0].innerHTML);
+        parent.selectCard(card.rows[0].cells[0].children[0].style.backgroundImage, card.rows[1].cells[0].children[0].innerHTML);
     }
 
     function positionElements() {
@@ -26,14 +45,15 @@
 
 </script>
 </head><body onload="positionElements()">
+    <div id='toaster' class='toasting'>Message...</div>
     <img src='saturnlogo.svg' style='width:20%' title='Saturn is it!'>
     <div id='select-text' style='visibility:hidden;position:absolute;width:100%;text-align:center'>Select Account</div>
     <table id='card1' style='visibility:hidden;position:absolute'>
         <tr><td><div class='cardimage' style='background-image:url(supercard.svg)' title='Click to select' onclick="selectCard('card1')"></div></td></tr>
-        <tr><td class="balance" title='Account balance'>Balance: &#x20ac;&#x200a;267</td></tr>
+        <tr><td style='text-align:center'><div class="balance" title='Account balance, click to get recent transactions' onClick="transactionList(this)">Balance: &#x20ac;&#x200a;267</div></td></tr>
     </table>
     <table id='card2' style='visibility:hidden;position:absolute'>
         <tr><td><div class='cardimage' style='background-image:url(bankdirect.svg)' title='Click to select' onclick="selectCard('card2')"></div></td></tr>
-        <tr><td class="balance" title='Account balance'>Balance: &#x20ac;&#x200a;3580</td></tr>
+        <tr><td style='text-align:center'><div class="balance" title='Account balance, click to get recent transactions' onClick="transactionList(this)">Balance: &#x20ac;&#x200a;3580</div></td></tr>
     </table>
 </body></html>

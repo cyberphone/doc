@@ -3,16 +3,24 @@
 <script type="text/javascript">
     'use strict';
 
-    function toast(message) {
+    function toast(message, element) {
         var toaster = document.getElementById('toaster');
         toaster.innerHTML = message;
-        toaster.style.top = ((window.innerHeight - toaster.offsetHeight) / 2) + 'px';
+		if (element == undefined) {
+			toaster.style.top = ((window.innerHeight - toaster.offsetHeight) / 2) + 'px';
+		} else {
+			toaster.style.top = (element.getBoundingClientRect().top - toaster.offsetHeight - 20) + 'px';
+		}
         toaster.style.left = ((window.innerWidth - toaster.offsetWidth) / 2) + 'px';
         toaster.style.visibility = 'visible';
         setTimeout(function () {
             toaster.style.visibility = 'hidden';
         }, 1000);
     }
+
+	function transactionList(element) {
+		toast('Transaction history is not available<br>in the GUI demo', element);
+	}
 
     var operation;
     var payeefield;
@@ -36,6 +44,10 @@
         }
     }
 
+	function toastKey(message) {
+        toast(message, document.getElementById('kbd'));
+	}
+
     function addDigit(digit) {
         if (pin.length < 16) {
             pinfield.innerHTML = pin.length == 0 ? digit : pinfield.innerHTML + digit;
@@ -44,16 +56,16 @@
                 showPin();
             }, 500);
         } else {
-            toast('PIN digit ignored');
+            toastKey('PIN digit ignored');
         }
     }
 
     function validatePin() {
         if (pin.length == 0) {
-            toast('Empty PIN - Ignored');
+            toastKey('Empty PIN - Ignored');
         } else {
             if (pinErrors == 3) {
-                toast('Card blocked due to previous PIN errors!');
+                toastKey('Card blocked due to previous PIN errors!');
             } else if (pin == '1234') {
                 var processing = document.getElementById('processing');
                 processing.style.left = ((window.innerWidth - processing.offsetWidth) / 2) + 'px';
@@ -71,7 +83,7 @@
                 }, 2000);
             } else {
                 pinErrors++;
-                toast('PIN error: ' + (3 - pinErrors) + ' left');
+                toastKey('PIN error: ' + (3 - pinErrors) + ' left');
             }
         }
     }
@@ -91,7 +103,7 @@
         pinfield = document.getElementById('pinfield');
         card = document.getElementById('card');
         card.rows[0].cells[0].children[0].style.backgroundImage = parent.cardUrl;
-        card.rows[1].cells[0].innerHTML = parent.balance;
+        card.rows[1].cells[0].children[0].innerHTML = parent.balance;
         paydata = document.getElementById('paydata');
         kbd = document.getElementById('kbd');
         success = document.getElementById('success');
@@ -120,7 +132,7 @@
     <table id='processing' style='margin:auto;border-color:grey;border-width:1px;border-style:ridge;visibility:hidden;background-color:white;position:absolute;z-index:6;box-shadow:5px 5px 5px grey' onClick="toast('Please wait until ready...')">
            <tr><td><img src='working.gif' alt="working"></td><td>Processing...&nbsp;&nbsp;</td></tr>
      </table>
-    <div id='toaster' style='border-color:grey;border-style:solid;border-width:3px;text-align:center;font-size:10pt;z-index:8;background-color:#f0f0f0;position:absolute;visibility:hidden;padding:5pt 10pt 5pt 10pt'>Message...</div>
+    <div id='toaster' class='toasting'>Message...</div>
     <img src='saturnlogo.svg' style='width:20%' title='Saturn is it!'>
     <table id='paydata' style='visibility:hidden;position:absolute'>
         <tr><td id='payeelabel' class='label'>Payee</td><td id='payeefield' class='field' title='Common name of payee'>Demo Merchant</td></tr>
@@ -129,12 +141,12 @@
         <tr><td colspan='2' style='height:5pt'></td></tr>
         <tr>
             <td class='label'>PIN</td>
-            <td id='pinfield' class='field' style='background-color:white;border-color:#0000ff' onClick="toast('Use the keyboard below...')" title='Shows PIN characters'></td>
+            <td id='pinfield' class='field' style='background-color:white;border-color:#0000ff' onClick="toast('Please use the keyboard below...', this)" title='Shows PIN characters'></td>
         </tr>
     </table>
     <table id='card' style='visibility:hidden;position:absolute'>
         <tr><td><div class='cardimage' title='The selected card' style="cursor:auto"></div></td></tr>
-        <tr><td class="balance" title='Account balance'></td></tr>
+        <tr><td style='text-align:center'><div class="balance" title='Account balance, click to get recent transactions' onClick="transactionList(this)"></div></td></tr>
     </table>
     <div id='kbd' style='visibility:hidden;position:absolute;width:88%' title='This part depends on the payment credential, it could for example refer to a biometric reader'>
         <svg xmlns="http://www.w3.org/2000/svg"
