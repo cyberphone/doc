@@ -2,7 +2,7 @@ body {margin:0px;padding:0px;font-size:12pt;color:#000000;font-family:Verdana,'B
 td.label {text-align:right;padding:3pt 3pt 3pt 0pt}
 td.field {min-width:11em;max-width:15em;padding:3pt 6pt 3pt 6pt;border-width:1px;border-style:solid;border-color:#808080;background-color:#fafafa;overflow:hidden;white-space:nowrap;box-sizing:border-box}
 div.balance {cursor:pointer;margin-top:4pt;display:inline-block;padding:1pt 4pt;border-width:1px;border-style:solid;border-color:#808080;border-radius:5px;}
-div.cardimage {cursor:pointer;width:212px;height:127px;border-style:groove;border-width:2px;border-color:#c0c0c0;border-radius:15px;box-shadow:5px 5px 5px #d0d0d0;background-size:cover;background-repeat:no-repeat}
+div.cardimage {cursor:pointer;width:212px;height:127px;border-style:solid;border-width:1px;border-color:#808080;border-radius:15px;box-shadow:5px 5px 5px #d0d0d0;background-size:cover;background-repeat:no-repeat}
 div.toasting {border-color:grey;border-style:solid;border-width:3px;text-align:left;font-size:10pt;z-index:8;background-color:#f0f0f0;position:absolute;visibility:hidden;padding:5pt 10pt 5pt 10pt}
 
 span.marquee  {
