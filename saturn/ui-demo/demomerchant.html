@@ -1,6 +1,19 @@
-﻿<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Personal Paymemt Terminal</title>
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Personal Paymemt Terminal</title>
 <style type="text/css">
 body {margin:0px;padding:0px;font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','DejaVu Sans',Arial,'Liberation Sans';background-color:white}
+div.stdbtn {
+  font-size:11pt;
+  font-family:Arial,'Liberation Sans',Verdana,'Bitstream Vera Sans','DejaVu Sans';
+  display:inline-block;
+  cursor:pointer;
+  background:linear-gradient(to bottom, #eaeaea 14%,#fcfcfc 52%,#e5e5e5 89%);
+  border-width:1px;
+  border-style:solid;
+  border-color:#a9a9a9;
+  border-radius:5pt;
+  padding:3pt 10pt;
+  box-shadow:3pt 3pt 3pt #D0D0D0;
+}
 </style>
 <script type="text/javascript">
     function init() {
@@ -15,6 +28,6 @@ body {margin:0px;padding:0px;font-size:10pt;color:#000000;font-family:Verdana,'B
     <tr><td style="text-align:center;padding-bottom:14pt;font-size:14pt">European Football</td></tr>
     <tr><td title="Football makes the world go round!"><img src="ball-md.png" style="width:150pt" alt="ball"></td></tr>
     <tr><td style="text-align:center;padding-top:15pt"><i>Price:</i> &#8364;&#8202;135.25</td></tr>
-    <tr><td style="text-align:center;auto;padding:10pt"><input type="button" style="cursor:pointer" onclick="parent.nextWindow()" value="Buy Now!" title="On-off quick purchase"></td></tr>
+    <tr><td style="text-align:center;auto;padding:10pt"><div class="stdbtn" onclick="parent.nextWindow()" title="On-off quick purchase">Buy Now!</div></td></tr>
     </table>
 </body></html>
