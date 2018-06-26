@@ -1,0 +1,15 @@
+<svg width="450" height="170" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+  <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+  <defs>
+    <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_1_blur">
+      <feGaussianBlur stdDeviation="1.7"/>
+    </filter>
+  </defs>
+  <g>
+    <title>Layer 1</title>
+    <text font-weight="normal" stroke="#4c4c4c" xml:space="preserve" font-family="Sans-serif" font-size="90" y="98" x="303" stroke-linecap="null" text-anchor="end" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#f4f5f7" id="svg_4">Mobile</text>
+    <text filter="url(#svg_1_blur)" font-weight="normal" stroke="#4c4c4c" xml:space="preserve" font-family="Sans-serif" font-size="90" id="svg_1" y="98" x="303" stroke-linecap="null" text-anchor="end" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#b2c1f7">Mobile</text>
+    <text id="svg_7" font-weight="normal" stroke="#566fff" xml:space="preserve" font-family="Sans-serif" font-size="90" y="98" x="303" stroke-linecap="null" text-anchor="end" stroke-linejoin="null" stroke-dasharray="null" stroke-width="2" fill="#000000" fill-opacity="0">Mobile</text>
+    <text font-weight="normal" id="svg_3" stroke="#ffff00" xml:space="preserve" text-anchor="start" font-family="Sans-serif" font-size="90" y="97" x="307.5" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="2" fill="#ff0000">ID</text>
+  </g>
+</svg>

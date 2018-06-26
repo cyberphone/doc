@@ -1,0 +1,70 @@
+<svg width="300" height="180" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <defs>
+  <linearGradient id="bankPillar" x1="0" x2="1">
+   <stop offset="0" stop-color="#707070"/>
+   <stop offset="0.5" stop-color="#ffffff"/>
+   <stop offset="1" stop-color="#707070"/>
+  </linearGradient>
+  <linearGradient id="cardImage" x1="0" y1="0" x2="1" y2="1">
+   <stop stop-color="#cccff9" offset="0"/>
+   <stop stop-color="#fffffc" offset="0.5"/>
+   <stop stop-color="#ced6ff" offset="1"/>
+  </linearGradient>
+  <radialGradient id="bankIdDot" spreadMethod="pad" cx="0.5" cy="0.5" r="0.5">
+   <stop stop-color="#b2f470" offset="0"/>
+   <stop stop-color="#00a000" offset="1"/>
+  </radialGradient>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_1" fill="url(#cardImage)" height="180" width="300" y="0" x="0"/>
+  <text x="30" y="145" font-family="Sans-serif" font-size="20" stroke="null" id="svg_2">Luke Skywalker</text>
+  <text font-weight="bold" x="30" y="165" font-family="monospace" font-size="14" stroke="null" id="svg_7">IDN: 8654 6545 6788</text>
+  <text id="svg_3" font-weight="bold" fill="#558ed5" text-anchor="middle" font-size="28" font-family="Serif" y="73" x="226">MyBank</text>
+  <rect id="svg_4" fill="#ffffff" stroke-width="1.2" stroke="#000000" height="98" width="138" y="14" x="14"/>
+  <ellipse id="svg_5" fill="none" stroke-width="2" stroke="#f20707" ry="40" rx="60" cy="63" cx="83"/>
+  <path d="m43.57054,62.50781l0,6.11103l3.6197,0q1.82102,0 2.69242,-0.74851q0.88259,-0.75969 0.88259,-2.31259q0,-1.56406 -0.88259,-2.30141q-0.8714,-0.74852 -2.69242,-0.74852l-3.6197,0zm0,-6.85955l0,5.02736l3.3404,0q1.65344,0 2.45782,-0.61445q0.81555,-0.62563 0.81555,-1.89923q0,-1.26242 -0.81555,-1.88805q-0.80438,-0.62563 -2.45782,-0.62563l-3.3404,0zm-2.25673,-1.85453l5.76471,0q2.58071,0 3.97719,1.0725q1.39649,1.0725 1.39649,3.04993q0,1.53055 -0.715,2.43547q-0.715,0.90493 -2.10032,1.12837q1.66462,0.3575 2.58071,1.49703q0.92727,1.12837 0.92727,2.82649q0,2.23439 -1.51938,3.45212q-1.51938,1.21774 -4.32353,1.21774l-5.98814,0l0,-16.67965z" id="path4720" stroke-width="1.27111" fill="#000000"/>
+  <path d="m62.59629,64.1836q-2.49133,0 -3.45212,0.56977q-0.96078,0.56976 -0.96078,1.94391q0,1.09484 0.715,1.74281q0.72618,0.6368 1.96626,0.6368q1.7093,0 2.73711,-1.20656q1.03899,-1.21774 1.03899,-3.22868l0,-0.45805l-2.04446,0zm4.10009,-0.84907l0,7.13885l-2.05563,0l0,-1.89922q-0.70383,1.13953 -1.75399,1.68696q-1.05016,0.53625 -2.56954,0.53625q-1.92156,0 -3.0611,-1.07251q-1.12836,-1.08367 -1.12836,-2.89352q0,-2.11149 1.40766,-3.18399q1.41883,-1.07251 4.22298,-1.07251l2.88235,0l0,-0.20109q0,-1.41883 -0.93844,-2.18969q-0.92727,-0.78204 -2.61423,-0.78204q-1.0725,0 -2.08914,0.25696q-1.01664,0.25695 -1.95508,0.77086l0,-1.89923q1.12836,-0.4357 2.18969,-0.64797q1.06133,-0.22343 2.0668,-0.22343q2.71477,0 4.0554,1.40766q1.34063,1.40766 1.34063,4.26766z" id="path4722" stroke-width="1.27111" fill="#000000"/>
+  <path d="m81.34275,62.92117l0,7.55221l-2.05563,0l0,-7.48518q0,-1.77633 -0.69266,-2.65891q-0.69266,-0.88258 -2.07797,-0.88258q-1.66462,0 -2.6254,1.06133q-0.96078,1.06133 -0.96078,2.89353l0,7.07181l-2.06681,0l0,-12.51253l2.06681,0l0,1.94391q0.73734,-1.12836 1.73164,-1.68696q1.00547,-0.55859 2.31258,-0.55859q2.15618,0 3.2622,1.34062q1.10602,1.32946 1.10602,3.92134z" id="path4724" stroke-width="1.27111" fill="#000000"/>
+  <path d="m85.38698,53.0899l2.0668,0l0,10.26698l6.13338,-5.39603l2.6254,0l-6.63612,5.85408l6.91541,6.65845l-2.68125,0l-6.35682,-6.11103l0,6.11103l-2.0668,0l0,-17.38348z" id="path4726" stroke-width="1.27111" fill="#000000"/>
+  <path d="m106.82678,53.79373l2.25673,0l0,16.67965l-2.25673,0l0,-16.67965z" id="path4728" stroke-width="1.27111" fill="#000000"/>
+  <path d="m115.83133,55.64826l0,12.97058l2.72595,0q3.45212,0 5.0497,-1.56406q1.60875,-1.56407 1.60875,-4.93798q0,-3.35158 -1.60875,-4.90447q-1.59758,-1.56407 -5.0497,-1.56407l-2.72595,0zm-2.25672,-1.85453l4.63634,0q4.84861,0 7.1165,2.02211q2.2679,2.01094 2.2679,6.30096q0,4.31235 -2.27907,6.33447q-2.27907,2.02211 -7.10533,2.02211l-4.63634,0l0,-16.67965z" id="path4730" stroke-width="1.27111" fill="#000000"/>
+  <ellipse fill="url(#bankIdDot)" stroke-width="5" cx="100" cy="63" id="svg_6" rx="3" ry="3"/>
+  <rect id="svg_8" fill="#ffffff" height="10.47" width="25.84" y="30" x="25.08"/>
+  <rect id="svg_9" fill="url(#bankPillar)" height="10.47" width="3.74" y="30" x="25.08"/>
+  <rect id="svg_10" fill="url(#bankPillar)" height="10.47" width="3.74" y="30" x="32.44"/>
+  <rect id="svg_11" fill="url(#bankPillar)" height="10.47" width="3.74" y="30" x="39.81"/>
+  <rect id="svg_12" fill="url(#bankPillar)" height="10.47" width="3.74" y="30" x="47.18"/>
+  <path id="svg_13" stroke-linecap="round" d="m22.7,26.1l15.3,-5.1l15.3,5.1" fill="#e0e0e0" stroke-width="0.5" stroke="#404040"/>
+  <rect id="svg_14" fill="#f2f2f2" stroke-width="0.5" stroke="#404040" height="3.4" width="30.6" y="26.35" x="22.7"/>
+  <rect id="svg_15" fill="#f2f2f2" stroke-width="0.5" stroke="#404040" height="2.04" width="34" y="42.76" x="21"/>
+  <rect id="svg_16" fill="#f2f2f2" stroke-width="0.5" stroke="#404040" height="2.04" width="30.6" y="40.72" x="22.7"/>
+  <rect id="svg_17" fill="#ffffff" height="10.47" width="25.84" y="90.2" x="25.08"/>
+  <rect id="svg_18" fill="url(#bankPillar)" height="10.47" width="3.74" y="90.2" x="25.08"/>
+  <rect id="svg_19" fill="url(#bankPillar)" height="10.47" width="3.74" y="90.2" x="32.44"/>
+  <rect id="svg_20" fill="url(#bankPillar)" height="10.47" width="3.74" y="90.2" x="39.81"/>
+  <rect id="svg_21" fill="url(#bankPillar)" height="10.47" width="3.74" y="90.2" x="47.18"/>
+  <path id="svg_22" stroke-linecap="round" d="m22.7,86.3l15.3,-5.11l15.3,5.11" fill="#e0e0e0" stroke-width="0.5" stroke="#404040"/>
+  <rect id="svg_23" fill="#f2f2f2" stroke-width="0.5" stroke="#404040" height="3.4" width="30.6" y="86.55" x="22.7"/>
+  <rect id="svg_24" fill="#f2f2f2" stroke-width="0.5" stroke="#404040" height="2.04" width="34" y="102.96" x="21"/>
+  <rect id="svg_25" fill="#f2f2f2" stroke-width="0.5" stroke="#404040" height="2.04" width="30.6" y="100.91" x="22.7"/>
+  <rect id="svg_26" fill="#ffffff" height="10.47" width="25.84" y="30" x="115.08"/>
+  <rect id="svg_27" fill="url(#bankPillar)" height="10.47" width="3.74" y="30" x="115.08"/>
+  <rect id="svg_28" fill="url(#bankPillar)" height="10.47" width="3.74" y="30" x="122.44"/>
+  <rect id="svg_29" fill="url(#bankPillar)" height="10.47" width="3.74" y="30" x="129.81"/>
+  <rect id="svg_30" fill="url(#bankPillar)" height="10.47" width="3.74" y="30" x="137.18"/>
+  <path id="svg_31" stroke-linecap="round" d="m112.7,26.1l15.3,-5.1l15.3,5.1" fill="#e0e0e0" stroke-width="0.5" stroke="#404040"/>
+  <rect id="svg_32" fill="#f2f2f2" stroke-width="0.5" stroke="#404040" height="3.4" width="30.6" y="26.35" x="112.7"/>
+  <rect id="svg_33" fill="#f2f2f2" stroke-width="0.5" stroke="#404040" height="2.04" width="34" y="42.76" x="111"/>
+  <rect id="svg_34" fill="#f2f2f2" stroke-width="0.5" stroke="#404040" height="2.04" width="30.6" y="40.72" x="112.7"/>
+  <rect id="svg_35" fill="#ffffff" height="10.47" width="25.84" y="90.2" x="115.08"/>
+  <rect id="svg_36" fill="url(#bankPillar)" height="10.47" width="3.74" y="90.2" x="115.08"/>
+  <rect id="svg_37" fill="url(#bankPillar)" height="10.47" width="3.74" y="90.2" x="122.44"/>
+  <rect id="svg_38" fill="url(#bankPillar)" height="10.47" width="3.74" y="90.2" x="129.81"/>
+  <rect id="svg_39" fill="url(#bankPillar)" height="10.47" width="3.74" y="90.2" x="137.18"/>
+  <path id="svg_40" stroke-linecap="round" d="m112.7,86.3l15.3,-5.11l15.3,5.11" fill="#e0e0e0" stroke-width="0.5" stroke="#404040"/>
+  <rect id="svg_41" fill="#f2f2f2" stroke-width="0.5" stroke="#404040" height="3.4" width="30.6" y="86.55" x="112.7"/>
+  <rect id="svg_42" fill="#f2f2f2" stroke-width="0.5" stroke="#404040" height="2.04" width="34" y="102.96" x="111"/>
+  <rect id="svg_43" fill="#f2f2f2" stroke-width="0.5" stroke="#404040" height="2.04" width="30.6" y="100.91" x="112.7"/>
+ </g>
+</svg>
