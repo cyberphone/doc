@@ -101,7 +101,7 @@
         success.style.top = ((window.innerHeight - success.offsetHeight) / 2) + 'px';
         showPin();
         card.style.left = ((window.innerWidth - card.offsetWidth) / 2) + 'px';
-        paydata.style.left = ((window.innerWidth - paydata.offsetWidth) / 2 + paydata.offsetWidth - pinfield.offsetWidth) + 'px';
+        paydata.style.left = ((window.innerWidth - paydata.offsetWidth - paydata.offsetWidth + pinfield.offsetWidth) / 2) + 'px';
         var kbdTop = window.innerHeight - Math.floor(kbd.offsetHeight * 1.1);
         kbd.style.top = kbdTop + 'px';
         kbd.style.left = ((window.innerWidth - kbd.offsetWidth) / 2) + 'px';
