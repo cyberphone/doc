@@ -47,7 +47,7 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
     }
     function init() {
         if (!cardUrl) {
-            document.getElementById('coreframe').src = 'demomerchant.html';
+            document.getElementById('coreframe').src = 'taxwelcome.html';
             document.querySelector("input[name='mode']").checked = true;
         }
     }
@@ -61,19 +61,21 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
 </head><body onload="init()">
         <table style="border-collapse:collapse">
             <tr>
-                <td id="requesturl" style="padding:3pt 0pt 3pt 10pt;border-width:0 1px 0 1px;border-color:black;border-style:solid">https://demomerchant.com/buy</td>
-                <td rowspan="2" style="width:600pt"><div style="padding-left:50pt"><div style="font-weight:bold;text-align:center;padding-bottom:20pt">Personal Payment Terminal</div>
-                    The Web UI on the left side simulates the primary steps using an Android &quot;App&quot; based <i>Personal&nbsp;Payment&nbsp;Terminal</i> having the following core characteristics:
+                <td id="requesturl" style="padding:3pt 0pt 3pt 10pt;border-width:0 1px 0 1px;border-color:black;border-style:solid">https://taxdepartment.gov/</td>
+                <td rowspan="2" style="width:600pt"><div style="padding-left:50pt"><div style="font-size:20pt;text-align:center;padding-bottom:10pt">Mobile ID</div>
+                    The Web UI on the left side simulates the primary steps using an mobile &quot;App&quot; based
+					authentication and signature solution having the following core characteristics:
                     <ul>
-                    <li><i>Eliminates</i> the traditional payment terminal and associated PCI compliance</li>
-                    <li>Holds virtual cards and offers a <i>consistent user experience</i></li>
-                    <li>Supports most merchant initiated payment scenarios including:
+                    <li>Functionally similar to smart cards but without requiring readers or specfic card driver software</li>
+                    <li>User interface in the mobile device offers a consistant user experience</li>
+                    <li>Supports two core authentication and signature scenarios:
                         <ul>
-                            <li style="padding-top:3pt">Local payments in a shop using NFC/BLE or QR-code *</li>
-                            <li>Payments using the mobile Web</li>
-                            <li>Usage as a &quot;payment companion&quot; to a PC/Mac on the Web using NFC/BLE or QR-code *</li>
+                            <li style="padding-top:3pt">When on the mobile Web</li>
+                            <li>Usage as a &quot;security companion&quot; to a PC/Mac on the Web using QR-code</li>
                         </ul></li>
-                    <li>Maintains a security-level comparable to EMV-cards without centralized tokenization services</li>
+                    <li>Supports any number of <i>independent issuers</i> using a built-in on-line key-management system</li>
+                    <li>Supports both PKI (X.509) and OpenID Connect login</li>
+                    <li>State of the art security based on TEEs (Trusted Execution Environments)</li>
                     </ul>
                     <div style="padding-bottom:5pt">Demo PIN: <span style="color:red">1234</span></div>
                     <table style="padding:0px;border-collapse:collapse"><tr><td style="padding-left:0px">Operation:</td>
@@ -85,15 +87,6 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
                         <td>Phone Subscription</td>
                      </tr></table>
                     
-                        <div style="padding-top:20pt;font-size:8pt;font-style:italic">
-                            Note: The Personal Payment Terminal is NOT A PRODUCT; it is rather a
-                            technology demonstrator and verifier.<p>Several functions depend on
-                            mechanisms currently not available in Android and Chrome.
-                            The somewhat bold goal is converting these fully application-neutral additions to the mobile ecosystem
-                            into de-facto standards.</p>
-                            <p>The Personal Payment Terminal is the client facing part of the Saturn payment authorization system.</p>
-                            <p>* The use of QR-code represents a &quot;workaround&quot;.</p>
-                        </div>
                     </div></td>
             </tr>
             <tr>
