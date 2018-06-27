@@ -7,8 +7,9 @@
   </defs>
   <g>
     <title>Layer 1</title>
-    <text font-weight="normal" id="svg_3" stroke="#ffff00" xml:space="preserve" text-anchor="start" font-family="Sans-serif" font-size="90" y="97" x="307.5" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="2" fill="#ff0000">ID</text>
     <text filter="url(#svg_4_blur)" font-weight="normal" stroke="#ffffff" xml:space="preserve" font-family="Sans-serif" font-size="90" y="96.5" x="294" stroke-linecap="null" text-anchor="end" stroke-linejoin="null" stroke-dasharray="null" stroke-width="3" fill="#ffffff" id="svg_4">Mobile</text>
-    <text id="svg_7" font-weight="normal" stroke="#566fff" xml:space="preserve" font-family="Sans-serif" font-size="90" y="95.5" x="292" stroke-linecap="null" text-anchor="end" stroke-linejoin="null" stroke-dasharray="null" stroke-opacity="0.7" stroke-width="4" fill="#c8d5f7">Mobile</text>
+    <text id="svg_7" font-weight="normal" stroke="#2343fc" xml:space="preserve" font-family="Sans-serif" font-size="90" y="95.5" x="292" stroke-linecap="null" text-anchor="end" stroke-linejoin="null" stroke-dasharray="null" stroke-opacity="0.7" stroke-width="4" fill="#c8d5f7">Mobile</text>
+    <text filter="url(#svg_4_blur)" font-weight="normal" stroke="#ffffff" xml:space="preserve" font-family="Sans-serif" font-size="90" y="96.5" x="300" stroke-linecap="null" text-anchor="start" stroke-linejoin="null" stroke-dasharray="null" stroke-width="3" fill="#ffffff" id="svg_9">ID</text>
+    <text id="svg_10" font-weight="normal" stroke="#fc0526" xml:space="preserve" font-family="Sans-serif" font-size="90" y="95.5" x="298" stroke-linecap="null" text-anchor="start" stroke-linejoin="null" stroke-dasharray="null" stroke-opacity="0.7" stroke-width="4" fill="#f7c8d5">ID</text>
   </g>
 </svg>
