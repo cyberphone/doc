@@ -1,8 +1,7 @@
 body {margin:5pt;font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','DejaVu Sans',Arial,'Liberation Sans';background-color:white}
-div.stdbtn {
+div.stdbtn, div.nicebtn {
   font-size:11pt;
   font-family:Arial,'Liberation Sans',Verdana,'Bitstream Vera Sans','DejaVu Sans';
-  display:inline-block;
   cursor:pointer;
   background:linear-gradient(to bottom, #eaeaea 14%,#fcfcfc 52%,#e5e5e5 89%);
   border-width:1px;
@@ -11,6 +10,12 @@ div.stdbtn {
   border-radius:5pt;
   padding:3pt 10pt;
   box-shadow:3pt 3pt 3pt #D0D0D0;
+}
+div.stdbtn {
+  display:inline-block;
+}
+div.nicebtn {
+	margin-top:10pt
 }
 div.user {
 	z-index:5;
@@ -25,3 +30,4 @@ div.user {
 	box-shadow:3pt 3pt 3pt #D0D0D0;
 	background-color:#f9ecbb
 }
+div.toasting {border-color:red;border-style:solid;border-width:1pt;text-align:left;border-radius:7px;font-size:10pt;z-index:8;background-color:#f0f0f0;position:absolute;visibility:hidden;padding:5pt 10pt 5pt 10pt}

@@ -1,7 +1,26 @@
 <!DOCTYPE html><html><head><meta charset="UTF-8"><title>Mobile ID</title>
 <link rel="stylesheet" type="text/css" href="taxstyle.css">
 <script type="text/javascript">
-    function init() {
+    function toast(message, element) {
+        var toaster = document.getElementById('toaster');
+        toaster.innerHTML = message;
+		if (element == undefined) {
+			toaster.style.top = ((window.innerHeight - toaster.offsetHeight) / 2) + 'px';
+		} else {
+			toaster.style.top = (element.getBoundingClientRect().top - toaster.offsetHeight - 20) + 'px';
+		}
+        toaster.style.left = ((window.innerWidth - toaster.offsetWidth) / 2) + 'px';
+        toaster.style.visibility = 'visible';
+        setTimeout(function () {
+            toaster.style.visibility = 'hidden';
+        }, 1000);
+    }
+
+	function notImplemented(element) {
+		toast('Not implemented in the UI demo', element);
+	}
+	
+	function init() {
         parent.header('1px 1px 1px 1px', 'white', 'black');
 		parent.document.getElementById('requesturl').innerHTML = 'https://taxdepartment.gov/e-services';
         var content = document.getElementById('content');
@@ -11,9 +30,12 @@
 </script>
 </head><body onload="init()">
     <img src='egovlogo.svg' style='width:120pt'>
+    <div id='toaster' class='toasting'>Message...</div>
 	<div style='z-index:5;position:absolute;top:10px;right:10px;border-width:1pt;border-style:solid;border-color:grey;padding:5pt 7pt;border-radius:5px;box-shadow:3pt 3pt 3pt #D0D0D0;background-color:#f9ecbb'>Luke Skywalker<br>8654 6545 6788</div>
     <table id="content" style='position:absolute'>
-    <tr><td style="text-align:center;padding-bottom:24pt;font-size:14pt">Welcome to our e-Services</td></tr>
-    <tr><td style="text-align:center"><div class="stdbtn" onclick="parent.nextWindow()" title="Login"><span style="color:blue">Mobile</span><span style="color:red">ID</span> Login</div></td></tr>
+    <tr><td style="text-align:center;padding-bottom:10pt;font-size:14pt">Select e-Service</td></tr>
+    <tr><td style="text-align:center"><div class="nicebtn" onclick="notImplemented(this)" title="Income Declaration">Income Declaration</div></td></tr>
+    <tr><td style="text-align:center"><div class="nicebtn" onclick="notImplemented(this)" title="VAT Declaration">VAT Declaration</div></td></tr>
+    <tr><td style="text-align:center"><div class="nicebtn" onclick="notImplemented(this)" title="Submit a Question">Submit a Question</div></td></tr>
     </table>
 </body></html>
