@@ -19,7 +19,7 @@
     }
 
     var pinfield;
-    var paydata;
+    var pintable;
     var kbd;
     var card;
     var success;
@@ -67,14 +67,8 @@
                 document.getElementById('whitener').style.visibility = 'visible';
                 processing.style.visibility = 'visible';
                 setTimeout(function () {
-                    card.style.visibility = 'hidden';
-                    kbd.style.visibility = 'hidden';
-                    paydata.style.visibility = 'hidden';
-                    processing.style.visibility = 'hidden';
-                    document.getElementById('whitener').style.visibility = 'hidden';
-                    success.style.visibility = 'visible';
-                    toast('Hit reload if you want to test again')
-                }, 2000);
+					parent.document.getElementById('coreframe').src = 'taxauthenticated.html';
+                }, 1000);
             } else {
                 pinErrors++;
                 toastKey('PIN error: ' + (3 - pinErrors) + ' left');
@@ -90,26 +84,29 @@
     }
 
     function positionElements() {
+		var authtext = document.getElementById('authtext');
         pinfield = document.getElementById('pinfield');
         card = document.getElementById('card');
 		if (parent.cardUrl) {
 			card.rows[1].cells[0].children[0].style.backgroundImage = parent.cardUrl;
 		}
-        paydata = document.getElementById('paydata');
+        pintable = document.getElementById('pintable');
         kbd = document.getElementById('kbd');
         success = document.getElementById('success');
         success.style.top = ((window.innerHeight - success.offsetHeight) / 2) + 'px';
         showPin();
         card.style.left = ((window.innerWidth - card.offsetWidth) / 2) + 'px';
-        paydata.style.left = ((window.innerWidth - paydata.offsetWidth - paydata.offsetWidth + pinfield.offsetWidth) / 2) + 'px';
+        pintable.style.left = ((window.innerWidth - pintable.offsetWidth - pintable.offsetWidth + pinfield.offsetWidth) / 2) + 'px';
         var kbdTop = window.innerHeight - Math.floor(kbd.offsetHeight * 1.1);
         kbd.style.top = kbdTop + 'px';
         kbd.style.left = ((window.innerWidth - kbd.offsetWidth) / 2) + 'px';
-        gutter = (kbdTop - card.offsetHeight - paydata.offsetHeight) / 7;
-        card.style.top = gutter * 3 + 'px';
-        paydata.style.top = (5 * gutter + card.offsetHeight) + 'px';
+        gutter = (kbdTop - card.offsetHeight - pintable.offsetHeight - authtext.offsetHeight) / 10;
+		authtext.style.top = (gutter * 4) + 'px';
+        card.style.top = gutter * 7 + 'px';
+        pintable.style.top = (9 * gutter + card.offsetHeight) + 'px';
+		authtext.style.visibility = 'visible';
         card.style.visibility = 'visible';
-        paydata.style.visibility = 'visible';
+        pintable.style.visibility = 'visible';
         kbd.style.visibility = 'visible';
     }
 
@@ -122,7 +119,8 @@
      </table>
     <div id='toaster' class='toasting'>Message...</div>
     <img src='mobilidlogo.svg' class='mobileid' title='MobileID is it!'>
-    <table id='paydata' style='visibility:hidden;position:absolute'>
+    <div id='authtext' style='visibility:hidden;position:absolute;width:100%;font-size:14pt;text-align:center;color:white'>Authenticate to Service</div>
+    <table id='pintable' style='visibility:hidden;position:absolute'>
         <tr>
             <td class='label'>PIN</td>
             <td id='pinfield' class='field' onClick="toast('Please use the keyboard below...', this)" title='Shows PIN characters'></td>
@@ -130,9 +128,9 @@
     </table>
     <table id='card' style='visibility:hidden;position:absolute'>
         <tr><td style='text-align:center;padding-bottom:4pt;color:white'>Credential</td></tr>
-        <tr><td><div class='cardimage' title='The selected credential' style="cursor:auto"></div></td></tr>
+        <tr><td><div class='cardimage' title='The selected pintable' style="cursor:auto"></div></td></tr>
     </table>
-    <div id='kbd' style='visibility:hidden;position:absolute;width:88%' title='This part depends on the credential, it could for example refer to a biometric reader'>
+    <div id='kbd' style='visibility:hidden;position:absolute;width:88%' title='This part depends on the pintable, it could for example refer to a biometric reader'>
         <svg xmlns="http://www.w3.org/2000/svg"
              xmlns:xlink="http://www.w3.org/1999/xlink"
              viewBox="0 0 416 162">
