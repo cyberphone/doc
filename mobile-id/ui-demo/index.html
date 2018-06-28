@@ -6,40 +6,15 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
 <script type="text/javascript">
     'use strict';
     var cardUrl = null;
-    var DATA = [
-        {
-            amount: '\u20ac\u200a135.25',
-            appurl: 'https://demomerchant.com/buy',
-            requesturl: 'demomerchant.com',
-            demopage: 'demomerchant.html',
-            provider: 'Demo Merchant',
-            amountlabel: true
-        }, {
-            amount: '$\u200a200<br><span class="marquee"><i>Reserved</i>, actual payment will match fuel quantity</span>',
-            appurl: '&nbsp;',
-            requesturl: 'total.fr',
-            demopage: 'gasstation.html',
-            provider: 'Total',
-            amountlabel: true
-    }, {
-            amount: 'Subscription<br><span class="marquee"><i>Payee asks for the right to debit the account for its services</i></span>',
-            appurl: 'https://t-mobile.com/invoicing',
-            requesturl: 't-mobile.com',
-            demopage: 'subscription.html',
-            provider: 'T-Mobile',
-            amountlabel: false
-    }
-    ];
-    var currentOperation = 0;
     function nextWindow() {
-        document.getElementById('coreframe').src = 'selectionwindow.html';
+	    cardUrl = null;
+        document.getElementById('coreframe').src = singleCredential ? 'authenticationwindow.html' : 'selectionwindow.html';
         header('0 1px 0 1px', 'grey', 'white');
-        document.getElementById('requesturl').innerHTML = 'Requester: ' + DATA[currentOperation].requesturl;
+        document.getElementById('requesturl').innerHTML = 'taxdepartment.gov';
     }
-    function setOperation(operation) {
-        currentOperation = operation;
-        document.getElementById('requesturl').innerHTML = DATA[currentOperation].appurl;
-        document.getElementById('payframe').src = DATA[currentOperation].demopage;
+	var singleCredential = true;
+    function setCredentials(mode) {
+        singleCredential = mode;
     }
     function selectCard(cardUrl) {
         this.cardUrl = cardUrl;
@@ -48,7 +23,7 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
     function init() {
         if (!cardUrl) {
             document.getElementById('coreframe').src = 'taxwelcome.html';
-            document.querySelector("input[name='mode']").checked = true;
+            document.querySelector("input[name='credentials']").checked = true;
         }
     }
     function header(borderWidth, backgroundColor, color) {
@@ -78,13 +53,17 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
                     <li>State of the art security based on TEEs (Trusted Execution Environments)</li>
                     </ul>
                     <div style="padding-bottom:5pt">Demo PIN: <span style="color:red">1234</span></div>
-                    <table style="padding:0px;border-collapse:collapse"><tr><td style="padding-left:0px">Operation:</td>
-                        <td><input type="radio" onclick="setOperation(0)" name="mode" checked></td>
-                        <td>Web shop&nbsp;&nbsp;</td>
-                        <td><input type="radio" onclick="setOperation(1)" name="mode"></td>
-                        <td>Gas station&nbsp;&nbsp;</td>
-                        <td><input type="radio" onclick="setOperation(2)" name="mode"></td>
-                        <td>Phone Subscription</td>
+                    <table style="padding:0px;border-collapse:collapse"><tr><td style="padding-left:0px">Theme:</td>
+                        <td><input type="radio" onclick="setTheme(0)" name="theme" checked></td>
+                        <td>Neon/Black&nbsp;&nbsp;</td>
+                        <td><input type="radio" onclick="setTheme(1)" name="theme"></td>
+                        <td>Traditional/White&nbsp;&nbsp;</td>
+                     </tr></table>
+                    <table style="margin-top:5pt;padding:0px;border-collapse:collapse"><tr><td style="padding-left:0px">Credentials:</td>
+                        <td><input type="radio" onclick="setCredentials(true)" name="credentials" checked></td>
+                        <td>Single&nbsp;&nbsp;</td>
+                        <td><input type="radio" onclick="setCredentials(false)" name="credentials"></td>
+                        <td>Multiple (introduces a selection dialog)</td>
                      </tr></table>
                     
                     </div></td>

@@ -1,7 +1,7 @@
 body {margin:0px;padding:0px;font-size:12pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','DejaVu Sans',Arial,'Liberation Sans';background:linear-gradient(to bottom right, #404040, #707070, #404040);background-attachment:fixed}
 td.label {text-align:right;padding:3pt 3pt 3pt 0pt;color:white}
 td.field {width:8em;padding:3pt 6pt 3pt 6pt;border-width:1px;border-style:solid;border-color:#b0b0b0;color:white;overflow:hidden;white-space:nowrap;box-sizing:border-box;background-color:black}
-div.cardimage {cursor:pointer;width:250px;height:147px;border-style:solid;border-width:1px;border-color:#808080;border-radius:17px;box-shadow:0px 0px 8px white;background-size:cover;background-repeat:no-repeat}
+div.cardimage {background-image:url(card-laposte.svg);cursor:pointer;width:250px;height:150px;border-style:solid;border-width:1px;border-color:#808080;border-radius:17px;box-shadow:0px 0px 8px white;background-size:cover;background-repeat:no-repeat}
 div.toasting {border-color:red;border-style:solid;border-width:1pt;text-align:left;border-radius:7px;font-size:10pt;z-index:8;background-color:#f0f0f0;position:absolute;visibility:hidden;padding:5pt 10pt 5pt 10pt}
 img.mobileid {margin:5pt;width:30%}
 

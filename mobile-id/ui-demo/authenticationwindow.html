@@ -18,7 +18,6 @@
         }, 1000);
     }
 
-    var operation;
     var pinfield;
     var paydata;
     var kbd;
@@ -91,10 +90,11 @@
     }
 
     function positionElements() {
-        operation = parent.DATA[parent.currentOperation];
         pinfield = document.getElementById('pinfield');
         card = document.getElementById('card');
-        card.rows[0].cells[0].children[0].style.backgroundImage = parent.cardUrl;
+		if (parent.cardUrl) {
+			card.rows[1].cells[0].children[0].style.backgroundImage = parent.cardUrl;
+		}
         paydata = document.getElementById('paydata');
         kbd = document.getElementById('kbd');
         success = document.getElementById('success');
@@ -129,6 +129,7 @@
         </tr>
     </table>
     <table id='card' style='visibility:hidden;position:absolute'>
+        <tr><td style='text-align:center;padding-bottom:4pt;color:white'>Credential</td></tr>
         <tr><td><div class='cardimage' title='The selected credential' style="cursor:auto"></div></td></tr>
     </table>
     <div id='kbd' style='visibility:hidden;position:absolute;width:88%' title='This part depends on the credential, it could for example refer to a biometric reader'>
