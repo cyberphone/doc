@@ -8,22 +8,31 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
     var cardUrl = null;
     function nextWindow() {
 	    cardUrl = null;
-        document.getElementById('coreframe').src = singleCredential ? 'authenticationwindow.html' : 'selectionwindow.html';
+        document.getElementById('coreframe').src = themePrefix + (singleCredential ? 'authenticationwindow.html' : 'selectionwindow.html');
         header('0 1px 0 1px', 'grey', 'white');
         document.getElementById('requesturl').innerHTML = 'taxdepartment.gov';
     }
 	var singleCredential = true;
     function setCredentials(mode) {
         singleCredential = mode;
+	    cardUrl = null;
+        document.getElementById('coreframe').src = 'taxwelcome.html';
+   }
+	var themePrefix = '';
+    function setTheme(prefix) {
+        themePrefix = prefix;
+	    cardUrl = null;
+        document.getElementById('coreframe').src = 'taxwelcome.html';
     }
     function selectCard(cardUrl) {
         this.cardUrl = cardUrl;
-        document.getElementById('coreframe').src = 'authenticationwindow.html';
+		document.getElementById('coreframe').src = themePrefix + 'authenticationwindow.html';
     }
     function init() {
         if (!cardUrl) {
             document.getElementById('coreframe').src = 'taxwelcome.html';
             document.querySelector("input[name='credentials']").checked = true;
+            document.querySelector("input[name='theme']").checked = true;
         }
     }
     function header(borderWidth, backgroundColor, color) {
@@ -37,7 +46,7 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
         <table style="border-collapse:collapse">
             <tr>
                 <td id="requesturl" style="padding:3pt 0pt 3pt 10pt;border-width:0 1px 0 1px;border-color:black;border-style:solid"></td>
-                <td rowspan="2" style="width:600pt"><div style="padding-left:50pt"><div style="font-size:20pt;text-align:center;padding-bottom:10pt">Mobile ID</div>
+                <td rowspan="2" style="width:600pt"><div style="padding-left:50pt"><img src="trad-mobileidlogo.svg" style="width:150px;margin-left:250px;margin-bottom:10pt"><br>
                     The Web UI on the left side simulates the primary steps using an mobile &quot;App&quot; based
 					authentication and signature solution having the following core characteristics:
                     <ul>
@@ -54,10 +63,10 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
                     </ul>
                     <div style="padding-bottom:5pt">Demo PIN: <span style="color:red">1234</span></div>
                     <table style="padding:0px;border-collapse:collapse"><tr><td style="padding-left:0px">Theme:</td>
-                        <td><input type="radio" onclick="setTheme(0)" name="theme" checked></td>
+                        <td><input type="radio" onclick="setTheme('')" name="theme" checked></td>
                         <td>Neon/Black&nbsp;&nbsp;</td>
-                        <td><input type="radio" onclick="alert('Not yet implemented');return false" name="theme"></td>
-                        <td>Traditional/White (not yet implemented)</td>
+                        <td><input type="radio" onclick="setTheme('trad-')" name="theme"></td>
+                        <td>Traditional/White</td>
                      </tr></table>
                     <table style="margin-top:5pt;padding:0px;border-collapse:collapse"><tr><td style="padding-left:0px">Credentials:</td>
                         <td><input type="radio" onclick="setCredentials(true)" name="credentials" checked></td>
