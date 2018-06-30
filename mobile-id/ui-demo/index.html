@@ -18,7 +18,7 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
 	    cardUrl = null;
         document.getElementById('coreframe').src = 'taxwelcome.html';
    }
-	var themePrefix = '';
+	var themePrefix = 'trad-';
     function setTheme(prefix) {
         themePrefix = prefix;
 	    cardUrl = null;
@@ -32,7 +32,7 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
         if (!cardUrl) {
             document.getElementById('coreframe').src = 'taxwelcome.html';
             document.querySelector("input[name='credentials']").checked = true;
-            document.querySelector("input[name='theme']").checked = true;
+            document.querySelector("input[name='theme']").checked = false;
         }
     }
     function header(borderWidth, backgroundColor, color) {
@@ -63,9 +63,9 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
                     </ul>
                     <div style="padding-bottom:5pt">Demo PIN: <span style="color:red">1234</span></div>
                     <table style="padding:0px;border-collapse:collapse"><tr><td style="padding-left:0px">Theme:</td>
-                        <td><input type="radio" onclick="setTheme('')" name="theme" checked></td>
+                        <td><input type="radio" onclick="setTheme('')" name="theme"></td>
                         <td>Neon/Black&nbsp;&nbsp;</td>
-                        <td><input type="radio" onclick="setTheme('trad-')" name="theme"></td>
+                        <td><input type="radio" onclick="setTheme('trad-')" name="theme" checked></td>
                         <td>Traditional/White</td>
                      </tr></table>
                     <table style="margin-top:5pt;padding:0px;border-collapse:collapse"><tr><td style="padding-left:0px">Credentials:</td>
