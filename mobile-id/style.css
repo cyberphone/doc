@@ -1,0 +1,13 @@
+body {
+  margin:20pt;
+  font-family:Verdana,'Bitstream Vera Sans','DejaVu Sans',Arial,'Liberation Sans';
+}
+
+li {
+  padding-bottom:6pt;
+}
+
+a {
+  color:blue;
+  text-decoration:none;
+}
