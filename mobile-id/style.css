@@ -18,12 +18,7 @@ li {
 .noticeholder {
   display:flex;
   justify-content:space-around;
-  position:absolute;
-  z-index:5;
-  bottom:0px;
-  left:0px;
-  right:0px;
-  padding:1em;
+  padding-top:1.5em;
 }
 
 .notice {
