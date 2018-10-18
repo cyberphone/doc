@@ -15,6 +15,25 @@ li {
   padding-bottom:1em;
 }
 
+.noticeholder {
+  display:flex;
+  justify-content:space-around;
+  position:absolute;
+  z-index:5;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  padding:1em;
+}
+
+.notice {
+  background-color:#ffffe0;
+  border-width:1px;
+  border-style:solid;
+  border-color:#a9a9a9;
+  padding:0.7em 1.2em;
+}
+
 a {
   color:blue;
   text-decoration:none;
