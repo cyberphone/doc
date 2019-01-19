@@ -158,8 +158,9 @@
 <body onload="addHeaderTags()">
   <div class="content">
    <div style="height: 13px;">
-      <div onmouseover="this.style.cursor='pointer';" onclick="showElem('legend');" onmouseout="hideElem('legend')" style="height: 6px; position: absolute; cursor: pointer;" class="pre noprint docinfo " title="Click for colour legend.">                                                                        </div>
-      <div id="legend" class="docinfo noprint pre legend" style="position:absolute; top: 4px; left: 4ex; visibility:hidden; background-color: white; padding: 4px 9px 5px 7px; border: solid #345 1px; " onmouseover="showElem('legend');" onmouseout="hideElem('legend');"></div>
+      <div onmouseover="this.style.cursor='pointer';" onclick="showElem('legend');" onmouseout="hideElem('legend')" style="height: 6px; position: absolute;" class="pre noprint docinfo " title="Click for colour legend.">                                                                        </div>
+      <div id="legend" class="docinfo noprint pre legend" style="position:absolute; top: 4px; left: 4ex; visibility:hidden; background-color: white; padding: 4px 9px 5px 7px; border: solid #345 1px; " onmouseover="showElem('legend');" onmouseout="hideElem('legend');">
+      </div>
    </div>
 
 <span class="pre noprint docinfo">                                                                        </span><br>
@@ -283,14 +284,19 @@ Table of Contents
    target data does not change during serialization or parsing.  One way
    of accomplishing this is converting the data into a format that has a
    simple and fixed representation like Base64Url [<a href="http://tools.ietf.org/html//rfc4648" title="&quot;The Base16, Base32, and Base64 Data Encodings&quot;">RFC4648</a>], which is
-   used in JWS [<a href="http://tools.ietf.org/html//rfc7515" title="&quot;JSON Web Signature (JWS)&quot;">RFC7515</a>].  Another solution is creating a canonical
-   version of the data with XML Signature [<a href="#ref-XMLDSIG" title="&quot;XML Signature Syntax and Processing Version 1.1&quot;">XMLDSIG</a>] as a prime example.
+   used in JWS [<a href="http://tools.ietf.org/html//rfc7515" title="&quot;JSON Web Signature (JWS)&quot;">RFC7515</a>].
 
-   Since the objective of JCS is to keep the data "as is", the
-   canonicalization method was selected.  To avoid "reinventing the
-   wheel", JCS relies on serialization of JSON primitives compatible
-   with ECMAScript (aka JavaScript) beginning with version 6 [<a href="#ref-ES6" title="&quot;ECMAScript 2015 Language Specification&quot;">ES6</a>], from
-   now on simply referred to as "ES6".
+   Another solution is creating a canonical version of the data, which
+   is used in XML Signature [<a href="#ref-XMLDSIG" title="&quot;XML Signature Syntax and Processing Version 1.1&quot;">XMLDSIG</a>].  The primary advantage with
+   canonicalizing schemes is that data can be kept in its original form
+   which is the core rationale behind JCS.  Put another way: by using
+   canonicalization a JSON Object may remain a JSON Object even after
+   being signed which simplifies system design, documentation and
+   logging.
+
+   To avoid "reinventing the wheel", JCS relies on serialization of JSON
+   primitives compatible with ECMAScript (aka JavaScript) beginning with
+   version 6 [<a href="#ref-ES6" title="&quot;ECMAScript 2015 Language Specification&quot;">ES6</a>], from now on simply referred to as "ES6".
 
    Seasoned XML developers recalling difficulties getting signatures to
    validate (usually due to different interpretations of the quite
@@ -300,17 +306,16 @@ Table of Contents
 
    o  The absence of a namespace concept and default values, as well as
       constraining data to the I-JSON subset eliminate the need for
-      specific parsing schemes for canonicalized data.
+      specific parsing schemes for dealing with canonicalization.
 
-   o  JCS compatible serialization of JSON primitives is already
-      supported by most Web browsers and Node.js [<a href="#ref-NODEJS" title="&quot;Node.js&quot;">NODEJS</a>], while the
-      full JCS specification is supported by multiple Open Source
-      implementations (see <a href="#appendix-F">Appendix F</a>), giving the proposed
-      canonicalization scheme a head start.  Also see <a href="#appendix-E">Appendix E</a>.
+   o  JCS compatible serialization of JSON primitives is supported by
+      most current Web browsers and as well as by Node.js [<a href="#ref-NODEJS" title="&quot;Node.js&quot;">NODEJS</a>],
+      while the full JCS specification is supported by multiple Open
+      Source implementations (see <a href="#appendix-F">Appendix F</a>).  Also see <a href="#appendix-E">Appendix E</a>.
 
-   The JCS specification describes how serialization of JSON primitives
-   compliant with ES6, combined with an elementary property sorting
-   scheme, can be used for supporting "Crypto Safe" JSON.
+   In summary, the JCS specification describes how serialization of JSON
+   primitives compliant with ES6, combined with an elementary property
+   sorting scheme, can be used for supporting "Crypto Safe" JSON.
 
    JCS is compatible with some existing systems relying on JSON
    canonicalization such as JWK Thumbprint [<a href="http://tools.ietf.org/html//rfc7638" title="&quot;JSON Web Key (JWK) Thumbprint&quot;">RFC7638</a>] and Keybase
@@ -320,11 +325,7 @@ Table of Contents
 
    The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
    "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
-   "OPTIONAL" in this document are to be interpreted as described in <a href="http://tools.ietf.org/html//bcp14">BCP</a>
-   <a href="http://tools.ietf.org/html//bcp14">14</a> [<a href="http://tools.ietf.org/html//rfc2119" title="&quot;Key words for use in RFCs to Indicate Requirement Levels&quot;">RFC2119</a>] [<a href="http://tools.ietf.org/html//rfc8174" title="&quot;Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words&quot;">RFC8174</a>] when, and only when, they appear in all
-   capitals, as shown here.
-
-
+   "OPTIONAL" in this document are to be interpreted as described in BCP
 
 
 
@@ -332,6 +333,9 @@ Table of Contents
 <hr class="noprint" style="width: 96ex;" align="left"><!--NewPage--><pre class="newpage"><a name="page-4" id="page-4" href="#page-4" class="invisible"> </a>
 <span class="grey">Internet-Draft <a href="http://tools.ietf.org/html//draft-rundgren-json-canonicalization-scheme">draft-rundgren-json-canonicalization-scheme</a>  January 2019</span>
 
+
+   14 [<a href="http://tools.ietf.org/html//rfc2119" title="&quot;Key words for use in RFCs to Indicate Requirement Levels&quot;">RFC2119</a>] [<a href="http://tools.ietf.org/html//rfc8174" title="&quot;Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words&quot;">RFC8174</a>] when, and only when, they appear in all
+   capitals, as shown here.
 
 <span class="h2"><h2><a class="selflink" name="section-3" href="#section-3">3</a>.  Detailed Operation</h2></span>
 
@@ -376,9 +380,6 @@ Table of Contents
 <span class="h4"><h4><a class="selflink" name="section-3.2.2" href="#section-3.2.2">3.2.2</a>.  Serialization of Primitive Data Types</h4></span>
 
    Assume that you parse a JSON object like the following:
-
-
-
 
 
 
