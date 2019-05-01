@@ -1,12 +1,9 @@
 <svg viewBox="0 0 420 170" xmlns="http://www.w3.org/2000/svg">
 <g>
-<g transform="rotate(-45.0 85.0 85.0)">
-<ellipse cx="85" cy="85" rx="100" ry="33" fill="#dd5454"/>
-<ellipse cx="85" cy="85" rx="78" ry="26" fill="#404040"/>
-</g>
 <circle cx="85" cy="85" r="60" fill="#6e9e3f"/>
-<text x="85" y="128" font-family="sans-serif" font-size="116" text-anchor="middle" fill="#ffffff">S</text>
-<text x="153" y="128" font-family="sans-serif" font-size="116" text-anchor="start" fill="#d0d0d0">aturn</text>
-<path fill="#dd5454" d="M 56.5,138.19 c 0,0 0,0 9.19,5.05  0,0 48,-30.5 77,-76.65  0,0 0,0 -4,-10.95  0,0 -22,50 -82.1,82.6 z"/>
+<text x="85" y="128" font-family="Roboto" font-size="116" text-anchor="middle" fill="#ffffff">S</text>
+<text x="153" y="128" font-family="Roboto" font-size="116" text-anchor="start" fill="#c0c0c0">aturn</text>
 </g>
+  <path fill="#dd5454"
+     d="M 145.52755,10.175092 A 34,100 45 0 0 101.7463,27.276656 c 3.89961,1.160858 7.67805,2.717299 11.27344,4.648438 a 26,78 45 0 1 27.21289,-2.248047 26,78 45 0 1 -36.76953,73.539093 26,78 45 0 1 -73.539065,36.76953 26,78 45 0 1 2.042969,-26.75196 c -1.949276,-3.60827 -3.519446,-7.40197 -4.691406,-11.31836 A 34,100 45 0 0 14.367395,155.54231 34,100 45 0 0 109.1213,108.87239 34,100 45 0 0 155.78927,14.120406 34,100 45 0 0 145.52755,10.175092 Z"/>
 </svg>
