@@ -146,6 +146,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <div class="block">For creating a JSON array.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONArrayWriter.html#JSONArrayWriter-org.webpki.json.JSONArrayReader-">JSONArrayWriter</a></span>(<a href="../../../org/webpki/json/JSONArrayReader.html" title="class in org.webpki.json">JSONArrayReader</a>&nbsp;reader)</code>&nbsp;</td>
+</tr>
 </table>
 </li>
 </ul>
@@ -203,8 +206,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONArrayWriter.html#setDateTime-java.util.GregorianCalendar-boolean-">setDateTime</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;dateTime,
-           boolean&nbsp;forceUtc)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONArrayWriter.html#setDateTime-java.util.GregorianCalendar-java.util.EnumSet-">setDateTime</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;dateTime,
+           <a href="https://docs.oracle.com/javase/8/docs/api/java/util/EnumSet.html?is-external=true" title="class or interface in java.util">EnumSet</a>&lt;<a href="../../../org/webpki/util/ISODateTime.DatePatterns.html" title="enum in org.webpki.util">ISODateTime.DatePatterns</a>&gt;&nbsp;format)</code>&nbsp;</td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a></code></td>
@@ -280,7 +283,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <a name="JSONArrayWriter--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>JSONArrayWriter</h4>
 <pre>public&nbsp;JSONArrayWriter()</pre>
@@ -293,6 +296,15 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <a href="../../../org/webpki/json/JSONObjectWriter.html#setArray-java.lang.String-org.webpki.json.JSONArrayWriter-"><code>JSONObjectWriter.setArray(String, JSONArrayWriter)</code></a>, 
 <a href="../../../org/webpki/json/JSONArrayWriter.html#setArray-org.webpki.json.JSONArrayWriter-"><code>setArray(JSONArrayWriter)</code></a></dd>
 </dl>
+</li>
+</ul>
+<a name="JSONArrayWriter-org.webpki.json.JSONArrayReader-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>JSONArrayWriter</h4>
+<pre>public&nbsp;JSONArrayWriter(<a href="../../../org/webpki/json/JSONArrayReader.html" title="class in org.webpki.json">JSONArrayReader</a>&nbsp;reader)</pre>
 </li>
 </ul>
 </li>
@@ -439,14 +451,14 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 </dl>
 </li>
 </ul>
-<a name="setDateTime-java.util.GregorianCalendar-boolean-">
+<a name="setDateTime-java.util.GregorianCalendar-java.util.EnumSet-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setDateTime</h4>
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a>&nbsp;setDateTime(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;dateTime,
-                                   boolean&nbsp;forceUtc)
+                                   <a href="https://docs.oracle.com/javase/8/docs/api/java/util/EnumSet.html?is-external=true" title="class or interface in java.util">EnumSet</a>&lt;<a href="../../../org/webpki/util/ISODateTime.DatePatterns.html" title="enum in org.webpki.util">ISODateTime.DatePatterns</a>&gt;&nbsp;format)
                             throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>

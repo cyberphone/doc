@@ -175,13 +175,16 @@ extends <a href="../../../org/webpki/json/JSONVerifier.html" title="class in org
 <ul class="blockListLast">
 <li class="blockList">
 <h4>JSONAsymKeyVerifier</h4>
-<pre>public&nbsp;JSONAsymKeyVerifier(<a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;expectedPublicKey)</pre>
+<pre>public&nbsp;JSONAsymKeyVerifier(<a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a>&nbsp;expectedPublicKey)
+                    throws <a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></pre>
 <div class="block">Verifier for asymmetric keys.
  Note that you can access the received public key from <a href="../../../org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json"><code>JSONSignatureDecoder</code></a>
  which is useful if there are multiple keys possible.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>expectedPublicKey</code> - Expected public key</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code> - &nbsp;</dd>
 </dl>
 </li>
 </ul>

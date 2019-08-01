@@ -72,7 +72,7 @@ var activeTableTab = "activeTableTab";
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li><a href="#nested.classes.inherited.from.class.org.webpki.json.JSONSigner">Nested</a>&nbsp;|&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
@@ -129,21 +129,6 @@ extends <a href="../../../org/webpki/json/JSONSigner.html" title="class in org.w
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
-<!-- ======== NESTED CLASS SUMMARY ======== -->
-<ul class="blockList">
-<li class="blockList"><a name="nested.class.summary">
-<!--   -->
-</a>
-<h3>Nested Class Summary</h3>
-<ul class="blockList">
-<li class="blockList"><a name="nested.classes.inherited.from.class.org.webpki.json.JSONSigner">
-<!--   -->
-</a>
-<h3>Nested classes/interfaces inherited from class&nbsp;org.webpki.json.<a href="../../../org/webpki/json/JSONSigner.html" title="class in org.webpki.json">JSONSigner</a></h3>
-<code><a href="../../../org/webpki/json/JSONSigner.MultiSignatureHeader.html" title="class in org.webpki.json">JSONSigner.MultiSignatureHeader</a></code></li>
-</ul>
-</li>
-</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor.summary">
@@ -187,10 +172,9 @@ extends <a href="../../../org/webpki/json/JSONSigner.html" title="class in org.w
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONX509Signer.html#setAlgorithmPreferences-org.webpki.crypto.AlgorithmPreferences-">setAlgorithmPreferences</a></span>(<a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences)</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code><a href="../../../org/webpki/json/JSONX509Signer.html" title="class in org.webpki.json">JSONX509Signer</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONX509Signer.html#setRemoteKey-java.lang.String-">setRemoteKey</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;url)</code>
-<div class="block">Set remote key (&quot;x5u&quot;) indicator.</div>
-</td>
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONX509Signer.html#setExtensionNames-java.lang.String:A-boolean-">setExtensionNames</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;names,
+                 boolean&nbsp;encryptionMode)</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONX509Signer.html" title="class in org.webpki.json">JSONX509Signer</a></code></td>
@@ -202,7 +186,7 @@ extends <a href="../../../org/webpki/json/JSONSigner.html" title="class in org.w
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.webpki.json.<a href="../../../org/webpki/json/JSONSigner.html" title="class in org.webpki.json">JSONSigner</a></h3>
-<code><a href="../../../org/webpki/json/JSONSigner.html#getNormalizedData--">getNormalizedData</a>, <a href="../../../org/webpki/json/JSONSigner.html#setExcluded-java.lang.String:A-">setExcluded</a>, <a href="../../../org/webpki/json/JSONSigner.html#setExtensions-org.webpki.json.JSONObjectWriter-">setExtensions</a>, <a href="../../../org/webpki/json/JSONSigner.html#setKeyId-java.lang.String-">setKeyId</a>, <a href="../../../org/webpki/json/JSONSigner.html#setOutputPublicKeyInfo-boolean-">setOutputPublicKeyInfo</a></code></li>
+<code><a href="../../../org/webpki/json/JSONSigner.html#getNormalizedData--">getNormalizedData</a>, <a href="../../../org/webpki/json/JSONSigner.html#setExcluded-java.lang.String:A-">setExcluded</a>, <a href="../../../org/webpki/json/JSONSigner.html#setExtensionData-org.webpki.json.JSONObjectWriter-">setExtensionData</a>, <a href="../../../org/webpki/json/JSONSigner.html#setExtensionNames-java.lang.String:A-">setExtensionNames</a>, <a href="../../../org/webpki/json/JSONSigner.html#setKeyId-java.lang.String-">setKeyId</a>, <a href="../../../org/webpki/json/JSONSigner.html#setOutputPublicKeyInfo-boolean-">setOutputPublicKeyInfo</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -280,37 +264,28 @@ extends <a href="../../../org/webpki/json/JSONSigner.html" title="class in org.w
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONX509Signer.html" title="class in org.webpki.json">JSONX509Signer</a>&nbsp;setAlgorithmPreferences(<a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences)</pre>
 </li>
 </ul>
-<a name="setRemoteKey-java.lang.String-">
+<a name="setSignatureAlgorithm-org.webpki.crypto.AsymSignatureAlgorithms-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>setRemoteKey</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/json/JSONX509Signer.html" title="class in org.webpki.json">JSONX509Signer</a>&nbsp;setRemoteKey(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;url)
-                            throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Set remote key (&quot;x5u&quot;) indicator.
- This method <i>suppress</i> the in-line certificate information.
- Note that private key and certificate path must anyway be provided during <i>signing</i>
- since the remote key indicator is simply generated &quot;as is&quot;.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>url</code> - Where the key lives</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>this</dd>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - &nbsp;</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../org/webpki/json/JSONRemoteKeys.html" title="enum in org.webpki.json"><code>JSONRemoteKeys</code></a></dd>
-</dl>
+<h4>setSignatureAlgorithm</h4>
+<pre>public&nbsp;<a href="../../../org/webpki/json/JSONX509Signer.html" title="class in org.webpki.json">JSONX509Signer</a>&nbsp;setSignatureAlgorithm(<a href="../../../org/webpki/crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a>&nbsp;algorithm)</pre>
 </li>
 </ul>
-<a name="setSignatureAlgorithm-org.webpki.crypto.AsymSignatureAlgorithms-">
+<a name="setExtensionNames-java.lang.String:A-boolean-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>setSignatureAlgorithm</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/json/JSONX509Signer.html" title="class in org.webpki.json">JSONX509Signer</a>&nbsp;setSignatureAlgorithm(<a href="../../../org/webpki/crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a>&nbsp;algorithm)</pre>
+<h4>setExtensionNames</h4>
+<pre>public&nbsp;void&nbsp;setExtensionNames(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;names,
+                              boolean&nbsp;encryptionMode)
+                       throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+</dl>
 </li>
 </ul>
 </li>
@@ -364,7 +339,7 @@ extends <a href="../../../org/webpki/json/JSONSigner.html" title="class in org.w
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li><a href="#nested.classes.inherited.from.class.org.webpki.json.JSONSigner">Nested</a>&nbsp;|&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>

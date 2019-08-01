@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":9,"i6":9};
+var methods = {"i0":9,"i1":10,"i2":10,"i3":9,"i4":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -139,9 +139,6 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?i
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/keygen2/Action.html#MANAGE">MANAGE</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/keygen2/Action.html#RESUME">RESUME</a></span></code>&nbsp;</td>
-</tr>
-<tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/keygen2/Action.html#UNLOCK">UNLOCK</a></span></code>&nbsp;</td>
 </tr>
 </table>
@@ -172,20 +169,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?i
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/keygen2/Action.html#mayInitializeKeys--">mayInitializeKeys</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/keygen2/Action.html#mayLookupCredentials--">mayLookupCredentials</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i4" class="altColor">
-<td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/keygen2/Action.html#mustOrMustNotCreateSession--">mustOrMustNotCreateSession</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i5" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../org/webpki/keygen2/Action.html" title="enum in org.webpki.keygen2">Action</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/keygen2/Action.html#valueOf-java.lang.String-">valueOf</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>static <a href="../../../org/webpki/keygen2/Action.html" title="enum in org.webpki.keygen2">Action</a>[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/keygen2/Action.html#values--">values</a></span>()</code>
 <div class="block">Returns an array containing the constants of this enum type, in
@@ -228,15 +217,6 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>MANAGE</h4>
 <pre>public static final&nbsp;<a href="../../../org/webpki/keygen2/Action.html" title="enum in org.webpki.keygen2">Action</a> MANAGE</pre>
-</li>
-</ul>
-<a name="RESUME">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>RESUME</h4>
-<pre>public static final&nbsp;<a href="../../../org/webpki/keygen2/Action.html" title="enum in org.webpki.keygen2">Action</a> RESUME</pre>
 </li>
 </ul>
 <a name="UNLOCK">
@@ -286,24 +266,6 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>mayInitializeKeys</h4>
 <pre>public&nbsp;boolean&nbsp;mayInitializeKeys()</pre>
-</li>
-</ul>
-<a name="mayLookupCredentials--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>mayLookupCredentials</h4>
-<pre>public&nbsp;boolean&nbsp;mayLookupCredentials()</pre>
-</li>
-</ul>
-<a name="mustOrMustNotCreateSession--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>mustOrMustNotCreateSession</h4>
-<pre>public&nbsp;boolean&nbsp;mustOrMustNotCreateSession()</pre>
 </li>
 </ul>
 <a name="valueOf-java.lang.String-">

@@ -195,8 +195,10 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/keygen2/ServerState.html#ServerState-org.webpki.keygen2.ServerCryptoInterface-java.lang.String-">ServerState</a></span>(<a href="../../../org/webpki/keygen2/ServerCryptoInterface.html" title="interface in org.webpki.keygen2">ServerCryptoInterface</a>&nbsp;serverCryptoInterface,
-           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;issuerUri)</code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/keygen2/ServerState.html#ServerState-org.webpki.keygen2.ServerCryptoInterface-java.lang.String-java.security.cert.X509Certificate-java.lang.String-">ServerState</a></span>(<a href="../../../org/webpki/keygen2/ServerCryptoInterface.html" title="interface in org.webpki.keygen2">ServerCryptoInterface</a>&nbsp;serverCryptoInterface,
+           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;issuerUri,
+           <a href="https://docs.oracle.com/javase/8/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>&nbsp;serverCertificate,
+           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;optionalServerSessionId)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -358,8 +360,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 </tr>
 <tr id="i31" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/keygen2/ServerState.html#update-org.webpki.keygen2.ProvisioningInitializationResponseDecoder-java.security.cert.X509Certificate-">update</a></span>(<a href="../../../org/webpki/keygen2/ProvisioningInitializationResponseDecoder.html" title="class in org.webpki.keygen2">ProvisioningInitializationResponseDecoder</a>&nbsp;provisioningInitializationResponse,
-      <a href="https://docs.oracle.com/javase/8/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>&nbsp;serverCertificate)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/keygen2/ServerState.html#update-org.webpki.keygen2.ProvisioningInitializationResponseDecoder-">update</a></span>(<a href="../../../org/webpki/keygen2/ProvisioningInitializationResponseDecoder.html" title="class in org.webpki.keygen2">ProvisioningInitializationResponseDecoder</a>&nbsp;provisioningInitializationResponse)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -383,14 +384,21 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="ServerState-org.webpki.keygen2.ServerCryptoInterface-java.lang.String-">
+<a name="ServerState-org.webpki.keygen2.ServerCryptoInterface-java.lang.String-java.security.cert.X509Certificate-java.lang.String-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>ServerState</h4>
 <pre>public&nbsp;ServerState(<a href="../../../org/webpki/keygen2/ServerCryptoInterface.html" title="interface in org.webpki.keygen2">ServerCryptoInterface</a>&nbsp;serverCryptoInterface,
-                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;issuerUri)</pre>
+                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;issuerUri,
+                   <a href="https://docs.oracle.com/javase/8/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>&nbsp;serverCertificate,
+                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;optionalServerSessionId)
+            throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+</dl>
 </li>
 </ul>
 </li>
@@ -799,18 +807,19 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 </dl>
 </li>
 </ul>
-<a name="update-org.webpki.keygen2.ProvisioningInitializationResponseDecoder-java.security.cert.X509Certificate-">
+<a name="update-org.webpki.keygen2.ProvisioningInitializationResponseDecoder-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>update</h4>
-<pre>public&nbsp;void&nbsp;update(<a href="../../../org/webpki/keygen2/ProvisioningInitializationResponseDecoder.html" title="class in org.webpki.keygen2">ProvisioningInitializationResponseDecoder</a>&nbsp;provisioningInitializationResponse,
-                   <a href="https://docs.oracle.com/javase/8/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>&nbsp;serverCertificate)
-            throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>public&nbsp;void&nbsp;update(<a href="../../../org/webpki/keygen2/ProvisioningInitializationResponseDecoder.html" title="class in org.webpki.keygen2">ProvisioningInitializationResponseDecoder</a>&nbsp;provisioningInitializationResponse)
+            throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                   <a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code></dd>
 </dl>
 </li>
 </ul>

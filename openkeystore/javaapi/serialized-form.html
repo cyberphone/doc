@@ -310,14 +310,6 @@
 <h4>publicKey</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a> publicKey</pre>
 </li>
-<li class="blockList">
-<h4>remoteUrl</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> remoteUrl</pre>
-</li>
-<li class="blockList">
-<h4>remoteKeyFormat</h4>
-<pre><a href="org/webpki/json/JSONRemoteKeys.html" title="enum in org.webpki.json">JSONRemoteKeys</a> remoteKeyFormat</pre>
-</li>
 <li class="blockListLast">
 <h4>algorithmPreferences</h4>
 <pre><a href="org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a> algorithmPreferences</pre>
@@ -449,7 +441,7 @@
 <li class="blockList"><a name="org.webpki.json.JSONSigner">
 <!--   -->
 </a>
-<h3>Class <a href="org/webpki/json/JSONSigner.html" title="class in org.webpki.json">org.webpki.json.JSONSigner</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<h3>Class <a href="org/webpki/json/JSONSigner.html" title="class in org.webpki.json">org.webpki.json.JSONSigner</a> extends org.webpki.json.JSONCryptoHelper.ExtensionsEncoder implements Serializable</h3>
 <dl class="nameValue">
 <dt>serialVersionUID:</dt>
 <dd>1L</dd>
@@ -459,8 +451,8 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
-<h4>extensions</h4>
-<pre><a href="org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a> extensions</pre>
+<h4>extensionData</h4>
+<pre><a href="org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a> extensionData</pre>
 </li>
 <li class="blockList">
 <h4>excluded</h4>
@@ -473,14 +465,6 @@
 <li class="blockList">
 <h4>outputPublicKeyInfo</h4>
 <pre>boolean outputPublicKeyInfo</pre>
-</li>
-<li class="blockList">
-<h4>remoteUrl</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> remoteUrl</pre>
-</li>
-<li class="blockList">
-<h4>remoteKeyFormat</h4>
-<pre><a href="org/webpki/json/JSONRemoteKeys.html" title="enum in org.webpki.json">JSONRemoteKeys</a> remoteKeyFormat</pre>
 </li>
 <li class="blockList">
 <h4>normalizedData</h4>
@@ -664,10 +648,6 @@
 <h4>serverSessionId</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverSessionId</pre>
 </li>
-<li class="blockList">
-<h4>submitUrl</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> submitUrl</pre>
-</li>
 <li class="blockListLast">
 <h4>nonce_reference</h4>
 <pre>byte[] nonce_reference</pre>
@@ -835,10 +815,6 @@
 <li class="blockList">
 <h4>action</h4>
 <pre><a href="org/webpki/keygen2/Action.html" title="enum in org.webpki.keygen2">Action</a> action</pre>
-</li>
-<li class="blockList">
-<h4>serverSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverSessionId</pre>
 </li>
 <li class="blockListLast">
 <h4>serverState</h4>
@@ -1085,10 +1061,6 @@
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverSessionId</pre>
 </li>
 <li class="blockList">
-<h4>submitUrl</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> submitUrl</pre>
-</li>
-<li class="blockList">
 <h4>closeSessionMac</h4>
 <pre>byte[] closeSessionMac</pre>
 </li>
@@ -1218,7 +1190,7 @@
 </li>
 <li class="blockList">
 <h4>sessionLifeTime</h4>
-<pre>int sessionLifeTime</pre>
+<pre>short sessionLifeTime</pre>
 </li>
 <li class="blockListLast">
 <h4>sessionKeyLimit</h4>
@@ -1251,10 +1223,6 @@
 <li class="blockList">
 <h4>serverSessionId</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverSessionId</pre>
-</li>
-<li class="blockList">
-<h4>serverTime</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a> serverTime</pre>
 </li>
 <li class="blockList">
 <h4>serverEphemeralKey</h4>
@@ -1294,7 +1262,7 @@
 </li>
 <li class="blockList">
 <h4>serverTime</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a> serverTime</pre>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverTime</pre>
 </li>
 <li class="blockList">
 <h4>clientTime</h4>
@@ -1308,17 +1276,9 @@
 <h4>attestation</h4>
 <pre>byte[] attestation</pre>
 </li>
-<li class="blockList">
+<li class="blockListLast">
 <h4>deviceCertificatePath</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[] deviceCertificatePath</pre>
-</li>
-<li class="blockList">
-<h4>serverCertificateFingerprint</h4>
-<pre>byte[] serverCertificateFingerprint</pre>
-</li>
-<li class="blockListLast">
-<h4>signature</h4>
-<pre><a href="org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a> signature</pre>
 </li>
 </ul>
 </li>
@@ -1360,17 +1320,9 @@
 <h4>attestation</h4>
 <pre>byte[] attestation</pre>
 </li>
-<li class="blockList">
+<li class="blockListLast">
 <h4>deviceCertificatePath</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[] deviceCertificatePath</pre>
-</li>
-<li class="blockList">
-<h4>serverCertificateFingerprint</h4>
-<pre>byte[] serverCertificateFingerprint</pre>
-</li>
-<li class="blockListLast">
-<h4>sessionSignature</h4>
-<pre><a href="org/webpki/json/JSONSymKeySigner.html" title="class in org.webpki.json">JSONSymKeySigner</a> sessionSignature</pre>
 </li>
 </ul>
 </li>
@@ -1462,7 +1414,7 @@
 </li>
 <li class="blockList">
 <h4>sessionLifeTime</h4>
-<pre>int sessionLifeTime</pre>
+<pre>short sessionLifeTime</pre>
 </li>
 <li class="blockList">
 <h4>sessionKeyLimit</h4>
@@ -1489,8 +1441,16 @@
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a> keyManagementKey</pre>
 </li>
 <li class="blockList">
+<h4>serverTime</h4>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverTime</pre>
+</li>
+<li class="blockList">
 <h4>savedCloseNonce</h4>
 <pre>byte[] savedCloseNonce</pre>
+</li>
+<li class="blockList">
+<h4>serverCertificate</h4>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a> serverCertificate</pre>
 </li>
 <li class="blockList">
 <h4>deviceCertificatePath</h4>
@@ -1662,7 +1622,7 @@
 </li>
 <li class="blockList">
 <h4>endorsedAlgorithms</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[] endorsedAlgorithms</pre>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html?is-external=true" title="class or interface in java.util">TreeSet</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html?is-external=true" title="class or interface in java.util">E</a>&gt; endorsedAlgorithms</pre>
 </li>
 <li class="blockList">
 <h4>encryptedPrivateKey</h4>
@@ -1675,10 +1635,6 @@
 <li class="blockList">
 <h4>publicKey</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a> publicKey</pre>
-</li>
-<li class="blockList">
-<h4>attestation</h4>
-<pre>byte[] attestation</pre>
 </li>
 <li class="blockList">
 <h4>exportProtection</h4>
@@ -1732,9 +1688,13 @@
 <h4>presetPin</h4>
 <pre>byte[] presetPin</pre>
 </li>
-<li class="blockListLast">
+<li class="blockList">
 <h4>devicePinProtection</h4>
 <pre>boolean devicePinProtection</pre>
+</li>
+<li class="blockListLast">
+<h4>keyMac</h4>
+<pre>byte[] keyMac</pre>
 </li>
 </ul>
 </li>
@@ -2026,7 +1986,7 @@
 <li class="blockList"><a name="org.webpki.sks.SKSException">
 <!--   -->
 </a>
-<h3>Class <a href="org/webpki/sks/SKSException.html" title="class in org.webpki.sks">org.webpki.sks.SKSException</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a> implements Serializable</h3>
+<h3>Class <a href="org/webpki/sks/SKSException.html" title="class in org.webpki.sks">org.webpki.sks.SKSException</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang">RuntimeException</a> implements Serializable</h3>
 <ul class="blockList">
 <li class="blockList">
 <h3>Serialized Fields</h3>
@@ -2120,7 +2080,7 @@
 <ul class="blockList">
 <li class="blockList">
 <h4>serverTime</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverTime</pre>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a> serverTime</pre>
 </li>
 <li class="blockList">
 <h4>id</h4>
@@ -2137,14 +2097,6 @@
 <li class="blockList">
 <h4>certificateFilters</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">E</a>&gt; certificateFilters</pre>
-</li>
-<li class="blockList">
-<h4>submitUrl</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> submitUrl</pre>
-</li>
-<li class="blockList">
-<h4>abortUrl</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> abortUrl</pre>
 </li>
 <li class="blockList">
 <h4>languages</h4>
@@ -2181,14 +2133,6 @@
 <li class="blockList">
 <h4>id</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> id</pre>
-</li>
-<li class="blockList">
-<h4>submitUrl</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> submitUrl</pre>
-</li>
-<li class="blockList">
-<h4>abortUrl</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> abortUrl</pre>
 </li>
 <li class="blockList">
 <h4>languageList</h4>
@@ -2228,7 +2172,7 @@
 </li>
 <li class="blockListLast">
 <h4>serverTime</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a> serverTime</pre>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverTime</pre>
 </li>
 </ul>
 </li>
@@ -2248,7 +2192,7 @@
 <ul class="blockList">
 <li class="blockList">
 <h4>serverTime</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a> serverTime</pre>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverTime</pre>
 </li>
 <li class="blockList">
 <h4>clientTime</h4>
@@ -2261,10 +2205,6 @@
 <li class="blockList">
 <h4>serverCertificateFingerprint</h4>
 <pre>byte[] serverCertificateFingerprint</pre>
-</li>
-<li class="blockList">
-<h4>requestUrl</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> requestUrl</pre>
 </li>
 <li class="blockList">
 <h4>id</h4>
@@ -2300,7 +2240,7 @@
 <ul class="blockList">
 <li class="blockList">
 <h4>serverTime</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverTime</pre>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a> serverTime</pre>
 </li>
 <li class="blockList">
 <h4>clientTime</h4>
@@ -2317,10 +2257,6 @@
 <li class="blockList">
 <h4>id</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> id</pre>
-</li>
-<li class="blockList">
-<h4>requestUrl</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> requestUrl</pre>
 </li>
 <li class="blockListLast">
 <h4>signer</h4>

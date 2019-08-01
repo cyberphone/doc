@@ -262,15 +262,17 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr id="i18" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMReaderHelper.html#getDateTime--">getDateTime</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMReaderHelper.html#getDateTime-java.util.EnumSet-">getDateTime</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/EnumSet.html?is-external=true" title="class or interface in java.util">EnumSet</a>&lt;<a href="../../../org/webpki/util/ISODateTime.DatePatterns.html" title="enum in org.webpki.util">ISODateTime.DatePatterns</a>&gt;&nbsp;format)</code>&nbsp;</td>
 </tr>
 <tr id="i19" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMReaderHelper.html#getDateTime-java.lang.String-">getDateTime</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMReaderHelper.html#getDateTime-java.lang.String-java.util.EnumSet-">getDateTime</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+           <a href="https://docs.oracle.com/javase/8/docs/api/java/util/EnumSet.html?is-external=true" title="class or interface in java.util">EnumSet</a>&lt;<a href="../../../org/webpki/util/ISODateTime.DatePatterns.html" title="enum in org.webpki.util">ISODateTime.DatePatterns</a>&gt;&nbsp;format)</code>&nbsp;</td>
 </tr>
 <tr id="i20" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMReaderHelper.html#getDateTimeConditional-java.lang.String-">getDateTimeConditional</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMReaderHelper.html#getDateTimeConditional-java.lang.String-java.util.EnumSet-">getDateTimeConditional</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                      <a href="https://docs.oracle.com/javase/8/docs/api/java/util/EnumSet.html?is-external=true" title="class or interface in java.util">EnumSet</a>&lt;<a href="../../../org/webpki/util/ISODateTime.DatePatterns.html" title="enum in org.webpki.util">ISODateTime.DatePatterns</a>&gt;&nbsp;format)</code>&nbsp;</td>
 </tr>
 <tr id="i21" class="rowColor">
 <td class="colFirst"><code>int</code></td>
@@ -691,13 +693,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </dl>
 </li>
 </ul>
-<a name="getDateTime--">
+<a name="getDateTime-java.util.EnumSet-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getDateTime</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;getDateTime()
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;getDateTime(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/EnumSet.html?is-external=true" title="class or interface in java.util">EnumSet</a>&lt;<a href="../../../org/webpki/util/ISODateTime.DatePatterns.html" title="enum in org.webpki.util">ISODateTime.DatePatterns</a>&gt;&nbsp;format)
                               throws <a href="https://docs.oracle.com/javase/8/docs/api/java/util/NoSuchElementException.html?is-external=true" title="class or interface in java.util">NoSuchElementException</a>,
                                      <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
@@ -707,13 +709,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </dl>
 </li>
 </ul>
-<a name="getDateTime-java.lang.String-">
+<a name="getDateTime-java.lang.String-java.util.EnumSet-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getDateTime</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;getDateTime(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;getDateTime(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                                     <a href="https://docs.oracle.com/javase/8/docs/api/java/util/EnumSet.html?is-external=true" title="class or interface in java.util">EnumSet</a>&lt;<a href="../../../org/webpki/util/ISODateTime.DatePatterns.html" title="enum in org.webpki.util">ISODateTime.DatePatterns</a>&gt;&nbsp;format)
                               throws <a href="https://docs.oracle.com/javase/8/docs/api/java/util/NoSuchElementException.html?is-external=true" title="class or interface in java.util">NoSuchElementException</a>,
                                      <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
@@ -723,13 +726,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </dl>
 </li>
 </ul>
-<a name="getDateTimeConditional-java.lang.String-">
+<a name="getDateTimeConditional-java.lang.String-java.util.EnumSet-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getDateTimeConditional</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;getDateTimeConditional(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;getDateTimeConditional(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                                                <a href="https://docs.oracle.com/javase/8/docs/api/java/util/EnumSet.html?is-external=true" title="class or interface in java.util">EnumSet</a>&lt;<a href="../../../org/webpki/util/ISODateTime.DatePatterns.html" title="enum in org.webpki.util">ISODateTime.DatePatterns</a>&gt;&nbsp;format)
                                          throws <a href="https://docs.oracle.com/javase/8/docs/api/java/util/NoSuchElementException.html?is-external=true" title="class or interface in java.util">NoSuchElementException</a>,
                                                 <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>

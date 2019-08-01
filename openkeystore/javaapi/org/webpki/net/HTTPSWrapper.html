@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":9,"i15":10,"i16":10,"i17":10,"i18":9,"i19":9,"i20":9,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":9,"i15":10,"i16":10,"i17":10,"i18":9,"i19":9,"i20":9,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -369,36 +369,42 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr id="i28" class="altColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/net/HTTPSWrapper.html#setRequestMethod-java.lang.String-">setRequestMethod</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;requestMethod)</code>
+<div class="block">Override te default methods.</div>
+</td>
+</tr>
+<tr id="i29" class="rowColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/net/HTTPSWrapper.html#setRequireSuccess-boolean-">setRequireSuccess</a></span>(boolean&nbsp;flag)</code>
 <div class="block">If true, responses other HTTP than 200 (OK) will throw an exception.</div>
 </td>
 </tr>
-<tr id="i29" class="rowColor">
+<tr id="i30" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/net/HTTPSWrapper.html#setServerCertificateRevocation-boolean-">setServerCertificateRevocation</a></span>(boolean&nbsp;flag)</code>
 <div class="block">If true, enable server certificate revocation checks.</div>
 </td>
 </tr>
-<tr id="i30" class="altColor">
+<tr id="i31" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/net/HTTPSWrapper.html#setTimeout-int-">setTimeout</a></span>(int&nbsp;timeout)</code>
 <div class="block">Sets the read timeout.</div>
 </td>
 </tr>
-<tr id="i31" class="rowColor">
+<tr id="i32" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/net/HTTPSWrapper.html#setTrustStore-java.security.KeyStore-">setTrustStore</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/security/KeyStore.html?is-external=true" title="class or interface in java.security">KeyStore</a>&nbsp;trust_store)</code>
 <div class="block">Sets the Trust Store to use.</div>
 </td>
 </tr>
-<tr id="i32" class="altColor">
+<tr id="i33" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/net/HTTPSWrapper.html#setTrustStore-java.lang.String-java.lang.String-">setTrustStore</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;store_name,
              <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;store_passphrase)</code>
 <div class="block">Sets the Trust Store to use.</div>
 </td>
 </tr>
-<tr id="i33" class="rowColor">
+<tr id="i34" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/net/HTTPSWrapper.html#setUserIDPassword-java.lang.String-java.lang.String-">setUserIDPassword</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;user_id,
                  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;password)</code>&nbsp;</td>
@@ -927,6 +933,22 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>port</code> - Port number for proxy connection.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If something unexpected happens...</dd>
+</dl>
+</li>
+</ul>
+<a name="setRequestMethod-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setRequestMethod</h4>
+<pre>public&nbsp;void&nbsp;setRequestMethod(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;requestMethod)</pre>
+<div class="block">Override te default methods. <br><br>
+ <p>
+ This method affects all proceeding requests. <br><br></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>requestMethod</code> - method to use.</dd>
 </dl>
 </li>
 </ul>

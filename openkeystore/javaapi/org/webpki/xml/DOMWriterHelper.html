@@ -257,8 +257,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#addDateTime-java.lang.String-java.util.GregorianCalendar-">addDateTime</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-           <a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;value)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#addDateTime-java.lang.String-java.util.GregorianCalendar-java.util.EnumSet-">addDateTime</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+           <a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;value,
+           <a href="https://docs.oracle.com/javase/8/docs/api/java/util/EnumSet.html?is-external=true" title="class or interface in java.util">EnumSet</a>&lt;<a href="../../../org/webpki/util/ISODateTime.DatePatterns.html" title="enum in org.webpki.util">ISODateTime.DatePatterns</a>&gt;&nbsp;format)</code>
 <div class="block">Add a text element to the current element.</div>
 </td>
 </tr>
@@ -386,8 +387,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr id="i30" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#setDateTimeAttribute-java.lang.String-java.util.GregorianCalendar-">setDateTimeAttribute</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                    <a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;value)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#setDateTimeAttribute-java.lang.String-java.util.GregorianCalendar-java.util.EnumSet-">setDateTimeAttribute</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                    <a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;value,
+                    <a href="https://docs.oracle.com/javase/8/docs/api/java/util/EnumSet.html?is-external=true" title="class or interface in java.util">EnumSet</a>&lt;<a href="../../../org/webpki/util/ISODateTime.DatePatterns.html" title="enum in org.webpki.util">ISODateTime.DatePatterns</a>&gt;&nbsp;format)</code>
 <div class="block">Set an attribute of the current element to a date.</div>
 </td>
 </tr>
@@ -622,14 +624,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </dl>
 </li>
 </ul>
-<a name="addDateTime-java.lang.String-java.util.GregorianCalendar-">
+<a name="addDateTime-java.lang.String-java.util.GregorianCalendar-java.util.EnumSet-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>addDateTime</h4>
 <pre>public&nbsp;void&nbsp;addDateTime(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                        <a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;value)</pre>
+                        <a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;value,
+                        <a href="https://docs.oracle.com/javase/8/docs/api/java/util/EnumSet.html?is-external=true" title="class or interface in java.util">EnumSet</a>&lt;<a href="../../../org/webpki/util/ISODateTime.DatePatterns.html" title="enum in org.webpki.util">ISODateTime.DatePatterns</a>&gt;&nbsp;format)</pre>
 <div class="block">Add a text element to the current element.
  <p>The text content of the new element will be the
  <code><a href="http://www.w3.org/TR/xmlschema-2/#dateTime">dateTime</a></code>
@@ -640,6 +643,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - The name of the new element.</dd>
 <dd><code>value</code> - The value of the new element.</dd>
+<dd><code>format</code> - The chosen format</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#current">DOMWriterHelper cursor state</a></dd>
 </dl>
@@ -966,14 +970,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </dl>
 </li>
 </ul>
-<a name="setDateTimeAttribute-java.lang.String-java.util.GregorianCalendar-">
+<a name="setDateTimeAttribute-java.lang.String-java.util.GregorianCalendar-java.util.EnumSet-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setDateTimeAttribute</h4>
 <pre>public&nbsp;void&nbsp;setDateTimeAttribute(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                                 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;value)</pre>
+                                 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;value,
+                                 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/EnumSet.html?is-external=true" title="class or interface in java.util">EnumSet</a>&lt;<a href="../../../org/webpki/util/ISODateTime.DatePatterns.html" title="enum in org.webpki.util">ISODateTime.DatePatterns</a>&gt;&nbsp;format)</pre>
 <div class="block">Set an attribute of the current element to a date.
  <p>The text content of the attribute will be the
  <code><a href="http://www.w3.org/TR/xmlschema-2/#dateTime">dateTime</a></code>
@@ -984,6 +989,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - The name of the attribute.</dd>
 <dd><code>value</code> - The value of the attribute.</dd>
+<dd><code>format</code> - The chosen format</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#current">DOMWriterHelper cursor state</a></dd>
 </dl>
