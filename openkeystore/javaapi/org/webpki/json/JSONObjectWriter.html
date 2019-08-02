@@ -366,9 +366,9 @@ and
 </tr>
 <tr id="i21" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectWriter.html#setMoney-java.lang.String-java.math.BigDecimal-java.lang.Integer-">setMoney</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectWriter.html#setMoney-java.lang.String-java.math.BigDecimal-int-">setMoney</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
         <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;value,
-        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;decimals)</code>
+        int&nbsp;decimals)</code>
 <div class="block">Set a <code>Money</code> property.</div>
 </td>
 </tr>
@@ -1073,10 +1073,12 @@ and
                                  <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;value)
                           throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Set a <code>Money</code> property.<p>
- Note: this is a <i>mapped</i> type since there is no <code>Money</code> type in JSON.</p><p>
+ Note: this is a <i>mapped</i> type since there is no <code>Money</code> type in JSON.</p>
+ <p>Specification: <a href="https://www.w3.org/TR/payment-request/#dfn-valid-decimal-monetary-value" 
+ target="_blank">https://www.w3.org/TR/payment-request/#dfn-valid-decimal-monetary-value</a>.</p>
  Sample:
  <pre>
-    "amount": "568790.25"
+    "amount": "460.25"
  </pre></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -1087,11 +1089,11 @@ and
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - &nbsp;</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../org/webpki/json/JSONObjectWriter.html#setMoney-java.lang.String-java.math.BigDecimal-java.lang.Integer-"><code>setMoney(String, BigDecimal, Integer)</code></a></dd>
+<dd><a href="../../../org/webpki/json/JSONObjectWriter.html#setMoney-java.lang.String-java.math.BigDecimal-int-"><code>setMoney(String, BigDecimal, int)</code></a></dd>
 </dl>
 </li>
 </ul>
-<a name="setMoney-java.lang.String-java.math.BigDecimal-java.lang.Integer-">
+<a name="setMoney-java.lang.String-java.math.BigDecimal-int-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -1099,10 +1101,16 @@ and
 <h4>setMoney</h4>
 <pre>public&nbsp;<a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;setMoney(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                                  <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;value,
-                                 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;decimals)
+                                 int&nbsp;decimals)
                           throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Set a <code>Money</code> property.<p>
- Note: this is a <i>mapped</i> type since there is no <code>Money</code> type in JSON.</p></div>
+ Note: this is a <i>mapped</i> type since there is no <code>Money</code> type in JSON.</p>
+ <p>Specification: <a href="https://www.w3.org/TR/payment-request/#dfn-valid-decimal-monetary-value" 
+ target="_blank">https://www.w3.org/TR/payment-request/#dfn-valid-decimal-monetary-value</a>.</p>
+ Sample:
+ <pre>
+    "amount": "460.25"
+ </pre></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - Property</dd>

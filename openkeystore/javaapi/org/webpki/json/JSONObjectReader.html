@@ -333,8 +333,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 </tr>
 <tr id="i25" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectReader.html#getMoney-java.lang.String-java.lang.Integer-">getMoney</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;decimals)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectReader.html#getMoney-java.lang.String-int-">getMoney</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+        int&nbsp;decimals)</code>
 <div class="block">Read a Money property.</div>
 </td>
 </tr>
@@ -1035,8 +1035,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;getMoney(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
                     throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Read a Money property.<p>
- Note: Since JSON does not support a native Money type, this method builds on <i>mapping</i>.</p>
- Note: This method is equivalent to <code>getMoney(name, null)</code>.</div>
+ Note: Since JSON does not support a native Money type, this method builds on <i>mapping</i>.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - Property</dd>
@@ -1049,14 +1048,14 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 </dl>
 </li>
 </ul>
-<a name="getMoney-java.lang.String-java.lang.Integer-">
+<a name="getMoney-java.lang.String-int-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getMoney</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;getMoney(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;decimals)
+                           int&nbsp;decimals)
                     throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Read a Money property.<p>
  Note: Since JSON does not support a native Money type, this method builds on <i>mapping</i>.</p></div>
@@ -1069,7 +1068,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - &nbsp;</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../org/webpki/json/JSONObjectWriter.html#setMoney-java.lang.String-java.math.BigDecimal-java.lang.Integer-"><code>JSONObjectWriter.setMoney(String, BigDecimal, Integer)</code></a></dd>
+<dd><a href="../../../org/webpki/json/JSONObjectWriter.html#setMoney-java.lang.String-java.math.BigDecimal-int-"><code>JSONObjectWriter.setMoney(String, BigDecimal, int)</code></a></dd>
 </dl>
 </li>
 </ul>
