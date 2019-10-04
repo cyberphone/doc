@@ -15,7 +15,7 @@ The physical wallet concept (holder of multiple cards
 from different providers), has been adopted by most of their digital counterparts as
 well. `PaymentHandler` does not currently support a wallet since each handler
 (*by design*) is payment provider specific.  This (for example) means
-that a user cannot open a wallet and see what cards they have and their
+that a user cannot open a wallet application and see what cards they have and their
 current balances, which has become a popular feature in mobile wallets.
 
 ### Only Supports Web Payments
@@ -30,7 +30,7 @@ wide range of payment scenarios like:
 Building a specific wallet or solution for the Web does not make sense 
 *unless it is absolutely necessary*. With native "drivers" to
 https://www.w3.org/TR/payment-request/ available in Android and iOS,
-you can indeed target the scenarios above with a single wallet. This is
+you can indeed target the scenarios above with a *single wallet application*. This is
 not only a development issue since each system also requires some
 kind of *enrollment process* to be carried out by the user.
 
