@@ -6,7 +6,7 @@ The W3C `PaymentHandler` is a companion API to W3C's
 https://www.w3.org/TR/payment-request/ API. The `PaymentHandler` API
 permits writing payment applications using "pure" Web technology.
 
-Although `PaymentHandler` is a cool API, heavily borrowing from the https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API, 
+Although `PaymentHandler` is a cool API, heavily borrowing from the https://www.w3.org/TR/service-workers-1/ API, 
 it suffers from considerable drawbacks, potentially making it less attractive for large-scale deployment.  This brief document
 outlines some of the core issues *as seen from a payment provider perspective*.
 
