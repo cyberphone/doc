@@ -6,14 +6,14 @@ The W3C `PaymentHandler` is a companion API to W3C's
 https://www.w3.org/TR/payment-request/ API. The `PaymentHandler` API
 permits writing payment applications using "pure" Web technology.
 
-Although `PaymentHandler` is a great technology (heavily borrowing from server worker), 
+Although `PaymentHandler` is a cool API, heavily borrowing from https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API, 
 it suffers from considerable drawbacks, potentially making it less attractive for large-scale deployment.  This brief document
 outlines some of the core issues *as seen from a payment provider perspective*.
 
 ### Lacks a “Wallet” Concept
 The physical wallet concept (holder of multiple cards 
 from different providers), has been adopted by most of their digital counterparts as
-well. `PaymentHandler` does not currently support a wallet since each handler
+well. `PaymentHandler` does currently not support a wallet since each handler
 (*by design*) is payment provider specific.  This (for example) means
 that a user cannot open a wallet application and see what cards they have and their
 current balances, which has become a popular feature in mobile wallets.
