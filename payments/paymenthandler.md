@@ -42,7 +42,7 @@ by *secure storage*. These keys are subsequently used to *sign authorizations*
 after the user has acknowledged the payment request with a *PIN* or
 *biometric operation*.
 
-`PaymentHandler` effectively requires authorizations to be performed on a
+The `PaymentHandler` API on the other hand, effectively requires authorizations to be performed on a
 Web server.  The integration between `PaymentHandler` and
 https://www.w3.org/TR/webauthn/ is currently undefined.
 
