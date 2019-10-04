@@ -23,7 +23,7 @@ The `PaymentHandler` is designed to support Web payments.  This is
 fine but most current providers of mobile wallets (including
 Apple, Google, banks, telcos, etc.), target a
 wide range of payment scenarios like:
-- e-Commerce on the Web
+- Ecommerce on the Web
 - P2P (Person-to-Person) payments
 - PoS (Point-of-Sale) payments
 
