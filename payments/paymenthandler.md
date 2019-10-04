@@ -34,7 +34,7 @@ you can indeed target the scenarios above with a *single wallet application*. Th
 not only a development issue since each system also requires some
 kind of *enrollment process* to be carried out by the user.
 
-### Architectural Limitations
+### Architectural Constraints
 State of the art mobile payment systems like Apple Pay and 
 [Saturn](https://cyberphone.github.io/doc/saturn/saturn-authorization.pdf) typically
 build on an architecture where the wallet holds *local*, *account specific keys* protected
