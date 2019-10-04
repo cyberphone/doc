@@ -38,7 +38,7 @@ kind of *enrollment process* to be carried out by the user.
 State of the art mobile payment systems like Apple Pay and 
 [Saturn](https://cyberphone.github.io/doc/saturn/saturn-authorization.pdf) typically
 build on an architecture where the wallet holds *local*, *account specific keys* protected
-by *secure storage*. These keys are subsequently used to *sign authorizations* 
+by *secure storage*. These keys are used to *sign authorizations* 
 after the user has acknowledged the payment request with a *PIN* or
 *biometric operation*.
 
