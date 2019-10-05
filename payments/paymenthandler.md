@@ -13,7 +13,7 @@ outlines some of the core issues *as seen from a payment provider perspective*.
 ### Lacks a “Wallet” Concept
 The physical wallet concept (holder of multiple cards 
 from different providers), has been adopted by most of their digital counterparts as
-well. `PaymentHandler` does currently not support a wallet since each handler
+well. `PaymentHandler` does not support a wallet since each handler
 (*by design*) is payment provider specific.  This (for example) means
 that a user cannot open a wallet application and see what cards they have and their
 current balances, which has become a popular feature in mobile wallets.
