@@ -43,7 +43,7 @@ after the user has acknowledged the payment request with a *PIN* or
 *biometric operation*.
 
 The `PaymentHandler` API on the other hand, effectively requires authorizations to be performed in a
-Web server based process since local signatures performed by https://www.w3.org/TR/webauthn/ is currently undefined.
+Web server based process using *authentication*, since local *signatures* performed by https://www.w3.org/TR/webauthn/ is currently undefined.
 
 &nbsp;
 
