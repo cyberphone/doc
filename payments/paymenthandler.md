@@ -13,13 +13,13 @@ outlines some of the core issues *as seen from a payment provider perspective*.
 ### Lacks a “Wallet” Concept
 The physical wallet concept (holder of multiple cards 
 from different providers), has been adopted by most of their digital counterparts as
-well. `PaymentHandler` does not support a wallet since each handler
+well. The `PaymentHandler` API does not support a wallet since each handler
 (*by design*) is payment provider specific.  This (for example) means
 that a user cannot open a wallet application and see what cards they have and their
 current balances, which has become a popular feature in mobile wallets.
 
 ### Only Supports Web Payments
-The `PaymentHandler` is designed to support Web payments.  This is
+The `PaymentHandler` API is designed to support Web payments.  This is
 fine but most current providers of mobile wallets (including
 Apple, Google, banks, telcos, etc.), target a
 wide range of payment scenarios like:
