@@ -47,4 +47,4 @@ Web server based process since local signatures performed by https://www.w3.org/
 
 &nbsp;
 
-V0.1, Anders Rundgren, 2019-10-04
+V0.11, Anders Rundgren, 2019-10-05
