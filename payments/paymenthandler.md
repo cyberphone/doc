@@ -19,18 +19,18 @@ that a user cannot open a wallet application and see what cards they have and th
 current balances, which has become a popular feature in mobile wallets.
 
 ### Only Supports Web Payments
-The `PaymentHandler` API is designed to support Web payments.  This is
-fine but most current providers of mobile wallets (including
+The `PaymentHandler` API is designed to support Web payments.
+However, but most current providers of mobile wallets (including
 Apple, Google, banks, telcos, etc.), target a
 wide range of payment scenarios like:
-- Ecommerce on the Web
+- Web payments
 - P2P (Person-to-Person) payments
 - PoS (Point-of-Sale) payments
 
 Building a specific wallet or solution for the Web does not make sense 
 *unless it is absolutely necessary*. With native "drivers" to
 https://www.w3.org/TR/payment-request/ available in Android and iOS,
-you can indeed target the scenarios above with a *single wallet application*. This is
+you can indeed support the scenarios above with a *single wallet application*. This is
 not only a development issue since each system also requires some
 kind of *enrollment process* to be carried out by the user.
 
@@ -38,13 +38,21 @@ kind of *enrollment process* to be carried out by the user.
 State of the art mobile payment systems like Apple Pay and 
 [Saturn](https://cyberphone.github.io/doc/saturn/saturn-authorization.pdf) typically
 build on an architecture where the wallet holds *local*, *account specific keys* protected
-by *secure storage*. These keys are used to *sign authorizations* 
+by *secure storage*. These keys are used to **sign** authorizations 
 after the user has acknowledged the payment request with a *PIN* or
 *biometric operation*.
 
 The `PaymentHandler` API on the other hand, effectively requires authorizations to be performed in a
-Web server based process using *authentication*, since local *signatures* performed by https://www.w3.org/TR/webauthn/ is currently undefined.
+Web server based process using **authentication**, since local **signatures** performed by https://www.w3.org/TR/webauthn/ is currently undefined.  Using https://www.w3.org/TR/WebCryptoAPI/ is though imaginable but it does not support
+**key attestations**, which is a standard feature in Android.
+
+### Quirky Application Trust Model
+In most payment systems, the security and integrity of payment operations are *primarily* a concern
+(and responsibility) for the payment providers.  The https://www.w3.org/TR/payment-method-manifest/ scheme is not
+fully aligned with this notion since there are no *direct proofs* that payment
+providers can verify.  Native wallet solutions OTOH, may support **attestations** for
+*devices*, *keys*, and *applications*, not only during enrollment, but for individual payment operations as well.
 
 &nbsp;
 
-V0.11, Anders Rundgren, 2019-10-05
+V0.2, Anders Rundgren, 2019-10-06
