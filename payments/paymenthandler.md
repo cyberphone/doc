@@ -40,9 +40,9 @@ State of the art mobile payment systems like Apple Pay and
 build on an architecture where the wallet holds *local*, *account specific keys* protected
 by *secure storage*. Such keys are used to **sign** an authorization object
 after the user has acknowledged a payment request with a *PIN* or
-*biometric operation*.  This model permits authorization objects
-(after being encrypted or tokenized), to be passed directly to merchants
-for subsequent "redemption".
+*biometric operation*.  This model permits an authorization object
+(after being encrypted or tokenized), to be passed back to the requester (merchant),
+for a subsequent "redemption".
 
 The `PaymentHandler` API on the other hand, effectively requires payment
 authorizations to be performed in a
