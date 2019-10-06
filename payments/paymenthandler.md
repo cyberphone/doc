@@ -7,7 +7,7 @@ https://www.w3.org/TR/payment-request/ API. The `PaymentHandler` API
 permits writing payment applications using "pure" Web technology.
 
 Although `PaymentHandler` is a cool API, heavily borrowing from the https://www.w3.org/TR/service-workers-1/ API, 
-it suffers from considerable drawbacks, potentially making it less attractive for large-scale deployment.  This brief document
+it suffers from considerable drawbacks, possibly making it less attractive for large-scale deployment.  This brief document
 outlines some of the core issues *as seen from a payment provider perspective*.
 
 ### Lacks a “Wallet” Concept
