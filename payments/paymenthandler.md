@@ -43,7 +43,7 @@ after the user has acknowledged a payment request with a *PIN* or
 *biometric operation*.  This model permits an authorization object
 (after being encrypted or tokenized), to be passed back to the requester (merchant),
 for a subsequent "redemption".  That the scheme does not rely on Internet
-connectivity on the client side is vital for PoS payments.
+connectivity on the client side is a plus for PoS payments.
 
 The `PaymentHandler` API on the other hand, effectively requires payment
 authorizations to be performed in a
