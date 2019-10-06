@@ -50,7 +50,7 @@ Web server based process using **authentication**, since local **signatures** pe
 In most payment systems, the security and integrity of payment operations are *primarily* a concern
 (and responsibility) for the payment providers.  The https://www.w3.org/TR/payment-method-manifest/ scheme is not
 fully aligned with this notion since there are no *direct proofs* that payment
-providers can verify.  Native wallet solutions OTOH, may support **attestations** for
+providers can verify.  As a comparison, native wallet solutions may support **attestations** for
 *devices*, *keys*, and *applications*, not only during enrollment, but for individual payment operations as well.
 
 &nbsp;
