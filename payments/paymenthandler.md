@@ -46,7 +46,7 @@ The `PaymentHandler` API on the other hand, effectively requires authorizations 
 Web server based process using **authentication**, since local **signatures** performed by https://www.w3.org/TR/webauthn/ is currently undefined.  Using https://www.w3.org/TR/WebCryptoAPI/ is though imaginable but it does not support
 **key attestations**, which is a standard feature in Android.
 
-### Quirky Application Trust Model
+### Limited Application Trust Model
 In most payment systems, the security and integrity of payment operations are *primarily* a concern
 (and responsibility) for the payment providers.  The https://www.w3.org/TR/payment-method-manifest/ scheme is not
 fully aligned with this notion since there are no *direct proofs* that payment
