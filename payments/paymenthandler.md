@@ -40,10 +40,15 @@ State of the art mobile payment systems like Apple Pay and
 build on an architecture where the wallet holds *local*, *account specific keys* protected
 by *secure storage*. Such keys are used to **sign** an authorization object
 after the user has acknowledged a payment request with a *PIN* or
-*biometric operation*.
+*biometric operation*.  This model permits authorization objects
+(after being encrypted or tokenized), to be passed directly to merchants
+fo subsequent redemption.
 
-The `PaymentHandler` API on the other hand, effectively requires authorizations to be performed in a
-Web server based process using **authentication**, since local **signatures** performed by https://www.w3.org/TR/webauthn/ is currently undefined.  Using https://www.w3.org/TR/WebCryptoAPI/ is though imaginable but it does not support
+The `PaymentHandler` API on the other hand, effectively requires payment
+authorizations to be performed in a
+Web server hosted by the payment provider, using **authentication**,
+since local **signatures** performed by https://www.w3.org/TR/webauthn/ is currently undefined.
+Using https://www.w3.org/TR/WebCryptoAPI/ is imaginable but it does not support
 **key attestations**, which is a standard feature in Android.
 
 ### Limited Application Trust Model
