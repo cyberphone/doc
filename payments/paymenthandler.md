@@ -20,7 +20,7 @@ current balances, which has become a popular feature in mobile wallets.
 
 ### Only Supports Web Payments
 The `PaymentHandler` API is designed to support Web payments.
-However, but most current providers of mobile wallets (including
+However, most of the current providers of mobile wallets (including
 Apple, Google, banks, telcos, etc.), target a
 wide range of payment scenarios like:
 - Web payments
