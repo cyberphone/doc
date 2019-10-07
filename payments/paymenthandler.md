@@ -56,10 +56,12 @@ Using https://www.w3.org/TR/WebCryptoAPI/ is imaginable but it does not support
 In most payment systems, the security and integrity of payment operations are *primarily* a concern
 (and responsibility) for the payment providers.  The https://www.w3.org/TR/payment-method-manifest/ scheme is not
 fully aligned with this notion since there are no *direct proofs* that payment
-providers can verify.  As a comparison, native wallet solutions may support **attestations** for
+providers can verify.
+
+As a comparison, native wallet solutions may support **attestations** for
 *devices*, *keys*, and *applications*, not only during enrollment, 
 but for individual payment operations as well.  In addition, attestations
-can be applied to all payment scenarios, whereas *the W3C manifest scheme only works for Web payments*.
+can be applied to all payment scenarios, whereas *the W3C manifest scheme is limited to Web payments*.
 
 ## Conclusion
 The Web and the native world have quite different characteristics.
