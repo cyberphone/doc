@@ -61,7 +61,7 @@ providers can verify.
 As a comparison, native wallet solutions may support **attestations** for
 *devices*, *keys*, and *applications*, not only during enrollment, 
 but for individual payment operations as well.  In addition, attestations
-can be applied to all payment scenarios, whereas *the W3C manifest scheme is limited to Web payments*.
+can be applied to *any* payment scenario, whereas *the W3C manifest scheme is limited to Web payments*.
 
 ## Conclusion
 The Web and the native world have quite different characteristics.
