@@ -69,9 +69,9 @@ can be applied to *any* payment scenario, whereas *the W3C manifest scheme is li
 There is a fundamental difference between Web technology and Native applications.
 Only the latter builds on vetted code fetched from trusted sources which opens
 the door to higher functionality without necessarily introducing security or
-privacy issues.  Giving transiently downloaded Web code from arbitrary sources,
-the same privileges as native code is not feasible without also creating a new
-distribution model, which is what Mozilla (in vain) tried to do with Firefox OS.
+privacy issues.  Giving transiently downloaded Web code from *arbitrary sources*
+the same privileges as native code *is not feasible* without also creating a new
+distribution model, something Mozilla (in vain) tried to accomplish with Firefox OS.
 As an example native code permits access to cryptographic keys without
 domain restrictions which is used by most current native wallets.
 
