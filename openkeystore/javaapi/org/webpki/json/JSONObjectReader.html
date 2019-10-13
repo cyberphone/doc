@@ -118,13 +118,15 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  <p>
  Returned by the parser methods.
  Also provides built-in support for decoding
- <a href="https://cyberphone.github.io/doc/security/jsf.html" target="_blank"><b>JSF (JSON Signature Format)</b></a>
+ <a href="https://cyberphone.github.io/doc/security/jsf.html" target="_blank">
+ <b>JSF (JSON Signature Format)</b></a>
  and
-<a href="https://cyberphone.github.io/doc/security/jef.html" target="_blank"><b>JEF (JSON Encryption Format)</b></a>
+ <a href="https://cyberphone.github.io/doc/security/jef.html" target="_blank">
+ <b>JEF (JSON Encryption Format)</b></a>
  constructs.</p>
  <p>In addition,
- there are methods for reading
- keys supplied in the <a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK (JSON Web Key)</b></a>
+ there are methods for reading keys supplied in the
+ <a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK (JSON Web Key)</b></a>
  format.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -310,13 +312,15 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <tr id="i21" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/KeyPair.html?is-external=true" title="class or interface in java.security">KeyPair</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectReader.html#getKeyPair--">getKeyPair</a></span>()</code>
-<div class="block">Read a public and private key in <a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK</b></a> format.</div>
+<div class="block">Read a public and private key in 
+ <a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK</b></a> format.</div>
 </td>
 </tr>
 <tr id="i22" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/KeyPair.html?is-external=true" title="class or interface in java.security">KeyPair</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONObjectReader.html#getKeyPair-org.webpki.crypto.AlgorithmPreferences-">getKeyPair</a></span>(<a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences)</code>
-<div class="block">Read a public and private key in <a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK</b></a> format.</div>
+<div class="block">Read a public and private key in 
+ <a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK</b></a> format.</div>
 </td>
 </tr>
 <tr id="i23" class="rowColor">
@@ -585,7 +589,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;getBigDecimal(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
                          throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Read a BigDecimal property.<p>
- Note: Since JSON does not support a native BigDecimal type, this method builds on <i>mapping</i>.</p></div>
+ Note: Since JSON does not support a native BigDecimal type, 
+ this method builds on <i>mapping</i>.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - Property</dd>
@@ -607,7 +612,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html?is-external=true" title="class or interface in java.math">BigInteger</a>&nbsp;getBigInteger(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
                          throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Read a BigInteger property.<p>
- Note: Since JSON does not support a native BigInteger type, this method builds on <i>mapping</i>.</p></div>
+ Note: Since JSON does not support a native BigInteger type, 
+ this method builds on <i>mapping</i>.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - Property</dd>
@@ -777,7 +783,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <div class="block">Read and decode a public key in
  <a href="https://cyberphone.github.io/doc/security/jsf.html" target="_blank"><b>JSF</b></a>
  (<a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK</b></a>) format.
- Note: this method assumes that the current object only holds the actual public key structure (no property).</div>
+ Note: this method assumes that the current object only holds the actual 
+ public key structure (no property).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>algorithmPreferences</code> - JOSE or SKS notation expected</dd>
@@ -800,7 +807,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
                                      <a href="https://docs.oracle.com/javase/8/docs/api/java/util/EnumSet.html?is-external=true" title="class or interface in java.util">EnumSet</a>&lt;<a href="../../../org/webpki/util/ISODateTime.DatePatterns.html" title="enum in org.webpki.util">ISODateTime.DatePatterns</a>&gt;&nbsp;format)
                               throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Read a JSON dateTime property in ISO format.<p>
- Note: Since JSON does not support a native dateTime type, this method builds on <i>mapping</i>.</p></div>
+ Note: Since JSON does not support a native dateTime 
+ type, this method builds on <i>mapping</i>.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - Property</dd>
@@ -982,7 +990,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>getKeyPair</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/security/KeyPair.html?is-external=true" title="class or interface in java.security">KeyPair</a>&nbsp;getKeyPair()
                    throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Read a public and private key in <a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK</b></a> format.<p>
+<div class="block">Read a public and private key in 
+ <a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK</b></a> format.<p>
  Note: this method assumes that the current object only holds a JWK key structure.</p>
  This method is equivalent to <code>getKeyPair(AlgorithmPreferences.JOSE)</code>.</div>
 <dl>
@@ -1001,7 +1010,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>getKeyPair</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/security/KeyPair.html?is-external=true" title="class or interface in java.security">KeyPair</a>&nbsp;getKeyPair(<a href="../../../org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a>&nbsp;algorithmPreferences)
                    throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Read a public and private key in <a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK</b></a> format.<p>
+<div class="block">Read a public and private key in 
+ <a href="https://tools.ietf.org/html/rfc7517" target="_blank"><b>JWK</b></a> format.<p>
  Note: this method assumes that the current object only holds a JWK key structure.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -1048,7 +1058,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;getMoney(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
                     throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Read a Money property.<p>
- Note: Since JSON does not support a native Money type, this method builds on <i>mapping</i>.</p></div>
+ Note: Since JSON does not support a native Money type, 
+ this method builds on <i>mapping</i>.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - Property</dd>
@@ -1071,7 +1082,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
                            int&nbsp;decimals)
                     throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Read a Money property.<p>
- Note: Since JSON does not support a native Money type, this method builds on <i>mapping</i>.</p></div>
+ Note: Since JSON does not support a native Money type, 
+ this method builds on <i>mapping</i>.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - Property</dd>
