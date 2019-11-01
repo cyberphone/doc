@@ -6,7 +6,7 @@ to this...
 &nbsp;
 
 <table>
-    <tr><th>Feature</th><th>Apple Pay</th><th>Dual Mode/Open Banking</th></tr>
+    <tr><th>Feature</th><th>Apple Pay</th><th>Open Banking/DM</th></tr>
     <tr><td align="right"><b>TTP Consent</b></td><td align="center">No [1]</td><td align="center">No [1]</td></tr>
     <tr><td align="right"><b>Card UI Concept</b></td><td align="center">Yes [2]</td><td align="center">Yes [2]</td></tr>
     <tr><td align="right"><b>SCA</b></td><td align="center">Integrated</td><td align="center">Integrated</td></tr>
