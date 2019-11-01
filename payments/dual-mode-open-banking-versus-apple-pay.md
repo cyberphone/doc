@@ -12,7 +12,7 @@ to this...
     <tr><td align="right"><b>SCA</b></td><td align="center">Integrated</td><td align="center">Integrated</td></tr>
     <tr><td align="right"><b>Standardized Client</b></td><td align="center">Yes</td><td align="center">Yes</td></tr>
     <tr><td align="right"><b>SEPA SCT/Inst</b></td><td align="center"><i>No</i></td><td align="center">Yes [2]</td></tr>
-    <tr><td align="right"><b>P2P Payment</b></td><td align="center"><i>No</i></td><td align="center">Yes [3]</td></tr>
+    <tr><td align="right"><b>P2P Payments</b></td><td align="center"><i>No</i></td><td align="center">Yes [3]</td></tr>
     <tr><td align="right"><b>Android Support</b></td><td align="center"><i>No</i></td><td align="center">Yes</td></tr>
 </table>
 
