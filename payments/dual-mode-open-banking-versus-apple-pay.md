@@ -25,3 +25,8 @@ to this...
 4] Using the same accounts as for other payments.
 
 For more information: https://cyberphone.github.io/doc/payments/dual-mode-openbanking-api.pdf
+
+## Current Open Banking "Wallet"
+
+Current Open Banking APIs do not specify a matching wallet, they rather leave
+this part to market to figure out.
