@@ -29,4 +29,4 @@ For more information: https://cyberphone.github.io/doc/payments/dual-mode-openba
 ## Current Open Banking "Wallet"
 
 Current Open Banking APIs do not specify a matching wallet, they rather leave
-this part to market to figure out.
+this part to market to figure out. *This is the sole motivation behind Open Banking/DM".
