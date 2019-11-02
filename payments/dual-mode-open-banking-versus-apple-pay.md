@@ -2,9 +2,7 @@
 
 The following table shows a few core characteristics.  There is (of course) much more
 to this...
-
 &nbsp;
-
 <table>
     <tr><th>Feature</th><th>Apple Pay</th><th>Open Banking/DM</th></tr>
     <tr><td align="right"><b>TTP Consent</b></td><td align="center">No [1]</td><td align="center">No [1]</td></tr>
@@ -25,9 +23,7 @@ to this...
 4] Using the same accounts as for other payments.
 
 For more information: https://cyberphone.github.io/doc/payments/dual-mode-openbanking-api.pdf
-
 &nbsp;
-
 ## Current Open Banking "Wallets"
 
 Current Open Banking APIs do not specify a matching wallet, they rather leave
