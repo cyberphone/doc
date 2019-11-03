@@ -64,10 +64,16 @@ OAuth2 response, here using the extension property `userid`:
 ### 3. Suppressing SCA and Consent Requests
 Since the specified "Wallet" scheme performs SCA (Strong Customer Authentication)
 in a similar way to the EMV standard, the Open Banking API must not
-ask the user for additional authentications.  "Consent" requests must be checked for correctness,
-but always be granted since *account data is never shared with external entities*
+ask the user for additional authentications.  Although "consent" requests must
+still be checked for technical correctness, they must always be granted since
+*account data is never shared with external entities*
 (the local service is effectively like an extension to the on-line bank).
 ### 4. Optional: Reuse the On-line Bank Login
 In a fully integrated solution the virtual card enrollment service would
 preferably reuse the regular on-line bank login.  That is, the service would
 simply appear as an additional choice in the on-line bank.
+&nbsp;
+
+&nbsp;
+
+Version 0.1, 2019-11-03
