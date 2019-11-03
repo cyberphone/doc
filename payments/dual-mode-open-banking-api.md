@@ -52,7 +52,7 @@ must be deployed and recognized by the Open Banking API implementation.
 In the new mode (as recognized by \#1) OAuth2 authorization normally only happens
 during enrollment of virtual cards.  To enable `access_token` upgrades without
 friction, virtual cards are not minted with built-in access token information but rather
-hold card identifiers (like serial number), which in turn is linked to a table holding the
+hold card identifiers (like serial number), which in turn are linked to a table holding the
 current `access_token`. This link requires some kind of *user
 identity token* to function.  This token **MUST** adhere to the follwing rules:
 - Be static over the period the user is associated with the bank
