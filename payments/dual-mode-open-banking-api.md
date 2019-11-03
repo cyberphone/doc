@@ -68,7 +68,7 @@ OAuth2 authorization response, here using an extension property `userid`:
 }
 ```
 ### 3. Suppressing SCA and Consent Requests
-Since the specified "Wallet" scheme performs SCA (Strong Customer Authentication)
+Since the proposed "Wallet" scheme performs SCA (Strong Customer Authentication)
 in a similar way to the EMV standard, the Open Banking API **MUST NOT**
 ask the user for additional authentications.  Although "consent" requests must
 still be verified for technical correctness, they **MUST** be granted by default since
