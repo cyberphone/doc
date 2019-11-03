@@ -54,9 +54,13 @@ during enrollment of virtual cards.  To enable `access_token` upgrades without
 friction, virtual cards are not minted with built-in access token information but rather
 hold card identifiers (like serial number), which in turn is linked to a table holding the
 current `access_token`. This link requires some kind of *user
-identity* to function.  The only requirement is that it is **Static**, **Unique per user**,
-and represented as an **ASCII string**.  This information should be provided in the
-OAuth2 authorization response, here using an extension property `userid`:
+identity token* to function.  This token **MUST** adhere to the follwing rules:
+- Be static over the period the user is associated with the bank
+- Be unique per user and never be reused
+- Be represented as an ASCII string
+
+The *recommended* way is supplying the identity token as a part of the
+OAuth2 authorization response using an extension property called `userid`:
 ```json
 {
   "access_token": "619763e4-cf77-4d2f-838e-1f6c6b634040",
@@ -82,6 +86,7 @@ simply appear as an additional choice in the on-line bank.
 
 ## Proof of Concept Implementation
 For folks with interests in running code, the following may be of interest:
+
 https://github.com/cyberphone/swedbank-psd2-saturn
 
 &nbsp;
