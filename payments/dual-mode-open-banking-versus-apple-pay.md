@@ -36,7 +36,8 @@ The current proposal is to use the already available "[Saturn](https://cyberphon
 &nbsp;
 
 ## Updating an Open Banking API
-The following sections describe a *recommended* upgrade scheme.
+The following sections describe the *recommended* upgrade scheme.  Note:
+no changes to the Open Banking API itself is needed.
 ### 1. Locally Trusted Certificate
 Since traditional TTP services **MUST NOT** have be able using the new mode,
 a specific locally trusted certificate for TLS client-certificate authentication
