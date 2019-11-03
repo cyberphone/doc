@@ -1,7 +1,12 @@
 ## Background
 Current Open Banking APIs do not specify a matching "Wallet", they rather leave
-this part to market to figure out.
+this part to the market to figure out which is likely to lead to a fragmented
+payment landscape unless a few and very dominant vendors set their own "standards".
 *This is the sole motivation behind Open Banking/DM*.
+
+In addition, current Open Banking APIs introduce a security and user interaction
+model which departs from already established and *well-functioning* mobile payment systems.
+The described scheme heavily builds on experiences with the latter.
 &nbsp;
 
 ## Dual-mode Open Banking API versus Apple Pay
