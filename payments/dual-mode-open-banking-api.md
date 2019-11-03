@@ -27,9 +27,9 @@ The following table shows the core characteristics of the system.
 </table>
 
 1. Both schemes only need a *user authorization* per payment request using PIN or biometrics.
-2. The payment card concept for selecting account/bank has been around for 50+ years.
+2. The payment card concept for selecting account/bank has been around for more than 50 years.
 3. Any account-to-account system supported by the Open Banking implementation.
-4. Using the same accounts as for other payments.
+4. Using the same accounts and associated authorization keys as for other payments.
 &nbsp;
 
 ## Architecture Overview
@@ -52,15 +52,15 @@ must be deployed and recognized by the Open Banking API implementation.
 In the new mode (as recognized by \#1) OAuth2 authorization normally only happens
 during enrollment of virtual cards.  To enable `access_token` upgrades without
 friction, virtual cards are not minted with built-in access token information but rather
-hold card identifiers (like serial number), which in turn are linked to a table holding the
-current `access_token`. This link requires some kind of *user
-identity token* to function.  This token **MUST** adhere to the follwing rules:
+hold card identifiers (like serial numbers), which in turn are linked to a 
+database table holding the current `access_token`. This linking requires some kind of *user
+identity token* to function.  Such tokens **MUST** adhere to the follwing rules:
 - Be static over the period the user is associated with the bank
 - Be unique per user and never be reused
 - Be represented as an ASCII string
 
 The *recommended* way is supplying the identity token as a part of the
-OAuth2 authorization response using an extension property called `userid`:
+OAuth2 authorization response using an extension property called `userid_token`:
 ```json
 {
   "access_token": "619763e4-cf77-4d2f-838e-1f6c6b634040",
@@ -68,7 +68,7 @@ OAuth2 authorization response using an extension property called `userid`:
   "expires_in": 3600,
   "refresh_token": "da1bdd53-bed9-4cb7-9c62-0bbe0356d90b",
   "scope": "xyz",
-  "userid": "479262777"
+  "userid_token": "479262777"
 }
 ```
 ### 3. Suppress SCA and Consent Requests
