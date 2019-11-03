@@ -48,8 +48,8 @@ friction, virtual cards are not minted with built-in access token information bu
 hold card identifiers (like serial number), which in turn is linked to a table holding the
 current `access_token`. This link requires some kind of *user
 identity* to function.  The only requirement is that it is **Static**, **Unique per user**,
-and represented as an **ASCII string**.  This information should be provided in an
-extended OAuth response here using the extension property `userid`:
+and represented as an **ASCII string**.  This information should be provided in the
+OAuth2 response, here using the extension property `userid`:
 ```json
 {
   "access_token": "619763e4-cf77-4d2f-838e-1f6c6b634040",
