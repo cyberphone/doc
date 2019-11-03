@@ -44,11 +44,11 @@ The current proposal is to use the already available "[Saturn](https://cyberphon
 ## Updating an Open Banking API
 The following sections describe the *recommended* upgrade scheme.  Note:
 no changes to the Open Banking API itself is needed.
-### 1. Locally Trusted Certificate
+### 1. Deploy a Locally Trusted Certificate
 Since traditional TTP services **MUST NOT** have be able using the new mode,
 a specific locally trusted certificate for TLS client-certificate authentication
 must be deployed and recognized by the Open Banking API implementation.
-### 2. Update of OAuth2 "authorize"
+### 2. Update OAuth2 "authorize" Method
 In the new mode (as recognized by \#1) OAuth2 authorization normally only happens
 during enrollment of virtual cards.  To enable `access_token` upgrades without
 friction, virtual cards are not minted with built-in access token information but rather
@@ -71,7 +71,7 @@ OAuth2 authorization response using an extension property called `userid`:
   "userid": "479262777"
 }
 ```
-### 3. Suppressing SCA and Consent Requests
+### 3. Suppress SCA and Consent Requests
 Since the proposed "Wallet" scheme performs SCA (Strong Customer Authentication)
 in a similar way to the EMV standard, the Open Banking API **MUST NOT**
 ask the user for additional authentications.  Although "consent" requests must
