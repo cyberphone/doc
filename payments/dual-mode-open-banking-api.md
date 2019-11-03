@@ -86,8 +86,7 @@ simply appear as an additional choice in the on-line bank.
 
 ## Proof of Concept Implementation
 For folks with interests in running code, the following may be of interest:
-
-https://github.com/cyberphone/swedbank-psd2-saturn
+<br>https://github.com/cyberphone/swedbank-psd2-saturn
 
 &nbsp;
 
