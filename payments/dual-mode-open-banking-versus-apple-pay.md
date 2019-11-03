@@ -6,9 +6,9 @@ payment landscape unless a few and very dominant vendors set their own "standard
 *This is the sole motivation behind the Dual Mode Open Banking API proposal*.
 
 In addition, current Open Banking APIs introduce a security and user interaction
-model which departs from already established and *well-functioning* mobile payment systems
-including Apple Pay.
-The described scheme heavily builds on experiences with the latter.
+model which departs from already established and *well-functioning* national
+mobile payment systems as well as with Apple Pay.
+The described scheme heavily builds on experiences with these systems.
 &nbsp;
 
 ## Dual-mode Open Banking API versus Apple Pay
