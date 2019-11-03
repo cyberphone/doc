@@ -6,9 +6,9 @@ payment landscape unless a few and very dominant vendors set their own "standard
 *This is the sole motivation behind the Dual Mode Open Banking API proposal*.
 
 In addition, current Open Banking APIs introduce a security and user interaction
-model which significantly departs from already established and *well-functioning* national
+model which *significantly departs* from already established and *well-functioning* national
 mobile payment systems as well as from Apple Pay.
-The described scheme heavily builds on experiences with these systems.
+The described scheme heavily builds on experiences with such systems.
 &nbsp;
 
 ## Dual-mode Open Banking API versus Apple Pay
@@ -45,16 +45,18 @@ The current proposal is to use the already available "[Saturn](https://cyberphon
 The following sections describe the *recommended* upgrade scheme.  Note:
 no changes to the Open Banking API itself is needed.
 ### 1. Deploy a Locally Trusted Certificate
-Since traditional TTP services **MUST NOT** have be able using the new mode,
+Since traditional TTP services **MUST NOT** be able using the new mode,
 a specific locally trusted certificate for TLS client-certificate authentication
-must be deployed and recognized by the Open Banking API implementation.
+**MUST** be deployed and recognized by the Open Banking API implementation.
 ### 2. Update OAuth2 "authorize" Method
 In the new mode (as recognized by \#1) OAuth2 authorization normally only happens
-during enrollment of virtual cards.  To enable `access_token` upgrades without
-friction, virtual cards are not minted with built-in access token information but rather
+during enrollment of virtual payment cards.
+To enable frictionless `access_token` upgrades,
+virtual payment cards are not minted with built-in access token information but rather
 hold card identifiers (like serial numbers), which in turn are linked to a 
-database table holding the current `access_token`. This linking requires some kind of *user
-identity token* to function.  Such tokens **MUST** adhere to the follwing rules:
+database table holding the currently valid `access_token` for each specific user.
+This linking requires a *user identity token* to function.
+Such tokens **MUST** adhere to the follwing rules:
 - Be static over the period the user is associated with the bank
 - Be unique per user and never be reused
 - Be represented as an ASCII string
@@ -79,7 +81,7 @@ still be verified for technical correctness, they **MUST** be granted by default
 *account data is never to be shared with external entities*
 (a locally installed and trusted "Wallet" service is effectively like an extension to the on-line bank).
 ### 4. Optional: Reuse the On-line Bank Login
-In a fully integrated solution the virtual card enrollment service would
+In a fully integrated solution the virtual payment card enrollment service would
 preferably reuse the regular on-line bank login.  That is, the service would
 simply appear as an additional choice in the on-line bank.
 &nbsp;
