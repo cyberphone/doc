@@ -70,9 +70,9 @@ OAuth2 response, here using the extension property `userid`:
 ```
 ### 3. Suppressing SCA and Consent Requests
 Since the specified "Wallet" scheme performs SCA (Strong Customer Authentication)
-in a similar way to the EMV standard, the Open Banking API must not
+in a similar way to the EMV standard, the Open Banking API **MUST NOT**
 ask the user for additional authentications.  Although "consent" requests must
-still be checked for technical correctness, they must always be granted since
+still be checked for technical correctness, they **MUST** always be granted since
 *account data is never shared with external entities*
 (the local service is effectively like an extension to the on-line bank).
 ### 4. Optional: Reuse the On-line Bank Login
