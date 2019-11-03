@@ -73,7 +73,7 @@ in a similar way to the EMV standard, the Open Banking API **MUST NOT**
 ask the user for additional authentications.  Although "consent" requests must
 still be verified for technical correctness, they **MUST** be granted by default since
 *account data is never shared with external entities*
-(the local service is effectively like an extension to the on-line bank).
+(a locally installed and trusted service is effectively like an extension to the on-line bank).
 ### 4. Optional: Reuse the On-line Bank Login
 In a fully integrated solution the virtual card enrollment service would
 preferably reuse the regular on-line bank login.  That is, the service would
