@@ -7,7 +7,7 @@ payment landscape unless a few and very dominant vendors set their own "standard
 
 In addition, current Open Banking APIs introduce a security and user interaction
 model which departs from already established and *well-functioning* national
-mobile payment systems as well as with Apple Pay.
+mobile payment systems as well as from Apple Pay.
 The described scheme heavily builds on experiences with these systems.
 &nbsp;
 
