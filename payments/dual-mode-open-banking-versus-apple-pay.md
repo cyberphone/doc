@@ -1,3 +1,9 @@
+## Background
+Current Open Banking APIs do not specify a matching "Wallet", they rather leave
+this part to market to figure out.
+*This is the sole motivation behind Open Banking/DM*.
+&nbsp;
+
 ## Dual-mode Open Banking API versus Apple Pay
 
 The following table shows a few core characteristics.  There is (of course) much more
@@ -24,8 +30,39 @@ to this...
 
 For more information: https://cyberphone.github.io/doc/payments/dual-mode-openbanking-api.pdf
 &nbsp;
-## Current Open Banking "Wallets"
 
-Current Open Banking APIs do not specify a matching wallet, they rather leave
-this part to market to figure out.
-*This is the sole motivation behind Open Banking/DM*.
+## Updating an Open Banking API
+The following section describes a *possible* upgrade scheme.
+### 1. Locally Trusted Certificate
+Since traditional TTP services **MUST NOT** have be able using the new mode,
+a specific locally trusted certificate for TLS client-certificate authentication
+must be deployed and recognized by the Open Banking API implementation.
+### 2. Update of OAuth2 "authorize"
+In the new mode (as recognized by \#1) OAuth2 authorization normally only happens
+during enrollment of virtual cards.  To enable `access_token` upgrades without
+friction, virtual cards are not minted with built-in access token information but rather
+hold card identifiers (like serial number), which in turn is linked to a table holding the
+current `access_token`. This link requires some kind of *user
+identity* to function.  The only requirement is that it is **Static**, **Unique per user**,
+and represented as an **ASCII string**.  This information should be provided in an
+extended OAuth response here using the extension property `userid`:
+```json
+{
+  "access_token": "619763e4-cf77-4d2f-838e-1f6c6b634040",
+  "token_type": "Bearer",
+  "expires_in": 3600,
+  "refresh_token": "da1bdd53-bed9-4cb7-9c62-0bbe0356d90b",
+  "scope": "xyz",
+  "userid": "479262777"
+}
+```
+### 3. Suppressing SCA and Consent Requests
+Since the "Wallet" performs SCA (Strong Customer Authentication) in a similar
+way to the EMV standard, the Open Banking API must not
+ask for additional authentications.  "Consent" requests must only be checked for correctness,
+but always granted since *account data is never shared with external entities*
+(the local service is effectively like an extension to the on-line bank).
+### 4. Optional: Reuse the On-line Bank Login
+In a fully integrated solution the virtual card enrollment service would
+preferably reuse the regular on-line bank login.  That is, the service would
+simply appear as an additional choice in the on-line bank.
