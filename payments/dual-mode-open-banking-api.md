@@ -26,13 +26,10 @@ The following table shows the core characteristics of the system.
     <tr><td align="right"><b>Android Support</b></td><td align="center"><i>No</i></td><td align="center">Yes</td></tr>
 </table>
 
-1] Both schemes only need user authorization per payment request using PIN or biometrics.
-
-2] The payment card concept for selecting account/bank has been around for 50+ years.
-
-3] Any account-to-account system supported by the Open Banking implementation.
-
-4] Using the same accounts as for other payments.
+1. Both schemes only need user authorization per payment request using PIN or biometrics.
+2. The payment card concept for selecting account/bank has been around for 50+ years.
+3. Any account-to-account system supported by the Open Banking implementation.
+4. Using the same accounts as for other payments.
 
 For more information: https://cyberphone.github.io/doc/payments/dual-mode-openbanking-api.pdf
 &nbsp;
