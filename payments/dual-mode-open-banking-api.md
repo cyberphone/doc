@@ -30,7 +30,6 @@ The following table shows the core characteristics of the system.
 2. The payment card concept for selecting account/bank has been around for 50+ years.
 3. Any account-to-account system supported by the Open Banking implementation.
 4. Using the same accounts as for other payments.
-
 &nbsp;
 
 ## Architecture Overview
