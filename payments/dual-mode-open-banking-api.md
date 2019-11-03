@@ -31,7 +31,11 @@ The following table shows the core characteristics of the system.
 3. Any account-to-account system supported by the Open Banking implementation.
 4. Using the same accounts as for other payments.
 
-For more information: https://cyberphone.github.io/doc/payments/dual-mode-openbanking-api.pdf
+&nbsp;
+
+## Architecture Overview
+For more information about the combined Open Banking and "Wallet" scheme, turn to:
+<br>https://cyberphone.github.io/doc/payments/dual-mode-openbanking-api.pdf
 &nbsp;
 
 ## Wallet Specification
