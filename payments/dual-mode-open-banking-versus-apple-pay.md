@@ -13,8 +13,7 @@ The described scheme heavily builds on experiences with these systems.
 
 ## Dual-mode Open Banking API versus Apple Pay
 
-The following table shows a few core characteristics.  There is (of course) much more
-to this...
+The following table shows the core characteristics of the system.
 <br>&nbsp;
 <table>
     <tr><th>Feature</th><th>Apple Pay</th><th>Open Banking/DM</th></tr>
