@@ -31,8 +31,12 @@ to this...
 For more information: https://cyberphone.github.io/doc/payments/dual-mode-openbanking-api.pdf
 &nbsp;
 
+## Wallet Specification
+The current proposal is to use the already available "[Saturn](https://cyberphone.github.io/doc/saturn/)" system.
+&nbsp;
+
 ## Updating an Open Banking API
-The following section describes a *possible* upgrade scheme.
+The following sections describe a *recommended* upgrade scheme.
 ### 1. Locally Trusted Certificate
 Since traditional TTP services **MUST NOT** have be able using the new mode,
 a specific locally trusted certificate for TLS client-certificate authentication
@@ -57,10 +61,10 @@ extended OAuth response here using the extension property `userid`:
 }
 ```
 ### 3. Suppressing SCA and Consent Requests
-Since the "Wallet" performs SCA (Strong Customer Authentication) in a similar
-way to the EMV standard, the Open Banking API must not
-ask for additional authentications.  "Consent" requests must only be checked for correctness,
-but always granted since *account data is never shared with external entities*
+Since the specified "Wallet" scheme performs SCA (Strong Customer Authentication)
+in a similar way to the EMV standard, the Open Banking API must not
+ask the user for additional authentications.  "Consent" requests must be checked for correctness,
+but always be granted since *account data is never shared with external entities*
 (the local service is effectively like an extension to the on-line bank).
 ### 4. Optional: Reuse the On-line Bank Login
 In a fully integrated solution the virtual card enrollment service would
