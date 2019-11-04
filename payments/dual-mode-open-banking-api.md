@@ -73,6 +73,11 @@ OAuth2 authorization response using an extension property called `identity_token
   "identity_token": "479262777"
 }
 ```
+Although strictly put not necessary, personalization of the visual part
+of virtual payment cards would benefit by also getting the user's *human name* in
+the authorization response.  If supplied it
+**MUST** be a string of UTF-8 characters supplied in the extension
+property `human_name`.
 ### 3. Suppress SCA and Consent Requests
 Since the proposed "Wallet" scheme performs SCA (Strong Customer Authentication)
 in a similar way to the EMV standard, the Open Banking API **MUST NOT**
@@ -94,4 +99,4 @@ For folks with interests in running code, the following may be of interest:
 
 &nbsp;
 
-Version 0.1, 2019-11-03
+Version 0.2, 2019-11-04
