@@ -55,14 +55,14 @@ To enable frictionless `access_token` upgrades,
 virtual payment cards are not minted with built-in access token information but rather
 hold card identifiers (like serial numbers), which in turn are linked to a 
 database table holding the currently valid `access_token` for each specific user.
-This linking requires a *user identity token* to function.
+This linking requires a user *identity token* to function.
 Such tokens **MUST** adhere to the follwing rules:
 - Be static over the period the user is associated with the bank
 - Be unique per user and never be reused
 - Be represented as an ASCII string
 
 The *recommended* way is supplying the identity token as a part of the
-OAuth2 authorization response using an extension property called `userid_token`:
+OAuth2 authorization response using an extension property called `identity_token`:
 ```json
 {
   "access_token": "619763e4-cf77-4d2f-838e-1f6c6b634040",
@@ -70,7 +70,7 @@ OAuth2 authorization response using an extension property called `userid_token`:
   "expires_in": 3600,
   "refresh_token": "da1bdd53-bed9-4cb7-9c62-0bbe0356d90b",
   "scope": "xyz",
-  "userid_token": "479262777"
+  "identity_token": "479262777"
 }
 ```
 ### 3. Suppress SCA and Consent Requests
