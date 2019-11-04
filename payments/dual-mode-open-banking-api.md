@@ -1,5 +1,5 @@
 ## Background
-Current Open Banking APIs do not specify a matching "Wallet", they have rather left
+Current Open Banking APIs do not specify a matching "Open Wallet", they have rather left
 this part to the market to figure out.  This is likely to lead to a fragmented
 payment landscape unless a few and very dominant vendors set their own "standards".
 
