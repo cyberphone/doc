@@ -78,14 +78,15 @@ of virtual payment cards would benefit by also getting the user's *human name* i
 the authorization response.  If supplied it
 **MUST** be a string of UTF-8 characters supplied in the extension
 property `human_name`.
-### 3. Suppress SCA and Consent Requests
+### 3. Suppress SCA Requests
 Since the proposed "Wallet" scheme performs SCA (Strong Customer Authentication)
 in a similar way to the EMV standard, the Open Banking API **MUST NOT**
-ask the user for additional authentications.  Although "consent" requests must
-still be verified for technical correctness, they **MUST** be granted by default since
-*account data is never to be shared with external entities*
+ask the user for additional authentications.
+### 4. Grant Consent Requests by Default
+Although "consent" requests must still be verified for technical correctness,
+they **MUST** be granted by default since *account data is never to be shared with external entities*
 (a locally installed and trusted "Wallet" service is effectively like an extension to the on-line bank).
-### 4. Optional: Reuse the On-line Bank Login
+### 5. Optional: Reuse the On-line Bank Login
 In a fully integrated solution the virtual payment card enrollment service would
 preferably reuse the regular on-line bank login.  That is, the service would
 simply appear as an additional choice in the on-line bank.
@@ -99,4 +100,4 @@ For folks with interests in running code, the following may be of interest:
 
 &nbsp;
 
-Version 0.2, 2019-11-04
+Version 0.3, 2019-11-06
