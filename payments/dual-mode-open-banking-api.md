@@ -24,12 +24,14 @@ The following table shows the core characteristics of the system.
     <tr><td align="right"><b>SEPA SCT/Inst</b></td><td align="center"><i>No</i></td><td align="center">Yes [3]</td></tr>
     <tr><td align="right"><b>P2P Payments</b></td><td align="center"><i>No</i></td><td align="center">Yes [4]</td></tr>
     <tr><td align="right"><b>Android Support</b></td><td align="center"><i>No</i></td><td align="center">Yes</td></tr>
+    <tr><td align="right"><b>End-to-End Security</b></td><td align="center"><i>No</i></td><td align="center">Yes [5]</td></tr>
 </table>
 
 1. Both schemes only need a *user authorization* per payment request using PIN or biometrics.
 2. The payment card concept for selecting account/bank has been around for more than 50 years.
 3. Any account-to-account system supported by the Open Banking implementation.
 4. Using the same accounts and associated authorization keys as for other payments.
+5. There are with respect to the payer *no TTPs to trust or give information to*.
 &nbsp;
 
 ## Architecture Overview
