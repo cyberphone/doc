@@ -27,7 +27,7 @@ The following table shows the core characteristics of the system.
     <tr><td align="right"><b>End-to-End Security</b></td><td align="center"><i>No</i></td><td align="center">Yes [5]</td></tr>
 </table>
 
-1. Both schemes only need a *user authorization* per payment request using PIN or biometrics.
+1. Both schemes only need a *user authorization* per payment request using a PIN or biometric.
 2. The payment card concept for selecting account/bank has been around for more than 50 years.
 3. Any account-to-account system supported by the Open Banking implementation.
 4. Using the same accounts and associated authorization keys as for other payments.
@@ -104,4 +104,4 @@ For folks with interests in running code, the following may be of interest:
 
 &nbsp;
 
-Version 0.31, 2019-11-07
+Version 0.4, 2019-11-07
