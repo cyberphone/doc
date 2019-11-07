@@ -86,6 +86,8 @@ ask the user for additional authentications.
 Although "consent" requests must still be verified for technical correctness,
 they **MUST** be granted by default since *account data is never to be shared with external entities*
 (a locally installed and trusted "Wallet" service is effectively like an extension to the on-line bank).
+
+Note: skipping consent requests is not an option since that would break the Open Banking API.
 ### 5. Optional: Reuse the On-line Bank Login
 In a fully integrated solution the virtual payment card enrollment service would
 preferably reuse the regular on-line bank login.  That is, the service would
@@ -100,4 +102,4 @@ For folks with interests in running code, the following may be of interest:
 
 &nbsp;
 
-Version 0.3, 2019-11-06
+Version 0.31, 2019-11-07
