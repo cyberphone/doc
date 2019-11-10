@@ -32,6 +32,8 @@ The following table shows the core characteristics of the system.
 3. Any account-to-account system supported by the Open Banking implementation.
 4. Using the same accounts and associated authorization keys as for other payments.
 5. There are with respect to the payer *no TTPs to trust or give information to*.
+This document provides an overview of the end-to-end scheme:
+https://cyberphone.github.io/doc/payments/open-banking-dual-mode-end-to-end-security-simplified.pdf
 &nbsp;
 
 ## Architecture Overview
@@ -104,4 +106,4 @@ For folks with interests in running code, the following may be of interest:
 
 &nbsp;
 
-Version 0.4, 2019-11-07
+Version 0.41, 2019-11-10
