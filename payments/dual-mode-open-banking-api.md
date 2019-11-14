@@ -78,6 +78,8 @@ OAuth2 authorization response using an extension property called `identity_token
   "identity_token": "479262777"
 }
 ```
+The `identity_token` is also needed for virtual payment card administation and logging.
+
 Although strictly put not necessary, personalization of the visual part
 of virtual payment cards would benefit by also getting the user's *human name* in
 the authorization response.  If supplied it
