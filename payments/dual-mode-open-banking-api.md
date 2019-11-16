@@ -19,19 +19,22 @@ The following table shows the core characteristics of the system.
     <tr><th>Feature</th><th>Apple Pay</th><th>Open Banking/DM</th></tr>
     <tr><td align="right"><b>TTP Consent</b></td><td align="center">No [1]</td><td align="center">No [1]</td></tr>
     <tr><td align="right"><b>Card UI Concept</b></td><td align="center">Yes [2]</td><td align="center">Yes [2]</td></tr>
-    <tr><td align="right"><b>SCA</b></td><td align="center">Integrated</td><td align="center">Integrated</td></tr>
+    <tr><td align="right"><b>SCA</b></td><td align="center">Integrated</td><td align="center">Integrated [3]</td></tr>
     <tr><td align="right"><b>Universal Client</b></td><td align="center">Yes</td><td align="center">Yes</td></tr>
-    <tr><td align="right"><b>SEPA SCT/Inst</b></td><td align="center"><i>No</i></td><td align="center">Yes [3]</td></tr>
-    <tr><td align="right"><b>P2P Payments</b></td><td align="center"><i>No</i></td><td align="center">Yes [4]</td></tr>
+    <tr><td align="right"><b>SEPA SCT/Inst</b></td><td align="center"><i>No</i></td><td align="center">Yes [4]</td></tr>
+    <tr><td align="right"><b>P2P Payments</b></td><td align="center"><i>No</i></td><td align="center">Yes [5]</td></tr>
     <tr><td align="right"><b>Android Support</b></td><td align="center"><i>No</i></td><td align="center">Yes</td></tr>
-    <tr><td align="right"><b>End-to-End Security</b></td><td align="center"><i>No</i></td><td align="center">Yes [5]</td></tr>
+    <tr><td align="right"><b>End-to-End Security</b></td><td align="center"><i>No</i></td><td align="center">Yes [6]</td></tr>
 </table>
 
 1. Both schemes only need a *user authorization* per payment request using a PIN or biometric.
 2. The payment card concept for selecting account/bank has been around for more than 50 years.
-3. Any account-to-account system supported by the Open Banking implementation.
-4. Using the same accounts and associated authorization keys as for other payments.
-5. There are with respect to the payer *no TTPs to trust or give information to*.
+3. Conceptually an extension of the EMV system (featured in billions of payment cards). 
+4. Any account-to-account system supported by the Open Banking implementation.
+5. Using the same accounts and associated authorization keys as for other payments.
+6. There are with respect to the payer *no TTPs to trust or give information to*.
+This document provides an overview of the end-to-end security scheme:
+https://cyberphone.github.io/doc/payments/open-banking-dual-mode-end-to-end-security-simplified.pdf
 &nbsp;
 
 ## Architecture Overview
@@ -75,6 +78,8 @@ OAuth2 authorization response using an extension property called `identity_token
   "identity_token": "479262777"
 }
 ```
+The `identity_token` is also needed for virtual payment card administation and logging.
+
 Although strictly put not necessary, personalization of the visual part
 of virtual payment cards would benefit by also getting the user's *human name* in
 the authorization response.  If supplied it
@@ -104,4 +109,4 @@ For folks with interests in running code, the following may be of interest:
 
 &nbsp;
 
-Version 0.4, 2019-11-07
+Version 0.42, 2019-11-14
