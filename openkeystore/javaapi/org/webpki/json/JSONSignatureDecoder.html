@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -171,12 +171,6 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONSignatureDecoder.html#verify-org.webpki.json.JSONSignatureTypes-">verify</a></span>(<a href="../../../org/webpki/json/JSONSignatureTypes.html" title="enum in org.webpki.json">JSONSignatureTypes</a>&nbsp;signatureType)</code>
-<div class="block">Simplified verify that only checks that there are no "kid" or "crit", and that the signature type matches.</div>
-</td>
-</tr>
-<tr id="i9" class="rowColor">
-<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONSignatureDecoder.html#verify-org.webpki.json.JSONVerifier-">verify</a></span>(<a href="../../../org/webpki/json/JSONVerifier.html" title="class in org.webpki.json">JSONVerifier</a>&nbsp;verifier)</code>&nbsp;</td>
 </tr>
 </table>
@@ -281,25 +275,6 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>getSignatureValue</h4>
 <pre>public&nbsp;byte[]&nbsp;getSignatureValue()</pre>
-</li>
-</ul>
-<a name="verify-org.webpki.json.JSONSignatureTypes-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>verify</h4>
-<pre>public&nbsp;void&nbsp;verify(<a href="../../../org/webpki/json/JSONSignatureTypes.html" title="enum in org.webpki.json">JSONSignatureTypes</a>&nbsp;signatureType)
-            throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Simplified verify that only checks that there are no "kid" or "crit", and that the signature type matches.
- Note that asymmetric key signatures are always checked for technical correctness unless
- you have specified false for requirePublicKeyInfo.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>signatureType</code> - Type of signature :-)</dd>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - &nbsp;</dd>
-</dl>
 </li>
 </ul>
 <a name="verify-org.webpki.json.JSONVerifier-">
