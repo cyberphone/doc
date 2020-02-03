@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html><html lang="en"><head><title>YASMIN</title><meta http-equiv=Content-Type content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="yasmin.png" sizes="192x192"><style type="text/css">
+<!DOCTYPE html><html lang="en"><head><title>YASMIN</title><meta http-equiv=Content-Type content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="yasmin.png" sizes="192x192"><style type="text/css">
 table.tftable {border-collapse: collapse;margin-top:4pt}
 .tftable th {font-size:10pt;background: linear-gradient(to bottom, #eaeaea 14%,#fcfcfc 52%,#e5e5e5 89%);border-width:1px;padding:4pt 10pt 4pt 10pt;border-style:solid;border-color: #a9a9a9;text-align:center;font-family:arial,verdana,helvetica}
 .tftable tr {background-color:#FFFFE0}
@@ -30,7 +30,7 @@ and
 <div class="new">
 Note: If you are looking for an API you won't find one because YASMIN
 is a <i>message-centric</i> concept, where &quot;self-sufficient&quot; messages using
-<a href="https://tools.ietf.org/rfc/rfc7159.txt" target="_blank">JSON</a> syntax
+<a href="https://tools.ietf.org/html/rfc8259" target="_blank">JSON</a> syntax
 have been &quot;liberated&quot;
 from interfering HTTP bindings, URIs, and clunky <a href="https://www.w3.org/TR/soap12/" target="_blank">SOAP</a> envelopes.
    However, nothing prevents you from <a href="#apimapping">mapping APIs into messages</a>!
@@ -153,7 +153,7 @@ The vision was to have something similar to
 <a href="https://www.w3.org/TR/xmldsig-core/" target="_blank">XML&nbsp;DSig</a>
 but preferably not depending on megabytes of fairly intricate library code.
 Using the IETF JOSE suite of JSON based cryptographic standards would have been cool, but
-the <a href="https://tools.ietf.org/rfc/rfc7515.txt" target="_blank">JOSE signature scheme</a>
+the <a href="https://tools.ietf.org/html/rfc7515" target="_blank">JOSE signature scheme</a>
 forces you encoding messages in Base64Url
 which do not only make messages <i>unreadable by humans</i>, but worse,
 <i>disrupts the YASMIN message typing scheme</i>.
@@ -167,7 +167,7 @@ turned out to be compatible with recent versions of JavaScript as well!
 </div>
 <div>
 The signature system is described in:
-<a href="https://cyberphone.github.io/doc/security/jsonsignatures.html" target="_blank">https://cyberphone.github.io/doc/security/jsonsignatures.html</a>.
+    <a href="https://cyberphone.github.io/doc/security/jsf.html" target="_blank">https://cyberphone.github.io/doc/security/jsf.html</a>.
 </div>
 <div class="new">
 To maintain a &quot;style compatible&quot; messaging concept, a matching encryption scheme was also
@@ -269,9 +269,10 @@ HTTP requests should use TLS (HTTPS) to cater for privacy and end-point authenti
 <div>
 <div class="header" id="history">Document History</div>
 <table class="tftable">
-<tr><th>Date</th><th>Ver</th><th>Comment</th></tr>
-<tr><td>2017-01-27</td><td style="text-align:center">0.5</td><td>Initial publication in HTML5</td></tr>
-<tr><td>2017-04-16</td><td style="text-align:center">0.6</td><td>Changed public keys to use JWK format</td></tr>
+    <tr><th>Date</th><th>Ver</th><th>Comment</th></tr>
+    <tr><td>2017-01-27</td><td style="text-align:center">0.5</td><td>Initial publication in HTML5</td></tr>
+    <tr><td>2017-04-16</td><td style="text-align:center">0.6</td><td>Changed public keys to use JWK format</td></tr>
+    <tr><td>2020-02-03</td><td style="text-align:center">0.61</td><td>Updated references</td></tr>
 </table>
 </div>
 <div>
