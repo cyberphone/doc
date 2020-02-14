@@ -1,202 +1,202 @@
 <!DOCTYPE html><html><head><meta charset="UTF-8"><title>Personal Payment Terminal</title>
 <link rel="stylesheet" type="text/css" href="style.css">
-<script type="text/javascript">
-    'use strict';
+<script>
+'use strict';
 
-    var cardImage = null;
+var cardImage = null;
 
-    var cardIndex = 0;
-    var CARDS = [
-      {
-         url: 'bankdirect.svg',
-         balance: '3580'
-      },{
-         url: 'supercard.svg',
-         balance: '267'
-      },{
-         url: 'unusualcard.svg',
-         balance: '10'
-      }
-    ];
-    function setCardData() {
-       cardImage.setAttribute('href', CARDS[cardIndex].url);
-       document.getElementById('balance').innerHTML = 'Balance: &#x20ac;&#x200a;' + CARDS[cardIndex].balance;
-	document.getElementById('leftArrow').style.opacity = cardIndex == 0 ? 0 : 1;
-	document.getElementById('rightArrow').style.opacity = cardIndex == CARDS.length - 1 ? 0 : 1;
+var cardIndex = 0;
+var CARDS = [
+    {
+        url: 'bankdirect.svg',
+        balance: '3580'
+    }, {
+        url: 'supercard.svg',
+        balance: '267'
+    }, {
+        url: 'unusualcard.svg',
+        balance: '10'
     }
-      
-    function setOpacity(opacity) {
-        cardImage.style.opacity = opacity;
-        if (opacity < 0.99) {
-            opacity += 0.2;
-            setTimeout(function() {
-               setOpacity(opacity);
-            }, 50);
-         }
-      }
+];
+function setCardData() {
+    cardImage.setAttribute('href', CARDS[cardIndex].url);
+    document.getElementById('balance').innerHTML = 'Balance: &#x20ac;&#x200a;' + CARDS[cardIndex].balance;
+    document.getElementById('leftArrow').style.opacity = cardIndex == 0 ? 0 : 1;
+    document.getElementById('rightArrow').style.opacity = cardIndex == CARDS.length - 1 ? 0 : 1;
+}
 
-      function chingsa() {
-         if (++cardIndex == CARDS.length) {
-           cardIndex = 0;
-         }
-         setCardData();
-         setOpacity(0);
-      }
-
-    function toast(message, element) {
-        var toaster = document.getElementById('toaster');
-        toaster.innerHTML = message;
-		if (element == undefined) {
-			toaster.style.top = ((window.innerHeight - toaster.offsetHeight) / 2) + 'px';
-		} else {
-			toaster.style.top = (element.getBoundingClientRect().top - toaster.offsetHeight - 20) + 'px';
-		}
-        toaster.style.left = ((window.innerWidth - toaster.offsetWidth) / 2) + 'px';
-        toaster.style.visibility = 'visible';
+function setOpacity(opacity) {
+    cardImage.style.opacity = opacity;
+    if (opacity < 0.99) {
+        opacity += 0.2;
         setTimeout(function () {
-            toaster.style.visibility = 'hidden';
-        }, 1000);
+            setOpacity(opacity);
+        }, 50);
     }
+}
 
-	function transactionList(element) {
-		toast('Transaction history is not available<br>in the GUI demo', element);
-	}
+function chingsa() {
+    if (++cardIndex == CARDS.length) {
+        cardIndex = 0;
+    }
+    setCardData();
+    setOpacity(0);
+}
 
-    var operation;
-    var payeefield;
-    var pinfield;
-    var paydata;
-    var kbd;
-    var card;
-    var success;
-    var gutter;
-    var pin = '';
-    var pinErrors = 0;
-    function showPin() {
-        if (pin.length == 0) {
-            pinfield.innerHTML = "<span style='color:#a0a0a0'>Enter PIN</span>";
-        } else {
-            var pwd = "<span style='font-size:10pt;position:relative;top:-1pt'>";
-            for (var i = 0; i < pin.length; i++) {
-                pwd += '\u25cf\u2009';
-            }
-            pinfield.innerHTML = pwd + '</span>';
+function toast(message, element) {
+    var toaster = document.getElementById('toaster');
+    toaster.innerHTML = message;
+    if (element == undefined) {
+        toaster.style.top = ((window.innerHeight - toaster.offsetHeight) / 2) + 'px';
+    } else {
+        toaster.style.top = (element.getBoundingClientRect().top - toaster.offsetHeight - 20) + 'px';
+    }
+    toaster.style.left = ((window.innerWidth - toaster.offsetWidth) / 2) + 'px';
+    toaster.style.visibility = 'visible';
+    setTimeout(function () {
+        toaster.style.visibility = 'hidden';
+    }, 1000);
+}
+
+function transactionList(element) {
+    toast('Transaction history is not available<br>in the GUI demo', element);
+}
+
+var operation;
+var payeefield;
+var pinfield;
+var paydata;
+var kbd;
+var card;
+var success;
+var gutter;
+var pin = '';
+var pinErrors = 0;
+function showPin() {
+    if (pin.length == 0) {
+        pinfield.innerHTML = "<span style='color:#a0a0a0'>Enter PIN</span>";
+    } else {
+        var pwd = "<span style='font-size:10pt;position:relative;top:-1pt'>";
+        for (var i = 0; i < pin.length; i++) {
+            pwd += '\u25cf\u2009';
         }
+        pinfield.innerHTML = pwd + '</span>';
     }
+}
 
-	function toastKey(message) {
-        toast(message, document.getElementById('kbd'));
-	}
+function toastKey(message) {
+    toast(message, document.getElementById('kbd'));
+}
 
-    function addDigit(digit) {
-        if (pin.length < 16) {
-            pinfield.innerHTML = pin.length == 0 ? digit : pinfield.innerHTML + digit;
-            pin += digit;
-            setTimeout(function () {
-                showPin();
-            }, 500);
-        } else {
-            toastKey('PIN digit ignored');
-        }
-    }
-
-    function validatePin() {
-        if (pin.length == 0) {
-            toastKey('Empty PIN - Ignored');
-        } else {
-            if (pinErrors == 3) {
-                toastKey('Card blocked due to previous PIN errors!');
-            } else if (pin == '1234') {
-                var processing = document.getElementById('processing');
-                processing.style.left = ((window.innerWidth - processing.offsetWidth) / 2) + 'px';
-                processing.style.top = Math.floor(gutter * 4) + 'px';
-                document.getElementById('whitener').style.visibility = 'visible';
-                processing.style.visibility = 'visible';
-                setTimeout(function () {
-                    card.style.visibility = 'hidden';
-                    kbd.style.visibility = 'hidden';
-                    paydata.style.visibility = 'hidden';
-                    processing.style.visibility = 'hidden';
-                    document.getElementById('whitener').style.visibility = 'hidden';
-                    success.style.visibility = 'visible';
-                    toast('Hit reload if you want to test again')
-                }, 2000);
-            } else {
-                pinErrors++;
-                toastKey('PIN error: ' + (3 - pinErrors) + ' left');
-            }
-        }
-    }
-
-    function deleteDigit() {
-        if (pin.length > 0) {
-            pin = pin.substring(0, pin.length - 1);
+function addDigit(digit) {
+    if (pin.length < 16) {
+        pinfield.innerHTML = pin.length == 0 ? digit : pinfield.innerHTML + digit;
+        pin += digit;
+        setTimeout(function () {
             showPin();
+        }, 500);
+    } else {
+        toastKey('PIN digit ignored');
+    }
+}
+
+function validatePin() {
+    if (pin.length == 0) {
+        toastKey('Empty PIN - Ignored');
+    } else {
+        if (pinErrors == 3) {
+            toastKey('Card blocked due to previous PIN errors!');
+        } else if (pin == '1234') {
+            var processing = document.getElementById('processing');
+            processing.style.left = ((window.innerWidth - processing.offsetWidth) / 2) + 'px';
+            processing.style.top = Math.floor(gutter * 4) + 'px';
+            document.getElementById('whitener').style.visibility = 'visible';
+            processing.style.visibility = 'visible';
+            setTimeout(function () {
+                card.style.visibility = 'hidden';
+                kbd.style.visibility = 'hidden';
+                paydata.style.visibility = 'hidden';
+                processing.style.visibility = 'hidden';
+                document.getElementById('whitener').style.visibility = 'hidden';
+                success.style.visibility = 'visible';
+                toast('Hit reload if you want to test again')
+            }, 2000);
+        } else {
+            pinErrors++;
+            toastKey('PIN error: ' + (3 - pinErrors) + ' left');
         }
     }
+}
 
-    let swipeStartPosition = null;
-
-    function unify(e) {	return e.changedTouches ? e.changedTouches[0] : e };
-
-    function beginSwipe(e) {e.preventDefault(); swipeStartPosition = unify(e).clientX };
-
-    function endSwipe(e) {
-	if(swipeStartPosition || swipeStartPosition === 0) {
-		let dx = unify(e).clientX - swipeStartPosition;
-		swipeStartPosition = null
-           if (Math.abs(dx) > 30) {
-             if (dx > 0 && cardIndex < CARDS.length - 1) {
-               cardIndex++;
-             } else if (dx < 0 && cardIndex > 0) {
-               cardIndex--;
-             } else {
-              return;
-             }
-             setCardData();
-             setOpacity(0);
-           } else {
-             toast("Swipe to the left or right to change account/card", cardImage);
-           }
-	}
-   }
-   function positionElements() {
-        cardImage = document.getElementById('cardImage');
-        cardImage.addEventListener('mousedown', beginSwipe, false);
-        cardImage.addEventListener('touchstart', beginSwipe, false);
-
-        cardImage.addEventListener('touchmove', e => { e.preventDefault() }, false);
-
-        cardImage.addEventListener('mouseup', endSwipe, false);
-        cardImage.addEventListener('touchend', endSwipe, false);
-        setCardData();
-        operation = parent.DATA[parent.currentOperation];
-        document.getElementById('amountlabel').innerHTML = operation.amountlabel ? 'Amount' : 'Confirm';
-        payeefield = document.getElementById('payeefield');
-        payeefield.innerHTML = operation.provider;
-        pinfield = document.getElementById('pinfield');
-        card = document.getElementById('card');
-        paydata = document.getElementById('paydata');
-        kbd = document.getElementById('kbd');
-        success = document.getElementById('success');
-        success.style.top = ((window.innerHeight - success.offsetHeight) / 2) + 'px';
+function deleteDigit() {
+    if (pin.length > 0) {
+        pin = pin.substring(0, pin.length - 1);
         showPin();
-        card.style.left = ((window.innerWidth - card.offsetWidth) / 2) + 'px';
-        paydata.style.left = ((window.innerWidth - paydata.offsetWidth - document.getElementById('payeelabel').offsetWidth) / 2) + 'px';
-        var fieldwidth = payeefield.offsetWidth + 'px';
-        document.getElementById('amountfield').style.maxWidth = document.getElementById('pinfield').style.maxWidth = fieldwidth;
-        document.getElementById('amountfield').innerHTML = operation.amount;
-        var kbdTop = window.innerHeight - Math.floor(kbd.offsetHeight * 1.1);
-        kbd.style.top = kbdTop + 'px';
-        kbd.style.left = ((window.innerWidth - kbd.offsetWidth) / 2) + 'px';
-        gutter = (kbdTop - card.offsetHeight - paydata.offsetHeight) / 7;
-        card.style.top = gutter * 3 + 'px';
-        paydata.style.top = (5 * gutter + card.offsetHeight) + 'px';
-        card.style.visibility = 'visible';
-        paydata.style.visibility = 'visible';
-        kbd.style.visibility = 'visible';
     }
+}
 
+let swipeStartPosition = null;
+
+function unify(e) { return e.changedTouches ? e.changedTouches[0] : e };
+
+function beginSwipe(e) { e.preventDefault(); swipeStartPosition = unify(e).clientX };
+
+function endSwipe(e) {
+    if (swipeStartPosition || swipeStartPosition === 0) {
+        let dx = unify(e).clientX - swipeStartPosition;
+        swipeStartPosition = null
+        if (Math.abs(dx) > 30) {
+            if (dx > 0 && cardIndex < CARDS.length - 1) {
+                cardIndex++;
+            } else if (dx < 0 && cardIndex > 0) {
+                cardIndex--;
+            } else {
+                return;
+            }
+            setCardData();
+            setOpacity(0);
+        } else {
+            toast("Swipe to the left or right to change account/card", cardImage);
+        }
+    }
+}
+
+function positionElements() {
+    cardImage = document.getElementById('cardImage');
+    cardImage.addEventListener('mousedown', beginSwipe, false);
+    cardImage.addEventListener('touchstart', beginSwipe, false);
+
+    cardImage.addEventListener('touchmove', e => { e.preventDefault() }, false);
+
+    cardImage.addEventListener('mouseup', endSwipe, false);
+    cardImage.addEventListener('touchend', endSwipe, false);
+    setCardData();
+    operation = parent.DATA[parent.currentOperation];
+    document.getElementById('amountlabel').innerHTML = operation.amountlabel ? 'Amount' : 'Confirm';
+    payeefield = document.getElementById('payeefield');
+    payeefield.innerHTML = operation.provider;
+    pinfield = document.getElementById('pinfield');
+    card = document.getElementById('card');
+    paydata = document.getElementById('paydata');
+    kbd = document.getElementById('kbd');
+    success = document.getElementById('success');
+    success.style.top = ((window.innerHeight - success.offsetHeight) / 2) + 'px';
+    showPin();
+    card.style.left = ((window.innerWidth - card.offsetWidth) / 2) + 'px';
+    paydata.style.left = ((window.innerWidth - paydata.offsetWidth - document.getElementById('payeelabel').offsetWidth) / 2) + 'px';
+    var fieldwidth = payeefield.offsetWidth + 'px';
+    document.getElementById('amountfield').style.maxWidth = document.getElementById('pinfield').style.maxWidth = fieldwidth;
+    document.getElementById('amountfield').innerHTML = operation.amount;
+    var kbdTop = window.innerHeight - Math.floor(kbd.offsetHeight * 1.1);
+    kbd.style.top = kbdTop + 'px';
+    kbd.style.left = ((window.innerWidth - kbd.offsetWidth) / 2) + 'px';
+    gutter = (kbdTop - card.offsetHeight - paydata.offsetHeight) / 7;
+    card.style.top = gutter * 3 + 'px';
+    paydata.style.top = (5 * gutter + card.offsetHeight) + 'px';
+    card.style.visibility = 'visible';
+    paydata.style.visibility = 'visible';
+    kbd.style.visibility = 'visible';
+}
 </script>
 </head><body onload="positionElements()">
     <div id='whitener' style='width:100%;height:100%;z-index:5;position:absolute;visibility:hidden;opacity:0.6;background-color:grey;padding:0px'></div>
@@ -217,7 +217,7 @@
         </tr>
     </table>
     <table id='card' style='visibility:hidden;position:absolute'>
-        <tr><td id="leftArrow" style="color:white;opacity:0"><svg style="width:12px" viewBox="0 0 140 320" xmlns="http://www.w3.org/2000/svg">
+        <tr><td id="leftArrow" style="opacity:0"><svg style="width:10px" viewBox="0 0 110 320" xmlns="http://www.w3.org/2000/svg">
   <path d="M100 20 L100 300 L10 160 Z" fill="none" stroke="white" stroke-width="10"/>
 </svg></td><td title="Selected account/card"><svg style="width:220px" viewBox="0 0 318 196" xmlns="http://www.w3.org/2000/svg">
 <defs>
@@ -234,7 +234,7 @@
 </svg>
 <rect x="10.5" y="11" width="296.5" height="176" rx="16" ry="16" fill="none" stroke="#162c44"/>
 <rect x="9.5" y="9.5" width="299.5" height="179" rx="17" ry="17" fill="none" stroke="#e0e0e0"/>
-</svg></td><td id="rightArrow" style="color:white;opacity:0"><svg style="width:12px" viewBox="0 0 140 320" xmlns="http://www.w3.org/2000/svg">
+</svg></td><td id="rightArrow" style="opacity:0"><svg style="width:10px" viewBox="0 0 110 320" xmlns="http://www.w3.org/2000/svg">
   <path d="M10 20 L10 300 L100 160 Z" fill="none" stroke="white" stroke-width="10"/>
 </svg></td></tr>
         <tr><td colspan='3' style='text-align:center'><div id="balance" class="balance" title='Account balance, click to get recent transactions' onClick="transactionList(this)"></div></td></tr>
