@@ -5,11 +5,9 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
 </style>
 <script type="text/javascript">
     'use strict';
-    var cardUrl = null;
-    var balance;
     var DATA = [
         {
-            amount: '\u20ac\u200a135.25',
+            amount: '\u20ac\u200a35.25',
             appurl: 'https://demomerchant.com/buy',
             requesturl: 'demomerchant.com',
             demopage: 'demomerchant.html',
@@ -33,7 +31,7 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
     ];
     var currentOperation = 0;
     function nextWindow() {
-        document.getElementById('payframe').src = 'selectionwindow.html';
+        document.getElementById('payframe').src = 'paymentwindow.html';
         header('0 1px 0 1px', 'grey', 'white');
         document.getElementById('requesturl').innerHTML = 'Requester: ' + DATA[currentOperation].requesturl;
     }
@@ -42,16 +40,9 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
         document.getElementById('requesturl').innerHTML = DATA[currentOperation].appurl;
         document.getElementById('payframe').src = DATA[currentOperation].demopage;
     }
-    function selectCard(cardUrl, balance) {
-        this.cardUrl = cardUrl;
-        this.balance = balance;
-        document.getElementById('payframe').src = 'paymentwindow.html';
-    }
     function init() {
-        if (!cardUrl) {
-            document.getElementById('payframe').src = 'demomerchant.html';
-            document.querySelector("input[name='mode']").checked = true;
-        }
+        document.getElementById('payframe').src = 'demomerchant.html';
+        document.querySelector("input[name='mode']").checked = true;
     }
     function header(borderWidth, backgroundColor, color) {
         var style = document.getElementById('requesturl').style;
@@ -65,7 +56,7 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
             <tr>
                 <td id="requesturl" style="padding:3pt 0pt 3pt 10pt;border-width:0 1px 0 1px;border-color:black;border-style:solid">https://demomerchant.com/buy</td>
                 <td rowspan="2" style="width:600pt"><div style="padding-left:50pt"><div style="font-weight:bold;text-align:center;padding-bottom:20pt">Personal Payment Terminal</div>
-                    The Web UI on the left side simulates the primary steps using an Android &quot;App&quot; based <i>Personal&nbsp;Payment&nbsp;Terminal</i> having the following core characteristics:
+                    The Web UI on the left side simulates the primary steps using an &quot;App&quot; based <i>Personal&nbsp;Payment&nbsp;Terminal</i> having the following core characteristics:
                     <ul>
                     <li><i>Eliminates</i> the traditional payment terminal and associated PCI compliance</li>
                     <li>Holds virtual cards and offers a <i>consistent user experience</i></li>
@@ -89,10 +80,7 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
                     
                         <div style="padding-top:20pt;font-size:8pt;font-style:italic">
                             Note: The Personal Payment Terminal is NOT A PRODUCT; it is rather a
-                            technology demonstrator and verifier.<p>Several functions depend on
-                            mechanisms currently not available in Android and Chrome.
-                            The somewhat bold goal is converting these fully application-neutral additions to the mobile ecosystem
-                            into de-facto standards.</p>
+                            technology demonstrator and verifier.
                             <p>The Personal Payment Terminal is the client facing part of the Saturn payment authorization system.</p>
                             <p>* The use of QR-code represents a &quot;workaround&quot;.</p>
                         </div>

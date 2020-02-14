@@ -3,6 +3,46 @@
 <script type="text/javascript">
     'use strict';
 
+    var cardImage = null;
+
+    var cardIndex = 0;
+    var CARDS = [
+      {
+         url: 'bankdirect.svg',
+         balance: '3580'
+      },{
+         url: 'supercard.svg',
+         balance: '267'
+      },{
+         url: 'unusualcard.svg',
+         balance: '10'
+      }
+    ];
+    function setCardData() {
+       cardImage.setAttribute('href', CARDS[cardIndex].url);
+       document.getElementById('balance').innerHTML = 'Balance: &#x20ac;&#x200a;' + CARDS[cardIndex].balance;
+	document.getElementById('leftArrow').style.opacity = cardIndex == 0 ? 0 : 1;
+	document.getElementById('rightArrow').style.opacity = cardIndex == CARDS.length - 1 ? 0 : 1;
+    }
+      
+    function setOpacity(opacity) {
+        cardImage.style.opacity = opacity;
+        if (opacity < 0.99) {
+            opacity += 0.2;
+            setTimeout(function() {
+               setOpacity(opacity);
+            }, 50);
+         }
+      }
+
+      function chingsa() {
+         if (++cardIndex == CARDS.length) {
+           cardIndex = 0;
+         }
+         setCardData();
+         setOpacity(0);
+      }
+
     function toast(message, element) {
         var toaster = document.getElementById('toaster');
         toaster.innerHTML = message;
@@ -95,15 +135,47 @@
         }
     }
 
-    function positionElements() {
+    let swipeStartPosition = null;
+
+    function unify(e) {	return e.changedTouches ? e.changedTouches[0] : e };
+
+    function beginSwipe(e) {e.preventDefault(); swipeStartPosition = unify(e).clientX };
+
+    function endSwipe(e) {
+	if(swipeStartPosition || swipeStartPosition === 0) {
+		let dx = unify(e).clientX - swipeStartPosition;
+		swipeStartPosition = null
+           if (Math.abs(dx) > 30) {
+             if (dx > 0 && cardIndex < CARDS.length - 1) {
+               cardIndex++;
+             } else if (dx < 0 && cardIndex > 0) {
+               cardIndex--;
+             } else {
+              return;
+             }
+             setCardData();
+             setOpacity(0);
+           } else {
+             toast("Swipe to the left or right to change account/card", cardImage);
+           }
+	}
+   }
+   function positionElements() {
+        cardImage = document.getElementById('cardImage');
+        cardImage.addEventListener('mousedown', beginSwipe, false);
+        cardImage.addEventListener('touchstart', beginSwipe, false);
+
+        cardImage.addEventListener('touchmove', e => { e.preventDefault() }, false);
+
+        cardImage.addEventListener('mouseup', endSwipe, false);
+        cardImage.addEventListener('touchend', endSwipe, false);
+        setCardData();
         operation = parent.DATA[parent.currentOperation];
         document.getElementById('amountlabel').innerHTML = operation.amountlabel ? 'Amount' : 'Confirm';
         payeefield = document.getElementById('payeefield');
         payeefield.innerHTML = operation.provider;
         pinfield = document.getElementById('pinfield');
         card = document.getElementById('card');
-        card.rows[0].cells[0].children[0].style.backgroundImage = parent.cardUrl;
-        card.rows[1].cells[0].children[0].innerHTML = parent.balance;
         paydata = document.getElementById('paydata');
         kbd = document.getElementById('kbd');
         success = document.getElementById('success');
@@ -145,8 +217,27 @@
         </tr>
     </table>
     <table id='card' style='visibility:hidden;position:absolute'>
-        <tr><td><div class='cardimage' title='The selected card' style="cursor:auto"></div></td></tr>
-        <tr><td style='text-align:center'><div class="balance" title='Account balance, click to get recent transactions' onClick="transactionList(this)"></div></td></tr>
+        <tr><td id="leftArrow" style="color:white;opacity:0"><svg style="width:12px" viewBox="0 0 140 320" xmlns="http://www.w3.org/2000/svg">
+  <path d="M100 20 L100 300 L10 160 Z" fill="none" stroke="white" stroke-width="10"/>
+</svg></td><td title="Selected account/card"><svg style="width:220px" viewBox="0 0 318 196" xmlns="http://www.w3.org/2000/svg">
+<defs>
+ <clipPath id="cardClip">
+  <rect rx="15" ry="15" height="178" width="298" y="0" x="0"/>
+ </clipPath>
+ <filter id="dropShaddow">
+  <feGaussianBlur stdDeviation="3.5"/>
+ </filter>
+</defs>
+<rect filter="url(#dropShaddow)" rx="16" ry="16" height="181" width="303" y="8.5" x="7.5" fill="white"/>
+<svg x="10" y="10" clip-path="url(#cardClip)">
+<image id="cardImage" width="300" height="180" style="opacity:1;cursor:pointer"/>
+</svg>
+<rect x="10.5" y="11" width="296.5" height="176" rx="16" ry="16" fill="none" stroke="#162c44"/>
+<rect x="9.5" y="9.5" width="299.5" height="179" rx="17" ry="17" fill="none" stroke="#e0e0e0"/>
+</svg></td><td id="rightArrow" style="color:white;opacity:0"><svg style="width:12px" viewBox="0 0 140 320" xmlns="http://www.w3.org/2000/svg">
+  <path d="M10 20 L10 300 L100 160 Z" fill="none" stroke="white" stroke-width="10"/>
+</svg></td></tr>
+        <tr><td colspan='3' style='text-align:center'><div id="balance" class="balance" title='Account balance, click to get recent transactions' onClick="transactionList(this)"></div></td></tr>
     </table>
     <div id='kbd' style='visibility:hidden;position:absolute;width:88%' title='This part depends on the payment credential, it could for example refer to a biometric reader'>
         <svg xmlns="http://www.w3.org/2000/svg"
