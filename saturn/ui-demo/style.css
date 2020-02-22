@@ -1,4 +1,4 @@
-body {margin:0px;padding:0px;font-size:12pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','DejaVu Sans',Arial,'Liberation Sans';background:linear-gradient(to bottom right, #263e5b, #6d7a8e, #263e5b);background-attachment:fixed}
+body {margin:0px;padding:0px;font-size:12pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','DejaVu Sans',Arial,'Liberation Sans';background:linear-gradient(to bottom right, #162c44, #6d7a8e, #162c44);background-attachment:fixed}
 td.label {text-align:right;padding:3pt 3pt 3pt 0pt;color:white}
 td.field {min-width:11em;max-width:15em;padding:3pt 6pt 3pt 6pt;border-width:1px;border-style:solid;border-color:#b0b0b0;color:white;overflow:hidden;white-space:nowrap;box-sizing:border-box;background-color:black}
 div.balance {cursor:pointer;margin-top:6pt;display:inline-block;padding:1pt 4pt;border-width:1px;border-style:solid;border-color:#b0b0b0;border-radius:5px;color:white;background-color:black}
