@@ -1,5 +1,5 @@
 <svg width="300" height="180" xmlns="http://www.w3.org/2000/svg">
-<rect x="0" y="0" width="300" height="180" fill="#e0e0e0"/>
+<rect x="0" y="0" width="300" height="180" fill="white/>
 <text x="150" y="60" font-family="Sans-serif" font-size="34" text-anchor="middle" font-weight="bold" fill="#6d8838" letter-spacing="2">UnusualCard</text>
 <text x="150" y="115" font-family="Sans-serif" font-size="14" text-anchor="middle">Only for testing the card selection UI...</text>
 </svg>
