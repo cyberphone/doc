@@ -41,8 +41,14 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
         document.getElementById('payframe').src = DATA[currentOperation].demopage;
     }
     function init() {
-        document.getElementById('payframe').src = 'demomerchant.html';
-        document.querySelector("input[name='mode']").checked = true;
+        let ua = navigator.userAgent;
+        // MSIE used to detect old browsers and Trident used to newer ones
+        if (ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1) {
+            document.getElementById('payframe').src = 'notsupported.html';
+        } else {
+            document.getElementById('payframe').src = 'demomerchant.html';
+            document.querySelector("input[name='mode']").checked = true;
+        }
     }
     function header(borderWidth, backgroundColor, color) {
         var style = document.getElementById('requesturl').style;
