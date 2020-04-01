@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9,"i1":9,"i2":9};
+var methods = {"i0":9,"i1":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -138,19 +138,29 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?i
 <th class="colOne" scope="col">Enum Constant and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONOutputFormats.html#CANONICALIZED">CANONICALIZED</a></span></code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONOutputFormats.html#CANONICALIZED">CANONICALIZED</a></span></code>
+<div class="block">Same as NORMALIZED but with properties sorted according to JCS</div>
+</td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONOutputFormats.html#NORMALIZED">NORMALIZED</a></span></code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONOutputFormats.html#NORMALIZED">NORMALIZED</a></span></code>
+<div class="block">As a string without whitespace where all items have a normalized form</div>
+</td>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONOutputFormats.html#PRETTY_HTML">PRETTY_HTML</a></span></code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONOutputFormats.html#PRETTY_HTML">PRETTY_HTML</a></span></code>
+<div class="block">Pretty-printed with HTML format</div>
+</td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONOutputFormats.html#PRETTY_JS_NATIVE">PRETTY_JS_NATIVE</a></span></code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONOutputFormats.html#PRETTY_JS_NATIVE">PRETTY_JS_NATIVE</a></span></code>
+<div class="block">Pretty-printed with JavaScript syntax</div>
+</td>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONOutputFormats.html#PRETTY_PRINT">PRETTY_PRINT</a></span></code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONOutputFormats.html#PRETTY_PRINT">PRETTY_PRINT</a></span></code>
+<div class="block">Pretty-printed</div>
+</td>
 </tr>
 </table>
 </li>
@@ -168,16 +178,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?i
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONOutputFormats.html#getOptions--">getOptions</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i1" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../org/webpki/json/JSONOutputFormats.html" title="enum in org.webpki.json">JSONOutputFormats</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONOutputFormats.html#valueOf-java.lang.String-">valueOf</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../org/webpki/json/JSONOutputFormats.html" title="enum in org.webpki.json">JSONOutputFormats</a>[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/json/JSONOutputFormats.html#values--">values</a></span>()</code>
 <div class="block">Returns an array containing the constants of this enum type, in
@@ -220,6 +226,7 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>CANONICALIZED</h4>
 <pre>public static final&nbsp;<a href="../../../org/webpki/json/JSONOutputFormats.html" title="enum in org.webpki.json">JSONOutputFormats</a> CANONICALIZED</pre>
+<div class="block">Same as NORMALIZED but with properties sorted according to JCS</div>
 </li>
 </ul>
 <a name="NORMALIZED">
@@ -229,6 +236,7 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>NORMALIZED</h4>
 <pre>public static final&nbsp;<a href="../../../org/webpki/json/JSONOutputFormats.html" title="enum in org.webpki.json">JSONOutputFormats</a> NORMALIZED</pre>
+<div class="block">As a string without whitespace where all items have a normalized form</div>
 </li>
 </ul>
 <a name="PRETTY_HTML">
@@ -238,6 +246,7 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>PRETTY_HTML</h4>
 <pre>public static final&nbsp;<a href="../../../org/webpki/json/JSONOutputFormats.html" title="enum in org.webpki.json">JSONOutputFormats</a> PRETTY_HTML</pre>
+<div class="block">Pretty-printed with HTML format</div>
 </li>
 </ul>
 <a name="PRETTY_JS_NATIVE">
@@ -247,6 +256,7 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>PRETTY_JS_NATIVE</h4>
 <pre>public static final&nbsp;<a href="../../../org/webpki/json/JSONOutputFormats.html" title="enum in org.webpki.json">JSONOutputFormats</a> PRETTY_JS_NATIVE</pre>
+<div class="block">Pretty-printed with JavaScript syntax</div>
 </li>
 </ul>
 <a name="PRETTY_PRINT">
@@ -256,6 +266,7 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>PRETTY_PRINT</h4>
 <pre>public static final&nbsp;<a href="../../../org/webpki/json/JSONOutputFormats.html" title="enum in org.webpki.json">JSONOutputFormats</a> PRETTY_PRINT</pre>
+<div class="block">Pretty-printed</div>
 </li>
 </ul>
 </li>
@@ -266,15 +277,6 @@ the order they are declared.</div>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="getOptions--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getOptions</h4>
-<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getOptions()</pre>
-</li>
-</ul>
 <a name="valueOf-java.lang.String-">
 <!--   -->
 </a>
