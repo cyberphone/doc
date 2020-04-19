@@ -7,21 +7,30 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
     'use strict';
     var DATA = [
         {
-            amount: '\u20ac\u200a35.25',
+            prefix: '',
+            amount: '&#x20ac;&#x200a;35.25',
+            marquee: null,
             appurl: 'https://demomerchant.com/buy',
             requesturl: 'demomerchant.com',
             demopage: 'demomerchant.html',
             provider: 'Demo Merchant',
             amountlabel: true
         }, {
-            amount: '$\u200a200<br><span class="marquee"><i>Reserved</i>, actual payment will match fuel quantity</span>',
+ //           amount: '$\u200a200<br><span id="marquee" class="marquee" style="left:-320px"><i>Reserved</i>, actual payment will match fuel quantity</span><span id="marquee1" class="marquee" style="left:-337px"><i>Reserved</i>, actual payment will match fuel quantity</span>',
+
+            prefix: '',
+            amount: '&#x20ac;&#x200a;200',
+            marquee: '<i>Reserved</i>, actual payment will match fuel quantity',
             appurl: '&nbsp;',
-            requesturl: 'total.fr',
+            requesturl: 'exxon.fr',
             demopage: 'gasstation.html',
-            provider: 'Total',
+            provider: 'Exxon Mobil',
             amountlabel: true
     }, {
-            amount: 'Monthly: &#x20ac;&#x200a;28.50<br><span class="marquee"><i>Payee asks for the right to debit the account for its services</i></span>',
+//            amount: '<span style="color:lightblue">Upfront fee: </span>&#x20ac;&#x200a;28.50<br><span class="marquee"><i>Payee asks for the right to debit the account for its services</i></span>',
+            prefix: '<span style="color:lightblue">Upfront fee: </span>',
+            amount: '&#x20ac;&#x200a;125',
+            marquee: '<i>Subscription</i>, see contract for details',
             appurl: 'https://t-mobile.com/invoicing',
             requesturl: 't-mobile.com',
             demopage: 'subscription.html',
@@ -62,35 +71,41 @@ body {font-size:10pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','De
             <tr>
                 <td id="requesturl" style="padding:3pt 0pt 3pt 10pt;border-width:0 1px 0 1px;border-color:black;border-style:solid">https://demomerchant.com/buy</td>
                 <td rowspan="2" style="width:600pt"><div style="padding-left:50pt"><div style="font-weight:bold;text-align:center;padding-bottom:20pt">Personal Payment Terminal</div>
-                    The Web UI on the left side simulates the primary steps using an &quot;App&quot; based <i>Personal&nbsp;Payment&nbsp;Terminal</i> having the following core characteristics:
-                    <ul>
-                    <li><i>Eliminates</i> the traditional payment terminal and associated PCI compliance</li>
-                    <li>Holds virtual cards and offers a <i>consistent user experience</i></li>
-                    <li>Supports most merchant initiated payment scenarios including:
-                        <ul>
-                            <li style="padding-top:3pt">Local payments in a shop using NFC/BLE or QR-code *</li>
-                            <li>Payments using the mobile Web</li>
-                            <li>Usage as a &quot;payment companion&quot; to a PC/Mac on the Web using NFC/BLE or QR-code *</li>
-                        </ul></li>
-                    <li>Maintains a security-level comparable to EMV-cards without centralized tokenization services</li>
-                    </ul>
-                    <div style="padding-bottom:5pt">Demo PIN: <span style="color:red">1234</span></div>
-                    <table style="padding:0px;border-collapse:collapse"><tr><td style="padding-left:0px">Operation:</td>
-                        <td><input type="radio" onclick="setOperation(0)" name="mode" checked></td>
-                        <td>Web shop&nbsp;&nbsp;</td>
-                        <td><input type="radio" onclick="setOperation(1)" name="mode"></td>
-                        <td>Gas station&nbsp;&nbsp;</td>
-                        <td><input type="radio" onclick="setOperation(2)" name="mode"></td>
-                        <td>Phone Subscription</td>
-                     </tr></table>
-                    
-                        <div style="padding-top:20pt;font-size:8pt;font-style:italic">
-                            Note: The Personal Payment Terminal is NOT A PRODUCT; it is rather a
-                            technology demonstrator and verifier.
-                            <p>The Personal Payment Terminal is the client facing part of the Saturn payment authorization system.</p>
-                            <p>* The use of QR-code represents a &quot;workaround&quot;.</p>
-                        </div>
-                    </div></td>
+                    The Web UI on the left side simulates the primary steps using an &quot;App&quot; based <a href="https://cyberphone.github.io/doc/saturn/personal-payment-terminal.pdf">
+    Personal&nbsp;Payment&nbsp;Terminal</a> having the following core characteristics:
+    <ul>
+        <li><i>Eliminates</i> the traditional payment terminal and associated PCI compliance</li>
+        <li>Holds virtual cards and offers a <i>consistent user experience</i></li>
+        <li>
+            Supports most merchant initiated payment scenarios including:
+            <ul>
+                <li style="padding-top:3pt">Local payments in a shop using NFC/BLE or QR-code *</li>
+                <li>Payments using the mobile Web</li>
+                <li>Usage as a &quot;payment companion&quot; to a PC/Mac on the Web using NFC/BLE or QR-code *</li>
+            </ul>
+        </li>
+        <li>Maintains a security-level comparable to EMV-cards without centralized tokenization services</li>
+    </ul>
+    <div style="padding-bottom:5pt">Demo PIN: <span style="color:red">1234</span></div>
+    <table style="padding:0px;border-collapse:collapse">
+        <tr>
+            <td style="padding-left:0px">Operation:</td>
+            <td><input type="radio" onclick="setOperation(0)" name="mode" checked></td>
+            <td>Web shop&nbsp;&nbsp;</td>
+            <td><input type="radio" onclick="setOperation(1)" name="mode"></td>
+            <td>Gas station&nbsp;&nbsp;</td>
+            <td><input type="radio" onclick="setOperation(2)" name="mode"></td>
+            <td>Phone Subscription</td>
+        </tr>
+    </table>
+
+    <div style="padding-top:20pt;font-size:8pt;font-style:italic">
+        Note: The Personal Payment Terminal is NOT A PRODUCT; it is rather a
+        technology demonstrator and verifier.
+        <p>The Personal Payment Terminal is the client facing part of the Saturn payment authorization system.</p>
+        <p>* The use of QR-code represents a &quot;workaround&quot;.</p>
+    </div>
+</div></td>
             </tr>
             <tr>
                 <td style="border-width:0 1px 1px 1px;border-color:black;border-style:solid"><iframe id="payframe" width="360" height="600" style="border:none"></iframe></td>

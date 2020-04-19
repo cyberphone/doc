@@ -5,6 +5,7 @@
 
 var cardImage = null;
 
+
 var cardIndex = 0;
 var CARDS = [
     {
@@ -172,7 +173,7 @@ function positionElements() {
     cardImage.addEventListener('touchend', endSwipe, false);
     setCardData();
     operation = parent.DATA[parent.currentOperation];
-    document.getElementById('amountlabel').innerHTML = operation.amountlabel ? 'Amount' : 'Confirm';
+    document.getElementById('amountlabel').innerHTML = operation.amountlabel ? 'Total' : 'Confirm';
     payeefield = document.getElementById('payeefield');
     payeefield.innerHTML = operation.provider;
     pinfield = document.getElementById('pinfield');
@@ -186,7 +187,30 @@ function positionElements() {
     paydata.style.left = ((window.innerWidth - paydata.offsetWidth - document.getElementById('payeelabel').offsetWidth) / 2) + 'px';
     var fieldwidth = payeefield.offsetWidth + 'px';
     document.getElementById('amountfield').style.maxWidth = document.getElementById('pinfield').style.maxWidth = fieldwidth;
-    document.getElementById('amountfield').innerHTML = operation.amount;
+    var amountField = operation.prefix + operation.amount;
+    if (operation.marquee) {
+        amountField += '<br><span id="marquee1" class="marquee">' + operation.marquee + '</span><span id="marquee2" class="marquee">' + operation.marquee + '</span>';
+    }
+    document.getElementById('amountfield').innerHTML = amountField;
+    if (operation.marquee) {
+        var marquee1 = document.getElementById('marquee1');
+        var marquee2 = document.getElementById('marquee2');
+        var marqueeWidth = marquee1.offsetWidth;
+        var startMarquee = 0;
+        var delayMarquee = 0;
+        var distance = Math.floor(payeefield.offsetWidth / 3);
+        console.debug('width=' + marqueeWidth + ' distance=' + distance);
+        setInterval(function(){
+            marquee1.style.left = startMarquee + 'px';
+            marquee2.style.left = (startMarquee + distance) + 'px';
+            if (delayMarquee++ > 200) {
+                if (--startMarquee + marqueeWidth + distance == 0) {
+                    delayMarquee = 0;
+                    startMarquee = 0;
+                }
+            }
+        }, 10);
+    }
     var kbdTop = window.innerHeight - Math.floor(kbd.offsetHeight * 1.1);
     kbd.style.top = kbdTop + 'px';
     kbd.style.left = ((window.innerWidth - kbd.offsetWidth) / 2) + 'px';
@@ -209,7 +233,7 @@ function positionElements() {
     <table id='paydata' style='visibility:hidden;position:absolute'>
         <tr><td id='payeelabel' class='label'>Payee</td><td id='payeefield' class='field' title='Common name of payee'>Demo Merchant</td></tr>
         <tr><td colspan='2' style='height:5pt'></td></tr>
-        <tr><td id='amountlabel' class='label'>Amount</td><td id='amountfield' class='field' title='Amount to pay or reserve'></td></tr>
+        <tr><td id='amountlabel' class='label'></td><td id='amountfield' class='field' title='Amount to pay or reserve'></td></tr>
         <tr><td colspan='2' style='height:5pt'></td></tr>
         <tr>
             <td class='label'>PIN</td>
@@ -219,7 +243,7 @@ function positionElements() {
     <table id='card' style='visibility:hidden;position:absolute'>
         <tr><td id="leftArrow" style="opacity:0"><svg style="width:10px" viewBox="0 0 110 320" xmlns="http://www.w3.org/2000/svg">
   <path d="M100 20 L100 300 L10 160 Z" fill="none" stroke="white" stroke-width="10"/>
-</svg></td><td title="Selected account/card"><svg style="width:220px" viewBox="0 0 318 196" xmlns="http://www.w3.org/2000/svg">
+</svg></td><td title="Selected account/card"><svg style="width:240px" viewBox="0 0 318 196" xmlns="http://www.w3.org/2000/svg">
     <defs>
         <clipPath id="cardClip">
             <rect rx="15" ry="15" height="178" width="298" y="0" x="0" />
