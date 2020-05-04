@@ -1,11 +1,12 @@
 body {margin:0px;padding:0px;font-size:12pt;color:#000000;font-family:Verdana,'Bitstream Vera Sans','DejaVu Sans',Arial,'Liberation Sans';background:linear-gradient(to bottom right, #162c44, #6d7a8e, #162c44);background-attachment:fixed}
 td.label {text-align:right;padding:3pt 3pt 3pt 0pt;color:white}
 td.field {min-width:11em;max-width:15em;padding:3pt 6pt 3pt 6pt;border-width:1px;border-style:solid;border-color:#b0b0b0;color:white;overflow:hidden;white-space:nowrap;box-sizing:border-box;background-color:black}
-div.balance {cursor:pointer;margin-top:6pt;display:inline-block;padding:1pt 4pt;border-width:1px;border-style:solid;border-color:#b0b0b0;border-radius:5px;color:white;background-color:black}
+div.balance {cursor:pointer;margin-top:6pt;padding:2pt 5pt;border-width:1px;border-style:solid;border-color:#b0b0b0;border-radius:5px;color:white;background-color:black;display:flex;align-items:center}
+span.money {font-weight:500; letter-spacing:1pt}
 div.cardimage {cursor:pointer;width:212px;height:127px;border-style:solid;border-width:1px;border-color:#808080;border-radius:15px;box-shadow:0px 0px 8px white;background-size:cover;background-repeat:no-repeat}
 div.toasting {border-color:red;border-style:solid;border-width:1pt;text-align:left;border-radius:7px;font-size:10pt;z-index:8;background-color:#f0f0f0;position:absolute;visibility:hidden;padding:5pt 10pt 5pt 10pt}
 img.saturn {margin:5pt;width:20%}
-
+@keyframes spin {100% {transform: rotate(360deg);}}
 span.marquee  {
     display:inline-block;
     position:relative;
