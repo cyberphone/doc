@@ -281,29 +281,35 @@ function positionElements() {
     <table id='card' style='visibility:hidden;position:absolute'>
         <tr><td id="leftArrow" style="opacity:0"><svg style="width:10px" viewBox="0 0 110 320" xmlns="http://www.w3.org/2000/svg">
   <path d="M100 20 L100 300 L10 160 Z" fill="none" stroke="white" stroke-width="10"/>
-</svg></td><td title="Selected account/card"><svg style="width:240px;cursor:pointer" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+</svg></td><td title="Selected account/card"><svg style="width:240px;cursor:pointer;background-color:white" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
     <defs>
         <clipPath id="cardClip">
             <rect rx="15" ry="15" height="180" width="300" y="0" x="0" />
         </clipPath>
-        <linearGradient id="innerCardBorder" x1="0" x2="1" y1="0" y2="1">
-            <stop offset="0" stop-color="#e8e8e8" stop-opacity="0.6" />
-            <stop offset="0.48" stop-color="#e8e8e8" stop-opacity="0.6" />
-            <stop offset="0.52" stop-color="#b0b0b0" stop-opacity="0.6" />
-            <stop offset="1" stop-color="#b0b0b0" stop-opacity="0.6" />
-        </linearGradient>
-        <filter id="dropShaddow">
-            <feGaussianBlur stdDeviation="3.5" />
+        <filter id='dropShaddow'>
+            <feGaussianBlur stdDeviation='2.4' />
         </filter>
+        <linearGradient y1='0' x1='0' y2='1' x2='1' id='innerCardBorder'>
+            <stop offset='0' stop-opacity='0.6' stop-color='#e8e8e8' />
+            <stop offset='0.48' stop-opacity='0.6' stop-color='#e8e8e8' />
+            <stop offset='0.52' stop-opacity='0.6' stop-color='#b0b0b0' />
+            <stop offset='1' stop-opacity='0.6' stop-color='#b0b0b0' />
+        </linearGradient>
+        <linearGradient y1='0' x1='0' y2='1' x2='1' id='outerCardBorder'>
+            <stop offset='0' stop-color='#b0b0b0' />
+            <stop offset='0.48' stop-color='#b0b0b0' />
+            <stop offset='0.52' stop-color='#808080' />
+            <stop offset='1' stop-color='#808080' />
+        </linearGradient>
     </defs>
-    <rect width="305" height="184" rx="16" ry="16" x="7" y="8" fill="white" filter="url(#dropShaddow)"/>
+    <rect filter='url(#dropShaddow)' rx='16' ry='16' width='302' height='182' y='12' x='12' fill='#c0c0c0' />
     <svg x="10" y="10" clip-path="url(#cardClip)">
         <image id="cardImage" width="300" height="180" />
     </svg>
-    <rect fill='none' width='298' height='178' rx='14.75' ry='14.75' stroke='url(#innerCardBorder)' stroke-width='2' x='11' y='11' />
-    <rect fill='none' width='303' height='183' rx='17' ry='17' stroke='#e0e0e0' x='8.5' y='8.5' />
-    <rect fill='none'  width='301'height='181' rx='16' ry='16' stroke='#162c44' x='9.5' y='9.5' />
-    </svg></td><td id="rightArrow" style="opacity:0"><svg style="width:10px" viewBox="0 0 110 320" xmlns="http://www.w3.org/2000/svg">
+    <rect fill='none' x='11' y='11' width='298' height='178' rx='14.7' ry='14.7' stroke='url(#innerCardBorder)' stroke-width='2.7' />
+    <rect fill='none' x='9.5' y='9.5' width='301' height='181' rx='16' ry='16' stroke='url(#outerCardBorder)' />
+</svg>
+</td><td id="rightArrow" style="opacity:0"><svg style="width:10px" viewBox="0 0 110 320" xmlns="http://www.w3.org/2000/svg">
       <path d="M10 20 L10 300 L100 160 Z" fill="none" stroke="white" stroke-width="10"/>
     </svg></td></tr>
             <tr><td colspan='3' style='text-align:center'><div style="display:inline-block"><div id="balance" class="balance" title='Account balance, click to get recent transactions' onClick="transactionList(this)"></div></div></td></tr>
