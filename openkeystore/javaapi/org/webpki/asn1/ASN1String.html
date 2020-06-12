@@ -1,12 +1,22 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML>
 <!-- NewPage -->
 <html lang="en">
 <head>
 
 <title>ASN1String (WebPKI.org Support)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+<link rel="stylesheet" type="text/css" href="../../../jquery/jquery-ui.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
+<script type="text/javascript" src="../../../jquery/jszip/dist/jszip.min.js"></script>
+<script type="text/javascript" src="../../../jquery/jszip-utils/dist/jszip-utils.min.js"></script>
+<!--[if IE]>
+<script type="text/javascript" src="../../../jquery/jszip-utils/dist/jszip-utils-ie.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="../../../jquery/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="../../../jquery/jquery-migrate-3.0.1.js"></script>
+<script type="text/javascript" src="../../../jquery/jquery-ui.js"></script>
 </head>
 <body>
 <script type="text/javascript"><!--
@@ -18,26 +28,31 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
-</script>
+var pathtoroot = "../../../";
+var useModuleDirectories = true;
+loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
 </noscript>
+<header role="banner">
+<nav role="navigation">
+<div class="fixedNav">
 <!-- ========= START OF TOP NAVBAR ======= -->
-<div class="topNav"><a name="navbar.top">
+<div class="topNav"><a id="navbar.top">
 <!--   -->
 </a>
 <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
-<a name="navbar.top.firstrow">
+<a id="navbar.top.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
-<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="../../../index.html">Overview</a></li>
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
@@ -46,16 +61,14 @@ var activeTableTab = "activeTableTab";
 </ul>
 </div>
 <div class="subNav">
-<ul class="navList">
-<li><a href="../../../org/webpki/asn1/ASN1Set.html" title="class in org.webpki.asn1"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../org/webpki/asn1/ASN1T61String.html" title="class in org.webpki.asn1"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
-</ul>
-<ul class="navList">
-<li><a href="../../../index.html?org/webpki/asn1/ASN1String.html" target="_top">Frames</a></li>
-<li><a href="ASN1String.html" target="_top">No&nbsp;Frames</a></li>
-</ul>
 <ul class="navList" id="allclasses_navbar_top">
-<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+<li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" disabled="disabled">
+<input type="reset" id="reset" value="reset" disabled="disabled">
+</li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -68,12 +81,15 @@ var activeTableTab = "activeTableTab";
   }
   //-->
 </script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
 </div>
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
@@ -84,24 +100,33 @@ var activeTableTab = "activeTableTab";
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
-<a name="skip.navbar.top">
+<a id="skip.navbar.top">
 <!--   -->
 </a></div>
 <!-- ========= END OF TOP NAVBAR ========= -->
+</div>
+<div class="navPadding">&nbsp;</div>
+<script type="text/javascript"><!--
+$('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+//-->
+</script>
+</nav>
+</header>
 <!-- ======== START OF CLASS DATA ======== -->
+<main role="main">
 <div class="header">
-<div class="subTitle">org.webpki.asn1</div>
+<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.webpki.asn1</a></div>
 <h2 title="Class ASN1String" class="title">Class ASN1String</h2>
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
-<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../org/webpki/asn1/BaseASN1Object.html" title="class in org.webpki.asn1">org.webpki.asn1.BaseASN1Object</a></li>
+<li><a href="BaseASN1Object.html" title="class in org.webpki.asn1">org.webpki.asn1.BaseASN1Object</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../org/webpki/asn1/Simple.html" title="class in org.webpki.asn1">org.webpki.asn1.Simple</a></li>
+<li><a href="Simple.html" title="class in org.webpki.asn1">org.webpki.asn1.Simple</a></li>
 <li>
 <ul class="inheritance">
 <li>org.webpki.asn1.ASN1String</li>
@@ -117,16 +142,15 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../org/webpki/asn1/ASN1Constants.html" title="interface in org.webpki.asn1">ASN1Constants</a></dd>
+<dd><code><a href="ASN1Constants.html" title="interface in org.webpki.asn1">ASN1Constants</a></code></dd>
 </dl>
 <dl>
 <dt>Direct Known Subclasses:</dt>
-<dd><a href="../../../org/webpki/asn1/ASN1BMPString.html" title="class in org.webpki.asn1">ASN1BMPString</a>, <a href="../../../org/webpki/asn1/ASN1GeneralString.html" title="class in org.webpki.asn1">ASN1GeneralString</a>, <a href="../../../org/webpki/asn1/ASN1GraphicString.html" title="class in org.webpki.asn1">ASN1GraphicString</a>, <a href="../../../org/webpki/asn1/ASN1IA5String.html" title="class in org.webpki.asn1">ASN1IA5String</a>, <a href="../../../org/webpki/asn1/ASN1NumericString.html" title="class in org.webpki.asn1">ASN1NumericString</a>, <a href="../../../org/webpki/asn1/ASN1PrintableString.html" title="class in org.webpki.asn1">ASN1PrintableString</a>, <a href="../../../org/webpki/asn1/ASN1T61String.html" title="class in org.webpki.asn1">ASN1T61String</a>, <a href="../../../org/webpki/asn1/ASN1UTF8String.html" title="class in org.webpki.asn1">ASN1UTF8String</a>, <a href="../../../org/webpki/asn1/ASN1VisibleString.html" title="class in org.webpki.asn1">ASN1VisibleString</a></dd>
+<dd><code><a href="ASN1BMPString.html" title="class in org.webpki.asn1">ASN1BMPString</a></code>, <code><a href="ASN1GeneralString.html" title="class in org.webpki.asn1">ASN1GeneralString</a></code>, <code><a href="ASN1GraphicString.html" title="class in org.webpki.asn1">ASN1GraphicString</a></code>, <code><a href="ASN1IA5String.html" title="class in org.webpki.asn1">ASN1IA5String</a></code>, <code><a href="ASN1NumericString.html" title="class in org.webpki.asn1">ASN1NumericString</a></code>, <code><a href="ASN1PrintableString.html" title="class in org.webpki.asn1">ASN1PrintableString</a></code>, <code><a href="ASN1T61String.html" title="class in org.webpki.asn1">ASN1T61String</a></code>, <code><a href="ASN1UTF8String.html" title="class in org.webpki.asn1">ASN1UTF8String</a></code>, <code><a href="ASN1VisibleString.html" title="class in org.webpki.asn1">ASN1VisibleString</a></code></dd>
 </dl>
 <hr>
-<br>
 <pre>public abstract class <span class="typeNameLabel">ASN1String</span>
-extends <a href="../../../org/webpki/asn1/Simple.html" title="class in org.webpki.asn1">Simple</a></pre>
+extends <a href="Simple.html" title="class in org.webpki.asn1">Simple</a></pre>
 </li>
 </ul>
 </div>
@@ -134,72 +158,81 @@ extends <a href="../../../org/webpki/asn1/Simple.html" title="class in org.webpk
 <ul class="blockList">
 <li class="blockList">
 <!-- =========== FIELD SUMMARY =========== -->
+<section role="region">
 <ul class="blockList">
-<li class="blockList"><a name="field.summary">
+<li class="blockList"><a id="field.summary">
 <!--   -->
 </a>
 <h3>Field Summary</h3>
 <ul class="blockList">
-<li class="blockList"><a name="fields.inherited.from.class.org.webpki.asn1.ASN1Constants">
+<li class="blockList"><a id="fields.inherited.from.class.org.webpki.asn1.ASN1Constants">
 <!--   -->
 </a>
-<h3>Fields inherited from interface&nbsp;org.webpki.asn1.<a href="../../../org/webpki/asn1/ASN1Constants.html" title="interface in org.webpki.asn1">ASN1Constants</a></h3>
-<code><a href="../../../org/webpki/asn1/ASN1Constants.html#APPLICATION">APPLICATION</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#BITSTRING">BITSTRING</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#BMPSTRING">BMPSTRING</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#BOOLEAN">BOOLEAN</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#CLASS_MASK">CLASS_MASK</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#CONSTRUCTED">CONSTRUCTED</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#CONTEXT">CONTEXT</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#EMBEDDED_PDV">EMBEDDED_PDV</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#ENUMERATED">ENUMERATED</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#EOC">EOC</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#EXTERNAL">EXTERNAL</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#FORM_MASK">FORM_MASK</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#GENERALIZEDTIME">GENERALIZEDTIME</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#GENERALSTRING">GENERALSTRING</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#GRAPHICSTRING">GRAPHICSTRING</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#IA5STRING">IA5STRING</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#INTEGER">INTEGER</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#NULL">NULL</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#NUMERICSTRING">NUMERICSTRING</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#OBJDESCRIPTOR">OBJDESCRIPTOR</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#OCTETSTRING">OCTETSTRING</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#OID">OID</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#PRIMITIVE">PRIMITIVE</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#PRINTABLESTRING">PRINTABLESTRING</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#PRIVATE">PRIVATE</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#REAL">REAL</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#SEQUENCE">SEQUENCE</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#SET">SET</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#T61STRING">T61STRING</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#TAG_MASK">TAG_MASK</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#UNIVERSAL">UNIVERSAL</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#UNIVERSALSTRING">UNIVERSALSTRING</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#UTCTIME">UTCTIME</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#UTF8STRING">UTF8STRING</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#VIDEOTEXSTRING">VIDEOTEXSTRING</a>, <a href="../../../org/webpki/asn1/ASN1Constants.html#VISIBLESTRING">VISIBLESTRING</a></code></li>
+<h3>Fields inherited from interface&nbsp;org.webpki.asn1.<a href="ASN1Constants.html" title="interface in org.webpki.asn1">ASN1Constants</a></h3>
+<code><a href="ASN1Constants.html#APPLICATION">APPLICATION</a>, <a href="ASN1Constants.html#BITSTRING">BITSTRING</a>, <a href="ASN1Constants.html#BMPSTRING">BMPSTRING</a>, <a href="ASN1Constants.html#BOOLEAN">BOOLEAN</a>, <a href="ASN1Constants.html#CLASS_MASK">CLASS_MASK</a>, <a href="ASN1Constants.html#CONSTRUCTED">CONSTRUCTED</a>, <a href="ASN1Constants.html#CONTEXT">CONTEXT</a>, <a href="ASN1Constants.html#EMBEDDED_PDV">EMBEDDED_PDV</a>, <a href="ASN1Constants.html#ENUMERATED">ENUMERATED</a>, <a href="ASN1Constants.html#EOC">EOC</a>, <a href="ASN1Constants.html#EXTERNAL">EXTERNAL</a>, <a href="ASN1Constants.html#FORM_MASK">FORM_MASK</a>, <a href="ASN1Constants.html#GENERALIZEDTIME">GENERALIZEDTIME</a>, <a href="ASN1Constants.html#GENERALSTRING">GENERALSTRING</a>, <a href="ASN1Constants.html#GRAPHICSTRING">GRAPHICSTRING</a>, <a href="ASN1Constants.html#IA5STRING">IA5STRING</a>, <a href="ASN1Constants.html#INTEGER">INTEGER</a>, <a href="ASN1Constants.html#NULL">NULL</a>, <a href="ASN1Constants.html#NUMERICSTRING">NUMERICSTRING</a>, <a href="ASN1Constants.html#OBJDESCRIPTOR">OBJDESCRIPTOR</a>, <a href="ASN1Constants.html#OCTETSTRING">OCTETSTRING</a>, <a href="ASN1Constants.html#OID">OID</a>, <a href="ASN1Constants.html#PRIMITIVE">PRIMITIVE</a>, <a href="ASN1Constants.html#PRINTABLESTRING">PRINTABLESTRING</a>, <a href="ASN1Constants.html#PRIVATE">PRIVATE</a>, <a href="ASN1Constants.html#REAL">REAL</a>, <a href="ASN1Constants.html#SEQUENCE">SEQUENCE</a>, <a href="ASN1Constants.html#SET">SET</a>, <a href="ASN1Constants.html#T61STRING">T61STRING</a>, <a href="ASN1Constants.html#TAG_MASK">TAG_MASK</a>, <a href="ASN1Constants.html#UNIVERSAL">UNIVERSAL</a>, <a href="ASN1Constants.html#UNIVERSALSTRING">UNIVERSALSTRING</a>, <a href="ASN1Constants.html#UTCTIME">UTCTIME</a>, <a href="ASN1Constants.html#UTF8STRING">UTF8STRING</a>, <a href="ASN1Constants.html#VIDEOTEXSTRING">VIDEOTEXSTRING</a>, <a href="ASN1Constants.html#VISIBLESTRING">VISIBLESTRING</a></code></li>
 </ul>
 </li>
 </ul>
+</section>
 <!-- ========== METHOD SUMMARY =========== -->
+<section role="region">
 <ul class="blockList">
-<li class="blockList"><a name="method.summary">
+<li class="blockList"><a id="method.summary">
 <!--   -->
 </a>
 <h3>Method Summary</h3>
-<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<table class="memberSummary">
 <caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Method and Description</th>
+<th class="colSecond" scope="col">Method</th>
+<th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/asn1/ASN1String.html#deepCompare-org.webpki.asn1.BaseASN1Object-">deepCompare</a></span>(<a href="../../../org/webpki/asn1/BaseASN1Object.html" title="class in org.webpki.asn1">BaseASN1Object</a>&nbsp;o)</code>&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deepCompare(org.webpki.asn1.BaseASN1Object)">deepCompare</a></span>&#8203;(<a href="BaseASN1Object.html" title="class in org.webpki.asn1">BaseASN1Object</a>&nbsp;o)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/asn1/ASN1String.html#encode-org.webpki.asn1.Encoder-">encode</a></span>(<a href="../../../org/webpki/asn1/Encoder.html" title="class in org.webpki.asn1">Encoder</a>&nbsp;encoder)</code>&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#encode(org.webpki.asn1.Encoder)">encode</a></span>&#8203;(<a href="Encoder.html" title="class in org.webpki.asn1">Encoder</a>&nbsp;encoder)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/asn1/ASN1String.html#objValue--">objValue</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#objValue()">objValue</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/asn1/ASN1String.html#value--">value</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#value()">value</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.org.webpki.asn1.Simple">
+<li class="blockList"><a id="methods.inherited.from.class.org.webpki.asn1.Simple">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;org.webpki.asn1.<a href="../../../org/webpki/asn1/Simple.html" title="class in org.webpki.asn1">Simple</a></h3>
-<code><a href="../../../org/webpki/asn1/Simple.html#diff-org.webpki.asn1.BaseASN1Object-java.lang.StringBuilder-java.lang.String-">diff</a></code></li>
+<h3>Methods inherited from class&nbsp;org.webpki.asn1.<a href="Simple.html" title="class in org.webpki.asn1">Simple</a></h3>
+<code><a href="Simple.html#diff(org.webpki.asn1.BaseASN1Object,java.lang.StringBuilder,java.lang.String)">diff</a></code></li>
 </ul>
 <ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.org.webpki.asn1.BaseASN1Object">
+<li class="blockList"><a id="methods.inherited.from.class.org.webpki.asn1.BaseASN1Object">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;org.webpki.asn1.<a href="../../../org/webpki/asn1/BaseASN1Object.html" title="class in org.webpki.asn1">BaseASN1Object</a></h3>
-<code><a href="../../../org/webpki/asn1/BaseASN1Object.html#debug-java.lang.Object-">debug</a>, <a href="../../../org/webpki/asn1/BaseASN1Object.html#diff-org.webpki.asn1.BaseASN1Object-">diff</a>, <a href="../../../org/webpki/asn1/BaseASN1Object.html#encode--">encode</a>, <a href="../../../org/webpki/asn1/BaseASN1Object.html#encode-java.io.OutputStream-">encode</a>, <a href="../../../org/webpki/asn1/BaseASN1Object.html#encodeContent--">encodeContent</a>, <a href="../../../org/webpki/asn1/BaseASN1Object.html#encodedAsOctetString--">encodedAsOctetString</a>, <a href="../../../org/webpki/asn1/BaseASN1Object.html#get-int-">get</a>, <a href="../../../org/webpki/asn1/BaseASN1Object.html#get-int:A-">get</a>, <a href="../../../org/webpki/asn1/BaseASN1Object.html#sameType-org.webpki.asn1.BaseASN1Object-">sameType</a>, <a href="../../../org/webpki/asn1/BaseASN1Object.html#tagNumber--">tagNumber</a>, <a href="../../../org/webpki/asn1/BaseASN1Object.html#toString--">toString</a>, <a href="../../../org/webpki/asn1/BaseASN1Object.html#toString-boolean-boolean-">toString</a></code></li>
+<h3>Methods inherited from class&nbsp;org.webpki.asn1.<a href="BaseASN1Object.html" title="class in org.webpki.asn1">BaseASN1Object</a></h3>
+<code><a href="BaseASN1Object.html#debug(java.lang.Object)">debug</a>, <a href="BaseASN1Object.html#diff(org.webpki.asn1.BaseASN1Object)">diff</a>, <a href="BaseASN1Object.html#encode()">encode</a>, <a href="BaseASN1Object.html#encode(java.io.OutputStream)">encode</a>, <a href="BaseASN1Object.html#encodeContent()">encodeContent</a>, <a href="BaseASN1Object.html#encodedAsOctetString()">encodedAsOctetString</a>, <a href="BaseASN1Object.html#get(int)">get</a>, <a href="BaseASN1Object.html#get(int%5B%5D)">get</a>, <a href="BaseASN1Object.html#sameType(org.webpki.asn1.BaseASN1Object)">sameType</a>, <a href="BaseASN1Object.html#tagNumber()">tagNumber</a>, <a href="BaseASN1Object.html#toString()">toString</a>, <a href="BaseASN1Object.html#toString(boolean,boolean)">toString</a></code></li>
 </ul>
 <ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
+<li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
+<code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang" class="externalLink">clone</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang" class="externalLink">equals</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang" class="externalLink">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang" class="externalLink">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang" class="externalLink">notify</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang" class="externalLink">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#wait(long,int)" title="class or interface in java.lang" class="externalLink">wait</a></code></li>
 </ul>
 </li>
 </ul>
+</section>
 </li>
 </ul>
 </div>
@@ -207,79 +240,84 @@ extends <a href="../../../org/webpki/asn1/Simple.html" title="class in org.webpk
 <ul class="blockList">
 <li class="blockList">
 <!-- ============ METHOD DETAIL ========== -->
+<section role="region">
 <ul class="blockList">
-<li class="blockList"><a name="method.detail">
+<li class="blockList"><a id="method.detail">
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="deepCompare-org.webpki.asn1.BaseASN1Object-">
+<a id="value()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>deepCompare</h4>
-<pre>public&nbsp;boolean&nbsp;deepCompare(<a href="../../../org/webpki/asn1/BaseASN1Object.html" title="class in org.webpki.asn1">BaseASN1Object</a>&nbsp;o)</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../org/webpki/asn1/BaseASN1Object.html#deepCompare-org.webpki.asn1.BaseASN1Object-">deepCompare</a></code>&nbsp;in class&nbsp;<code><a href="../../../org/webpki/asn1/BaseASN1Object.html" title="class in org.webpki.asn1">BaseASN1Object</a></code></dd>
-</dl>
+<h4>value</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value()</pre>
 </li>
 </ul>
-<a name="encode-org.webpki.asn1.Encoder-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>encode</h4>
-<pre>public&nbsp;void&nbsp;encode(<a href="../../../org/webpki/asn1/Encoder.html" title="class in org.webpki.asn1">Encoder</a>&nbsp;encoder)
-            throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../org/webpki/asn1/BaseASN1Object.html#encode-org.webpki.asn1.Encoder-">encode</a></code>&nbsp;in class&nbsp;<code><a href="../../../org/webpki/asn1/BaseASN1Object.html" title="class in org.webpki.asn1">BaseASN1Object</a></code></dd>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="objValue--">
+<a id="objValue()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>objValue</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;objValue()</pre>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;objValue()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../org/webpki/asn1/Simple.html#objValue--">objValue</a></code>&nbsp;in class&nbsp;<code><a href="../../../org/webpki/asn1/Simple.html" title="class in org.webpki.asn1">Simple</a></code></dd>
+<dd><code><a href="Simple.html#objValue()">objValue</a></code>&nbsp;in class&nbsp;<code><a href="Simple.html" title="class in org.webpki.asn1">Simple</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="value--">
+<a id="deepCompare(org.webpki.asn1.BaseASN1Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>deepCompare</h4>
+<pre class="methodSignature">public&nbsp;boolean&nbsp;deepCompare&#8203;(<a href="BaseASN1Object.html" title="class in org.webpki.asn1">BaseASN1Object</a>&nbsp;o)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="BaseASN1Object.html#deepCompare(org.webpki.asn1.BaseASN1Object)">deepCompare</a></code>&nbsp;in class&nbsp;<code><a href="BaseASN1Object.html" title="class in org.webpki.asn1">BaseASN1Object</a></code></dd>
+</dl>
+</li>
+</ul>
+<a id="encode(org.webpki.asn1.Encoder)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>value</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value()</pre>
+<h4>encode</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;encode&#8203;(<a href="Encoder.html" title="class in org.webpki.asn1">Encoder</a>&nbsp;encoder)
+            throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="BaseASN1Object.html#encode(org.webpki.asn1.Encoder)">encode</a></code>&nbsp;in class&nbsp;<code><a href="BaseASN1Object.html" title="class in org.webpki.asn1">BaseASN1Object</a></code></dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
+</dl>
 </li>
 </ul>
 </li>
 </ul>
+</section>
 </li>
 </ul>
 </div>
 </div>
+</main>
 <!-- ========= END OF CLASS DATA ========= -->
+<footer role="contentinfo">
+<nav role="navigation">
 <!-- ======= START OF BOTTOM NAVBAR ====== -->
-<div class="bottomNav"><a name="navbar.bottom">
+<div class="bottomNav"><a id="navbar.bottom">
 <!--   -->
 </a>
 <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
-<a name="navbar.bottom.firstrow">
+<a id="navbar.bottom.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
-<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="../../../index.html">Overview</a></li>
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
@@ -288,16 +326,8 @@ extends <a href="../../../org/webpki/asn1/Simple.html" title="class in org.webpk
 </ul>
 </div>
 <div class="subNav">
-<ul class="navList">
-<li><a href="../../../org/webpki/asn1/ASN1Set.html" title="class in org.webpki.asn1"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../org/webpki/asn1/ASN1T61String.html" title="class in org.webpki.asn1"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
-</ul>
-<ul class="navList">
-<li><a href="../../../index.html?org/webpki/asn1/ASN1String.html" target="_top">Frames</a></li>
-<li><a href="ASN1String.html" target="_top">No&nbsp;Frames</a></li>
-</ul>
 <ul class="navList" id="allclasses_navbar_bottom">
-<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+<li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -310,12 +340,15 @@ extends <a href="../../../org/webpki/asn1/Simple.html" title="class in org.webpk
   }
   //-->
 </script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
 </div>
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
@@ -326,10 +359,12 @@ extends <a href="../../../org/webpki/asn1/Simple.html" title="class in org.webpk
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
-<a name="skip.navbar.bottom">
+<a id="skip.navbar.bottom">
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>2005-2018 WebPKI.org.</i></small></p>
+</nav>
+<p class="legalCopy"><small><i>2005-2020 WebPKI.org.</i></small></p>
+</footer>
 </body>
 </html>

@@ -1,12 +1,22 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML>
 <!-- NewPage -->
 <html lang="en">
 <head>
 
 <title>org.webpki.securityproxy Class Hierarchy (WebPKI.org Support)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+<link rel="stylesheet" type="text/css" href="../../../jquery/jquery-ui.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
+<script type="text/javascript" src="../../../jquery/jszip/dist/jszip.min.js"></script>
+<script type="text/javascript" src="../../../jquery/jszip-utils/dist/jszip-utils.min.js"></script>
+<!--[if IE]>
+<script type="text/javascript" src="../../../jquery/jszip-utils/dist/jszip-utils-ie.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="../../../jquery/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="../../../jquery/jquery-migrate-3.0.1.js"></script>
+<script type="text/javascript" src="../../../jquery/jquery-ui.js"></script>
 </head>
 <body>
 <script type="text/javascript"><!--
@@ -18,20 +28,25 @@
     catch(err) {
     }
 //-->
-</script>
+var pathtoroot = "../../../";
+var useModuleDirectories = true;
+loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
 </noscript>
+<header role="banner">
+<nav role="navigation">
+<div class="fixedNav">
 <!-- ========= START OF TOP NAVBAR ======= -->
-<div class="topNav"><a name="navbar.top">
+<div class="topNav"><a id="navbar.top">
 <!--   -->
 </a>
 <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
-<a name="navbar.top.firstrow">
+<a id="navbar.top.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
-<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="../../../index.html">Overview</a></li>
 <li><a href="package-summary.html">Package</a></li>
 <li>Class</li>
 <li class="navBarCell1Rev">Tree</li>
@@ -40,16 +55,14 @@
 </ul>
 </div>
 <div class="subNav">
-<ul class="navList">
-<li><a href="../../../org/webpki/pkcs7/package-tree.html">Prev</a></li>
-<li><a href="../../../org/webpki/sks/package-tree.html">Next</a></li>
-</ul>
-<ul class="navList">
-<li><a href="../../../index.html?org/webpki/securityproxy/package-tree.html" target="_top">Frames</a></li>
-<li><a href="package-tree.html" target="_top">No&nbsp;Frames</a></li>
-</ul>
 <ul class="navList" id="allclasses_navbar_top">
-<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+<li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" disabled="disabled">
+<input type="reset" id="reset" value="reset" disabled="disabled">
+</li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -62,11 +75,23 @@
   }
   //-->
 </script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
 </div>
-<a name="skip.navbar.top">
+<a id="skip.navbar.top">
 <!--   -->
 </a></div>
 <!-- ========= END OF TOP NAVBAR ========= -->
+</div>
+<div class="navPadding">&nbsp;</div>
+<script type="text/javascript"><!--
+$('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+//-->
+</script>
+</nav>
+</header>
+<main role="main">
 <div class="header">
 <h1 class="title">Hierarchy For Package org.webpki.securityproxy</h1>
 <span class="packageHierarchyLabel">Package Hierarchies:</span>
@@ -75,58 +100,65 @@
 </ul>
 </div>
 <div class="contentContainer">
+<section role="region">
 <h2 title="Class Hierarchy">Class Hierarchy</h2>
 <ul>
-<li type="circle">java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang"><span class="typeNameLink">Object</span></a>
+<li class="circle">java.lang.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink"><span class="typeNameLink">Object</span></a>
 <ul>
-<li type="circle">javax.servlet.<a href="https://docs.oracle.com/javaee/7/api/javax/servlet/GenericServlet.html?is-external=true" title="class or interface in javax.servlet"><span class="typeNameLink">GenericServlet</span></a> (implements java.io.<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>, javax.servlet.<a href="https://docs.oracle.com/javaee/7/api/javax/servlet/Servlet.html?is-external=true" title="class or interface in javax.servlet">Servlet</a>, javax.servlet.<a href="https://docs.oracle.com/javaee/7/api/javax/servlet/ServletConfig.html?is-external=true" title="class or interface in javax.servlet">ServletConfig</a>)
+<li class="circle">javax.servlet.<a href="https://javaee.github.io/javaee-spec/javadocs/javax/servlet/GenericServlet.html?is-external=true" title="class or interface in javax.servlet" class="externalLink"><span class="typeNameLink">GenericServlet</span></a> (implements java.io.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a>, javax.servlet.<a href="https://javaee.github.io/javaee-spec/javadocs/javax/servlet/Servlet.html?is-external=true" title="class or interface in javax.servlet" class="externalLink">Servlet</a>, javax.servlet.<a href="https://javaee.github.io/javaee-spec/javadocs/javax/servlet/ServletConfig.html?is-external=true" title="class or interface in javax.servlet" class="externalLink">ServletConfig</a>)
 <ul>
-<li type="circle">javax.servlet.http.<a href="https://docs.oracle.com/javaee/7/api/javax/servlet/http/HttpServlet.html?is-external=true" title="class or interface in javax.servlet.http"><span class="typeNameLink">HttpServlet</span></a>
+<li class="circle">javax.servlet.http.<a href="https://javaee.github.io/javaee-spec/javadocs/javax/servlet/http/HttpServlet.html?is-external=true" title="class or interface in javax.servlet.http" class="externalLink"><span class="typeNameLink">HttpServlet</span></a>
 <ul>
-<li type="circle">org.webpki.securityproxy.<a href="../../../org/webpki/securityproxy/ProxyChannelServlet.html" title="class in org.webpki.securityproxy"><span class="typeNameLink">ProxyChannelServlet</span></a></li>
+<li class="circle">org.webpki.securityproxy.<a href="ProxyChannelServlet.html" title="class in org.webpki.securityproxy"><span class="typeNameLink">ProxyChannelServlet</span></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li type="circle">org.webpki.securityproxy.<a href="../../../org/webpki/securityproxy/HTTPResponseWrapper.html" title="class in org.webpki.securityproxy"><span class="typeNameLink">HTTPResponseWrapper</span></a> (implements java.io.<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>)
+<li class="circle">org.webpki.securityproxy.<a href="HTTPResponseWrapper.html" title="class in org.webpki.securityproxy"><span class="typeNameLink">HTTPResponseWrapper</span></a> (implements java.io.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a>)
 <ul>
-<li type="circle">org.webpki.securityproxy.<a href="../../../org/webpki/securityproxy/EmbeddedHTTPResponseWrapper.html" title="class in org.webpki.securityproxy"><span class="typeNameLink">EmbeddedHTTPResponseWrapper</span></a> (implements org.webpki.securityproxy.<a href="../../../org/webpki/securityproxy/JavaResponseInterface.html" title="interface in org.webpki.securityproxy">JavaResponseInterface</a>)</li>
+<li class="circle">org.webpki.securityproxy.<a href="EmbeddedHTTPResponseWrapper.html" title="class in org.webpki.securityproxy"><span class="typeNameLink">EmbeddedHTTPResponseWrapper</span></a> (implements org.webpki.securityproxy.<a href="JavaResponseInterface.html" title="interface in org.webpki.securityproxy">JavaResponseInterface</a>)</li>
 </ul>
 </li>
-<li type="circle">org.webpki.securityproxy.<a href="../../../org/webpki/securityproxy/ProxyClient.html" title="class in org.webpki.securityproxy"><span class="typeNameLink">ProxyClient</span></a></li>
-<li type="circle">org.webpki.securityproxy.<a href="../../../org/webpki/securityproxy/ProxyServer.html" title="class in org.webpki.securityproxy"><span class="typeNameLink">ProxyServer</span></a></li>
-<li type="circle">org.webpki.securityproxy.<a href="../../../org/webpki/securityproxy/ProxyServerErrorFactory.html" title="class in org.webpki.securityproxy"><span class="typeNameLink">ProxyServerErrorFactory</span></a>
+<li class="circle">org.webpki.securityproxy.<a href="ProxyClient.html" title="class in org.webpki.securityproxy"><span class="typeNameLink">ProxyClient</span></a></li>
+<li class="circle">org.webpki.securityproxy.<a href="ProxyServer.html" title="class in org.webpki.securityproxy"><span class="typeNameLink">ProxyServer</span></a></li>
+<li class="circle">org.webpki.securityproxy.<a href="ProxyServerErrorFactory.html" title="class in org.webpki.securityproxy"><span class="typeNameLink">ProxyServerErrorFactory</span></a>
 <ul>
-<li type="circle">org.webpki.securityproxy.<a href="../../../org/webpki/securityproxy/SOAP12ServerError.html" title="class in org.webpki.securityproxy"><span class="typeNameLink">SOAP12ServerError</span></a></li>
+<li class="circle">org.webpki.securityproxy.<a href="SOAP12ServerError.html" title="class in org.webpki.securityproxy"><span class="typeNameLink">SOAP12ServerError</span></a></li>
 </ul>
 </li>
-<li type="circle">org.webpki.securityproxy.<a href="../../../org/webpki/securityproxy/UploadedTrustStore.html" title="class in org.webpki.securityproxy"><span class="typeNameLink">UploadedTrustStore</span></a> (implements org.webpki.securityproxy.<a href="../../../org/webpki/securityproxy/JavaUploadInterface.html" title="interface in org.webpki.securityproxy">JavaUploadInterface</a>)</li>
+<li class="circle">org.webpki.securityproxy.<a href="UploadedTrustStore.html" title="class in org.webpki.securityproxy"><span class="typeNameLink">UploadedTrustStore</span></a> (implements org.webpki.securityproxy.<a href="JavaUploadInterface.html" title="interface in org.webpki.securityproxy">JavaUploadInterface</a>)</li>
 </ul>
 </li>
 </ul>
+</section>
+<section role="region">
 <h2 title="Interface Hierarchy">Interface Hierarchy</h2>
 <ul>
-<li type="circle">org.webpki.securityproxy.<a href="../../../org/webpki/securityproxy/ClientRequestHandler.html" title="interface in org.webpki.securityproxy"><span class="typeNameLink">ClientRequestHandler</span></a></li>
-<li type="circle">java.io.<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io"><span class="typeNameLink">Serializable</span></a>
+<li class="circle">org.webpki.securityproxy.<a href="ClientRequestHandler.html" title="interface in org.webpki.securityproxy"><span class="typeNameLink">ClientRequestHandler</span></a></li>
+<li class="circle">java.io.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink"><span class="typeNameLink">Serializable</span></a>
 <ul>
-<li type="circle">org.webpki.securityproxy.<a href="../../../org/webpki/securityproxy/JavaRequestInterface.html" title="interface in org.webpki.securityproxy"><span class="typeNameLink">JavaRequestInterface</span></a></li>
-<li type="circle">org.webpki.securityproxy.<a href="../../../org/webpki/securityproxy/JavaResponseInterface.html" title="interface in org.webpki.securityproxy"><span class="typeNameLink">JavaResponseInterface</span></a></li>
-<li type="circle">org.webpki.securityproxy.<a href="../../../org/webpki/securityproxy/JavaUploadInterface.html" title="interface in org.webpki.securityproxy"><span class="typeNameLink">JavaUploadInterface</span></a></li>
+<li class="circle">org.webpki.securityproxy.<a href="JavaRequestInterface.html" title="interface in org.webpki.securityproxy"><span class="typeNameLink">JavaRequestInterface</span></a></li>
+<li class="circle">org.webpki.securityproxy.<a href="JavaResponseInterface.html" title="interface in org.webpki.securityproxy"><span class="typeNameLink">JavaResponseInterface</span></a></li>
+<li class="circle">org.webpki.securityproxy.<a href="JavaUploadInterface.html" title="interface in org.webpki.securityproxy"><span class="typeNameLink">JavaUploadInterface</span></a></li>
 </ul>
 </li>
-<li type="circle">org.webpki.securityproxy.<a href="../../../org/webpki/securityproxy/ServerUploadHandler.html" title="interface in org.webpki.securityproxy"><span class="typeNameLink">ServerUploadHandler</span></a></li>
+<li class="circle">org.webpki.securityproxy.<a href="ServerUploadHandler.html" title="interface in org.webpki.securityproxy"><span class="typeNameLink">ServerUploadHandler</span></a></li>
 </ul>
+</section>
 </div>
+</main>
+<footer role="contentinfo">
+<nav role="navigation">
 <!-- ======= START OF BOTTOM NAVBAR ====== -->
-<div class="bottomNav"><a name="navbar.bottom">
+<div class="bottomNav"><a id="navbar.bottom">
 <!--   -->
 </a>
 <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
-<a name="navbar.bottom.firstrow">
+<a id="navbar.bottom.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
-<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="../../../index.html">Overview</a></li>
 <li><a href="package-summary.html">Package</a></li>
 <li>Class</li>
 <li class="navBarCell1Rev">Tree</li>
@@ -135,16 +167,8 @@
 </ul>
 </div>
 <div class="subNav">
-<ul class="navList">
-<li><a href="../../../org/webpki/pkcs7/package-tree.html">Prev</a></li>
-<li><a href="../../../org/webpki/sks/package-tree.html">Next</a></li>
-</ul>
-<ul class="navList">
-<li><a href="../../../index.html?org/webpki/securityproxy/package-tree.html" target="_top">Frames</a></li>
-<li><a href="package-tree.html" target="_top">No&nbsp;Frames</a></li>
-</ul>
 <ul class="navList" id="allclasses_navbar_bottom">
-<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+<li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -157,11 +181,16 @@
   }
   //-->
 </script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
 </div>
-<a name="skip.navbar.bottom">
+<a id="skip.navbar.bottom">
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>2005-2018 WebPKI.org.</i></small></p>
+</nav>
+<p class="legalCopy"><small><i>2005-2020 WebPKI.org.</i></small></p>
+</footer>
 </body>
 </html>

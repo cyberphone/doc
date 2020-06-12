@@ -1,12 +1,22 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML>
 <!-- NewPage -->
 <html lang="en">
 <head>
 
 <title>org.webpki.json (WebPKI.org Support)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+<link rel="stylesheet" type="text/css" href="../../../jquery/jquery-ui.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
+<script type="text/javascript" src="../../../jquery/jszip/dist/jszip.min.js"></script>
+<script type="text/javascript" src="../../../jquery/jszip-utils/dist/jszip-utils.min.js"></script>
+<!--[if IE]>
+<script type="text/javascript" src="../../../jquery/jszip-utils/dist/jszip-utils-ie.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="../../../jquery/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="../../../jquery/jquery-migrate-3.0.1.js"></script>
+<script type="text/javascript" src="../../../jquery/jquery-ui.js"></script>
 </head>
 <body>
 <script type="text/javascript"><!--
@@ -18,20 +28,25 @@
     catch(err) {
     }
 //-->
-</script>
+var pathtoroot = "../../../";
+var useModuleDirectories = true;
+loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
 </noscript>
+<header role="banner">
+<nav role="navigation">
+<div class="fixedNav">
 <!-- ========= START OF TOP NAVBAR ======= -->
-<div class="topNav"><a name="navbar.top">
+<div class="topNav"><a id="navbar.top">
 <!--   -->
 </a>
 <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
-<a name="navbar.top.firstrow">
+<a id="navbar.top.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
-<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="../../../index.html">Overview</a></li>
 <li class="navBarCell1Rev">Package</li>
 <li>Class</li>
 <li><a href="package-tree.html">Tree</a></li>
@@ -40,16 +55,14 @@
 </ul>
 </div>
 <div class="subNav">
-<ul class="navList">
-<li><a href="../../../org/webpki/jose/package-summary.html">Prev&nbsp;Package</a></li>
-<li><a href="../../../org/webpki/keygen2/package-summary.html">Next&nbsp;Package</a></li>
-</ul>
-<ul class="navList">
-<li><a href="../../../index.html?org/webpki/json/package-summary.html" target="_top">Frames</a></li>
-<li><a href="package-summary.html" target="_top">No&nbsp;Frames</a></li>
-</ul>
 <ul class="navList" id="allclasses_navbar_top">
-<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+<li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" disabled="disabled">
+<input type="reset" id="reset" value="reset" disabled="disabled">
+</li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -62,285 +75,40 @@
   }
   //-->
 </script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
 </div>
-<a name="skip.navbar.top">
+<a id="skip.navbar.top">
 <!--   -->
 </a></div>
 <!-- ========= END OF TOP NAVBAR ========= -->
+</div>
+<div class="navPadding">&nbsp;</div>
+<script type="text/javascript"><!--
+$('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+//-->
+</script>
+</nav>
+</header>
+<main role="main">
 <div class="header">
 <h1 title="Package" class="title">Package&nbsp;org.webpki.json</h1>
-<div class="docSummary">
-<div class="block">JSON - Encoder, Decoder, Signature, and Encryption Package</div>
-</div>
-<p>See:&nbsp;<a href="#package.description">Description</a></p>
 </div>
 <div class="contentContainer">
-<ul class="blockList">
-<li class="blockList">
-<table class="typeSummary" border="0" cellpadding="3" cellspacing="0" summary="Interface Summary table, listing interfaces, and an explanation">
-<caption><span>Interface Summary</span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Interface</th>
-<th class="colLast" scope="col">Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONObjectWriter.Dynamic.html" title="interface in org.webpki.json">JSONObjectWriter.Dynamic</a></td>
-<td class="colLast">
-<div class="block">Support interface for dynamic JSON generation.</div>
-</td>
-</tr>
-</tbody>
-</table>
-</li>
-<li class="blockList">
-<table class="typeSummary" border="0" cellpadding="3" cellspacing="0" summary="Class Summary table, listing classes, and an explanation">
-<caption><span>Class Summary</span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Class</th>
-<th class="colLast" scope="col">Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONArrayReader.html" title="class in org.webpki.json">JSONArrayReader</a></td>
-<td class="colLast">
-<div class="block">Reads JSON array elements.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a></td>
-<td class="colLast">
-<div class="block">Writes JSON arrays.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONAsymKeyEncrypter.html" title="class in org.webpki.json">JSONAsymKeyEncrypter</a></td>
-<td class="colLast">
-<div class="block">Initiator object for asymmetric key encryptions.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONAsymKeySigner.html" title="class in org.webpki.json">JSONAsymKeySigner</a></td>
-<td class="colLast">
-<div class="block">Initiator object for asymmetric key signatures.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONAsymKeyVerifier.html" title="class in org.webpki.json">JSONAsymKeyVerifier</a></td>
-<td class="colLast">
-<div class="block">Initiator object for asymmetric key signature verifiers.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONCryptoHelper.html" title="class in org.webpki.json">JSONCryptoHelper</a></td>
-<td class="colLast">
-<div class="block">Common crypto support for JSF and JEF.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONCryptoHelper.Extension.html" title="class in org.webpki.json">JSONCryptoHelper.Extension</a></td>
-<td class="colLast">
-<div class="block">For building "extensions" decoders</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONCryptoHelper.ExtensionHolder.html" title="class in org.webpki.json">JSONCryptoHelper.ExtensionHolder</a></td>
-<td class="colLast">
-<div class="block">Holds list of supported "extensions" decoders.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONCryptoHelper.Options.html" title="class in org.webpki.json">JSONCryptoHelper.Options</a></td>
-<td class="colLast">
-<div class="block">Common JEF/JSF decoding options.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONDecoder.html" title="class in org.webpki.json">JSONDecoder</a></td>
-<td class="colLast">
-<div class="block">Base class for java classes which can be created from specific JSON object types.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONDecoderCache.html" title="class in org.webpki.json">JSONDecoderCache</a></td>
-<td class="colLast">
-<div class="block">Stores <a href="../../../org/webpki/json/JSONDecoder.html" title="class in org.webpki.json"><code>JSONDecoder</code></a> classes for automatic instantiation during parsing.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONDecryptionDecoder.html" title="class in org.webpki.json">JSONDecryptionDecoder</a></td>
-<td class="colLast">
-<div class="block">Holds parsed JEF (JSON Encryption Format) data.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONDecryptionDecoder.DecryptionKeyHolder.html" title="class in org.webpki.json">JSONDecryptionDecoder.DecryptionKeyHolder</a></td>
-<td class="colLast">
-<div class="block">JEF (JSON Encryption Format) support.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONEncoder.html" title="class in org.webpki.json">JSONEncoder</a></td>
-<td class="colLast">
-<div class="block">Base class for java classes which are used for creating specific JSON object types.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONEncrypter.html" title="class in org.webpki.json">JSONEncrypter</a></td>
-<td class="colLast">
-<div class="block">Support class for encryption generators.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></td>
-<td class="colLast">
-<div class="block">JSON object reader.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></td>
-<td class="colLast">
-<div class="block">Creates JSON objects and performs serialization according to JCS and ES6.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONParser.html" title="class in org.webpki.json">JSONParser</a></td>
-<td class="colLast">
-<div class="block">Parses JSON string/byte array data.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a></td>
-<td class="colLast">
-<div class="block">Decoder for JSF signatures.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONSigner.html" title="class in org.webpki.json">JSONSigner</a></td>
-<td class="colLast">
-<div class="block">Support class for signature generators.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONSymKeyEncrypter.html" title="class in org.webpki.json">JSONSymKeyEncrypter</a></td>
-<td class="colLast">
-<div class="block">Initiator object for symmetric key encryptions.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONSymKeySigner.html" title="class in org.webpki.json">JSONSymKeySigner</a></td>
-<td class="colLast">
-<div class="block">Initiator object for symmetric key signatures.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONSymKeyVerifier.html" title="class in org.webpki.json">JSONSymKeyVerifier</a></td>
-<td class="colLast">
-<div class="block">Initiator object for symmetric key signature verifiers.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONVerifier.html" title="class in org.webpki.json">JSONVerifier</a></td>
-<td class="colLast">
-<div class="block">Support class for signature verifiers.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONX509Encrypter.html" title="class in org.webpki.json">JSONX509Encrypter</a></td>
-<td class="colLast">
-<div class="block">Initiator object for certificate based encryptions.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONX509Signer.html" title="class in org.webpki.json">JSONX509Signer</a></td>
-<td class="colLast">
-<div class="block">Initiator object for X.509 signatures.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONX509Verifier.html" title="class in org.webpki.json">JSONX509Verifier</a></td>
-<td class="colLast">
-<div class="block">Initiator object for X.509 signature verifiers.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/json/NumberToJSON.html" title="class in org.webpki.json">NumberToJSON</a></td>
-<td class="colLast">
-<div class="block">An implementation of Ryu for serializing IEEE-754 double precision values for
- JSON as specified by ES6</div>
-</td>
-</tr>
-</tbody>
-</table>
-</li>
-<li class="blockList">
-<table class="typeSummary" border="0" cellpadding="3" cellspacing="0" summary="Enum Summary table, listing enums, and an explanation">
-<caption><span>Enum Summary</span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Enum</th>
-<th class="colLast" scope="col">Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/json/DataEncryptionAlgorithms.html" title="enum in org.webpki.json">DataEncryptionAlgorithms</a></td>
-<td class="colLast">
-<div class="block">JWE content encryption algorithms.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONCryptoHelper.KEY_ID_OPTIONS.html" title="enum in org.webpki.json">JSONCryptoHelper.KEY_ID_OPTIONS</a></td>
-<td class="colLast">
-<div class="block">KeyID parameter to Options</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONCryptoHelper.PUBLIC_KEY_OPTIONS.html" title="enum in org.webpki.json">JSONCryptoHelper.PUBLIC_KEY_OPTIONS</a></td>
-<td class="colLast">
-<div class="block">Public key parameter to Options</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONOutputFormats.html" title="enum in org.webpki.json">JSONOutputFormats</a></td>
-<td class="colLast">
-<div class="block">JSON output types.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONSignatureTypes.html" title="enum in org.webpki.json">JSONSignatureTypes</a></td>
-<td class="colLast">
-<div class="block">Supported signature types</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/json/JSONTypes.html" title="enum in org.webpki.json">JSONTypes</a></td>
-<td class="colLast">
-<div class="block">Basic JSON types read by the parser.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/json/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json">KeyEncryptionAlgorithms</a></td>
-<td class="colLast">
-<div class="block">JWE algorithms.</div>
-</td>
-</tr>
-</tbody>
-</table>
-</li>
-</ul>
-<a name="package.description">
+<section role="region"><a id="package.description">
 <!--   -->
 </a>
-<h2 title="Package org.webpki.json Description">Package org.webpki.json Description</h2>
 <div class="block"><h2>JSON - Encoder, Decoder, Signature, and Encryption Package</h2>
 This package contains classes for parsing and generating messages in JSON.
 <p>To cope with browsers, this implementation is data wise compatible with EcmaScript (JavaScript) beginning with version 6.</p>
 To make the system on par with XML Schemas the JSON library also supports:<br>
 <ul>
     <li>Registration of classes extending
-        <a href="../../../org/webpki/json/JSONDecoder.html" title="class in org.webpki.json"><code>JSONDecoder</code></a> (=supporting a specific message)
-        and automatic instantiation during parsing. See <a href="../../../org/webpki/json/JSONDecoderCache.html" title="class in org.webpki.json"><code>JSONDecoderCache</code></a>
+        <a href="JSONDecoder.html" title="class in org.webpki.json"><code>JSONDecoder</code></a> (=supporting a specific message)
+        and automatic instantiation during parsing. See <a href="JSONDecoderCache.html" title="class in org.webpki.json"><code>JSONDecoderCache</code></a>
     </li>
-    <li>Detection of missing reads. See <a href="../../../org/webpki/json/JSONObjectReader.html#checkForUnread--"><code>JSONObjectReader.checkForUnread()</code></a>
+    <li>Detection of missing reads. See <a href="JSONObjectReader.html#checkForUnread()"><code>JSONObjectReader.checkForUnread()</code></a>
     </li>
     <li>Strong validation of input</li>
     <li>Emulation of &quot;missing&quot; JSON data types like <code>True 64-bit long integer</code>,
@@ -352,14 +120,14 @@ To make the system on par with XML Schemas the JSON library also supports:<br>
     enveloped XML signatures:
     <a href="https://cyberphone.github.io/doc/security/jsf.html" target="_blank"><b>JSON Signature 
     Format</b></a>.
-    <br>See <a href="../../../org/webpki/json/JSONObjectWriter.html#setSignature-org.webpki.json.JSONSigner-"><code>JSONObjectWriter.setSignature(JSONSigner)</code></a> for programming
+    <br>See <a href="JSONObjectWriter.html#setSignature(org.webpki.json.JSONSigner)"><code>JSONObjectWriter.setSignature(JSONSigner)</code></a> for programming
     information.
 </p>
 <p>
     There is also a class for encrypting data using JSON formatted containers:
     <a href="https://cyberphone.github.io/doc/security/jef.html" target="_blank"><b>JSON Encryption
         Format</b></a>.
-    <br>See <a href="../../../org/webpki/json/JSONObjectWriter.html#createEncryptionObject-byte:A-org.webpki.json.DataEncryptionAlgorithms-org.webpki.json.JSONEncrypter-"><code>JSONObjectWriter.createEncryptionObject(byte[],DataEncryptionAlgorithms,JSONEncrypter)</code></a>
+    <br>See <a href="JSONObjectWriter.html#createEncryptionObject(byte%5B%5D,org.webpki.json.DataEncryptionAlgorithms,org.webpki.json.JSONEncrypter)"><code>JSONObjectWriter.createEncryptionObject(byte[],DataEncryptionAlgorithms,JSONEncrypter)</code></a>
     for more information.
 </p>
 <h3>Reading and Writing JSON Data</h3>
@@ -456,17 +224,273 @@ System.out.println(value + ' ' + testme + ' ' + first + ' ' + second);
 Expected result:<pre style="margin-left:40pt;color:green">
 hi true 1 2
 </pre></div>
+</section>
+<ul class="blockList">
+<li class="blockList">
+<table class="typeSummary">
+<caption><span>Interface Summary</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Interface</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="JSONObjectWriter.Dynamic.html" title="interface in org.webpki.json">JSONObjectWriter.Dynamic</a></th>
+<td class="colLast">
+<div class="block">Support interface for dynamic JSON generation.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList">
+<table class="typeSummary">
+<caption><span>Class Summary</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Class</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="JSONArrayReader.html" title="class in org.webpki.json">JSONArrayReader</a></th>
+<td class="colLast">
+<div class="block">Reads JSON array elements.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="JSONArrayWriter.html" title="class in org.webpki.json">JSONArrayWriter</a></th>
+<td class="colLast">
+<div class="block">Writes JSON arrays.</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="JSONAsymKeyEncrypter.html" title="class in org.webpki.json">JSONAsymKeyEncrypter</a></th>
+<td class="colLast">
+<div class="block">Initiator object for asymmetric key encryptions.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="JSONAsymKeySigner.html" title="class in org.webpki.json">JSONAsymKeySigner</a></th>
+<td class="colLast">
+<div class="block">Initiator object for asymmetric key signatures.</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="JSONAsymKeyVerifier.html" title="class in org.webpki.json">JSONAsymKeyVerifier</a></th>
+<td class="colLast">
+<div class="block">Initiator object for asymmetric key signature verifiers.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="JSONCryptoHelper.html" title="class in org.webpki.json">JSONCryptoHelper</a></th>
+<td class="colLast">
+<div class="block">Common crypto support for JSF and JEF.</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="JSONCryptoHelper.Extension.html" title="class in org.webpki.json">JSONCryptoHelper.Extension</a></th>
+<td class="colLast">
+<div class="block">For building "extensions" decoders</div>
+</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="JSONCryptoHelper.ExtensionHolder.html" title="class in org.webpki.json">JSONCryptoHelper.ExtensionHolder</a></th>
+<td class="colLast">
+<div class="block">Holds list of supported "extensions" decoders.</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="JSONCryptoHelper.Options.html" title="class in org.webpki.json">JSONCryptoHelper.Options</a></th>
+<td class="colLast">
+<div class="block">Common JEF/JSF decoding options.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="JSONDecoder.html" title="class in org.webpki.json">JSONDecoder</a></th>
+<td class="colLast">
+<div class="block">Base class for java classes which can be created from specific JSON object types.</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="JSONDecoderCache.html" title="class in org.webpki.json">JSONDecoderCache</a></th>
+<td class="colLast">
+<div class="block">Stores <a href="JSONDecoder.html" title="class in org.webpki.json"><code>JSONDecoder</code></a> classes for automatic instantiation during parsing.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="JSONDecryptionDecoder.html" title="class in org.webpki.json">JSONDecryptionDecoder</a></th>
+<td class="colLast">
+<div class="block">Holds parsed JEF (JSON Encryption Format) data.</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="JSONDecryptionDecoder.DecryptionKeyHolder.html" title="class in org.webpki.json">JSONDecryptionDecoder.DecryptionKeyHolder</a></th>
+<td class="colLast">
+<div class="block">JEF (JSON Encryption Format) support.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="JSONEncoder.html" title="class in org.webpki.json">JSONEncoder</a></th>
+<td class="colLast">
+<div class="block">Base class for java classes which are used for creating specific JSON object types.</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="JSONEncrypter.html" title="class in org.webpki.json">JSONEncrypter</a></th>
+<td class="colLast">
+<div class="block">Support class for encryption generators.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></th>
+<td class="colLast">
+<div class="block">JSON object reader.</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></th>
+<td class="colLast">
+<div class="block">Creates JSON objects and performs serialization according to JCS and ES6.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="JSONParser.html" title="class in org.webpki.json">JSONParser</a></th>
+<td class="colLast">
+<div class="block">Parses JSON string/byte array data.</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a></th>
+<td class="colLast">
+<div class="block">Decoder for JSF signatures.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="JSONSigner.html" title="class in org.webpki.json">JSONSigner</a></th>
+<td class="colLast">
+<div class="block">Support class for signature generators.</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="JSONSymKeyEncrypter.html" title="class in org.webpki.json">JSONSymKeyEncrypter</a></th>
+<td class="colLast">
+<div class="block">Initiator object for symmetric key encryptions.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="JSONSymKeySigner.html" title="class in org.webpki.json">JSONSymKeySigner</a></th>
+<td class="colLast">
+<div class="block">Initiator object for symmetric key signatures.</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="JSONSymKeyVerifier.html" title="class in org.webpki.json">JSONSymKeyVerifier</a></th>
+<td class="colLast">
+<div class="block">Initiator object for symmetric key signature verifiers.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="JSONVerifier.html" title="class in org.webpki.json">JSONVerifier</a></th>
+<td class="colLast">
+<div class="block">Support class for signature verifiers.</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="JSONX509Encrypter.html" title="class in org.webpki.json">JSONX509Encrypter</a></th>
+<td class="colLast">
+<div class="block">Initiator object for certificate based encryptions.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="JSONX509Signer.html" title="class in org.webpki.json">JSONX509Signer</a></th>
+<td class="colLast">
+<div class="block">Initiator object for X.509 signatures.</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="JSONX509Verifier.html" title="class in org.webpki.json">JSONX509Verifier</a></th>
+<td class="colLast">
+<div class="block">Initiator object for X.509 signature verifiers.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="NumberToJSON.html" title="class in org.webpki.json">NumberToJSON</a></th>
+<td class="colLast">
+<div class="block">An implementation of Ryu for serializing IEEE-754 double precision values for
+ JSON as specified by ES6</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList">
+<table class="typeSummary">
+<caption><span>Enum Summary</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Enum</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="DataEncryptionAlgorithms.html" title="enum in org.webpki.json">DataEncryptionAlgorithms</a></th>
+<td class="colLast">
+<div class="block">JWE content encryption algorithms.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="JSONCryptoHelper.KEY_ID_OPTIONS.html" title="enum in org.webpki.json">JSONCryptoHelper.KEY_ID_OPTIONS</a></th>
+<td class="colLast">
+<div class="block">KeyID parameter to Options</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="JSONCryptoHelper.PUBLIC_KEY_OPTIONS.html" title="enum in org.webpki.json">JSONCryptoHelper.PUBLIC_KEY_OPTIONS</a></th>
+<td class="colLast">
+<div class="block">Public key parameter to Options</div>
+</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="JSONOutputFormats.html" title="enum in org.webpki.json">JSONOutputFormats</a></th>
+<td class="colLast">
+<div class="block">JSON output types.</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="JSONSignatureTypes.html" title="enum in org.webpki.json">JSONSignatureTypes</a></th>
+<td class="colLast">
+<div class="block">Supported signature types</div>
+</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="JSONTypes.html" title="enum in org.webpki.json">JSONTypes</a></th>
+<td class="colLast">
+<div class="block">Basic JSON types read by the parser.</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="KeyEncryptionAlgorithms.html" title="enum in org.webpki.json">KeyEncryptionAlgorithms</a></th>
+<td class="colLast">
+<div class="block">JWE algorithms.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
 </div>
+</main>
+<footer role="contentinfo">
+<nav role="navigation">
 <!-- ======= START OF BOTTOM NAVBAR ====== -->
-<div class="bottomNav"><a name="navbar.bottom">
+<div class="bottomNav"><a id="navbar.bottom">
 <!--   -->
 </a>
 <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
-<a name="navbar.bottom.firstrow">
+<a id="navbar.bottom.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
-<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="../../../index.html">Overview</a></li>
 <li class="navBarCell1Rev">Package</li>
 <li>Class</li>
 <li><a href="package-tree.html">Tree</a></li>
@@ -475,16 +499,8 @@ hi true 1 2
 </ul>
 </div>
 <div class="subNav">
-<ul class="navList">
-<li><a href="../../../org/webpki/jose/package-summary.html">Prev&nbsp;Package</a></li>
-<li><a href="../../../org/webpki/keygen2/package-summary.html">Next&nbsp;Package</a></li>
-</ul>
-<ul class="navList">
-<li><a href="../../../index.html?org/webpki/json/package-summary.html" target="_top">Frames</a></li>
-<li><a href="package-summary.html" target="_top">No&nbsp;Frames</a></li>
-</ul>
 <ul class="navList" id="allclasses_navbar_bottom">
-<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+<li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -497,11 +513,16 @@ hi true 1 2
   }
   //-->
 </script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
 </div>
-<a name="skip.navbar.bottom">
+<a id="skip.navbar.bottom">
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>2005-2018 WebPKI.org.</i></small></p>
+</nav>
+<p class="legalCopy"><small><i>2005-2020 WebPKI.org.</i></small></p>
+</footer>
 </body>
 </html>

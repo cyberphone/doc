@@ -1,12 +1,22 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML>
 <!-- NewPage -->
 <html lang="en">
 <head>
 
 <title>DOMUtil (WebPKI.org Support)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+<link rel="stylesheet" type="text/css" href="../../../jquery/jquery-ui.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
+<script type="text/javascript" src="../../../jquery/jszip/dist/jszip.min.js"></script>
+<script type="text/javascript" src="../../../jquery/jszip-utils/dist/jszip-utils.min.js"></script>
+<!--[if IE]>
+<script type="text/javascript" src="../../../jquery/jszip-utils/dist/jszip-utils-ie.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="../../../jquery/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="../../../jquery/jquery-migrate-3.0.1.js"></script>
+<script type="text/javascript" src="../../../jquery/jquery-ui.js"></script>
 </head>
 <body>
 <script type="text/javascript"><!--
@@ -18,26 +28,31 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9,"i6":9,"i7":9,"i8":9,"i9":9,"i10":9,"i11":9,"i12":9,"i13":9,"i14":9,"i15":9,"i16":9,"i17":9,"i18":9,"i19":9,"i20":9,"i21":9};
+var data = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9,"i6":9,"i7":9,"i8":9,"i9":9,"i10":9,"i11":9,"i12":9,"i13":9,"i14":9,"i15":9,"i16":9,"i17":9,"i18":9,"i19":9,"i20":9,"i21":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
-</script>
+var pathtoroot = "../../../";
+var useModuleDirectories = true;
+loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
 </noscript>
+<header role="banner">
+<nav role="navigation">
+<div class="fixedNav">
 <!-- ========= START OF TOP NAVBAR ======= -->
-<div class="topNav"><a name="navbar.top">
+<div class="topNav"><a id="navbar.top">
 <!--   -->
 </a>
 <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
-<a name="navbar.top.firstrow">
+<a id="navbar.top.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
-<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="../../../index.html">Overview</a></li>
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
@@ -46,16 +61,14 @@ var activeTableTab = "activeTableTab";
 </ul>
 </div>
 <div class="subNav">
-<ul class="navList">
-<li><a href="../../../org/webpki/xml/DOMReaderHelper.html" title="class in org.webpki.xml"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
-</ul>
-<ul class="navList">
-<li><a href="../../../index.html?org/webpki/xml/DOMUtil.html" target="_top">Frames</a></li>
-<li><a href="DOMUtil.html" target="_top">No&nbsp;Frames</a></li>
-</ul>
 <ul class="navList" id="allclasses_navbar_top">
-<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+<li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" disabled="disabled">
+<input type="reset" id="reset" value="reset" disabled="disabled">
+</li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -68,6 +81,9 @@ var activeTableTab = "activeTableTab";
   }
   //-->
 </script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
 </div>
 <div>
 <ul class="subNavList">
@@ -84,18 +100,27 @@ var activeTableTab = "activeTableTab";
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
-<a name="skip.navbar.top">
+<a id="skip.navbar.top">
 <!--   -->
 </a></div>
 <!-- ========= END OF TOP NAVBAR ========= -->
+</div>
+<div class="navPadding">&nbsp;</div>
+<script type="text/javascript"><!--
+$('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+//-->
+</script>
+</nav>
+</header>
 <!-- ======== START OF CLASS DATA ======== -->
+<main role="main">
 <div class="header">
-<div class="subTitle">org.webpki.xml</div>
+<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.webpki.xml</a></div>
 <h2 title="Class DOMUtil" class="title">Class DOMUtil</h2>
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
-<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
 <li>org.webpki.xml.DOMUtil</li>
@@ -106,9 +131,8 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <hr>
-<br>
 <pre>public class <span class="typeNameLabel">DOMUtil</span>
-extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
 <div class="block">Utility methods for traversing and building DOM trees.</div>
 </li>
 </ul>
@@ -117,163 +141,188 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <!-- ========== METHOD SUMMARY =========== -->
+<section role="region">
 <ul class="blockList">
-<li class="blockList"><a name="method.summary">
+<li class="blockList"><a id="method.summary">
 <!--   -->
 </a>
 <h3>Method Summary</h3>
-<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<table class="memberSummary">
 <caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Method and Description</th>
+<th class="colSecond" scope="col">Method</th>
+<th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMUtil.html#appendTextElement-org.w3c.dom.Element-java.lang.String-int-">appendTextElement</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;parent,
-                 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;element,
-                 int&nbsp;value)</code>
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#appendTextElement(org.w3c.dom.Element,java.lang.String,int)">appendTextElement</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;parent,
+                 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;element,
+                 int&nbsp;value)</code></th>
+<td class="colLast">
 <div class="block">Creates a subelement with a single child, a text node, as a child of an existing node.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMUtil.html#appendTextElement-org.w3c.dom.Element-java.lang.String-long-">appendTextElement</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;parent,
-                 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;element,
-                 long&nbsp;value)</code>
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#appendTextElement(org.w3c.dom.Element,java.lang.String,long)">appendTextElement</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;parent,
+                 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;element,
+                 long&nbsp;value)</code></th>
+<td class="colLast">
 <div class="block">Creates a subelement with a single child, a text node, as a child of an existing node.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMUtil.html#appendTextElement-org.w3c.dom.Element-java.lang.String-java.lang.Object-">appendTextElement</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;parent,
-                 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;element,
-                 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;value)</code>
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#appendTextElement(org.w3c.dom.Element,java.lang.String,java.lang.Object)">appendTextElement</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;parent,
+                 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;element,
+                 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;value)</code></th>
+<td class="colLast">
 <div class="block">Creates a subelement with a single child, a text node, as a child of an existing node.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMUtil.html#appendTextElement-org.w3c.dom.Element-java.lang.String-java.lang.String-">appendTextElement</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;parent,
-                 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;element,
-                 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</code>
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#appendTextElement(org.w3c.dom.Element,java.lang.String,java.lang.String)">appendTextElement</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;parent,
+                 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;element,
+                 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value)</code></th>
+<td class="colLast">
 <div class="block">Creates a subelement with a single child, a text node, as a child of an existing node.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>static boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMUtil.html#booleanValue-java.lang.String-">booleanValue</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;s)</code>&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#booleanValue(java.lang.String)">booleanValue</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;s)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html?is-external=true" title="class or interface in org.w3c.dom">Document</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMUtil.html#createDocument--">createDocument</a></span>()</code>
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Document.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Document</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createDocument()">createDocument</a></span>()</code></th>
+<td class="colLast">
 <div class="block">Centralized Document creator/implemenation</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/javax/xml/parsers/DocumentBuilderFactory.html?is-external=true" title="class or interface in javax.xml.parsers">DocumentBuilderFactory</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMUtil.html#createDocumentBuilderFactory--">createDocumentBuilderFactory</a></span>()</code>
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/javax/xml/parsers/DocumentBuilderFactory.html?is-external=true" title="class or interface in javax.xml.parsers" class="externalLink">DocumentBuilderFactory</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createDocumentBuilderFactory()">createDocumentBuilderFactory</a></span>()</code></th>
+<td class="colLast">
 <div class="block">Centralized DocumentBuilderFactory creator/implemenation</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMUtil.html#firstChildElement-org.w3c.dom.Element-">firstChildElement</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;parent)</code>
-<div class="block">Get the first child <a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom"><code>Element</code></a> of an <a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom"><code>Element</code></a>.</div>
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#firstChildElement(org.w3c.dom.Element)">firstChildElement</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;parent)</code></th>
+<td class="colLast">
+<div class="block">Get the first child <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink"><code>Element</code></a> of an <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink"><code>Element</code></a>.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMUtil.html#forceDocumentBuilderFactory-java.lang.String-">forceDocumentBuilderFactory</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;document_builder_factory)</code>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#forceDocumentBuilderFactory(java.lang.String)">forceDocumentBuilderFactory</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;document_builder_factory)</code></th>
+<td class="colLast">
 <div class="block">Forces the use of a specific implementation</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMUtil.html#getChildElement-org.w3c.dom.Element-java.lang.String-">getChildElement</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;parent,
-               <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getChildElement(org.w3c.dom.Element,java.lang.String)">getChildElement</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;parent,
+               <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</code></th>
+<td class="colLast">
 <div class="block">Gets the child Element with the indicated name.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMUtil.html#getChildElementValue-org.w3c.dom.Element-java.lang.String-">getChildElementValue</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;parent,
-                    <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getChildElementValue(org.w3c.dom.Element,java.lang.String)">getChildElementValue</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;parent,
+                    <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</code></th>
+<td class="colLast">
 <div class="block">Gets the value for the child Element with the indicated name.</div>
 </td>
 </tr>
 <tr id="i11" class="rowColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMUtil.html#getDefiningNamespace-org.w3c.dom.Element-">getDefiningNamespace</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;e)</code>
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDefiningNamespace(org.w3c.dom.Element)">getDefiningNamespace</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;e)</code></th>
+<td class="colLast">
 <div class="block">Get the defining target namespace of this element</div>
 </td>
 </tr>
 <tr id="i12" class="altColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMUtil.html#getLocalName-org.w3c.dom.Node-">getLocalName</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Node.html?is-external=true" title="class or interface in org.w3c.dom">Node</a>&nbsp;n)</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLocalName(org.w3c.dom.Node)">getLocalName</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Node</a>&nbsp;n)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i13" class="rowColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMUtil.html#getNamespace-org.w3c.dom.Element-java.lang.String-">getNamespace</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;e,
-            <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;prefix)</code>
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getNamespace(org.w3c.dom.Element,java.lang.String)">getNamespace</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;e,
+            <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;prefix)</code></th>
+<td class="colLast">
 <div class="block">Get the target namespace corresponding to a prefix.</div>
 </td>
 </tr>
 <tr id="i14" class="altColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMUtil.html#getPrefix-org.w3c.dom.Node-">getPrefix</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Node.html?is-external=true" title="class or interface in org.w3c.dom">Node</a>&nbsp;n)</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPrefix(org.w3c.dom.Node)">getPrefix</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Node</a>&nbsp;n)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i15" class="rowColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMUtil.html#getSiblingElement-org.w3c.dom.Element-java.lang.String-">getSiblingElement</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;e,
-                 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSiblingElement(org.w3c.dom.Element,java.lang.String)">getSiblingElement</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;e,
+                 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</code></th>
+<td class="colLast">
 <div class="block">Gets the sibling Element with the indicated name.</div>
 </td>
 </tr>
 <tr id="i16" class="altColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMUtil.html#getSiblingValue-org.w3c.dom.Element-java.lang.String-">getSiblingValue</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;e,
-               <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSiblingValue(org.w3c.dom.Element,java.lang.String)">getSiblingValue</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;e,
+               <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</code></th>
+<td class="colLast">
 <div class="block">Gets the value for the sibling Element with the indicated name.</div>
 </td>
 </tr>
 <tr id="i17" class="rowColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMUtil.html#nextSiblingElement-org.w3c.dom.Node-">nextSiblingElement</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Node.html?is-external=true" title="class or interface in org.w3c.dom">Node</a>&nbsp;n)</code>
-<div class="block">Get the next sibling <a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom"><code>Element</code></a> of a <a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Node.html?is-external=true" title="class or interface in org.w3c.dom"><code>Node</code></a>.</div>
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#nextSiblingElement(org.w3c.dom.Node)">nextSiblingElement</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Node</a>&nbsp;n)</code></th>
+<td class="colLast">
+<div class="block">Get the next sibling <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink"><code>Element</code></a> of a <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink"><code>Node</code></a>.</div>
 </td>
 </tr>
 <tr id="i18" class="altColor">
 <td class="colFirst"><code>static byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMUtil.html#writeXML-org.w3c.dom.Document-">writeXML</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html?is-external=true" title="class or interface in org.w3c.dom">Document</a>&nbsp;d)</code>&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writeXML(org.w3c.dom.Document)">writeXML</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Document.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Document</a>&nbsp;d)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i19" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMUtil.html#writeXML-org.w3c.dom.Document-java.io.OutputStream-">writeXML</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html?is-external=true" title="class or interface in org.w3c.dom">Document</a>&nbsp;d,
-        <a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;out)</code>
-<div class="block">Write the XML-encoding of a <a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html?is-external=true" title="class or interface in org.w3c.dom"><code>Document</code></a> to an
- <a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io"><code>OutputStream</code></a>.</div>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writeXML(org.w3c.dom.Document,java.io.OutputStream)">writeXML</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Document.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Document</a>&nbsp;d,
+        <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/OutputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">OutputStream</a>&nbsp;out)</code></th>
+<td class="colLast">
+<div class="block">Write the XML-encoding of a <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Document.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink"><code>Document</code></a> to an
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/OutputStream.html?is-external=true" title="class or interface in java.io" class="externalLink"><code>OutputStream</code></a>.</div>
 </td>
 </tr>
 <tr id="i20" class="altColor">
 <td class="colFirst"><code>static byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMUtil.html#writeXML-org.w3c.dom.Element-">writeXML</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;e)</code>&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writeXML(org.w3c.dom.Element)">writeXML</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;e)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i21" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMUtil.html#writeXML-org.w3c.dom.Element-java.io.OutputStream-">writeXML</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;e,
-        <a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;out)</code>&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writeXML(org.w3c.dom.Element,java.io.OutputStream)">writeXML</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;e,
+        <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/OutputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">OutputStream</a>&nbsp;out)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
+<li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
+<code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang" class="externalLink">clone</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang" class="externalLink">equals</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang" class="externalLink">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang" class="externalLink">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang" class="externalLink">notify</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang" class="externalLink">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang" class="externalLink">toString</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#wait(long,int)" title="class or interface in java.lang" class="externalLink">wait</a></code></li>
 </ul>
 </li>
 </ul>
+</section>
 </li>
 </ul>
 </div>
@@ -281,101 +330,35 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <!-- ============ METHOD DETAIL ========== -->
+<section role="region">
 <ul class="blockList">
-<li class="blockList"><a name="method.detail">
+<li class="blockList"><a id="method.detail">
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="appendTextElement-org.w3c.dom.Element-java.lang.String-int-">
+<a id="forceDocumentBuilderFactory(java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>appendTextElement</h4>
-<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;appendTextElement(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;parent,
-                                        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;element,
-                                        int&nbsp;value)</pre>
-<div class="block">Creates a subelement with a single child, a text node, as a child of an existing node.
- <p>The structure <code>&lt;<i>element</i>&gt;<i>value</i>&lt;/<i>element</i>&gt;</code>
- will be created and appended to <i>parent</i>.
- <p>This method is shorthand for
- <code><a href="../../../org/webpki/xml/DOMUtil.html#appendTextElement-org.w3c.dom.Element-java.lang.String-java.lang.String-"><code>appendTextElement</code></a>(parent, element, Integer.toString(value))</code></div>
+<h4>forceDocumentBuilderFactory</h4>
+<pre class="methodSignature">public static&nbsp;void&nbsp;forceDocumentBuilderFactory&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;document_builder_factory)</pre>
+<div class="block">Forces the use of a specific implementation</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>parent</code> - The parent of the new element.</dd>
-<dd><code>element</code> - The name of the new element.</dd>
-<dd><code>value</code> - The value of the text node.</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>Element</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../org/webpki/xml/DOMUtil.html#appendTextElement-org.w3c.dom.Element-java.lang.String-java.lang.String-"><code>appendTextElement(Element, String, String)</code></a></dd>
+<dd><code>document_builder_factory</code> - Class name</dd>
 </dl>
 </li>
 </ul>
-<a name="appendTextElement-org.w3c.dom.Element-java.lang.String-long-">
+<a id="appendTextElement(org.w3c.dom.Element,java.lang.String,java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>appendTextElement</h4>
-<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;appendTextElement(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;parent,
-                                        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;element,
-                                        long&nbsp;value)</pre>
-<div class="block">Creates a subelement with a single child, a text node, as a child of an existing node.
- <p>The structure <code>&lt;<i>element</i>&gt;<i>value</i>&lt;/<i>element</i>&gt;</code>
- will be created and appended to <i>parent</i>.
- <p>This method is shorthand for
- <code><a href="../../../org/webpki/xml/DOMUtil.html#appendTextElement-org.w3c.dom.Element-java.lang.String-java.lang.String-"><code>appendTextElement</code></a>(parent, element, Long.toString(value))</code></div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>parent</code> - The parent of the new element.</dd>
-<dd><code>element</code> - The name of the new element.</dd>
-<dd><code>value</code> - The value of the text node.</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>Element</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../org/webpki/xml/DOMUtil.html#appendTextElement-org.w3c.dom.Element-java.lang.String-java.lang.String-"><code>appendTextElement(Element, String, String)</code></a></dd>
-</dl>
-</li>
-</ul>
-<a name="appendTextElement-org.w3c.dom.Element-java.lang.String-java.lang.Object-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>appendTextElement</h4>
-<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;appendTextElement(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;parent,
-                                        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;element,
-                                        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;value)</pre>
-<div class="block">Creates a subelement with a single child, a text node, as a child of an existing node.
- <p>The structure <code>&lt;<i>element</i>&gt;<i>value</i>&lt;/<i>element</i>&gt;</code>
- will be created and appended to <i>parent</i>.
- <p>This method is shorthand for
- <code><a href="../../../org/webpki/xml/DOMUtil.html#appendTextElement-org.w3c.dom.Element-java.lang.String-java.lang.String-"><code>appendTextElement</code></a>(parent, element, value.toString())</code>
- and is hence useful when value is an object who's <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang"><code>toString</code></a> function returns a suitably formatted
- string representation, for example a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html?is-external=true" title="class or interface in java.lang"><code>StringBuilder</code></a>,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html?is-external=true" title="class or interface in java.math"><code>BigInteger</code></a> or <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math"><code>BigDecimal</code></a>.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>parent</code> - The parent of the new element.</dd>
-<dd><code>element</code> - The name of the new element.</dd>
-<dd><code>value</code> - The value of the text node.</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>Element</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../org/webpki/xml/DOMUtil.html#appendTextElement-org.w3c.dom.Element-java.lang.String-java.lang.String-"><code>appendTextElement(Element, String, String)</code></a></dd>
-</dl>
-</li>
-</ul>
-<a name="appendTextElement-org.w3c.dom.Element-java.lang.String-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>appendTextElement</h4>
-<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;appendTextElement(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;parent,
-                                        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;element,
-                                        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</pre>
+<pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;appendTextElement&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;parent,
+                                        <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;element,
+                                        <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value)</pre>
 <div class="block">Creates a subelement with a single child, a text node, as a child of an existing node.
  <p>The structure <code>&lt;<i>element</i>&gt;<i>value</i>&lt;/<i>element</i>&gt;</code>
  will be created and appended to <i>parent</i>.</div>
@@ -389,82 +372,169 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </dl>
 </li>
 </ul>
-<a name="booleanValue-java.lang.String-">
+<a id="appendTextElement(org.w3c.dom.Element,java.lang.String,int)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>booleanValue</h4>
-<pre>public static&nbsp;boolean&nbsp;booleanValue(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;s)</pre>
-</li>
-</ul>
-<a name="createDocument--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>createDocument</h4>
-<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html?is-external=true" title="class or interface in org.w3c.dom">Document</a>&nbsp;createDocument()</pre>
-<div class="block">Centralized Document creator/implemenation</div>
+<h4>appendTextElement</h4>
+<pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;appendTextElement&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;parent,
+                                        <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;element,
+                                        int&nbsp;value)</pre>
+<div class="block">Creates a subelement with a single child, a text node, as a child of an existing node.
+ <p>The structure <code>&lt;<i>element</i>&gt;<i>value</i>&lt;/<i>element</i>&gt;</code>
+ will be created and appended to <i>parent</i>.
+ <p>This method is shorthand for
+ <code><a href="#appendTextElement(org.w3c.dom.Element,java.lang.String,java.lang.String)"><code>appendTextElement</code></a>(parent, element, Integer.toString(value))</code></div>
 <dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>parent</code> - The parent of the new element.</dd>
+<dd><code>element</code> - The name of the new element.</dd>
+<dd><code>value</code> - The value of the text node.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>Document</dd>
+<dd>Element</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="#appendTextElement(org.w3c.dom.Element,java.lang.String,java.lang.String)"><code>appendTextElement(Element, String, String)</code></a></dd>
 </dl>
 </li>
 </ul>
-<a name="createDocumentBuilderFactory--">
+<a id="appendTextElement(org.w3c.dom.Element,java.lang.String,long)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>createDocumentBuilderFactory</h4>
-<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/xml/parsers/DocumentBuilderFactory.html?is-external=true" title="class or interface in javax.xml.parsers">DocumentBuilderFactory</a>&nbsp;createDocumentBuilderFactory()</pre>
-<div class="block">Centralized DocumentBuilderFactory creator/implemenation</div>
+<h4>appendTextElement</h4>
+<pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;appendTextElement&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;parent,
+                                        <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;element,
+                                        long&nbsp;value)</pre>
+<div class="block">Creates a subelement with a single child, a text node, as a child of an existing node.
+ <p>The structure <code>&lt;<i>element</i>&gt;<i>value</i>&lt;/<i>element</i>&gt;</code>
+ will be created and appended to <i>parent</i>.
+ <p>This method is shorthand for
+ <code><a href="#appendTextElement(org.w3c.dom.Element,java.lang.String,java.lang.String)"><code>appendTextElement</code></a>(parent, element, Long.toString(value))</code></div>
 <dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>parent</code> - The parent of the new element.</dd>
+<dd><code>element</code> - The name of the new element.</dd>
+<dd><code>value</code> - The value of the text node.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>DocumentBuilderFactory</dd>
+<dd>Element</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="#appendTextElement(org.w3c.dom.Element,java.lang.String,java.lang.String)"><code>appendTextElement(Element, String, String)</code></a></dd>
 </dl>
 </li>
 </ul>
-<a name="firstChildElement-org.w3c.dom.Element-">
+<a id="appendTextElement(org.w3c.dom.Element,java.lang.String,java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>appendTextElement</h4>
+<pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;appendTextElement&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;parent,
+                                        <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;element,
+                                        <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;value)</pre>
+<div class="block">Creates a subelement with a single child, a text node, as a child of an existing node.
+ <p>The structure <code>&lt;<i>element</i>&gt;<i>value</i>&lt;/<i>element</i>&gt;</code>
+ will be created and appended to <i>parent</i>.
+ <p>This method is shorthand for
+ <code><a href="#appendTextElement(org.w3c.dom.Element,java.lang.String,java.lang.String)"><code>appendTextElement</code></a>(parent, element, value.toString())</code>
+ and is hence useful when value is an object who's <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang" class="externalLink"><code>toString</code></a> function returns a suitably formatted
+ string representation, for example a <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/StringBuilder.html?is-external=true" title="class or interface in java.lang" class="externalLink"><code>StringBuilder</code></a>,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/BigInteger.html?is-external=true" title="class or interface in java.math" class="externalLink"><code>BigInteger</code></a> or <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math" class="externalLink"><code>BigDecimal</code></a>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>parent</code> - The parent of the new element.</dd>
+<dd><code>element</code> - The name of the new element.</dd>
+<dd><code>value</code> - The value of the text node.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Element</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="#appendTextElement(org.w3c.dom.Element,java.lang.String,java.lang.String)"><code>appendTextElement(Element, String, String)</code></a></dd>
+</dl>
+</li>
+</ul>
+<a id="firstChildElement(org.w3c.dom.Element)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>firstChildElement</h4>
-<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;firstChildElement(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;parent)</pre>
-<div class="block">Get the first child <a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom"><code>Element</code></a> of an <a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom"><code>Element</code></a>.
- <p><a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Node.html?is-external=true" title="class or interface in org.w3c.dom"><code>Nodes</code></a> other than <a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom"><code>Elements</code></a> are ignored.</div>
+<pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;firstChildElement&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;parent)</pre>
+<div class="block">Get the first child <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink"><code>Element</code></a> of an <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink"><code>Element</code></a>.
+ <p><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink"><code>Nodes</code></a> other than <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink"><code>Elements</code></a> are ignored.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>parent</code> - Parent</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>The first child <a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom"><code>Element</code></a> or null if none exists.</dd>
+<dd>The first child <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink"><code>Element</code></a> or null if none exists.</dd>
 </dl>
 </li>
 </ul>
-<a name="forceDocumentBuilderFactory-java.lang.String-">
+<a id="nextSiblingElement(org.w3c.dom.Node)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>forceDocumentBuilderFactory</h4>
-<pre>public static&nbsp;void&nbsp;forceDocumentBuilderFactory(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;document_builder_factory)</pre>
-<div class="block">Forces the use of a specific implementation</div>
+<h4>nextSiblingElement</h4>
+<pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;nextSiblingElement&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Node</a>&nbsp;n)</pre>
+<div class="block">Get the next sibling <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink"><code>Element</code></a> of a <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink"><code>Node</code></a>.
+ <p><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink"><code>Nodes</code></a> other than <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink"><code>Elements</code></a> are ignored.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>document_builder_factory</code> - Class name</dd>
+<dd><code>n</code> - Node</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The first child <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink"><code>Element</code></a> or null if none exists.</dd>
 </dl>
 </li>
 </ul>
-<a name="getChildElement-org.w3c.dom.Element-java.lang.String-">
+<a id="getSiblingElement(org.w3c.dom.Element,java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSiblingElement</h4>
+<pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;getSiblingElement&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;e,
+                                        <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</pre>
+<div class="block">Gets the sibling Element with the indicated name. The sibling
+ searched for must come after the given Element e.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>e</code> - Element to start search from.</dd>
+<dd><code>name</code> - Name to search for in sibling.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The sibling Element with the indicated name, or null
+ if the Element could not be found.</dd>
+</dl>
+</li>
+</ul>
+<a id="getSiblingValue(org.w3c.dom.Element,java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSiblingValue</h4>
+<pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getSiblingValue&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;e,
+                                     <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</pre>
+<div class="block">Gets the value for the sibling Element with the indicated name. The sibling
+ searched for must come after the given Element e.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>e</code> - Element to start search from.</dd>
+<dd><code>name</code> - Name to search for in sibling.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The value of the sibling Element with the indicated name, or null
+ if the Element could not be found.</dd>
+</dl>
+</li>
+</ul>
+<a id="getChildElement(org.w3c.dom.Element,java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getChildElement</h4>
-<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;getChildElement(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;parent,
-                                      <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
+<pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;getChildElement&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;parent,
+                                      <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</pre>
 <div class="block">Gets the child Element with the indicated name. The child
  searched for must exist one level below the parent, i.e. a real
  parent-child relation.</div>
@@ -478,14 +548,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </dl>
 </li>
 </ul>
-<a name="getChildElementValue-org.w3c.dom.Element-java.lang.String-">
+<a id="getChildElementValue(org.w3c.dom.Element,java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getChildElementValue</h4>
-<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getChildElementValue(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;parent,
-                                          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
+<pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getChildElementValue&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;parent,
+                                          <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</pre>
 <div class="block">Gets the value for the child Element with the indicated name. The child
  searched for must exist one level below the parent, i.e. a real
  parent-child relation.</div>
@@ -499,39 +569,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </dl>
 </li>
 </ul>
-<a name="getDefiningNamespace-org.w3c.dom.Element-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getDefiningNamespace</h4>
-<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getDefiningNamespace(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;e)</pre>
-<div class="block">Get the defining target namespace of this element</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>e</code> - Element</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>Namespace URI</dd>
-</dl>
-</li>
-</ul>
-<a name="getLocalName-org.w3c.dom.Node-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getLocalName</h4>
-<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getLocalName(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Node.html?is-external=true" title="class or interface in org.w3c.dom">Node</a>&nbsp;n)</pre>
-</li>
-</ul>
-<a name="getNamespace-org.w3c.dom.Element-java.lang.String-">
+<a id="getNamespace(org.w3c.dom.Element,java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getNamespace</h4>
-<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getNamespace(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;e,
-                                  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;prefix)</pre>
+<pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getNamespace&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;e,
+                                  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;prefix)</pre>
 <div class="block">Get the target namespace corresponding to a prefix.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -542,152 +587,161 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </dl>
 </li>
 </ul>
-<a name="getPrefix-org.w3c.dom.Node-">
+<a id="getDefiningNamespace(org.w3c.dom.Element)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getPrefix</h4>
-<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getPrefix(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Node.html?is-external=true" title="class or interface in org.w3c.dom">Node</a>&nbsp;n)</pre>
-</li>
-</ul>
-<a name="getSiblingElement-org.w3c.dom.Element-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getSiblingElement</h4>
-<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;getSiblingElement(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;e,
-                                        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
-<div class="block">Gets the sibling Element with the indicated name. The sibling
- searched for must come after the given Element e.</div>
+<h4>getDefiningNamespace</h4>
+<pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getDefiningNamespace&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;e)</pre>
+<div class="block">Get the defining target namespace of this element</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>e</code> - Element to start search from.</dd>
-<dd><code>name</code> - Name to search for in sibling.</dd>
+<dd><code>e</code> - Element</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>The sibling Element with the indicated name, or null
- if the Element could not be found.</dd>
+<dd>Namespace URI</dd>
 </dl>
 </li>
 </ul>
-<a name="getSiblingValue-org.w3c.dom.Element-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getSiblingValue</h4>
-<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getSiblingValue(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;e,
-                                     <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
-<div class="block">Gets the value for the sibling Element with the indicated name. The sibling
- searched for must come after the given Element e.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>e</code> - Element to start search from.</dd>
-<dd><code>name</code> - Name to search for in sibling.</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>The value of the sibling Element with the indicated name, or null
- if the Element could not be found.</dd>
-</dl>
-</li>
-</ul>
-<a name="nextSiblingElement-org.w3c.dom.Node-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>nextSiblingElement</h4>
-<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;nextSiblingElement(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Node.html?is-external=true" title="class or interface in org.w3c.dom">Node</a>&nbsp;n)</pre>
-<div class="block">Get the next sibling <a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom"><code>Element</code></a> of a <a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Node.html?is-external=true" title="class or interface in org.w3c.dom"><code>Node</code></a>.
- <p><a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Node.html?is-external=true" title="class or interface in org.w3c.dom"><code>Nodes</code></a> other than <a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom"><code>Elements</code></a> are ignored.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>n</code> - Node</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>The first child <a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom"><code>Element</code></a> or null if none exists.</dd>
-</dl>
-</li>
-</ul>
-<a name="writeXML-org.w3c.dom.Document-">
+<a id="writeXML(org.w3c.dom.Document,java.io.OutputStream)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>writeXML</h4>
-<pre>public static&nbsp;byte[]&nbsp;writeXML(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html?is-external=true" title="class or interface in org.w3c.dom">Document</a>&nbsp;d)
-                       throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="writeXML-org.w3c.dom.Document-java.io.OutputStream-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>writeXML</h4>
-<pre>public static&nbsp;void&nbsp;writeXML(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html?is-external=true" title="class or interface in org.w3c.dom">Document</a>&nbsp;d,
-                            <a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;out)
-                     throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Write the XML-encoding of a <a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html?is-external=true" title="class or interface in org.w3c.dom"><code>Document</code></a> to an
- <a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io"><code>OutputStream</code></a>.</div>
+<pre class="methodSignature">public static&nbsp;void&nbsp;writeXML&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Document.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Document</a>&nbsp;d,
+                            <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/OutputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">OutputStream</a>&nbsp;out)
+                     throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<div class="block">Write the XML-encoding of a <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Document.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink"><code>Document</code></a> to an
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/OutputStream.html?is-external=true" title="class or interface in java.io" class="externalLink"><code>OutputStream</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>d</code> - Document</dd>
 <dd><code>out</code> - Stream</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If anything unexpected happens...</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - If anything unexpected happens...</dd>
 </dl>
 </li>
 </ul>
-<a name="writeXML-org.w3c.dom.Element-">
+<a id="writeXML(org.w3c.dom.Element,java.io.OutputStream)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>writeXML</h4>
-<pre>public static&nbsp;byte[]&nbsp;writeXML(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;e)
-                       throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre class="methodSignature">public static&nbsp;void&nbsp;writeXML&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;e,
+                            <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/OutputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">OutputStream</a>&nbsp;out)
+                     throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="writeXML-org.w3c.dom.Element-java.io.OutputStream-">
+<a id="writeXML(org.w3c.dom.Document)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writeXML</h4>
+<pre class="methodSignature">public static&nbsp;byte[]&nbsp;writeXML&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Document.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Document</a>&nbsp;d)
+                       throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
+</dl>
+</li>
+</ul>
+<a id="writeXML(org.w3c.dom.Element)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writeXML</h4>
+<pre class="methodSignature">public static&nbsp;byte[]&nbsp;writeXML&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;e)
+                       throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
+</dl>
+</li>
+</ul>
+<a id="getPrefix(org.w3c.dom.Node)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPrefix</h4>
+<pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getPrefix&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Node</a>&nbsp;n)</pre>
+</li>
+</ul>
+<a id="getLocalName(org.w3c.dom.Node)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLocalName</h4>
+<pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getLocalName&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Node</a>&nbsp;n)</pre>
+</li>
+</ul>
+<a id="booleanValue(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>booleanValue</h4>
+<pre class="methodSignature">public static&nbsp;boolean&nbsp;booleanValue&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;s)</pre>
+</li>
+</ul>
+<a id="createDocumentBuilderFactory()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createDocumentBuilderFactory</h4>
+<pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/javax/xml/parsers/DocumentBuilderFactory.html?is-external=true" title="class or interface in javax.xml.parsers" class="externalLink">DocumentBuilderFactory</a>&nbsp;createDocumentBuilderFactory()</pre>
+<div class="block">Centralized DocumentBuilderFactory creator/implemenation</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>DocumentBuilderFactory</dd>
+</dl>
+</li>
+</ul>
+<a id="createDocument()">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>writeXML</h4>
-<pre>public static&nbsp;void&nbsp;writeXML(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;e,
-                            <a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;out)
-                     throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<h4>createDocument</h4>
+<pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Document.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Document</a>&nbsp;createDocument()</pre>
+<div class="block">Centralized Document creator/implemenation</div>
 <dl>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Document</dd>
 </dl>
 </li>
 </ul>
 </li>
 </ul>
+</section>
 </li>
 </ul>
 </div>
 </div>
+</main>
 <!-- ========= END OF CLASS DATA ========= -->
+<footer role="contentinfo">
+<nav role="navigation">
 <!-- ======= START OF BOTTOM NAVBAR ====== -->
-<div class="bottomNav"><a name="navbar.bottom">
+<div class="bottomNav"><a id="navbar.bottom">
 <!--   -->
 </a>
 <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
-<a name="navbar.bottom.firstrow">
+<a id="navbar.bottom.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
-<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="../../../index.html">Overview</a></li>
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
@@ -696,16 +750,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </ul>
 </div>
 <div class="subNav">
-<ul class="navList">
-<li><a href="../../../org/webpki/xml/DOMReaderHelper.html" title="class in org.webpki.xml"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
-</ul>
-<ul class="navList">
-<li><a href="../../../index.html?org/webpki/xml/DOMUtil.html" target="_top">Frames</a></li>
-<li><a href="DOMUtil.html" target="_top">No&nbsp;Frames</a></li>
-</ul>
 <ul class="navList" id="allclasses_navbar_bottom">
-<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+<li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -718,6 +764,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
   }
   //-->
 </script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
 </div>
 <div>
 <ul class="subNavList">
@@ -734,10 +783,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
-<a name="skip.navbar.bottom">
+<a id="skip.navbar.bottom">
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>2005-2018 WebPKI.org.</i></small></p>
+</nav>
+<p class="legalCopy"><small><i>2005-2020 WebPKI.org.</i></small></p>
+</footer>
 </body>
 </html>

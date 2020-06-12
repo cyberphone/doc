@@ -1,12 +1,22 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML>
 <!-- NewPage -->
 <html lang="en">
 <head>
 
 <title>org.webpki.keygen2 Class Hierarchy (WebPKI.org Support)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+<link rel="stylesheet" type="text/css" href="../../../jquery/jquery-ui.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
+<script type="text/javascript" src="../../../jquery/jszip/dist/jszip.min.js"></script>
+<script type="text/javascript" src="../../../jquery/jszip-utils/dist/jszip-utils.min.js"></script>
+<!--[if IE]>
+<script type="text/javascript" src="../../../jquery/jszip-utils/dist/jszip-utils-ie.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="../../../jquery/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="../../../jquery/jquery-migrate-3.0.1.js"></script>
+<script type="text/javascript" src="../../../jquery/jquery-ui.js"></script>
 </head>
 <body>
 <script type="text/javascript"><!--
@@ -18,20 +28,25 @@
     catch(err) {
     }
 //-->
-</script>
+var pathtoroot = "../../../";
+var useModuleDirectories = true;
+loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
 </noscript>
+<header role="banner">
+<nav role="navigation">
+<div class="fixedNav">
 <!-- ========= START OF TOP NAVBAR ======= -->
-<div class="topNav"><a name="navbar.top">
+<div class="topNav"><a id="navbar.top">
 <!--   -->
 </a>
 <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
-<a name="navbar.top.firstrow">
+<a id="navbar.top.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
-<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="../../../index.html">Overview</a></li>
 <li><a href="package-summary.html">Package</a></li>
 <li>Class</li>
 <li class="navBarCell1Rev">Tree</li>
@@ -40,16 +55,14 @@
 </ul>
 </div>
 <div class="subNav">
-<ul class="navList">
-<li><a href="../../../org/webpki/json/package-tree.html">Prev</a></li>
-<li><a href="../../../org/webpki/net/package-tree.html">Next</a></li>
-</ul>
-<ul class="navList">
-<li><a href="../../../index.html?org/webpki/keygen2/package-tree.html" target="_top">Frames</a></li>
-<li><a href="package-tree.html" target="_top">No&nbsp;Frames</a></li>
-</ul>
 <ul class="navList" id="allclasses_navbar_top">
-<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+<li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" disabled="disabled">
+<input type="reset" id="reset" value="reset" disabled="disabled">
+</li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -62,11 +75,23 @@
   }
   //-->
 </script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
 </div>
-<a name="skip.navbar.top">
+<a id="skip.navbar.top">
 <!--   -->
 </a></div>
 <!-- ========= END OF TOP NAVBAR ========= -->
+</div>
+<div class="navPadding">&nbsp;</div>
+<script type="text/javascript"><!--
+$('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+//-->
+</script>
+</nav>
+</header>
+<main role="main">
 <div class="header">
 <h1 class="title">Hierarchy For Package org.webpki.keygen2</h1>
 <span class="packageHierarchyLabel">Package Hierarchies:</span>
@@ -75,114 +100,123 @@
 </ul>
 </div>
 <div class="contentContainer">
+<section role="region">
 <h2 title="Class Hierarchy">Class Hierarchy</h2>
 <ul>
-<li type="circle">java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang"><span class="typeNameLink">Object</span></a>
+<li class="circle">java.lang.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink"><span class="typeNameLink">Object</span></a>
 <ul>
-<li type="circle">org.webpki.crypto.<a href="../../../org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto"><span class="typeNameLink">CertificateFilter</span></a>
+<li class="circle">org.webpki.crypto.<a href="../crypto/CertificateFilter.html" title="class in org.webpki.crypto"><span class="typeNameLink">CertificateFilter</span></a>
 <ul>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/CredentialDiscoveryRequestDecoder.LookupSpecifier.html" title="class in org.webpki.keygen2"><span class="typeNameLink">CredentialDiscoveryRequestDecoder.LookupSpecifier</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/CredentialDiscoveryRequestEncoder.LookupDescriptor.html" title="class in org.webpki.keygen2"><span class="typeNameLink">CredentialDiscoveryRequestEncoder.LookupDescriptor</span></a> (implements org.webpki.crypto.<a href="../../../org/webpki/crypto/AsymKeySignerInterface.html" title="interface in org.webpki.crypto">AsymKeySignerInterface</a>)</li>
+<li class="circle">org.webpki.keygen2.<a href="CredentialDiscoveryRequestDecoder.LookupSpecifier.html" title="class in org.webpki.keygen2"><span class="typeNameLink">CredentialDiscoveryRequestDecoder.LookupSpecifier</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="CredentialDiscoveryRequestEncoder.LookupDescriptor.html" title="class in org.webpki.keygen2"><span class="typeNameLink">CredentialDiscoveryRequestEncoder.LookupDescriptor</span></a> (implements org.webpki.crypto.<a href="../crypto/AsymKeySignerInterface.html" title="interface in org.webpki.crypto">AsymKeySignerInterface</a>)</li>
 </ul>
 </li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/CredentialDiscoveryResponseDecoder.LookupResult.html" title="class in org.webpki.keygen2"><span class="typeNameLink">CredentialDiscoveryResponseDecoder.LookupResult</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/CredentialDiscoveryResponseDecoder.MatchingCredential.html" title="class in org.webpki.keygen2"><span class="typeNameLink">CredentialDiscoveryResponseDecoder.MatchingCredential</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/CredentialDiscoveryResponseEncoder.LookupResult.html" title="class in org.webpki.keygen2"><span class="typeNameLink">CredentialDiscoveryResponseEncoder.LookupResult</span></a></li>
-<li type="circle">org.webpki.json.<a href="../../../org/webpki/json/JSONDecoder.html" title="class in org.webpki.json"><span class="typeNameLink">JSONDecoder</span></a> (implements java.io.<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>)
+<li class="circle">org.webpki.keygen2.<a href="CredentialDiscoveryResponseDecoder.LookupResult.html" title="class in org.webpki.keygen2"><span class="typeNameLink">CredentialDiscoveryResponseDecoder.LookupResult</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="CredentialDiscoveryResponseDecoder.MatchingCredential.html" title="class in org.webpki.keygen2"><span class="typeNameLink">CredentialDiscoveryResponseDecoder.MatchingCredential</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="CredentialDiscoveryResponseEncoder.LookupResult.html" title="class in org.webpki.keygen2"><span class="typeNameLink">CredentialDiscoveryResponseEncoder.LookupResult</span></a></li>
+<li class="circle">org.webpki.json.<a href="../json/JSONDecoder.html" title="class in org.webpki.json"><span class="typeNameLink">JSONDecoder</span></a> (implements java.io.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a>)
 <ul>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/CredentialDiscoveryRequestDecoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">CredentialDiscoveryRequestDecoder</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/CredentialDiscoveryResponseDecoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">CredentialDiscoveryResponseDecoder</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/InvocationRequestDecoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">InvocationRequestDecoder</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/InvocationResponseDecoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">InvocationResponseDecoder</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/KeyCreationRequestDecoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">KeyCreationRequestDecoder</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/KeyCreationResponseDecoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">KeyCreationResponseDecoder</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/ProvisioningFinalizationRequestDecoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ProvisioningFinalizationRequestDecoder</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/ProvisioningFinalizationResponseDecoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ProvisioningFinalizationResponseDecoder</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/ProvisioningInitializationRequestDecoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ProvisioningInitializationRequestDecoder</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/ProvisioningInitializationResponseDecoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ProvisioningInitializationResponseDecoder</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="CredentialDiscoveryRequestDecoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">CredentialDiscoveryRequestDecoder</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="CredentialDiscoveryResponseDecoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">CredentialDiscoveryResponseDecoder</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="InvocationRequestDecoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">InvocationRequestDecoder</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="InvocationResponseDecoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">InvocationResponseDecoder</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="KeyCreationRequestDecoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">KeyCreationRequestDecoder</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="KeyCreationResponseDecoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">KeyCreationResponseDecoder</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="ProvisioningFinalizationRequestDecoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ProvisioningFinalizationRequestDecoder</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="ProvisioningFinalizationResponseDecoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ProvisioningFinalizationResponseDecoder</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="ProvisioningInitializationRequestDecoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ProvisioningInitializationRequestDecoder</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="ProvisioningInitializationResponseDecoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ProvisioningInitializationResponseDecoder</span></a></li>
 </ul>
 </li>
-<li type="circle">org.webpki.json.<a href="../../../org/webpki/json/JSONEncoder.html" title="class in org.webpki.json"><span class="typeNameLink">JSONEncoder</span></a> (implements java.io.<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>)
+<li class="circle">org.webpki.json.<a href="../json/JSONEncoder.html" title="class in org.webpki.json"><span class="typeNameLink">JSONEncoder</span></a> (implements java.io.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a>)
 <ul>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/CredentialDiscoveryRequestEncoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">CredentialDiscoveryRequestEncoder</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/CredentialDiscoveryResponseEncoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">CredentialDiscoveryResponseEncoder</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/InvocationRequestEncoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">InvocationRequestEncoder</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/InvocationResponseEncoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">InvocationResponseEncoder</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/KeyCreationRequestEncoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">KeyCreationRequestEncoder</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/KeyCreationResponseEncoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">KeyCreationResponseEncoder</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/ProvisioningFinalizationRequestEncoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ProvisioningFinalizationRequestEncoder</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/ProvisioningFinalizationResponseEncoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ProvisioningFinalizationResponseEncoder</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/ProvisioningInitializationRequestEncoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ProvisioningInitializationRequestEncoder</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/ProvisioningInitializationResponseEncoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ProvisioningInitializationResponseEncoder</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="CredentialDiscoveryRequestEncoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">CredentialDiscoveryRequestEncoder</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="CredentialDiscoveryResponseEncoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">CredentialDiscoveryResponseEncoder</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="InvocationRequestEncoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">InvocationRequestEncoder</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="InvocationResponseEncoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">InvocationResponseEncoder</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="KeyCreationRequestEncoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">KeyCreationRequestEncoder</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="KeyCreationResponseEncoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">KeyCreationResponseEncoder</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="ProvisioningFinalizationRequestEncoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ProvisioningFinalizationRequestEncoder</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="ProvisioningFinalizationResponseEncoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ProvisioningFinalizationResponseEncoder</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="ProvisioningInitializationRequestEncoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ProvisioningInitializationRequestEncoder</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="ProvisioningInitializationResponseEncoder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ProvisioningInitializationResponseEncoder</span></a></li>
 </ul>
 </li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/KeyCreationRequestDecoder.KeyObject.html" title="class in org.webpki.keygen2"><span class="typeNameLink">KeyCreationRequestDecoder.KeyObject</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/KeyCreationRequestDecoder.PINPolicy.html" title="class in org.webpki.keygen2"><span class="typeNameLink">KeyCreationRequestDecoder.PINPolicy</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/KeyCreationRequestDecoder.PresetPIN.html" title="class in org.webpki.keygen2"><span class="typeNameLink">KeyCreationRequestDecoder.PresetPIN</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/KeyCreationRequestDecoder.PUKPolicy.html" title="class in org.webpki.keygen2"><span class="typeNameLink">KeyCreationRequestDecoder.PUKPolicy</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/KeyCreationRequestDecoder.UserPINDescriptor.html" title="class in org.webpki.keygen2"><span class="typeNameLink">KeyCreationRequestDecoder.UserPINDescriptor</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/KeyCreationRequestDecoder.UserPINError.html" title="class in org.webpki.keygen2"><span class="typeNameLink">KeyCreationRequestDecoder.UserPINError</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/KeySpecifier.html" title="class in org.webpki.keygen2"><span class="typeNameLink">KeySpecifier</span></a> (implements java.io.<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>)</li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/ProvisioningFinalizationRequestDecoder.Extension.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ProvisioningFinalizationRequestDecoder.Extension</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/ProvisioningFinalizationRequestDecoder.IssuedCredential.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ProvisioningFinalizationRequestDecoder.IssuedCredential</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/ProvisioningFinalizationRequestDecoder.PostOperation.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ProvisioningFinalizationRequestDecoder.PostOperation</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/ProvisioningInitializationRequestDecoder.KeyManagementKeyUpdateHolder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ProvisioningInitializationRequestDecoder.KeyManagementKeyUpdateHolder</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/ProvisioningInitializationRequestEncoder.KeyManagementKeyUpdateHolder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ProvisioningInitializationRequestEncoder.KeyManagementKeyUpdateHolder</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/ServerState.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ServerState</span></a> (implements java.io.<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>)</li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/ServerState.ExtensionInterface.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ServerState.ExtensionInterface</span></a> (implements java.io.<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>)
+<li class="circle">org.webpki.keygen2.<a href="KeyCreationRequestDecoder.KeyObject.html" title="class in org.webpki.keygen2"><span class="typeNameLink">KeyCreationRequestDecoder.KeyObject</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="KeyCreationRequestDecoder.PINPolicy.html" title="class in org.webpki.keygen2"><span class="typeNameLink">KeyCreationRequestDecoder.PINPolicy</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="KeyCreationRequestDecoder.PresetPIN.html" title="class in org.webpki.keygen2"><span class="typeNameLink">KeyCreationRequestDecoder.PresetPIN</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="KeyCreationRequestDecoder.PUKPolicy.html" title="class in org.webpki.keygen2"><span class="typeNameLink">KeyCreationRequestDecoder.PUKPolicy</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="KeyCreationRequestDecoder.UserPINDescriptor.html" title="class in org.webpki.keygen2"><span class="typeNameLink">KeyCreationRequestDecoder.UserPINDescriptor</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="KeyCreationRequestDecoder.UserPINError.html" title="class in org.webpki.keygen2"><span class="typeNameLink">KeyCreationRequestDecoder.UserPINError</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="KeySpecifier.html" title="class in org.webpki.keygen2"><span class="typeNameLink">KeySpecifier</span></a> (implements java.io.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a>)</li>
+<li class="circle">org.webpki.keygen2.<a href="ProvisioningFinalizationRequestDecoder.Extension.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ProvisioningFinalizationRequestDecoder.Extension</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="ProvisioningFinalizationRequestDecoder.IssuedCredential.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ProvisioningFinalizationRequestDecoder.IssuedCredential</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="ProvisioningFinalizationRequestDecoder.PostOperation.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ProvisioningFinalizationRequestDecoder.PostOperation</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="ProvisioningInitializationRequestDecoder.KeyManagementKeyUpdateHolder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ProvisioningInitializationRequestDecoder.KeyManagementKeyUpdateHolder</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="ProvisioningInitializationRequestEncoder.KeyManagementKeyUpdateHolder.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ProvisioningInitializationRequestEncoder.KeyManagementKeyUpdateHolder</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="ServerState.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ServerState</span></a> (implements java.io.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a>)</li>
+<li class="circle">org.webpki.keygen2.<a href="ServerState.ExtensionInterface.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ServerState.ExtensionInterface</span></a> (implements java.io.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a>)
 <ul>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/ServerState.EncryptedExtension.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ServerState.EncryptedExtension</span></a> (implements java.io.<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>)</li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/ServerState.Extension.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ServerState.Extension</span></a> (implements java.io.<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>)</li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/ServerState.Logotype.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ServerState.Logotype</span></a> (implements java.io.<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>)</li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/ServerState.PropertyBag.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ServerState.PropertyBag</span></a> (implements java.io.<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>)</li>
+<li class="circle">org.webpki.keygen2.<a href="ServerState.EncryptedExtension.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ServerState.EncryptedExtension</span></a> (implements java.io.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a>)</li>
+<li class="circle">org.webpki.keygen2.<a href="ServerState.Extension.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ServerState.Extension</span></a> (implements java.io.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a>)</li>
+<li class="circle">org.webpki.keygen2.<a href="ServerState.Logotype.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ServerState.Logotype</span></a> (implements java.io.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a>)</li>
+<li class="circle">org.webpki.keygen2.<a href="ServerState.PropertyBag.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ServerState.PropertyBag</span></a> (implements java.io.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a>)</li>
 </ul>
 </li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/ServerState.ImagePreference.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ServerState.ImagePreference</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/ServerState.Key.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ServerState.Key</span></a> (implements java.io.<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>)</li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/ServerState.PINPolicy.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ServerState.PINPolicy</span></a> (implements java.io.<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>)</li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/ServerState.Property.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ServerState.Property</span></a> (implements java.io.<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>)</li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/ServerState.PUKPolicy.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ServerState.PUKPolicy</span></a> (implements java.io.<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>)</li>
+<li class="circle">org.webpki.keygen2.<a href="ServerState.ImagePreference.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ServerState.ImagePreference</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="ServerState.Key.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ServerState.Key</span></a> (implements java.io.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a>)</li>
+<li class="circle">org.webpki.keygen2.<a href="ServerState.PINPolicy.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ServerState.PINPolicy</span></a> (implements java.io.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a>)</li>
+<li class="circle">org.webpki.keygen2.<a href="ServerState.Property.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ServerState.Property</span></a> (implements java.io.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a>)</li>
+<li class="circle">org.webpki.keygen2.<a href="ServerState.PUKPolicy.html" title="class in org.webpki.keygen2"><span class="typeNameLink">ServerState.PUKPolicy</span></a> (implements java.io.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a>)</li>
 </ul>
 </li>
 </ul>
+</section>
+<section role="region">
 <h2 title="Interface Hierarchy">Interface Hierarchy</h2>
 <ul>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/KeyGen2Constants.html" title="interface in org.webpki.keygen2"><span class="typeNameLink">KeyGen2Constants</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/KeyGen2URIs.html" title="interface in org.webpki.keygen2"><span class="typeNameLink">KeyGen2URIs</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/KeyGen2URIs.CLIENT_ATTRIBUTES.html" title="interface in org.webpki.keygen2"><span class="typeNameLink">KeyGen2URIs.CLIENT_ATTRIBUTES</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/KeyGen2URIs.CLIENT_FEATURES.html" title="interface in org.webpki.keygen2"><span class="typeNameLink">KeyGen2URIs.CLIENT_FEATURES</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/KeyGen2URIs.LOGOTYPES.html" title="interface in org.webpki.keygen2"><span class="typeNameLink">KeyGen2URIs.LOGOTYPES</span></a></li>
-<li type="circle">java.io.<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io"><span class="typeNameLink">Serializable</span></a>
+<li class="circle">org.webpki.keygen2.<a href="KeyGen2Constants.html" title="interface in org.webpki.keygen2"><span class="typeNameLink">KeyGen2Constants</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="KeyGen2URIs.html" title="interface in org.webpki.keygen2"><span class="typeNameLink">KeyGen2URIs</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="KeyGen2URIs.CLIENT_ATTRIBUTES.html" title="interface in org.webpki.keygen2"><span class="typeNameLink">KeyGen2URIs.CLIENT_ATTRIBUTES</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="KeyGen2URIs.CLIENT_FEATURES.html" title="interface in org.webpki.keygen2"><span class="typeNameLink">KeyGen2URIs.CLIENT_FEATURES</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="KeyGen2URIs.LOGOTYPES.html" title="interface in org.webpki.keygen2"><span class="typeNameLink">KeyGen2URIs.LOGOTYPES</span></a></li>
+<li class="circle">java.io.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink"><span class="typeNameLink">Serializable</span></a>
 <ul>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/ServerCryptoInterface.html" title="interface in org.webpki.keygen2"><span class="typeNameLink">ServerCryptoInterface</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="ServerCryptoInterface.html" title="interface in org.webpki.keygen2"><span class="typeNameLink">ServerCryptoInterface</span></a></li>
 </ul>
 </li>
 </ul>
+</section>
+<section role="region">
 <h2 title="Enum Hierarchy">Enum Hierarchy</h2>
 <ul>
-<li type="circle">java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang"><span class="typeNameLink">Object</span></a>
+<li class="circle">java.lang.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink"><span class="typeNameLink">Object</span></a>
 <ul>
-<li type="circle">java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?is-external=true" title="class or interface in java.lang"><span class="typeNameLink">Enum</span></a>&lt;E&gt; (implements java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang">Comparable</a>&lt;T&gt;, java.io.<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>)
+<li class="circle">java.lang.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Enum.html?is-external=true" title="class or interface in java.lang" class="externalLink"><span class="typeNameLink">Enum</span></a>&lt;E&gt; (implements java.lang.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Comparable</a>&lt;T&gt;, java.io.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a>)
 <ul>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/ServerState.ProtocolPhase.html" title="enum in org.webpki.keygen2"><span class="typeNameLink">ServerState.ProtocolPhase</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/KeyGen2Messages.html" title="enum in org.webpki.keygen2"><span class="typeNameLink">KeyGen2Messages</span></a></li>
-<li type="circle">org.webpki.keygen2.<a href="../../../org/webpki/keygen2/Action.html" title="enum in org.webpki.keygen2"><span class="typeNameLink">Action</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="Action.html" title="enum in org.webpki.keygen2"><span class="typeNameLink">Action</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="KeyGen2Messages.html" title="enum in org.webpki.keygen2"><span class="typeNameLink">KeyGen2Messages</span></a></li>
+<li class="circle">org.webpki.keygen2.<a href="ServerState.ProtocolPhase.html" title="enum in org.webpki.keygen2"><span class="typeNameLink">ServerState.ProtocolPhase</span></a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
+</section>
 </div>
+</main>
+<footer role="contentinfo">
+<nav role="navigation">
 <!-- ======= START OF BOTTOM NAVBAR ====== -->
-<div class="bottomNav"><a name="navbar.bottom">
+<div class="bottomNav"><a id="navbar.bottom">
 <!--   -->
 </a>
 <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
-<a name="navbar.bottom.firstrow">
+<a id="navbar.bottom.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
-<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="../../../index.html">Overview</a></li>
 <li><a href="package-summary.html">Package</a></li>
 <li>Class</li>
 <li class="navBarCell1Rev">Tree</li>
@@ -191,16 +225,8 @@
 </ul>
 </div>
 <div class="subNav">
-<ul class="navList">
-<li><a href="../../../org/webpki/json/package-tree.html">Prev</a></li>
-<li><a href="../../../org/webpki/net/package-tree.html">Next</a></li>
-</ul>
-<ul class="navList">
-<li><a href="../../../index.html?org/webpki/keygen2/package-tree.html" target="_top">Frames</a></li>
-<li><a href="package-tree.html" target="_top">No&nbsp;Frames</a></li>
-</ul>
 <ul class="navList" id="allclasses_navbar_bottom">
-<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+<li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -213,11 +239,16 @@
   }
   //-->
 </script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
 </div>
-<a name="skip.navbar.bottom">
+<a id="skip.navbar.bottom">
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>2005-2018 WebPKI.org.</i></small></p>
+</nav>
+<p class="legalCopy"><small><i>2005-2020 WebPKI.org.</i></small></p>
+</footer>
 </body>
 </html>

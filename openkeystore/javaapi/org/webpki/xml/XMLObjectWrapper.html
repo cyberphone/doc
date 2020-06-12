@@ -1,12 +1,22 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML>
 <!-- NewPage -->
 <html lang="en">
 <head>
 
 <title>XMLObjectWrapper (WebPKI.org Support)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+<link rel="stylesheet" type="text/css" href="../../../jquery/jquery-ui.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
+<script type="text/javascript" src="../../../jquery/jszip/dist/jszip.min.js"></script>
+<script type="text/javascript" src="../../../jquery/jszip-utils/dist/jszip-utils.min.js"></script>
+<!--[if IE]>
+<script type="text/javascript" src="../../../jquery/jszip-utils/dist/jszip-utils-ie.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="../../../jquery/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="../../../jquery/jquery-migrate-3.0.1.js"></script>
+<script type="text/javascript" src="../../../jquery/jquery-ui.js"></script>
 </head>
 <body>
 <script type="text/javascript"><!--
@@ -18,26 +28,31 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":6,"i4":10,"i5":10,"i6":6,"i7":10,"i8":10,"i9":10,"i10":10,"i11":6,"i12":10,"i13":10,"i14":6,"i15":10,"i16":6,"i17":10,"i18":10,"i19":6,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":6,"i4":10,"i5":10,"i6":6,"i7":10,"i8":10,"i9":10,"i10":10,"i11":6,"i12":10,"i13":10,"i14":6,"i15":10,"i16":6,"i17":10,"i18":10,"i19":6,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
-</script>
+var pathtoroot = "../../../";
+var useModuleDirectories = true;
+loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
 </noscript>
+<header role="banner">
+<nav role="navigation">
+<div class="fixedNav">
 <!-- ========= START OF TOP NAVBAR ======= -->
-<div class="topNav"><a name="navbar.top">
+<div class="topNav"><a id="navbar.top">
 <!--   -->
 </a>
 <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
-<a name="navbar.top.firstrow">
+<a id="navbar.top.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
-<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="../../../index.html">Overview</a></li>
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
@@ -46,16 +61,14 @@ var activeTableTab = "activeTableTab";
 </ul>
 </div>
 <div class="subNav">
-<ul class="navList">
-<li><a href="../../../org/webpki/xml/XMLCookie.html" title="class in org.webpki.xml"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../org/webpki/xml/XMLSchemaCache.html" title="class in org.webpki.xml"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
-</ul>
-<ul class="navList">
-<li><a href="../../../index.html?org/webpki/xml/XMLObjectWrapper.html" target="_top">Frames</a></li>
-<li><a href="XMLObjectWrapper.html" target="_top">No&nbsp;Frames</a></li>
-</ul>
 <ul class="navList" id="allclasses_navbar_top">
-<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+<li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" disabled="disabled">
+<input type="reset" id="reset" value="reset" disabled="disabled">
+</li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -68,6 +81,9 @@ var activeTableTab = "activeTableTab";
   }
   //-->
 </script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
 </div>
 <div>
 <ul class="subNavList">
@@ -84,18 +100,27 @@ var activeTableTab = "activeTableTab";
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
-<a name="skip.navbar.top">
+<a id="skip.navbar.top">
 <!--   -->
 </a></div>
 <!-- ========= END OF TOP NAVBAR ========= -->
+</div>
+<div class="navPadding">&nbsp;</div>
+<script type="text/javascript"><!--
+$('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+//-->
+</script>
+</nav>
+</header>
 <!-- ======== START OF CLASS DATA ======== -->
+<main role="main">
 <div class="header">
-<div class="subTitle">org.webpki.xml</div>
+<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.webpki.xml</a></div>
 <h2 title="Class XMLObjectWrapper" class="title">Class XMLObjectWrapper</h2>
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
-<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
 <li>org.webpki.xml.XMLObjectWrapper</li>
@@ -107,23 +132,22 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>Direct Known Subclasses:</dt>
-<dd><a href="../../../org/webpki/tools/WSCreator.html" title="class in org.webpki.tools">WSCreator</a>, <a href="../../../org/webpki/xmldsig/XMLSignatureWrapper.html" title="class in org.webpki.xmldsig">XMLSignatureWrapper</a></dd>
+<dd><code><a href="../xmldsig/XMLSignatureWrapper.html" title="class in org.webpki.xmldsig">XMLSignatureWrapper</a></code></dd>
 </dl>
 <hr>
-<br>
 <pre>public abstract class <span class="typeNameLabel">XMLObjectWrapper</span>
-extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
 <div class="block">Base class for java classes whos data can be translated to/from XML documents.
  <p>A <code>XMLObjectWrapper</code> subclass represents (and handles) a certain
  <a href="http://www.w3.org/XML/Schema">schema</a>.
- <p>A <code>XMLObjectWrapper</code> subclass should be capable of <a href="../../../org/webpki/xml/XMLObjectWrapper.html#fromXML-org.webpki.xml.DOMReaderHelper-"><code>initializing from</code></a>
- a <a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html?is-external=true" title="class or interface in org.w3c.dom"><code>DOM Document</code></a> and also <a href="../../../org/webpki/xml/XMLObjectWrapper.html#toXML-org.webpki.xml.DOMWriterHelper-"><code>produce</code></a> a
- <a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html?is-external=true" title="class or interface in org.w3c.dom"><code>DOM Document</code></a> representing it's current state.
+ <p>A <code>XMLObjectWrapper</code> subclass should be capable of <a href="#fromXML(org.webpki.xml.DOMReaderHelper)"><code>initializing from</code></a>
+ a <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Document.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink"><code>DOM Document</code></a> and also <a href="#toXML(org.webpki.xml.DOMWriterHelper)"><code>produce</code></a> a
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Document.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink"><code>DOM Document</code></a> representing it's current state.
  It <b>must</b> have a public empty (no argument-) constructor to allow
- the <a href="../../../org/webpki/xml/XMLSchemaCache.html" title="class in org.webpki.xml"><code>XMLSchemaCache</code></a> to create an object instance and
- call it's <a href="../../../org/webpki/xml/XMLObjectWrapper.html#namespace--"><code>namespace</code></a> and <a href="../../../org/webpki/xml/XMLObjectWrapper.html#element--"><code>element</code></a> methods.
- <p>A short example of an XMLObjectWrapper using <a href="../../../org/webpki/xml/DOMReaderHelper.html" title="class in org.webpki.xml"><code>DOMReaderHelper</code></a> and
- <a href="../../../org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml"><code>DOMWriterHelper</code></a> to handle it's XML representation is supplied
+ the <a href="XMLSchemaCache.html" title="class in org.webpki.xml"><code>XMLSchemaCache</code></a> to create an object instance and
+ call it's <a href="#namespace()"><code>namespace</code></a> and <a href="#element()"><code>element</code></a> methods.
+ <p>A short example of an XMLObjectWrapper using <a href="DOMReaderHelper.html" title="class in org.webpki.xml"><code>DOMReaderHelper</code></a> and
+ <a href="DOMWriterHelper.html" title="class in org.webpki.xml"><code>DOMWriterHelper</code></a> to handle it's XML representation is supplied
  with the distribution.</div>
 </li>
 </ul>
@@ -132,175 +156,207 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<section role="region">
 <ul class="blockList">
-<li class="blockList"><a name="constructor.summary">
+<li class="blockList"><a id="constructor.summary">
 <!--   -->
 </a>
 <h3>Constructor Summary</h3>
-<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<table class="memberSummary">
 <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
-<th class="colOne" scope="col">Constructor and Description</th>
+<th class="colFirst" scope="col">Constructor</th>
+<th class="colLast" scope="col">Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/XMLObjectWrapper.html#XMLObjectWrapper--">XMLObjectWrapper</a></span>()</code>&nbsp;</td>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E()">XMLObjectWrapper</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 </table>
 </li>
 </ul>
+</section>
 <!-- ========== METHOD SUMMARY =========== -->
+<section role="region">
 <ul class="blockList">
-<li class="blockList"><a name="method.summary">
+<li class="blockList"><a id="method.summary">
 <!--   -->
 </a>
 <h3>Method Summary</h3>
-<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<table class="memberSummary">
 <caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Method and Description</th>
+<th class="colSecond" scope="col">Method</th>
+<th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/XMLObjectWrapper.html#addSchema-java.lang.String-">addSchema</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;localname)</code>&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addSchema(java.lang.String)">addSchema</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;localname)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/XMLObjectWrapper.html#addWrapper-java.lang.Class-">addWrapper</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a>&gt;&nbsp;wrapperClass)</code>&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addWrapper(java.lang.Class)">addWrapper</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;? extends <a href="XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a>&gt;&nbsp;wrapperClass)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/XMLObjectWrapper.html#clearXMLCache--">clearXMLCache</a></span>()</code>&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#clearXMLCache()">clearXMLCache</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code>abstract <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/XMLObjectWrapper.html#element--">element</a></span>()</code>
-<div class="block">The element in the <a href="../../../org/webpki/xml/XMLObjectWrapper.html#namespace--"><code>target namespace</code></a> that this class handles.</div>
+<td class="colFirst"><code>abstract <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#element()">element</a></span>()</code></th>
+<td class="colLast">
+<div class="block">The element in the <a href="#namespace()"><code>target namespace</code></a> that this class handles.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/XMLObjectWrapper.html#equals-org.webpki.xml.XMLObjectWrapper-">equals</a></span>(<a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a>&nbsp;other)</code>&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#equals(org.webpki.xml.XMLObjectWrapper)">equals</a></span>&#8203;(<a href="XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a>&nbsp;other)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/XMLObjectWrapper.html#forcedDOMRewrite--">forcedDOMRewrite</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#forcedDOMRewrite()">forcedDOMRewrite</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>protected abstract void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/XMLObjectWrapper.html#fromXML-org.webpki.xml.DOMReaderHelper-">fromXML</a></span>(<a href="../../../org/webpki/xml/DOMReaderHelper.html" title="class in org.webpki.xml">DOMReaderHelper</a>&nbsp;helper)</code>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fromXML(org.webpki.xml.DOMReaderHelper)">fromXML</a></span>&#8203;(<a href="DOMReaderHelper.html" title="class in org.webpki.xml">DOMReaderHelper</a>&nbsp;helper)</code></th>
+<td class="colLast">
 <div class="block">Initialize the object from it's XML-encoding.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
-<td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/XMLObjectWrapper.html#getResource-java.lang.String-">getResource</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<td class="colFirst"><code>protected <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/InputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">InputStream</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getResource(java.lang.String)">getResource</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</code></th>
+<td class="colLast">
 <div class="block">Convenience method for getting resources through the <code>ClassLoader</code>.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html?is-external=true" title="class or interface in org.w3c.dom">Document</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/XMLObjectWrapper.html#getRootDocument--">getRootDocument</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Document.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Document</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRootDocument()">getRootDocument</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/XMLObjectWrapper.html#getRootElement--">getRootElement</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRootElement()">getRootElement</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i10" class="altColor">
-<td class="colFirst"><code><a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a>[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/XMLObjectWrapper.html#getWrappedChildren--">getWrappedChildren</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code><a href="XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a>[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getWrappedChildren()">getWrappedChildren</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>protected abstract boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/XMLObjectWrapper.html#hasQualifiedElements--">hasQualifiedElements</a></span>()</code>&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasQualifiedElements()">hasQualifiedElements</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/XMLObjectWrapper.html#hasWrapper-org.w3c.dom.Element-">hasWrapper</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;e)</code>&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasWrapper(org.w3c.dom.Element)">hasWrapper</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;e)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i13" class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/XMLObjectWrapper.html#inheritIndentFromParent--">inheritIndentFromParent</a></span>()</code>&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#inheritIndentFromParent()">inheritIndentFromParent</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i14" class="altColor">
 <td class="colFirst"><code>protected abstract void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/XMLObjectWrapper.html#init--">init</a></span>()</code>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#init()">init</a></span>()</code></th>
+<td class="colLast">
 <div class="block">Init method called when the wrapper class is added to an
- <a href="../../../org/webpki/xml/XMLSchemaCache.html" title="class in org.webpki.xml"><code>XMLSchemaCache</code></a>.</div>
+ <a href="XMLSchemaCache.html" title="class in org.webpki.xml"><code>XMLSchemaCache</code></a>.</div>
 </td>
 </tr>
 <tr id="i15" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/XMLObjectWrapper.html#isWritten--">isWritten</a></span>()</code>&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isWritten()">isWritten</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i16" class="altColor">
-<td class="colFirst"><code>abstract <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/XMLObjectWrapper.html#namespace--">namespace</a></span>()</code>
+<td class="colFirst"><code>abstract <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#namespace()">namespace</a></span>()</code></th>
+<td class="colLast">
 <div class="block">The <a href="http://www.w3.org/TR/xmlschema-1/#key-targetNS">target namespace)</a>
  of the element that this class handles.</div>
 </td>
 </tr>
 <tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/XMLObjectWrapper.html#setNameSpaceMode-boolean-">setNameSpaceMode</a></span>(boolean&nbsp;output)</code>&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setNameSpaceMode(boolean)">setNameSpaceMode</a></span>&#8203;(boolean&nbsp;output)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i18" class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/XMLObjectWrapper.html#toString--">toString</a></span>()</code>
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toString()">toString</a></span>()</code></th>
+<td class="colLast">
 <div class="block">Default toString implementation.</div>
 </td>
 </tr>
 <tr id="i19" class="rowColor">
 <td class="colFirst"><code>protected abstract void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/XMLObjectWrapper.html#toXML-org.webpki.xml.DOMWriterHelper-">toXML</a></span>(<a href="../../../org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a>&nbsp;helper)</code>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toXML(org.webpki.xml.DOMWriterHelper)">toXML</a></span>&#8203;(<a href="DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a>&nbsp;helper)</code></th>
+<td class="colLast">
 <div class="block">Get the XML-encoding of the object.</div>
 </td>
 </tr>
 <tr id="i20" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/XMLObjectWrapper.html#validate--">validate</a></span>()</code>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#validate()">validate</a></span>()</code></th>
+<td class="colLast">
 <div class="block">Validate the XML-encoding of the object and validate it against the
- <a href="../../../org/webpki/xml/XMLSchemaCache.html" title="class in org.webpki.xml"><code>XMLSchemaCache</code></a> that originally created this object.</div>
+ <a href="XMLSchemaCache.html" title="class in org.webpki.xml"><code>XMLSchemaCache</code></a> that originally created this object.</div>
 </td>
 </tr>
 <tr id="i21" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/XMLObjectWrapper.html#validate-org.webpki.xml.XMLSchemaCache-">validate</a></span>(<a href="../../../org/webpki/xml/XMLSchemaCache.html" title="class in org.webpki.xml">XMLSchemaCache</a>&nbsp;schemaCache)</code>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#validate(org.webpki.xml.XMLSchemaCache)">validate</a></span>&#8203;(<a href="XMLSchemaCache.html" title="class in org.webpki.xml">XMLSchemaCache</a>&nbsp;schemaCache)</code></th>
+<td class="colLast">
 <div class="block">Validate the XML-encoding of the object and validate it against a
- <a href="../../../org/webpki/xml/XMLSchemaCache.html" title="class in org.webpki.xml"><code>XMLSchemaCache</code></a>.</div>
+ <a href="XMLSchemaCache.html" title="class in org.webpki.xml"><code>XMLSchemaCache</code></a>.</div>
 </td>
 </tr>
 <tr id="i22" class="altColor">
-<td class="colFirst"><code>protected <a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/XMLObjectWrapper.html#wrap-org.w3c.dom.Element-">wrap</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;e)</code>
-<div class="block">Wrap an element using the <a href="../../../org/webpki/xml/XMLSchemaCache.html" title="class in org.webpki.xml"><code>XMLSchemaCache</code></a> that created
+<td class="colFirst"><code>protected <a href="XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#wrap(org.w3c.dom.Element)">wrap</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;e)</code></th>
+<td class="colLast">
+<div class="block">Wrap an element using the <a href="XMLSchemaCache.html" title="class in org.webpki.xml"><code>XMLSchemaCache</code></a> that created
  this wrapper instance.</div>
 </td>
 </tr>
 <tr id="i23" class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/XMLObjectWrapper.html#writeXML--">writeXML</a></span>()</code>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writeXML()">writeXML</a></span>()</code></th>
+<td class="colLast">
 <div class="block">Write the XML-encoding of the object (wrapped in a document as returned by
- <a href="../../../org/webpki/xml/XMLObjectWrapper.html#toXMLDocument--"><code>toXMLDocument</code></a>) to a byte array.</div>
+ <a href="#toXMLDocument()"><code>toXMLDocument</code></a>) to a byte array.</div>
 </td>
 </tr>
 <tr id="i24" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/XMLObjectWrapper.html#writeXML-java.io.OutputStream-">writeXML</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;out)</code>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writeXML(java.io.OutputStream)">writeXML</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/OutputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">OutputStream</a>&nbsp;out)</code></th>
+<td class="colLast">
 <div class="block">Write the XML-encoding of the object (wrapped in a document as returned by
- <a href="../../../org/webpki/xml/XMLObjectWrapper.html#toXMLDocument--"><code>toXMLDocument</code></a>) to an <a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io"><code>OutputStream</code></a>.</div>
+ <a href="#toXMLDocument()"><code>toXMLDocument</code></a>) to an <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/OutputStream.html?is-external=true" title="class or interface in java.io" class="externalLink"><code>OutputStream</code></a>.</div>
 </td>
 </tr>
 </table>
 <ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
+<li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
+<code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang" class="externalLink">clone</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang" class="externalLink">equals</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang" class="externalLink">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang" class="externalLink">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang" class="externalLink">notify</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang" class="externalLink">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#wait(long,int)" title="class or interface in java.lang" class="externalLink">wait</a></code></li>
 </ul>
 </li>
 </ul>
+</section>
 </li>
 </ul>
 </div>
@@ -308,12 +364,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
+<section role="region">
 <ul class="blockList">
-<li class="blockList"><a name="constructor.detail">
+<li class="blockList"><a id="constructor.detail">
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="XMLObjectWrapper--">
+<a id="&lt;init&gt;()">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -324,279 +381,184 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </ul>
 </li>
 </ul>
+</section>
 <!-- ============ METHOD DETAIL ========== -->
+<section role="region">
 <ul class="blockList">
-<li class="blockList"><a name="method.detail">
+<li class="blockList"><a id="method.detail">
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="addSchema-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>addSchema</h4>
-<pre>protected&nbsp;void&nbsp;addSchema(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;localname)
-                  throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="addWrapper-java.lang.Class-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>addWrapper</h4>
-<pre>protected&nbsp;void&nbsp;addWrapper(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a>&gt;&nbsp;wrapperClass)
-                   throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="clearXMLCache--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>clearXMLCache</h4>
-<pre>public&nbsp;void&nbsp;clearXMLCache()
-                   throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="element--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>element</h4>
-<pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;element()</pre>
-<div class="block">The element in the <a href="../../../org/webpki/xml/XMLObjectWrapper.html#namespace--"><code>target namespace</code></a> that this class handles.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>Element name</dd>
-</dl>
-</li>
-</ul>
-<a name="equals-org.webpki.xml.XMLObjectWrapper-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>equals</h4>
-<pre>public&nbsp;boolean&nbsp;equals(<a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a>&nbsp;other)
-               throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="forcedDOMRewrite--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>forcedDOMRewrite</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;forcedDOMRewrite()
-                         throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="fromXML-org.webpki.xml.DOMReaderHelper-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>fromXML</h4>
-<pre>protected abstract&nbsp;void&nbsp;fromXML(<a href="../../../org/webpki/xml/DOMReaderHelper.html" title="class in org.webpki.xml">DOMReaderHelper</a>&nbsp;helper)
-                         throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Initialize the object from it's XML-encoding.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>helper</code> - Helper</dd>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If something unexpected happens...</dd>
-</dl>
-</li>
-</ul>
-<a name="getResource-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getResource</h4>
-<pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;getResource(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
-                           throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Convenience method for getting resources through the <code>ClassLoader</code>.
- <p>This method gets the resource using
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true#getResourceAsStream-java.lang.String-" title="class or interface in java.lang"><code>getClass().getResourceAsStream()</code></a></div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>name</code> - Name of resource</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>Resource as stream</dd>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If something unexpected happens...</dd>
-</dl>
-</li>
-</ul>
-<a name="getRootDocument--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getRootDocument</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html?is-external=true" title="class or interface in org.w3c.dom">Document</a>&nbsp;getRootDocument()
-                         throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="getRootElement--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getRootElement</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;getRootElement()
-                       throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="getWrappedChildren--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getWrappedChildren</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a>[]&nbsp;getWrappedChildren()</pre>
-</li>
-</ul>
-<a name="hasQualifiedElements--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>hasQualifiedElements</h4>
-<pre>protected abstract&nbsp;boolean&nbsp;hasQualifiedElements()</pre>
-</li>
-</ul>
-<a name="hasWrapper-org.w3c.dom.Element-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>hasWrapper</h4>
-<pre>protected&nbsp;boolean&nbsp;hasWrapper(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;e)</pre>
-</li>
-</ul>
-<a name="inheritIndentFromParent--">
+<a id="inheritIndentFromParent()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>inheritIndentFromParent</h4>
-<pre>protected&nbsp;boolean&nbsp;inheritIndentFromParent()</pre>
+<pre class="methodSignature">protected&nbsp;boolean&nbsp;inheritIndentFromParent()</pre>
 </li>
 </ul>
-<a name="init--">
+<a id="addSchema(java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>init</h4>
-<pre>protected abstract&nbsp;void&nbsp;init()
-                      throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Init method called when the wrapper class is added to an
- <a href="../../../org/webpki/xml/XMLSchemaCache.html" title="class in org.webpki.xml"><code>XMLSchemaCache</code></a>.
- The wrapper may override this method to autmatically register the
- schemas on which it depends.</div>
+<h4>addSchema</h4>
+<pre class="methodSignature">protected&nbsp;void&nbsp;addSchema&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;localname)
+                  throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If something unexpected happens...</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../org/webpki/xml/XMLObjectWrapper.html#addSchema-java.lang.String-"><code>addSchema(String)</code></a></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="isWritten--">
+<a id="addWrapper(java.lang.Class)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addWrapper</h4>
+<pre class="methodSignature">protected&nbsp;void&nbsp;addWrapper&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;? extends <a href="XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a>&gt;&nbsp;wrapperClass)
+                   throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
+</dl>
+</li>
+</ul>
+<a id="getWrappedChildren()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getWrappedChildren</h4>
+<pre class="methodSignature">public&nbsp;<a href="XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a>[]&nbsp;getWrappedChildren()</pre>
+</li>
+</ul>
+<a id="isWritten()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>isWritten</h4>
-<pre>public&nbsp;boolean&nbsp;isWritten()</pre>
+<pre class="methodSignature">public&nbsp;boolean&nbsp;isWritten()</pre>
 </li>
 </ul>
-<a name="namespace--">
+<a id="clearXMLCache()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>namespace</h4>
-<pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;namespace()</pre>
-<div class="block">The <a href="http://www.w3.org/TR/xmlschema-1/#key-targetNS">target namespace)</a>
- of the element that this class handles.</div>
+<h4>clearXMLCache</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;clearXMLCache()
+                   throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>Namespace uri</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="setNameSpaceMode-boolean-">
+<a id="setNameSpaceMode(boolean)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setNameSpaceMode</h4>
-<pre>public&nbsp;void&nbsp;setNameSpaceMode(boolean&nbsp;output)</pre>
+<pre class="methodSignature">public&nbsp;void&nbsp;setNameSpaceMode&#8203;(boolean&nbsp;output)</pre>
 </li>
 </ul>
-<a name="toString--">
+<a id="hasQualifiedElements()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>toString</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;toString()</pre>
-<div class="block">Default toString implementation.
- <p>Returns a string containing the XML representation of this object
- (wrapped in a document as returned by <a href="../../../org/webpki/xml/XMLObjectWrapper.html#toXMLDocument--"><code>toXMLDocument</code></a>).</div>
+<h4>hasQualifiedElements</h4>
+<pre class="methodSignature">protected abstract&nbsp;boolean&nbsp;hasQualifiedElements()</pre>
+</li>
+</ul>
+<a id="init()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>init</h4>
+<pre class="methodSignature">protected abstract&nbsp;void&nbsp;init()
+                      throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<div class="block">Init method called when the wrapper class is added to an
+ <a href="XMLSchemaCache.html" title="class in org.webpki.xml"><code>XMLSchemaCache</code></a>.
+ The wrapper may override this method to autmatically register the
+ schemas on which it depends.</div>
 <dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>XML text</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - If something unexpected happens...</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="#addSchema(java.lang.String)"><code>addSchema(String)</code></a></dd>
 </dl>
 </li>
 </ul>
-<a name="toXML-org.webpki.xml.DOMWriterHelper-">
+<a id="wrap(org.w3c.dom.Element)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>wrap</h4>
+<pre class="methodSignature">protected&nbsp;<a href="XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a>&nbsp;wrap&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;e)
+                         throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<div class="block">Wrap an element using the <a href="XMLSchemaCache.html" title="class in org.webpki.xml"><code>XMLSchemaCache</code></a> that created
+ this wrapper instance.
+ <p>The wrapper class to be used is determined using
+ <a href="XMLSchemaCache.html#wrap(org.w3c.dom.Element)"><code>XMLSchemaCache's wrap(Element) method</code></a>,
+ which has a known weakness, described in
+ <a href="XMLSchemaCache.html#wrap(org.w3c.dom.Element)"><code>it's documentation</code></a>, that should be
+ considered when using this method.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>e</code> - Element</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Wrapper</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - If something unexpected happens...</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalStateException</a></code> - If this wrapper object was not created by an
+                               <a href="XMLSchemaCache.html" title="class in org.webpki.xml"><code>XMLSchemaCache</code></a>.</dd>
+</dl>
+</li>
+</ul>
+<a id="hasWrapper(org.w3c.dom.Element)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hasWrapper</h4>
+<pre class="methodSignature">protected&nbsp;boolean&nbsp;hasWrapper&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;e)</pre>
+</li>
+</ul>
+<a id="fromXML(org.webpki.xml.DOMReaderHelper)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fromXML</h4>
+<pre class="methodSignature">protected abstract&nbsp;void&nbsp;fromXML&#8203;(<a href="DOMReaderHelper.html" title="class in org.webpki.xml">DOMReaderHelper</a>&nbsp;helper)
+                         throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<div class="block">Initialize the object from it's XML-encoding.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>helper</code> - Helper</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - If something unexpected happens...</dd>
+</dl>
+</li>
+</ul>
+<a id="toXML(org.webpki.xml.DOMWriterHelper)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>toXML</h4>
-<pre>protected abstract&nbsp;void&nbsp;toXML(<a href="../../../org/webpki/xml/DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a>&nbsp;helper)
-                       throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre class="methodSignature">protected abstract&nbsp;void&nbsp;toXML&#8203;(<a href="DOMWriterHelper.html" title="class in org.webpki.xml">DOMWriterHelper</a>&nbsp;helper)
+                       throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <div class="block">Get the XML-encoding of the object.
- <p>This method should only produce an <a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom"><code>Element</code></a>,
+ <p>This method should only produce an <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink"><code>Element</code></a>,
  it should <b>not</b> be inserted into the document (as this
  method will not know where in the tree the caller intends to
  put the element). The document is passed as an argument only
@@ -606,126 +568,227 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>helper</code> - Helper</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If something unexpected happens...</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - If something unexpected happens...</dd>
 </dl>
 </li>
 </ul>
-<a name="validate--">
+<a id="forcedDOMRewrite()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>validate</h4>
-<pre>public&nbsp;void&nbsp;validate()
-              throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Validate the XML-encoding of the object and validate it against the
- <a href="../../../org/webpki/xml/XMLSchemaCache.html" title="class in org.webpki.xml"><code>XMLSchemaCache</code></a> that originally created this object.
- <p>Intended mainly for testing.</div>
+<h4>forcedDOMRewrite</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;forcedDOMRewrite()
+                         throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If validation fails.</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="validate-org.webpki.xml.XMLSchemaCache-">
+<a id="getRootElement()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRootElement</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;getRootElement()
+                       throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
+</dl>
+</li>
+</ul>
+<a id="getRootDocument()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRootDocument</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Document.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Document</a>&nbsp;getRootDocument()
+                         throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
+</dl>
+</li>
+</ul>
+<a id="validate(org.webpki.xml.XMLSchemaCache)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>validate</h4>
-<pre>public&nbsp;void&nbsp;validate(<a href="../../../org/webpki/xml/XMLSchemaCache.html" title="class in org.webpki.xml">XMLSchemaCache</a>&nbsp;schemaCache)
-              throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre class="methodSignature">public&nbsp;void&nbsp;validate&#8203;(<a href="XMLSchemaCache.html" title="class in org.webpki.xml">XMLSchemaCache</a>&nbsp;schemaCache)
+              throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <div class="block">Validate the XML-encoding of the object and validate it against a
- <a href="../../../org/webpki/xml/XMLSchemaCache.html" title="class in org.webpki.xml"><code>XMLSchemaCache</code></a>.
+ <a href="XMLSchemaCache.html" title="class in org.webpki.xml"><code>XMLSchemaCache</code></a>.
  <p>Intended mainly for testing.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>schemaCache</code> - Holds schema cache</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If validation fails.</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - If validation fails.</dd>
 </dl>
 </li>
 </ul>
-<a name="wrap-org.w3c.dom.Element-">
+<a id="validate()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>wrap</h4>
-<pre>protected&nbsp;<a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a>&nbsp;wrap(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;e)
-                         throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Wrap an element using the <a href="../../../org/webpki/xml/XMLSchemaCache.html" title="class in org.webpki.xml"><code>XMLSchemaCache</code></a> that created
- this wrapper instance.
- <p>The wrapper class to be used is determined using
- <a href="../../../org/webpki/xml/XMLSchemaCache.html#wrap-org.w3c.dom.Element-"><code>XMLSchemaCache's wrap(Element) method</code></a>,
- which has a known weakness, described in
- <a href="../../../org/webpki/xml/XMLSchemaCache.html#wrap-org.w3c.dom.Element-"><code>it's documentation</code></a>, that should be
- considered when using this method.</div>
+<h4>validate</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;validate()
+              throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<div class="block">Validate the XML-encoding of the object and validate it against the
+ <a href="XMLSchemaCache.html" title="class in org.webpki.xml"><code>XMLSchemaCache</code></a> that originally created this object.
+ <p>Intended mainly for testing.</div>
 <dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>e</code> - Element</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>Wrapper</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If something unexpected happens...</dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - If this wrapper object was not created by an
-                               <a href="../../../org/webpki/xml/XMLSchemaCache.html" title="class in org.webpki.xml"><code>XMLSchemaCache</code></a>.</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - If validation fails.</dd>
 </dl>
 </li>
 </ul>
-<a name="writeXML--">
+<a id="namespace()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>namespace</h4>
+<pre class="methodSignature">public abstract&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;namespace()</pre>
+<div class="block">The <a href="http://www.w3.org/TR/xmlschema-1/#key-targetNS">target namespace)</a>
+ of the element that this class handles.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Namespace uri</dd>
+</dl>
+</li>
+</ul>
+<a id="element()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>element</h4>
+<pre class="methodSignature">public abstract&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;element()</pre>
+<div class="block">The element in the <a href="#namespace()"><code>target namespace</code></a> that this class handles.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Element name</dd>
+</dl>
+</li>
+</ul>
+<a id="writeXML(java.io.OutputStream)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>writeXML</h4>
-<pre>public&nbsp;byte[]&nbsp;writeXML()
-                throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre class="methodSignature">public&nbsp;void&nbsp;writeXML&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/OutputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">OutputStream</a>&nbsp;out)
+              throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <div class="block">Write the XML-encoding of the object (wrapped in a document as returned by
- <a href="../../../org/webpki/xml/XMLObjectWrapper.html#toXMLDocument--"><code>toXMLDocument</code></a>) to a byte array.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>XML binary</dd>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If something unexpected happens...</dd>
-</dl>
-</li>
-</ul>
-<a name="writeXML-java.io.OutputStream-">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>writeXML</h4>
-<pre>public&nbsp;void&nbsp;writeXML(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;out)
-              throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Write the XML-encoding of the object (wrapped in a document as returned by
- <a href="../../../org/webpki/xml/XMLObjectWrapper.html#toXMLDocument--"><code>toXMLDocument</code></a>) to an <a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io"><code>OutputStream</code></a>.</div>
+ <a href="#toXMLDocument()"><code>toXMLDocument</code></a>) to an <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/OutputStream.html?is-external=true" title="class or interface in java.io" class="externalLink"><code>OutputStream</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>out</code> - Stream</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If something unexpected happens...</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - If something unexpected happens...</dd>
+</dl>
+</li>
+</ul>
+<a id="writeXML()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writeXML</h4>
+<pre class="methodSignature">public&nbsp;byte[]&nbsp;writeXML()
+                throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<div class="block">Write the XML-encoding of the object (wrapped in a document as returned by
+ <a href="#toXMLDocument()"><code>toXMLDocument</code></a>) to a byte array.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>XML binary</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - If something unexpected happens...</dd>
+</dl>
+</li>
+</ul>
+<a id="getResource(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getResource</h4>
+<pre class="methodSignature">protected&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/InputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">InputStream</a>&nbsp;getResource&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)
+                           throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<div class="block">Convenience method for getting resources through the <code>ClassLoader</code>.
+ <p>This method gets the resource using
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true#getResourceAsStream(java.lang.String)" title="class or interface in java.lang" class="externalLink"><code>getClass().getResourceAsStream()</code></a></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - Name of resource</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Resource as stream</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - If something unexpected happens...</dd>
+</dl>
+</li>
+</ul>
+<a id="equals(org.webpki.xml.XMLObjectWrapper)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>equals</h4>
+<pre class="methodSignature">public&nbsp;boolean&nbsp;equals&#8203;(<a href="XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a>&nbsp;other)
+               throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
+</dl>
+</li>
+</ul>
+<a id="toString()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>toString</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;toString()</pre>
+<div class="block">Default toString implementation.
+ <p>Returns a string containing the XML representation of this object
+ (wrapped in a document as returned by <a href="#toXMLDocument()"><code>toXMLDocument</code></a>).</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang" class="externalLink">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>XML text</dd>
 </dl>
 </li>
 </ul>
 </li>
 </ul>
+</section>
 </li>
 </ul>
 </div>
 </div>
+</main>
 <!-- ========= END OF CLASS DATA ========= -->
+<footer role="contentinfo">
+<nav role="navigation">
 <!-- ======= START OF BOTTOM NAVBAR ====== -->
-<div class="bottomNav"><a name="navbar.bottom">
+<div class="bottomNav"><a id="navbar.bottom">
 <!--   -->
 </a>
 <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
-<a name="navbar.bottom.firstrow">
+<a id="navbar.bottom.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
-<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="../../../index.html">Overview</a></li>
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
@@ -734,16 +797,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </ul>
 </div>
 <div class="subNav">
-<ul class="navList">
-<li><a href="../../../org/webpki/xml/XMLCookie.html" title="class in org.webpki.xml"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../org/webpki/xml/XMLSchemaCache.html" title="class in org.webpki.xml"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
-</ul>
-<ul class="navList">
-<li><a href="../../../index.html?org/webpki/xml/XMLObjectWrapper.html" target="_top">Frames</a></li>
-<li><a href="XMLObjectWrapper.html" target="_top">No&nbsp;Frames</a></li>
-</ul>
 <ul class="navList" id="allclasses_navbar_bottom">
-<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+<li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -756,6 +811,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
   }
   //-->
 </script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
 </div>
 <div>
 <ul class="subNavList">
@@ -772,10 +830,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
-<a name="skip.navbar.bottom">
+<a id="skip.navbar.bottom">
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>2005-2018 WebPKI.org.</i></small></p>
+</nav>
+<p class="legalCopy"><small><i>2005-2020 WebPKI.org.</i></small></p>
+</footer>
 </body>
 </html>

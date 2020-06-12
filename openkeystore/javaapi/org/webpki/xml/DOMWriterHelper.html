@@ -1,12 +1,22 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML>
 <!-- NewPage -->
 <html lang="en">
 <head>
 
 <title>DOMWriterHelper (WebPKI.org Support)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+<link rel="stylesheet" type="text/css" href="../../../jquery/jquery-ui.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
+<script type="text/javascript" src="../../../jquery/jszip/dist/jszip.min.js"></script>
+<script type="text/javascript" src="../../../jquery/jszip-utils/dist/jszip-utils.min.js"></script>
+<!--[if IE]>
+<script type="text/javascript" src="../../../jquery/jszip-utils/dist/jszip-utils-ie.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="../../../jquery/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="../../../jquery/jquery-migrate-3.0.1.js"></script>
+<script type="text/javascript" src="../../../jquery/jquery-ui.js"></script>
 </head>
 <body>
 <script type="text/javascript"><!--
@@ -18,26 +28,31 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":9,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10,"i36":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":9,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10,"i36":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
-</script>
+var pathtoroot = "../../../";
+var useModuleDirectories = true;
+loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
 </noscript>
+<header role="banner">
+<nav role="navigation">
+<div class="fixedNav">
 <!-- ========= START OF TOP NAVBAR ======= -->
-<div class="topNav"><a name="navbar.top">
+<div class="topNav"><a id="navbar.top">
 <!--   -->
 </a>
 <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
-<a name="navbar.top.firstrow">
+<a id="navbar.top.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
-<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="../../../index.html">Overview</a></li>
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
@@ -46,16 +61,14 @@ var activeTableTab = "activeTableTab";
 </ul>
 </div>
 <div class="subNav">
-<ul class="navList">
-<li><a href="../../../org/webpki/xml/DOMUtil.html" title="class in org.webpki.xml"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../org/webpki/xml/XMLCookie.html" title="class in org.webpki.xml"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
-</ul>
-<ul class="navList">
-<li><a href="../../../index.html?org/webpki/xml/DOMWriterHelper.html" target="_top">Frames</a></li>
-<li><a href="DOMWriterHelper.html" target="_top">No&nbsp;Frames</a></li>
-</ul>
 <ul class="navList" id="allclasses_navbar_top">
-<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+<li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" disabled="disabled">
+<input type="reset" id="reset" value="reset" disabled="disabled">
+</li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -68,6 +81,9 @@ var activeTableTab = "activeTableTab";
   }
   //-->
 </script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
 </div>
 <div>
 <ul class="subNavList">
@@ -84,18 +100,27 @@ var activeTableTab = "activeTableTab";
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
-<a name="skip.navbar.top">
+<a id="skip.navbar.top">
 <!--   -->
 </a></div>
 <!-- ========= END OF TOP NAVBAR ========= -->
+</div>
+<div class="navPadding">&nbsp;</div>
+<script type="text/javascript"><!--
+$('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+//-->
+</script>
+</nav>
+</header>
 <!-- ======== START OF CLASS DATA ======== -->
+<main role="main">
 <div class="header">
-<div class="subTitle">org.webpki.xml</div>
+<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.webpki.xml</a></div>
 <h2 title="Class DOMWriterHelper" class="title">Class DOMWriterHelper</h2>
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
-<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
 <li>org.webpki.xml.DOMWriterHelper</li>
@@ -106,15 +131,14 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <hr>
-<br>
 <pre>public class <span class="typeNameLabel">DOMWriterHelper</span>
-extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
 <div class="block">Utility class making creation of DOM documents easier in simple cases.
  <p>The DOMWriterHelper holds a cursor, the
  <a name="current"><code><b>&quot;current element&quot;</b></code></a>,
  pointing at the last element created, to simplify building substructures
  and adding attributes.
- <p>Note that all <code>addXXXX</code> methods, and <a href="../../../org/webpki/xml/DOMWriterHelper.html#getParent--"><code>getParent</code></a>,
+ <p>Note that all <code>addXXXX</code> methods, and <a href="#getParent()"><code>getParent</code></a>,
  do not necessarily act on the &quot;current element&quot; but on the last non-text element
  created or visited. This is a consequence of the simplified model we use in this class
  were elements either contain text or subelements (not both). This distinction makes
@@ -127,20 +151,20 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
    helper.addString(&quot;state&quot;, &quot;CA&quot;);</pre>
  to create an element <code>address</code> with three subelements. If
  <code>addTextElement</code> had always operated on the &quot;current element&quot;,
- we would have had to insert <a href="../../../org/webpki/xml/DOMWriterHelper.html#getParent--"><code>getParent</code></a> between the
+ we would have had to insert <a href="#getParent()"><code>getParent</code></a> between the
  <code>addTextElement</code>s. As an additional consequence of this design,
- it wouldn't make sense to let <a href="../../../org/webpki/xml/DOMWriterHelper.html#getParent--"><code>getParent</code></a> operate
- on text elements. Hence <a href="../../../org/webpki/xml/DOMWriterHelper.html#getParent--"><code>getParent</code></a> will move the cursor
+ it wouldn't make sense to let <a href="#getParent()"><code>getParent</code></a> operate
+ on text elements. Hence <a href="#getParent()"><code>getParent</code></a> will move the cursor
  to the parent's parent if the &quot;current element&quot; is a text element.
  <p>A more technical explanation of this would be that there are in fact two
  cursors, one &quot;element insertion cursor&quot; and one
  &quot;attribute setting cursor&quot;, and that <code>setXXXX</code> methods operate on the
  element pointed out by the &quot;attribute setting cursor&quot; while the
- navigation (<a href="../../../org/webpki/xml/DOMWriterHelper.html#getParent--"><code>getParent</code></a>) and element creation (<code>addXXXX</code>)
+ navigation (<a href="#getParent()"><code>getParent</code></a>) and element creation (<code>addXXXX</code>)
  methods operate on the &quot;element insertion cursor&quot;. Then all
- <code>addXXXX</code> methods and <a href="../../../org/webpki/xml/DOMWriterHelper.html#getParent--"><code>getParent</code></a> move the
- &quot;attribute setting cursor&quot; while only <a href="../../../org/webpki/xml/DOMWriterHelper.html#getParent--"><code>getParent</code></a>,
- <a href="../../../org/webpki/xml/DOMWriterHelper.html#addChildElement-java.lang.String-"><code>addChildElement</code></a> and <a href="../../../org/webpki/xml/DOMWriterHelper.html#addWrapped-org.webpki.xml.XMLObjectWrapper-"><code>addWrapped</code></a>
+ <code>addXXXX</code> methods and <a href="#getParent()"><code>getParent</code></a> move the
+ &quot;attribute setting cursor&quot; while only <a href="#getParent()"><code>getParent</code></a>,
+ <a href="#addChildElement(java.lang.String)"><code>addChildElement</code></a> and <a href="#addWrapped(org.webpki.xml.XMLObjectWrapper)"><code>addWrapped</code></a>
  also move the &quot;element insertion cursor&quot; (the &quot;attribute setting cursor&quot;
  will then point to the same element as the &quot;element insertion cursor&quot;).
  <h3>A small example</h3>
@@ -164,7 +188,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
        ...
    &lt;/example:order&gt;</pre>
  This example code comes from an example included in the distribution
- to illustrate how to write an <a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml"><code>XMLObjectWrapper</code></a>.</div>
+ to illustrate how to write an <a href="XMLObjectWrapper.html" title="class in org.webpki.xml"><code>XMLObjectWrapper</code></a>.</div>
 </li>
 </ul>
 </div>
@@ -172,276 +196,320 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<section role="region">
 <ul class="blockList">
-<li class="blockList"><a name="constructor.summary">
+<li class="blockList"><a id="constructor.summary">
 <!--   -->
 </a>
 <h3>Constructor Summary</h3>
-<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<table class="memberSummary">
 <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
-<th class="colOne" scope="col">Constructor and Description</th>
+<th class="colFirst" scope="col">Constructor</th>
+<th class="colLast" scope="col">Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#DOMWriterHelper-org.webpki.xml.XMLObjectWrapper-java.lang.String-">DOMWriterHelper</a></span>(<a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a>&nbsp;instance,
-               <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;prefix)</code>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(org.webpki.xml.XMLObjectWrapper,java.lang.String)">DOMWriterHelper</a></span>&#8203;(<a href="XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a>&nbsp;instance,
+               <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;prefix)</code></th>
+<td class="colLast">
 <div class="block">Creates a <code>DOMWriterHelper</code> wrapping an <code>XMLObjectWrapper</code>.</div>
 </td>
 </tr>
 </table>
 </li>
 </ul>
+</section>
 <!-- ========== METHOD SUMMARY =========== -->
+<section role="region">
 <ul class="blockList">
-<li class="blockList"><a name="method.summary">
+<li class="blockList"><a id="method.summary">
 <!--   -->
 </a>
 <h3>Method Summary</h3>
-<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<table class="memberSummary">
 <caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Method and Description</th>
+<th class="colSecond" scope="col">Method</th>
+<th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#addBinary-java.lang.String-byte:A-">addBinary</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-         byte[]&nbsp;value)</code>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addBinary(java.lang.String,byte%5B%5D)">addBinary</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+         byte[]&nbsp;value)</code></th>
+<td class="colLast">
 <div class="block">Add a text element to the current element.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#addBoolean-java.lang.String-boolean-">addBoolean</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-          boolean&nbsp;value)</code>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addBoolean(java.lang.String,boolean)">addBoolean</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+          boolean&nbsp;value)</code></th>
+<td class="colLast">
 <div class="block">Add a text element to the current element.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/CDATASection.html?is-external=true" title="class or interface in org.w3c.dom">CDATASection</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#addCDATA-java.lang.String-java.lang.String-">addCDATA</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</code>
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/CDATASection.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">CDATASection</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addCDATA(java.lang.String,java.lang.String)">addCDATA</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+        <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value)</code></th>
+<td class="colLast">
 <div class="block">Add a CDATA element to the current element.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#addChildElement-java.lang.String-">addChildElement</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addChildElement(java.lang.String)">addChildElement</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</code></th>
+<td class="colLast">
 <div class="block">Creates an empty element as a child of the last nontext element created or visited.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#addChildElementNS-java.lang.String-java.lang.String-">addChildElementNS</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;ns,
-                 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addChildElementNS(java.lang.String,java.lang.String)">addChildElementNS</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;ns,
+                 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</code></th>
+<td class="colLast">
 <div class="block">Creates an empty element as a child of the last nontext element created or visited.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#addClone-org.w3c.dom.Element-">addClone</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;element)</code>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addClone(org.w3c.dom.Element)">addClone</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;element)</code></th>
+<td class="colLast">
 <div class="block">Add a clone of an existing element as a child of the last nontext element created or visited.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#addComment-java.lang.String-boolean-">addComment</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;comment,
-          boolean&nbsp;indent_flag)</code>&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addComment(java.lang.String,boolean)">addComment</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;comment,
+          boolean&nbsp;indent_flag)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#addDate-java.lang.String-java.util.GregorianCalendar-">addDate</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-       <a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;value)</code>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addDate(java.lang.String,java.util.GregorianCalendar)">addDate</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+       <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util" class="externalLink">GregorianCalendar</a>&nbsp;value)</code></th>
+<td class="colLast">
 <div class="block">Add a text element to the current element.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#addDateTime-java.lang.String-java.util.GregorianCalendar-java.util.EnumSet-">addDateTime</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-           <a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;value,
-           <a href="https://docs.oracle.com/javase/8/docs/api/java/util/EnumSet.html?is-external=true" title="class or interface in java.util">EnumSet</a>&lt;<a href="../../../org/webpki/util/ISODateTime.DatePatterns.html" title="enum in org.webpki.util">ISODateTime.DatePatterns</a>&gt;&nbsp;format)</code>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addDateTime(java.lang.String,java.util.GregorianCalendar,java.util.EnumSet)">addDateTime</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+           <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util" class="externalLink">GregorianCalendar</a>&nbsp;value,
+           <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/EnumSet.html?is-external=true" title="class or interface in java.util" class="externalLink">EnumSet</a>&lt;<a href="../util/ISODateTime.DatePatterns.html" title="enum in org.webpki.util">ISODateTime.DatePatterns</a>&gt;&nbsp;format)</code></th>
+<td class="colLast">
 <div class="block">Add a text element to the current element.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#addEmptyElement-java.lang.String-">addEmptyElement</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addEmptyElement(java.lang.String)">addEmptyElement</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</code></th>
+<td class="colLast">
 <div class="block">Creates an empty element as a child of the last nontext element created or visited,
  but without setting the new element as the target of the next <code>addXXX</code> call.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#addInt-java.lang.String-int-">addInt</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-      int&nbsp;value)</code>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addInt(java.lang.String,int)">addInt</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+      int&nbsp;value)</code></th>
+<td class="colLast">
 <div class="block">Add a text element to the current element.</div>
 </td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#addList-java.lang.String-java.lang.String:A-">addList</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-       <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;list)</code>&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addList(java.lang.String,java.lang.String%5B%5D)">addList</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+       <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]&nbsp;list)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#addMoney-java.lang.String-long-int-">addMoney</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addMoney(java.lang.String,long,int)">addMoney</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
         long&nbsp;value,
-        int&nbsp;numberOfDecimals)</code>
+        int&nbsp;numberOfDecimals)</code></th>
+<td class="colLast">
 <div class="block">Add a text element to the current element.</div>
 </td>
 </tr>
 <tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#addObject-java.lang.String-java.lang.Object-">addObject</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-         <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;value)</code>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addObject(java.lang.String,java.lang.Object)">addObject</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+         <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;value)</code></th>
+<td class="colLast">
 <div class="block">Add a text element to the current element.</div>
 </td>
 </tr>
 <tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#addObjectConditional-java.lang.String-java.lang.String-">addObjectConditional</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                    <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</code>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addObjectConditional(java.lang.String,java.lang.String)">addObjectConditional</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+                    <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value)</code></th>
+<td class="colLast">
 <div class="block">Add a text element to the current element if the value is non-null.</div>
 </td>
 </tr>
 <tr id="i15" class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Text.html?is-external=true" title="class or interface in org.w3c.dom">Text</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#addString-java.lang.String-java.lang.String-">addString</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-         <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</code>
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Text.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Text</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addString(java.lang.String,java.lang.String)">addString</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+         <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value)</code></th>
+<td class="colLast">
 <div class="block">Add a text element to the current element.</div>
 </td>
 </tr>
 <tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#addStringConditional-java.lang.String-java.lang.String-">addStringConditional</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                    <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</code>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addStringConditional(java.lang.String,java.lang.String)">addStringConditional</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+                    <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value)</code></th>
+<td class="colLast">
 <div class="block">Add a text element to the current element if the value is non-null.</div>
 </td>
 </tr>
 <tr id="i17" class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Text.html?is-external=true" title="class or interface in org.w3c.dom">Text</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#addStringNS-java.lang.String-java.lang.String-java.lang.String-">addStringNS</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;ns,
-           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</code>
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Text.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Text</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addStringNS(java.lang.String,java.lang.String,java.lang.String)">addStringNS</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;ns,
+           <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+           <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value)</code></th>
+<td class="colLast">
 <div class="block">Add a text element to the current element.</div>
 </td>
 </tr>
 <tr id="i18" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#addWrapped-org.webpki.xml.XMLObjectWrapper-">addWrapped</a></span>(<a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a>&nbsp;wrapper)</code>
-<div class="block">Add a <a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml"><code>wrapped element</code></a> as a child of the last nontext element created or visited.</div>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addWrapped(org.webpki.xml.XMLObjectWrapper)">addWrapped</a></span>&#8203;(<a href="XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a>&nbsp;wrapper)</code></th>
+<td class="colLast">
+<div class="block">Add a <a href="XMLObjectWrapper.html" title="class in org.webpki.xml"><code>wrapped element</code></a> as a child of the last nontext element created or visited.</div>
 </td>
 </tr>
 <tr id="i19" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#addXMLCookie-org.webpki.xml.XMLCookie-">addXMLCookie</a></span>(<a href="../../../org/webpki/xml/XMLCookie.html" title="class in org.webpki.xml">XMLCookie</a>&nbsp;cookie)</code>&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addXMLCookie(org.webpki.xml.XMLCookie)">addXMLCookie</a></span>&#8203;(<a href="XMLCookie.html" title="class in org.webpki.xml">XMLCookie</a>&nbsp;cookie)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i20" class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#current--">current</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#current()">current</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i21" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#FixStartElement--">FixStartElement</a></span>()</code>&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#FixStartElement()">FixStartElement</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i22" class="altColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#formatDate-java.util.GregorianCalendar-">formatDate</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;t)</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#formatDate(java.util.GregorianCalendar)">formatDate</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util" class="externalLink">GregorianCalendar</a>&nbsp;t)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i23" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#getParent--">getParent</a></span>()</code>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getParent()">getParent</a></span>()</code></th>
+<td class="colLast">
 <div class="block">Set the parent of the last nontext element created or visited as current.</div>
 </td>
 </tr>
 <tr id="i24" class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#initializeRootObject-java.lang.String-">initializeRootObject</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;prefix)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#initializeRootObject(java.lang.String)">initializeRootObject</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;prefix)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i25" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#popPrefix--">popPrefix</a></span>()</code>&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#popPrefix()">popPrefix</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i26" class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#pushPrefix-java.lang.String-">pushPrefix</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;subprefix)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#pushPrefix(java.lang.String)">pushPrefix</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;subprefix)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i27" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#setBigIntegerAttribute-java.lang.String-java.math.BigInteger-">setBigIntegerAttribute</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                      <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html?is-external=true" title="class or interface in java.math">BigInteger</a>&nbsp;value)</code>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setBigIntegerAttribute(java.lang.String,java.math.BigInteger)">setBigIntegerAttribute</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+                      <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/BigInteger.html?is-external=true" title="class or interface in java.math" class="externalLink">BigInteger</a>&nbsp;value)</code></th>
+<td class="colLast">
 <div class="block">Set an attribute of the current element.</div>
 </td>
 </tr>
 <tr id="i28" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#setBinaryAttribute-java.lang.String-byte:A-">setBinaryAttribute</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                  byte[]&nbsp;value)</code>&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setBinaryAttribute(java.lang.String,byte%5B%5D)">setBinaryAttribute</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+                  byte[]&nbsp;value)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i29" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#setBooleanAttribute-java.lang.String-boolean-">setBooleanAttribute</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                   boolean&nbsp;value)</code>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setBooleanAttribute(java.lang.String,boolean)">setBooleanAttribute</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+                   boolean&nbsp;value)</code></th>
+<td class="colLast">
 <div class="block">Set an attribute of the current element.</div>
 </td>
 </tr>
 <tr id="i30" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#setDateTimeAttribute-java.lang.String-java.util.GregorianCalendar-java.util.EnumSet-">setDateTimeAttribute</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                    <a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;value,
-                    <a href="https://docs.oracle.com/javase/8/docs/api/java/util/EnumSet.html?is-external=true" title="class or interface in java.util">EnumSet</a>&lt;<a href="../../../org/webpki/util/ISODateTime.DatePatterns.html" title="enum in org.webpki.util">ISODateTime.DatePatterns</a>&gt;&nbsp;format)</code>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setDateTimeAttribute(java.lang.String,java.util.GregorianCalendar,java.util.EnumSet)">setDateTimeAttribute</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+                    <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util" class="externalLink">GregorianCalendar</a>&nbsp;value,
+                    <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/EnumSet.html?is-external=true" title="class or interface in java.util" class="externalLink">EnumSet</a>&lt;<a href="../util/ISODateTime.DatePatterns.html" title="enum in org.webpki.util">ISODateTime.DatePatterns</a>&gt;&nbsp;format)</code></th>
+<td class="colLast">
 <div class="block">Set an attribute of the current element to a date.</div>
 </td>
 </tr>
 <tr id="i31" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#setIntAttribute-java.lang.String-int-">setIntAttribute</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-               int&nbsp;value)</code>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setIntAttribute(java.lang.String,int)">setIntAttribute</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+               int&nbsp;value)</code></th>
+<td class="colLast">
 <div class="block">Set an attribute of the current element.</div>
 </td>
 </tr>
 <tr id="i32" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#setListAttribute-java.lang.String-java.lang.String:A-">setListAttribute</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;list)</code>&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setListAttribute(java.lang.String,java.lang.String%5B%5D)">setListAttribute</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+                <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]&nbsp;list)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i33" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#setMoneyAttribute-java.lang.String-long-int-">setMoneyAttribute</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setMoneyAttribute(java.lang.String,long,int)">setMoneyAttribute</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
                  long&nbsp;value,
-                 int&nbsp;numberOfDecimals)</code>
+                 int&nbsp;numberOfDecimals)</code></th>
+<td class="colLast">
 <div class="block">Set an attribute of the current element to a long divided by 10000 and rounded/extended to
  the desired number of decimals.</div>
 </td>
 </tr>
 <tr id="i34" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#setObjectAttribute-java.lang.String-java.lang.Object-">setObjectAttribute</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;value)</code>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setObjectAttribute(java.lang.String,java.lang.Object)">setObjectAttribute</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+                  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;value)</code></th>
+<td class="colLast">
 <div class="block">Set an attribute of the current element.</div>
 </td>
 </tr>
 <tr id="i35" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#setPrettyPrinting-boolean-">setPrettyPrinting</a></span>(boolean&nbsp;flag)</code>&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPrettyPrinting(boolean)">setPrettyPrinting</a></span>&#8203;(boolean&nbsp;flag)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i36" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/xml/DOMWriterHelper.html#setStringAttribute-java.lang.String-java.lang.String-">setStringAttribute</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</code>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setStringAttribute(java.lang.String,java.lang.String)">setStringAttribute</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+                  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value)</code></th>
+<td class="colLast">
 <div class="block">Set an attribute of the current element.</div>
 </td>
 </tr>
 </table>
 <ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
+<li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
+<code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang" class="externalLink">clone</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang" class="externalLink">equals</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang" class="externalLink">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang" class="externalLink">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang" class="externalLink">notify</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang" class="externalLink">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang" class="externalLink">toString</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#wait(long,int)" title="class or interface in java.lang" class="externalLink">wait</a></code></li>
 </ul>
 </li>
 </ul>
+</section>
 </li>
 </ul>
 </div>
@@ -449,103 +517,103 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
+<section role="region">
 <ul class="blockList">
-<li class="blockList"><a name="constructor.detail">
+<li class="blockList"><a id="constructor.detail">
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="DOMWriterHelper-org.webpki.xml.XMLObjectWrapper-java.lang.String-">
+<a id="&lt;init&gt;(org.webpki.xml.XMLObjectWrapper,java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>DOMWriterHelper</h4>
-<pre>public&nbsp;DOMWriterHelper(<a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a>&nbsp;instance,
-                       <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;prefix)
-                throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre>public&nbsp;DOMWriterHelper&#8203;(<a href="XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a>&nbsp;instance,
+                       <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;prefix)
+                throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <div class="block">Creates a <code>DOMWriterHelper</code> wrapping an <code>XMLObjectWrapper</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>instance</code> - XMLObjectWrapper</dd>
 <dd><code>prefix</code> - Prefix</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If anything unexpected happens...</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - If anything unexpected happens...</dd>
 </dl>
 </li>
 </ul>
 </li>
 </ul>
+</section>
 <!-- ============ METHOD DETAIL ========== -->
+<section role="region">
 <ul class="blockList">
-<li class="blockList"><a name="method.detail">
+<li class="blockList"><a id="method.detail">
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="addBinary-java.lang.String-byte:A-">
+<a id="pushPrefix(java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>addBinary</h4>
-<pre>public&nbsp;void&nbsp;addBinary(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                      byte[]&nbsp;value)</pre>
-<div class="block">Add a text element to the current element.
- <p>The text content of the new element will be the <code>Base64</code> encoding
- of <i>value</i>.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>name</code> - The name of the new element.</dd>
-<dd><code>value</code> - The unencoded binary value of the new element.</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="#current">DOMWriterHelper cursor state</a></dd>
-</dl>
+<h4>pushPrefix</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;pushPrefix&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;subprefix)</pre>
 </li>
 </ul>
-<a name="addBoolean-java.lang.String-boolean-">
+<a id="popPrefix()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>addBoolean</h4>
-<pre>public&nbsp;void&nbsp;addBoolean(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                       boolean&nbsp;value)</pre>
-<div class="block">Add a text element to the current element.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>name</code> - The name of the new element.</dd>
-<dd><code>value</code> - The content of the new element.</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="#current">DOMWriterHelper cursor state</a></dd>
-</dl>
+<h4>popPrefix</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;popPrefix()</pre>
 </li>
 </ul>
-<a name="addCDATA-java.lang.String-java.lang.String-">
+<a id="FixStartElement()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>addCDATA</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/CDATASection.html?is-external=true" title="class or interface in org.w3c.dom">CDATASection</a>&nbsp;addCDATA(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                             <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</pre>
-<div class="block">Add a CDATA element to the current element.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>name</code> - The name of the new element.</dd>
-<dd><code>value</code> - The text content of the new element.</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>CDATASection</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="#current">DOMWriterHelper cursor state</a></dd>
-</dl>
+<h4>FixStartElement</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;FixStartElement()</pre>
 </li>
 </ul>
-<a name="addChildElement-java.lang.String-">
+<a id="initializeRootObject(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>initializeRootObject</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;initializeRootObject&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;prefix)</pre>
+</li>
+</ul>
+<a id="setPrettyPrinting(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setPrettyPrinting</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setPrettyPrinting&#8203;(boolean&nbsp;flag)</pre>
+</li>
+</ul>
+<a id="addComment(java.lang.String,boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addComment</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;addComment&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;comment,
+                       boolean&nbsp;indent_flag)</pre>
+</li>
+</ul>
+<a id="addChildElement(java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>addChildElement</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;addChildElement(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;addChildElement&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</pre>
 <div class="block">Creates an empty element as a child of the last nontext element created or visited.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -557,14 +625,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </dl>
 </li>
 </ul>
-<a name="addChildElementNS-java.lang.String-java.lang.String-">
+<a id="addChildElementNS(java.lang.String,java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>addChildElementNS</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;addChildElementNS(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;ns,
-                                 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;addChildElementNS&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;ns,
+                                 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</pre>
 <div class="block">Creates an empty element as a child of the last nontext element created or visited.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -577,85 +645,46 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </dl>
 </li>
 </ul>
-<a name="addClone-org.w3c.dom.Element-">
+<a id="addWrapped(org.webpki.xml.XMLObjectWrapper)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>addClone</h4>
-<pre>public&nbsp;void&nbsp;addClone(<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;element)</pre>
-<div class="block">Add a clone of an existing element as a child of the last nontext element created or visited.</div>
+<h4>addWrapped</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;addWrapped&#8203;(<a href="XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a>&nbsp;wrapper)
+                throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<div class="block">Add a <a href="XMLObjectWrapper.html" title="class in org.webpki.xml"><code>wrapped element</code></a> as a child of the last nontext element created or visited.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>element</code> - The <a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom"><code>element</code></a> to clone.</dd>
+<dd><code>wrapper</code> - The <a href="XMLObjectWrapper.html" title="class in org.webpki.xml"><code>wrapped element</code></a>.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - If anything unexpected happens...</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#current">DOMWriterHelper cursor state</a></dd>
 </dl>
 </li>
 </ul>
-<a name="addComment-java.lang.String-boolean-">
+<a id="addXMLCookie(org.webpki.xml.XMLCookie)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>addComment</h4>
-<pre>public&nbsp;void&nbsp;addComment(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;comment,
-                       boolean&nbsp;indent_flag)</pre>
-</li>
-</ul>
-<a name="addDate-java.lang.String-java.util.GregorianCalendar-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>addDate</h4>
-<pre>public&nbsp;void&nbsp;addDate(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                    <a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;value)</pre>
-<div class="block">Add a text element to the current element.
- <p>The text content of the new element will be the
- <code><a href="http://www.w3.org/TR/xmlschema-2/#date">date</a></code>
- encoding of <i>value</i>.</div>
+<h4>addXMLCookie</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;addXMLCookie&#8203;(<a href="XMLCookie.html" title="class in org.webpki.xml">XMLCookie</a>&nbsp;cookie)
+                  throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>name</code> - The name of the new element.</dd>
-<dd><code>value</code> - The value of the new element.</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="#current">DOMWriterHelper cursor state</a></dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="addDateTime-java.lang.String-java.util.GregorianCalendar-java.util.EnumSet-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>addDateTime</h4>
-<pre>public&nbsp;void&nbsp;addDateTime(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                        <a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;value,
-                        <a href="https://docs.oracle.com/javase/8/docs/api/java/util/EnumSet.html?is-external=true" title="class or interface in java.util">EnumSet</a>&lt;<a href="../../../org/webpki/util/ISODateTime.DatePatterns.html" title="enum in org.webpki.util">ISODateTime.DatePatterns</a>&gt;&nbsp;format)</pre>
-<div class="block">Add a text element to the current element.
- <p>The text content of the new element will be the
- <code><a href="http://www.w3.org/TR/xmlschema-2/#dateTime">dateTime</a></code>
- encoding of <i>value</i>.
- <p>The time value will be rounded to the nearest second (the precision
- of the Java <a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util"><code>GregorianCalendar</code></a> class is milliseconds).</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>name</code> - The name of the new element.</dd>
-<dd><code>value</code> - The value of the new element.</dd>
-<dd><code>format</code> - The chosen format</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="#current">DOMWriterHelper cursor state</a></dd>
-</dl>
-</li>
-</ul>
-<a name="addEmptyElement-java.lang.String-">
+<a id="addEmptyElement(java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>addEmptyElement</h4>
-<pre>public&nbsp;void&nbsp;addEmptyElement(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
+<pre class="methodSignature">public&nbsp;void&nbsp;addEmptyElement&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</pre>
 <div class="block">Creates an empty element as a child of the last nontext element created or visited,
  but without setting the new element as the target of the next <code>addXXX</code> call.</div>
 <dl>
@@ -666,111 +695,30 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </dl>
 </li>
 </ul>
-<a name="addInt-java.lang.String-int-">
+<a id="addClone(org.w3c.dom.Element)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>addInt</h4>
-<pre>public&nbsp;void&nbsp;addInt(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                   int&nbsp;value)</pre>
-<div class="block">Add a text element to the current element.</div>
+<h4>addClone</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;addClone&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;element)</pre>
+<div class="block">Add a clone of an existing element as a child of the last nontext element created or visited.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>name</code> - The name of the new element.</dd>
-<dd><code>value</code> - The text content of the new element.</dd>
+<dd><code>element</code> - The <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink"><code>element</code></a> to clone.</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#current">DOMWriterHelper cursor state</a></dd>
 </dl>
 </li>
 </ul>
-<a name="addList-java.lang.String-java.lang.String:A-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>addList</h4>
-<pre>public&nbsp;void&nbsp;addList(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                    <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;list)</pre>
-</li>
-</ul>
-<a name="addMoney-java.lang.String-long-int-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>addMoney</h4>
-<pre>public&nbsp;void&nbsp;addMoney(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                     long&nbsp;value,
-                     int&nbsp;numberOfDecimals)</pre>
-<div class="block">Add a text element to the current element.
- <p>The text content of the new element will be <i>value</i> divided by 10000 and rounded/extended to
- the desired number of decimals. The rounding used is
- <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true#ROUND_HALF_UP" title="class or interface in java.math"><code>BigDecimal.ROUND_HALF_UP</code></a>, i.e. the standard method of rounding.
- <p>This datatype corresponds to <a href="http://www.microsoft.com/sql">MS SQL Server</a>'s
- <code>money</code> (and <code>smallmoney</code>) datatypes.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>name</code> - The name of the new element.</dd>
-<dd><code>value</code> - The text content of the new element multiplied by 10000.</dd>
-<dd><code>numberOfDecimals</code> - The number of decimals to be used the text representation.</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="#current">DOMWriterHelper cursor state</a></dd>
-</dl>
-</li>
-</ul>
-<a name="addObject-java.lang.String-java.lang.Object-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>addObject</h4>
-<pre>public&nbsp;void&nbsp;addObject(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                      <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;value)</pre>
-<div class="block">Add a text element to the current element.
- <p>Uses the <i>value</i>'s <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang"><code>toString</code></a> function and is hence useful
- when value is an object whos <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang"><code>toString</code></a> returns a suitably formatted
- string representation, for example a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html?is-external=true" title="class or interface in java.lang"><code>StringBuilder</code></a>,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html?is-external=true" title="class or interface in java.math"><code>BigInteger</code></a> or <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math"><code>BigDecimal</code></a>.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>name</code> - The name of the new element.</dd>
-<dd><code>value</code> - The text content of the new element.</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="#current">DOMWriterHelper cursor state</a></dd>
-</dl>
-</li>
-</ul>
-<a name="addObjectConditional-java.lang.String-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>addObjectConditional</h4>
-<pre>public&nbsp;void&nbsp;addObjectConditional(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                                 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</pre>
-<div class="block">Add a text element to the current element if the value is non-null.
- <p>Uses the <i>value</i>'s <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang"><code>toString</code></a> function and is hence useful
- when value is an object whos <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang"><code>toString</code></a> returns a suitably formatted
- string representation, for example a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html?is-external=true" title="class or interface in java.lang"><code>StringBuilder</code></a>,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html?is-external=true" title="class or interface in java.math"><code>BigInteger</code></a> or <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math"><code>BigDecimal</code></a>.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>name</code> - The name of the new element.</dd>
-<dd><code>value</code> - The text content of the new element.</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="#current">DOMWriterHelper cursor state</a></dd>
-</dl>
-</li>
-</ul>
-<a name="addString-java.lang.String-java.lang.String-">
+<a id="addString(java.lang.String,java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>addString</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Text.html?is-external=true" title="class or interface in org.w3c.dom">Text</a>&nbsp;addString(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                      <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</pre>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Text.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Text</a>&nbsp;addString&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+                      <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value)</pre>
 <div class="block">Add a text element to the current element.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -783,33 +731,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </dl>
 </li>
 </ul>
-<a name="addStringConditional-java.lang.String-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>addStringConditional</h4>
-<pre>public&nbsp;void&nbsp;addStringConditional(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                                 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</pre>
-<div class="block">Add a text element to the current element if the value is non-null.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>name</code> - The name of the new element.</dd>
-<dd><code>value</code> - The text content of the new element.</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="#current">DOMWriterHelper cursor state</a></dd>
-</dl>
-</li>
-</ul>
-<a name="addStringNS-java.lang.String-java.lang.String-java.lang.String-">
+<a id="addStringNS(java.lang.String,java.lang.String,java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>addStringNS</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Text.html?is-external=true" title="class or interface in org.w3c.dom">Text</a>&nbsp;addStringNS(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;ns,
-                        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</pre>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Text.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Text</a>&nbsp;addStringNS&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;ns,
+                        <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+                        <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value)</pre>
 <div class="block">Add a text element to the current element.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -823,73 +753,241 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </dl>
 </li>
 </ul>
-<a name="addWrapped-org.webpki.xml.XMLObjectWrapper-">
+<a id="addCDATA(java.lang.String,java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>addWrapped</h4>
-<pre>public&nbsp;void&nbsp;addWrapped(<a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a>&nbsp;wrapper)
-                throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Add a <a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml"><code>wrapped element</code></a> as a child of the last nontext element created or visited.</div>
+<h4>addCDATA</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/CDATASection.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">CDATASection</a>&nbsp;addCDATA&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+                             <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value)</pre>
+<div class="block">Add a CDATA element to the current element.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>wrapper</code> - The <a href="../../../org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml"><code>wrapped element</code></a>.</dd>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If anything unexpected happens...</dd>
+<dd><code>name</code> - The name of the new element.</dd>
+<dd><code>value</code> - The text content of the new element.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>CDATASection</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#current">DOMWriterHelper cursor state</a></dd>
 </dl>
 </li>
 </ul>
-<a name="addXMLCookie-org.webpki.xml.XMLCookie-">
+<a id="addStringConditional(java.lang.String,java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>addXMLCookie</h4>
-<pre>public&nbsp;void&nbsp;addXMLCookie(<a href="../../../org/webpki/xml/XMLCookie.html" title="class in org.webpki.xml">XMLCookie</a>&nbsp;cookie)
-                  throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<h4>addStringConditional</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;addStringConditional&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+                                 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value)</pre>
+<div class="block">Add a text element to the current element if the value is non-null.</div>
 <dl>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - The name of the new element.</dd>
+<dd><code>value</code> - The text content of the new element.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="#current">DOMWriterHelper cursor state</a></dd>
 </dl>
 </li>
 </ul>
-<a name="current--">
+<a id="addInt(java.lang.String,int)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>current</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;current()</pre>
+<h4>addInt</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;addInt&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+                   int&nbsp;value)</pre>
+<div class="block">Add a text element to the current element.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - The name of the new element.</dd>
+<dd><code>value</code> - The text content of the new element.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="#current">DOMWriterHelper cursor state</a></dd>
+</dl>
 </li>
 </ul>
-<a name="FixStartElement--">
+<a id="addBoolean(java.lang.String,boolean)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>FixStartElement</h4>
-<pre>public&nbsp;void&nbsp;FixStartElement()</pre>
+<h4>addBoolean</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;addBoolean&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+                       boolean&nbsp;value)</pre>
+<div class="block">Add a text element to the current element.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - The name of the new element.</dd>
+<dd><code>value</code> - The content of the new element.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="#current">DOMWriterHelper cursor state</a></dd>
+</dl>
 </li>
 </ul>
-<a name="formatDate-java.util.GregorianCalendar-">
+<a id="addObject(java.lang.String,java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addObject</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;addObject&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+                      <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;value)</pre>
+<div class="block">Add a text element to the current element.
+ <p>Uses the <i>value</i>'s <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang" class="externalLink"><code>toString</code></a> function and is hence useful
+ when value is an object whos <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang" class="externalLink"><code>toString</code></a> returns a suitably formatted
+ string representation, for example a <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/StringBuilder.html?is-external=true" title="class or interface in java.lang" class="externalLink"><code>StringBuilder</code></a>,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/BigInteger.html?is-external=true" title="class or interface in java.math" class="externalLink"><code>BigInteger</code></a> or <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math" class="externalLink"><code>BigDecimal</code></a>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - The name of the new element.</dd>
+<dd><code>value</code> - The text content of the new element.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="#current">DOMWriterHelper cursor state</a></dd>
+</dl>
+</li>
+</ul>
+<a id="addObjectConditional(java.lang.String,java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addObjectConditional</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;addObjectConditional&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+                                 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value)</pre>
+<div class="block">Add a text element to the current element if the value is non-null.
+ <p>Uses the <i>value</i>'s <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang" class="externalLink"><code>toString</code></a> function and is hence useful
+ when value is an object whos <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang" class="externalLink"><code>toString</code></a> returns a suitably formatted
+ string representation, for example a <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/StringBuilder.html?is-external=true" title="class or interface in java.lang" class="externalLink"><code>StringBuilder</code></a>,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/BigInteger.html?is-external=true" title="class or interface in java.math" class="externalLink"><code>BigInteger</code></a> or <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math" class="externalLink"><code>BigDecimal</code></a>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - The name of the new element.</dd>
+<dd><code>value</code> - The text content of the new element.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="#current">DOMWriterHelper cursor state</a></dd>
+</dl>
+</li>
+</ul>
+<a id="addMoney(java.lang.String,long,int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addMoney</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;addMoney&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+                     long&nbsp;value,
+                     int&nbsp;numberOfDecimals)</pre>
+<div class="block">Add a text element to the current element.
+ <p>The text content of the new element will be <i>value</i> divided by 10000 and rounded/extended to
+ the desired number of decimals. The rounding used is
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/RoundingMode.html?is-external=true#HALF_UP" title="class or interface in java.math" class="externalLink"><code>RoundingMode.HALF_UP</code></a>, i.e. the standard method of rounding.
+ <p>This datatype corresponds to <a href="http://www.microsoft.com/sql">MS SQL Server</a>'s
+ <code>money</code> (and <code>smallmoney</code>) datatypes.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - The name of the new element.</dd>
+<dd><code>value</code> - The text content of the new element multiplied by 10000.</dd>
+<dd><code>numberOfDecimals</code> - The number of decimals to be used the text representation.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="#current">DOMWriterHelper cursor state</a></dd>
+</dl>
+</li>
+</ul>
+<a id="addBinary(java.lang.String,byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addBinary</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;addBinary&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+                      byte[]&nbsp;value)</pre>
+<div class="block">Add a text element to the current element.
+ <p>The text content of the new element will be the <code>Base64</code> encoding
+ of <i>value</i>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - The name of the new element.</dd>
+<dd><code>value</code> - The unencoded binary value of the new element.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="#current">DOMWriterHelper cursor state</a></dd>
+</dl>
+</li>
+</ul>
+<a id="addDateTime(java.lang.String,java.util.GregorianCalendar,java.util.EnumSet)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addDateTime</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;addDateTime&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+                        <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util" class="externalLink">GregorianCalendar</a>&nbsp;value,
+                        <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/EnumSet.html?is-external=true" title="class or interface in java.util" class="externalLink">EnumSet</a>&lt;<a href="../util/ISODateTime.DatePatterns.html" title="enum in org.webpki.util">ISODateTime.DatePatterns</a>&gt;&nbsp;format)</pre>
+<div class="block">Add a text element to the current element.
+ <p>The text content of the new element will be the
+ <code><a href="http://www.w3.org/TR/xmlschema-2/#dateTime">dateTime</a></code>
+ encoding of <i>value</i>.
+ <p>The time value will be rounded to the nearest second (the precision
+ of the Java <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util" class="externalLink"><code>GregorianCalendar</code></a> class is milliseconds).</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - The name of the new element.</dd>
+<dd><code>value</code> - The value of the new element.</dd>
+<dd><code>format</code> - The chosen format</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="#current">DOMWriterHelper cursor state</a></dd>
+</dl>
+</li>
+</ul>
+<a id="formatDate(java.util.GregorianCalendar)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>formatDate</h4>
-<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;formatDate(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;t)</pre>
+<pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;formatDate&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util" class="externalLink">GregorianCalendar</a>&nbsp;t)</pre>
 </li>
 </ul>
-<a name="getParent--">
+<a id="addDate(java.lang.String,java.util.GregorianCalendar)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addDate</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;addDate&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+                    <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util" class="externalLink">GregorianCalendar</a>&nbsp;value)</pre>
+<div class="block">Add a text element to the current element.
+ <p>The text content of the new element will be the
+ <code><a href="http://www.w3.org/TR/xmlschema-2/#date">date</a></code>
+ encoding of <i>value</i>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - The name of the new element.</dd>
+<dd><code>value</code> - The value of the new element.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="#current">DOMWriterHelper cursor state</a></dd>
+</dl>
+</li>
+</ul>
+<a id="addList(java.lang.String,java.lang.String[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addList</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;addList&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+                    <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]&nbsp;list)</pre>
+</li>
+</ul>
+<a id="getParent()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getParent</h4>
-<pre>public&nbsp;void&nbsp;getParent()</pre>
+<pre class="methodSignature">public&nbsp;void&nbsp;getParent()</pre>
 <div class="block">Set the parent of the last nontext element created or visited as current.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -897,41 +995,23 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </dl>
 </li>
 </ul>
-<a name="initializeRootObject-java.lang.String-">
+<a id="current()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>initializeRootObject</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a>&nbsp;initializeRootObject(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;prefix)</pre>
+<h4>current</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a>&nbsp;current()</pre>
 </li>
 </ul>
-<a name="popPrefix--">
+<a id="setStringAttribute(java.lang.String,java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>popPrefix</h4>
-<pre>public&nbsp;void&nbsp;popPrefix()</pre>
-</li>
-</ul>
-<a name="pushPrefix-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>pushPrefix</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pushPrefix(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;subprefix)</pre>
-</li>
-</ul>
-<a name="setBigIntegerAttribute-java.lang.String-java.math.BigInteger-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setBigIntegerAttribute</h4>
-<pre>public&nbsp;void&nbsp;setBigIntegerAttribute(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                                   <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html?is-external=true" title="class or interface in java.math">BigInteger</a>&nbsp;value)</pre>
+<h4>setStringAttribute</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setStringAttribute&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+                               <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value)</pre>
 <div class="block">Set an attribute of the current element.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -942,66 +1022,23 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </dl>
 </li>
 </ul>
-<a name="setBinaryAttribute-java.lang.String-byte:A-">
+<a id="setBinaryAttribute(java.lang.String,byte[])">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setBinaryAttribute</h4>
-<pre>public&nbsp;void&nbsp;setBinaryAttribute(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+<pre class="methodSignature">public&nbsp;void&nbsp;setBinaryAttribute&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
                                byte[]&nbsp;value)</pre>
 </li>
 </ul>
-<a name="setBooleanAttribute-java.lang.String-boolean-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setBooleanAttribute</h4>
-<pre>public&nbsp;void&nbsp;setBooleanAttribute(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                                boolean&nbsp;value)</pre>
-<div class="block">Set an attribute of the current element.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>name</code> - The name of the attribute.</dd>
-<dd><code>value</code> - The value of the attribute.</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="#current">DOMWriterHelper cursor state</a></dd>
-</dl>
-</li>
-</ul>
-<a name="setDateTimeAttribute-java.lang.String-java.util.GregorianCalendar-java.util.EnumSet-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setDateTimeAttribute</h4>
-<pre>public&nbsp;void&nbsp;setDateTimeAttribute(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                                 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a>&nbsp;value,
-                                 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/EnumSet.html?is-external=true" title="class or interface in java.util">EnumSet</a>&lt;<a href="../../../org/webpki/util/ISODateTime.DatePatterns.html" title="enum in org.webpki.util">ISODateTime.DatePatterns</a>&gt;&nbsp;format)</pre>
-<div class="block">Set an attribute of the current element to a date.
- <p>The text content of the attribute will be the
- <code><a href="http://www.w3.org/TR/xmlschema-2/#dateTime">dateTime</a></code>
- encoding of <i>value</i>.
- <p>The time value will be rounded to the nearest second (the precision
- of the Java <a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util"><code>GregorianCalendar</code></a> class is milliseconds).</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>name</code> - The name of the attribute.</dd>
-<dd><code>value</code> - The value of the attribute.</dd>
-<dd><code>format</code> - The chosen format</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="#current">DOMWriterHelper cursor state</a></dd>
-</dl>
-</li>
-</ul>
-<a name="setIntAttribute-java.lang.String-int-">
+<a id="setIntAttribute(java.lang.String,int)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setIntAttribute</h4>
-<pre>public&nbsp;void&nbsp;setIntAttribute(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+<pre class="methodSignature">public&nbsp;void&nbsp;setIntAttribute&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
                             int&nbsp;value)</pre>
 <div class="block">Set an attribute of the current element.</div>
 <dl>
@@ -1013,28 +1050,76 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </dl>
 </li>
 </ul>
-<a name="setListAttribute-java.lang.String-java.lang.String:A-">
+<a id="setBigIntegerAttribute(java.lang.String,java.math.BigInteger)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>setListAttribute</h4>
-<pre>public&nbsp;void&nbsp;setListAttribute(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                             <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;list)</pre>
+<h4>setBigIntegerAttribute</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setBigIntegerAttribute&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+                                   <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/BigInteger.html?is-external=true" title="class or interface in java.math" class="externalLink">BigInteger</a>&nbsp;value)</pre>
+<div class="block">Set an attribute of the current element.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - The name of the attribute.</dd>
+<dd><code>value</code> - The value of the attribute.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="#current">DOMWriterHelper cursor state</a></dd>
+</dl>
 </li>
 </ul>
-<a name="setMoneyAttribute-java.lang.String-long-int-">
+<a id="setBooleanAttribute(java.lang.String,boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setBooleanAttribute</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setBooleanAttribute&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+                                boolean&nbsp;value)</pre>
+<div class="block">Set an attribute of the current element.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - The name of the attribute.</dd>
+<dd><code>value</code> - The value of the attribute.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="#current">DOMWriterHelper cursor state</a></dd>
+</dl>
+</li>
+</ul>
+<a id="setObjectAttribute(java.lang.String,java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setObjectAttribute</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setObjectAttribute&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+                               <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;value)</pre>
+<div class="block">Set an attribute of the current element.
+ <p>Uses the <i>value</i>'s <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang" class="externalLink"><code>toString</code></a> function and is hence useful
+ when value is an object whos <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang" class="externalLink"><code>toString</code></a> returns a suitably formatted
+ string representation, for example a <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/StringBuilder.html?is-external=true" title="class or interface in java.lang" class="externalLink"><code>StringBuilder</code></a>,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/BigInteger.html?is-external=true" title="class or interface in java.math" class="externalLink"><code>BigInteger</code></a> or <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math" class="externalLink"><code>BigDecimal</code></a>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - The name of the attribute.</dd>
+<dd><code>value</code> - The value of the attribute.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="#current">DOMWriterHelper cursor state</a></dd>
+</dl>
+</li>
+</ul>
+<a id="setMoneyAttribute(java.lang.String,long,int)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setMoneyAttribute</h4>
-<pre>public&nbsp;void&nbsp;setMoneyAttribute(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+<pre class="methodSignature">public&nbsp;void&nbsp;setMoneyAttribute&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
                               long&nbsp;value,
                               int&nbsp;numberOfDecimals)</pre>
 <div class="block">Set an attribute of the current element to a long divided by 10000 and rounded/extended to
  the desired number of decimals. The rounding used is
- <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true#ROUND_HALF_UP" title="class or interface in java.math"><code>BigDecimal.ROUND_HALF_UP</code></a>, i.e. the standard method of rounding.
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/RoundingMode.html?is-external=true#HALF_UP" title="class or interface in java.math" class="externalLink"><code>RoundingMode.HALF_UP</code></a>, i.e. the standard method of rounding.
  <p>This datatype corresponds to <a href="http://www.microsoft.com/sql">MS SQL Server</a>'s
  <code>money</code> (and <code>smallmoney</code>) datatypes.</div>
 <dl>
@@ -1047,72 +1132,62 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </dl>
 </li>
 </ul>
-<a name="setObjectAttribute-java.lang.String-java.lang.Object-">
+<a id="setDateTimeAttribute(java.lang.String,java.util.GregorianCalendar,java.util.EnumSet)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>setObjectAttribute</h4>
-<pre>public&nbsp;void&nbsp;setObjectAttribute(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                               <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;value)</pre>
-<div class="block">Set an attribute of the current element.
- <p>Uses the <i>value</i>'s <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang"><code>toString</code></a> function and is hence useful
- when value is an object whos <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang"><code>toString</code></a> returns a suitably formatted
- string representation, for example a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html?is-external=true" title="class or interface in java.lang"><code>StringBuilder</code></a>,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html?is-external=true" title="class or interface in java.math"><code>BigInteger</code></a> or <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math"><code>BigDecimal</code></a>.</div>
+<h4>setDateTimeAttribute</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setDateTimeAttribute&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+                                 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util" class="externalLink">GregorianCalendar</a>&nbsp;value,
+                                 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/EnumSet.html?is-external=true" title="class or interface in java.util" class="externalLink">EnumSet</a>&lt;<a href="../util/ISODateTime.DatePatterns.html" title="enum in org.webpki.util">ISODateTime.DatePatterns</a>&gt;&nbsp;format)</pre>
+<div class="block">Set an attribute of the current element to a date.
+ <p>The text content of the attribute will be the
+ <code><a href="http://www.w3.org/TR/xmlschema-2/#dateTime">dateTime</a></code>
+ encoding of <i>value</i>.
+ <p>The time value will be rounded to the nearest second (the precision
+ of the Java <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util" class="externalLink"><code>GregorianCalendar</code></a> class is milliseconds).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - The name of the attribute.</dd>
 <dd><code>value</code> - The value of the attribute.</dd>
+<dd><code>format</code> - The chosen format</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#current">DOMWriterHelper cursor state</a></dd>
 </dl>
 </li>
 </ul>
-<a name="setPrettyPrinting-boolean-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setPrettyPrinting</h4>
-<pre>public&nbsp;void&nbsp;setPrettyPrinting(boolean&nbsp;flag)</pre>
-</li>
-</ul>
-<a name="setStringAttribute-java.lang.String-java.lang.String-">
+<a id="setListAttribute(java.lang.String,java.lang.String[])">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>setStringAttribute</h4>
-<pre>public&nbsp;void&nbsp;setStringAttribute(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                               <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</pre>
-<div class="block">Set an attribute of the current element.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>name</code> - The name of the attribute.</dd>
-<dd><code>value</code> - The value of the attribute.</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="#current">DOMWriterHelper cursor state</a></dd>
-</dl>
+<h4>setListAttribute</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setListAttribute&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
+                             <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]&nbsp;list)</pre>
 </li>
 </ul>
 </li>
 </ul>
+</section>
 </li>
 </ul>
 </div>
 </div>
+</main>
 <!-- ========= END OF CLASS DATA ========= -->
+<footer role="contentinfo">
+<nav role="navigation">
 <!-- ======= START OF BOTTOM NAVBAR ====== -->
-<div class="bottomNav"><a name="navbar.bottom">
+<div class="bottomNav"><a id="navbar.bottom">
 <!--   -->
 </a>
 <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
-<a name="navbar.bottom.firstrow">
+<a id="navbar.bottom.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
-<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="../../../index.html">Overview</a></li>
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
@@ -1121,16 +1196,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </ul>
 </div>
 <div class="subNav">
-<ul class="navList">
-<li><a href="../../../org/webpki/xml/DOMUtil.html" title="class in org.webpki.xml"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../org/webpki/xml/XMLCookie.html" title="class in org.webpki.xml"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
-</ul>
-<ul class="navList">
-<li><a href="../../../index.html?org/webpki/xml/DOMWriterHelper.html" target="_top">Frames</a></li>
-<li><a href="DOMWriterHelper.html" target="_top">No&nbsp;Frames</a></li>
-</ul>
 <ul class="navList" id="allclasses_navbar_bottom">
-<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+<li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -1143,6 +1210,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
   }
   //-->
 </script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
 </div>
 <div>
 <ul class="subNavList">
@@ -1159,10 +1229,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
-<a name="skip.navbar.bottom">
+<a id="skip.navbar.bottom">
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>2005-2018 WebPKI.org.</i></small></p>
+</nav>
+<p class="legalCopy"><small><i>2005-2020 WebPKI.org.</i></small></p>
+</footer>
 </body>
 </html>

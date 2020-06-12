@@ -1,12 +1,22 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML>
 <!-- NewPage -->
 <html lang="en">
 <head>
 
 <title>org.webpki.keygen2 (WebPKI.org Support)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+<link rel="stylesheet" type="text/css" href="../../../jquery/jquery-ui.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
+<script type="text/javascript" src="../../../jquery/jszip/dist/jszip.min.js"></script>
+<script type="text/javascript" src="../../../jquery/jszip-utils/dist/jszip-utils.min.js"></script>
+<!--[if IE]>
+<script type="text/javascript" src="../../../jquery/jszip-utils/dist/jszip-utils-ie.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="../../../jquery/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="../../../jquery/jquery-migrate-3.0.1.js"></script>
+<script type="text/javascript" src="../../../jquery/jquery-ui.js"></script>
 </head>
 <body>
 <script type="text/javascript"><!--
@@ -18,20 +28,25 @@
     catch(err) {
     }
 //-->
-</script>
+var pathtoroot = "../../../";
+var useModuleDirectories = true;
+loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
 </noscript>
+<header role="banner">
+<nav role="navigation">
+<div class="fixedNav">
 <!-- ========= START OF TOP NAVBAR ======= -->
-<div class="topNav"><a name="navbar.top">
+<div class="topNav"><a id="navbar.top">
 <!--   -->
 </a>
 <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
-<a name="navbar.top.firstrow">
+<a id="navbar.top.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
-<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="../../../index.html">Overview</a></li>
 <li class="navBarCell1Rev">Package</li>
 <li>Class</li>
 <li><a href="package-tree.html">Tree</a></li>
@@ -40,16 +55,14 @@
 </ul>
 </div>
 <div class="subNav">
-<ul class="navList">
-<li><a href="../../../org/webpki/json/package-summary.html">Prev&nbsp;Package</a></li>
-<li><a href="../../../org/webpki/net/package-summary.html">Next&nbsp;Package</a></li>
-</ul>
-<ul class="navList">
-<li><a href="../../../index.html?org/webpki/keygen2/package-summary.html" target="_top">Frames</a></li>
-<li><a href="package-summary.html" target="_top">No&nbsp;Frames</a></li>
-</ul>
 <ul class="navList" id="allclasses_navbar_top">
-<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+<li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" disabled="disabled">
+<input type="reset" id="reset" value="reset" disabled="disabled">
+</li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -62,186 +75,30 @@
   }
   //-->
 </script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
 </div>
-<a name="skip.navbar.top">
+<a id="skip.navbar.top">
 <!--   -->
 </a></div>
 <!-- ========= END OF TOP NAVBAR ========= -->
+</div>
+<div class="navPadding">&nbsp;</div>
+<script type="text/javascript"><!--
+$('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+//-->
+</script>
+</nav>
+</header>
+<main role="main">
 <div class="header">
 <h1 title="Package" class="title">Package&nbsp;org.webpki.keygen2</h1>
-<div class="docSummary">
-<div class="block">KeyGen2 - Credential Provisioning and Management Protocol</div>
-</div>
-<p>See:&nbsp;<a href="#package.description">Description</a></p>
 </div>
 <div class="contentContainer">
-<ul class="blockList">
-<li class="blockList">
-<table class="typeSummary" border="0" cellpadding="3" cellspacing="0" summary="Interface Summary table, listing interfaces, and an explanation">
-<caption><span>Interface Summary</span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Interface</th>
-<th class="colLast" scope="col">Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/KeyGen2Constants.html" title="interface in org.webpki.keygen2">KeyGen2Constants</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/KeyGen2URIs.html" title="interface in org.webpki.keygen2">KeyGen2URIs</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/KeyGen2URIs.CLIENT_ATTRIBUTES.html" title="interface in org.webpki.keygen2">KeyGen2URIs.CLIENT_ATTRIBUTES</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/KeyGen2URIs.CLIENT_FEATURES.html" title="interface in org.webpki.keygen2">KeyGen2URIs.CLIENT_FEATURES</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/KeyGen2URIs.LOGOTYPES.html" title="interface in org.webpki.keygen2">KeyGen2URIs.LOGOTYPES</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/ServerCryptoInterface.html" title="interface in org.webpki.keygen2">ServerCryptoInterface</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-</tbody>
-</table>
-</li>
-<li class="blockList">
-<table class="typeSummary" border="0" cellpadding="3" cellspacing="0" summary="Class Summary table, listing classes, and an explanation">
-<caption><span>Class Summary</span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Class</th>
-<th class="colLast" scope="col">Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/CredentialDiscoveryRequestDecoder.html" title="class in org.webpki.keygen2">CredentialDiscoveryRequestDecoder</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/CredentialDiscoveryRequestEncoder.html" title="class in org.webpki.keygen2">CredentialDiscoveryRequestEncoder</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/CredentialDiscoveryResponseDecoder.html" title="class in org.webpki.keygen2">CredentialDiscoveryResponseDecoder</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/CredentialDiscoveryResponseEncoder.html" title="class in org.webpki.keygen2">CredentialDiscoveryResponseEncoder</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/InvocationRequestDecoder.html" title="class in org.webpki.keygen2">InvocationRequestDecoder</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/InvocationRequestEncoder.html" title="class in org.webpki.keygen2">InvocationRequestEncoder</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/InvocationResponseDecoder.html" title="class in org.webpki.keygen2">InvocationResponseDecoder</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/InvocationResponseEncoder.html" title="class in org.webpki.keygen2">InvocationResponseEncoder</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/KeyCreationRequestDecoder.html" title="class in org.webpki.keygen2">KeyCreationRequestDecoder</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/KeyCreationRequestEncoder.html" title="class in org.webpki.keygen2">KeyCreationRequestEncoder</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/KeyCreationResponseDecoder.html" title="class in org.webpki.keygen2">KeyCreationResponseDecoder</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/KeyCreationResponseEncoder.html" title="class in org.webpki.keygen2">KeyCreationResponseEncoder</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/KeySpecifier.html" title="class in org.webpki.keygen2">KeySpecifier</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/ProvisioningFinalizationRequestDecoder.html" title="class in org.webpki.keygen2">ProvisioningFinalizationRequestDecoder</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/ProvisioningFinalizationRequestEncoder.html" title="class in org.webpki.keygen2">ProvisioningFinalizationRequestEncoder</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/ProvisioningFinalizationResponseDecoder.html" title="class in org.webpki.keygen2">ProvisioningFinalizationResponseDecoder</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/ProvisioningFinalizationResponseEncoder.html" title="class in org.webpki.keygen2">ProvisioningFinalizationResponseEncoder</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/ProvisioningInitializationRequestDecoder.html" title="class in org.webpki.keygen2">ProvisioningInitializationRequestDecoder</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/ProvisioningInitializationRequestEncoder.html" title="class in org.webpki.keygen2">ProvisioningInitializationRequestEncoder</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/ProvisioningInitializationResponseDecoder.html" title="class in org.webpki.keygen2">ProvisioningInitializationResponseDecoder</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/ProvisioningInitializationResponseEncoder.html" title="class in org.webpki.keygen2">ProvisioningInitializationResponseEncoder</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/ServerState.html" title="class in org.webpki.keygen2">ServerState</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/ServerState.ImagePreference.html" title="class in org.webpki.keygen2">ServerState.ImagePreference</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-</tbody>
-</table>
-</li>
-<li class="blockList">
-<table class="typeSummary" border="0" cellpadding="3" cellspacing="0" summary="Enum Summary table, listing enums, and an explanation">
-<caption><span>Enum Summary</span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Enum</th>
-<th class="colLast" scope="col">Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/Action.html" title="enum in org.webpki.keygen2">Action</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/KeyGen2Messages.html" title="enum in org.webpki.keygen2">KeyGen2Messages</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/keygen2/ServerState.ProtocolPhase.html" title="enum in org.webpki.keygen2">ServerState.ProtocolPhase</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-</tbody>
-</table>
-</li>
-</ul>
-<a name="package.description">
+<section role="region"><a id="package.description">
 <!--   -->
 </a>
-<h2 title="Package org.webpki.keygen2 Description">Package org.webpki.keygen2 Description</h2>
 <div class="block"><h2>KeyGen2 - Credential Provisioning and Management Protocol</h2>
 KeyGen2 is an JSON-based, Internet-browser-hosted protocol for provisioning and managing resources
 in a &quot;companion specification&quot; coined SKS (Secure Key Store).<br>&nbsp;<br>
@@ -250,17 +107,184 @@ For more information:<br>
     Description</a><br>
 <a href="https://cyberphone.github.io/doc/security/sks-api-arch.pdf" target="_blank">SKS API and
     Architecture</a><br></div>
+</section>
+<ul class="blockList">
+<li class="blockList">
+<table class="typeSummary">
+<caption><span>Interface Summary</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Interface</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="KeyGen2Constants.html" title="interface in org.webpki.keygen2">KeyGen2Constants</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="KeyGen2URIs.html" title="interface in org.webpki.keygen2">KeyGen2URIs</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="KeyGen2URIs.CLIENT_ATTRIBUTES.html" title="interface in org.webpki.keygen2">KeyGen2URIs.CLIENT_ATTRIBUTES</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="KeyGen2URIs.CLIENT_FEATURES.html" title="interface in org.webpki.keygen2">KeyGen2URIs.CLIENT_FEATURES</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="KeyGen2URIs.LOGOTYPES.html" title="interface in org.webpki.keygen2">KeyGen2URIs.LOGOTYPES</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="ServerCryptoInterface.html" title="interface in org.webpki.keygen2">ServerCryptoInterface</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList">
+<table class="typeSummary">
+<caption><span>Class Summary</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Class</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="CredentialDiscoveryRequestDecoder.html" title="class in org.webpki.keygen2">CredentialDiscoveryRequestDecoder</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="CredentialDiscoveryRequestEncoder.html" title="class in org.webpki.keygen2">CredentialDiscoveryRequestEncoder</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="CredentialDiscoveryResponseDecoder.html" title="class in org.webpki.keygen2">CredentialDiscoveryResponseDecoder</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="CredentialDiscoveryResponseEncoder.html" title="class in org.webpki.keygen2">CredentialDiscoveryResponseEncoder</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="InvocationRequestDecoder.html" title="class in org.webpki.keygen2">InvocationRequestDecoder</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="InvocationRequestEncoder.html" title="class in org.webpki.keygen2">InvocationRequestEncoder</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="InvocationResponseDecoder.html" title="class in org.webpki.keygen2">InvocationResponseDecoder</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="InvocationResponseEncoder.html" title="class in org.webpki.keygen2">InvocationResponseEncoder</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="KeyCreationRequestDecoder.html" title="class in org.webpki.keygen2">KeyCreationRequestDecoder</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="KeyCreationRequestEncoder.html" title="class in org.webpki.keygen2">KeyCreationRequestEncoder</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="KeyCreationResponseDecoder.html" title="class in org.webpki.keygen2">KeyCreationResponseDecoder</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="KeyCreationResponseEncoder.html" title="class in org.webpki.keygen2">KeyCreationResponseEncoder</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="KeySpecifier.html" title="class in org.webpki.keygen2">KeySpecifier</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="ProvisioningFinalizationRequestDecoder.html" title="class in org.webpki.keygen2">ProvisioningFinalizationRequestDecoder</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="ProvisioningFinalizationRequestEncoder.html" title="class in org.webpki.keygen2">ProvisioningFinalizationRequestEncoder</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="ProvisioningFinalizationResponseDecoder.html" title="class in org.webpki.keygen2">ProvisioningFinalizationResponseDecoder</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="ProvisioningFinalizationResponseEncoder.html" title="class in org.webpki.keygen2">ProvisioningFinalizationResponseEncoder</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="ProvisioningInitializationRequestDecoder.html" title="class in org.webpki.keygen2">ProvisioningInitializationRequestDecoder</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="ProvisioningInitializationRequestEncoder.html" title="class in org.webpki.keygen2">ProvisioningInitializationRequestEncoder</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="ProvisioningInitializationResponseDecoder.html" title="class in org.webpki.keygen2">ProvisioningInitializationResponseDecoder</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="ProvisioningInitializationResponseEncoder.html" title="class in org.webpki.keygen2">ProvisioningInitializationResponseEncoder</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="ServerState.html" title="class in org.webpki.keygen2">ServerState</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="ServerState.ImagePreference.html" title="class in org.webpki.keygen2">ServerState.ImagePreference</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList">
+<table class="typeSummary">
+<caption><span>Enum Summary</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Enum</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="Action.html" title="enum in org.webpki.keygen2">Action</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="KeyGen2Messages.html" title="enum in org.webpki.keygen2">KeyGen2Messages</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="ServerState.ProtocolPhase.html" title="enum in org.webpki.keygen2">ServerState.ProtocolPhase</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
 </div>
+</main>
+<footer role="contentinfo">
+<nav role="navigation">
 <!-- ======= START OF BOTTOM NAVBAR ====== -->
-<div class="bottomNav"><a name="navbar.bottom">
+<div class="bottomNav"><a id="navbar.bottom">
 <!--   -->
 </a>
 <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
-<a name="navbar.bottom.firstrow">
+<a id="navbar.bottom.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
-<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="../../../index.html">Overview</a></li>
 <li class="navBarCell1Rev">Package</li>
 <li>Class</li>
 <li><a href="package-tree.html">Tree</a></li>
@@ -269,16 +293,8 @@ For more information:<br>
 </ul>
 </div>
 <div class="subNav">
-<ul class="navList">
-<li><a href="../../../org/webpki/json/package-summary.html">Prev&nbsp;Package</a></li>
-<li><a href="../../../org/webpki/net/package-summary.html">Next&nbsp;Package</a></li>
-</ul>
-<ul class="navList">
-<li><a href="../../../index.html?org/webpki/keygen2/package-summary.html" target="_top">Frames</a></li>
-<li><a href="package-summary.html" target="_top">No&nbsp;Frames</a></li>
-</ul>
 <ul class="navList" id="allclasses_navbar_bottom">
-<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+<li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -291,11 +307,16 @@ For more information:<br>
   }
   //-->
 </script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
 </div>
-<a name="skip.navbar.bottom">
+<a id="skip.navbar.bottom">
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>2005-2018 WebPKI.org.</i></small></p>
+</nav>
+<p class="legalCopy"><small><i>2005-2020 WebPKI.org.</i></small></p>
+</footer>
 </body>
 </html>

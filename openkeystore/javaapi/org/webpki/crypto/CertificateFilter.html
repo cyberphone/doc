@@ -1,12 +1,22 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML>
 <!-- NewPage -->
 <html lang="en">
 <head>
 
 <title>CertificateFilter (WebPKI.org Support)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+<link rel="stylesheet" type="text/css" href="../../../jquery/jquery-ui.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
+<script type="text/javascript" src="../../../jquery/jszip/dist/jszip.min.js"></script>
+<script type="text/javascript" src="../../../jquery/jszip-utils/dist/jszip-utils.min.js"></script>
+<!--[if IE]>
+<script type="text/javascript" src="../../../jquery/jszip-utils/dist/jszip-utils-ie.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="../../../jquery/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="../../../jquery/jquery-migrate-3.0.1.js"></script>
+<script type="text/javascript" src="../../../jquery/jquery-ui.js"></script>
 </head>
 <body>
 <script type="text/javascript"><!--
@@ -18,26 +28,31 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":9,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":9,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
-</script>
+var pathtoroot = "../../../";
+var useModuleDirectories = true;
+loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
 </noscript>
+<header role="banner">
+<nav role="navigation">
+<div class="fixedNav">
 <!-- ========= START OF TOP NAVBAR ======= -->
-<div class="topNav"><a name="navbar.top">
+<div class="topNav"><a id="navbar.top">
 <!--   -->
 </a>
 <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
-<a name="navbar.top.firstrow">
+<a id="navbar.top.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
-<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="../../../index.html">Overview</a></li>
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
@@ -46,16 +61,14 @@ var activeTableTab = "activeTableTab";
 </ul>
 </div>
 <div class="subNav">
-<ul class="navList">
-<li><a href="../../../org/webpki/crypto/CertificateExtensions.html" title="enum in org.webpki.crypto"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../org/webpki/crypto/CertificateInfo.html" title="class in org.webpki.crypto"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
-</ul>
-<ul class="navList">
-<li><a href="../../../index.html?org/webpki/crypto/CertificateFilter.html" target="_top">Frames</a></li>
-<li><a href="CertificateFilter.html" target="_top">No&nbsp;Frames</a></li>
-</ul>
 <ul class="navList" id="allclasses_navbar_top">
-<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+<li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" disabled="disabled">
+<input type="reset" id="reset" value="reset" disabled="disabled">
+</li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -68,6 +81,9 @@ var activeTableTab = "activeTableTab";
   }
   //-->
 </script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
 </div>
 <div>
 <ul class="subNavList">
@@ -84,18 +100,27 @@ var activeTableTab = "activeTableTab";
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
-<a name="skip.navbar.top">
+<a id="skip.navbar.top">
 <!--   -->
 </a></div>
 <!-- ========= END OF TOP NAVBAR ========= -->
+</div>
+<div class="navPadding">&nbsp;</div>
+<script type="text/javascript"><!--
+$('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+//-->
+</script>
+</nav>
+</header>
 <!-- ======== START OF CLASS DATA ======== -->
+<main role="main">
 <div class="header">
-<div class="subTitle">org.webpki.crypto</div>
+<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.webpki.crypto</a></div>
 <h2 title="Class CertificateFilter" class="title">Class CertificateFilter</h2>
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
-<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
 <li>org.webpki.crypto.CertificateFilter</li>
@@ -107,12 +132,11 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>Direct Known Subclasses:</dt>
-<dd><a href="../../../org/webpki/keygen2/CredentialDiscoveryRequestDecoder.LookupSpecifier.html" title="class in org.webpki.keygen2">CredentialDiscoveryRequestDecoder.LookupSpecifier</a>, <a href="../../../org/webpki/keygen2/CredentialDiscoveryRequestEncoder.LookupDescriptor.html" title="class in org.webpki.keygen2">CredentialDiscoveryRequestEncoder.LookupDescriptor</a></dd>
+<dd><code><a href="../keygen2/CredentialDiscoveryRequestDecoder.LookupSpecifier.html" title="class in org.webpki.keygen2">CredentialDiscoveryRequestDecoder.LookupSpecifier</a></code>, <code><a href="../keygen2/CredentialDiscoveryRequestEncoder.LookupDescriptor.html" title="class in org.webpki.keygen2">CredentialDiscoveryRequestEncoder.LookupDescriptor</a></code></dd>
 </dl>
 <hr>
-<br>
 <pre>public class <span class="typeNameLabel">CertificateFilter</span>
-extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
 </li>
 </ul>
 </div>
@@ -120,189 +144,231 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <!-- =========== FIELD SUMMARY =========== -->
+<section role="region">
 <ul class="blockList">
-<li class="blockList"><a name="field.summary">
+<li class="blockList"><a id="field.summary">
 <!--   -->
 </a>
 <h3>Field Summary</h3>
-<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<table class="memberSummary">
 <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Field and Description</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#CF_EMAIL_REG_EX">CF_EMAIL_REG_EX</a></span></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#CF_EMAIL_REG_EX">CF_EMAIL_REG_EX</a></span></code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#CF_EXT_KEY_USAGE_RULES">CF_EXT_KEY_USAGE_RULES</a></span></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#CF_EXT_KEY_USAGE_RULES">CF_EXT_KEY_USAGE_RULES</a></span></code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#CF_FINGER_PRINT">CF_FINGER_PRINT</a></span></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#CF_FINGER_PRINT">CF_FINGER_PRINT</a></span></code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#CF_ISSUER_REG_EX">CF_ISSUER_REG_EX</a></span></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#CF_ISSUER_REG_EX">CF_ISSUER_REG_EX</a></span></code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#CF_KEY_USAGE_RULES">CF_KEY_USAGE_RULES</a></span></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#CF_KEY_USAGE_RULES">CF_KEY_USAGE_RULES</a></span></code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#CF_POLICY_RULES">CF_POLICY_RULES</a></span></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#CF_POLICY_RULES">CF_POLICY_RULES</a></span></code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#CF_SERIAL_NUMBER">CF_SERIAL_NUMBER</a></span></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#CF_SERIAL_NUMBER">CF_SERIAL_NUMBER</a></span></code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#CF_SUBJECT_REG_EX">CF_SUBJECT_REG_EX</a></span></code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#CF_SUBJECT_REG_EX">CF_SUBJECT_REG_EX</a></span></code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 </table>
 </li>
 </ul>
+</section>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<section role="region">
 <ul class="blockList">
-<li class="blockList"><a name="constructor.summary">
+<li class="blockList"><a id="constructor.summary">
 <!--   -->
 </a>
 <h3>Constructor Summary</h3>
-<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<table class="memberSummary">
 <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
-<th class="colOne" scope="col">Constructor and Description</th>
+<th class="colFirst" scope="col">Constructor</th>
+<th class="colLast" scope="col">Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#CertificateFilter--">CertificateFilter</a></span>()</code>&nbsp;</td>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E()">CertificateFilter</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 </table>
 </li>
 </ul>
+</section>
 <!-- ========== METHOD SUMMARY =========== -->
+<section role="region">
 <ul class="blockList">
-<li class="blockList"><a name="method.summary">
+<li class="blockList"><a id="method.summary">
 <!--   -->
 </a>
 <h3>Method Summary</h3>
-<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<table class="memberSummary">
 <caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Method and Description</th>
+<th class="colSecond" scope="col">Method</th>
+<th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#getEmailRegEx--">getEmailRegEx</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEmailRegEx()">getEmailRegEx</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#getExtendedKeyUsageRules--">getExtendedKeyUsageRules</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getExtendedKeyUsageRules()">getExtendedKeyUsageRules</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#getFingerPrint--">getFingerPrint</a></span>()</code>&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFingerPrint()">getFingerPrint</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#getIssuerRegEx--">getIssuerRegEx</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getIssuerRegEx()">getIssuerRegEx</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i4" class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#getKeyUsageRules--">getKeyUsageRules</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getKeyUsageRules()">getKeyUsageRules</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#getPolicyRules--">getPolicyRules</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPolicyRules()">getPolicyRules</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i6" class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html?is-external=true" title="class or interface in java.math">BigInteger</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#getSerialNumber--">getSerialNumber</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/BigInteger.html?is-external=true" title="class or interface in java.math" class="externalLink">BigInteger</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSerialNumber()">getSerialNumber</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i7" class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#getSubjectRegEx--">getSubjectRegEx</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSubjectRegEx()">getSubjectRegEx</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#matches-java.security.cert.X509Certificate:A-">matches</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]&nbsp;certificatePath)</code>&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#matches(java.security.cert.X509Certificate%5B%5D)">matches</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert" class="externalLink">X509Certificate</a>[]&nbsp;certificatePath)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>static boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#matchKeyUsage-java.lang.String:A-java.security.cert.X509Certificate-">matchKeyUsage</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;specifier,
-             <a href="https://docs.oracle.com/javase/8/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>&nbsp;certificate)</code>&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#matchKeyUsage(java.lang.String%5B%5D,java.security.cert.X509Certificate)">matchKeyUsage</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]&nbsp;specifier,
+             <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert" class="externalLink">X509Certificate</a>&nbsp;certificate)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#needsPathExpansion--">needsPathExpansion</a></span>()</code>&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#needsPathExpansion()">needsPathExpansion</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#nullCheck-java.lang.Object-">nullCheck</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o)</code>&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#nullCheck(java.lang.Object)">nullCheck</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;o)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i12" class="altColor">
-<td class="colFirst"><code><a href="../../../org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#setEmail-java.lang.String-">setEmail</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;emailAddress)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setEmail(java.lang.String)">setEmail</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;emailAddress)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i13" class="rowColor">
-<td class="colFirst"><code><a href="../../../org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#setEmailRegEx-java.lang.String-">setEmailRegEx</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;emailRegEx)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setEmailRegEx(java.lang.String)">setEmailRegEx</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;emailRegEx)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i14" class="altColor">
-<td class="colFirst"><code><a href="../../../org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#setExtendedKeyUsageRules-java.lang.String:A-">setExtendedKeyUsageRules</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;extendedKeyUsageRules)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setExtendedKeyUsageRules(java.lang.String%5B%5D)">setExtendedKeyUsageRules</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]&nbsp;extendedKeyUsageRules)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i15" class="rowColor">
-<td class="colFirst"><code><a href="../../../org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#setFingerPrint-byte:A-">setFingerPrint</a></span>(byte[]&nbsp;fingerPrint)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setFingerPrint(byte%5B%5D)">setFingerPrint</a></span>&#8203;(byte[]&nbsp;fingerPrint)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i16" class="altColor">
-<td class="colFirst"><code><a href="../../../org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#setIssuer-javax.security.auth.x500.X500Principal-">setIssuer</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/security/auth/x500/X500Principal.html?is-external=true" title="class or interface in javax.security.auth.x500">X500Principal</a>&nbsp;issuer)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setIssuer(javax.security.auth.x500.X500Principal)">setIssuer</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/javax/security/auth/x500/X500Principal.html?is-external=true" title="class or interface in javax.security.auth.x500" class="externalLink">X500Principal</a>&nbsp;issuer)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i17" class="rowColor">
-<td class="colFirst"><code><a href="../../../org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#setIssuerRegEx-java.lang.String-">setIssuerRegEx</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;issuerRegEx)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setIssuerRegEx(java.lang.String)">setIssuerRegEx</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;issuerRegEx)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i18" class="altColor">
-<td class="colFirst"><code><a href="../../../org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#setKeyUsageRules-org.webpki.crypto.KeyUsageBits:A-org.webpki.crypto.KeyUsageBits:A-">setKeyUsageRules</a></span>(<a href="../../../org/webpki/crypto/KeyUsageBits.html" title="enum in org.webpki.crypto">KeyUsageBits</a>[]&nbsp;required,
-                <a href="../../../org/webpki/crypto/KeyUsageBits.html" title="enum in org.webpki.crypto">KeyUsageBits</a>[]&nbsp;disallowed)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setKeyUsageRules(java.lang.String%5B%5D)">setKeyUsageRules</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]&nbsp;keyUsageRules)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i19" class="rowColor">
-<td class="colFirst"><code><a href="../../../org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#setKeyUsageRules-java.lang.String:A-">setKeyUsageRules</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;keyUsageRules)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setKeyUsageRules(org.webpki.crypto.KeyUsageBits%5B%5D,org.webpki.crypto.KeyUsageBits%5B%5D)">setKeyUsageRules</a></span>&#8203;(<a href="KeyUsageBits.html" title="enum in org.webpki.crypto">KeyUsageBits</a>[]&nbsp;required,
+                <a href="KeyUsageBits.html" title="enum in org.webpki.crypto">KeyUsageBits</a>[]&nbsp;disallowed)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i20" class="altColor">
-<td class="colFirst"><code><a href="../../../org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#setPolicyRules-java.lang.String:A-">setPolicyRules</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;ruleSet)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPolicyRules(java.lang.String%5B%5D)">setPolicyRules</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]&nbsp;ruleSet)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i21" class="rowColor">
-<td class="colFirst"><code><a href="../../../org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#setSerialNumber-java.math.BigInteger-">setSerialNumber</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html?is-external=true" title="class or interface in java.math">BigInteger</a>&nbsp;serialNumber)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSerialNumber(java.math.BigInteger)">setSerialNumber</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/BigInteger.html?is-external=true" title="class or interface in java.math" class="externalLink">BigInteger</a>&nbsp;serialNumber)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i22" class="altColor">
-<td class="colFirst"><code><a href="../../../org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#setSubject-javax.security.auth.x500.X500Principal-">setSubject</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/security/auth/x500/X500Principal.html?is-external=true" title="class or interface in javax.security.auth.x500">X500Principal</a>&nbsp;subject)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSubject(javax.security.auth.x500.X500Principal)">setSubject</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/javax/security/auth/x500/X500Principal.html?is-external=true" title="class or interface in javax.security.auth.x500" class="externalLink">X500Principal</a>&nbsp;subject)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i23" class="rowColor">
-<td class="colFirst"><code><a href="../../../org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/webpki/crypto/CertificateFilter.html#setSubjectRegEx-java.lang.String-">setSubjectRegEx</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;subjectRegEx)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSubjectRegEx(java.lang.String)">setSubjectRegEx</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;subjectRegEx)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
+<li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
+<code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang" class="externalLink">clone</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang" class="externalLink">equals</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang" class="externalLink">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang" class="externalLink">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang" class="externalLink">notify</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang" class="externalLink">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang" class="externalLink">toString</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true#wait(long,int)" title="class or interface in java.lang" class="externalLink">wait</a></code></li>
 </ul>
 </li>
 </ul>
+</section>
 </li>
 </ul>
 </div>
@@ -310,124 +376,127 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <!-- ============ FIELD DETAIL =========== -->
+<section role="region">
 <ul class="blockList">
-<li class="blockList"><a name="field.detail">
+<li class="blockList"><a id="field.detail">
 <!--   -->
 </a>
 <h3>Field Detail</h3>
-<a name="CF_EMAIL_REG_EX">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>CF_EMAIL_REG_EX</h4>
-<pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CF_EMAIL_REG_EX</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#org.webpki.crypto.CertificateFilter.CF_EMAIL_REG_EX">Constant Field Values</a></dd>
-</dl>
-</li>
-</ul>
-<a name="CF_EXT_KEY_USAGE_RULES">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>CF_EXT_KEY_USAGE_RULES</h4>
-<pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CF_EXT_KEY_USAGE_RULES</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#org.webpki.crypto.CertificateFilter.CF_EXT_KEY_USAGE_RULES">Constant Field Values</a></dd>
-</dl>
-</li>
-</ul>
-<a name="CF_FINGER_PRINT">
+<a id="CF_FINGER_PRINT">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>CF_FINGER_PRINT</h4>
-<pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CF_FINGER_PRINT</pre>
+<pre>public static final&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> CF_FINGER_PRINT</pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../constant-values.html#org.webpki.crypto.CertificateFilter.CF_FINGER_PRINT">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
-<a name="CF_ISSUER_REG_EX">
+<a id="CF_ISSUER_REG_EX">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>CF_ISSUER_REG_EX</h4>
-<pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CF_ISSUER_REG_EX</pre>
+<pre>public static final&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> CF_ISSUER_REG_EX</pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../constant-values.html#org.webpki.crypto.CertificateFilter.CF_ISSUER_REG_EX">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
-<a name="CF_KEY_USAGE_RULES">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>CF_KEY_USAGE_RULES</h4>
-<pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CF_KEY_USAGE_RULES</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#org.webpki.crypto.CertificateFilter.CF_KEY_USAGE_RULES">Constant Field Values</a></dd>
-</dl>
-</li>
-</ul>
-<a name="CF_POLICY_RULES">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>CF_POLICY_RULES</h4>
-<pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CF_POLICY_RULES</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#org.webpki.crypto.CertificateFilter.CF_POLICY_RULES">Constant Field Values</a></dd>
-</dl>
-</li>
-</ul>
-<a name="CF_SERIAL_NUMBER">
+<a id="CF_SERIAL_NUMBER">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>CF_SERIAL_NUMBER</h4>
-<pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CF_SERIAL_NUMBER</pre>
+<pre>public static final&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> CF_SERIAL_NUMBER</pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../constant-values.html#org.webpki.crypto.CertificateFilter.CF_SERIAL_NUMBER">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
-<a name="CF_SUBJECT_REG_EX">
+<a id="CF_SUBJECT_REG_EX">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>CF_SUBJECT_REG_EX</h4>
-<pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CF_SUBJECT_REG_EX</pre>
+<pre>public static final&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> CF_SUBJECT_REG_EX</pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../constant-values.html#org.webpki.crypto.CertificateFilter.CF_SUBJECT_REG_EX">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
+<a id="CF_EMAIL_REG_EX">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CF_EMAIL_REG_EX</h4>
+<pre>public static final&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> CF_EMAIL_REG_EX</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.crypto.CertificateFilter.CF_EMAIL_REG_EX">Constant Field Values</a></dd>
+</dl>
 </li>
 </ul>
-<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<a id="CF_POLICY_RULES">
+<!--   -->
+</a>
 <ul class="blockList">
-<li class="blockList"><a name="constructor.detail">
+<li class="blockList">
+<h4>CF_POLICY_RULES</h4>
+<pre>public static final&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> CF_POLICY_RULES</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.crypto.CertificateFilter.CF_POLICY_RULES">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a id="CF_KEY_USAGE_RULES">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CF_KEY_USAGE_RULES</h4>
+<pre>public static final&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> CF_KEY_USAGE_RULES</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.crypto.CertificateFilter.CF_KEY_USAGE_RULES">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a id="CF_EXT_KEY_USAGE_RULES">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>CF_EXT_KEY_USAGE_RULES</h4>
+<pre>public static final&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> CF_EXT_KEY_USAGE_RULES</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.webpki.crypto.CertificateFilter.CF_EXT_KEY_USAGE_RULES">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<section role="region">
+<ul class="blockList">
+<li class="blockList"><a id="constructor.detail">
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="CertificateFilter--">
+<a id="&lt;init&gt;()">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -438,322 +507,328 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </ul>
 </li>
 </ul>
+</section>
 <!-- ============ METHOD DETAIL ========== -->
+<section role="region">
 <ul class="blockList">
-<li class="blockList"><a name="method.detail">
+<li class="blockList"><a id="method.detail">
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="getEmailRegEx--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getEmailRegEx</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getEmailRegEx()</pre>
-</li>
-</ul>
-<a name="getExtendedKeyUsageRules--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getExtendedKeyUsageRules</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;getExtendedKeyUsageRules()</pre>
-</li>
-</ul>
-<a name="getFingerPrint--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getFingerPrint</h4>
-<pre>public&nbsp;byte[]&nbsp;getFingerPrint()</pre>
-</li>
-</ul>
-<a name="getIssuerRegEx--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getIssuerRegEx</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getIssuerRegEx()</pre>
-</li>
-</ul>
-<a name="getKeyUsageRules--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getKeyUsageRules</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;getKeyUsageRules()</pre>
-</li>
-</ul>
-<a name="getPolicyRules--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getPolicyRules</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;getPolicyRules()</pre>
-</li>
-</ul>
-<a name="getSerialNumber--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getSerialNumber</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html?is-external=true" title="class or interface in java.math">BigInteger</a>&nbsp;getSerialNumber()</pre>
-</li>
-</ul>
-<a name="getSubjectRegEx--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getSubjectRegEx</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getSubjectRegEx()</pre>
-</li>
-</ul>
-<a name="matches-java.security.cert.X509Certificate:A-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>matches</h4>
-<pre>public&nbsp;boolean&nbsp;matches(<a href="https://docs.oracle.com/javase/8/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[]&nbsp;certificatePath)
-                throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="matchKeyUsage-java.lang.String:A-java.security.cert.X509Certificate-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>matchKeyUsage</h4>
-<pre>public static&nbsp;boolean&nbsp;matchKeyUsage(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;specifier,
-                                    <a href="https://docs.oracle.com/javase/8/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>&nbsp;certificate)
-                             throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="needsPathExpansion--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>needsPathExpansion</h4>
-<pre>public&nbsp;boolean&nbsp;needsPathExpansion()</pre>
-</li>
-</ul>
-<a name="nullCheck-java.lang.Object-">
+<a id="nullCheck(java.lang.Object)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>nullCheck</h4>
-<pre>protected&nbsp;void&nbsp;nullCheck(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o)
-                  throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre class="methodSignature">protected&nbsp;void&nbsp;nullCheck&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;o)
+                  throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="setEmail-java.lang.String-">
+<a id="getFingerPrint()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>setEmail</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a>&nbsp;setEmail(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;emailAddress)
-                           throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
-</dl>
+<h4>getFingerPrint</h4>
+<pre class="methodSignature">public&nbsp;byte[]&nbsp;getFingerPrint()</pre>
 </li>
 </ul>
-<a name="setEmailRegEx-java.lang.String-">
+<a id="getIssuerRegEx()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>setEmailRegEx</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a>&nbsp;setEmailRegEx(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;emailRegEx)
-                                throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
-</dl>
+<h4>getIssuerRegEx</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getIssuerRegEx()</pre>
 </li>
 </ul>
-<a name="setExtendedKeyUsageRules-java.lang.String:A-">
+<a id="getSubjectRegEx()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>setExtendedKeyUsageRules</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a>&nbsp;setExtendedKeyUsageRules(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;extendedKeyUsageRules)
-                                           throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
-</dl>
+<h4>getSubjectRegEx</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getSubjectRegEx()</pre>
 </li>
 </ul>
-<a name="setFingerPrint-byte:A-">
+<a id="getEmailRegEx()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEmailRegEx</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getEmailRegEx()</pre>
+</li>
+</ul>
+<a id="getPolicyRules()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPolicyRules</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]&nbsp;getPolicyRules()</pre>
+</li>
+</ul>
+<a id="getSerialNumber()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSerialNumber</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/BigInteger.html?is-external=true" title="class or interface in java.math" class="externalLink">BigInteger</a>&nbsp;getSerialNumber()</pre>
+</li>
+</ul>
+<a id="getKeyUsageRules()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getKeyUsageRules</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]&nbsp;getKeyUsageRules()</pre>
+</li>
+</ul>
+<a id="getExtendedKeyUsageRules()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getExtendedKeyUsageRules</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]&nbsp;getExtendedKeyUsageRules()</pre>
+</li>
+</ul>
+<a id="setFingerPrint(byte[])">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setFingerPrint</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a>&nbsp;setFingerPrint(byte[]&nbsp;fingerPrint)
-                                 throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre class="methodSignature">public&nbsp;<a href="CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a>&nbsp;setFingerPrint&#8203;(byte[]&nbsp;fingerPrint)
+                                 throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="setIssuer-javax.security.auth.x500.X500Principal-">
+<a id="setIssuer(javax.security.auth.x500.X500Principal)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setIssuer</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a>&nbsp;setIssuer(<a href="https://docs.oracle.com/javase/8/docs/api/javax/security/auth/x500/X500Principal.html?is-external=true" title="class or interface in javax.security.auth.x500">X500Principal</a>&nbsp;issuer)
-                            throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre class="methodSignature">public&nbsp;<a href="CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a>&nbsp;setIssuer&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/javax/security/auth/x500/X500Principal.html?is-external=true" title="class or interface in javax.security.auth.x500" class="externalLink">X500Principal</a>&nbsp;issuer)
+                            throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="setIssuerRegEx-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setIssuerRegEx</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a>&nbsp;setIssuerRegEx(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;issuerRegEx)
-                                 throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="setKeyUsageRules-org.webpki.crypto.KeyUsageBits:A-org.webpki.crypto.KeyUsageBits:A-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setKeyUsageRules</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a>&nbsp;setKeyUsageRules(<a href="../../../org/webpki/crypto/KeyUsageBits.html" title="enum in org.webpki.crypto">KeyUsageBits</a>[]&nbsp;required,
-                                          <a href="../../../org/webpki/crypto/KeyUsageBits.html" title="enum in org.webpki.crypto">KeyUsageBits</a>[]&nbsp;disallowed)
-                                   throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="setKeyUsageRules-java.lang.String:A-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setKeyUsageRules</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a>&nbsp;setKeyUsageRules(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;keyUsageRules)
-                                   throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="setPolicyRules-java.lang.String:A-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setPolicyRules</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a>&nbsp;setPolicyRules(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;ruleSet)
-                                 throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="setSerialNumber-java.math.BigInteger-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setSerialNumber</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a>&nbsp;setSerialNumber(<a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html?is-external=true" title="class or interface in java.math">BigInteger</a>&nbsp;serialNumber)
-                                  throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<dl>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="setSubject-javax.security.auth.x500.X500Principal-">
+<a id="setSubject(javax.security.auth.x500.X500Principal)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setSubject</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a>&nbsp;setSubject(<a href="https://docs.oracle.com/javase/8/docs/api/javax/security/auth/x500/X500Principal.html?is-external=true" title="class or interface in javax.security.auth.x500">X500Principal</a>&nbsp;subject)
-                             throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<pre class="methodSignature">public&nbsp;<a href="CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a>&nbsp;setSubject&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/javax/security/auth/x500/X500Principal.html?is-external=true" title="class or interface in javax.security.auth.x500" class="externalLink">X500Principal</a>&nbsp;subject)
+                             throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="setSubjectRegEx-java.lang.String-">
+<a id="setIssuerRegEx(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setIssuerRegEx</h4>
+<pre class="methodSignature">public&nbsp;<a href="CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a>&nbsp;setIssuerRegEx&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;issuerRegEx)
+                                 throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
+</dl>
+</li>
+</ul>
+<a id="setSubjectRegEx(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSubjectRegEx</h4>
+<pre class="methodSignature">public&nbsp;<a href="CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a>&nbsp;setSubjectRegEx&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;subjectRegEx)
+                                  throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
+</dl>
+</li>
+</ul>
+<a id="setEmail(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setEmail</h4>
+<pre class="methodSignature">public&nbsp;<a href="CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a>&nbsp;setEmail&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;emailAddress)
+                           throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
+</dl>
+</li>
+</ul>
+<a id="setEmailRegEx(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setEmailRegEx</h4>
+<pre class="methodSignature">public&nbsp;<a href="CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a>&nbsp;setEmailRegEx&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;emailRegEx)
+                                throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
+</dl>
+</li>
+</ul>
+<a id="setPolicyRules(java.lang.String[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setPolicyRules</h4>
+<pre class="methodSignature">public&nbsp;<a href="CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a>&nbsp;setPolicyRules&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]&nbsp;ruleSet)
+                                 throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
+</dl>
+</li>
+</ul>
+<a id="setSerialNumber(java.math.BigInteger)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSerialNumber</h4>
+<pre class="methodSignature">public&nbsp;<a href="CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a>&nbsp;setSerialNumber&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/BigInteger.html?is-external=true" title="class or interface in java.math" class="externalLink">BigInteger</a>&nbsp;serialNumber)
+                                  throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
+</dl>
+</li>
+</ul>
+<a id="setKeyUsageRules(java.lang.String[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setKeyUsageRules</h4>
+<pre class="methodSignature">public&nbsp;<a href="CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a>&nbsp;setKeyUsageRules&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]&nbsp;keyUsageRules)
+                                   throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
+</dl>
+</li>
+</ul>
+<a id="setKeyUsageRules(org.webpki.crypto.KeyUsageBits[],org.webpki.crypto.KeyUsageBits[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setKeyUsageRules</h4>
+<pre class="methodSignature">public&nbsp;<a href="CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a>&nbsp;setKeyUsageRules&#8203;(<a href="KeyUsageBits.html" title="enum in org.webpki.crypto">KeyUsageBits</a>[]&nbsp;required,
+                                          <a href="KeyUsageBits.html" title="enum in org.webpki.crypto">KeyUsageBits</a>[]&nbsp;disallowed)
+                                   throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
+</dl>
+</li>
+</ul>
+<a id="setExtendedKeyUsageRules(java.lang.String[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setExtendedKeyUsageRules</h4>
+<pre class="methodSignature">public&nbsp;<a href="CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a>&nbsp;setExtendedKeyUsageRules&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]&nbsp;extendedKeyUsageRules)
+                                           throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
+</dl>
+</li>
+</ul>
+<a id="needsPathExpansion()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>needsPathExpansion</h4>
+<pre class="methodSignature">public&nbsp;boolean&nbsp;needsPathExpansion()</pre>
+</li>
+</ul>
+<a id="matchKeyUsage(java.lang.String[],java.security.cert.X509Certificate)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>matchKeyUsage</h4>
+<pre class="methodSignature">public static&nbsp;boolean&nbsp;matchKeyUsage&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]&nbsp;specifier,
+                                    <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert" class="externalLink">X509Certificate</a>&nbsp;certificate)
+                             throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
+</dl>
+</li>
+</ul>
+<a id="matches(java.security.cert.X509Certificate[])">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>setSubjectRegEx</h4>
-<pre>public&nbsp;<a href="../../../org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a>&nbsp;setSubjectRegEx(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;subjectRegEx)
-                                  throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<h4>matches</h4>
+<pre class="methodSignature">public&nbsp;boolean&nbsp;matches&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert" class="externalLink">X509Certificate</a>[]&nbsp;certificatePath)
+                throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
 </dl>
 </li>
 </ul>
 </li>
 </ul>
+</section>
 </li>
 </ul>
 </div>
 </div>
+</main>
 <!-- ========= END OF CLASS DATA ========= -->
+<footer role="contentinfo">
+<nav role="navigation">
 <!-- ======= START OF BOTTOM NAVBAR ====== -->
-<div class="bottomNav"><a name="navbar.bottom">
+<div class="bottomNav"><a id="navbar.bottom">
 <!--   -->
 </a>
 <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
-<a name="navbar.bottom.firstrow">
+<a id="navbar.bottom.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
-<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="../../../index.html">Overview</a></li>
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
@@ -762,16 +837,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </ul>
 </div>
 <div class="subNav">
-<ul class="navList">
-<li><a href="../../../org/webpki/crypto/CertificateExtensions.html" title="enum in org.webpki.crypto"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../org/webpki/crypto/CertificateInfo.html" title="class in org.webpki.crypto"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
-</ul>
-<ul class="navList">
-<li><a href="../../../index.html?org/webpki/crypto/CertificateFilter.html" target="_top">Frames</a></li>
-<li><a href="CertificateFilter.html" target="_top">No&nbsp;Frames</a></li>
-</ul>
 <ul class="navList" id="allclasses_navbar_bottom">
-<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+<li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -784,6 +851,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
   }
   //-->
 </script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
 </div>
 <div>
 <ul class="subNavList">
@@ -800,10 +870,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
-<a name="skip.navbar.bottom">
+<a id="skip.navbar.bottom">
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>2005-2018 WebPKI.org.</i></small></p>
+</nav>
+<p class="legalCopy"><small><i>2005-2020 WebPKI.org.</i></small></p>
+</footer>
 </body>
 </html>

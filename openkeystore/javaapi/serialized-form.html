@@ -1,12 +1,22 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML>
 <!-- NewPage -->
 <html lang="en">
 <head>
 
 <title>Serialized Form (WebPKI.org Support)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <link rel="stylesheet" type="text/css" href="stylesheet.css" title="Style">
+<link rel="stylesheet" type="text/css" href="jquery/jquery-ui.css" title="Style">
 <script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="jquery/jszip/dist/jszip.min.js"></script>
+<script type="text/javascript" src="jquery/jszip-utils/dist/jszip-utils.min.js"></script>
+<!--[if IE]>
+<script type="text/javascript" src="jquery/jszip-utils/dist/jszip-utils-ie.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="jquery/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="jquery/jquery-migrate-3.0.1.js"></script>
+<script type="text/javascript" src="jquery/jquery-ui.js"></script>
 </head>
 <body>
 <script type="text/javascript"><!--
@@ -18,20 +28,25 @@
     catch(err) {
     }
 //-->
-</script>
+var pathtoroot = "./";
+var useModuleDirectories = true;
+loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
 </noscript>
+<header role="banner">
+<nav role="navigation">
+<div class="fixedNav">
 <!-- ========= START OF TOP NAVBAR ======= -->
-<div class="topNav"><a name="navbar.top">
+<div class="topNav"><a id="navbar.top">
 <!--   -->
 </a>
 <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
-<a name="navbar.top.firstrow">
+<a id="navbar.top.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
-<li><a href="overview-summary.html">Overview</a></li>
+<li><a href="index.html">Overview</a></li>
 <li>Package</li>
 <li>Class</li>
 <li><a href="overview-tree.html">Tree</a></li>
@@ -40,16 +55,14 @@
 </ul>
 </div>
 <div class="subNav">
-<ul class="navList">
-<li>Prev</li>
-<li>Next</li>
-</ul>
-<ul class="navList">
-<li><a href="index.html?serialized-form.html" target="_top">Frames</a></li>
-<li><a href="serialized-form.html" target="_top">No&nbsp;Frames</a></li>
-</ul>
 <ul class="navList" id="allclasses_navbar_top">
-<li><a href="allclasses-noframe.html">All&nbsp;Classes</a></li>
+<li><a href="allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" disabled="disabled">
+<input type="reset" id="reset" value="reset" disabled="disabled">
+</li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -62,23 +75,36 @@
   }
   //-->
 </script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
 </div>
-<a name="skip.navbar.top">
+<a id="skip.navbar.top">
 <!--   -->
 </a></div>
 <!-- ========= END OF TOP NAVBAR ========= -->
+</div>
+<div class="navPadding">&nbsp;</div>
+<script type="text/javascript"><!--
+$('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+//-->
+</script>
+</nav>
+</header>
+<main role="main">
 <div class="header">
 <h1 title="Serialized Form" class="title">Serialized Form</h1>
 </div>
 <div class="serializedFormContainer">
 <ul class="blockList">
 <li class="blockList">
+<section role="region">
 <h2 title="Package">Package&nbsp;org.webpki.crypto</h2>
 <ul class="blockList">
-<li class="blockList"><a name="org.webpki.crypto.AuthorityInfoAccessCAIssuersCache">
+<li class="blockList"><a id="org.webpki.crypto.AuthorityInfoAccessCAIssuersCache">
 <!--   -->
 </a>
-<h3>Class <a href="org/webpki/crypto/AuthorityInfoAccessCAIssuersCache.html" title="class in org.webpki.crypto">org.webpki.crypto.AuthorityInfoAccessCAIssuersCache</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<h3>Class <a href="org/webpki/crypto/AuthorityInfoAccessCAIssuersCache.html" title="class in org.webpki.crypto">org.webpki.crypto.AuthorityInfoAccessCAIssuersCache</a> extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a> implements Serializable</h3>
 <dl class="nameValue">
 <dt>serialVersionUID:</dt>
 <dd>1L</dd>
@@ -89,21 +115,23 @@
 <ul class="blockList">
 <li class="blockListLast">
 <h4>cache</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html?is-external=true" title="class or interface in java.util">Hashtable</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html?is-external=true" title="class or interface in java.util">K</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html?is-external=true" title="class or interface in java.util">V</a>&gt; cache</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Hashtable.html?is-external=true" title="class or interface in java.util" class="externalLink">Hashtable</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert" class="externalLink">X509Certificate</a>[]&gt; cache</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
+</section>
 </li>
 <li class="blockList">
+<section role="region">
 <h2 title="Package">Package&nbsp;org.webpki.json</h2>
 <ul class="blockList">
-<li class="blockList"><a name="org.webpki.json.JSONArrayReader">
+<li class="blockList"><a id="org.webpki.json.JSONArrayReader">
 <!--   -->
 </a>
-<h3>Class <a href="org/webpki/json/JSONArrayReader.html" title="class in org.webpki.json">org.webpki.json.JSONArrayReader</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<h3>Class <a href="org/webpki/json/JSONArrayReader.html" title="class in org.webpki.json">org.webpki.json.JSONArrayReader</a> extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a> implements Serializable</h3>
 <dl class="nameValue">
 <dt>serialVersionUID:</dt>
 <dd>1L</dd>
@@ -114,7 +142,7 @@
 <ul class="blockList">
 <li class="blockList">
 <h4>array</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">E</a>&gt; array</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html?is-external=true" title="class or interface in java.util" class="externalLink">ArrayList</a>&lt;org.webpki.json.JSONValue&gt; array</pre>
 </li>
 <li class="blockListLast">
 <h4>index</h4>
@@ -124,10 +152,10 @@
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.json.JSONArrayWriter">
+<li class="blockList"><a id="org.webpki.json.JSONArrayWriter">
 <!--   -->
 </a>
-<h3>Class <a href="org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">org.webpki.json.JSONArrayWriter</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<h3>Class <a href="org/webpki/json/JSONArrayWriter.html" title="class in org.webpki.json">org.webpki.json.JSONArrayWriter</a> extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a> implements Serializable</h3>
 <dl class="nameValue">
 <dt>serialVersionUID:</dt>
 <dd>1L</dd>
@@ -138,13 +166,13 @@
 <ul class="blockList">
 <li class="blockListLast">
 <h4>array</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">E</a>&gt; array</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html?is-external=true" title="class or interface in java.util" class="externalLink">ArrayList</a>&lt;org.webpki.json.JSONValue&gt; array</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.json.JSONAsymKeyEncrypter">
+<li class="blockList"><a id="org.webpki.json.JSONAsymKeyEncrypter">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/json/JSONAsymKeyEncrypter.html" title="class in org.webpki.json">org.webpki.json.JSONAsymKeyEncrypter</a> extends <a href="org/webpki/json/JSONEncrypter.html" title="class in org.webpki.json">JSONEncrypter</a> implements Serializable</h3>
@@ -153,7 +181,7 @@
 <dd>1L</dd>
 </dl>
 </li>
-<li class="blockList"><a name="org.webpki.json.JSONAsymKeySigner">
+<li class="blockList"><a id="org.webpki.json.JSONAsymKeySigner">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/json/JSONAsymKeySigner.html" title="class in org.webpki.json">org.webpki.json.JSONAsymKeySigner</a> extends <a href="org/webpki/json/JSONSigner.html" title="class in org.webpki.json">JSONSigner</a> implements Serializable</h3>
@@ -170,18 +198,18 @@
 <pre><a href="org/webpki/crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a> algorithm</pre>
 </li>
 <li class="blockList">
+<h4>publicKey</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/PublicKey.html?is-external=true" title="class or interface in java.security" class="externalLink">PublicKey</a> publicKey</pre>
+</li>
+<li class="blockListLast">
 <h4>signer</h4>
 <pre><a href="org/webpki/crypto/AsymKeySignerInterface.html" title="interface in org.webpki.crypto">AsymKeySignerInterface</a> signer</pre>
 </li>
-<li class="blockListLast">
-<h4>publicKey</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a> publicKey</pre>
-</li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.json.JSONAsymKeyVerifier">
+<li class="blockList"><a id="org.webpki.json.JSONAsymKeyVerifier">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/json/JSONAsymKeyVerifier.html" title="class in org.webpki.json">org.webpki.json.JSONAsymKeyVerifier</a> extends <a href="org/webpki/json/JSONVerifier.html" title="class in org.webpki.json">JSONVerifier</a> implements Serializable</h3>
@@ -195,25 +223,25 @@
 <ul class="blockList">
 <li class="blockListLast">
 <h4>expectedPublicKey</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a> expectedPublicKey</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/PublicKey.html?is-external=true" title="class or interface in java.security" class="externalLink">PublicKey</a> expectedPublicKey</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.json.JSONCryptoHelper">
+<li class="blockList"><a id="org.webpki.json.JSONCryptoHelper">
 <!--   -->
 </a>
-<h3>Class <a href="org/webpki/json/JSONCryptoHelper.html" title="class in org.webpki.json">org.webpki.json.JSONCryptoHelper</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<h3>Class <a href="org/webpki/json/JSONCryptoHelper.html" title="class in org.webpki.json">org.webpki.json.JSONCryptoHelper</a> extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a> implements Serializable</h3>
 <dl class="nameValue">
 <dt>serialVersionUID:</dt>
 <dd>1L</dd>
 </dl>
 </li>
-<li class="blockList"><a name="org.webpki.json.JSONDecoder">
+<li class="blockList"><a id="org.webpki.json.JSONDecoder">
 <!--   -->
 </a>
-<h3>Class <a href="org/webpki/json/JSONDecoder.html" title="class in org.webpki.json">org.webpki.json.JSONDecoder</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<h3>Class <a href="org/webpki/json/JSONDecoder.html" title="class in org.webpki.json">org.webpki.json.JSONDecoder</a> extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a> implements Serializable</h3>
 <dl class="nameValue">
 <dt>serialVersionUID:</dt>
 <dd>1L</dd>
@@ -230,10 +258,10 @@
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.json.JSONDecoderCache">
+<li class="blockList"><a id="org.webpki.json.JSONDecoderCache">
 <!--   -->
 </a>
-<h3>Class <a href="org/webpki/json/JSONDecoderCache.html" title="class in org.webpki.json">org.webpki.json.JSONDecoderCache</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<h3>Class <a href="org/webpki/json/JSONDecoderCache.html" title="class in org.webpki.json">org.webpki.json.JSONDecoderCache</a> extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a> implements Serializable</h3>
 <dl class="nameValue">
 <dt>serialVersionUID:</dt>
 <dd>1L</dd>
@@ -248,16 +276,16 @@
 </li>
 <li class="blockListLast">
 <h4>classMap</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html?is-external=true" title="class or interface in java.util">Hashtable</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html?is-external=true" title="class or interface in java.util">K</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html?is-external=true" title="class or interface in java.util">V</a>&gt; classMap</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Hashtable.html?is-external=true" title="class or interface in java.util" class="externalLink">Hashtable</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;? extends <a href="org/webpki/json/JSONDecoder.html" title="class in org.webpki.json">JSONDecoder</a>&gt;&gt; classMap</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.json.JSONEncoder">
+<li class="blockList"><a id="org.webpki.json.JSONEncoder">
 <!--   -->
 </a>
-<h3>Class <a href="org/webpki/json/JSONEncoder.html" title="class in org.webpki.json">org.webpki.json.JSONEncoder</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<h3>Class <a href="org/webpki/json/JSONEncoder.html" title="class in org.webpki.json">org.webpki.json.JSONEncoder</a> extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a> implements Serializable</h3>
 <dl class="nameValue">
 <dt>serialVersionUID:</dt>
 <dd>1L</dd>
@@ -274,10 +302,10 @@
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.json.JSONEncrypter">
+<li class="blockList"><a id="org.webpki.json.JSONEncrypter">
 <!--   -->
 </a>
-<h3>Class <a href="org/webpki/json/JSONEncrypter.html" title="class in org.webpki.json">org.webpki.json.JSONEncrypter</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<h3>Class <a href="org/webpki/json/JSONEncrypter.html" title="class in org.webpki.json">org.webpki.json.JSONEncrypter</a> extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a> implements Serializable</h3>
 <dl class="nameValue">
 <dt>serialVersionUID:</dt>
 <dd>1L</dd>
@@ -287,41 +315,41 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
-<h4>extensions</h4>
-<pre><a href="org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a> extensions</pre>
-</li>
-<li class="blockList">
-<h4>keyId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> keyId</pre>
-</li>
-<li class="blockList">
-<h4>outputPublicKeyInfo</h4>
-<pre>boolean outputPublicKeyInfo</pre>
-</li>
-<li class="blockList">
-<h4>keyEncryptionAlgorithm</h4>
-<pre><a href="org/webpki/json/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json">KeyEncryptionAlgorithms</a> keyEncryptionAlgorithm</pre>
+<h4>algorithmPreferences</h4>
+<pre><a href="org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a> algorithmPreferences</pre>
 </li>
 <li class="blockList">
 <h4>contentEncryptionKey</h4>
 <pre>byte[] contentEncryptionKey</pre>
 </li>
 <li class="blockList">
+<h4>extensions</h4>
+<pre><a href="org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a> extensions</pre>
+</li>
+<li class="blockList">
+<h4>keyEncryptionAlgorithm</h4>
+<pre><a href="org/webpki/json/KeyEncryptionAlgorithms.html" title="enum in org.webpki.json">KeyEncryptionAlgorithms</a> keyEncryptionAlgorithm</pre>
+</li>
+<li class="blockList">
+<h4>keyId</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> keyId</pre>
+</li>
+<li class="blockList">
+<h4>outputPublicKeyInfo</h4>
+<pre>boolean outputPublicKeyInfo</pre>
+</li>
+<li class="blockListLast">
 <h4>publicKey</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a> publicKey</pre>
-</li>
-<li class="blockListLast">
-<h4>algorithmPreferences</h4>
-<pre><a href="org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a> algorithmPreferences</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/PublicKey.html?is-external=true" title="class or interface in java.security" class="externalLink">PublicKey</a> publicKey</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.json.JSONObjectReader">
+<li class="blockList"><a id="org.webpki.json.JSONObjectReader">
 <!--   -->
 </a>
-<h3>Class <a href="org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">org.webpki.json.JSONObjectReader</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<h3>Class <a href="org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">org.webpki.json.JSONObjectReader</a> extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a> implements Serializable</h3>
 <dl class="nameValue">
 <dt>serialVersionUID:</dt>
 <dd>1L</dd>
@@ -338,10 +366,10 @@
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.json.JSONObjectWriter">
+<li class="blockList"><a id="org.webpki.json.JSONObjectWriter">
 <!--   -->
 </a>
-<h3>Class <a href="org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">org.webpki.json.JSONObjectWriter</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<h3>Class <a href="org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">org.webpki.json.JSONObjectWriter</a> extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a> implements Serializable</h3>
 <dl class="nameValue">
 <dt>serialVersionUID:</dt>
 <dd>1L</dd>
@@ -350,46 +378,46 @@
 <li class="blockList">
 <h3>Serialized Fields</h3>
 <ul class="blockList">
-<li class="blockList">
-<h4>root</h4>
-<pre>org.webpki.json.JSONObject root</pre>
-</li>
 <li class="blockList">
 <h4>buffer</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html?is-external=true" title="class or interface in java.lang">StringBuilder</a> buffer</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/StringBuilder.html?is-external=true" title="class or interface in java.lang" class="externalLink">StringBuilder</a> buffer</pre>
 </li>
 <li class="blockList">
-<h4>indent</h4>
-<pre>int indent</pre>
-</li>
-<li class="blockList">
-<h4>prettyPrint</h4>
-<pre>boolean prettyPrint</pre>
-</li>
-<li class="blockList">
-<h4>javaScriptMode</h4>
-<pre>boolean javaScriptMode</pre>
+<h4>canonicalized</h4>
+<pre>boolean canonicalized</pre>
 </li>
 <li class="blockList">
 <h4>htmlMode</h4>
 <pre>boolean htmlMode</pre>
 </li>
 <li class="blockList">
-<h4>canonicalized</h4>
-<pre>boolean canonicalized</pre>
+<h4>indent</h4>
+<pre>int indent</pre>
 </li>
-<li class="blockListLast">
+<li class="blockList">
 <h4>indentFactor</h4>
 <pre>int indentFactor</pre>
 </li>
-</ul>
+<li class="blockList">
+<h4>javaScriptMode</h4>
+<pre>boolean javaScriptMode</pre>
+</li>
+<li class="blockList">
+<h4>prettyPrint</h4>
+<pre>boolean prettyPrint</pre>
+</li>
+<li class="blockListLast">
+<h4>root</h4>
+<pre>org.webpki.json.JSONObject root</pre>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.json.JSONSignatureDecoder">
+</ul>
+</li>
+<li class="blockList"><a id="org.webpki.json.JSONSignatureDecoder">
 <!--   -->
 </a>
-<h3>Class <a href="org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">org.webpki.json.JSONSignatureDecoder</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<h3>Class <a href="org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">org.webpki.json.JSONSignatureDecoder</a> extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a> implements Serializable</h3>
 <dl class="nameValue">
 <dt>serialVersionUID:</dt>
 <dd>1L</dd>
@@ -404,41 +432,41 @@
 </li>
 <li class="blockList">
 <h4>algorithmString</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> algorithmString</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> algorithmString</pre>
+</li>
+<li class="blockList">
+<h4>certificatePath</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert" class="externalLink">X509Certificate</a>[] certificatePath</pre>
+</li>
+<li class="blockList">
+<h4>extensions</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util" class="externalLink">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;<a href="org/webpki/json/JSONCryptoHelper.Extension.html" title="class in org.webpki.json">JSONCryptoHelper.Extension</a>&gt; extensions</pre>
+</li>
+<li class="blockList">
+<h4>keyId</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> keyId</pre>
 </li>
 <li class="blockList">
 <h4>normalizedData</h4>
 <pre>byte[] normalizedData</pre>
 </li>
 <li class="blockList">
-<h4>signatureValue</h4>
-<pre>byte[] signatureValue</pre>
-</li>
-<li class="blockList">
-<h4>certificatePath</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[] certificatePath</pre>
-</li>
-<li class="blockList">
-<h4>publicKey</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a> publicKey</pre>
-</li>
-<li class="blockList">
-<h4>keyId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> keyId</pre>
-</li>
-<li class="blockList">
 <h4>options</h4>
 <pre><a href="org/webpki/json/JSONCryptoHelper.Options.html" title="class in org.webpki.json">JSONCryptoHelper.Options</a> options</pre>
 </li>
+<li class="blockList">
+<h4>publicKey</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/PublicKey.html?is-external=true" title="class or interface in java.security" class="externalLink">PublicKey</a> publicKey</pre>
+</li>
 <li class="blockListLast">
-<h4>extensions</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">K</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">V</a>&gt; extensions</pre>
+<h4>signatureValue</h4>
+<pre>byte[] signatureValue</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.json.JSONSigner">
+<li class="blockList"><a id="org.webpki.json.JSONSigner">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/json/JSONSigner.html" title="class in org.webpki.json">org.webpki.json.JSONSigner</a> extends org.webpki.json.JSONCryptoHelper.ExtensionsEncoder implements Serializable</h3>
@@ -451,34 +479,34 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
+<h4>algorithmPreferences</h4>
+<pre><a href="org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a> algorithmPreferences</pre>
+</li>
+<li class="blockList">
+<h4>excluded</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[] excluded</pre>
+</li>
+<li class="blockList">
 <h4>extensionData</h4>
 <pre><a href="org/webpki/json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a> extensionData</pre>
 </li>
 <li class="blockList">
-<h4>excluded</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[] excluded</pre>
-</li>
-<li class="blockList">
 <h4>keyId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> keyId</pre>
-</li>
-<li class="blockList">
-<h4>outputPublicKeyInfo</h4>
-<pre>boolean outputPublicKeyInfo</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> keyId</pre>
 </li>
 <li class="blockList">
 <h4>normalizedData</h4>
 <pre>byte[] normalizedData</pre>
 </li>
 <li class="blockListLast">
-<h4>algorithmPreferences</h4>
-<pre><a href="org/webpki/crypto/AlgorithmPreferences.html" title="enum in org.webpki.crypto">AlgorithmPreferences</a> algorithmPreferences</pre>
+<h4>outputPublicKeyInfo</h4>
+<pre>boolean outputPublicKeyInfo</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.json.JSONSymKeyEncrypter">
+<li class="blockList"><a id="org.webpki.json.JSONSymKeyEncrypter">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/json/JSONSymKeyEncrypter.html" title="class in org.webpki.json">org.webpki.json.JSONSymKeyEncrypter</a> extends <a href="org/webpki/json/JSONEncrypter.html" title="class in org.webpki.json">JSONEncrypter</a> implements Serializable</h3>
@@ -487,7 +515,7 @@
 <dd>1L</dd>
 </dl>
 </li>
-<li class="blockList"><a name="org.webpki.json.JSONSymKeySigner">
+<li class="blockList"><a id="org.webpki.json.JSONSymKeySigner">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/json/JSONSymKeySigner.html" title="class in org.webpki.json">org.webpki.json.JSONSymKeySigner</a> extends <a href="org/webpki/json/JSONSigner.html" title="class in org.webpki.json">JSONSigner</a> implements Serializable</h3>
@@ -511,7 +539,7 @@
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.json.JSONSymKeyVerifier">
+<li class="blockList"><a id="org.webpki.json.JSONSymKeyVerifier">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/json/JSONSymKeyVerifier.html" title="class in org.webpki.json">org.webpki.json.JSONSymKeyVerifier</a> extends <a href="org/webpki/json/JSONVerifier.html" title="class in org.webpki.json">JSONVerifier</a> implements Serializable</h3>
@@ -531,10 +559,10 @@
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.json.JSONVerifier">
+<li class="blockList"><a id="org.webpki.json.JSONVerifier">
 <!--   -->
 </a>
-<h3>Class <a href="org/webpki/json/JSONVerifier.html" title="class in org.webpki.json">org.webpki.json.JSONVerifier</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<h3>Class <a href="org/webpki/json/JSONVerifier.html" title="class in org.webpki.json">org.webpki.json.JSONVerifier</a> extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a> implements Serializable</h3>
 <dl class="nameValue">
 <dt>serialVersionUID:</dt>
 <dd>1L</dd>
@@ -551,7 +579,7 @@
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.json.JSONX509Encrypter">
+<li class="blockList"><a id="org.webpki.json.JSONX509Encrypter">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/json/JSONX509Encrypter.html" title="class in org.webpki.json">org.webpki.json.JSONX509Encrypter</a> extends <a href="org/webpki/json/JSONEncrypter.html" title="class in org.webpki.json">JSONEncrypter</a> implements Serializable</h3>
@@ -565,13 +593,13 @@
 <ul class="blockList">
 <li class="blockListLast">
 <h4>certificatePath</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[] certificatePath</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert" class="externalLink">X509Certificate</a>[] certificatePath</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.json.JSONX509Signer">
+<li class="blockList"><a id="org.webpki.json.JSONX509Signer">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/json/JSONX509Signer.html" title="class in org.webpki.json">org.webpki.json.JSONX509Signer</a> extends <a href="org/webpki/json/JSONSigner.html" title="class in org.webpki.json">JSONSigner</a> implements Serializable</h3>
@@ -588,18 +616,18 @@
 <pre><a href="org/webpki/crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a> algorithm</pre>
 </li>
 <li class="blockList">
+<h4>certificatePath</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert" class="externalLink">X509Certificate</a>[] certificatePath</pre>
+</li>
+<li class="blockListLast">
 <h4>signer</h4>
 <pre><a href="org/webpki/crypto/SignerInterface.html" title="interface in org.webpki.crypto">SignerInterface</a> signer</pre>
 </li>
-<li class="blockListLast">
-<h4>certificatePath</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[] certificatePath</pre>
-</li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.json.JSONX509Verifier">
+<li class="blockList"><a id="org.webpki.json.JSONX509Verifier">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/json/JSONX509Verifier.html" title="class in org.webpki.json">org.webpki.json.JSONX509Verifier</a> extends <a href="org/webpki/json/JSONVerifier.html" title="class in org.webpki.json">JSONVerifier</a> implements Serializable</h3>
@@ -620,11 +648,13 @@
 </ul>
 </li>
 </ul>
+</section>
 </li>
 <li class="blockList">
+<section role="region">
 <h2 title="Package">Package&nbsp;org.webpki.keygen2</h2>
 <ul class="blockList">
-<li class="blockList"><a name="org.webpki.keygen2.CredentialDiscoveryRequestDecoder">
+<li class="blockList"><a id="org.webpki.keygen2.CredentialDiscoveryRequestDecoder">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/keygen2/CredentialDiscoveryRequestDecoder.html" title="class in org.webpki.keygen2">org.webpki.keygen2.CredentialDiscoveryRequestDecoder</a> extends org.webpki.keygen2.ClientDecoder implements Serializable</h3>
@@ -637,26 +667,26 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
-<h4>lookupSpecifiers</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">K</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">V</a>&gt; lookupSpecifiers</pre>
-</li>
-<li class="blockList">
 <h4>clientSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> clientSessionId</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> clientSessionId</pre>
 </li>
 <li class="blockList">
-<h4>serverSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverSessionId</pre>
+<h4>lookupSpecifiers</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util" class="externalLink">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;<a href="org/webpki/keygen2/CredentialDiscoveryRequestDecoder.LookupSpecifier.html" title="class in org.webpki.keygen2">CredentialDiscoveryRequestDecoder.LookupSpecifier</a>&gt; lookupSpecifiers</pre>
 </li>
-<li class="blockListLast">
+<li class="blockList">
 <h4>nonce_reference</h4>
 <pre>byte[] nonce_reference</pre>
 </li>
-</ul>
+<li class="blockListLast">
+<h4>serverSessionId</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> serverSessionId</pre>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.CredentialDiscoveryRequestEncoder">
+</ul>
+</li>
+<li class="blockList"><a id="org.webpki.keygen2.CredentialDiscoveryRequestEncoder">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/keygen2/CredentialDiscoveryRequestEncoder.html" title="class in org.webpki.keygen2">org.webpki.keygen2.CredentialDiscoveryRequestEncoder</a> extends org.webpki.keygen2.ServerEncoder implements Serializable</h3>
@@ -669,38 +699,38 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
-<h4>serverCryptoInterface</h4>
-<pre><a href="org/webpki/keygen2/ServerCryptoInterface.html" title="interface in org.webpki.keygen2">ServerCryptoInterface</a> serverCryptoInterface</pre>
-</li>
-<li class="blockList">
-<h4>serverSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverSessionId</pre>
-</li>
-<li class="blockList">
 <h4>clientSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> clientSessionId</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> clientSessionId</pre>
 </li>
 <li class="blockList">
 <h4>lookupDescriptors</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">E</a>&gt; lookupDescriptors</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html?is-external=true" title="class or interface in java.util" class="externalLink">ArrayList</a>&lt;<a href="org/webpki/keygen2/CredentialDiscoveryRequestEncoder.LookupDescriptor.html" title="class in org.webpki.keygen2">CredentialDiscoveryRequestEncoder.LookupDescriptor</a>&gt; lookupDescriptors</pre>
 </li>
 <li class="blockList">
 <h4>lookupPrefix</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> lookupPrefix</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> lookupPrefix</pre>
+</li>
+<li class="blockList">
+<h4>nextLookupIdSuffix</h4>
+<pre>int nextLookupIdSuffix</pre>
 </li>
 <li class="blockList">
 <h4>nonce</h4>
 <pre>byte[] nonce</pre>
 </li>
+<li class="blockList">
+<h4>serverCryptoInterface</h4>
+<pre><a href="org/webpki/keygen2/ServerCryptoInterface.html" title="interface in org.webpki.keygen2">ServerCryptoInterface</a> serverCryptoInterface</pre>
+</li>
 <li class="blockListLast">
-<h4>nextLookupIdSuffix</h4>
-<pre>int nextLookupIdSuffix</pre>
+<h4>serverSessionId</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> serverSessionId</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.CredentialDiscoveryResponseDecoder">
+<li class="blockList"><a id="org.webpki.keygen2.CredentialDiscoveryResponseDecoder">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/keygen2/CredentialDiscoveryResponseDecoder.html" title="class in org.webpki.keygen2">org.webpki.keygen2.CredentialDiscoveryResponseDecoder</a> extends org.webpki.keygen2.KeyGen2Validator implements Serializable</h3>
@@ -713,22 +743,22 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
-<h4>lookupResults</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">E</a>&gt; lookupResults</pre>
+<h4>clientSessionId</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> clientSessionId</pre>
 </li>
 <li class="blockList">
-<h4>clientSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> clientSessionId</pre>
+<h4>lookupResults</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html?is-external=true" title="class or interface in java.util" class="externalLink">ArrayList</a>&lt;<a href="org/webpki/keygen2/CredentialDiscoveryResponseDecoder.LookupResult.html" title="class in org.webpki.keygen2">CredentialDiscoveryResponseDecoder.LookupResult</a>&gt; lookupResults</pre>
 </li>
 <li class="blockListLast">
 <h4>serverSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverSessionId</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> serverSessionId</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.CredentialDiscoveryResponseEncoder">
+<li class="blockList"><a id="org.webpki.keygen2.CredentialDiscoveryResponseEncoder">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/keygen2/CredentialDiscoveryResponseEncoder.html" title="class in org.webpki.keygen2">org.webpki.keygen2.CredentialDiscoveryResponseEncoder</a> extends <a href="org/webpki/json/JSONEncoder.html" title="class in org.webpki.json">JSONEncoder</a> implements Serializable</h3>
@@ -741,26 +771,26 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
+<h4>clientSessionId</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> clientSessionId</pre>
+</li>
+<li class="blockList">
 <h4>lookupResults</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">E</a>&gt; lookupResults</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html?is-external=true" title="class or interface in java.util" class="externalLink">ArrayList</a>&lt;<a href="org/webpki/keygen2/CredentialDiscoveryResponseEncoder.LookupResult.html" title="class in org.webpki.keygen2">CredentialDiscoveryResponseEncoder.LookupResult</a>&gt; lookupResults</pre>
 </li>
 <li class="blockList">
 <h4>ref</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">K</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">V</a>&gt; ref</pre>
-</li>
-<li class="blockList">
-<h4>clientSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> clientSessionId</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util" class="externalLink">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;<a href="org/webpki/keygen2/CredentialDiscoveryRequestDecoder.LookupSpecifier.html" title="class in org.webpki.keygen2">CredentialDiscoveryRequestDecoder.LookupSpecifier</a>&gt; ref</pre>
 </li>
 <li class="blockListLast">
 <h4>serverSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverSessionId</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> serverSessionId</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.InvocationRequestDecoder">
+<li class="blockList"><a id="org.webpki.keygen2.InvocationRequestDecoder">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/keygen2/InvocationRequestDecoder.html" title="class in org.webpki.keygen2">org.webpki.keygen2.InvocationRequestDecoder</a> extends org.webpki.keygen2.ClientDecoder implements Serializable</h3>
@@ -773,34 +803,34 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
-<h4>queriedCapabilities</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">K</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">V</a>&gt; queriedCapabilities</pre>
-</li>
-<li class="blockList">
 <h4>action</h4>
 <pre><a href="org/webpki/keygen2/Action.html" title="enum in org.webpki.keygen2">Action</a> action</pre>
+</li>
+<li class="blockList">
+<h4>keyContainerList</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedHashSet.html?is-external=true" title="class or interface in java.util" class="externalLink">LinkedHashSet</a>&lt;<a href="org/webpki/crypto/KeyContainerTypes.html" title="enum in org.webpki.crypto">KeyContainerTypes</a>&gt; keyContainerList</pre>
+</li>
+<li class="blockList">
+<h4>languages</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[] languages</pre>
 </li>
 <li class="blockList">
 <h4>privacyEnabled</h4>
 <pre>boolean privacyEnabled</pre>
 </li>
 <li class="blockList">
-<h4>serverSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverSessionId</pre>
-</li>
-<li class="blockList">
-<h4>languages</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[] languages</pre>
+<h4>queriedCapabilities</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util" class="externalLink">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;org.webpki.keygen2.InvocationRequestDecoder.CAPABILITY&gt; queriedCapabilities</pre>
 </li>
 <li class="blockListLast">
-<h4>keyContainerList</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html?is-external=true" title="class or interface in java.util">LinkedHashSet</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html?is-external=true" title="class or interface in java.util">E</a>&gt; keyContainerList</pre>
+<h4>serverSessionId</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> serverSessionId</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.InvocationRequestEncoder">
+<li class="blockList"><a id="org.webpki.keygen2.InvocationRequestEncoder">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/keygen2/InvocationRequestEncoder.html" title="class in org.webpki.keygen2">org.webpki.keygen2.InvocationRequestEncoder</a> extends org.webpki.keygen2.ServerEncoder implements Serializable</h3>
@@ -824,7 +854,7 @@
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.InvocationResponseDecoder">
+<li class="blockList"><a id="org.webpki.keygen2.InvocationResponseDecoder">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/keygen2/InvocationResponseDecoder.html" title="class in org.webpki.keygen2">org.webpki.keygen2.InvocationResponseDecoder</a> extends org.webpki.keygen2.KeyGen2Validator implements Serializable</h3>
@@ -838,17 +868,17 @@
 <ul class="blockList">
 <li class="blockList">
 <h4>receivedCapabilities</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">K</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">V</a>&gt; receivedCapabilities</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util" class="externalLink">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;org.webpki.keygen2.ServerState.CapabilityBase&gt; receivedCapabilities</pre>
 </li>
 <li class="blockListLast">
 <h4>serverSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverSessionId</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> serverSessionId</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.InvocationResponseEncoder">
+<li class="blockList"><a id="org.webpki.keygen2.InvocationResponseEncoder">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/keygen2/InvocationResponseEncoder.html" title="class in org.webpki.keygen2">org.webpki.keygen2.InvocationResponseEncoder</a> extends <a href="org/webpki/json/JSONEncoder.html" title="class in org.webpki.json">JSONEncoder</a> implements Serializable</h3>
@@ -861,8 +891,8 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
-<h4>serverSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverSessionId</pre>
+<h4>image_preferences</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util" class="externalLink">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;org.webpki.keygen2.InvocationResponseEncoder.ImageAttributes&gt; image_preferences</pre>
 </li>
 <li class="blockList">
 <h4>nonce</h4>
@@ -870,21 +900,21 @@
 </li>
 <li class="blockList">
 <h4>queriedCapabilities</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">K</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">V</a>&gt; queriedCapabilities</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util" class="externalLink">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;org.webpki.keygen2.InvocationRequestDecoder.CAPABILITY&gt; queriedCapabilities</pre>
 </li>
 <li class="blockList">
 <h4>returnedValues</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">K</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">V</a>&gt; returnedValues</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util" class="externalLink">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]&gt; returnedValues</pre>
 </li>
 <li class="blockListLast">
-<h4>image_preferences</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">K</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">V</a>&gt; image_preferences</pre>
+<h4>serverSessionId</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> serverSessionId</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.KeyCreationRequestDecoder">
+<li class="blockList"><a id="org.webpki.keygen2.KeyCreationRequestDecoder">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/keygen2/KeyCreationRequestDecoder.html" title="class in org.webpki.keygen2">org.webpki.keygen2.KeyCreationRequestDecoder</a> extends org.webpki.keygen2.ClientDecoder implements Serializable</h3>
@@ -897,30 +927,30 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
-<h4>requestObjects</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">E</a>&gt; requestObjects</pre>
+<h4>clientSessionId</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> clientSessionId</pre>
 </li>
 <li class="blockList">
 <h4>deferredIssuance</h4>
 <pre>boolean deferredIssuance</pre>
 </li>
 <li class="blockList">
-<h4>serverSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverSessionId</pre>
+<h4>keyEntryAlgorithm</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> keyEntryAlgorithm</pre>
 </li>
 <li class="blockList">
-<h4>clientSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> clientSessionId</pre>
+<h4>requestObjects</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html?is-external=true" title="class or interface in java.util" class="externalLink">ArrayList</a>&lt;<a href="org/webpki/keygen2/KeyCreationRequestDecoder.KeyObject.html" title="class in org.webpki.keygen2">KeyCreationRequestDecoder.KeyObject</a>&gt; requestObjects</pre>
 </li>
 <li class="blockListLast">
-<h4>keyEntryAlgorithm</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> keyEntryAlgorithm</pre>
+<h4>serverSessionId</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> serverSessionId</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.KeyCreationRequestEncoder">
+<li class="blockList"><a id="org.webpki.keygen2.KeyCreationRequestEncoder">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/keygen2/KeyCreationRequestEncoder.html" title="class in org.webpki.keygen2">org.webpki.keygen2.KeyCreationRequestEncoder</a> extends org.webpki.keygen2.ServerEncoder implements Serializable</h3>
@@ -933,22 +963,22 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
+<h4>algorithm</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> algorithm</pre>
+</li>
+<li class="blockList">
 <h4>deferredIssuance</h4>
 <pre>boolean deferredIssuance</pre>
 </li>
-<li class="blockList">
+<li class="blockListLast">
 <h4>serverState</h4>
 <pre><a href="org/webpki/keygen2/ServerState.html" title="class in org.webpki.keygen2">ServerState</a> serverState</pre>
 </li>
-<li class="blockListLast">
-<h4>algorithm</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> algorithm</pre>
-</li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.KeyCreationResponseDecoder">
+<li class="blockList"><a id="org.webpki.keygen2.KeyCreationResponseDecoder">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/keygen2/KeyCreationResponseDecoder.html" title="class in org.webpki.keygen2">org.webpki.keygen2.KeyCreationResponseDecoder</a> extends org.webpki.keygen2.KeyGen2Validator implements Serializable</h3>
@@ -961,22 +991,22 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
-<h4>generatedKeys</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">K</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">V</a>&gt; generatedKeys</pre>
+<h4>clientSessionId</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> clientSessionId</pre>
 </li>
 <li class="blockList">
-<h4>clientSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> clientSessionId</pre>
+<h4>generatedKeys</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util" class="externalLink">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;org.webpki.keygen2.KeyCreationResponseDecoder.GeneratedPublicKey&gt; generatedKeys</pre>
 </li>
 <li class="blockListLast">
 <h4>serverSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverSessionId</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> serverSessionId</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.KeyCreationResponseEncoder">
+<li class="blockList"><a id="org.webpki.keygen2.KeyCreationResponseEncoder">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/keygen2/KeyCreationResponseEncoder.html" title="class in org.webpki.keygen2">org.webpki.keygen2.KeyCreationResponseEncoder</a> extends <a href="org/webpki/json/JSONEncoder.html" title="class in org.webpki.json">JSONEncoder</a> implements Serializable</h3>
@@ -990,24 +1020,24 @@
 <ul class="blockList">
 <li class="blockList">
 <h4>clientSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> clientSessionId</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> clientSessionId</pre>
 </li>
 <li class="blockList">
-<h4>serverSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverSessionId</pre>
+<h4>generatedKeys</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html?is-external=true" title="class or interface in java.util" class="externalLink">ArrayList</a>&lt;org.webpki.keygen2.KeyCreationResponseEncoder.GeneratedPublicKey&gt; generatedKeys</pre>
 </li>
 <li class="blockListLast">
-<h4>generatedKeys</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">E</a>&gt; generatedKeys</pre>
+<h4>serverSessionId</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> serverSessionId</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.KeySpecifier">
+<li class="blockList"><a id="org.webpki.keygen2.KeySpecifier">
 <!--   -->
 </a>
-<h3>Class <a href="org/webpki/keygen2/KeySpecifier.html" title="class in org.webpki.keygen2">org.webpki.keygen2.KeySpecifier</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<h3>Class <a href="org/webpki/keygen2/KeySpecifier.html" title="class in org.webpki.keygen2">org.webpki.keygen2.KeySpecifier</a> extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a> implements Serializable</h3>
 <dl class="nameValue">
 <dt>serialVersionUID:</dt>
 <dd>1L</dd>
@@ -1017,18 +1047,18 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
-<h4>keyParameters</h4>
-<pre>byte[] keyParameters</pre>
-</li>
-<li class="blockListLast">
 <h4>keyAlgorithm</h4>
 <pre><a href="org/webpki/crypto/KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a> keyAlgorithm</pre>
 </li>
-</ul>
+<li class="blockListLast">
+<h4>keyParameters</h4>
+<pre>byte[] keyParameters</pre>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.ProvisioningFinalizationRequestDecoder">
+</ul>
+</li>
+<li class="blockList"><a id="org.webpki.keygen2.ProvisioningFinalizationRequestDecoder">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/keygen2/ProvisioningFinalizationRequestDecoder.html" title="class in org.webpki.keygen2">org.webpki.keygen2.ProvisioningFinalizationRequestDecoder</a> extends org.webpki.keygen2.ClientDecoder implements Serializable</h3>
@@ -1041,38 +1071,38 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
-<h4>issuedKeys</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">E</a>&gt; issuedKeys</pre>
-</li>
-<li class="blockList">
-<h4>postUnlockKeys</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">E</a>&gt; postUnlockKeys</pre>
-</li>
-<li class="blockList">
-<h4>postDeleteKeys</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">E</a>&gt; postDeleteKeys</pre>
-</li>
-<li class="blockList">
 <h4>clientSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> clientSessionId</pre>
-</li>
-<li class="blockList">
-<h4>serverSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverSessionId</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> clientSessionId</pre>
 </li>
 <li class="blockList">
 <h4>closeSessionMac</h4>
 <pre>byte[] closeSessionMac</pre>
 </li>
-<li class="blockListLast">
+<li class="blockList">
 <h4>closeSessionNonce</h4>
 <pre>byte[] closeSessionNonce</pre>
 </li>
-</ul>
+<li class="blockList">
+<h4>issuedKeys</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html?is-external=true" title="class or interface in java.util" class="externalLink">ArrayList</a>&lt;<a href="org/webpki/keygen2/ProvisioningFinalizationRequestDecoder.IssuedCredential.html" title="class in org.webpki.keygen2">ProvisioningFinalizationRequestDecoder.IssuedCredential</a>&gt; issuedKeys</pre>
+</li>
+<li class="blockList">
+<h4>postDeleteKeys</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html?is-external=true" title="class or interface in java.util" class="externalLink">ArrayList</a>&lt;<a href="org/webpki/keygen2/ProvisioningFinalizationRequestDecoder.PostOperation.html" title="class in org.webpki.keygen2">ProvisioningFinalizationRequestDecoder.PostOperation</a>&gt; postDeleteKeys</pre>
+</li>
+<li class="blockList">
+<h4>postUnlockKeys</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html?is-external=true" title="class or interface in java.util" class="externalLink">ArrayList</a>&lt;<a href="org/webpki/keygen2/ProvisioningFinalizationRequestDecoder.PostOperation.html" title="class in org.webpki.keygen2">ProvisioningFinalizationRequestDecoder.PostOperation</a>&gt; postUnlockKeys</pre>
+</li>
+<li class="blockListLast">
+<h4>serverSessionId</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> serverSessionId</pre>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.ProvisioningFinalizationRequestEncoder">
+</ul>
+</li>
+<li class="blockList"><a id="org.webpki.keygen2.ProvisioningFinalizationRequestEncoder">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/keygen2/ProvisioningFinalizationRequestEncoder.html" title="class in org.webpki.keygen2">org.webpki.keygen2.ProvisioningFinalizationRequestEncoder</a> extends org.webpki.keygen2.ServerEncoder implements Serializable</h3>
@@ -1092,7 +1122,7 @@
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.ProvisioningFinalizationResponseDecoder">
+<li class="blockList"><a id="org.webpki.keygen2.ProvisioningFinalizationResponseDecoder">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/keygen2/ProvisioningFinalizationResponseDecoder.html" title="class in org.webpki.keygen2">org.webpki.keygen2.ProvisioningFinalizationResponseDecoder</a> extends org.webpki.keygen2.KeyGen2Validator implements Serializable</h3>
@@ -1105,22 +1135,22 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
-<h4>clientSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> clientSessionId</pre>
-</li>
-<li class="blockList">
-<h4>serverSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverSessionId</pre>
-</li>
-<li class="blockListLast">
 <h4>attestation</h4>
 <pre>byte[] attestation</pre>
 </li>
-</ul>
+<li class="blockList">
+<h4>clientSessionId</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> clientSessionId</pre>
+</li>
+<li class="blockListLast">
+<h4>serverSessionId</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> serverSessionId</pre>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.ProvisioningFinalizationResponseEncoder">
+</ul>
+</li>
+<li class="blockList"><a id="org.webpki.keygen2.ProvisioningFinalizationResponseEncoder">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/keygen2/ProvisioningFinalizationResponseEncoder.html" title="class in org.webpki.keygen2">org.webpki.keygen2.ProvisioningFinalizationResponseEncoder</a> extends <a href="org/webpki/json/JSONEncoder.html" title="class in org.webpki.json">JSONEncoder</a> implements Serializable</h3>
@@ -1133,22 +1163,22 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
-<h4>clientSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> clientSessionId</pre>
-</li>
-<li class="blockList">
-<h4>serverSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverSessionId</pre>
-</li>
-<li class="blockListLast">
 <h4>attestation</h4>
 <pre>byte[] attestation</pre>
 </li>
-</ul>
+<li class="blockList">
+<h4>clientSessionId</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> clientSessionId</pre>
+</li>
+<li class="blockListLast">
+<h4>serverSessionId</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> serverSessionId</pre>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.ProvisioningInitializationRequestDecoder">
+</ul>
+</li>
+<li class="blockList"><a id="org.webpki.keygen2.ProvisioningInitializationRequestDecoder">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/keygen2/ProvisioningInitializationRequestDecoder.html" title="class in org.webpki.keygen2">org.webpki.keygen2.ProvisioningInitializationRequestDecoder</a> extends org.webpki.keygen2.ClientDecoder implements Serializable</h3>
@@ -1161,46 +1191,46 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
+<h4>keyManagementKey</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/PublicKey.html?is-external=true" title="class or interface in java.security" class="externalLink">PublicKey</a> keyManagementKey</pre>
+</li>
+<li class="blockList">
 <h4>kmkRoot</h4>
 <pre><a href="org/webpki/keygen2/ProvisioningInitializationRequestDecoder.KeyManagementKeyUpdateHolder.html" title="class in org.webpki.keygen2">ProvisioningInitializationRequestDecoder.KeyManagementKeyUpdateHolder</a> kmkRoot</pre>
 </li>
 <li class="blockList">
-<h4>sessionKeyAlgorithm</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> sessionKeyAlgorithm</pre>
-</li>
-<li class="blockList">
-<h4>keyManagementKey</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a> keyManagementKey</pre>
+<h4>serverEphemeralKey</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/interfaces/ECPublicKey.html?is-external=true" title="class or interface in java.security.interfaces" class="externalLink">ECPublicKey</a> serverEphemeralKey</pre>
 </li>
 <li class="blockList">
 <h4>serverSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverSessionId</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> serverSessionId</pre>
 </li>
 <li class="blockList">
 <h4>serverTime</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a> serverTime</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util" class="externalLink">GregorianCalendar</a> serverTime</pre>
 </li>
 <li class="blockList">
 <h4>serverTimeVerbatim</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverTimeVerbatim</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> serverTimeVerbatim</pre>
 </li>
 <li class="blockList">
-<h4>serverEphemeralKey</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/interfaces/ECPublicKey.html?is-external=true" title="class or interface in java.security.interfaces">ECPublicKey</a> serverEphemeralKey</pre>
+<h4>sessionKeyAlgorithm</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> sessionKeyAlgorithm</pre>
 </li>
 <li class="blockList">
-<h4>sessionLifeTime</h4>
-<pre>short sessionLifeTime</pre>
-</li>
-<li class="blockListLast">
 <h4>sessionKeyLimit</h4>
 <pre>short sessionKeyLimit</pre>
 </li>
-</ul>
+<li class="blockListLast">
+<h4>sessionLifeTime</h4>
+<pre>short sessionLifeTime</pre>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.ProvisioningInitializationRequestEncoder">
+</ul>
+</li>
+<li class="blockList"><a id="org.webpki.keygen2.ProvisioningInitializationRequestEncoder">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/keygen2/ProvisioningInitializationRequestEncoder.html" title="class in org.webpki.keygen2">org.webpki.keygen2.ProvisioningInitializationRequestEncoder</a> extends org.webpki.keygen2.ServerEncoder implements Serializable</h3>
@@ -1213,34 +1243,34 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
-<h4>serverState</h4>
-<pre><a href="org/webpki/keygen2/ServerState.html" title="class in org.webpki.keygen2">ServerState</a> serverState</pre>
-</li>
-<li class="blockList">
 <h4>kmkRoot</h4>
 <pre><a href="org/webpki/keygen2/ProvisioningInitializationRequestEncoder.KeyManagementKeyUpdateHolder.html" title="class in org.webpki.keygen2">ProvisioningInitializationRequestEncoder.KeyManagementKeyUpdateHolder</a> kmkRoot</pre>
 </li>
 <li class="blockList">
-<h4>serverSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverSessionId</pre>
-</li>
-<li class="blockList">
 <h4>serverEphemeralKey</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/interfaces/ECPublicKey.html?is-external=true" title="class or interface in java.security.interfaces">ECPublicKey</a> serverEphemeralKey</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/interfaces/ECPublicKey.html?is-external=true" title="class or interface in java.security.interfaces" class="externalLink">ECPublicKey</a> serverEphemeralKey</pre>
 </li>
 <li class="blockList">
-<h4>sessionLifeTime</h4>
-<pre>int sessionLifeTime</pre>
+<h4>serverSessionId</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> serverSessionId</pre>
 </li>
-<li class="blockListLast">
+<li class="blockList">
+<h4>serverState</h4>
+<pre><a href="org/webpki/keygen2/ServerState.html" title="class in org.webpki.keygen2">ServerState</a> serverState</pre>
+</li>
+<li class="blockList">
 <h4>sessionKeyLimit</h4>
 <pre>short sessionKeyLimit</pre>
 </li>
-</ul>
+<li class="blockListLast">
+<h4>sessionLifeTime</h4>
+<pre>int sessionLifeTime</pre>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.ProvisioningInitializationResponseDecoder">
+</ul>
+</li>
+<li class="blockList"><a id="org.webpki.keygen2.ProvisioningInitializationResponseDecoder">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/keygen2/ProvisioningInitializationResponseDecoder.html" title="class in org.webpki.keygen2">org.webpki.keygen2.ProvisioningInitializationResponseDecoder</a> extends org.webpki.keygen2.KeyGen2Validator implements Serializable</h3>
@@ -1253,38 +1283,38 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
-<h4>serverSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverSessionId</pre>
-</li>
-<li class="blockList">
-<h4>clientSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> clientSessionId</pre>
-</li>
-<li class="blockList">
-<h4>serverTime</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverTime</pre>
-</li>
-<li class="blockList">
-<h4>clientTime</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a> clientTime</pre>
-</li>
-<li class="blockList">
-<h4>clientEphemeralKey</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/interfaces/ECPublicKey.html?is-external=true" title="class or interface in java.security.interfaces">ECPublicKey</a> clientEphemeralKey</pre>
-</li>
-<li class="blockList">
 <h4>attestation</h4>
 <pre>byte[] attestation</pre>
 </li>
-<li class="blockListLast">
+<li class="blockList">
+<h4>clientEphemeralKey</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/interfaces/ECPublicKey.html?is-external=true" title="class or interface in java.security.interfaces" class="externalLink">ECPublicKey</a> clientEphemeralKey</pre>
+</li>
+<li class="blockList">
+<h4>clientSessionId</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> clientSessionId</pre>
+</li>
+<li class="blockList">
+<h4>clientTime</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util" class="externalLink">GregorianCalendar</a> clientTime</pre>
+</li>
+<li class="blockList">
 <h4>deviceCertificatePath</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[] deviceCertificatePath</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert" class="externalLink">X509Certificate</a>[] deviceCertificatePath</pre>
+</li>
+<li class="blockList">
+<h4>serverSessionId</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> serverSessionId</pre>
+</li>
+<li class="blockListLast">
+<h4>serverTime</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> serverTime</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.ProvisioningInitializationResponseEncoder">
+<li class="blockList"><a id="org.webpki.keygen2.ProvisioningInitializationResponseEncoder">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/keygen2/ProvisioningInitializationResponseEncoder.html" title="class in org.webpki.keygen2">org.webpki.keygen2.ProvisioningInitializationResponseEncoder</a> extends <a href="org/webpki/json/JSONEncoder.html" title="class in org.webpki.json">JSONEncoder</a> implements Serializable</h3>
@@ -1297,41 +1327,41 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
-<h4>serverSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverSessionId</pre>
-</li>
-<li class="blockList">
-<h4>clientSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> clientSessionId</pre>
-</li>
-<li class="blockList">
-<h4>serverTimeVerbatim</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverTimeVerbatim</pre>
-</li>
-<li class="blockList">
-<h4>clientTime</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a> clientTime</pre>
-</li>
-<li class="blockList">
-<h4>clientEphemeralKey</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/interfaces/ECPublicKey.html?is-external=true" title="class or interface in java.security.interfaces">ECPublicKey</a> clientEphemeralKey</pre>
-</li>
-<li class="blockList">
 <h4>attestation</h4>
 <pre>byte[] attestation</pre>
 </li>
-<li class="blockListLast">
+<li class="blockList">
+<h4>clientEphemeralKey</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/interfaces/ECPublicKey.html?is-external=true" title="class or interface in java.security.interfaces" class="externalLink">ECPublicKey</a> clientEphemeralKey</pre>
+</li>
+<li class="blockList">
+<h4>clientSessionId</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> clientSessionId</pre>
+</li>
+<li class="blockList">
+<h4>clientTime</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util" class="externalLink">GregorianCalendar</a> clientTime</pre>
+</li>
+<li class="blockList">
 <h4>deviceCertificatePath</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[] deviceCertificatePath</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert" class="externalLink">X509Certificate</a>[] deviceCertificatePath</pre>
+</li>
+<li class="blockList">
+<h4>serverSessionId</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> serverSessionId</pre>
+</li>
+<li class="blockListLast">
+<h4>serverTimeVerbatim</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> serverTimeVerbatim</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.ServerState">
+<li class="blockList"><a id="org.webpki.keygen2.ServerState">
 <!--   -->
 </a>
-<h3>Class <a href="org/webpki/keygen2/ServerState.html" title="class in org.webpki.keygen2">org.webpki.keygen2.ServerState</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<h3>Class <a href="org/webpki/keygen2/ServerState.html" title="class in org.webpki.keygen2">org.webpki.keygen2.ServerState</a> extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a> implements Serializable</h3>
 <dl class="nameValue">
 <dt>serialVersionUID:</dt>
 <dd>1L</dd>
@@ -1341,120 +1371,80 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
-<h4>postOperations</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">E</a>&gt; postOperations</pre>
+<h4>clientEphemeralKey</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/interfaces/ECPublicKey.html?is-external=true" title="class or interface in java.security.interfaces" class="externalLink">ECPublicKey</a> clientEphemeralKey</pre>
 </li>
 <li class="blockList">
-<h4>serverCryptoInterface</h4>
-<pre><a href="org/webpki/keygen2/ServerCryptoInterface.html" title="interface in org.webpki.keygen2">ServerCryptoInterface</a> serverCryptoInterface</pre>
-</li>
-<li class="blockList">
-<h4>queriedCapabilities</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">K</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">V</a>&gt; queriedCapabilities</pre>
-</li>
-<li class="blockList">
-<h4>receivedCapabilities</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">K</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">V</a>&gt; receivedCapabilities</pre>
+<h4>clientSessionId</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> clientSessionId</pre>
 </li>
 <li class="blockList">
 <h4>currentPhase</h4>
 <pre><a href="org/webpki/keygen2/ServerState.ProtocolPhase.html" title="enum in org.webpki.keygen2">ServerState.ProtocolPhase</a> currentPhase</pre>
 </li>
 <li class="blockList">
-<h4>requestPhase</h4>
-<pre>boolean requestPhase</pre>
+<h4>deviceCertificatePath</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert" class="externalLink">X509Certificate</a>[] deviceCertificatePath</pre>
 </li>
 <li class="blockList">
-<h4>next_personal_code</h4>
-<pre>int next_personal_code</pre>
+<h4>ephemeraKeyAlgorithm</h4>
+<pre><a href="org/webpki/crypto/KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a> ephemeraKeyAlgorithm</pre>
+</li>
+<li class="blockList">
+<h4>issuerUri</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> issuerUri</pre>
+</li>
+<li class="blockList">
+<h4>keyAttestationAlgorithm</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> keyAttestationAlgorithm</pre>
+</li>
+<li class="blockList">
+<h4>keyContainerList</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[] keyContainerList</pre>
+</li>
+<li class="blockList">
+<h4>keyManagementKey</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/PublicKey.html?is-external=true" title="class or interface in java.security" class="externalLink">PublicKey</a> keyManagementKey</pre>
 </li>
 <li class="blockList">
 <h4>keyPrefix</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> keyPrefix</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> keyPrefix</pre>
 </li>
 <li class="blockList">
-<h4>nextKeyIdSuffix</h4>
-<pre>int nextKeyIdSuffix</pre>
-</li>
-<li class="blockList">
-<h4>pinPrefix</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> pinPrefix</pre>
-</li>
-<li class="blockList">
-<h4>nextPinIdSuffix</h4>
-<pre>int nextPinIdSuffix</pre>
-</li>
-<li class="blockList">
-<h4>pukPrefix</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> pukPrefix</pre>
-</li>
-<li class="blockList">
-<h4>nextPukIdSuffix</h4>
-<pre>int nextPukIdSuffix</pre>
+<h4>languageList</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[] languageList</pre>
 </li>
 <li class="blockList">
 <h4>macSequenceCounter</h4>
 <pre>short macSequenceCounter</pre>
 </li>
 <li class="blockList">
-<h4>requestedKeys</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">K</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">V</a>&gt; requestedKeys</pre>
+<h4>next_personal_code</h4>
+<pre>int next_personal_code</pre>
 </li>
 <li class="blockList">
-<h4>serverSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverSessionId</pre>
+<h4>nextKeyIdSuffix</h4>
+<pre>int nextKeyIdSuffix</pre>
 </li>
 <li class="blockList">
-<h4>clientSessionId</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> clientSessionId</pre>
+<h4>nextPinIdSuffix</h4>
+<pre>int nextPinIdSuffix</pre>
 </li>
 <li class="blockList">
-<h4>issuerUri</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> issuerUri</pre>
+<h4>nextPukIdSuffix</h4>
+<pre>int nextPukIdSuffix</pre>
 </li>
 <li class="blockList">
-<h4>sessionLifeTime</h4>
-<pre>short sessionLifeTime</pre>
+<h4>pinPolicies</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html?is-external=true" title="class or interface in java.util" class="externalLink">ArrayList</a>&lt;<a href="org/webpki/keygen2/ServerState.PINPolicy.html" title="class in org.webpki.keygen2">ServerState.PINPolicy</a>&gt; pinPolicies</pre>
 </li>
 <li class="blockList">
-<h4>sessionKeyLimit</h4>
-<pre>short sessionKeyLimit</pre>
+<h4>pinPrefix</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> pinPrefix</pre>
 </li>
 <li class="blockList">
-<h4>provisioningSessionAlgorithm</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> provisioningSessionAlgorithm</pre>
-</li>
-<li class="blockList">
-<h4>keyAttestationAlgorithm</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> keyAttestationAlgorithm</pre>
-</li>
-<li class="blockList">
-<h4>serverEphemeralKey</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/interfaces/ECPublicKey.html?is-external=true" title="class or interface in java.security.interfaces">ECPublicKey</a> serverEphemeralKey</pre>
-</li>
-<li class="blockList">
-<h4>clientEphemeralKey</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/interfaces/ECPublicKey.html?is-external=true" title="class or interface in java.security.interfaces">ECPublicKey</a> clientEphemeralKey</pre>
-</li>
-<li class="blockList">
-<h4>keyManagementKey</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a> keyManagementKey</pre>
-</li>
-<li class="blockList">
-<h4>serverTime</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverTime</pre>
-</li>
-<li class="blockList">
-<h4>savedCloseNonce</h4>
-<pre>byte[] savedCloseNonce</pre>
-</li>
-<li class="blockList">
-<h4>serverCertificate</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a> serverCertificate</pre>
-</li>
-<li class="blockList">
-<h4>deviceCertificatePath</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[] deviceCertificatePath</pre>
+<h4>postOperations</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html?is-external=true" title="class or interface in java.util" class="externalLink">ArrayList</a>&lt;org.webpki.keygen2.ServerState.PostProvisioningTargetKey&gt; postOperations</pre>
 </li>
 <li class="blockList">
 <h4>privacyEnabled</h4>
@@ -1465,34 +1455,74 @@
 <pre>boolean privacyEnabledSet</pre>
 </li>
 <li class="blockList">
-<h4>ephemeraKeyAlgorithm</h4>
-<pre><a href="org/webpki/crypto/KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a> ephemeraKeyAlgorithm</pre>
-</li>
-<li class="blockList">
-<h4>languageList</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[] languageList</pre>
-</li>
-<li class="blockList">
-<h4>keyContainerList</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[] keyContainerList</pre>
-</li>
-<li class="blockList">
-<h4>pinPolicies</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">E</a>&gt; pinPolicies</pre>
+<h4>provisioningSessionAlgorithm</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> provisioningSessionAlgorithm</pre>
 </li>
 <li class="blockList">
 <h4>pukPolicies</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">E</a>&gt; pukPolicies</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html?is-external=true" title="class or interface in java.util" class="externalLink">ArrayList</a>&lt;<a href="org/webpki/keygen2/ServerState.PUKPolicy.html" title="class in org.webpki.keygen2">ServerState.PUKPolicy</a>&gt; pukPolicies</pre>
+</li>
+<li class="blockList">
+<h4>pukPrefix</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> pukPrefix</pre>
+</li>
+<li class="blockList">
+<h4>queriedCapabilities</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util" class="externalLink">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;org.webpki.keygen2.ServerState.CAPABILITY&gt; queriedCapabilities</pre>
+</li>
+<li class="blockList">
+<h4>receivedCapabilities</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util" class="externalLink">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;org.webpki.keygen2.ServerState.CapabilityBase&gt; receivedCapabilities</pre>
+</li>
+<li class="blockList">
+<h4>requestedKeys</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util" class="externalLink">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;<a href="org/webpki/keygen2/ServerState.Key.html" title="class in org.webpki.keygen2">ServerState.Key</a>&gt; requestedKeys</pre>
+</li>
+<li class="blockList">
+<h4>requestPhase</h4>
+<pre>boolean requestPhase</pre>
+</li>
+<li class="blockList">
+<h4>savedCloseNonce</h4>
+<pre>byte[] savedCloseNonce</pre>
+</li>
+<li class="blockList">
+<h4>serverCertificate</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert" class="externalLink">X509Certificate</a> serverCertificate</pre>
+</li>
+<li class="blockList">
+<h4>serverCryptoInterface</h4>
+<pre><a href="org/webpki/keygen2/ServerCryptoInterface.html" title="interface in org.webpki.keygen2">ServerCryptoInterface</a> serverCryptoInterface</pre>
+</li>
+<li class="blockList">
+<h4>serverEphemeralKey</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/interfaces/ECPublicKey.html?is-external=true" title="class or interface in java.security.interfaces" class="externalLink">ECPublicKey</a> serverEphemeralKey</pre>
+</li>
+<li class="blockList">
+<h4>serverSessionId</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> serverSessionId</pre>
+</li>
+<li class="blockList">
+<h4>serverTime</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> serverTime</pre>
+</li>
+<li class="blockList">
+<h4>serviceSpecificObjects</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util" class="externalLink">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&gt; serviceSpecificObjects</pre>
+</li>
+<li class="blockList">
+<h4>sessionKeyLimit</h4>
+<pre>short sessionKeyLimit</pre>
 </li>
 <li class="blockListLast">
-<h4>serviceSpecificObjects</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">K</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">V</a>&gt; serviceSpecificObjects</pre>
+<h4>sessionLifeTime</h4>
+<pre>short sessionLifeTime</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.ServerState.EncryptedExtension">
+<li class="blockList"><a id="org.webpki.keygen2.ServerState.EncryptedExtension">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/keygen2/ServerState.EncryptedExtension.html" title="class in org.webpki.keygen2">org.webpki.keygen2.ServerState.EncryptedExtension</a> extends <a href="org/webpki/keygen2/ServerState.ExtensionInterface.html" title="class in org.webpki.keygen2">ServerState.ExtensionInterface</a> implements Serializable</h3>
@@ -1512,7 +1542,7 @@
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.ServerState.Extension">
+<li class="blockList"><a id="org.webpki.keygen2.ServerState.Extension">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/keygen2/ServerState.Extension.html" title="class in org.webpki.keygen2">org.webpki.keygen2.ServerState.Extension</a> extends <a href="org/webpki/keygen2/ServerState.ExtensionInterface.html" title="class in org.webpki.keygen2">ServerState.ExtensionInterface</a> implements Serializable</h3>
@@ -1532,10 +1562,10 @@
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.ServerState.ExtensionInterface">
+<li class="blockList"><a id="org.webpki.keygen2.ServerState.ExtensionInterface">
 <!--   -->
 </a>
-<h3>Class <a href="org/webpki/keygen2/ServerState.ExtensionInterface.html" title="class in org.webpki.keygen2">org.webpki.keygen2.ServerState.ExtensionInterface</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<h3>Class <a href="org/webpki/keygen2/ServerState.ExtensionInterface.html" title="class in org.webpki.keygen2">org.webpki.keygen2.ServerState.ExtensionInterface</a> extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a> implements Serializable</h3>
 <dl class="nameValue">
 <dt>serialVersionUID:</dt>
 <dd>1L</dd>
@@ -1546,13 +1576,13 @@
 <ul class="blockList">
 <li class="blockListLast">
 <h4>type</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> type</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> type</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.ServerState.ImagePreference">
+<li class="blockList"><a id="org.webpki.keygen2.ServerState.ImagePreference">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/keygen2/ServerState.ImagePreference.html" title="class in org.webpki.keygen2">org.webpki.keygen2.ServerState.ImagePreference</a> extends org.webpki.keygen2.ServerState.CapabilityBase implements Serializable</h3>
@@ -1565,25 +1595,25 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
-<h4>mimeType</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> mimeType</pre>
-</li>
-<li class="blockList">
-<h4>width</h4>
-<pre>int width</pre>
-</li>
-<li class="blockListLast">
 <h4>height</h4>
 <pre>int height</pre>
 </li>
-</ul>
+<li class="blockList">
+<h4>mimeType</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> mimeType</pre>
+</li>
+<li class="blockListLast">
+<h4>width</h4>
+<pre>int width</pre>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.ServerState.Key">
+</ul>
+</li>
+<li class="blockList"><a id="org.webpki.keygen2.ServerState.Key">
 <!--   -->
 </a>
-<h3>Class <a href="org/webpki/keygen2/ServerState.Key.html" title="class in org.webpki.keygen2">org.webpki.keygen2.ServerState.Key</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<h3>Class <a href="org/webpki/keygen2/ServerState.Key.html" title="class in org.webpki.keygen2">org.webpki.keygen2.ServerState.Key</a> extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a> implements Serializable</h3>
 <dl class="nameValue">
 <dt>serialVersionUID:</dt>
 <dd>1L</dd>
@@ -1593,56 +1623,28 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
-<h4>extensions</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">K</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">V</a>&gt; extensions</pre>
+<h4>appUsage</h4>
+<pre><a href="org/webpki/sks/AppUsage.html" title="enum in org.webpki.sks">AppUsage</a> appUsage</pre>
+</li>
+<li class="blockList">
+<h4>biometricProtection</h4>
+<pre><a href="org/webpki/sks/BiometricProtection.html" title="enum in org.webpki.sks">BiometricProtection</a> biometricProtection</pre>
+</li>
+<li class="blockList">
+<h4>certificatePath</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert" class="externalLink">X509Certificate</a>[] certificatePath</pre>
 </li>
 <li class="blockList">
 <h4>cloneOrUpdateOperation</h4>
 <pre>org.webpki.keygen2.ServerState.PostProvisioningTargetKey cloneOrUpdateOperation</pre>
 </li>
 <li class="blockList">
-<h4>keyInitDone</h4>
-<pre>boolean keyInitDone</pre>
+<h4>deleteProtection</h4>
+<pre><a href="org/webpki/sks/DeleteProtection.html" title="enum in org.webpki.sks">DeleteProtection</a> deleteProtection</pre>
 </li>
 <li class="blockList">
-<h4>expectedAttestMacCount</h4>
-<pre>byte[] expectedAttestMacCount</pre>
-</li>
-<li class="blockList">
-<h4>object</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> object</pre>
-</li>
-<li class="blockList">
-<h4>certificatePath</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[] certificatePath</pre>
-</li>
-<li class="blockList">
-<h4>encryptedSymmetricKey</h4>
-<pre>byte[] encryptedSymmetricKey</pre>
-</li>
-<li class="blockList">
-<h4>endorsedAlgorithms</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html?is-external=true" title="class or interface in java.util">TreeSet</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html?is-external=true" title="class or interface in java.util">E</a>&gt; endorsedAlgorithms</pre>
-</li>
-<li class="blockList">
-<h4>encryptedPrivateKey</h4>
-<pre>byte[] encryptedPrivateKey</pre>
-</li>
-<li class="blockList">
-<h4>friendlyName</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> friendlyName</pre>
-</li>
-<li class="blockList">
-<h4>publicKey</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a> publicKey</pre>
-</li>
-<li class="blockList">
-<h4>exportProtection</h4>
-<pre><a href="org/webpki/sks/ExportProtection.html" title="enum in org.webpki.sks">ExportProtection</a> exportProtection</pre>
-</li>
-<li class="blockList">
-<h4>serverSeed</h4>
-<pre>byte[] serverSeed</pre>
+<h4>devicePinProtection</h4>
+<pre>boolean devicePinProtection</pre>
 </li>
 <li class="blockList">
 <h4>enablePinCaching</h4>
@@ -1653,32 +1655,52 @@
 <pre>boolean enablePinCachingSet</pre>
 </li>
 <li class="blockList">
-<h4>trustAnchor</h4>
-<pre>boolean trustAnchor</pre>
+<h4>encryptedPrivateKey</h4>
+<pre>byte[] encryptedPrivateKey</pre>
 </li>
 <li class="blockList">
-<h4>trustAnchorSet</h4>
-<pre>boolean trustAnchorSet</pre>
+<h4>encryptedSymmetricKey</h4>
+<pre>byte[] encryptedSymmetricKey</pre>
 </li>
 <li class="blockList">
-<h4>biometricProtection</h4>
-<pre><a href="org/webpki/sks/BiometricProtection.html" title="enum in org.webpki.sks">BiometricProtection</a> biometricProtection</pre>
+<h4>endorsedAlgorithms</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/TreeSet.html?is-external=true" title="class or interface in java.util" class="externalLink">TreeSet</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt; endorsedAlgorithms</pre>
 </li>
 <li class="blockList">
-<h4>deleteProtection</h4>
-<pre><a href="org/webpki/sks/DeleteProtection.html" title="enum in org.webpki.sks">DeleteProtection</a> deleteProtection</pre>
+<h4>expectedAttestMacCount</h4>
+<pre>byte[] expectedAttestMacCount</pre>
+</li>
+<li class="blockList">
+<h4>exportProtection</h4>
+<pre><a href="org/webpki/sks/ExportProtection.html" title="enum in org.webpki.sks">ExportProtection</a> exportProtection</pre>
+</li>
+<li class="blockList">
+<h4>extensions</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util" class="externalLink">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;<a href="org/webpki/keygen2/ServerState.ExtensionInterface.html" title="class in org.webpki.keygen2">ServerState.ExtensionInterface</a>&gt; extensions</pre>
+</li>
+<li class="blockList">
+<h4>friendlyName</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> friendlyName</pre>
 </li>
 <li class="blockList">
 <h4>id</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> id</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> id</pre>
 </li>
 <li class="blockList">
-<h4>appUsage</h4>
-<pre><a href="org/webpki/sks/AppUsage.html" title="enum in org.webpki.sks">AppUsage</a> appUsage</pre>
+<h4>keyInitDone</h4>
+<pre>boolean keyInitDone</pre>
+</li>
+<li class="blockList">
+<h4>keyMac</h4>
+<pre>byte[] keyMac</pre>
 </li>
 <li class="blockList">
 <h4>keySpecifier</h4>
 <pre><a href="org/webpki/keygen2/KeySpecifier.html" title="class in org.webpki.keygen2">KeySpecifier</a> keySpecifier</pre>
+</li>
+<li class="blockList">
+<h4>object</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a> object</pre>
 </li>
 <li class="blockList">
 <h4>pinPolicy</h4>
@@ -1689,18 +1711,26 @@
 <pre>byte[] presetPin</pre>
 </li>
 <li class="blockList">
-<h4>devicePinProtection</h4>
-<pre>boolean devicePinProtection</pre>
+<h4>publicKey</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/PublicKey.html?is-external=true" title="class or interface in java.security" class="externalLink">PublicKey</a> publicKey</pre>
+</li>
+<li class="blockList">
+<h4>serverSeed</h4>
+<pre>byte[] serverSeed</pre>
+</li>
+<li class="blockList">
+<h4>trustAnchor</h4>
+<pre>boolean trustAnchor</pre>
 </li>
 <li class="blockListLast">
-<h4>keyMac</h4>
-<pre>byte[] keyMac</pre>
+<h4>trustAnchorSet</h4>
+<pre>boolean trustAnchorSet</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.ServerState.Logotype">
+<li class="blockList"><a id="org.webpki.keygen2.ServerState.Logotype">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/keygen2/ServerState.Logotype.html" title="class in org.webpki.keygen2">org.webpki.keygen2.ServerState.Logotype</a> extends <a href="org/webpki/keygen2/ServerState.ExtensionInterface.html" title="class in org.webpki.keygen2">ServerState.ExtensionInterface</a> implements Serializable</h3>
@@ -1720,10 +1750,10 @@
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.ServerState.PINPolicy">
+<li class="blockList"><a id="org.webpki.keygen2.ServerState.PINPolicy">
 <!--   -->
 </a>
-<h3>Class <a href="org/webpki/keygen2/ServerState.PINPolicy.html" title="class in org.webpki.keygen2">org.webpki.keygen2.ServerState.PINPolicy</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<h3>Class <a href="org/webpki/keygen2/ServerState.PINPolicy.html" title="class in org.webpki.keygen2">org.webpki.keygen2.ServerState.PINPolicy</a> extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a> implements Serializable</h3>
 <dl class="nameValue">
 <dt>serialVersionUID:</dt>
 <dd>1L</dd>
@@ -1733,12 +1763,36 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
-<h4>written</h4>
-<pre>boolean written</pre>
+<h4>format</h4>
+<pre><a href="org/webpki/sks/PassphraseFormat.html" title="enum in org.webpki.sks">PassphraseFormat</a> format</pre>
+</li>
+<li class="blockList">
+<h4>grouping</h4>
+<pre><a href="org/webpki/sks/Grouping.html" title="enum in org.webpki.sks">Grouping</a> grouping</pre>
+</li>
+<li class="blockList">
+<h4>id</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> id</pre>
+</li>
+<li class="blockList">
+<h4>inputMethod</h4>
+<pre><a href="org/webpki/sks/InputMethod.html" title="enum in org.webpki.sks">InputMethod</a> inputMethod</pre>
+</li>
+<li class="blockList">
+<h4>maxLength</h4>
+<pre>int maxLength</pre>
+</li>
+<li class="blockList">
+<h4>minLength</h4>
+<pre>int minLength</pre>
 </li>
 <li class="blockList">
 <h4>notFirst</h4>
 <pre>boolean notFirst</pre>
+</li>
+<li class="blockList">
+<h4>patternRestrictions</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="org/webpki/sks/PatternRestriction.html" title="enum in org.webpki.sks">PatternRestriction</a>&gt; patternRestrictions</pre>
 </li>
 <li class="blockList">
 <h4>presetTest</h4>
@@ -1749,6 +1803,14 @@
 <pre><a href="org/webpki/keygen2/ServerState.PUKPolicy.html" title="class in org.webpki.keygen2">ServerState.PUKPolicy</a> pukPolicy</pre>
 </li>
 <li class="blockList">
+<h4>retryLimit</h4>
+<pre>int retryLimit</pre>
+</li>
+<li class="blockList">
+<h4>userDefined</h4>
+<pre>boolean userDefined</pre>
+</li>
+<li class="blockList">
 <h4>userModifiable</h4>
 <pre>boolean userModifiable</pre>
 </li>
@@ -1756,50 +1818,18 @@
 <h4>userModifiableSet</h4>
 <pre>boolean userModifiableSet</pre>
 </li>
-<li class="blockList">
-<h4>userDefined</h4>
-<pre>boolean userDefined</pre>
-</li>
-<li class="blockList">
-<h4>format</h4>
-<pre><a href="org/webpki/sks/PassphraseFormat.html" title="enum in org.webpki.sks">PassphraseFormat</a> format</pre>
-</li>
-<li class="blockList">
-<h4>minLength</h4>
-<pre>int minLength</pre>
-</li>
-<li class="blockList">
-<h4>maxLength</h4>
-<pre>int maxLength</pre>
-</li>
-<li class="blockList">
-<h4>retryLimit</h4>
-<pre>int retryLimit</pre>
-</li>
-<li class="blockList">
-<h4>grouping</h4>
-<pre><a href="org/webpki/sks/Grouping.html" title="enum in org.webpki.sks">Grouping</a> grouping</pre>
-</li>
-<li class="blockList">
-<h4>patternRestrictions</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">E</a>&gt; patternRestrictions</pre>
-</li>
-<li class="blockList">
-<h4>inputMethod</h4>
-<pre><a href="org/webpki/sks/InputMethod.html" title="enum in org.webpki.sks">InputMethod</a> inputMethod</pre>
-</li>
 <li class="blockListLast">
-<h4>id</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> id</pre>
+<h4>written</h4>
+<pre>boolean written</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.ServerState.Property">
+<li class="blockList"><a id="org.webpki.keygen2.ServerState.Property">
 <!--   -->
 </a>
-<h3>Class <a href="org/webpki/keygen2/ServerState.Property.html" title="class in org.webpki.keygen2">org.webpki.keygen2.ServerState.Property</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<h3>Class <a href="org/webpki/keygen2/ServerState.Property.html" title="class in org.webpki.keygen2">org.webpki.keygen2.ServerState.Property</a> extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a> implements Serializable</h3>
 <dl class="nameValue">
 <dt>serialVersionUID:</dt>
 <dd>1L</dd>
@@ -1810,11 +1840,11 @@
 <ul class="blockList">
 <li class="blockList">
 <h4>name</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> name</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> name</pre>
 </li>
 <li class="blockList">
 <h4>value</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> value</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> value</pre>
 </li>
 <li class="blockListLast">
 <h4>writable</h4>
@@ -1824,7 +1854,7 @@
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.ServerState.PropertyBag">
+<li class="blockList"><a id="org.webpki.keygen2.ServerState.PropertyBag">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/keygen2/ServerState.PropertyBag.html" title="class in org.webpki.keygen2">org.webpki.keygen2.ServerState.PropertyBag</a> extends <a href="org/webpki/keygen2/ServerState.ExtensionInterface.html" title="class in org.webpki.keygen2">ServerState.ExtensionInterface</a> implements Serializable</h3>
@@ -1838,16 +1868,16 @@
 <ul class="blockList">
 <li class="blockListLast">
 <h4>properties</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">K</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">V</a>&gt; properties</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util" class="externalLink">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;<a href="org/webpki/keygen2/ServerState.Property.html" title="class in org.webpki.keygen2">ServerState.Property</a>&gt; properties</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.keygen2.ServerState.PUKPolicy">
+<li class="blockList"><a id="org.webpki.keygen2.ServerState.PUKPolicy">
 <!--   -->
 </a>
-<h3>Class <a href="org/webpki/keygen2/ServerState.PUKPolicy.html" title="class in org.webpki.keygen2">org.webpki.keygen2.ServerState.PUKPolicy</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<h3>Class <a href="org/webpki/keygen2/ServerState.PUKPolicy.html" title="class in org.webpki.keygen2">org.webpki.keygen2.ServerState.PUKPolicy</a> extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a> implements Serializable</h3>
 <dl class="nameValue">
 <dt>serialVersionUID:</dt>
 <dd>1L</dd>
@@ -1857,16 +1887,16 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
-<h4>id</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> id</pre>
-</li>
-<li class="blockList">
 <h4>encryptedValue</h4>
 <pre>byte[] encryptedValue</pre>
 </li>
 <li class="blockList">
 <h4>format</h4>
 <pre><a href="org/webpki/sks/PassphraseFormat.html" title="enum in org.webpki.sks">PassphraseFormat</a> format</pre>
+</li>
+<li class="blockList">
+<h4>id</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> id</pre>
 </li>
 <li class="blockListLast">
 <h4>retryLimit</h4>
@@ -1877,11 +1907,13 @@
 </ul>
 </li>
 </ul>
+</section>
 </li>
 <li class="blockList">
+<section role="region">
 <h2 title="Package">Package&nbsp;org.webpki.securityproxy</h2>
 <ul class="blockList">
-<li class="blockList"><a name="org.webpki.securityproxy.EmbeddedHTTPResponseWrapper">
+<li class="blockList"><a id="org.webpki.securityproxy.EmbeddedHTTPResponseWrapper">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/securityproxy/EmbeddedHTTPResponseWrapper.html" title="class in org.webpki.securityproxy">org.webpki.securityproxy.EmbeddedHTTPResponseWrapper</a> extends <a href="org/webpki/securityproxy/HTTPResponseWrapper.html" title="class in org.webpki.securityproxy">HTTPResponseWrapper</a> implements Serializable</h3>
@@ -1890,10 +1922,10 @@
 <dd>1L</dd>
 </dl>
 </li>
-<li class="blockList"><a name="org.webpki.securityproxy.HTTPResponseWrapper">
+<li class="blockList"><a id="org.webpki.securityproxy.HTTPResponseWrapper">
 <!--   -->
 </a>
-<h3>Class <a href="org/webpki/securityproxy/HTTPResponseWrapper.html" title="class in org.webpki.securityproxy">org.webpki.securityproxy.HTTPResponseWrapper</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<h3>Class <a href="org/webpki/securityproxy/HTTPResponseWrapper.html" title="class in org.webpki.securityproxy">org.webpki.securityproxy.HTTPResponseWrapper</a> extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a> implements Serializable</h3>
 <dl class="nameValue">
 <dt>serialVersionUID:</dt>
 <dd>1L</dd>
@@ -1907,29 +1939,29 @@
 <pre>byte[] data</pre>
 </li>
 <li class="blockList">
-<h4>mimeType</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> mimeType</pre>
-</li>
-<li class="blockList">
-<h4>string_data</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> string_data</pre>
-</li>
-<li class="blockList">
 <h4>error_status</h4>
 <pre>int error_status</pre>
 </li>
-<li class="blockListLast">
+<li class="blockList">
 <h4>headers</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">K</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">V</a>&gt; headers</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util" class="externalLink">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt; headers</pre>
+</li>
+<li class="blockList">
+<h4>mimeType</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> mimeType</pre>
+</li>
+<li class="blockListLast">
+<h4>string_data</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> string_data</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.securityproxy.ProxyChannelServlet">
+<li class="blockList"><a id="org.webpki.securityproxy.ProxyChannelServlet">
 <!--   -->
 </a>
-<h3>Class <a href="org/webpki/securityproxy/ProxyChannelServlet.html" title="class in org.webpki.securityproxy">org.webpki.securityproxy.ProxyChannelServlet</a> extends <a href="https://docs.oracle.com/javaee/7/api/javax/servlet/http/HttpServlet.html?is-external=true" title="class or interface in javax.servlet.http">HttpServlet</a> implements Serializable</h3>
+<h3>Class <a href="org/webpki/securityproxy/ProxyChannelServlet.html" title="class in org.webpki.securityproxy">org.webpki.securityproxy.ProxyChannelServlet</a> extends <a href="https://javaee.github.io/javaee-spec/javadocs/javax/servlet/http/HttpServlet.html?is-external=true" title="class or interface in javax.servlet.http" class="externalLink">HttpServlet</a> implements Serializable</h3>
 <dl class="nameValue">
 <dt>serialVersionUID:</dt>
 <dd>1L</dd>
@@ -1940,28 +1972,28 @@
 <ul class="blockList">
 <li class="blockList">
 <h4>name_of_service</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> name_of_service</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> name_of_service</pre>
 </li>
 <li class="blockList">
-<h4>remote_address</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> remote_address</pre>
-</li>
-<li class="blockList">
-<h4>server_port</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a> server_port</pre>
-</li>
-<li class="blockListLast">
 <h4>proxy_server</h4>
 <pre><a href="org/webpki/securityproxy/ProxyServer.html" title="class in org.webpki.securityproxy">ProxyServer</a> proxy_server</pre>
 </li>
-</ul>
+<li class="blockList">
+<h4>remote_address</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> remote_address</pre>
+</li>
+<li class="blockListLast">
+<h4>server_port</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a> server_port</pre>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.securityproxy.UploadedTrustStore">
+</ul>
+</li>
+<li class="blockList"><a id="org.webpki.securityproxy.UploadedTrustStore">
 <!--   -->
 </a>
-<h3>Class <a href="org/webpki/securityproxy/UploadedTrustStore.html" title="class in org.webpki.securityproxy">org.webpki.securityproxy.UploadedTrustStore</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<h3>Class <a href="org/webpki/securityproxy/UploadedTrustStore.html" title="class in org.webpki.securityproxy">org.webpki.securityproxy.UploadedTrustStore</a> extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a> implements Serializable</h3>
 <dl class="nameValue">
 <dt>serialVersionUID:</dt>
 <dd>1L</dd>
@@ -1972,21 +2004,23 @@
 <ul class="blockList">
 <li class="blockListLast">
 <h4>certs</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">E</a>&gt; certs</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html?is-external=true" title="class or interface in java.util" class="externalLink">ArrayList</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert" class="externalLink">X509Certificate</a>&gt; certs</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
+</section>
 </li>
 <li class="blockList">
+<section role="region">
 <h2 title="Package">Package&nbsp;org.webpki.sks</h2>
 <ul class="blockList">
-<li class="blockList"><a name="org.webpki.sks.SKSException">
+<li class="blockList"><a id="org.webpki.sks.SKSException">
 <!--   -->
 </a>
-<h3>Class <a href="org/webpki/sks/SKSException.html" title="class in org.webpki.sks">org.webpki.sks.SKSException</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang">RuntimeException</a> implements Serializable</h3>
+<h3>Class <a href="org/webpki/sks/SKSException.html" title="class in org.webpki.sks">org.webpki.sks.SKSException</a> extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang" class="externalLink">RuntimeException</a> implements Serializable</h3>
 <ul class="blockList">
 <li class="blockList">
 <h3>Serialized Fields</h3>
@@ -2000,14 +2034,16 @@
 </ul>
 </li>
 </ul>
+</section>
 </li>
 <li class="blockList">
+<section role="region">
 <h2 title="Package">Package&nbsp;org.webpki.util</h2>
 <ul class="blockList">
-<li class="blockList"><a name="org.webpki.util.ImageData">
+<li class="blockList"><a id="org.webpki.util.ImageData">
 <!--   -->
 </a>
-<h3>Class <a href="org/webpki/util/ImageData.html" title="class in org.webpki.util">org.webpki.util.ImageData</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<h3>Class <a href="org/webpki/util/ImageData.html" title="class in org.webpki.util">org.webpki.util.ImageData</a> extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a> implements Serializable</h3>
 <dl class="nameValue">
 <dt>serialVersionUID:</dt>
 <dd>1L</dd>
@@ -2022,16 +2058,16 @@
 </li>
 <li class="blockListLast">
 <h4>mimeType</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> mimeType</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> mimeType</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.util.URLDereferencer">
+<li class="blockList"><a id="org.webpki.util.URLDereferencer">
 <!--   -->
 </a>
-<h3>Class <a href="org/webpki/util/URLDereferencer.html" title="class in org.webpki.util">org.webpki.util.URLDereferencer</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<h3>Class <a href="org/webpki/util/URLDereferencer.html" title="class in org.webpki.util">org.webpki.util.URLDereferencer</a> extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a> implements Serializable</h3>
 <dl class="nameValue">
 <dt>serialVersionUID:</dt>
 <dd>1L</dd>
@@ -2041,32 +2077,34 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
+<h4>ct</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> ct</pre>
+</li>
+<li class="blockListLast">
 <h4>data</h4>
 <pre>byte[] data</pre>
 </li>
-<li class="blockListLast">
-<h4>ct</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> ct</pre>
-</li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.util.WrappedException">
+<li class="blockList"><a id="org.webpki.util.WrappedException">
 <!--   -->
 </a>
-<h3>Class <a href="org/webpki/util/WrappedException.html" title="class in org.webpki.util">org.webpki.util.WrappedException</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang">RuntimeException</a> implements Serializable</h3>
+<h3>Class <a href="org/webpki/util/WrappedException.html" title="class in org.webpki.util">org.webpki.util.WrappedException</a> extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang" class="externalLink">RuntimeException</a> implements Serializable</h3>
 <dl class="nameValue">
 <dt>serialVersionUID:</dt>
 <dd>10000000000L</dd>
 </dl>
 </li>
 </ul>
+</section>
 </li>
 <li class="blockList">
+<section role="region">
 <h2 title="Package">Package&nbsp;org.webpki.webauth</h2>
 <ul class="blockList">
-<li class="blockList"><a name="org.webpki.webauth.AuthenticationRequestDecoder">
+<li class="blockList"><a id="org.webpki.webauth.AuthenticationRequestDecoder">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/webauth/AuthenticationRequestDecoder.html" title="class in org.webpki.webauth">org.webpki.webauth.AuthenticationRequestDecoder</a> extends org.webpki.webauth.ClientDecoder implements Serializable</h3>
@@ -2079,46 +2117,46 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
-<h4>serverTime</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a> serverTime</pre>
-</li>
-<li class="blockList">
-<h4>id</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> id</pre>
-</li>
-<li class="blockList">
 <h4>algorithms</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html?is-external=true" title="class or interface in java.util">LinkedHashSet</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html?is-external=true" title="class or interface in java.util">E</a>&gt; algorithms</pre>
-</li>
-<li class="blockList">
-<h4>clientFeatures</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html?is-external=true" title="class or interface in java.util">LinkedHashSet</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html?is-external=true" title="class or interface in java.util">E</a>&gt; clientFeatures</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedHashSet.html?is-external=true" title="class or interface in java.util" class="externalLink">LinkedHashSet</a>&lt;<a href="org/webpki/crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a>&gt; algorithms</pre>
 </li>
 <li class="blockList">
 <h4>certificateFilters</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">E</a>&gt; certificateFilters</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html?is-external=true" title="class or interface in java.util" class="externalLink">ArrayList</a>&lt;<a href="org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a>&gt; certificateFilters</pre>
 </li>
 <li class="blockList">
-<h4>languages</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[] languages</pre>
-</li>
-<li class="blockList">
-<h4>keyContainerList</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html?is-external=true" title="class or interface in java.util">LinkedHashSet</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html?is-external=true" title="class or interface in java.util">E</a>&gt; keyContainerList</pre>
+<h4>clientFeatures</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedHashSet.html?is-external=true" title="class or interface in java.util" class="externalLink">LinkedHashSet</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt; clientFeatures</pre>
 </li>
 <li class="blockList">
 <h4>expires</h4>
 <pre>int expires</pre>
 </li>
-<li class="blockListLast">
+<li class="blockList">
 <h4>extendedCertPath</h4>
 <pre>boolean extendedCertPath</pre>
 </li>
-</ul>
+<li class="blockList">
+<h4>id</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> id</pre>
+</li>
+<li class="blockList">
+<h4>keyContainerList</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedHashSet.html?is-external=true" title="class or interface in java.util" class="externalLink">LinkedHashSet</a>&lt;<a href="org/webpki/crypto/KeyContainerTypes.html" title="enum in org.webpki.crypto">KeyContainerTypes</a>&gt; keyContainerList</pre>
+</li>
+<li class="blockList">
+<h4>languages</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[] languages</pre>
+</li>
+<li class="blockListLast">
+<h4>serverTime</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util" class="externalLink">GregorianCalendar</a> serverTime</pre>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.webauth.AuthenticationRequestEncoder">
+</ul>
+</li>
+<li class="blockList"><a id="org.webpki.webauth.AuthenticationRequestEncoder">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/webauth/AuthenticationRequestEncoder.html" title="class in org.webpki.webauth">org.webpki.webauth.AuthenticationRequestEncoder</a> extends org.webpki.webauth.ServerEncoder implements Serializable</h3>
@@ -2131,54 +2169,54 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
-<h4>id</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> id</pre>
-</li>
-<li class="blockList">
-<h4>languageList</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[] languageList</pre>
-</li>
-<li class="blockList">
-<h4>keyContainerList</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[] keyContainerList</pre>
-</li>
-<li class="blockList">
-<h4>fullPath</h4>
-<pre>boolean fullPath</pre>
-</li>
-<li class="blockList">
-<h4>extendedCertPathSet</h4>
-<pre>boolean extendedCertPathSet</pre>
-</li>
-<li class="blockList">
-<h4>extendedCertPath</h4>
-<pre>boolean extendedCertPath</pre>
+<h4>certificateFilters</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html?is-external=true" title="class or interface in java.util" class="externalLink">ArrayList</a>&lt;<a href="org/webpki/crypto/CertificateFilter.html" title="class in org.webpki.crypto">CertificateFilter</a>&gt; certificateFilters</pre>
 </li>
 <li class="blockList">
 <h4>expires</h4>
 <pre>int expires</pre>
 </li>
 <li class="blockList">
-<h4>signatureAlgorithms</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html?is-external=true" title="class or interface in java.util">LinkedHashSet</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html?is-external=true" title="class or interface in java.util">E</a>&gt; signatureAlgorithms</pre>
+<h4>extendedCertPath</h4>
+<pre>boolean extendedCertPath</pre>
 </li>
 <li class="blockList">
-<h4>certificateFilters</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">E</a>&gt; certificateFilters</pre>
+<h4>extendedCertPathSet</h4>
+<pre>boolean extendedCertPathSet</pre>
+</li>
+<li class="blockList">
+<h4>fullPath</h4>
+<pre>boolean fullPath</pre>
+</li>
+<li class="blockList">
+<h4>id</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> id</pre>
+</li>
+<li class="blockList">
+<h4>keyContainerList</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[] keyContainerList</pre>
+</li>
+<li class="blockList">
+<h4>languageList</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[] languageList</pre>
 </li>
 <li class="blockList">
 <h4>requestedClientFeatures</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">E</a>&gt; requestedClientFeatures</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html?is-external=true" title="class or interface in java.util" class="externalLink">ArrayList</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt; requestedClientFeatures</pre>
+</li>
+<li class="blockList">
+<h4>serverTime</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> serverTime</pre>
 </li>
 <li class="blockListLast">
-<h4>serverTime</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverTime</pre>
+<h4>signatureAlgorithms</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedHashSet.html?is-external=true" title="class or interface in java.util" class="externalLink">LinkedHashSet</a>&lt;<a href="org/webpki/crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a>&gt; signatureAlgorithms</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.webauth.AuthenticationResponseDecoder">
+<li class="blockList"><a id="org.webpki.webauth.AuthenticationResponseDecoder">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/webauth/AuthenticationResponseDecoder.html" title="class in org.webpki.webauth">org.webpki.webauth.AuthenticationResponseDecoder</a> extends org.webpki.webauth.InputValidator implements Serializable</h3>
@@ -2191,42 +2229,42 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
-<h4>serverTime</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> serverTime</pre>
+<h4>certificatePath</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert" class="externalLink">X509Certificate</a>[] certificatePath</pre>
+</li>
+<li class="blockList">
+<h4>clientPlatformFeatures</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util" class="externalLink">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedHashSet.html?is-external=true" title="class or interface in java.util" class="externalLink">LinkedHashSet</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&gt; clientPlatformFeatures</pre>
 </li>
 <li class="blockList">
 <h4>clientTime</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a> clientTime</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util" class="externalLink">GregorianCalendar</a> clientTime</pre>
 </li>
 <li class="blockList">
-<h4>signature</h4>
-<pre><a href="org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a> signature</pre>
+<h4>id</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> id</pre>
 </li>
 <li class="blockList">
 <h4>serverCertificateFingerprint</h4>
 <pre>byte[] serverCertificateFingerprint</pre>
 </li>
 <li class="blockList">
-<h4>id</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> id</pre>
+<h4>serverTime</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> serverTime</pre>
 </li>
 <li class="blockList">
-<h4>certificatePath</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[] certificatePath</pre>
+<h4>signature</h4>
+<pre><a href="org/webpki/json/JSONSignatureDecoder.html" title="class in org.webpki.json">JSONSignatureDecoder</a> signature</pre>
 </li>
-<li class="blockList">
+<li class="blockListLast">
 <h4>signatureAlgorithm</h4>
 <pre><a href="org/webpki/crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a> signatureAlgorithm</pre>
 </li>
-<li class="blockListLast">
-<h4>clientPlatformFeatures</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">K</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">V</a>&gt; clientPlatformFeatures</pre>
-</li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="blockList"><a name="org.webpki.webauth.AuthenticationResponseEncoder">
+<li class="blockList"><a id="org.webpki.webauth.AuthenticationResponseEncoder">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/webauth/AuthenticationResponseEncoder.html" title="class in org.webpki.webauth">org.webpki.webauth.AuthenticationResponseEncoder</a> extends <a href="org/webpki/json/JSONEncoder.html" title="class in org.webpki.json">JSONEncoder</a> implements Serializable</h3>
@@ -2239,24 +2277,24 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
-<h4>serverTime</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a> serverTime</pre>
+<h4>clientPlatformFeatures</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util" class="externalLink">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedHashSet.html?is-external=true" title="class or interface in java.util" class="externalLink">LinkedHashSet</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&gt; clientPlatformFeatures</pre>
 </li>
 <li class="blockList">
 <h4>clientTime</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util">GregorianCalendar</a> clientTime</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util" class="externalLink">GregorianCalendar</a> clientTime</pre>
+</li>
+<li class="blockList">
+<h4>id</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> id</pre>
 </li>
 <li class="blockList">
 <h4>serverCertificateFingerprint</h4>
 <pre>byte[] serverCertificateFingerprint</pre>
 </li>
 <li class="blockList">
-<h4>clientPlatformFeatures</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">K</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">V</a>&gt; clientPlatformFeatures</pre>
-</li>
-<li class="blockList">
-<h4>id</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> id</pre>
+<h4>serverTime</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/GregorianCalendar.html?is-external=true" title="class or interface in java.util" class="externalLink">GregorianCalendar</a> serverTime</pre>
 </li>
 <li class="blockListLast">
 <h4>signer</h4>
@@ -2267,14 +2305,16 @@
 </ul>
 </li>
 </ul>
+</section>
 </li>
 <li class="blockList">
+<section role="region">
 <h2 title="Package">Package&nbsp;org.webpki.xml</h2>
 <ul class="blockList">
-<li class="blockList"><a name="org.webpki.xml.XMLCookie">
+<li class="blockList"><a id="org.webpki.xml.XMLCookie">
 <!--   -->
 </a>
-<h3>Class <a href="org/webpki/xml/XMLCookie.html" title="class in org.webpki.xml">org.webpki.xml.XMLCookie</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<h3>Class <a href="org/webpki/xml/XMLCookie.html" title="class in org.webpki.xml">org.webpki.xml.XMLCookie</a> extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a> implements Serializable</h3>
 <dl class="nameValue">
 <dt>serialVersionUID:</dt>
 <dd>1L</dd>
@@ -2285,18 +2325,20 @@
 <ul class="blockList">
 <li class="blockListLast">
 <h4>element</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a> element</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a> element</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
+</section>
 </li>
 <li class="blockList">
+<section role="region">
 <h2 title="Package">Package&nbsp;org.webpki.xmldsig</h2>
 <ul class="blockList">
-<li class="blockList"><a name="org.webpki.xmldsig.XMLSignatureWrapper">
+<li class="blockList"><a id="org.webpki.xmldsig.XMLSignatureWrapper">
 <!--   -->
 </a>
 <h3>Class <a href="org/webpki/xmldsig/XMLSignatureWrapper.html" title="class in org.webpki.xmldsig">org.webpki.xmldsig.XMLSignatureWrapper</a> extends <a href="org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a> implements Serializable</h3>
@@ -2309,32 +2351,44 @@
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockList">
-<h4>wrappedData</h4>
-<pre><a href="org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a> wrappedData</pre>
-</li>
-<li class="blockList">
-<h4>x509IssuerName</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> x509IssuerName</pre>
-</li>
-<li class="blockList">
-<h4>x509SubjectName</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> x509SubjectName</pre>
-</li>
-<li class="blockList">
-<h4>x509SerialNumber</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html?is-external=true" title="class or interface in java.math">BigInteger</a> x509SerialNumber</pre>
+<h4>canonicalization_algorithm</h4>
+<pre><a href="org/webpki/xmldsig/CanonicalizationAlgorithms.html" title="enum in org.webpki.xmldsig">CanonicalizationAlgorithms</a> canonicalization_algorithm</pre>
 </li>
 <li class="blockList">
 <h4>certificates</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</a>[] certificates</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert" class="externalLink">X509Certificate</a>[] certificates</pre>
+</li>
+<li class="blockList">
+<h4>digest_algorithm</h4>
+<pre><a href="org/webpki/crypto/HashAlgorithms.html" title="enum in org.webpki.crypto">HashAlgorithms</a> digest_algorithm</pre>
+</li>
+<li class="blockList">
+<h4>envelope_id</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> envelope_id</pre>
+</li>
+<li class="blockList">
+<h4>KeyInfo_element</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a> KeyInfo_element</pre>
+</li>
+<li class="blockList">
+<h4>KeyInfo_Reference_create</h4>
+<pre>boolean KeyInfo_Reference_create</pre>
+</li>
+<li class="blockList">
+<h4>KeyInfo_Reference_node</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Text.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Text</a> KeyInfo_Reference_node</pre>
+</li>
+<li class="blockList">
+<h4>Object_element</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a> Object_element</pre>
+</li>
+<li class="blockList">
+<h4>object_id</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> object_id</pre>
 </li>
 <li class="blockList">
 <h4>publicKey</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html?is-external=true" title="class or interface in java.security">PublicKey</a> publicKey</pre>
-</li>
-<li class="blockList">
-<h4>root</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a> root</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/PublicKey.html?is-external=true" title="class or interface in java.security" class="externalLink">PublicKey</a> publicKey</pre>
 </li>
 <li class="blockList">
 <h4>reference_object_1</h4>
@@ -2345,83 +2399,75 @@
 <pre>org.webpki.xmldsig.XMLSignatureWrapper.ReferenceObject reference_object_2</pre>
 </li>
 <li class="blockList">
+<h4>root</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a> root</pre>
+</li>
+<li class="blockList">
+<h4>signatureAlgorithm</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> signatureAlgorithm</pre>
+</li>
+<li class="blockList">
+<h4>SignatureValue_node</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Text.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Text</a> SignatureValue_node</pre>
+</li>
+<li class="blockList">
+<h4>SignedElement_Reference_node</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Text.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Text</a> SignedElement_Reference_node</pre>
+</li>
+<li class="blockList">
+<h4>SignedInfo_element</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom" class="externalLink">Element</a> SignedInfo_element</pre>
+</li>
+<li class="blockList">
 <h4>signedinfo_object</h4>
 <pre>org.webpki.xmldsig.XMLSignatureWrapper.SignedInfoObject signedinfo_object</pre>
 </li>
 <li class="blockList">
-<h4>envelope_id</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> envelope_id</pre>
-</li>
-<li class="blockList">
-<h4>object_id</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> object_id</pre>
-</li>
-<li class="blockList">
 <h4>symmetric_key_name</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> symmetric_key_name</pre>
-</li>
-<li class="blockList">
-<h4>digest_algorithm</h4>
-<pre><a href="org/webpki/crypto/HashAlgorithms.html" title="enum in org.webpki.crypto">HashAlgorithms</a> digest_algorithm</pre>
-</li>
-<li class="blockList">
-<h4>canonicalization_algorithm</h4>
-<pre><a href="org/webpki/xmldsig/CanonicalizationAlgorithms.html" title="enum in org.webpki.xmldsig">CanonicalizationAlgorithms</a> canonicalization_algorithm</pre>
-</li>
-<li class="blockList">
-<h4>signatureAlgorithm</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> signatureAlgorithm</pre>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> symmetric_key_name</pre>
 </li>
 <li class="blockList">
 <h4>transform_algorithm</h4>
 <pre><a href="org/webpki/xmldsig/CanonicalizationAlgorithms.html" title="enum in org.webpki.xmldsig">CanonicalizationAlgorithms</a> transform_algorithm</pre>
 </li>
 <li class="blockList">
-<h4>SignedInfo_element</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a> SignedInfo_element</pre>
+<h4>wrappedData</h4>
+<pre><a href="org/webpki/xml/XMLObjectWrapper.html" title="class in org.webpki.xml">XMLObjectWrapper</a> wrappedData</pre>
 </li>
 <li class="blockList">
-<h4>SignatureValue_node</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Text.html?is-external=true" title="class or interface in org.w3c.dom">Text</a> SignatureValue_node</pre>
+<h4>x509IssuerName</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> x509IssuerName</pre>
 </li>
 <li class="blockList">
-<h4>SignedElement_Reference_node</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Text.html?is-external=true" title="class or interface in org.w3c.dom">Text</a> SignedElement_Reference_node</pre>
-</li>
-<li class="blockList">
-<h4>KeyInfo_Reference_node</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Text.html?is-external=true" title="class or interface in org.w3c.dom">Text</a> KeyInfo_Reference_node</pre>
-</li>
-<li class="blockList">
-<h4>KeyInfo_element</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a> KeyInfo_element</pre>
-</li>
-<li class="blockList">
-<h4>Object_element</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Element.html?is-external=true" title="class or interface in org.w3c.dom">Element</a> Object_element</pre>
+<h4>x509SerialNumber</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/BigInteger.html?is-external=true" title="class or interface in java.math" class="externalLink">BigInteger</a> x509SerialNumber</pre>
 </li>
 <li class="blockListLast">
-<h4>KeyInfo_Reference_create</h4>
-<pre>boolean KeyInfo_Reference_create</pre>
+<h4>x509SubjectName</h4>
+<pre><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> x509SubjectName</pre>
 </li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
+</section>
 </li>
 </ul>
 </div>
+</main>
+<footer role="contentinfo">
+<nav role="navigation">
 <!-- ======= START OF BOTTOM NAVBAR ====== -->
-<div class="bottomNav"><a name="navbar.bottom">
+<div class="bottomNav"><a id="navbar.bottom">
 <!--   -->
 </a>
 <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
-<a name="navbar.bottom.firstrow">
+<a id="navbar.bottom.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
-<li><a href="overview-summary.html">Overview</a></li>
+<li><a href="index.html">Overview</a></li>
 <li>Package</li>
 <li>Class</li>
 <li><a href="overview-tree.html">Tree</a></li>
@@ -2430,16 +2476,8 @@
 </ul>
 </div>
 <div class="subNav">
-<ul class="navList">
-<li>Prev</li>
-<li>Next</li>
-</ul>
-<ul class="navList">
-<li><a href="index.html?serialized-form.html" target="_top">Frames</a></li>
-<li><a href="serialized-form.html" target="_top">No&nbsp;Frames</a></li>
-</ul>
 <ul class="navList" id="allclasses_navbar_bottom">
-<li><a href="allclasses-noframe.html">All&nbsp;Classes</a></li>
+<li><a href="allclasses.html">All&nbsp;Classes</a></li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -2452,11 +2490,16 @@
   }
   //-->
 </script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
 </div>
-<a name="skip.navbar.bottom">
+<a id="skip.navbar.bottom">
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>2005-2018 WebPKI.org.</i></small></p>
+</nav>
+<p class="legalCopy"><small><i>2005-2020 WebPKI.org.</i></small></p>
+</footer>
 </body>
 </html>

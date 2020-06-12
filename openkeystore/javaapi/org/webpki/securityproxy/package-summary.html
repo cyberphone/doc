@@ -1,12 +1,22 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML>
 <!-- NewPage -->
 <html lang="en">
 <head>
 
 <title>org.webpki.securityproxy (WebPKI.org Support)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+<link rel="stylesheet" type="text/css" href="../../../jquery/jquery-ui.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
+<script type="text/javascript" src="../../../jquery/jszip/dist/jszip.min.js"></script>
+<script type="text/javascript" src="../../../jquery/jszip-utils/dist/jszip-utils.min.js"></script>
+<!--[if IE]>
+<script type="text/javascript" src="../../../jquery/jszip-utils/dist/jszip-utils-ie.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="../../../jquery/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="../../../jquery/jquery-migrate-3.0.1.js"></script>
+<script type="text/javascript" src="../../../jquery/jquery-ui.js"></script>
 </head>
 <body>
 <script type="text/javascript"><!--
@@ -18,20 +28,25 @@
     catch(err) {
     }
 //-->
-</script>
+var pathtoroot = "../../../";
+var useModuleDirectories = true;
+loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
 </noscript>
+<header role="banner">
+<nav role="navigation">
+<div class="fixedNav">
 <!-- ========= START OF TOP NAVBAR ======= -->
-<div class="topNav"><a name="navbar.top">
+<div class="topNav"><a id="navbar.top">
 <!--   -->
 </a>
 <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
-<a name="navbar.top.firstrow">
+<a id="navbar.top.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
-<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="../../../index.html">Overview</a></li>
 <li class="navBarCell1Rev">Package</li>
 <li>Class</li>
 <li><a href="package-tree.html">Tree</a></li>
@@ -40,16 +55,14 @@
 </ul>
 </div>
 <div class="subNav">
-<ul class="navList">
-<li><a href="../../../org/webpki/pkcs7/package-summary.html">Prev&nbsp;Package</a></li>
-<li><a href="../../../org/webpki/sks/package-summary.html">Next&nbsp;Package</a></li>
-</ul>
-<ul class="navList">
-<li><a href="../../../index.html?org/webpki/securityproxy/package-summary.html" target="_top">Frames</a></li>
-<li><a href="package-summary.html" target="_top">No&nbsp;Frames</a></li>
-</ul>
 <ul class="navList" id="allclasses_navbar_top">
-<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+<li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" disabled="disabled">
+<input type="reset" id="reset" value="reset" disabled="disabled">
+</li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -62,125 +75,30 @@
   }
   //-->
 </script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
 </div>
-<a name="skip.navbar.top">
+<a id="skip.navbar.top">
 <!--   -->
 </a></div>
 <!-- ========= END OF TOP NAVBAR ========= -->
+</div>
+<div class="navPadding">&nbsp;</div>
+<script type="text/javascript"><!--
+$('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+//-->
+</script>
+</nav>
+</header>
+<main role="main">
 <div class="header">
 <h1 title="Package" class="title">Package&nbsp;org.webpki.securityproxy</h1>
-<div class="docSummary">
-<div class="block">SecurityProxy - HTTP Security Proxy Framework</div>
-</div>
-<p>See:&nbsp;<a href="#package.description">Description</a></p>
 </div>
 <div class="contentContainer">
-<ul class="blockList">
-<li class="blockList">
-<table class="typeSummary" border="0" cellpadding="3" cellspacing="0" summary="Interface Summary table, listing interfaces, and an explanation">
-<caption><span>Interface Summary</span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Interface</th>
-<th class="colLast" scope="col">Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/securityproxy/ClientRequestHandler.html" title="interface in org.webpki.securityproxy">ClientRequestHandler</a></td>
-<td class="colLast">
-<div class="block">Security proxy client request handler interface.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/securityproxy/JavaRequestInterface.html" title="interface in org.webpki.securityproxy">JavaRequestInterface</a></td>
-<td class="colLast">
-<div class="block">Security proxy data object containing a request operation.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/securityproxy/JavaResponseInterface.html" title="interface in org.webpki.securityproxy">JavaResponseInterface</a></td>
-<td class="colLast">
-<div class="block">Security proxy object containing a local service's Java response.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/securityproxy/JavaUploadInterface.html" title="interface in org.webpki.securityproxy">JavaUploadInterface</a></td>
-<td class="colLast">
-<div class="block">Security proxy data object containing an upload operation.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/securityproxy/ServerUploadHandler.html" title="interface in org.webpki.securityproxy">ServerUploadHandler</a></td>
-<td class="colLast">
-<div class="block">Security proxy upload event handler.</div>
-</td>
-</tr>
-</tbody>
-</table>
-</li>
-<li class="blockList">
-<table class="typeSummary" border="0" cellpadding="3" cellspacing="0" summary="Class Summary table, listing classes, and an explanation">
-<caption><span>Class Summary</span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Class</th>
-<th class="colLast" scope="col">Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/securityproxy/EmbeddedHTTPResponseWrapper.html" title="class in org.webpki.securityproxy">EmbeddedHTTPResponseWrapper</a></td>
-<td class="colLast">
-<div class="block">Security proxy object containing a local service's HTTP response.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/securityproxy/HTTPResponseWrapper.html" title="class in org.webpki.securityproxy">HTTPResponseWrapper</a></td>
-<td class="colLast">
-<div class="block">Security proxy object containing a local service's HTTP response.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/securityproxy/ProxyChannelServlet.html" title="class in org.webpki.securityproxy">ProxyChannelServlet</a></td>
-<td class="colLast">
-<div class="block">Proxy channel servlet.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/securityproxy/ProxyClient.html" title="class in org.webpki.securityproxy">ProxyClient</a></td>
-<td class="colLast">
-<div class="block">Security proxy local service (client).</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/securityproxy/ProxyServer.html" title="class in org.webpki.securityproxy">ProxyServer</a></td>
-<td class="colLast">
-<div class="block">Security proxy server core logic.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/securityproxy/ProxyServerErrorFactory.html" title="class in org.webpki.securityproxy">ProxyServerErrorFactory</a></td>
-<td class="colLast">
-<div class="block">Factory for returning internal security proxy errors.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/securityproxy/SOAP12ServerError.html" title="class in org.webpki.securityproxy">SOAP12ServerError</a></td>
-<td class="colLast">
-<div class="block">Sample factory for returning internal security proxy errors in SOAP 1.2 format.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/securityproxy/UploadedTrustStore.html" title="class in org.webpki.securityproxy">UploadedTrustStore</a></td>
-<td class="colLast">
-<div class="block">Predefined trust-anchor upload payload</div>
-</td>
-</tr>
-</tbody>
-</table>
-</li>
-</ul>
-<a name="package.description">
+<section role="region"><a id="package.description">
 <!--   -->
 </a>
-<h2 title="Package org.webpki.securityproxy Description">Package org.webpki.securityproxy Description</h2>
 <div class="block"><h2>SecurityProxy - HTTP Security Proxy Framework</h2>
 It is often desirable protecting sensitive resources from direct incoming
 calls while still being able to handle external requests. This
@@ -273,7 +191,7 @@ import com.example.common.SampleResponseObject;
 /**
  * Inner service using the security proxy system. 
  */
-public class InnerService implements ServletContextListener, <a href="../../../org/webpki/securityproxy/ClientRequestHandler.html" title="interface in org.webpki.securityproxy"><code>ClientRequestHandler</code></a>
+public class InnerService implements ServletContextListener, <a href="ClientRequestHandler.html" title="interface in org.webpki.securityproxy"><code>ClientRequestHandler</code></a>
   {
     private static Logger logger = Logger.getLogger (InnerService.class.getCanonicalName ());
 
@@ -291,7 +209,7 @@ public class InnerService implements ServletContextListener, <a href="../../../o
     private static final String PROPERTY_KEYSTORE        = "securityproxy.keystore";
     private static final String PROPERTY_KEYPASS         = "securityproxy.keypass";
 
-    static <a href="../../../org/webpki/securityproxy/ProxyClient.html" title="class in org.webpki.securityproxy"><code>ProxyClient</code></a> proxy_client = new <a href="../../../org/webpki/securityproxy/ProxyClient.html" title="class in org.webpki.securityproxy"><code>ProxyClient</code></a> ();
+    static <a href="ProxyClient.html" title="class in org.webpki.securityproxy"><code>ProxyClient</code></a> proxy_client = new <a href="ProxyClient.html" title="class in org.webpki.securityproxy"><code>ProxyClient</code></a> ();
 
     Properties properties;
 
@@ -324,20 +242,20 @@ public class InnerService implements ServletContextListener, <a href="../../../o
       }
 
     &#64;Override
-    public <a href="../../../org/webpki/securityproxy/HTTPResponseWrapper.html" title="class in org.webpki.securityproxy"><code>HTTPResponseWrapper</code></a> <a href="../../../org/webpki/securityproxy/ClientRequestHandler.html#handleHTTPResponseRequest-org.webpki.securityproxy.JavaRequestInterface-"><code>handleHTTPResponseRequest</code></a> (<a href="../../../org/webpki/securityproxy/JavaRequestInterface.html" title="interface in org.webpki.securityproxy"><code>JavaRequestInterface</code></a> request_object) throws IOException
+    public <a href="HTTPResponseWrapper.html" title="class in org.webpki.securityproxy"><code>HTTPResponseWrapper</code></a> <a href="ClientRequestHandler.html#handleHTTPResponseRequest(org.webpki.securityproxy.JavaRequestInterface)"><code>handleHTTPResponseRequest</code></a> (<a href="JavaRequestInterface.html" title="interface in org.webpki.securityproxy"><code>JavaRequestInterface</code></a> request_object) throws IOException
       {
          ...
       }
 
     &#64;Override
-    public <a href="../../../org/webpki/securityproxy/JavaResponseInterface.html" title="interface in org.webpki.securityproxy"><code>JavaResponseInterface</code></a> <a href="../../../org/webpki/securityproxy/ClientRequestHandler.html#handleJavaResponseRequest-org.webpki.securityproxy.JavaRequestInterface-"><code>handleJavaResponseRequest</code></a> (<a href="../../../org/webpki/securityproxy/JavaRequestInterface.html" title="interface in org.webpki.securityproxy"><code>JavaRequestInterface</code></a> request_object) throws IOException
+    public <a href="JavaResponseInterface.html" title="interface in org.webpki.securityproxy"><code>JavaResponseInterface</code></a> <a href="ClientRequestHandler.html#handleJavaResponseRequest(org.webpki.securityproxy.JavaRequestInterface)"><code>handleJavaResponseRequest</code></a> (<a href="JavaRequestInterface.html" title="interface in org.webpki.securityproxy"><code>JavaRequestInterface</code></a> request_object) throws IOException
       {
         SampleRequestObject sro = (SampleRequestObject) request_object;
         return new SampleResponseObject (sro.getX () * sro.getY());
       }
 
     &#64;Override
-    public void <a href="../../../org/webpki/securityproxy/ClientRequestHandler.html#handleInitialization--"><code>handleInitialization</code></a> () throws IOException
+    public void <a href="ClientRequestHandler.html#handleInitialization()"><code>handleInitialization</code></a> () throws IOException
       {
         logger.info ("Got restart signal!");
 
@@ -364,7 +282,7 @@ public class InnerService implements ServletContextListener, <a href="../../../o
             StringBuffer s = new StringBuffer ();
             for (String key : properties.stringPropertyNames ())
               {
-                if (s.length () > 0)
+                if (s.length () &gt; 0)
                   {
                     s.append (", ");
                   }
@@ -377,13 +295,13 @@ public class InnerService implements ServletContextListener, <a href="../../../o
             ////////////////////////////////////////////////////////////////////////////////////////////
             if (properties.containsKey (PROPERTY_TRUSTSTORE))
               {
-                proxy_client.<a href="../../../org/webpki/securityproxy/ProxyClient.html#setTrustStore-java.lang.String-java.lang.String-"><code>setTrustStore</code></a> (getPropertyString (PROPERTY_TRUSTSTORE), getPropertyString (PROPERTY_STOREPASS));
+                proxy_client.<a href="ProxyClient.html#setTrustStore(java.lang.String,java.lang.String)"><code>setTrustStore</code></a> (getPropertyString (PROPERTY_TRUSTSTORE), getPropertyString (PROPERTY_STOREPASS));
               }
             if (properties.containsKey (PROPERTY_KEYSTORE))
               {
-                proxy_client.<a href="../../../org/webpki/securityproxy/ProxyClient.html#setKeyStore-java.lang.String-java.lang.String-"><code>setKeyStore</code></a> (getPropertyString (PROPERTY_KEYSTORE), getPropertyString (PROPERTY_KEYPASS));
+                proxy_client.<a href="ProxyClient.html#setKeyStore(java.lang.String,java.lang.String)"><code>setKeyStore</code></a> (getPropertyString (PROPERTY_KEYSTORE), getPropertyString (PROPERTY_KEYPASS));
               }
-            proxy_client.<a href="../../../org/webpki/securityproxy/ProxyClient.html#initProxy-org.webpki.securityproxy.ClientRequestHandler-java.lang.String-int-int-int-boolean-"><code>initProxy</code></a> (this,
+            proxy_client.<a href="ProxyClient.html#initProxy(org.webpki.securityproxy.ClientRequestHandler,java.lang.String,int,int,int,boolean)"><code>initProxy</code></a> (this,
                                     getPropertyString (PROPERTY_PROXY_URL),
                                     getPropertyInt (PROPERTY_MAX_WORKERS),
                                     getPropertyInt (PROPERTY_CYCLE_TIME),
@@ -474,11 +392,11 @@ import com.example.common.SampleUploadObject;
 /**
  * Proxy service initilization code
  */
-public class Init implements ServletContextListener, <a href="../../../org/webpki/securityproxy/ServerUploadHandler.html" title="interface in org.webpki.securityproxy"><code>ServerUploadHandler</code></a>
+public class Init implements ServletContextListener, <a href="ServerUploadHandler.html" title="interface in org.webpki.securityproxy"><code>ServerUploadHandler</code></a>
   {
     private static Logger logger = Logger.getLogger (Init.class.getName ());
 
-    static <a href="../../../org/webpki/securityproxy/ProxyServer.html" title="class in org.webpki.securityproxy"><code>ProxyServer</code></a> proxy_server;
+    static <a href="ProxyServer.html" title="class in org.webpki.securityproxy"><code>ProxyServer</code></a> proxy_server;
 
     private static final int HISTORY = 20;
 
@@ -487,8 +405,8 @@ public class Init implements ServletContextListener, <a href="../../../org/webpk
     &#64;Override
     public void contextInitialized (ServletContextEvent event)
       {
-        proxy_server = <a href="../../../org/webpki/securityproxy/ProxyServer.html#getInstance-java.lang.String-"><code>ProxyServer.getInstance</code></a> (event.getServletContext ().getInitParameter (<a href="../../../org/webpki/securityproxy/ProxyServer.html#PROXY_SERVICE_PROPERTY"><code>ProxyServer.PROXY_SERVICE_PROPERTY</code></a>));
-        proxy_server.<a href="../../../org/webpki/securityproxy/ProxyServer.html#addUploadEventHandler-org.webpki.securityproxy.ServerUploadHandler-"><code>addUploadEventHandler</code></a> (this);
+        proxy_server = <a href="ProxyServer.html#getInstance(java.lang.String)"><code>ProxyServer.getInstance</code></a> (event.getServletContext ().getInitParameter (<a href="ProxyServer.html#PROXY_SERVICE_PROPERTY"><code>ProxyServer.PROXY_SERVICE_PROPERTY</code></a>));
+        proxy_server.<a href="ProxyServer.html#addUploadEventHandler(org.webpki.securityproxy.ServerUploadHandler)"><code>addUploadEventHandler</code></a> (this);
       }
 
     &#64;Override
@@ -497,7 +415,7 @@ public class Init implements ServletContextListener, <a href="../../../org/webpk
       }
 
     &#64;Override
-    public void <a href="../../../org/webpki/securityproxy/ServerUploadHandler.html#handleUploadedData-org.webpki.securityproxy.JavaUploadInterface-"><code>handleUploadedData</code></a> (<a href="../../../org/webpki/securityproxy/JavaUploadInterface.html" title="interface in org.webpki.securityproxy"><code>JavaUploadInterface</code></a> upload_payload)
+    public void <a href="ServerUploadHandler.html#handleUploadedData(org.webpki.securityproxy.JavaUploadInterface)"><code>handleUploadedData</code></a> (<a href="JavaUploadInterface.html" title="interface in org.webpki.securityproxy"><code>JavaUploadInterface</code></a> upload_payload)
       {
         uploads.add (0, (SampleUploadObject) upload_payload);
         if (uploads.size () &gt; HISTORY)
@@ -544,7 +462,7 @@ public class OuterService extends HttpServlet
     &#64;Override
     public void doPost (HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
       {
-        SampleResponseObject sro = (SampleResponseObject) Init.proxy_server.<a href="../../../org/webpki/securityproxy/ProxyServer.html#processCall-org.webpki.securityproxy.JavaRequestInterface-"><code>processCall</code></a> (new SampleRequestObject (new Double (request.getParameter ("X")),
+        SampleResponseObject sro = (SampleResponseObject) Init.proxy_server.<a href="ProxyServer.html#processCall(org.webpki.securityproxy.JavaRequestInterface)"><code>processCall</code></a> (new SampleRequestObject (new Double (request.getParameter ("X")),
                                                                                          new Double (request.getParameter ("Y"))));
         response.setContentType ("text/plain");
         response.setHeader ("Pragma", "No-Cache");
@@ -630,7 +548,7 @@ package com.example.common;
 
 import org.webpki.securityproxy.JavaRequestInterface;
 
-public class SampleRequestObject implements <a href="../../../org/webpki/securityproxy/JavaRequestInterface.html" title="interface in org.webpki.securityproxy"><code>JavaRequestInterface</code></a>
+public class SampleRequestObject implements <a href="JavaRequestInterface.html" title="interface in org.webpki.securityproxy"><code>JavaRequestInterface</code></a>
   {
     private static final long serialVersionUID = 1L;
 
@@ -660,7 +578,7 @@ package com.example.common;
 
 import org.webpki.securityproxy.JavaResponseInterface;
 
-public class SampleResponseObject implements <a href="../../../org/webpki/securityproxy/JavaResponseInterface.html" title="interface in org.webpki.securityproxy"><code>JavaResponseInterface</code></a>
+public class SampleResponseObject implements <a href="JavaResponseInterface.html" title="interface in org.webpki.securityproxy"><code>JavaResponseInterface</code></a>
   {
     private static final long serialVersionUID = 1L;
 
@@ -682,7 +600,7 @@ package com.example.common;
 
 import org.webpki.securityproxy.JavaUploadInterface;
 
-public class SampleUploadObject implements <a href="../../../org/webpki/securityproxy/JavaUploadInterface.html" title="interface in org.webpki.securityproxy"><code>JavaUploadInterface</code></a>
+public class SampleUploadObject implements <a href="JavaUploadInterface.html" title="interface in org.webpki.securityproxy"><code>JavaUploadInterface</code></a>
   {
     private static final long serialVersionUID = 1L;
 
@@ -702,17 +620,123 @@ public class SampleUploadObject implements <a href="../../../org/webpki/security
 <P>
 <h3><B>Tomcat/JBoss Port Configuration</B></h3></P>
 See supplied test code...</div>
+</section>
+<ul class="blockList">
+<li class="blockList">
+<table class="typeSummary">
+<caption><span>Interface Summary</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Interface</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="ClientRequestHandler.html" title="interface in org.webpki.securityproxy">ClientRequestHandler</a></th>
+<td class="colLast">
+<div class="block">Security proxy client request handler interface.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="JavaRequestInterface.html" title="interface in org.webpki.securityproxy">JavaRequestInterface</a></th>
+<td class="colLast">
+<div class="block">Security proxy data object containing a request operation.</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="JavaResponseInterface.html" title="interface in org.webpki.securityproxy">JavaResponseInterface</a></th>
+<td class="colLast">
+<div class="block">Security proxy object containing a local service's Java response.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="JavaUploadInterface.html" title="interface in org.webpki.securityproxy">JavaUploadInterface</a></th>
+<td class="colLast">
+<div class="block">Security proxy data object containing an upload operation.</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="ServerUploadHandler.html" title="interface in org.webpki.securityproxy">ServerUploadHandler</a></th>
+<td class="colLast">
+<div class="block">Security proxy upload event handler.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList">
+<table class="typeSummary">
+<caption><span>Class Summary</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Class</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="EmbeddedHTTPResponseWrapper.html" title="class in org.webpki.securityproxy">EmbeddedHTTPResponseWrapper</a></th>
+<td class="colLast">
+<div class="block">Security proxy object containing a local service's HTTP response.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="HTTPResponseWrapper.html" title="class in org.webpki.securityproxy">HTTPResponseWrapper</a></th>
+<td class="colLast">
+<div class="block">Security proxy object containing a local service's HTTP response.</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="ProxyChannelServlet.html" title="class in org.webpki.securityproxy">ProxyChannelServlet</a></th>
+<td class="colLast">
+<div class="block">Proxy channel servlet.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="ProxyClient.html" title="class in org.webpki.securityproxy">ProxyClient</a></th>
+<td class="colLast">
+<div class="block">Security proxy local service (client).</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="ProxyServer.html" title="class in org.webpki.securityproxy">ProxyServer</a></th>
+<td class="colLast">
+<div class="block">Security proxy server core logic.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="ProxyServerErrorFactory.html" title="class in org.webpki.securityproxy">ProxyServerErrorFactory</a></th>
+<td class="colLast">
+<div class="block">Factory for returning internal security proxy errors.</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="SOAP12ServerError.html" title="class in org.webpki.securityproxy">SOAP12ServerError</a></th>
+<td class="colLast">
+<div class="block">Sample factory for returning internal security proxy errors in SOAP 1.2 format.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="UploadedTrustStore.html" title="class in org.webpki.securityproxy">UploadedTrustStore</a></th>
+<td class="colLast">
+<div class="block">Predefined trust-anchor upload payload</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
 </div>
+</main>
+<footer role="contentinfo">
+<nav role="navigation">
 <!-- ======= START OF BOTTOM NAVBAR ====== -->
-<div class="bottomNav"><a name="navbar.bottom">
+<div class="bottomNav"><a id="navbar.bottom">
 <!--   -->
 </a>
 <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
-<a name="navbar.bottom.firstrow">
+<a id="navbar.bottom.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
-<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="../../../index.html">Overview</a></li>
 <li class="navBarCell1Rev">Package</li>
 <li>Class</li>
 <li><a href="package-tree.html">Tree</a></li>
@@ -721,16 +745,8 @@ See supplied test code...</div>
 </ul>
 </div>
 <div class="subNav">
-<ul class="navList">
-<li><a href="../../../org/webpki/pkcs7/package-summary.html">Prev&nbsp;Package</a></li>
-<li><a href="../../../org/webpki/sks/package-summary.html">Next&nbsp;Package</a></li>
-</ul>
-<ul class="navList">
-<li><a href="../../../index.html?org/webpki/securityproxy/package-summary.html" target="_top">Frames</a></li>
-<li><a href="package-summary.html" target="_top">No&nbsp;Frames</a></li>
-</ul>
 <ul class="navList" id="allclasses_navbar_bottom">
-<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+<li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -743,11 +759,16 @@ See supplied test code...</div>
   }
   //-->
 </script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
 </div>
-<a name="skip.navbar.bottom">
+<a id="skip.navbar.bottom">
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>2005-2018 WebPKI.org.</i></small></p>
+</nav>
+<p class="legalCopy"><small><i>2005-2020 WebPKI.org.</i></small></p>
+</footer>
 </body>
 </html>

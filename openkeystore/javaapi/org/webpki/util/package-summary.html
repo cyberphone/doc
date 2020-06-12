@@ -1,12 +1,22 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML>
 <!-- NewPage -->
 <html lang="en">
 <head>
 
 <title>org.webpki.util (WebPKI.org Support)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+<link rel="stylesheet" type="text/css" href="../../../jquery/jquery-ui.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
+<script type="text/javascript" src="../../../jquery/jszip/dist/jszip.min.js"></script>
+<script type="text/javascript" src="../../../jquery/jszip-utils/dist/jszip-utils.min.js"></script>
+<!--[if IE]>
+<script type="text/javascript" src="../../../jquery/jszip-utils/dist/jszip-utils-ie.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="../../../jquery/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="../../../jquery/jquery-migrate-3.0.1.js"></script>
+<script type="text/javascript" src="../../../jquery/jquery-ui.js"></script>
 </head>
 <body>
 <script type="text/javascript"><!--
@@ -18,20 +28,25 @@
     catch(err) {
     }
 //-->
-</script>
+var pathtoroot = "../../../";
+var useModuleDirectories = true;
+loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
 </noscript>
+<header role="banner">
+<nav role="navigation">
+<div class="fixedNav">
 <!-- ========= START OF TOP NAVBAR ======= -->
-<div class="topNav"><a name="navbar.top">
+<div class="topNav"><a id="navbar.top">
 <!--   -->
 </a>
 <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
-<a name="navbar.top.firstrow">
+<a id="navbar.top.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
-<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="../../../index.html">Overview</a></li>
 <li class="navBarCell1Rev">Package</li>
 <li>Class</li>
 <li><a href="package-tree.html">Tree</a></li>
@@ -40,16 +55,14 @@
 </ul>
 </div>
 <div class="subNav">
-<ul class="navList">
-<li><a href="../../../org/webpki/tools/package-summary.html">Prev&nbsp;Package</a></li>
-<li><a href="../../../org/webpki/webauth/package-summary.html">Next&nbsp;Package</a></li>
-</ul>
-<ul class="navList">
-<li><a href="../../../index.html?org/webpki/util/package-summary.html" target="_top">Frames</a></li>
-<li><a href="package-summary.html" target="_top">No&nbsp;Frames</a></li>
-</ul>
 <ul class="navList" id="allclasses_navbar_top">
-<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+<li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" disabled="disabled">
+<input type="reset" id="reset" value="reset" disabled="disabled">
+</li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -62,22 +75,35 @@
   }
   //-->
 </script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
 </div>
-<a name="skip.navbar.top">
+<a id="skip.navbar.top">
 <!--   -->
 </a></div>
 <!-- ========= END OF TOP NAVBAR ========= -->
+</div>
+<div class="navPadding">&nbsp;</div>
+<script type="text/javascript"><!--
+$('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+//-->
+</script>
+</nav>
+</header>
+<main role="main">
 <div class="header">
 <h1 title="Package" class="title">Package&nbsp;org.webpki.util</h1>
-<div class="docSummary">
-<div class="block">Util - Various Support Classes</div>
-</div>
-<p>See:&nbsp;<a href="#package.description">Description</a></p>
 </div>
 <div class="contentContainer">
+<section role="region"><a id="package.description">
+<!--   -->
+</a>
+<div class="block"><h2>Util - Various Support Classes</h2></div>
+</section>
 <ul class="blockList">
 <li class="blockList">
-<table class="typeSummary" border="0" cellpadding="3" cellspacing="0" summary="Interface Summary table, listing interfaces, and an explanation">
+<table class="typeSummary">
 <caption><span>Interface Summary</span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
 <th class="colFirst" scope="col">Interface</th>
@@ -85,18 +111,18 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/util/HTMLParserURLRewriter.html" title="interface in org.webpki.util">HTMLParserURLRewriter</a></td>
+<th class="colFirst" scope="row"><a href="HTMLParserURLRewriter.html" title="interface in org.webpki.util">HTMLParserURLRewriter</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/util/MIMETypedObject.html" title="interface in org.webpki.util">MIMETypedObject</a></td>
+<th class="colFirst" scope="row"><a href="MIMETypedObject.html" title="interface in org.webpki.util">MIMETypedObject</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
 </table>
 </li>
 <li class="blockList">
-<table class="typeSummary" border="0" cellpadding="3" cellspacing="0" summary="Class Summary table, listing classes, and an explanation">
+<table class="typeSummary">
 <caption><span>Class Summary</span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
 <th class="colFirst" scope="col">Class</th>
@@ -104,29 +130,29 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/util/ArrayUtil.html" title="class in org.webpki.util">ArrayUtil</a></td>
+<th class="colFirst" scope="row"><a href="ArrayUtil.html" title="class in org.webpki.util">ArrayUtil</a></th>
 <td class="colLast">
 <div class="block">Useful functions for arrays.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/util/Base64.html" title="class in org.webpki.util">Base64</a></td>
+<th class="colFirst" scope="row"><a href="Base64.html" title="class in org.webpki.util">Base64</a></th>
 <td class="colLast">
 <div class="block">Encodes/decodes base64 data.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/util/Base64URL.html" title="class in org.webpki.util">Base64URL</a></td>
+<th class="colFirst" scope="row"><a href="Base64URL.html" title="class in org.webpki.util">Base64URL</a></th>
 <td class="colLast">
 <div class="block">Encodes/decodes base64URL data.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/util/DebugFormatter.html" title="class in org.webpki.util">DebugFormatter</a></td>
+<th class="colFirst" scope="row"><a href="DebugFormatter.html" title="class in org.webpki.util">DebugFormatter</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/util/HTMLEncoder.html" title="class in org.webpki.util">HTMLEncoder</a></td>
+<th class="colFirst" scope="row"><a href="HTMLEncoder.html" title="class in org.webpki.util">HTMLEncoder</a></th>
 <td class="colLast">
 <div class="block">The HTMLEncoder class contains a utility method for converting
  a string into a format suitable for placing inside a HTML tag
@@ -134,42 +160,42 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/util/HTMLHeader.html" title="class in org.webpki.util">HTMLHeader</a></td>
+<th class="colFirst" scope="row"><a href="HTMLHeader.html" title="class in org.webpki.util">HTMLHeader</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/util/HTMLParser.html" title="class in org.webpki.util">HTMLParser</a></td>
+<th class="colFirst" scope="row"><a href="HTMLParser.html" title="class in org.webpki.util">HTMLParser</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/util/ImageData.html" title="class in org.webpki.util">ImageData</a></td>
+<th class="colFirst" scope="row"><a href="ImageData.html" title="class in org.webpki.util">ImageData</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/util/ISODateTime.html" title="class in org.webpki.util">ISODateTime</a></td>
+<th class="colFirst" scope="row"><a href="ISODateTime.html" title="class in org.webpki.util">ISODateTime</a></th>
 <td class="colLast">
 <div class="block">Useful functions for ISO time.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/util/PEMDecoder.html" title="class in org.webpki.util">PEMDecoder</a></td>
+<th class="colFirst" scope="row"><a href="PEMDecoder.html" title="class in org.webpki.util">PEMDecoder</a></th>
 <td class="colLast">
 <div class="block">Functions for decoding PEM files</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/util/StringUtil.html" title="class in org.webpki.util">StringUtil</a></td>
+<th class="colFirst" scope="row"><a href="StringUtil.html" title="class in org.webpki.util">StringUtil</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../org/webpki/util/URLDereferencer.html" title="class in org.webpki.util">URLDereferencer</a></td>
+<th class="colFirst" scope="row"><a href="URLDereferencer.html" title="class in org.webpki.util">URLDereferencer</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
 </table>
 </li>
 <li class="blockList">
-<table class="typeSummary" border="0" cellpadding="3" cellspacing="0" summary="Enum Summary table, listing enums, and an explanation">
+<table class="typeSummary">
 <caption><span>Enum Summary</span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
 <th class="colFirst" scope="col">Enum</th>
@@ -177,14 +203,14 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/util/ISODateTime.DatePatterns.html" title="enum in org.webpki.util">ISODateTime.DatePatterns</a></td>
+<th class="colFirst" scope="row"><a href="ISODateTime.DatePatterns.html" title="enum in org.webpki.util">ISODateTime.DatePatterns</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
 </table>
 </li>
 <li class="blockList">
-<table class="typeSummary" border="0" cellpadding="3" cellspacing="0" summary="Exception Summary table, listing exceptions, and an explanation">
+<table class="typeSummary">
 <caption><span>Exception Summary</span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
 <th class="colFirst" scope="col">Exception</th>
@@ -192,7 +218,7 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../org/webpki/util/WrappedException.html" title="class in org.webpki.util">WrappedException</a></td>
+<th class="colFirst" scope="row"><a href="WrappedException.html" title="class in org.webpki.util">WrappedException</a></th>
 <td class="colLast">
 <div class="block">Wrapped exception handler.</div>
 </td>
@@ -201,22 +227,20 @@
 </table>
 </li>
 </ul>
-<a name="package.description">
-<!--   -->
-</a>
-<h2 title="Package org.webpki.util Description">Package org.webpki.util Description</h2>
-<div class="block"><h2>Util - Various Support Classes</h2></div>
 </div>
+</main>
+<footer role="contentinfo">
+<nav role="navigation">
 <!-- ======= START OF BOTTOM NAVBAR ====== -->
-<div class="bottomNav"><a name="navbar.bottom">
+<div class="bottomNav"><a id="navbar.bottom">
 <!--   -->
 </a>
 <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
-<a name="navbar.bottom.firstrow">
+<a id="navbar.bottom.firstrow">
 <!--   -->
 </a>
 <ul class="navList" title="Navigation">
-<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="../../../index.html">Overview</a></li>
 <li class="navBarCell1Rev">Package</li>
 <li>Class</li>
 <li><a href="package-tree.html">Tree</a></li>
@@ -225,16 +249,8 @@
 </ul>
 </div>
 <div class="subNav">
-<ul class="navList">
-<li><a href="../../../org/webpki/tools/package-summary.html">Prev&nbsp;Package</a></li>
-<li><a href="../../../org/webpki/webauth/package-summary.html">Next&nbsp;Package</a></li>
-</ul>
-<ul class="navList">
-<li><a href="../../../index.html?org/webpki/util/package-summary.html" target="_top">Frames</a></li>
-<li><a href="package-summary.html" target="_top">No&nbsp;Frames</a></li>
-</ul>
 <ul class="navList" id="allclasses_navbar_bottom">
-<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+<li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
 </ul>
 <div>
 <script type="text/javascript"><!--
@@ -247,11 +263,16 @@
   }
   //-->
 </script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
 </div>
-<a name="skip.navbar.bottom">
+<a id="skip.navbar.bottom">
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small><i>2005-2018 WebPKI.org.</i></small></p>
+</nav>
+<p class="legalCopy"><small><i>2005-2020 WebPKI.org.</i></small></p>
+</footer>
 </body>
 </html>
