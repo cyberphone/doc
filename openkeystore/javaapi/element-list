@@ -8,7 +8,6 @@ org.webpki.keygen2
 org.webpki.net
 org.webpki.pdf
 org.webpki.pkcs7
-org.webpki.securityproxy
 org.webpki.sks
 org.webpki.tools
 org.webpki.util
