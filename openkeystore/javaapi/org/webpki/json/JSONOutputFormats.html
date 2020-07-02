@@ -142,8 +142,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public enum <span class="typeNameLabel">JSONOutputFormats</span>
 extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Enum.html?is-external=true" title="class or interface in java.lang" class="externalLink">Enum</a>&lt;<a href="JSONOutputFormats.html" title="enum in org.webpki.json">JSONOutputFormats</a>&gt;</pre>
-<div class="block">JSON output types.
- It is used by <a href="JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a>.</div>
+<div class="block">JSON output formats.
+ JSON tokens are always formatted according to JCS (RFC 8785).
+ Original property order is always maintained, unless otherwise noted.  
+ This enumeration is used by <a href="JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a>.</div>
 </li>
 </ul>
 </div>
@@ -166,31 +168,31 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <tr class="altColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#CANONICALIZED">CANONICALIZED</a></span></code></th>
 <td class="colLast">
-<div class="block">Same as NORMALIZED but with properties sorted according to JCS</div>
+<div class="block">Fully JCS (RFC 8785) compatible formatting.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#NORMALIZED">NORMALIZED</a></span></code></th>
 <td class="colLast">
-<div class="block">As a string without whitespace where all items have a normalized form</div>
+<div class="block">As a string without whitespace.</div>
 </td>
 </tr>
 <tr class="altColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#PRETTY_HTML">PRETTY_HTML</a></span></code></th>
 <td class="colLast">
-<div class="block">Pretty-printed with HTML format</div>
+<div class="block">Pretty-printed with HTML format.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#PRETTY_JS_NATIVE">PRETTY_JS_NATIVE</a></span></code></th>
 <td class="colLast">
-<div class="block">Pretty-printed with JavaScript syntax</div>
+<div class="block">Pretty-printed with JavaScript syntax.</div>
 </td>
 </tr>
 <tr class="altColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#PRETTY_PRINT">PRETTY_PRINT</a></span></code></th>
 <td class="colLast">
-<div class="block">Pretty-printed</div>
+<div class="block">Pretty-printed.</div>
 </td>
 </tr>
 </table>
@@ -264,7 +266,7 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>NORMALIZED</h4>
 <pre>public static final&nbsp;<a href="JSONOutputFormats.html" title="enum in org.webpki.json">JSONOutputFormats</a> NORMALIZED</pre>
-<div class="block">As a string without whitespace where all items have a normalized form</div>
+<div class="block">As a string without whitespace.</div>
 </li>
 </ul>
 <a id="CANONICALIZED">
@@ -274,7 +276,7 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>CANONICALIZED</h4>
 <pre>public static final&nbsp;<a href="JSONOutputFormats.html" title="enum in org.webpki.json">JSONOutputFormats</a> CANONICALIZED</pre>
-<div class="block">Same as NORMALIZED but with properties sorted according to JCS</div>
+<div class="block">Fully JCS (RFC 8785) compatible formatting.  That is, properties are sorted as well.</div>
 </li>
 </ul>
 <a id="PRETTY_JS_NATIVE">
@@ -284,7 +286,7 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>PRETTY_JS_NATIVE</h4>
 <pre>public static final&nbsp;<a href="JSONOutputFormats.html" title="enum in org.webpki.json">JSONOutputFormats</a> PRETTY_JS_NATIVE</pre>
-<div class="block">Pretty-printed with JavaScript syntax</div>
+<div class="block">Pretty-printed with JavaScript syntax.</div>
 </li>
 </ul>
 <a id="PRETTY_PRINT">
@@ -294,7 +296,7 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>PRETTY_PRINT</h4>
 <pre>public static final&nbsp;<a href="JSONOutputFormats.html" title="enum in org.webpki.json">JSONOutputFormats</a> PRETTY_PRINT</pre>
-<div class="block">Pretty-printed</div>
+<div class="block">Pretty-printed.</div>
 </li>
 </ul>
 <a id="PRETTY_HTML">
@@ -304,7 +306,7 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>PRETTY_HTML</h4>
 <pre>public static final&nbsp;<a href="JSONOutputFormats.html" title="enum in org.webpki.json">JSONOutputFormats</a> PRETTY_HTML</pre>
-<div class="block">Pretty-printed with HTML format</div>
+<div class="block">Pretty-printed with HTML format.</div>
 </li>
 </ul>
 </li>
