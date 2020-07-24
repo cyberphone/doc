@@ -1,0 +1,30 @@
+{
+    "@context": "https://webpki.github.io/saturn/v3",
+    "@qualifier": "PaymentClientRequest",
+    "supportedPaymentMethods": [
+        {
+            "paymentMethod": "https://bankdirect.net",
+            "payeeAuthorityUrl": "https://192.168.1.79:8442/webpay-payeebank/payees/86344"
+        },
+        {
+            "paymentMethod": "https://supercard.com",
+            "payeeAuthorityUrl": "https://192.168.1.79:8442/webpay-acquirer/payees/1077342"
+        }
+    ],
+    "paymentRequest": {
+        "payee": {
+            "commonName": "Demo Merchant",
+            "homePage": "demomerchant.com"
+        },
+        "amount": "550.00",
+        "currency": "EUR",
+        "referenceId": "#1000004",
+        "timeStamp": "2020-07-24T12:39:15Z",
+        "expires": "2020-07-24T13:10:00Z",
+        "software": {
+            "name": "WebPKI.org - Payee",
+            "version": "1.00"
+        }
+    },
+    "noMatchingMethodsUrl": "https://192.168.1.79:8442/webpay-keyprovider"
+}
