@@ -92,7 +92,8 @@ function toast(message, element) {
 function transactionList(element) {
     toast('Transaction history is not available<br>in the GUI demo', element);
 }
-
+var pinRow;
+var fpFrame;
 var operation;
 var payeefield;
 var pinfield;
@@ -131,6 +132,25 @@ function addDigit(digit) {
     }
 }
 
+function perform() {
+    var processing = document.getElementById('processing');
+    processing.style.left = ((window.innerWidth - processing.offsetWidth) / 2) + 'px';
+    processing.style.top = Math.floor(gutter * 4) + 'px';
+    document.getElementById('whitener').style.visibility = 'visible';
+    processing.style.visibility = 'visible';
+    setTimeout(function () {
+        card.style.visibility = 'hidden';
+        kbd.style.visibility = 'hidden';
+        fpFrame.style.visibility = 'hidden';
+        paydata.style.visibility = 'hidden';
+        pinRow.style.visibility = 'hidden';
+        processing.style.visibility = 'hidden';
+        document.getElementById('whitener').style.visibility = 'hidden';
+        success.style.visibility = 'visible';
+        toast('Hit reload if you want to test again')
+    }, 2000);
+}
+
 function validatePin() {
     if (pin.length == 0) {
         toastKey('Empty PIN - Ignored');
@@ -138,20 +158,7 @@ function validatePin() {
         if (pinErrors == 3) {
             toastKey('Card blocked due to previous PIN errors!');
         } else if (pin == '1234') {
-            var processing = document.getElementById('processing');
-            processing.style.left = ((window.innerWidth - processing.offsetWidth) / 2) + 'px';
-            processing.style.top = Math.floor(gutter * 4) + 'px';
-            document.getElementById('whitener').style.visibility = 'visible';
-            processing.style.visibility = 'visible';
-            setTimeout(function () {
-                card.style.visibility = 'hidden';
-                kbd.style.visibility = 'hidden';
-                paydata.style.visibility = 'hidden';
-                processing.style.visibility = 'hidden';
-                document.getElementById('whitener').style.visibility = 'hidden';
-                success.style.visibility = 'visible';
-                toast('Hit reload if you want to test again')
-            }, 2000);
+            perform();
         } else {
             pinErrors++;
             toastKey('PIN error: ' + (3 - pinErrors) + ' left');
@@ -192,7 +199,21 @@ function endSwipe(e) {
     }
 }
 
+function wantFp() {
+    pinRow.style.visibility = 'hidden';
+    kbd.style.visibility = 'hidden';
+    fpFrame.style.visibility = 'visible';
+}
+
+function wantPin() {
+    fpFrame.style.visibility = 'hidden';
+    pinRow.style.visibility = 'visible';
+    kbd.style.visibility = 'visible';
+}
+
 function positionElements() {
+    pinRow = document.getElementById('pinRow');
+    fpFrame = document.getElementById('fpFrame');
     cardImage = document.getElementById('cardImage');
     cardImage.addEventListener('mousedown', beginSwipe, false);
     cardImage.addEventListener('touchstart', beginSwipe, false);
@@ -214,7 +235,7 @@ function positionElements() {
     success.style.top = ((window.innerHeight - success.offsetHeight) / 2) + 'px';
     showPin();
     card.style.left = ((window.innerWidth - card.offsetWidth) / 2) + 'px';
-    paydata.style.left = ((window.innerWidth - paydata.offsetWidth - document.getElementById('payeelabel').offsetWidth) / 2) + 'px';
+    paydata.style.left = ((window.innerWidth - paydata.offsetWidth - document.getElementById('payeelabel').offsetWidth + document.getElementById('fpField').offsetWidth) / 2) + 'px';
     var fieldwidth = payeefield.offsetWidth + 'px';
     document.getElementById('amountfield').style.maxWidth = document.getElementById('pinfield').style.maxWidth = fieldwidth;
     var amountField = operation.prefix + '<span class="money">' + operation.amount + '</span>';
@@ -246,7 +267,11 @@ function positionElements() {
     kbd.style.left = ((window.innerWidth - kbd.offsetWidth) / 2) + 'px';
     gutter = (kbdTop - card.offsetHeight - paydata.offsetHeight) / 7;
     card.style.top = gutter * 3 + 'px';
-    paydata.style.top = (5 * gutter + card.offsetHeight) + 'px';
+    let paydataTop = 5 * gutter + card.offsetHeight;
+    paydata.style.top = paydataTop + 'px';
+    let fpFrameTop = window.innerHeight - pinRow.offsetHeight + (paydata.offsetHeight - paydataTop - fpFrame.offsetHeight) / 2;
+    fpFrame.style.top = fpFrameTop + 'px';
+    fpFrame.style.left = ((window.innerWidth - fpFrame.offsetWidth + document.getElementById('pinSwitch').offsetWidth) / 2) + 'px';
     card.style.visibility = 'visible';
     paydata.style.visibility = 'visible';
     kbd.style.visibility = 'visible';
@@ -261,13 +286,34 @@ function positionElements() {
     <div id='toaster' class='toasting'>Message...</div>
     <img src='saturnlogo.svg' class='saturn' title='Saturn is it!'>
     <table id='paydata' style='visibility:hidden;position:absolute'>
-        <tr><td id='payeelabel' class='label'>Payee</td><td id='payeefield' class='field' title='Common name of payee'>Demo Merchant</td></tr>
-        <tr><td colspan='2' style='height:5pt'></td></tr>
-        <tr><td id='amountlabel' class='label'></td><td id='amountfield' class='field' title='Amount to pay or reserve'></td></tr>
-        <tr><td colspan='2' style='height:5pt'></td></tr>
-        <tr>
+        <tr><td id='payeelabel' class='label'>Payee</td><td id='payeefield' class='field' title='Common name of payee'>Demo Merchant</td><td></td></tr>
+        <tr><td colspan='3' style='height:5pt'></td></tr>
+        <tr><td id='amountlabel' class='label'></td><td id='amountfield' class='field' title='Amount to pay or reserve'></td><td></td></tr>
+        <tr><td colspan='3' style='height:5pt'></td></tr>
+        <tr id='pinRow'>
             <td class='label'>PIN</td>
             <td id='pinfield' class='field' onClick="toast('Please use the keyboard below...', this)" title='Shows PIN characters'></td>
+            <td id='fpField'>
+    <svg style='display:block;height:18pt;padding-left:10px' viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Click to set fingerprint mode</title>
+    <g fill="none"
+       stroke-width="1.8"
+       stroke-linecap="round"
+       stroke="white">
+        <path d='M 2.3671537,23.829104 C -1.4883611,11.602125 5,6 5,6' />
+        <path d='M 7.9345667,3.9672828 C 17.356614,-2.7198321 31.292018,2.2621923 32.98557,18.040416' />
+        <path d='M 5.9415655,29.97528 C 5.8977627,27.293051 6.4844791,23.889769 5.8351751,21.754189 -0.17364441,1.9910089 28.176603,-3.0493321 29.259392,19.619897 c 0.04341,0.908896 0.02622,5.042147 -0.172847,7.397275' />
+        <path d='M 10.086529,32.043763 C 10.058709,28.609393 10.350804,24.675115 9.3265096,20.828601 8.1249875,16.316549 8.1917409,12.304026 11.968,8.95' />
+        <path d='M 15.239128,8.1283894 C 25.141037,6.8797069 26.493401,18.099933 26.000916,29.985946' />
+        <path d='m 13.941565,32.935003 c -0.05949,-2.650859 0.414679,-7.462289 -0.319662,-11.90003 -4.1477696,-11.0693466 6.512761,-10.232544 7.375509,-4.960144 0.79618,3.902636 1.053467,9.849901 1.053467,9.849901' />
+        <path d='m 16.702356,16.333355 c 1.826717,5.055217 1.210888,16.631062 1.210888,16.631062' />
+        <path d='m 21.944845,28.932917 0.0084,2.044847' />
+    </g>
+    <a xlink:href="javascript:wantFp()">
+        <rect width="34" height="34" opacity="0" />
+    </a>
+</svg>
+            </td>
         </tr>
     </table>
     <table id='card' style='visibility:hidden;position:absolute'>
@@ -301,7 +347,52 @@ function positionElements() {
     </svg></td></tr>
             <tr><td colspan='3' style='text-align:center'><div style="display:inline-block"><div id="balance" class="balance" title='Account balance, click to get recent transactions' onClick="transactionList(this)"></div></div></td></tr>
         </table>
-        <div id='kbd' style='visibility:hidden;position:absolute;width:88%' title='This part depends on the payment credential, it could for example refer to a biometric reader'>
+    <table id="fpFrame" style='visibility:hidden;position:absolute'>
+        <tr><td class="label">Authorize&nbsp;Request</td><td id="pinSwitch"></td></tr>
+        <tr><td colspan='2' style='height:5pt'></td></tr>
+        <tr>
+            <td style="text-align:center">
+                <svg style='display:inline-block;height:40pt' viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <title>Click to emulate a fingerprint</title>
+                    <g fill="none" stroke-width="1" stroke-linecap="round" stroke="white">
+                        <path d='M 2.3671537,23.829104 C -1.4883611,11.602125 5,6 5,6' />
+                        <path d='M 7.9345667,3.9672828 C 17.356614,-2.7198321 31.292018,2.2621923 32.98557,18.040416' />
+                        <path d='M 5.9415655,29.97528 C 5.8977627,27.293051 6.4844791,23.889769 5.8351751,21.754189 -0.17364441,1.9910089 28.176603,-3.0493321 29.259392,19.619897 c 0.04341,0.908896 0.02622,5.042147 -0.172847,7.397275' />
+                        <path d='M 10.086529,32.043763 C 10.058709,28.609393 10.350804,24.675115 9.3265096,20.828601 8.1249875,16.316549 8.1917409,12.304026 11.968,8.95' />
+                        <path d='M 15.239128,8.1283894 C 25.141037,6.8797069 26.493401,18.099933 26.000916,29.985946' />
+                        <path d='m 13.941565,32.935003 c -0.05949,-2.650859 0.414679,-7.462289 -0.319662,-11.90003 -4.1477696,-11.0693466 6.512761,-10.232544 7.375509,-4.960144 0.79618,3.902636 1.053467,9.849901 1.053467,9.849901' />
+                        <path d='m 16.702356,16.333355 c 1.826717,5.055217 1.210888,16.631062 1.210888,16.631062' />
+                        <path d='m 21.944845,28.932917 0.0084,2.044847' />
+                    </g>
+                    <a xlink:href="javascript:perform()">
+                        <rect width="34" height="34" opacity="0" />
+                    </a>
+                </svg>
+            </td>
+            <td>
+                <svg style="height:12pt" viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
+                    <title>Switch to PIN mode</title>
+                    <rect stroke="white" stroke-width="3" fill="none"
+                          rx="6"
+                          y="1.5"
+                          x="1.5"
+                          height="47"
+                          width="97"
+                          id="rect1917" />
+                    <g fill="white">
+                        <circle cy="26" r="6" cx="17" />
+                        <circle cy="26" r="6" cx="39" />
+                        <circle cy="26" r="6" cx="61" />
+                        <circle cy="26" r="6" cx="83" />
+                    </g>
+                    <a xlink:href="javascript:wantPin()">
+                        <rect width="100" height="50" opacity="0" />
+                    </a>
+                </svg>
+            </td>
+        </tr>
+    </table>
+        <div id='kbd' style='visibility:hidden;position:absolute;width:88%' title='Keyboard for PIN codes'>
             <svg viewBox="0 0 416 162" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <defs>
                     <filter height="150%" width="150%" y="-25%" x="-25%" id="actorsBlur">
