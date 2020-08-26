@@ -143,6 +143,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <pre>public enum <span class="typeNameLabel">KeyAlgorithms</span>
 extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Enum.html?is-external=true" title="class or interface in java.lang" class="externalLink">Enum</a>&lt;<a href="KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a>&gt;
 implements <a href="CryptoAlgorithms.html" title="interface in org.webpki.crypto">CryptoAlgorithms</a></pre>
+<div class="block">Asymmetric key algorithms</div>
 </li>
 </ul>
 </div>
@@ -164,14 +165,6 @@ implements <a href="CryptoAlgorithms.html" title="interface in org.webpki.crypto
 </tr>
 <tr class="altColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#BRAINPOOL_P_256">BRAINPOOL_P_256</a></span></code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#NIST_B_233">NIST_B_233</a></span></code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="altColor">
-<th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#NIST_B_283">NIST_B_283</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -275,7 +268,7 @@ implements <a href="CryptoAlgorithms.html" title="interface in org.webpki.crypto
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>static <a href="KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getECKeyAlgorithm(java.security.spec.ECParameterSpec)">getECKeyAlgorithm</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/spec/ECParameterSpec.html?is-external=true" title="class or interface in java.security.spec" class="externalLink">ECParameterSpec</a>&nbsp;ecParameters)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getECKeyAlgorithm(java.security.spec.ECParameterSpec)">getECKeyAlgorithm</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/spec/ECParameterSpec.html?is-external=true" title="class or interface in java.security.spec" class="externalLink">ECParameterSpec</a>&nbsp;actual)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -478,24 +471,6 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>RSA4096_EXP</h4>
 <pre>public static final&nbsp;<a href="KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a> RSA4096_EXP</pre>
-</li>
-</ul>
-<a id="NIST_B_233">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>NIST_B_233</h4>
-<pre>public static final&nbsp;<a href="KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a> NIST_B_233</pre>
-</li>
-</ul>
-<a id="NIST_B_283">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>NIST_B_283</h4>
-<pre>public static final&nbsp;<a href="KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a> NIST_B_283</pre>
 </li>
 </ul>
 <a id="NIST_P_256">
@@ -739,7 +714,7 @@ not permitted.)</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>getECKeyAlgorithm</h4>
-<pre class="methodSignature">public static&nbsp;<a href="KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a>&nbsp;getECKeyAlgorithm&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/spec/ECParameterSpec.html?is-external=true" title="class or interface in java.security.spec" class="externalLink">ECParameterSpec</a>&nbsp;ecParameters)
+<pre class="methodSignature">public static&nbsp;<a href="KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a>&nbsp;getECKeyAlgorithm&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/spec/ECParameterSpec.html?is-external=true" title="class or interface in java.security.spec" class="externalLink">ECParameterSpec</a>&nbsp;actual)
                                        throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>

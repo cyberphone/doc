@@ -176,14 +176,14 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert" class="externalLink">X509Certificate</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createCert(org.webpki.ca.CertSpec,org.webpki.asn1.cert.DistinguishedName,java.math.BigInteger,java.util.Date,java.util.Date,org.webpki.crypto.AsymSignatureAlgorithms,org.webpki.crypto.AsymKeySignerInterface,java.security.PublicKey)">createCert</a></span>&#8203;(<a href="CertSpec.html" title="class in org.webpki.ca">CertSpec</a>&nbsp;cert_spec,
-          <a href="../asn1/cert/DistinguishedName.html" title="class in org.webpki.asn1.cert">DistinguishedName</a>&nbsp;issuer_name,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createCert(org.webpki.ca.CertSpec,org.webpki.asn1.cert.DistinguishedName,java.math.BigInteger,java.util.Date,java.util.Date,org.webpki.crypto.AsymSignatureAlgorithms,org.webpki.crypto.AsymKeySignerInterface,java.security.PublicKey)">createCert</a></span>&#8203;(<a href="CertSpec.html" title="class in org.webpki.ca">CertSpec</a>&nbsp;certSpec,
+          <a href="../asn1/cert/DistinguishedName.html" title="class in org.webpki.asn1.cert">DistinguishedName</a>&nbsp;issuerName,
           <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/BigInteger.html?is-external=true" title="class or interface in java.math" class="externalLink">BigInteger</a>&nbsp;serialNumber,
-          <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a>&nbsp;start_date,
-          <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a>&nbsp;end_date,
-          <a href="../crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a>&nbsp;certalg,
+          <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a>&nbsp;startDate,
+          <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a>&nbsp;endDate,
+          <a href="../crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a>&nbsp;certSignAlg,
           <a href="../crypto/AsymKeySignerInterface.html" title="interface in org.webpki.crypto">AsymKeySignerInterface</a>&nbsp;signer,
-          <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/PublicKey.html?is-external=true" title="class or interface in java.security" class="externalLink">PublicKey</a>&nbsp;subject_public_key)</code></th>
+          <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/PublicKey.html?is-external=true" title="class or interface in java.security" class="externalLink">PublicKey</a>&nbsp;subjectPublicKey)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </table>
@@ -235,14 +235,14 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <ul class="blockListLast">
 <li class="blockList">
 <h4>createCert</h4>
-<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert" class="externalLink">X509Certificate</a>&nbsp;createCert&#8203;(<a href="CertSpec.html" title="class in org.webpki.ca">CertSpec</a>&nbsp;cert_spec,
-                                  <a href="../asn1/cert/DistinguishedName.html" title="class in org.webpki.asn1.cert">DistinguishedName</a>&nbsp;issuer_name,
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert" class="externalLink">X509Certificate</a>&nbsp;createCert&#8203;(<a href="CertSpec.html" title="class in org.webpki.ca">CertSpec</a>&nbsp;certSpec,
+                                  <a href="../asn1/cert/DistinguishedName.html" title="class in org.webpki.asn1.cert">DistinguishedName</a>&nbsp;issuerName,
                                   <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/BigInteger.html?is-external=true" title="class or interface in java.math" class="externalLink">BigInteger</a>&nbsp;serialNumber,
-                                  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a>&nbsp;start_date,
-                                  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a>&nbsp;end_date,
-                                  <a href="../crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a>&nbsp;certalg,
+                                  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a>&nbsp;startDate,
+                                  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a>&nbsp;endDate,
+                                  <a href="../crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a>&nbsp;certSignAlg,
                                   <a href="../crypto/AsymKeySignerInterface.html" title="interface in org.webpki.crypto">AsymKeySignerInterface</a>&nbsp;signer,
-                                  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/PublicKey.html?is-external=true" title="class or interface in java.security" class="externalLink">PublicKey</a>&nbsp;subject_public_key)
+                                  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/PublicKey.html?is-external=true" title="class or interface in java.security" class="externalLink">PublicKey</a>&nbsp;subjectPublicKey)
                            throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
