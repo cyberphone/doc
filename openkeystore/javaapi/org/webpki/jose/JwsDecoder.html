@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 
-<title>JOSEAsymSignatureValidator (WebPKI.org Support)</title>
+<title>JwsDecoder (WebPKI.org Support)</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
@@ -22,13 +22,13 @@
 <script type="text/javascript"><!--
     try {
         if (location.href.indexOf('is-external=true') == -1) {
-            parent.document.title="JOSEAsymSignatureValidator (WebPKI.org Support)";
+            parent.document.title="JwsDecoder (WebPKI.org Support)";
         }
     }
     catch(err) {
     }
 //-->
-var data = {"i0":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -116,28 +116,24 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <main role="main">
 <div class="header">
 <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.webpki.jose</a></div>
-<h2 title="Class JOSEAsymSignatureValidator" class="title">Class JOSEAsymSignatureValidator</h2>
+<h2 title="Class JwsDecoder" class="title">Class JwsDecoder</h2>
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
 <li><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li>org.webpki.jose.JOSEAsymSignatureValidator</li>
+<li>org.webpki.jose.JwsDecoder</li>
 </ul>
 </li>
 </ul>
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
-<dl>
-<dt>All Implemented Interfaces:</dt>
-<dd><code><a href="JOSESupport.CoreSignatureValidator.html" title="interface in org.webpki.jose">JOSESupport.CoreSignatureValidator</a></code></dd>
-</dl>
 <hr>
-<pre>public class <span class="typeNameLabel">JOSEAsymSignatureValidator</span>
-extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>
-implements <a href="JOSESupport.CoreSignatureValidator.html" title="interface in org.webpki.jose">JOSESupport.CoreSignatureValidator</a></pre>
+<pre>public class <span class="typeNameLabel">JwsDecoder</span>
+extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
+<div class="block">Core JWS decoder</div>
 </li>
 </ul>
 </div>
@@ -158,9 +154,10 @@ implements <a href="JOSESupport.CoreSignatureValidator.html" title="interface in
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.security.PublicKey,org.webpki.crypto.AsymSignatureAlgorithms)">JOSEAsymSignatureValidator</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/PublicKey.html?is-external=true" title="class or interface in java.security" class="externalLink">PublicKey</a>&nbsp;publicKey,
-                          <a href="../crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a>&nbsp;algorithm)</code></th>
-<td class="colLast">&nbsp;</td>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String)">JwsDecoder</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;jwsString)</code></th>
+<td class="colLast">
+<div class="block">JWS signature decoder</div>
+</td>
 </tr>
 </table>
 </li>
@@ -181,10 +178,39 @@ implements <a href="JOSESupport.CoreSignatureValidator.html" title="interface in
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#validate(byte%5B%5D,byte%5B%5D)">validate</a></span>&#8203;(byte[]&nbsp;signedData,
-        byte[]&nbsp;JWS_Signature)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colFirst"><code><a href="../json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getJwsProtectedHeader()">getJwsProtectedHeader</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Get protected header</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert" class="externalLink">X509Certificate</a>[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOptionalCertificatePath()">getOptionalCertificatePath</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Get optional "x5c"</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOptionalKeyId()">getOptionalKeyId</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Get optional "kid"</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/PublicKey.html?is-external=true" title="class or interface in java.security" class="externalLink">PublicKey</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOptionalPublicKey()">getOptionalPublicKey</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Get optional "jwk"</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="../crypto/SignatureAlgorithms.html" title="interface in org.webpki.crypto">SignatureAlgorithms</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSignatureAlgorithm()">getSignatureAlgorithm</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Get signature algorithm</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -210,14 +236,23 @@ implements <a href="JOSESupport.CoreSignatureValidator.html" title="interface in
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a id="&lt;init&gt;(java.security.PublicKey,org.webpki.crypto.AsymSignatureAlgorithms)">
+<a id="&lt;init&gt;(java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>JOSEAsymSignatureValidator</h4>
-<pre>public&nbsp;JOSEAsymSignatureValidator&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/PublicKey.html?is-external=true" title="class or interface in java.security" class="externalLink">PublicKey</a>&nbsp;publicKey,
-                                  <a href="../crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a>&nbsp;algorithm)</pre>
+<h4>JwsDecoder</h4>
+<pre>public&nbsp;JwsDecoder&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;jwsString)
+           throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a>,
+                  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></pre>
+<div class="block">JWS signature decoder</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>jwsString</code> - The actual JWS string.  If there is no payload detached mode is assumed</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></code></dd>
+</dl>
 </li>
 </ul>
 </li>
@@ -230,23 +265,54 @@ implements <a href="JOSESupport.CoreSignatureValidator.html" title="interface in
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="validate(byte[],byte[])">
+<a id="getJwsProtectedHeader()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getJwsProtectedHeader</h4>
+<pre class="methodSignature">public&nbsp;<a href="../json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a>&nbsp;getJwsProtectedHeader()</pre>
+<div class="block">Get protected header</div>
+</li>
+</ul>
+<a id="getSignatureAlgorithm()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSignatureAlgorithm</h4>
+<pre class="methodSignature">public&nbsp;<a href="../crypto/SignatureAlgorithms.html" title="interface in org.webpki.crypto">SignatureAlgorithms</a>&nbsp;getSignatureAlgorithm()</pre>
+<div class="block">Get signature algorithm</div>
+</li>
+</ul>
+<a id="getOptionalPublicKey()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOptionalPublicKey</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/PublicKey.html?is-external=true" title="class or interface in java.security" class="externalLink">PublicKey</a>&nbsp;getOptionalPublicKey()</pre>
+<div class="block">Get optional "jwk"</div>
+</li>
+</ul>
+<a id="getOptionalCertificatePath()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOptionalCertificatePath</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert" class="externalLink">X509Certificate</a>[]&nbsp;getOptionalCertificatePath()</pre>
+<div class="block">Get optional "x5c"</div>
+</li>
+</ul>
+<a id="getOptionalKeyId()">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>validate</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;validate&#8203;(byte[]&nbsp;signedData,
-                     byte[]&nbsp;JWS_Signature)
-              throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a>,
-                     <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="JOSESupport.CoreSignatureValidator.html#validate(byte%5B%5D,byte%5B%5D)">validate</a></code>&nbsp;in interface&nbsp;<code><a href="JOSESupport.CoreSignatureValidator.html" title="interface in org.webpki.jose">JOSESupport.CoreSignatureValidator</a></code></dd>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></code></dd>
-</dl>
+<h4>getOptionalKeyId</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getOptionalKeyId()</pre>
+<div class="block">Get optional "kid"</div>
 </li>
 </ul>
 </li>

@@ -207,7 +207,8 @@ extends <a href="JSONVerifier.html" title="class in org.webpki.json">JSONVerifie
 <li class="blockList">
 <h4>JSONAsymKeyVerifier</h4>
 <pre>public&nbsp;JSONAsymKeyVerifier&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/PublicKey.html?is-external=true" title="class or interface in java.security" class="externalLink">PublicKey</a>&nbsp;expectedPublicKey)
-                    throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></pre>
+                    throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a>,
+                           <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <div class="block">Verifier for asymmetric keys.
  Note that you can access the received public key from <a href="JSONSignatureDecoder.html" title="class in org.webpki.json"><code>JSONSignatureDecoder</code></a>
  which is useful if there are multiple keys possible.</div>
@@ -216,6 +217,7 @@ extends <a href="JSONVerifier.html" title="class in org.webpki.json">JSONVerifie
 <dd><code>expectedPublicKey</code> - Expected public key</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></code> - &nbsp;</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - &nbsp;</dd>
 </dl>
 </li>
 </ul>

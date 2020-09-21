@@ -28,7 +28,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":6,"i1":6,"i2":18,"i3":6,"i4":6,"i5":6,"i6":6};
+var data = {"i0":6,"i1":6,"i2":18,"i3":6,"i4":6,"i5":18,"i6":6,"i7":18,"i8":18,"i9":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -179,11 +179,26 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i5" class="rowColor">
+<td class="colFirst"><code>default boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isEcdsa()">isEcdsa</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isMandatorySksAlgorithm()">isMandatorySksAlgorithm</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>default boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isOkp()">isOkp</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>default boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isRsa()">isRsa</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isSymmetric()">isSymmetric</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
@@ -272,10 +287,37 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <a id="isDeprecated()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>isDeprecated</h4>
 <pre class="methodSignature">boolean&nbsp;isDeprecated()</pre>
+</li>
+</ul>
+<a id="isRsa()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isRsa</h4>
+<pre class="methodSignature">default&nbsp;boolean&nbsp;isRsa()</pre>
+</li>
+</ul>
+<a id="isEcdsa()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isEcdsa</h4>
+<pre class="methodSignature">default&nbsp;boolean&nbsp;isEcdsa()</pre>
+</li>
+</ul>
+<a id="isOkp()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>isOkp</h4>
+<pre class="methodSignature">default&nbsp;boolean&nbsp;isOkp()</pre>
 </li>
 </ul>
 </li>

@@ -213,13 +213,17 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="circle">org.webpki.webutil.<a href="org/webpki/webutil/InitPropertyReader.html" title="class in org.webpki.webutil"><span class="typeNameLink">InitPropertyReader</span></a></li>
 <li class="circle">org.webpki.util.<a href="org/webpki/util/ISODateTime.html" title="class in org.webpki.util"><span class="typeNameLink">ISODateTime</span></a></li>
 <li class="circle">org.webpki.tools.<a href="org/webpki/tools/JKS2BKSConverter.html" title="class in org.webpki.tools"><span class="typeNameLink">JKS2BKSConverter</span></a></li>
-<li class="circle">org.webpki.jose.<a href="org/webpki/jose/JOSEAsymSignatureValidator.html" title="class in org.webpki.jose"><span class="typeNameLink">JOSEAsymSignatureValidator</span></a> (implements org.webpki.jose.<a href="org/webpki/jose/JOSESupport.CoreSignatureValidator.html" title="interface in org.webpki.jose">JOSESupport.CoreSignatureValidator</a>)</li>
-<li class="circle">org.webpki.jose.<a href="org/webpki/jose/JOSEHmacValidator.html" title="class in org.webpki.jose"><span class="typeNameLink">JOSEHmacValidator</span></a> (implements org.webpki.jose.<a href="org/webpki/jose/JOSESupport.CoreSignatureValidator.html" title="interface in org.webpki.jose">JOSESupport.CoreSignatureValidator</a>)</li>
 <li class="circle">org.webpki.jose.<a href="org/webpki/jose/JOSESupport.html" title="class in org.webpki.jose"><span class="typeNameLink">JOSESupport</span></a></li>
 <li class="circle">org.webpki.jose.<a href="org/webpki/jose/JOSESupport.CoreKeyHolder.html" title="class in org.webpki.jose"><span class="typeNameLink">JOSESupport.CoreKeyHolder</span></a>
 <ul>
-<li class="circle">org.webpki.jose.<a href="org/webpki/jose/JOSEAsymKeyHolder.html" title="class in org.webpki.jose"><span class="typeNameLink">JOSEAsymKeyHolder</span></a></li>
-<li class="circle">org.webpki.jose.<a href="org/webpki/jose/JOSESymKeyHolder.html" title="class in org.webpki.jose"><span class="typeNameLink">JOSESymKeyHolder</span></a></li>
+<li class="circle">org.webpki.jose.<a href="org/webpki/jose/AsymKeyHolder.html" title="class in org.webpki.jose"><span class="typeNameLink">AsymKeyHolder</span></a></li>
+<li class="circle">org.webpki.jose.<a href="org/webpki/jose/SymKeyHolder.html" title="class in org.webpki.jose"><span class="typeNameLink">SymKeyHolder</span></a></li>
+</ul>
+</li>
+<li class="circle">org.webpki.jose.<a href="org/webpki/jose/JOSESupport.CoreSignatureValidator.html" title="class in org.webpki.jose"><span class="typeNameLink">JOSESupport.CoreSignatureValidator</span></a>
+<ul>
+<li class="circle">org.webpki.jose.<a href="org/webpki/jose/AsymSignatureValidator.html" title="class in org.webpki.jose"><span class="typeNameLink">AsymSignatureValidator</span></a></li>
+<li class="circle">org.webpki.jose.<a href="org/webpki/jose/HmacValidator.html" title="class in org.webpki.jose"><span class="typeNameLink">HmacValidator</span></a></li>
 </ul>
 </li>
 <li class="circle">org.webpki.json.<a href="org/webpki/json/JSONArrayReader.html" title="class in org.webpki.json"><span class="typeNameLink">JSONArrayReader</span></a> (implements java.io.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a>)</li>
@@ -288,6 +292,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="circle">org.webpki.json.<a href="org/webpki/json/JSONX509Verifier.html" title="class in org.webpki.json"><span class="typeNameLink">JSONX509Verifier</span></a></li>
 </ul>
 </li>
+<li class="circle">org.webpki.jose.<a href="org/webpki/jose/JwsDecoder.html" title="class in org.webpki.jose"><span class="typeNameLink">JwsDecoder</span></a></li>
+<li class="circle">org.webpki.jose.<a href="org/webpki/jose/JwsEncoder.html" title="class in org.webpki.jose"><span class="typeNameLink">JwsEncoder</span></a></li>
 <li class="circle">org.webpki.sks.<a href="org/webpki/sks/KeyAttributes.html" title="class in org.webpki.sks"><span class="typeNameLink">KeyAttributes</span></a></li>
 <li class="circle">org.webpki.keygen2.<a href="org/webpki/keygen2/KeyCreationRequestDecoder.KeyObject.html" title="class in org.webpki.keygen2"><span class="typeNameLink">KeyCreationRequestDecoder.KeyObject</span></a></li>
 <li class="circle">org.webpki.keygen2.<a href="org/webpki/keygen2/KeyCreationRequestDecoder.PINPolicy.html" title="class in org.webpki.keygen2"><span class="typeNameLink">KeyCreationRequestDecoder.PINPolicy</span></a></li>
@@ -304,6 +310,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="circle">org.webpki.crypto.<a href="org/webpki/crypto/KeyStoreSigner.html" title="class in org.webpki.crypto"><span class="typeNameLink">KeyStoreSigner</span></a> (implements org.webpki.crypto.<a href="org/webpki/crypto/CertificateSelectorSpi.html" title="interface in org.webpki.crypto">CertificateSelectorSpi</a>, org.webpki.crypto.<a href="org/webpki/crypto/SignerInterface.html" title="interface in org.webpki.crypto">SignerInterface</a>)</li>
 <li class="circle">org.webpki.crypto.<a href="org/webpki/crypto/KeyStoreVerifier.html" title="class in org.webpki.crypto"><span class="typeNameLink">KeyStoreVerifier</span></a> (implements org.webpki.crypto.<a href="org/webpki/crypto/VerifierInterface.html" title="interface in org.webpki.crypto">VerifierInterface</a>)</li>
 <li class="circle">org.webpki.json.<a href="org/webpki/json/NumberToJSON.html" title="class in org.webpki.json"><span class="typeNameLink">NumberToJSON</span></a></li>
+<li class="circle">org.webpki.crypto.<a href="org/webpki/crypto/OkpSupport.html" title="class in org.webpki.crypto"><span class="typeNameLink">OkpSupport</span></a></li>
 <li class="circle">org.webpki.asn1.<a href="org/webpki/asn1/ParseUtil.html" title="class in org.webpki.asn1"><span class="typeNameLink">ParseUtil</span></a></li>
 <li class="circle">org.webpki.pdf.<a href="org/webpki/pdf/PDFSigner.html" title="class in org.webpki.pdf"><span class="typeNameLink">PDFSigner</span></a></li>
 <li class="circle">org.webpki.pdf.<a href="org/webpki/pdf/PDFVerifier.html" title="class in org.webpki.pdf"><span class="typeNameLink">PDFVerifier</span></a></li>
@@ -385,7 +392,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </ul>
 </li>
 <li class="circle">org.webpki.util.<a href="org/webpki/util/HTMLParserURLRewriter.html" title="interface in org.webpki.util"><span class="typeNameLink">HTMLParserURLRewriter</span></a></li>
-<li class="circle">org.webpki.jose.<a href="org/webpki/jose/JOSESupport.CoreSignatureValidator.html" title="interface in org.webpki.jose"><span class="typeNameLink">JOSESupport.CoreSignatureValidator</span></a></li>
 <li class="circle">org.webpki.json.<a href="org/webpki/json/JSONObjectWriter.Dynamic.html" title="interface in org.webpki.json"><span class="typeNameLink">JSONObjectWriter.Dynamic</span></a></li>
 <li class="circle">org.webpki.keygen2.<a href="org/webpki/keygen2/KeyGen2Constants.html" title="interface in org.webpki.keygen2"><span class="typeNameLink">KeyGen2Constants</span></a></li>
 <li class="circle">org.webpki.keygen2.<a href="org/webpki/keygen2/KeyGen2URIs.html" title="interface in org.webpki.keygen2"><span class="typeNameLink">KeyGen2URIs</span></a></li>
