@@ -644,7 +644,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONOutputFormats.html#CANONICALIZED">CANONICALIZED</a></span> - org.webpki.json.<a href="org/webpki/json/JSONOutputFormats.html" title="enum in org.webpki.json">JSONOutputFormats</a></dt>
 <dd>
-<div class="block">Fully JCS (RFC 8785) compatible formatting.</div>
+<div class="block">JCS (RFC 8785) compatible formatting.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/keygen2/KeyGen2URIs.LOGOTYPES.html#CARD">CARD</a></span> - Static variable in interface org.webpki.keygen2.<a href="org/webpki/keygen2/KeyGen2URIs.LOGOTYPES.html" title="interface in org.webpki.keygen2">KeyGen2URIs.LOGOTYPES</a></dt>
 <dd>&nbsp;</dd>
@@ -2153,9 +2153,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/keygen2/KeySpecifier.html#getKeyAlgorithm()">getKeyAlgorithm()</a></span> - Method in class org.webpki.keygen2.<a href="org/webpki/keygen2/KeySpecifier.html" title="class in org.webpki.keygen2">KeySpecifier</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/crypto/KeyAlgorithms.html#getKeyAlgorithm(java.security.PublicKey)">getKeyAlgorithm(PublicKey)</a></span> - Static method in enum org.webpki.crypto.<a href="org/webpki/crypto/KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a></dt>
+<dt><span class="memberNameLink"><a href="org/webpki/crypto/KeyAlgorithms.html#getKeyAlgorithm(java.security.Key)">getKeyAlgorithm(Key)</a></span> - Static method in enum org.webpki.crypto.<a href="org/webpki/crypto/KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/crypto/KeyAlgorithms.html#getKeyAlgorithm(java.security.PublicKey,java.lang.Boolean)">getKeyAlgorithm(PublicKey, Boolean)</a></span> - Static method in enum org.webpki.crypto.<a href="org/webpki/crypto/KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a></dt>
+<dt><span class="memberNameLink"><a href="org/webpki/crypto/KeyAlgorithms.html#getKeyAlgorithm(java.security.Key,java.lang.Boolean)">getKeyAlgorithm(Key, Boolean)</a></span> - Static method in enum org.webpki.crypto.<a href="org/webpki/crypto/KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/crypto/KeyAlgorithms.html#getKeyAlgorithmFromId(java.lang.String,org.webpki.crypto.AlgorithmPreferences)">getKeyAlgorithmFromId(String, AlgorithmPreferences)</a></span> - Static method in enum org.webpki.crypto.<a href="org/webpki/crypto/KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a></dt>
 <dd>&nbsp;</dd>
@@ -3378,11 +3378,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Core JWS support class</div>
 </dd>
-<dt><a href="org/webpki/jose/JOSESupport.CoreKeyHolder.html" title="class in org.webpki.jose"><span class="typeNameLink">JOSESupport.CoreKeyHolder</span></a> - Class in <a href="org/webpki/jose/package-summary.html">org.webpki.jose</a></dt>
+<dt><a href="org/webpki/jose/JOSESupport.KeyHolder.html" title="class in org.webpki.jose"><span class="typeNameLink">JOSESupport.KeyHolder</span></a> - Class in <a href="org/webpki/jose/package-summary.html">org.webpki.jose</a></dt>
 <dd>
 <div class="block">Super class of signature key holders</div>
 </dd>
-<dt><a href="org/webpki/jose/JOSESupport.CoreSignatureValidator.html" title="class in org.webpki.jose"><span class="typeNameLink">JOSESupport.CoreSignatureValidator</span></a> - Class in <a href="org/webpki/jose/package-summary.html">org.webpki.jose</a></dt>
+<dt><a href="org/webpki/jose/JOSESupport.SignatureValidator.html" title="class in org.webpki.jose"><span class="typeNameLink">JOSESupport.SignatureValidator</span></a> - Class in <a href="org/webpki/jose/package-summary.html">org.webpki.jose</a></dt>
 <dd>
 <div class="block">Super class of validators</div>
 </dd>
@@ -3494,7 +3494,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><a href="org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json"><span class="typeNameLink">JSONObjectWriter</span></a> - Class in <a href="org/webpki/json/package-summary.html">org.webpki.json</a></dt>
 <dd>
-<div class="block">Creates JSON objects and performs serialization according to JCS and ES6.</div>
+<div class="block">Creates JSON objects and performs serialization
+ using a variety of formats.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONObjectWriter.html#%3Cinit%3E()">JSONObjectWriter()</a></span> - Constructor for class org.webpki.json.<a href="org/webpki/json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></dt>
 <dd>
@@ -3610,7 +3611,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Core JWS encoder</div>
 </dd>
-<dt><span class="memberNameLink"><a href="org/webpki/jose/JwsEncoder.html#%3Cinit%3E(org.webpki.jose.JOSESupport.CoreKeyHolder)">JwsEncoder(JOSESupport.CoreKeyHolder)</a></span> - Constructor for class org.webpki.jose.<a href="org/webpki/jose/JwsEncoder.html" title="class in org.webpki.jose">JwsEncoder</a></dt>
+<dt><span class="memberNameLink"><a href="org/webpki/jose/JwsEncoder.html#%3Cinit%3E(org.webpki.jose.JOSESupport.KeyHolder)">JwsEncoder(JOSESupport.KeyHolder)</a></span> - Constructor for class org.webpki.jose.<a href="org/webpki/jose/JwsEncoder.html" title="class in org.webpki.jose">JwsEncoder</a></dt>
 <dd>
 <div class="block">JWS signature encoder</div>
 </dd>
@@ -4031,7 +4032,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/JSONOutputFormats.html#NORMALIZED">NORMALIZED</a></span> - org.webpki.json.<a href="org/webpki/json/JSONOutputFormats.html" title="enum in org.webpki.json">JSONOutputFormats</a></dt>
 <dd>
-<div class="block">As a string without whitespace.</div>
+<div class="block">As a string without whitespace compatible with ECMAScript's <code>JSON.stringify()</code>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/crypto/KeyAlgorithms.html#normalizePublicKey(java.security.PublicKey)">normalizePublicKey(PublicKey)</a></span> - Static method in enum org.webpki.crypto.<a href="org/webpki/crypto/KeyAlgorithms.html" title="enum in org.webpki.crypto">KeyAlgorithms</a></dt>
 <dd>&nbsp;</dd>
@@ -4054,7 +4055,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><a href="org/webpki/json/NumberToJSON.html" title="class in org.webpki.json"><span class="typeNameLink">NumberToJSON</span></a> - Class in <a href="org/webpki/json/package-summary.html">org.webpki.json</a></dt>
 <dd>
 <div class="block">An implementation of Ryu for serializing IEEE-754 double precision values for
- JSON as specified by ES6</div>
+ JSON as specified by ECMAScript</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/NumberToJSON.html#%3Cinit%3E()">NumberToJSON()</a></span> - Constructor for class org.webpki.json.<a href="org/webpki/json/NumberToJSON.html" title="class in org.webpki.json">NumberToJSON</a></dt>
 <dd>&nbsp;</dd>
@@ -4667,7 +4668,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/json/NumberToJSON.html#serializeNumber(double)">serializeNumber(double)</a></span> - Static method in class org.webpki.json.<a href="org/webpki/json/NumberToJSON.html" title="class in org.webpki.json">NumberToJSON</a></dt>
 <dd>
-<div class="block">Formats a number according to ES6.</div>
+<div class="block">Formats a number according to ECMAScript.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/xmldsig/XPathCanonicalizer.html#serializeSubset(org.w3c.dom.Node,org.webpki.xmldsig.CanonicalizationAlgorithms)">serializeSubset(Node, CanonicalizationAlgorithms)</a></span> - Static method in class org.webpki.xmldsig.<a href="org/webpki/xmldsig/XPathCanonicalizer.html" title="class in org.webpki.xmldsig">XPathCanonicalizer</a></dt>
 <dd>&nbsp;</dd>
@@ -4994,7 +4995,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/keygen2/KeyCreationRequestEncoder.html#setKeyAttestationAlgorithm(java.lang.String)">setKeyAttestationAlgorithm(String)</a></span> - Method in class org.webpki.keygen2.<a href="org/webpki/keygen2/KeyCreationRequestEncoder.html" title="class in org.webpki.keygen2">KeyCreationRequestEncoder</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/jose/JOSESupport.CoreKeyHolder.html#setKeyId(java.lang.String)">setKeyId(String)</a></span> - Method in class org.webpki.jose.<a href="org/webpki/jose/JOSESupport.CoreKeyHolder.html" title="class in org.webpki.jose">JOSESupport.CoreKeyHolder</a></dt>
+<dt><span class="memberNameLink"><a href="org/webpki/jose/JOSESupport.KeyHolder.html#setKeyId(java.lang.String)">setKeyId(String)</a></span> - Method in class org.webpki.jose.<a href="org/webpki/jose/JOSESupport.KeyHolder.html" title="class in org.webpki.jose">JOSESupport.KeyHolder</a></dt>
 <dd>
 <div class="block">Adds "kid" to the JWS header</div>
 </dd>
@@ -5664,7 +5665,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/crypto/DeviceID.html#validateDeviceID(java.lang.String)">validateDeviceID(String)</a></span> - Static method in class org.webpki.crypto.<a href="org/webpki/crypto/DeviceID.html" title="class in org.webpki.crypto">DeviceID</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/jose/JOSESupport.html#validateJwsSignature(org.webpki.jose.JwsDecoder,byte%5B%5D,org.webpki.jose.JOSESupport.CoreSignatureValidator)">validateJwsSignature(JwsDecoder, byte[], JOSESupport.CoreSignatureValidator)</a></span> - Static method in class org.webpki.jose.<a href="org/webpki/jose/JOSESupport.html" title="class in org.webpki.jose">JOSESupport</a></dt>
+<dt><span class="memberNameLink"><a href="org/webpki/jose/JOSESupport.html#validateJwsSignature(org.webpki.jose.JwsDecoder,byte%5B%5D,org.webpki.jose.JOSESupport.SignatureValidator)">validateJwsSignature(JwsDecoder, byte[], JOSESupport.SignatureValidator)</a></span> - Static method in class org.webpki.jose.<a href="org/webpki/jose/JOSESupport.html" title="class in org.webpki.jose">JOSESupport</a></dt>
 <dd>
 <div class="block">Validate compact JWS signature</div>
 </dd>
