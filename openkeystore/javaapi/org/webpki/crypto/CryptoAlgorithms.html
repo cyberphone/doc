@@ -28,7 +28,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":6,"i1":6,"i2":18,"i3":6,"i4":6,"i5":18,"i6":6,"i7":18,"i8":18,"i9":6};
+var data = {"i0":6,"i1":6,"i2":18,"i3":6,"i4":6,"i5":6,"i6":6,"i7":18};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -169,18 +169,18 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="KeyTypes.html" title="enum in org.webpki.crypto">KeyTypes</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getKeyType()">getKeyType</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOid()">getOid</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isDeprecated()">isDeprecated</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr id="i5" class="rowColor">
-<td class="colFirst"><code>default boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isEcdsa()">isEcdsa</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i6" class="altColor">
@@ -190,16 +190,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>default boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isOkp()">isOkp</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr id="i8" class="altColor">
-<td class="colFirst"><code>default boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isRsa()">isRsa</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr id="i9" class="rowColor">
-<td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isSymmetric()">isSymmetric</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -275,49 +265,31 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <pre class="methodSignature"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getJceName()</pre>
 </li>
 </ul>
+<a id="getKeyType()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getKeyType</h4>
+<pre class="methodSignature"><a href="KeyTypes.html" title="enum in org.webpki.crypto">KeyTypes</a>&nbsp;getKeyType()</pre>
+</li>
+</ul>
 <a id="isSymmetric()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>isSymmetric</h4>
-<pre class="methodSignature">boolean&nbsp;isSymmetric()</pre>
+<pre class="methodSignature">default&nbsp;boolean&nbsp;isSymmetric()</pre>
 </li>
 </ul>
 <a id="isDeprecated()">
 <!--   -->
 </a>
-<ul class="blockList">
+<ul class="blockListLast">
 <li class="blockList">
 <h4>isDeprecated</h4>
 <pre class="methodSignature">boolean&nbsp;isDeprecated()</pre>
-</li>
-</ul>
-<a id="isRsa()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>isRsa</h4>
-<pre class="methodSignature">default&nbsp;boolean&nbsp;isRsa()</pre>
-</li>
-</ul>
-<a id="isEcdsa()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>isEcdsa</h4>
-<pre class="methodSignature">default&nbsp;boolean&nbsp;isEcdsa()</pre>
-</li>
-</ul>
-<a id="isOkp()">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>isOkp</h4>
-<pre class="methodSignature">default&nbsp;boolean&nbsp;isOkp()</pre>
 </li>
 </ul>
 </li>

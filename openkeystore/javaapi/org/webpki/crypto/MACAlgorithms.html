@@ -224,23 +224,23 @@ implements <a href="SignatureAlgorithms.html" title="interface in org.webpki.cry
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i5" class="rowColor">
+<td class="colFirst"><code><a href="KeyTypes.html" title="enum in org.webpki.crypto">KeyTypes</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getKeyType()">getKeyType</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOid()">getOid</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isDeprecated()">isDeprecated</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
-<td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isMandatorySksAlgorithm()">isMandatorySksAlgorithm</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isSymmetric()">isSymmetric</a></span>()</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isMandatorySksAlgorithm()">isMandatorySksAlgorithm</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
@@ -283,7 +283,7 @@ the order they are declared.</div>
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;org.webpki.crypto.<a href="CryptoAlgorithms.html" title="interface in org.webpki.crypto">CryptoAlgorithms</a></h3>
-<code><a href="CryptoAlgorithms.html#getJoseAlgorithmId()">getJoseAlgorithmId</a>, <a href="CryptoAlgorithms.html#isEcdsa()">isEcdsa</a>, <a href="CryptoAlgorithms.html#isOkp()">isOkp</a>, <a href="CryptoAlgorithms.html#isRsa()">isRsa</a></code></li>
+<code><a href="CryptoAlgorithms.html#getJoseAlgorithmId()">getJoseAlgorithmId</a>, <a href="CryptoAlgorithms.html#isSymmetric()">isSymmetric</a></code></li>
 </ul>
 </li>
 </ul>
@@ -386,19 +386,6 @@ not permitted.)</div>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if this enum type has no constant with the specified name</dd>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if the argument is null</dd>
-</dl>
-</li>
-</ul>
-<a id="isSymmetric()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>isSymmetric</h4>
-<pre class="methodSignature">public&nbsp;boolean&nbsp;isSymmetric()</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="CryptoAlgorithms.html#isSymmetric()">isSymmetric</a></code>&nbsp;in interface&nbsp;<code><a href="CryptoAlgorithms.html" title="interface in org.webpki.crypto">CryptoAlgorithms</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -512,13 +499,26 @@ not permitted.)</div>
 <a id="getDigestAlgorithm()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getDigestAlgorithm</h4>
 <pre class="methodSignature">public&nbsp;<a href="HashAlgorithms.html" title="enum in org.webpki.crypto">HashAlgorithms</a>&nbsp;getDigestAlgorithm()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="SignatureAlgorithms.html#getDigestAlgorithm()">getDigestAlgorithm</a></code>&nbsp;in interface&nbsp;<code><a href="SignatureAlgorithms.html" title="interface in org.webpki.crypto">SignatureAlgorithms</a></code></dd>
+</dl>
+</li>
+</ul>
+<a id="getKeyType()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getKeyType</h4>
+<pre class="methodSignature">public&nbsp;<a href="KeyTypes.html" title="enum in org.webpki.crypto">KeyTypes</a>&nbsp;getKeyType()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="CryptoAlgorithms.html#getKeyType()">getKeyType</a></code>&nbsp;in interface&nbsp;<code><a href="CryptoAlgorithms.html" title="interface in org.webpki.crypto">CryptoAlgorithms</a></code></dd>
 </dl>
 </li>
 </ul>
