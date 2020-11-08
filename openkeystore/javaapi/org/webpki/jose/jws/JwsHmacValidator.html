@@ -155,7 +155,7 @@ extends <a href="JwsValidator.html" title="class in org.webpki.jose.jws">JwsVali
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(byte%5B%5D)">JwsHmacValidator</a></span>&#8203;(byte[]&nbsp;secretKey)</code></th>
 <td class="colLast">
-<div class="block">JWS HMAC signature validator</div>
+<div class="block">Initialize validator.</div>
 </td>
 </tr>
 </table>
@@ -174,7 +174,7 @@ extends <a href="JwsValidator.html" title="class in org.webpki.jose.jws">JwsVali
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.webpki.jose.jws.<a href="JwsValidator.html" title="class in org.webpki.jose.jws">JwsValidator</a></h3>
-<code><a href="JwsValidator.html#setProvider(java.lang.String)">setProvider</a>, <a href="JwsValidator.html#validateSignature(org.webpki.jose.jws.JwsDecoder,byte%5B%5D)">validateSignature</a></code></li>
+<code><a href="JwsValidator.html#setProvider(java.lang.String)">setProvider</a>, <a href="JwsValidator.html#validateDetachedSignature(org.webpki.jose.jws.JwsDecoder,byte%5B%5D)">validateDetachedSignature</a>, <a href="JwsValidator.html#validateSignature(org.webpki.jose.jws.JwsDecoder)">validateSignature</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
@@ -206,7 +206,11 @@ extends <a href="JwsValidator.html" title="class in org.webpki.jose.jws">JwsVali
 <li class="blockList">
 <h4>JwsHmacValidator</h4>
 <pre>public&nbsp;JwsHmacValidator&#8203;(byte[]&nbsp;secretKey)</pre>
-<div class="block">JWS HMAC signature validator</div>
+<div class="block">Initialize validator.
+ 
+ Note that a validator object may be used any number of times
+ (assuming that the same parameters are valid).  It is also
+ thread-safe.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>secretKey</code> - The anticipated key</dd>

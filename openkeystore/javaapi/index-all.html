@@ -867,7 +867,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/jose/jws/JwsSigner.html#createSignature(byte%5B%5D,boolean)">createSignature(byte[], boolean)</a></span> - Method in class org.webpki.jose.jws.<a href="org/webpki/jose/jws/JwsSigner.html" title="class in org.webpki.jose.jws">JwsSigner</a></dt>
 <dd>
-<div class="block">Create compact JWS signature</div>
+<div class="block">Create compact mode JWS signature</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/webpki/jose/jws/JwsSigner.html#createSignature(org.webpki.json.JSONObjectWriter,java.lang.String)">createSignature(JSONObjectWriter, String)</a></span> - Method in class org.webpki.jose.jws.<a href="org/webpki/jose/jws/JwsSigner.html" title="class in org.webpki.jose.jws">JwsSigner</a></dt>
+<dd>
+<div class="block">Create JWS/CT signature</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/keygen2/ServerState.ProtocolPhase.html#CREDENTIAL_DISCOVERY">CREDENTIAL_DISCOVERY</a></span> - org.webpki.keygen2.<a href="org/webpki/keygen2/ServerState.ProtocolPhase.html" title="enum in org.webpki.keygen2">ServerState.ProtocolPhase</a></dt>
 <dd>&nbsp;</dd>
@@ -2429,6 +2433,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/sks/KeyProtectionInfo.html#getPatternRestrictions()">getPatternRestrictions()</a></span> - Method in class org.webpki.sks.<a href="org/webpki/sks/KeyProtectionInfo.html" title="class in org.webpki.sks">KeyProtectionInfo</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/webpki/jose/jws/JwsDecoder.html#getPayload()">getPayload()</a></span> - Method in class org.webpki.jose.jws.<a href="org/webpki/jose/jws/JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a></dt>
+<dd>
+<div class="block">Read JWS payload</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/sks/KeyProtectionInfo.html#getPinErrorCount()">getPinErrorCount()</a></span> - Method in class org.webpki.sks.<a href="org/webpki/sks/KeyProtectionInfo.html" title="class in org.webpki.sks">KeyProtectionInfo</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/sks/KeyProtectionInfo.html#getPinFormat()">getPinFormat()</a></span> - Method in class org.webpki.sks.<a href="org/webpki/sks/KeyProtectionInfo.html" title="class in org.webpki.sks">KeyProtectionInfo</a></dt>
@@ -3559,11 +3567,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>&nbsp;</dd>
 <dt><a href="org/webpki/jose/jws/JwsAsymKeySigner.html" title="class in org.webpki.jose.jws"><span class="typeNameLink">JwsAsymKeySigner</span></a> - Class in <a href="org/webpki/jose/jws/package-summary.html">org.webpki.jose.jws</a></dt>
 <dd>
-<div class="block">Creates asymmetric key signatures</div>
+<div class="block">JWS asymmetric key signer</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/jose/jws/JwsAsymKeySigner.html#%3Cinit%3E(java.security.PrivateKey,org.webpki.crypto.AsymSignatureAlgorithms)">JwsAsymKeySigner(PrivateKey, AsymSignatureAlgorithms)</a></span> - Constructor for class org.webpki.jose.jws.<a href="org/webpki/jose/jws/JwsAsymKeySigner.html" title="class in org.webpki.jose.jws">JwsAsymKeySigner</a></dt>
 <dd>
-<div class="block">Create signer</div>
+<div class="block">Initialize signer.</div>
 </dd>
 <dt><a href="org/webpki/jose/jws/JwsAsymSignatureValidator.html" title="class in org.webpki.jose.jws"><span class="typeNameLink">JwsAsymSignatureValidator</span></a> - Class in <a href="org/webpki/jose/jws/package-summary.html">org.webpki.jose.jws</a></dt>
 <dd>
@@ -3571,7 +3579,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/jose/jws/JwsAsymSignatureValidator.html#%3Cinit%3E(java.security.PublicKey)">JwsAsymSignatureValidator(PublicKey)</a></span> - Constructor for class org.webpki.jose.jws.<a href="org/webpki/jose/jws/JwsAsymSignatureValidator.html" title="class in org.webpki.jose.jws">JwsAsymSignatureValidator</a></dt>
 <dd>
-<div class="block">Create validator</div>
+<div class="block">Initialize validator.</div>
 </dd>
 <dt><a href="org/webpki/jose/jws/JwsDecoder.html" title="class in org.webpki.jose.jws"><span class="typeNameLink">JwsDecoder</span></a> - Class in <a href="org/webpki/jose/jws/package-summary.html">org.webpki.jose.jws</a></dt>
 <dd>
@@ -3579,15 +3587,19 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/jose/jws/JwsDecoder.html#%3Cinit%3E(java.lang.String)">JwsDecoder(String)</a></span> - Constructor for class org.webpki.jose.jws.<a href="org/webpki/jose/jws/JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a></dt>
 <dd>
-<div class="block">JWS signature decoder</div>
+<div class="block">JWS compact mode signature decoder</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/webpki/jose/jws/JwsDecoder.html#%3Cinit%3E(org.webpki.json.JSONObjectReader,java.lang.String)">JwsDecoder(JSONObjectReader, String)</a></span> - Constructor for class org.webpki.jose.jws.<a href="org/webpki/jose/jws/JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a></dt>
+<dd>
+<div class="block">JWS/CT signature decoder</div>
 </dd>
 <dt><a href="org/webpki/jose/jws/JwsHmacSigner.html" title="class in org.webpki.jose.jws"><span class="typeNameLink">JwsHmacSigner</span></a> - Class in <a href="org/webpki/jose/jws/package-summary.html">org.webpki.jose.jws</a></dt>
 <dd>
-<div class="block">Creates HMAC signatures</div>
+<div class="block">JWS HMAC signer</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/jose/jws/JwsHmacSigner.html#%3Cinit%3E(byte%5B%5D,org.webpki.crypto.MACAlgorithms)">JwsHmacSigner(byte[], MACAlgorithms)</a></span> - Constructor for class org.webpki.jose.jws.<a href="org/webpki/jose/jws/JwsHmacSigner.html" title="class in org.webpki.jose.jws">JwsHmacSigner</a></dt>
 <dd>
-<div class="block">Create holder</div>
+<div class="block">Initialize signer.</div>
 </dd>
 <dt><a href="org/webpki/jose/jws/JwsHmacValidator.html" title="class in org.webpki.jose.jws"><span class="typeNameLink">JwsHmacValidator</span></a> - Class in <a href="org/webpki/jose/jws/package-summary.html">org.webpki.jose.jws</a></dt>
 <dd>
@@ -3595,7 +3607,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/jose/jws/JwsHmacValidator.html#%3Cinit%3E(byte%5B%5D)">JwsHmacValidator(byte[])</a></span> - Constructor for class org.webpki.jose.jws.<a href="org/webpki/jose/jws/JwsHmacValidator.html" title="class in org.webpki.jose.jws">JwsHmacValidator</a></dt>
 <dd>
-<div class="block">JWS HMAC signature validator</div>
+<div class="block">Initialize validator.</div>
 </dd>
 <dt><a href="org/webpki/jose/jws/JwsSigner.html" title="class in org.webpki.jose.jws"><span class="typeNameLink">JwsSigner</span></a> - Class in <a href="org/webpki/jose/jws/package-summary.html">org.webpki.jose.jws</a></dt>
 <dd>
@@ -4153,7 +4165,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><a href="org/webpki/jose/jws/package-summary.html">org.webpki.jose.jws</a> - package org.webpki.jose.jws</dt>
 <dd>
-<div class="block">Basic JWS support</div>
+<div class="block">Basic JWS and JWS/CT support</div>
 </dd>
 <dt><a href="org/webpki/json/package-summary.html">org.webpki.json</a> - package org.webpki.json</dt>
 <dd>
@@ -5665,11 +5677,15 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">Validate the XML-encoding of the object and validate it against a
  <a href="org/webpki/xml/XMLSchemaCache.html" title="class in org.webpki.xml"><code>XMLSchemaCache</code></a>.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/webpki/jose/jws/JwsValidator.html#validateDetachedSignature(org.webpki.jose.jws.JwsDecoder,byte%5B%5D)">validateDetachedSignature(JwsDecoder, byte[])</a></span> - Method in class org.webpki.jose.jws.<a href="org/webpki/jose/jws/JwsValidator.html" title="class in org.webpki.jose.jws">JwsValidator</a></dt>
+<dd>
+<div class="block">Validate compact JWS signature in "detached" mode</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/webpki/crypto/DeviceID.html#validateDeviceID(java.lang.String)">validateDeviceID(String)</a></span> - Static method in class org.webpki.crypto.<a href="org/webpki/crypto/DeviceID.html" title="class in org.webpki.crypto">DeviceID</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/webpki/jose/jws/JwsValidator.html#validateSignature(org.webpki.jose.jws.JwsDecoder,byte%5B%5D)">validateSignature(JwsDecoder, byte[])</a></span> - Method in class org.webpki.jose.jws.<a href="org/webpki/jose/jws/JwsValidator.html" title="class in org.webpki.jose.jws">JwsValidator</a></dt>
+<dt><span class="memberNameLink"><a href="org/webpki/jose/jws/JwsValidator.html#validateSignature(org.webpki.jose.jws.JwsDecoder)">validateSignature(JwsDecoder)</a></span> - Method in class org.webpki.jose.jws.<a href="org/webpki/jose/jws/JwsValidator.html" title="class in org.webpki.jose.jws">JwsValidator</a></dt>
 <dd>
-<div class="block">Validate compact JWS signature</div>
+<div class="block">Validate compact JWS signature in "standard" mode</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/webpki/xml/XMLSchemaCache.html#validateXMLFromFile(java.lang.String)">validateXMLFromFile(String)</a></span> - Method in class org.webpki.xml.<a href="org/webpki/xml/XMLSchemaCache.html" title="class in org.webpki.xml">XMLSchemaCache</a></dt>
 <dd>&nbsp;</dd>

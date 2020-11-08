@@ -28,7 +28,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10};
+var data = {"i0":10,"i1":10,"i2":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -167,10 +167,17 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#validateSignature(org.webpki.jose.jws.JwsDecoder,byte%5B%5D)">validateSignature</a></span>&#8203;(<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;jwsDecoder,
-                 byte[]&nbsp;optionalJwsPayload)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#validateDetachedSignature(org.webpki.jose.jws.JwsDecoder,byte%5B%5D)">validateDetachedSignature</a></span>&#8203;(<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;jwsDecoder,
+                         byte[]&nbsp;detachedPayload)</code></th>
 <td class="colLast">
-<div class="block">Validate compact JWS signature</div>
+<div class="block">Validate compact JWS signature in "detached" mode</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#validateSignature(org.webpki.jose.jws.JwsDecoder)">validateSignature</a></span>&#8203;(<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;jwsDecoder)</code></th>
+<td class="colLast">
+<div class="block">Validate compact JWS signature in "standard" mode</div>
 </td>
 </tr>
 </table>
@@ -213,21 +220,40 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 </dl>
 </li>
 </ul>
-<a id="validateSignature(org.webpki.jose.jws.JwsDecoder,byte[])">
+<a id="validateDetachedSignature(org.webpki.jose.jws.JwsDecoder,byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>validateDetachedSignature</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;validateDetachedSignature&#8203;(<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;jwsDecoder,
+                                      byte[]&nbsp;detachedPayload)
+                               throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a>,
+                                      <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></pre>
+<div class="block">Validate compact JWS signature in "detached" mode</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>jwsDecoder</code> - Decoded JWS data</dd>
+<dd><code>detachedPayload</code> - Detached payload</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></code></dd>
+</dl>
+</li>
+</ul>
+<a id="validateSignature(org.webpki.jose.jws.JwsDecoder)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>validateSignature</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;validateSignature&#8203;(<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;jwsDecoder,
-                              byte[]&nbsp;optionalJwsPayload)
+<pre class="methodSignature">public&nbsp;void&nbsp;validateSignature&#8203;(<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;jwsDecoder)
                        throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a>,
                               <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></pre>
-<div class="block">Validate compact JWS signature</div>
+<div class="block">Validate compact JWS signature in "standard" mode</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>jwsDecoder</code> - Decoded header and string</dd>
-<dd><code>optionalJwsPayload</code> - Must be supplied for detached mode, null otherwise</dd>
+<dd><code>jwsDecoder</code> - Decoded JWS data</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></code></dd>
