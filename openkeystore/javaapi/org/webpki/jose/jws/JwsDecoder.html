@@ -156,14 +156,14 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String)">JwsDecoder</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;jwsString)</code></th>
 <td class="colLast">
-<div class="block">JWS compact mode signature decoder</div>
+<div class="block">JWS compact mode signature decoder.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(org.webpki.json.JSONObjectReader,java.lang.String)">JwsDecoder</a></span>&#8203;(<a href="../../json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a>&nbsp;jwsCtObject,
           <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;signatureProperty)</code></th>
 <td class="colLast">
-<div class="block">JWS/CT signature decoder</div>
+<div class="block">JWS/CT signature decoder.</div>
 </td>
 </tr>
 </table>
@@ -188,42 +188,42 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <td class="colFirst"><code><a href="../../json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getJwsProtectedHeader()">getJwsProtectedHeader</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Get protected header</div>
+<div class="block">Get protected header.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert" class="externalLink">X509Certificate</a>[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOptionalCertificatePath()">getOptionalCertificatePath</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Get optional "x5c"</div>
+<div class="block">Get optional "x5c".</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOptionalKeyId()">getOptionalKeyId</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Get optional "kid"</div>
+<div class="block">Get optional "kid".</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/PublicKey.html?is-external=true" title="class or interface in java.security" class="externalLink">PublicKey</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOptionalPublicKey()">getOptionalPublicKey</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Get optional "jwk"</div>
+<div class="block">Get optional "jwk".</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPayload()">getPayload</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Read JWS payload</div>
+<div class="block">Read JWS payload.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../crypto/SignatureAlgorithms.html" title="interface in org.webpki.crypto">SignatureAlgorithms</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSignatureAlgorithm()">getSignatureAlgorithm</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Get signature algorithm</div>
+<div class="block">Get signature algorithm.</div>
 </td>
 </tr>
 </table>
@@ -259,7 +259,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <pre>public&nbsp;JwsDecoder&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;jwsString)
            throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a>,
                   <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></pre>
-<div class="block">JWS compact mode signature decoder</div>
+<div class="block">JWS compact mode signature decoder.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>jwsString</code> - The actual JWS string.  If there is no payload detached mode is assumed</dd>
@@ -279,7 +279,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
                   <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;signatureProperty)
            throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a>,
                   <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></pre>
-<div class="block">JWS/CT signature decoder</div>
+<div class="block">JWS/CT signature decoder.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>jwsCtObject</code> - The signed JSON object</dd>
@@ -307,7 +307,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <li class="blockList">
 <h4>getJwsProtectedHeader</h4>
 <pre class="methodSignature">public&nbsp;<a href="../../json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a>&nbsp;getJwsProtectedHeader()</pre>
-<div class="block">Get protected header</div>
+<div class="block">Get protected header.</div>
 </li>
 </ul>
 <a id="getSignatureAlgorithm()">
@@ -317,7 +317,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <li class="blockList">
 <h4>getSignatureAlgorithm</h4>
 <pre class="methodSignature">public&nbsp;<a href="../../crypto/SignatureAlgorithms.html" title="interface in org.webpki.crypto">SignatureAlgorithms</a>&nbsp;getSignatureAlgorithm()</pre>
-<div class="block">Get signature algorithm</div>
+<div class="block">Get signature algorithm.</div>
 </li>
 </ul>
 <a id="getOptionalPublicKey()">
@@ -327,7 +327,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <li class="blockList">
 <h4>getOptionalPublicKey</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/PublicKey.html?is-external=true" title="class or interface in java.security" class="externalLink">PublicKey</a>&nbsp;getOptionalPublicKey()</pre>
-<div class="block">Get optional "jwk"</div>
+<div class="block">Get optional "jwk".</div>
 </li>
 </ul>
 <a id="getOptionalCertificatePath()">
@@ -337,7 +337,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <li class="blockList">
 <h4>getOptionalCertificatePath</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert" class="externalLink">X509Certificate</a>[]&nbsp;getOptionalCertificatePath()</pre>
-<div class="block">Get optional "x5c"</div>
+<div class="block">Get optional "x5c".</div>
 </li>
 </ul>
 <a id="getOptionalKeyId()">
@@ -347,7 +347,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <li class="blockList">
 <h4>getOptionalKeyId</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getOptionalKeyId()</pre>
-<div class="block">Get optional "kid"</div>
+<div class="block">Get optional "kid".</div>
 </li>
 </ul>
 <a id="getPayload()">
@@ -359,7 +359,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <pre class="methodSignature">public&nbsp;byte[]&nbsp;getPayload()
                   throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a>,
                          <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
-<div class="block">Read JWS payload</div>
+<div class="block">Read JWS payload.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>Payload binary</dd>
