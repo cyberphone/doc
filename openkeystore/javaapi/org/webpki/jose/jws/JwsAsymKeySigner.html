@@ -159,6 +159,12 @@ extends <a href="JwsSigner.html" title="class in org.webpki.jose.jws">JwsSigner<
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr class="altColor">
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.security.PrivateKey)">JwsAsymKeySigner</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security" class="externalLink">PrivateKey</a>&nbsp;privateKey)</code></th>
+<td class="colLast">
+<div class="block">Initialize signer.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.security.PrivateKey,org.webpki.crypto.AsymSignatureAlgorithms)">JwsAsymKeySigner</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security" class="externalLink">PrivateKey</a>&nbsp;privateKey,
                 <a href="../../crypto/AsymSignatureAlgorithms.html" title="enum in org.webpki.crypto">AsymSignatureAlgorithms</a>&nbsp;signatureAlgorithm)</code></th>
 <td class="colLast">
@@ -231,7 +237,7 @@ extends <a href="JwsSigner.html" title="class in org.webpki.jose.jws">JwsSigner<
 <a id="&lt;init&gt;(java.security.PrivateKey,org.webpki.crypto.AsymSignatureAlgorithms)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>JwsAsymKeySigner</h4>
 <pre>public&nbsp;JwsAsymKeySigner&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security" class="externalLink">PrivateKey</a>&nbsp;privateKey,
@@ -247,6 +253,31 @@ extends <a href="JwsSigner.html" title="class in org.webpki.jose.jws">JwsSigner<
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>privateKey</code> - The key to sign with</dd>
 <dd><code>signatureAlgorithm</code> - The algorithm to use</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></code></dd>
+</dl>
+</li>
+</ul>
+<a id="&lt;init&gt;(java.security.PrivateKey)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>JwsAsymKeySigner</h4>
+<pre>public&nbsp;JwsAsymKeySigner&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security" class="externalLink">PrivateKey</a>&nbsp;privateKey)
+                 throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a>,
+                        <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></pre>
+<div class="block">Initialize signer.
+ 
+ Note that a signer object may be used any number of times
+ (assuming that the same parameters are valid).  It is also
+ thread-safe.
+ The default signature algorithm to use is based on the recommendations
+ in RFC 7518.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>privateKey</code> - The key to sign with</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></code></dd>
