@@ -166,7 +166,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>void</code></td>
+<td class="colFirst"><code><a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#validateDetachedSignature(org.webpki.jose.jws.JwsDecoder,byte%5B%5D)">validateDetachedSignature</a></span>&#8203;(<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;jwsDecoder,
                          byte[]&nbsp;detachedPayload)</code></th>
 <td class="colLast">
@@ -174,7 +174,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code>void</code></td>
+<td class="colFirst"><code><a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#validateSignature(org.webpki.jose.jws.JwsDecoder)">validateSignature</a></span>&#8203;(<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;jwsDecoder)</code></th>
 <td class="colLast">
 <div class="block">Validate compact JWS signature in "standard" mode.</div>
@@ -226,10 +226,10 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <ul class="blockList">
 <li class="blockList">
 <h4>validateDetachedSignature</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;validateDetachedSignature&#8203;(<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;jwsDecoder,
-                                      byte[]&nbsp;detachedPayload)
-                               throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a>,
-                                      <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></pre>
+<pre class="methodSignature">public&nbsp;<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;validateDetachedSignature&#8203;(<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;jwsDecoder,
+                                            byte[]&nbsp;detachedPayload)
+                                     throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a>,
+                                            <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></pre>
 <div class="block">Validate compact JWS signature in "detached" mode.
  Note that the detached mode follows the specification
  described in 
@@ -238,6 +238,8 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>jwsDecoder</code> - Decoded JWS data</dd>
 <dd><code>detachedPayload</code> - Detached payload</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>JwsDecoder</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></code></dd>
@@ -250,13 +252,15 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <ul class="blockListLast">
 <li class="blockList">
 <h4>validateSignature</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;validateSignature&#8203;(<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;jwsDecoder)
-                       throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a>,
-                              <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></pre>
+<pre class="methodSignature">public&nbsp;<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;validateSignature&#8203;(<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;jwsDecoder)
+                             throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a>,
+                                    <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></pre>
 <div class="block">Validate compact JWS signature in "standard" mode.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>jwsDecoder</code> - Decoded JWS data</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>JwsDecoder</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></code></dd>
