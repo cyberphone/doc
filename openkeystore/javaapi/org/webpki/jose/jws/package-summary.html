@@ -104,16 +104,16 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div>Create a JWS Compact Serialization Object:</div>
 <div style='margin:0.5em 0 0.5em 3em'>
 <div style='color:grey'><code>// Initialize a signer</code></div>
-<code><a href="JwsAsymKeySigner.html" title="class in org.webpki.jose.jws"><code>JwsAsymKeySigner</code></a> signer = new <a href="JwsAsymKeySigner.html" title="class in org.webpki.jose.jws"><code>JwsAsymKeySigner</code></a>(</code><i>privateKey</i><code>);</code><br>
+<code><a href="JwsAsymKeySigner.html" title="class in org.webpki.jose.jws"><code>JwsAsymKeySigner</code></a> signer = new <a href="JwsAsymKeySigner.html#%3Cinit%3E(java.security.PrivateKey)"><code>JwsAsymKeySigner</code></a>(</code><i>privateKey</i><code>);</code><br>
 <div style='color:grey'><code>// Sign data</code></div>
-<code>String jwsString signer.createSignature(</code><i>jwsPayload</i><code>,</code> <i>detachedFlag</i><code>);</code>
+<code>String jwsString signer.<a href="JwsSigner.html#createSignature(byte%5B%5D,boolean)"><code>createSignature</code></a>(</code><i>jwsPayload</i><code>,</code> <code>false);</code>
 </div>
 <div>Create a JWS/CT Object:</div>
 <div style='margin:0.5em 0 0.5em 3em'>
 <div style='color:grey'><code>// Initialize a signer</code></div>
-<code><a href="JwsAsymKeySigner.html" title="class in org.webpki.jose.jws"><code>JwsAsymKeySigner</code></a> signer = new <a href="JwsAsymKeySigner.html" title="class in org.webpki.jose.jws"><code>JwsAsymKeySigner</code></a>(</code><i>privateKey</i><code>);</code><br>
+<code><a href="JwsAsymKeySigner.html" title="class in org.webpki.jose.jws"><code>JwsAsymKeySigner</code></a> signer = new <a href="JwsAsymKeySigner.html#%3Cinit%3E(java.security.PrivateKey)"><code>JwsAsymKeySigner</code></a>(</code><i>privateKey</i><code>);</code><br>
 <div style='color:grey'><code>// Sign data</code></div>
-<code><a href="../../json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a> jwsCtObject signer.createSignature(</code><i>jsonObjectToSign</i><code>,</code> <i>signatureProperty</i><code>);</code>
+<code><a href="../../json/JSONObjectWriter.html" title="class in org.webpki.json"><code>JSONObjectWriter</code></a> jwsCtObject = signer.<a href="JwsSigner.html#createSignature(org.webpki.json.JSONObjectWriter,java.lang.String)"><code>createSignature</code></a>(</code><i>jsonObjectToSign</i><code>,</code> <i>signatureProperty</i><code>);</code>
 </div>
 <h3>Validate Signature and Fetch Payload Data</h3>
 <div>The following is a bit simplistic since you typically need
@@ -123,11 +123,11 @@ The <a href="JwsDecoder.html" title="class in org.webpki.jose.jws"><code>JwsDeco
 <div style='margin-top:1em'>Validate a JWS Compact Serialization Object:</div>
 <div style='margin:0.5em 0 0.5em 3em'>
 <div style='color:grey'><code>// Decode JWS data</code></div>
-<code><a href="JwsDecoder.html" title="class in org.webpki.jose.jws"><code>JwsDecoder</code></a> jwsDecoder = new <a href="JwsDecoder.html" title="class in org.webpki.jose.jws"><code>JwsDecoder</code></a>(</code><i>jwsString</i><code>);</code>
+<code><a href="JwsDecoder.html" title="class in org.webpki.jose.jws"><code>JwsDecoder</code></a> jwsDecoder = new <a href="JwsDecoder.html#%3Cinit%3E(java.lang.String)"><code>JwsDecoder</code></a>(</code><i>jwsString</i><code>);</code>
 <div style='color:grey'><code>// Initialize a validator</code></div>
-<code><a href="JwsAsymSignatureValidator.html" title="class in org.webpki.jose.jws"><code>JwsAsymSignatureValidator</code></a> validator = new <a href="JwsAsymSignatureValidator.html" title="class in org.webpki.jose.jws"><code>JwsAsymSignatureValidator</code></a>(</code><i>publicKey</i><code>);</code><br>
+<code><a href="JwsAsymSignatureValidator.html" title="class in org.webpki.jose.jws"><code>JwsAsymSignatureValidator</code></a> validator = new <a href="JwsAsymSignatureValidator.html#%3Cinit%3E(java.security.PublicKey)"><code>JwsAsymSignatureValidator</code></a>(</code><i>publicKey</i><code>);</code><br>
 <div style='color:grey'><code>// Validate signature and fetch payload</code></div>
-<code>byte[] data = validator.validateSignature(jwsDecoder).getPayload();</code><br>
+<code>byte[] data = validator.<a href="JwsValidator.html#validateSignature(org.webpki.jose.jws.JwsDecoder)"><code>validateSignature</code></a>(jwsDecoder).<a href="JwsDecoder.html#getPayload()"><code>getPayload</code></a>();</code><br>
 </div>
 <div style='margin-top:1em'>Validate a JWS/CT Object:</div>
 <div style='margin:0.5em 0 0.5em 3em'>
@@ -136,7 +136,7 @@ The <a href="JwsDecoder.html" title="class in org.webpki.jose.jws"><code>JwsDeco
 <div style='color:grey'><code>// Initialize a validator</code></div>
 <code><a href="JwsAsymSignatureValidator.html" title="class in org.webpki.jose.jws"><code>JwsAsymSignatureValidator</code></a> validator = new <a href="JwsAsymSignatureValidator.html" title="class in org.webpki.jose.jws"><code>JwsAsymSignatureValidator</code></a>(</code><i>publicKey</i><code>);</code><br>
 <div style='color:grey'><code>// Validate signature (the JSON data is already available in the <i>jwsCtObject</i>).</code></div>
-<code>validator.validateSignature(jwsDecoder);</code><br>
+<code>validator.<a href="JwsValidator.html#validateSignature(org.webpki.jose.jws.JwsDecoder)"><code>validateSignature</code></a>(jwsDecoder);</code><br>
 </div></div>
 </section>
 <ul class="blockList">
