@@ -216,14 +216,14 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <td class="colFirst"><code>byte[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPayload()">getPayload</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Get the "JWS payload".</div>
+<div class="block">Get "JWS payload".</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPayloadAsJson()">getPayloadAsJson</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Get the "JWS payload".</div>
+<div class="block">Get "JWS payload".</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -367,12 +367,17 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <pre class="methodSignature">public&nbsp;byte[]&nbsp;getPayload()
                   throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a>,
                          <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
-<div class="block">Get the "JWS payload".
- Note that this method throws an exception if the <code>JwsDecoder</code>
- object signature have not yet been validated.
+<div class="block">Get "JWS payload".
+ Note that this method throws an exception if the
+ <a href="JwsDecoder.html" title="class in org.webpki.jose.jws"><code>JwsDecoder</code></a>
+ object signature have not yet been
+ <a href="JwsValidator.html#validateSignature(org.webpki.jose.jws.JwsDecoder)"><code>validated</code></a>.
  For JWS/CT, the payload holds the canonicalized
- version of the <code>jwsCtObject</code> with the
- <code>signatureProperty</code> removed.</div>
+ version of the 
+ <a href="#%3Cinit%3E(org.webpki.json.JSONObjectReader,java.lang.String)"><code>jwsCtObject</code></a>
+ with the
+ <a href="#%3Cinit%3E(org.webpki.json.JSONObjectReader,java.lang.String)"><code>signatureProperty</code></a>
+ removed.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>Payload binary</dd>
@@ -391,11 +396,15 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <pre class="methodSignature">public&nbsp;<a href="../../json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a>&nbsp;getPayloadAsJson()
                                   throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a>,
                                          <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
-<div class="block">Get the "JWS payload".
- Note that this method throws an exception if the <code>JwsDecoder</code>
- object signature have not yet been validated.
+<div class="block">Get "JWS payload".
+ Note that this method throws an exception if the
+ <a href="JwsDecoder.html" title="class in org.webpki.jose.jws"><code>JwsDecoder</code></a>
+ object signature have not yet been
+ <a href="JwsValidator.html#validateSignature(org.webpki.jose.jws.JwsDecoder)"><code>validated</code></a>.
  For JWS/CT this method return the JSON that is actually signed.  That is,
- all but the <code>signatureProperty</code> and its JWS argument.</div>
+ all but the 
+ <a href="#%3Cinit%3E(org.webpki.json.JSONObjectReader,java.lang.String)"><code>signatureProperty</code></a>
+ and its JWS argument.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>Payload as JSON</dd>
