@@ -336,6 +336,10 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <h4>getOptionalPublicKey</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/PublicKey.html?is-external=true" title="class or interface in java.security" class="externalLink">PublicKey</a>&nbsp;getOptionalPublicKey()</pre>
 <div class="block">Get optional "jwk".</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Public key or <b>null</b> if there is no "jwk" property in the JWS header.</dd>
+</dl>
 </li>
 </ul>
 <a id="getOptionalCertificatePath()">
@@ -346,6 +350,10 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <h4>getOptionalCertificatePath</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert" class="externalLink">X509Certificate</a>[]&nbsp;getOptionalCertificatePath()</pre>
 <div class="block">Get optional "x5c".</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Certificate path or <b>null</b> if there is no "x5c" property in the JWS header.</dd>
+</dl>
 </li>
 </ul>
 <a id="getOptionalKeyId()">
@@ -356,6 +364,10 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <h4>getOptionalKeyId</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getOptionalKeyId()</pre>
 <div class="block">Get optional "kid".</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Key identifier or <b>null</b> if there is no "kid" property in the JWS header.</dd>
+</dl>
 </li>
 </ul>
 <a id="getPayload()">
