@@ -28,7 +28,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -183,6 +183,13 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="JwsSigner.html" title="class in org.webpki.jose.jws">JwsSigner</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setKeyId(java.lang.String)">setKeyId</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;keyId)</code></th>
+<td class="colLast">
+<div class="block">Adds "kid" to the JWS header.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="JwsSigner.html" title="class in org.webpki.jose.jws">JwsSigner</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setProvider(java.lang.String)">setProvider</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;provider)</code></th>
 <td class="colLast">
 <div class="block">Set cryptographic provider.</div>
@@ -225,6 +232,25 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <dd><code>provider</code> - Name of provider like "BC"</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>this</dd>
+</dl>
+</li>
+</ul>
+<a id="setKeyId(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setKeyId</h4>
+<pre class="methodSignature">public&nbsp;<a href="JwsSigner.html" title="class in org.webpki.jose.jws">JwsSigner</a>&nbsp;setKeyId&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;keyId)
+                   throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<div class="block">Adds "kid" to the JWS header.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>keyId</code> - The key identifier to be included.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
 </dl>
 </li>
 </ul>
