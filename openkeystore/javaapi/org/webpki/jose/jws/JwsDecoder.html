@@ -28,7 +28,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -186,47 +186,54 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="../../json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getJwsProtectedHeader()">getJwsProtectedHeader</a></span>()</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getJwsHeaderAsJson()">getJwsHeaderAsJson</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Get protected header.</div>
+<div class="block">Get JWS header.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getJwsHeaderAsString()">getJwsHeaderAsString</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Get JWS header.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert" class="externalLink">X509Certificate</a>[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOptionalCertificatePath()">getOptionalCertificatePath</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Get optional "x5c".</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOptionalKeyId()">getOptionalKeyId</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Get optional "kid".</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/PublicKey.html?is-external=true" title="class or interface in java.security" class="externalLink">PublicKey</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOptionalPublicKey()">getOptionalPublicKey</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Get optional "jwk".</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPayload()">getPayload</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Get "JWS payload".</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPayloadAsJson()">getPayloadAsJson</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Get "JWS payload".</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../crypto/SignatureAlgorithms.html" title="interface in org.webpki.crypto">SignatureAlgorithms</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSignatureAlgorithm()">getSignatureAlgorithm</a></span>()</code></th>
 <td class="colLast">
@@ -308,14 +315,35 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="getJwsProtectedHeader()">
+<a id="getJwsHeaderAsJson()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getJwsProtectedHeader</h4>
-<pre class="methodSignature">public&nbsp;<a href="../../json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a>&nbsp;getJwsProtectedHeader()</pre>
-<div class="block">Get protected header.</div>
+<h4>getJwsHeaderAsJson</h4>
+<pre class="methodSignature">public&nbsp;<a href="../../json/JSONObjectReader.html" title="class in org.webpki.json">JSONObjectReader</a>&nbsp;getJwsHeaderAsJson()</pre>
+<div class="block">Get JWS header.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>JWS header as a JSON object.</dd>
+</dl>
+</li>
+</ul>
+<a id="getJwsHeaderAsString()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getJwsHeaderAsString</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getJwsHeaderAsString()
+                            throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<div class="block">Get JWS header.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>JWS header as a verbatim string copy after Base64Url-decoding.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
+</dl>
 </li>
 </ul>
 <a id="getSignatureAlgorithm()">
