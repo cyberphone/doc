@@ -166,33 +166,33 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createSignature(byte%5B%5D,boolean)">createSignature</a></span>&#8203;(byte[]&nbsp;jwsPayload,
-               boolean&nbsp;detached)</code></th>
-<td class="colLast">
-<div class="block">Create compact mode JWS signature.</div>
-</td>
-</tr>
-<tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="../../json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createSignature(org.webpki.json.JSONObjectWriter,java.lang.String)">createSignature</a></span>&#8203;(<a href="../../json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;objectToBeSigned,
-               <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;signatureProperty)</code></th>
-<td class="colLast">
-<div class="block">Create JWS/CT signature.</div>
-</td>
-</tr>
-<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="JwsSigner.html" title="class in org.webpki.jose.jws">JwsSigner</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setKeyId(java.lang.String)">setKeyId</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;keyId)</code></th>
 <td class="colLast">
 <div class="block">Adds "kid" to the JWS header.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="JwsSigner.html" title="class in org.webpki.jose.jws">JwsSigner</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setProvider(java.lang.String)">setProvider</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;provider)</code></th>
 <td class="colLast">
 <div class="block">Set cryptographic provider.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sign(byte%5B%5D,boolean)">sign</a></span>&#8203;(byte[]&nbsp;jwsPayload,
+    boolean&nbsp;detached)</code></th>
+<td class="colLast">
+<div class="block">Create compact mode JWS signature.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="../../json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sign(org.webpki.json.JSONObjectWriter,java.lang.String)">sign</a></span>&#8203;(<a href="../../json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;objectToBeSigned,
+    <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;signatureProperty)</code></th>
+<td class="colLast">
+<div class="block">Create JWS/CT signature.</div>
 </td>
 </tr>
 </table>
@@ -231,7 +231,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>provider</code> - Name of provider like "BC"</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>this</dd>
+<dd>JwsSigner</dd>
 </dl>
 </li>
 </ul>
@@ -248,7 +248,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>keyId</code> - The key identifier to be included.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>this</dd>
+<dd>JwsSigner</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
 </dl>
@@ -267,22 +267,22 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>items</code> - A set of JSON tokens</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>this</dd>
+<dd>JwsSigner</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
 </dl>
 </li>
 </ul>
-<a id="createSignature(org.webpki.json.JSONObjectWriter,java.lang.String)">
+<a id="sign(org.webpki.json.JSONObjectWriter,java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>createSignature</h4>
-<pre class="methodSignature">public&nbsp;<a href="../../json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;createSignature&#8203;(<a href="../../json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;objectToBeSigned,
-                                        <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;signatureProperty)
-                                 throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a>,
-                                        <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></pre>
+<h4>sign</h4>
+<pre class="methodSignature">public&nbsp;<a href="../../json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;sign&#8203;(<a href="../../json/JSONObjectWriter.html" title="class in org.webpki.json">JSONObjectWriter</a>&nbsp;objectToBeSigned,
+                             <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;signatureProperty)
+                      throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a>,
+                             <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></pre>
 <div class="block">Create JWS/CT signature.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -296,16 +296,16 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 </dl>
 </li>
 </ul>
-<a id="createSignature(byte[],boolean)">
+<a id="sign(byte[],boolean)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>createSignature</h4>
-<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;createSignature&#8203;(byte[]&nbsp;jwsPayload,
-                              boolean&nbsp;detached)
-                       throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a>,
-                              <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></pre>
+<h4>sign</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;sign&#8203;(byte[]&nbsp;jwsPayload,
+                   boolean&nbsp;detached)
+            throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a>,
+                   <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></pre>
 <div class="block">Create compact mode JWS signature.
  Note that the detached mode follows the specification
  described in 

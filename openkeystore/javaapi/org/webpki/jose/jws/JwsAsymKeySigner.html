@@ -209,7 +209,7 @@ extends <a href="JwsSigner.html" title="class in org.webpki.jose.jws">JwsSigner<
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.webpki.jose.jws.<a href="JwsSigner.html" title="class in org.webpki.jose.jws">JwsSigner</a></h3>
-<code><a href="JwsSigner.html#addHeaderItems(org.webpki.json.JSONObjectReader)">addHeaderItems</a>, <a href="JwsSigner.html#createSignature(byte%5B%5D,boolean)">createSignature</a>, <a href="JwsSigner.html#createSignature(org.webpki.json.JSONObjectWriter,java.lang.String)">createSignature</a>, <a href="JwsSigner.html#setKeyId(java.lang.String)">setKeyId</a>, <a href="JwsSigner.html#setProvider(java.lang.String)">setProvider</a></code></li>
+<code><a href="JwsSigner.html#addHeaderItems(org.webpki.json.JSONObjectReader)">addHeaderItems</a>, <a href="JwsSigner.html#setKeyId(java.lang.String)">setKeyId</a>, <a href="JwsSigner.html#setProvider(java.lang.String)">setProvider</a>, <a href="JwsSigner.html#sign(byte%5B%5D,boolean)">sign</a>, <a href="JwsSigner.html#sign(org.webpki.json.JSONObjectWriter,java.lang.String)">sign</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
@@ -306,6 +306,8 @@ extends <a href="JwsSigner.html" title="class in org.webpki.jose.jws">JwsSigner<
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>publicKey</code> - The public key to be included</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>JwsAsymKeySigner</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
 </dl>
@@ -324,6 +326,8 @@ extends <a href="JwsSigner.html" title="class in org.webpki.jose.jws">JwsSigner<
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>certificatePath</code> - The certificate(s) to be included</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>JwsAsymKeySigner</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></code></dd>

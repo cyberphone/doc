@@ -167,17 +167,17 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#validateDetachedSignature(org.webpki.jose.jws.JwsDecoder,byte%5B%5D)">validateDetachedSignature</a></span>&#8203;(<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;jwsDecoder,
-                         byte[]&nbsp;detachedPayload)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#validate(org.webpki.jose.jws.JwsDecoder)">validate</a></span>&#8203;(<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;jwsDecoder)</code></th>
 <td class="colLast">
-<div class="block">Validate JWS signature in "detached" mode.</div>
+<div class="block">Validate JWS or JWS/CT signature.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#validateSignature(org.webpki.jose.jws.JwsDecoder)">validateSignature</a></span>&#8203;(<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;jwsDecoder)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#validate(org.webpki.jose.jws.JwsDecoder,byte%5B%5D)">validate</a></span>&#8203;(<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;jwsDecoder,
+        byte[]&nbsp;detachedPayload)</code></th>
 <td class="colLast">
-<div class="block">Validate JWS or JWS/CT signature.</div>
+<div class="block">Validate JWS signature in "detached" mode.</div>
 </td>
 </tr>
 </table>
@@ -220,16 +220,16 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 </dl>
 </li>
 </ul>
-<a id="validateDetachedSignature(org.webpki.jose.jws.JwsDecoder,byte[])">
+<a id="validate(org.webpki.jose.jws.JwsDecoder,byte[])">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>validateDetachedSignature</h4>
-<pre class="methodSignature">public&nbsp;<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;validateDetachedSignature&#8203;(<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;jwsDecoder,
-                                            byte[]&nbsp;detachedPayload)
-                                     throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a>,
-                                            <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></pre>
+<h4>validate</h4>
+<pre class="methodSignature">public&nbsp;<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;validate&#8203;(<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;jwsDecoder,
+                           byte[]&nbsp;detachedPayload)
+                    throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a>,
+                           <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></pre>
 <div class="block">Validate JWS signature in "detached" mode.
  Note that the detached mode follows the specification
  described in 
@@ -246,15 +246,15 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 </dl>
 </li>
 </ul>
-<a id="validateSignature(org.webpki.jose.jws.JwsDecoder)">
+<a id="validate(org.webpki.jose.jws.JwsDecoder)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>validateSignature</h4>
-<pre class="methodSignature">public&nbsp;<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;validateSignature&#8203;(<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;jwsDecoder)
-                             throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a>,
-                                    <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></pre>
+<h4>validate</h4>
+<pre class="methodSignature">public&nbsp;<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;validate&#8203;(<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;jwsDecoder)
+                    throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a>,
+                           <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></pre>
 <div class="block">Validate JWS or JWS/CT signature.
  Note that for JWS the "standard" mode is assumed while
  JWS/CT implicitly builds on the "detached" mode.</div>
