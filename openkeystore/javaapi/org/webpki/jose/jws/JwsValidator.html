@@ -169,7 +169,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <td class="colFirst"><code><a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#validate(org.webpki.jose.jws.JwsDecoder)">validate</a></span>&#8203;(<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;jwsDecoder)</code></th>
 <td class="colLast">
-<div class="block">Validate JWS or JWS/CT signature.</div>
+<div class="block">Validate JWS or JWS/CT object.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -177,7 +177,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#validate(org.webpki.jose.jws.JwsDecoder,byte%5B%5D)">validate</a></span>&#8203;(<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;jwsDecoder,
         byte[]&nbsp;detachedPayload)</code></th>
 <td class="colLast">
-<div class="block">Validate JWS signature in "detached" mode.</div>
+<div class="block">Validate JWS object in "detached" mode.</div>
 </td>
 </tr>
 </table>
@@ -230,7 +230,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
                            byte[]&nbsp;detachedPayload)
                     throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a>,
                            <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></pre>
-<div class="block">Validate JWS signature in "detached" mode.
+<div class="block">Validate JWS object in "detached" mode.
  Note that the detached mode follows the specification
  described in 
  <a href="https://tools.ietf.org/html/rfc7515#appendix-F" target="_blank">https://tools.ietf.org/html/rfc7515#appendix-F</a>.</div>
@@ -255,7 +255,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <pre class="methodSignature">public&nbsp;<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;validate&#8203;(<a href="JwsDecoder.html" title="class in org.webpki.jose.jws">JwsDecoder</a>&nbsp;jwsDecoder)
                     throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a>,
                            <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security" class="externalLink">GeneralSecurityException</a></pre>
-<div class="block">Validate JWS or JWS/CT signature.
+<div class="block">Validate JWS or JWS/CT object.
  Note that for JWS the "standard" mode is assumed while
  JWS/CT implicitly builds on the "detached" mode.</div>
 <dl>
