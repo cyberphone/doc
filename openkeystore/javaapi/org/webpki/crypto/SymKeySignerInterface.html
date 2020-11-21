@@ -105,6 +105,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <hr>
 <pre>public interface <span class="typeNameLabel">SymKeySignerInterface</span></pre>
+<div class="block">Common interface for HMAC signatures.</div>
 </li>
 </ul>
 </div>
@@ -126,14 +127,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code><a href="MACAlgorithms.html" title="enum in org.webpki.crypto">MACAlgorithms</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMacAlgorithm()">getMacAlgorithm</a></span>()</code></th>
+<td class="colFirst"><code><a href="HmacAlgorithms.html" title="enum in org.webpki.crypto">HmacAlgorithms</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHmacAlgorithm()">getHmacAlgorithm</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#signData(byte%5B%5D,org.webpki.crypto.MACAlgorithms)">signData</a></span>&#8203;(byte[]&nbsp;data,
-        <a href="MACAlgorithms.html" title="enum in org.webpki.crypto">MACAlgorithms</a>&nbsp;algorithm)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#signData(byte%5B%5D,org.webpki.crypto.HmacAlgorithms)">signData</a></span>&#8203;(byte[]&nbsp;data,
+        <a href="HmacAlgorithms.html" title="enum in org.webpki.crypto">HmacAlgorithms</a>&nbsp;algorithm)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </table>
@@ -153,14 +154,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="signData(byte[],org.webpki.crypto.MACAlgorithms)">
+<a id="signData(byte[],org.webpki.crypto.HmacAlgorithms)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>signData</h4>
 <pre class="methodSignature">byte[]&nbsp;signData&#8203;(byte[]&nbsp;data,
-                <a href="MACAlgorithms.html" title="enum in org.webpki.crypto">MACAlgorithms</a>&nbsp;algorithm)
+                <a href="HmacAlgorithms.html" title="enum in org.webpki.crypto">HmacAlgorithms</a>&nbsp;algorithm)
          throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -168,14 +169,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dl>
 </li>
 </ul>
-<a id="getMacAlgorithm()">
+<a id="getHmacAlgorithm()">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>getMacAlgorithm</h4>
-<pre class="methodSignature"><a href="MACAlgorithms.html" title="enum in org.webpki.crypto">MACAlgorithms</a>&nbsp;getMacAlgorithm()
-                       throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<h4>getHmacAlgorithm</h4>
+<pre class="methodSignature"><a href="HmacAlgorithms.html" title="enum in org.webpki.crypto">HmacAlgorithms</a>&nbsp;getHmacAlgorithm()
+                         throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>

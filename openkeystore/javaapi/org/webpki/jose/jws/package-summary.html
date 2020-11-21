@@ -87,7 +87,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div style='color:grey'><code>// Initialize a signer</code></div>
 <code><a href="JwsAsymKeySigner.html" title="class in org.webpki.jose.jws"><code>JwsAsymKeySigner</code></a> signer = new <a href="JwsAsymKeySigner.html#%3Cinit%3E(java.security.PrivateKey)"><code>JwsAsymKeySigner</code></a>(</code><i>privateKey</i><code>);</code><br>
 <div style='color:grey'><code>// Here you would typically set a key identifier...</code></div>
-<div style='color:grey'><code>// Sign binary data</code></div>
+<div style='color:grey'><code>// Sign binary data.  Argument #2 <b>false</b> = "standard" mode.</code></div>
 <code>String jwsString = signer.<a href="JwsSigner.html#sign(byte%5B%5D,boolean)"><code>sign</code></a>(</code><i>jwsPayload</i><code>,</code> <code>false);</code>
 </div>
 <div>Create a JWS/CT Object:</div>
@@ -107,6 +107,7 @@ The <a href="JwsDecoder.html" title="class in org.webpki.jose.jws"><code>JwsDeco
 <div style='margin:0.5em 0 0.5em 3em'>
 <div style='color:grey'><code>// Decode JWS data</code></div>
 <code><a href="JwsDecoder.html" title="class in org.webpki.jose.jws"><code>JwsDecoder</code></a> jwsDecoder = new <a href="JwsDecoder.html#%3Cinit%3E(java.lang.String)"><code>JwsDecoder</code></a>(</code><i>jwsString</i><code>);</code>
+<div style='color:grey'><code>// Here you would typically look for a key identifier...</code></div>
 <div style='color:grey'><code>// Initialize a validator</code></div>
 <code><a href="JwsAsymSignatureValidator.html" title="class in org.webpki.jose.jws"><code>JwsAsymSignatureValidator</code></a> validator = new <a href="JwsAsymSignatureValidator.html#%3Cinit%3E(java.security.PublicKey)"><code>JwsAsymSignatureValidator</code></a>(</code><i>publicKey</i><code>);</code><br>
 <div style='color:grey'><code>// Validate signature and fetch binary payload</code></div>
@@ -116,6 +117,7 @@ The <a href="JwsDecoder.html" title="class in org.webpki.jose.jws"><code>JwsDeco
 <div style='margin:0.5em 0 0.5em 3em'>
 <div style='color:grey'><code>// Decode JWS/CT object</code></div>
 <code><a href="JwsDecoder.html" title="class in org.webpki.jose.jws"><code>JwsDecoder</code></a> jwsDecoder = new <a href="JwsDecoder.html" title="class in org.webpki.jose.jws"><code>JwsDecoder</code></a>(</code><i>jwsCtObject</i><code>,</code> <i>signatureProperty</i><code>);</code>
+<div style='color:grey'><code>// Here you would typically look for a key identifier...</code></div>
 <div style='color:grey'><code>// Initialize a validator</code></div>
 <code><a href="JwsAsymSignatureValidator.html" title="class in org.webpki.jose.jws"><code>JwsAsymSignatureValidator</code></a> validator = new <a href="JwsAsymSignatureValidator.html" title="class in org.webpki.jose.jws"><code>JwsAsymSignatureValidator</code></a>(</code><i>publicKey</i><code>);</code><br>
 <div style='color:grey'><code>// Validate signature (the JSON data is already available in the <i>jwsCtObject</i>).</code></div>

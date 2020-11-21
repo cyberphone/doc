@@ -134,8 +134,8 @@ extends <a href="JwsSigner.html" title="class in org.webpki.jose.jws">JwsSigner<
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(byte%5B%5D,org.webpki.crypto.MACAlgorithms)">JwsHmacSigner</a></span>&#8203;(byte[]&nbsp;secretKey,
-             <a href="../../crypto/MACAlgorithms.html" title="enum in org.webpki.crypto">MACAlgorithms</a>&nbsp;macAlgorithm)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(byte%5B%5D,org.webpki.crypto.HmacAlgorithms)">JwsHmacSigner</a></span>&#8203;(byte[]&nbsp;secretKey,
+             <a href="../../crypto/HmacAlgorithms.html" title="enum in org.webpki.crypto">HmacAlgorithms</a>&nbsp;hmacAlgorithm)</code></th>
 <td class="colLast">
 <div class="block">Initialize signer.</div>
 </td>
@@ -181,14 +181,14 @@ extends <a href="JwsSigner.html" title="class in org.webpki.jose.jws">JwsSigner<
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a id="&lt;init&gt;(byte[],org.webpki.crypto.MACAlgorithms)">
+<a id="&lt;init&gt;(byte[],org.webpki.crypto.HmacAlgorithms)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>JwsHmacSigner</h4>
 <pre>public&nbsp;JwsHmacSigner&#8203;(byte[]&nbsp;secretKey,
-                     <a href="../../crypto/MACAlgorithms.html" title="enum in org.webpki.crypto">MACAlgorithms</a>&nbsp;macAlgorithm)
+                     <a href="../../crypto/HmacAlgorithms.html" title="enum in org.webpki.crypto">HmacAlgorithms</a>&nbsp;hmacAlgorithm)
               throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <div class="block">Initialize signer.
  
@@ -198,7 +198,7 @@ extends <a href="JwsSigner.html" title="class in org.webpki.jose.jws">JwsSigner<
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>secretKey</code> - The key to use</dd>
-<dd><code>macAlgorithm</code> - HMAC Algorithm to use</dd>
+<dd><code>hmacAlgorithm</code> - HMAC Algorithm to use</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
 </dl>
