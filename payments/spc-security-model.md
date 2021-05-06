@@ -43,9 +43,9 @@ user to activate the associated authenticator.
 Issues:
 - Fairly complex **Merchant** API.
 
-<table><tr><td><i>It is not clear to me what the additional information in
-the SPC assertion brings to the table unless there is some kind
- of interaction between the ACS and the payment process.</i></td></tr></table>
+<table><tr><td><i>It is not clear what the additional information ("dynamic linking") in
+an SPC assertion brings to the table unless there is some kind
+ of OOB interaction between the ACS and the payment process.</i></td></tr></table>
 
 ## Comparison With EMV
 Apart from the fact that EMV is the "Gold Standard" for payments
