@@ -58,7 +58,7 @@ and SPC:
 payment instruments and associated cryptographic keys.
 - Selection of payment instrument is done by the **User**
 through card selection in the **Wallet**.
-- State-of-the-art systems like Google Pay,
+- State-of-the-art systems like Apple and Google Pay,
 *encrypts User authorization data*, reducing PII to an absolute
 minimum (with respect to the Merchant).
 - There are no direct connections to **Issuers** since
