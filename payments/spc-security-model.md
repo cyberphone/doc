@@ -22,8 +22,9 @@ pointing to an ACS (Access Control Server).
 Issues:
 - Most banks in Europe have already established fairly useful 3DS
 systems based on SMS or their mobile banking applications. 
-- There are no DSes for account-to-account numbers since 3DS
-was not designed for that purpose.
+- There are no DSes or ACSer for account-to-account schemes since 3DS
+was not designed for that purpose.  (The numerous systems competing
+with SPC do not build on 3DS).
 - Potentially brittle operation due to the complex server arrangement required.
 
 ### Step 3 - Merchant Calls ACS
