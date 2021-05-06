@@ -34,7 +34,7 @@ with SPC do subsequently not build on 3DS).
 
 ### Step 3 - Merchant Calls ACS
 Issues:
-- To work with FIDO/WebAuthn the return from DS must also contain a credential ID
+- To work with FIDO/WebAuthn the return from the ACS must also contain a credential ID
 and a challenge item.
 
 ### Step 4 - Merchant Aides User Locating Authenticator
