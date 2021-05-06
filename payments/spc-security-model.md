@@ -8,11 +8,16 @@ Note: **Merchant** in this document denotes the certified "plugin"
 SDK required by 3D Secure.
 
 ### Step 1 - Provide Account Number
-In this step the **User** provides the **Merchant** with an account number to use.
+In this step the **User** provides the **Merchant** with an account number intended for paying with.
 Issues:
 - Account numbers represent PII (Personally Identifiable Information).
 - For account-to-account schemes like SEPA this is a *nuisance* since such schemes
 rarely are supported by physical cards holding a printed card number.
+
+From the SPC specification:
+<table><tr><td><i>A merchant also already has a more powerful identifier, i.e. the 
+ raw credit card number the user provided, that it used to exchange to the 
+ credential ID via trusted server side integration with the issuing bank</i></td></tr></table>
 
 ### Step 2 - Merchant Verifies Enrolled Account
 Armed with the account number, the **Merchant** calls a brand-specific
@@ -22,9 +27,9 @@ pointing to an ACS (Access Control Server).
 Issues:
 - Most banks in Europe have already established fairly useful 3DS
 systems based on SMS or their mobile banking applications. 
-- There are no DSes or ACSer for account-to-account schemes since 3DS
+- For account-to-account schemes there are no DS or ACS to call since 3DS
 was not designed for that purpose.  (The numerous systems competing
-with SPC do not build on 3DS).
+with SPC do subsequently not build on 3DS).
 - Potentially brittle operation due to the complex server arrangement required.
 
 ### Step 3 - Merchant Calls ACS
@@ -57,11 +62,11 @@ through card selection in the **Wallet**.
 *encrypts User authorization data*, reducing PII to an absolute
 minimum (with respect to the Merchant).
 - There are no direct connections to **Issuers** since
-EMV is based on "pure" authorization, needing no
-challenges and such.
-- There is no need for certified **Merchant** software, since there
-are no sensitive DS or ACS to call.
-- EMV provides a much better and fully consistent UX.
+EMV is based on "pure" authorization, *needing no
+challenges and such*.
+- There is no need for certified **Merchant** software, since *there
+are no sensitive DS or ACS to call*.
+- EMV provides a better and fully consistent UX.
 
 ## EMV Drawbacks
 - EMV and similar systems require that the
