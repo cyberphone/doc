@@ -23,8 +23,8 @@ Issues:
 - Most banks in Europe have already established fairly useful 3DS
 systems based on SMS or their mobile banking applications. 
 - There are no DSes for account-to-account numbers since 3DS
-were not designed for that.
-- Potentially brittle due to the complex server arrangement required.
+was not designed for that purpose.
+- Potentially brittle operation due to the complex server arrangement required.
 
 ### Step 3 - Merchant Calls ACS
 Issues:
@@ -36,6 +36,10 @@ With the return from a FIDO-enhanced ACS, the **Merchant** aides the
 user to activate the associated authenticator.
 Issues:
 - Fairly complex **Merchant** API.
+
+<table><tr><td><i>It is not clear to me what the additional information in
+the SPC assertion brings to the table unless there is some kind
+ of interaction between the ACS and the payment process.</i></td></tr></table>
 
 ## Comparison With EMV
 Apart from the fact that EMV is the "Gold Standard" for payments
