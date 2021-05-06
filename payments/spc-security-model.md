@@ -1,4 +1,4 @@
-## SPC Security Model
+## SPC - Security and Privacy Model
 This short document reflects the *author's* understanding
 of the security model of SPC (https://github.com/w3c/secure-payment-confirmation)
 as of May 2021.  This information appears to be absent from the
