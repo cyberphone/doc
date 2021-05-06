@@ -28,7 +28,7 @@ Issues:
 - Most banks in Europe have already established fairly useful 3DS
 systems based on SMS or their mobile banking applications. 
 - For account-to-account schemes there are no DS or ACS to call since 3DS
-was not designed for that purpose.  (The numerous systems competing
+was not designed for that purpose (the numerous systems competing
 with SPC do subsequently not build on 3DS).
 - Potentially brittle operation due to the complex server arrangement required.
 
