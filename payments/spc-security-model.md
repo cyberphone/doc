@@ -38,6 +38,10 @@ Issues:
 - Potentially brittle due to the complex server arrangement required.
 
 ## Comparison With EMV
+Apart from the fact that EMV is the "Gold Standard" for payments
+in the *physical world*, there are other factors to consider
+when introducing a new method for *on-line payments*.
+
 The following are the primary differences with EMV
 and SPC:
 - **Merchant**s are "Galvanically Isolated" from the
@@ -56,11 +60,11 @@ are no sensitive DS or ACS to call.
 
 ## EMV Drawbacks
 - EMV and similar systems require that the
-user already is enrolled before being able to perform
+user already is enrolled *before* being able to perform
 a purchase.
 - There is no "frictionless" mode in EMV.  On the other hand,
  a fingerprint swipe seems pretty close.
-- There is no "fallback", either you have EMV or you don't.
+- There is no "fallback", *either you have a suitable EMV credential or you don't*.
 
 
 Anders Rundgren, V0.1, 2021-05-06
