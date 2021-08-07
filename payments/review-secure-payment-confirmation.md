@@ -49,7 +49,7 @@ not to mention *indepdent* technlogists and thinkers.
 ## Other Hurdles
 Althiugh the use of FIDO/WebAuthn adds PSD2 compatible SCA (Stron Customer Authentication) and "dynamic binding",
 the banks in the EU are in fact ready with this upgrade.  SPC presumes that the banks would depretate their
-huge (and on-going) investments in their pretty well functioning mobile banking apps. 
+huge (and on-going) investments in pretty well functioning mobile banking apps. 
 
 ## Conclusion
 Is this a problem? That depends of your perspective.
@@ -59,3 +59,5 @@ payment intiaves.
 
 Personally I think it had been cool if SPC actually challenged
 the "app" revolution.
+
+Anders Rundgren 2021-08-07
