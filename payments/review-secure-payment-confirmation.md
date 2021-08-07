@@ -1,7 +1,7 @@
 ## External Review: Google/W3C Secure Payment Confirmation (SPC)
 I have earlier perfomed a [critical review](https://github.com/cyberphone/doc/blob/gh-pages/payments/paymenthandler.md#the-w3c-paymenthandler) of the Google/W3C PaymentHandler proposal
 where I concluded that it lags considerably compared to native mode technlogy powering solutions like Apple Pay.
-PaymentHandler has recently been abandoned as a TR candidate by the W3C.
+PaymentHandler has also unsurprisingly recently been abandoned as a TR candidate by the W3C.
 
 In this review I am dissecting the "successor", Secure Payment Confirmation (SPC).
 
