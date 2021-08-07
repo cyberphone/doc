@@ -36,14 +36,14 @@ if there possibly could be alternative roads to similar goals.
 
 ## Business Proposal Disguised as a Standardization Effort?
 The participant list in https://www.w3.org/2021/07/26-wpwg-spc-minutes
-shows that the majority represent organizations that depend on 
-tying ("lock-in") merchants to their
+shows that the majority represent organizations that benefit by 
+being able to tie ("lock-in") merchants to their
 own unique checkout solutions or payment networks.
 
 In addition, there are no representatives for *merchants*, *consumers*, or *banks* to find,
 not to mention *independent* payment technologists and thinkers.
 
-This situation seems rather unsatisfactory for an
+This situation seems rather unsatisfactory for a standards
 organization that calls itself WORLD Wide Web Consortium.
 
 That the *other browser vendors* have not been active in the payment WG
