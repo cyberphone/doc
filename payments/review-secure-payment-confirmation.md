@@ -40,7 +40,7 @@ shows that the majority represent organizations that benefit from
 a "framework" approach, which enables tying ("lock-in") merchants to
 unique checkout solutions and payment networks.
 
-In addition, there are no representatives for *merchants*, *consumers*, or *banks* to find,
+Representatives for *merchants*, *consumers*, or *banks* are entirely absent from the plot,
 not to mention *independent* payment technologists and thinkers.
 
 This situation seems rather unsatisfactory for a *standards*
