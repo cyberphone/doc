@@ -29,7 +29,7 @@ challenge the Web Payment WG members' own offerings like:
 - EMVCo: Secure Remote Commerce and 3D Secure standards
 
 Since such a system would obviously create friction,
-the W3C adopted the system developed by Google and Stripe (which has
+W3C adopted the system developed by Google and Stripe (which has
 nothing in common with Apple Pay), more or less "as is", without investigating
 possible alternatives.
 
