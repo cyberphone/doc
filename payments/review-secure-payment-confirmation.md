@@ -46,9 +46,14 @@ not to mention *indepdent* technlogists and thinkers.
 - No support for PoS payments.  Typing in card numbers in a shop doesn't look like a viable concept
 - Cumbersome merchant integration, making outsourcing to Stripe etc the only realistic alternative for the majority of merchants
 
+## Other Hurdles
+Althiugh the use of FIDO/WebAuthn adds PSD2 compatible SCA (Stron Customer Authentication) and "dynamic binding",
+the banks in the EU are in fact ready with this upgrade.  SPC presumes that the banks would depretate their
+huge (and on-going) investments in their pretty well functioning mobile banking apps. 
+
 ## Conclusion
 Is this a problem? That depends of your perspective.
-Given the downsides below, my guess is that SPC will later join
+Given the downsides and hurdles, my guess is that SPC will later join
 PaymentHandler on the growing cemetery of failed Google/W3C
 payment intiaves.
 
