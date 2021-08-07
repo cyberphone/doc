@@ -40,10 +40,10 @@ shows that the majority represent organizations that benefit from
 a "framework" approach, which enables tying ("lock-in") merchants to
 unique checkout solutions and payment networks.
 
-Representatives for *merchants*, *consumers*, or *banks* are entirely absent from the plot,
+Representatives for *merchants*, *consumers*, or *banks* on the other hand, are entirely absent from the plot,
 not to mention *independent* payment technologists and thinkers.
 
-This situation seems rather unsatisfactory for a *standards*
+This situation seems a bit unsatisfactory for a *standards*
 organization that calls itself WORLD Wide Web Consortium.
 
 That the *other browser vendors* have not been active in the payment WG
