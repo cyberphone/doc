@@ -9,12 +9,12 @@ In this review I am dissecting the "successor", [Secure Payment Confirmation](ht
 In 2020 Google and Stripe prototyped a system consisting of PaymentRequest, a browser-resident (built-in)
 payment handler, and using FIDO/WebAuthn as authenticator.
 
-By building the payment handler inside of the browser itself, the SPC can do the things
+By building the payment handler inside of the browser itself, the SPC could do the things
 that ordinary (transiently downloaded "untrusted"), web code cannot including
 not being hampered by the same origin policy.  The latter is crucial for payments
 since a single payment resource (like a payment card) needs to be usable with any
-number of merchants.  That SPC is standardized also means that there is
-nothing to install or download.
+number of merchants.  Not having to install or download anything is of course
+also a strong asset.
 
 This sounds like a worthy competitor to the gazillion of proprietary native payments apps out there, right?
 
