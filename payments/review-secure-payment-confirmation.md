@@ -39,10 +39,10 @@ shows that the majority represent organizations that depend on
 tying ("lock-in") merchants to their
 own unique checkout solutions or payment networks.
 
-There are no representatives for *merchants*, *consumers*, or *banks* to find,
+In addition, there are no representatives for *merchants*, *consumers*, or *banks* to find,
 not to mention *independent* payment technologists and thinkers.
 
-This situation is IMO rather unsatisfactory for an
+This situation seems rather unsatisfactory for an
 organization that calls itself WORLD Wide Web Consortium.
 
 That the *other* browser vendors have not been active in the payment WG
