@@ -3,7 +3,7 @@ I have earlier performed a [critical review](https://github.com/cyberphone/doc/b
 where I concluded that it lags considerably compared to native mode technology powering solutions like Apple Pay.
 PaymentHandler has also unsurprisingly recently been abandoned as a TR candidate by the W3C.
 
-In this review I am dissecting the "successor", [Secure Payment Confirmation](https://w3c.github.io/secure-payment-confirmation/) (SPC).
+In this review I am dissecting its "successor", [Secure Payment Confirmation](https://w3c.github.io/secure-payment-confirmation/) (SPC).
 
 ### Background
 In 2020 Google and Stripe prototyped a system consisting of PaymentRequest, a browser-resident (built-in)
