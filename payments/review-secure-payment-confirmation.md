@@ -44,7 +44,7 @@ not to mention *independent* technologists and thinkers.
 - Awkward UX where you have to punch in your card number everywhere since there "by design" is no wallet.
 - Only supports card networks although many countries in the EU have been quite successful in getting away from the VISA/MC oligopoly.
 - No support for PoS payments.  Typing in card numbers in a shop doesn't look like a viable concept.
-- Cumbersome merchant integration, making outsourcing to Stripe etc the only realistic alternative for the majority of merchants.
+- Cumbersome merchant integration, making outsourcing to Stripe etc., the only realistic alternative for the majority of merchants.
 
 ## Other Hurdles
 Although the use of FIDO/WebAuthn adds PSD2 compatible SCA (Strong Customer Authentication) and "dynamic binding",
