@@ -32,7 +32,7 @@ challenge the Web Payment WG members' own offerings like:
 Since such a system would obviously create friction,
 W3C adopted the system developed by Google and Stripe (which has
 nothing in common with Apple Pay), more or less "as is", without investigating
-possible alternatives.
+if there possibly could be alternative roads to similar goals.
 
 ## Business Proposal Disguised as a Standardization Effort?
 The participant list in https://www.w3.org/2021/07/26-wpwg-spc-minutes
@@ -55,7 +55,8 @@ SPC is inspired by 3D Secure which was designed *before* users had access to
 cool technologies like FIDO.  This heritage also comes with quite a bunch of 3D Secure shortcomings:  
 - Awkward UX where you have to punch in your card number everywhere since there "by design" is no wallet (Card Not Present in 3DS terms).
 - Only supports card networks although many countries in the EU have been quite successful in getting away from the VISA/MC oligopoly.
-- No support for PoS payments.  Typing in card numbers in a shop doesn't look like a viable concept.
+- No support for PoS payments.  Google and the W3C seem to be fairly alone pushing on-line-only payment systems
+as can be seen in this recent study: https://www.arkwright.de/wp-content/uploads/2021/08/ARKWRIGHT-EUROPEAN-MOBILE-PAYMENT.pdf.
 - Cumbersome merchant integration, making outsourcing to Stripe etc., the only realistic alternative for the majority of merchants.
 
 ## Deployment Hurdles
