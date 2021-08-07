@@ -18,9 +18,9 @@ nothing to install or download.
 
 This sounds like a worthy competitor to the ocean of proprietary native payments apps out there, right?
 
-Well, here things gets "complicated"...
+*Well, here things gets "complicated"...*
 
-If SPC actually would be competive with native apps it would also
+If SPC would be competive with native apps it would also
 challenge the Web Payment WG members' own offerings like:
 - Apple: Apple Pay
 - Google: G-Pay
@@ -28,6 +28,29 @@ challenge the Web Payment WG members' own offerings like:
 - VISA/MC/AMEX: Click-to-Pay
 - EMVCo: Secure Remore Commerce and 3D Secure
 
-However, the W3C adopted the system developed by Google and Stripe (which has
-nothing in common with Apple Pay) more or less "as is".  No alternatives were
-investigated, at least there is no record of that.
+Since such a system would create considerable friction,
+the W3C adopted the system developed by Google and Stripe (which has
+nothing in common with Apple Pay), more or less "as is", without investigating
+possible alternaties.
+
+## SPC: Business Proposal Disguided as a Standardization Effort
+Why do I say that? The participant list: https://www.w3.org/2021/07/26-wpwg-spc-minutes only
+holds names of organizations that depend on tying merchants to their
+own unique checkout solution or payment networks.
+There are no representatives for *merchants*, *consumers*, or *banks*,
+not to mention *indepdent* technlogists and thinkers. 
+
+## SPC Downsides at a Glance:
+- Awkward UX where you have to punch in your card number everywhere since there "by design" is no wallet
+- Only supports card networks although many countries in the EU have been quite successful in getting away from the VISA/MC oligopoly
+- No support for PoS payments.  Typing in card numbers in a shop doesn't look like a viable concept
+- Cumbersome merchant integration, making outsourcing to Stripe etc the only realistic alternative for the majority of merchants
+
+## Conclusion
+Is this a problem? That depends of your perspective.
+Given the downsides below, my guess is that SPC will later join
+PaymentHandler on the growing cemetery of failed Google/W3C
+payment intiaves.
+
+Personally I think it had been cool if SPC actually challenged
+the "app" revolution.
