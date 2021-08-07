@@ -46,7 +46,7 @@ not to mention *independent* payment technologists and thinkers.
 This situation seems rather unsatisfactory for an
 organization that calls itself WORLD Wide Web Consortium.
 
-That the *other* browser vendors have not been active in the payment WG
+That the *other browser vendors* have not been active in the payment WG
 the last couple of years, is another indication that everything is
 not entirely on track.
 
