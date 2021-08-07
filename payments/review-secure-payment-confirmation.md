@@ -66,15 +66,15 @@ That is, to succeed, SPC presumes that banks would abandon their
 huge (and on-going) investments in pretty well functioning mobile banking apps.
 
 In theory, Stripe et al could try to force banks to also support SPC but
-I doubt that this is a viable approach because the moderate gain doesn't
-compensate for the additional customer hassles and costs.
+this appears to be a hard sale because the moderate gain (which is?),
+does not compensate for the additional customer hassles and costs.
 
 ## Conclusion
-Given the numerous downsides, my guess is that SPC (*in its current shape will NB*),
+Given the numerous downsides, an not overly wild guess is that SPC (*in its current shape will NB*),
 will later join [BasicCard](https://www.w3.org/TR/payment-method-basic-card/),
 [PaymentHandler](https://www.w3.org/TR/payment-handler/), and
-[PaymentManifest](https://www.w3.org/TR/payment-method-manifest/) in the growing cemetery of failed Google/W3C
-payment intiatives.
+[PaymentManifest](https://www.w3.org/TR/payment-method-manifest/) in the growing
+cemetery of discontinued Google/W3C payment intiatives.
 
 Personally, I think it would have been very cool if SPC had challenged
 the "app" revolution.
