@@ -54,7 +54,7 @@ the banks in the EU are (after intensive pressure from banking regulators), pret
 That is, to succeed, SPC presumes that banks would abandon their
 huge (and on-going) investments in pretty well functioning mobile banking apps.
 
-In theory, Stripe et al could try to force banks to also support SPC but personally
+In theory, Stripe et al could try to force banks to also support SPC but
 I doubt that this is a viable approach because there is really very little to gain.
 
 ## Conclusion
