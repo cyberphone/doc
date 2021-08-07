@@ -51,7 +51,7 @@ the last couple of years, is also slightly worrying.
 
 ## Technical Issues
 SPC is inspired by 3D Secure which was designed *before* users had access to
-cool technologies like FIDO.  This heritage also comes with quite a bunch of 3D Secure shortcomings:  
+advanced security solutions like FIDO.  This heritage also comes with quite a bunch of 3D Secure shortcomings:  
 - Awkward UX where you have to punch in your card number everywhere since there "by design" is no wallet (Card Not Present in 3DS terms).
 - Only supports card networks although many countries in the EU have been quite successful in getting away from the VISA/MC oligopoly.
 - No support for PoS payments.  Google/W3C seem to be fairly alone pushing on-line-only payment systems
