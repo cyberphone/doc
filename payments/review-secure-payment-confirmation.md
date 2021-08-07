@@ -49,7 +49,7 @@ cool technologies like FIDO.  Due to that SPC inherits quite a bunch of 3D Secur
 - Cumbersome merchant integration, making outsourcing to Stripe etc., the only realistic alternative for the majority of merchants.
 
 ## Other Hurdles
-Although the use of FIDO/WebAuthn adds PSD2 compatible SCA (Strong Customer Authentication) and "dynamic binding",
+Although the use of FIDO/WebAuthn adds PSD2 compatible SCA (Strong Customer Authentication) and "dynamic linking",
 the banks in the EU are (after intensive pressure from banking regulators), pretty much ready with this upgrade.
 That is, to succeed, SPC presumes that banks would abandon their
 huge (and on-going) investments in pretty well functioning mobile banking apps.
