@@ -34,8 +34,9 @@ nothing in common with Apple Pay), more or less "as is", without investigating
 possible alternatives.
 
 ## Business Proposal Disguised as a Standardization Effort?
-The participant list in https://www.w3.org/2021/07/26-wpwg-spc-minutes only
-shows names of people representing organizations that depend on tying ("lock-in") merchants to their
+The participant list in https://www.w3.org/2021/07/26-wpwg-spc-minutes
+shows that the majority represent organizations that depend on 
+tying ("lock-in") merchants to their
 own unique checkout solutions or payment networks.
 
 There are no representatives for *merchants*, *consumers*, or *banks* to find,
@@ -43,6 +44,10 @@ not to mention *independent* payment technologists and thinkers.
 
 This situation is IMO rather unsatisfactory for an
 organization that calls itself WORLD Wide Web Consortium.
+
+That the *other* browser vendors have not been active in the payment WG
+the last couple of years, is another indication that everything is
+not entirely on track.
 
 ## Technical Issues
 SPC is inspired by 3D Secure which was designed *before* users had access to
@@ -59,7 +64,8 @@ That is, to succeed, SPC presumes that banks would abandon their
 huge (and on-going) investments in pretty well functioning mobile banking apps.
 
 In theory, Stripe et al could try to force banks to also support SPC but
-I doubt that this is a viable approach because there is really very little to gain.
+I doubt that this is a viable approach because the moderate gain doesn't
+compensate for the additional customer hassles and costs.
 
 ## Conclusion
 Given the numerous downsides, my guess is that SPC (in its current shape will NB),
