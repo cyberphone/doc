@@ -35,10 +35,10 @@ possible alternatives.
 
 ## SPC: Business Proposal Disguised as a Standardization Effort
 Why do I say that? The participant list: https://www.w3.org/2021/07/26-wpwg-spc-minutes only
-holds names of organizations that depend on tying merchants to their
-own unique checkout solution or payment networks.
+holds names of people representing organizations that depend on tying ("lock-in") merchants to their
+own unique checkout solutions or payment networks.
 There are no representatives for *merchants*, *consumers*, or *banks*,
-not to mention *independent * technologists and thinkers. 
+not to mention *independent* technologists and thinkers. 
 
 ## SPC Downsides at a Glance:
 - Awkward UX where you have to punch in your card number everywhere since there "by design" is no wallet.
