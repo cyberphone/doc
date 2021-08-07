@@ -55,7 +55,7 @@ That is, to succeed, SPC presumes that banks would abandon their
 huge (and on-going) investments in pretty well functioning mobile banking apps.
 
 In theory, Stripe et al could try to force banks to also support SPC but personally
-I doubt that this is a viable approach because there is really nothing to gain.
+I doubt that this is a viable approach because there is really very little to gain.
 
 ## Conclusion
 Is this a problem? That depends of your perspective.
