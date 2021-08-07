@@ -37,7 +37,7 @@ possible alternatives.
 Why is that? The participant list in https://www.w3.org/2021/07/26-wpwg-spc-minutes only
 shows names of people representing organizations that depend on tying ("lock-in") merchants to their
 own unique checkout solutions or payment networks.
-There are no representatives for *merchants*, *consumers*, or *banks*,
+There are no representatives for *merchants*, *consumers*, or *banks* to find,
 not to mention *independent* technologists and thinkers.
 
 ## SPC Downsides at a Glance:
