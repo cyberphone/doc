@@ -47,8 +47,7 @@ This situation seems a bit unsatisfactory for a *standards*
 organization that calls itself WORLD Wide Web Consortium.
 
 That the *other browser vendors* have not been active in the payment WG
-the last couple of years, is another indication that everything is
-not entirely on track.
+the last couple of years, is also slightly worrying.
 
 ## Technical Issues
 SPC is inspired by 3D Secure which was designed *before* users had access to
