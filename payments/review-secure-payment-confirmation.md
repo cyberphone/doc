@@ -26,7 +26,7 @@ challenge the Web Payment WG members' own offerings like:
 - Google: G-Pay
 - Stripe, Adyen, et al: Unique payment experiences
 - VISA/MC/AMEX: Click-to-Pay
-- EMVCo: Secure Remote Commerce and 3D Secure
+- EMVCo: Secure Remote Commerce and 3D Secure standards
 
 Since such a system would obviously create considerable friction,
 the W3C adopted the system developed by Google and Stripe (which has
