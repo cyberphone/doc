@@ -3,10 +3,10 @@ I have earlier performed a [critical review](https://github.com/cyberphone/doc/b
 where I concluded that it lags considerably compared to native mode technology powering solutions like Apple Pay.
 PaymentHandler has also unsurprisingly recently been abandoned as a TR candidate by the W3C.
 
-In this review I am dissecting the "successor", Secure Payment Confirmation (SPC).
+In this review I am dissecting the "successor", [Secure Payment Confirmation](https://w3c.github.io/secure-payment-confirmation/) (SPC).
 
 ### Background
-2020 Google and Stripe prototyped a system consisting of PaymentRequest, a browser-resident (built-in)
+In 2020 Google and Stripe prototyped a system consisting of PaymentRequest, a browser-resident (built-in)
 payment handler, and using FIDO/WebAuthn as authenticator.
 
 By building the payment handler inside of the browser itself, the SPC can do the things
@@ -16,7 +16,7 @@ since a single payment resource (like a payment card) needs to be usable with an
 number of merchants.  That SPC is standardized also means that there is
 nothing to install or download.
 
-This sounds like a worthy competitor to the ocean of proprietary native payments apps out there, right?
+This sounds like a worthy competitor to the gazillion of proprietary native payments apps out there, right?
 
 *Well, here things gets "complicated"...*
 
@@ -47,8 +47,9 @@ not to mention *independent * technologists and thinkers.
 - Cumbersome merchant integration, making outsourcing to Stripe etc the only realistic alternative for the majority of merchants
 
 ## Other Hurdles
-Although the use of FIDO/WebAuthn adds PSD2 compatible SCA (Stron Customer Authentication) and "dynamic binding",
-the banks in the EU are in fact ready with this upgrade.  SPC presumes that the banks would abandon their
+Although the use of FIDO/WebAuthn adds PSD2 compatible SCA (Strong Customer Authentication) and "dynamic binding",
+the banks in the EU are (after intensive pressure from banking regulators), pretty much ready with this upgrade.
+To succeed, SPC presumes that the would abandon their
 huge (and on-going) investments in pretty well functioning mobile banking apps. 
 
 ## Conclusion
