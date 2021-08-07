@@ -28,7 +28,7 @@ challenge the Web Payment WG members' own offerings like:
 - VISA/MC/AMEX: Click-to-Pay
 - EMVCo: Secure Remore Commerce and 3D Secure
 
-Since such a system would create considerable friction,
+Since such a system obviouslt would create considerable friction,
 the W3C adopted the system developed by Google and Stripe (which has
 nothing in common with Apple Pay), more or less "as is", without investigating
 possible alternaties.
