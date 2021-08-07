@@ -63,7 +63,7 @@ Given the downsides and hurdles, my guess is that SPC will later join
 PaymentHandler in the growing cemetery of failed Google/W3C
 payment intiatives.
 
-Personally I think it had been cool if SPC actually challenged
+Personally, I think it would have been cool if SPC had challenged
 the "app" revolution.
 
 Anders Rundgren 2021-08-07
