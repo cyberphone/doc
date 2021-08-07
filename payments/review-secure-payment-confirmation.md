@@ -60,7 +60,7 @@ I doubt that this is a viable approach because there is really very little to ga
 ## Conclusion
 Is this a problem? That depends of your perspective.
 Given the downsides and hurdles, my guess is that SPC will later join
-PaymentHandler on the growing cemetery of failed Google/W3C
+PaymentHandler in the growing cemetery of failed Google/W3C
 payment intiatives.
 
 Personally I think it had been cool if SPC actually challenged
