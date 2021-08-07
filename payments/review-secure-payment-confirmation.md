@@ -68,7 +68,7 @@ I doubt that this is a viable approach because the moderate gain doesn't
 compensate for the additional customer hassles and costs.
 
 ## Conclusion
-Given the numerous downsides, my guess is that SPC (in its current shape will NB),
+Given the numerous downsides, my guess is that SPC (*in its current shape will NB*),
 later join PaymentHandler in the growing cemetery of failed Google/W3C
 payment intiatives.
 
