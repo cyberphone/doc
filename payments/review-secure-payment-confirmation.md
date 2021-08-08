@@ -74,7 +74,7 @@ Existing payment methods like "PayPal" are usually represented as icons/text on 
 Due to the "framework" approach, SPC does not follow this pattern:
 https://github.com/w3c/secure-payment-confirmation/issues/65#issuecomment-837081658<br>This will undoubtedly complicate market communication.
 
-## Conclusion
+## Verdict
 Given the numerous downsides, an not overly wild guess is that SPC (*in its current shape will NB*),
 will later join [BasicCard](https://www.w3.org/TR/payment-method-basic-card/),
 [PaymentHandler](https://www.w3.org/TR/payment-handler/), and
