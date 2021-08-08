@@ -19,7 +19,7 @@ also a great asset.
 
 This sounds like a worthy competitor to the gazillion of proprietary native payments apps out there, right?
 
-*Well, now it gets "complicated"...*
+*Well, now things get "complicated"...*
 
 If SPC would be competitive with native apps it could potentially also
 challenge the Web Payment WG members' own offerings like:
