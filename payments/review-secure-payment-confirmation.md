@@ -70,9 +70,8 @@ does not compensate for the additional customer hassles and costs.
 
 ## Unclear Branding
 Existing payment methods like "PayPal" are usually represented as icons/text on checkout pages.
-SPC will apparently not follow the established pattern:
-https://github.com/w3c/secure-payment-confirmation/issues/65#issuecomment-837081658
-This will undoubtedly complicate marketing of SPC.
+SPC will apparently not follow this pattern:
+https://github.com/w3c/secure-payment-confirmation/issues/65#issuecomment-837081658<br>This will undoubtedly complicate marketing of SPC.
 
 ## Conclusion
 Given the numerous downsides, an not overly wild guess is that SPC (*in its current shape will NB*),
