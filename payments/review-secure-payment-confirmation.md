@@ -79,7 +79,7 @@ Given the numerous downsides, a not overly wild guess is that SPC (*in its curre
 will later join [BasicCard](https://www.w3.org/TR/payment-method-basic-card/),
 [PaymentHandler](https://www.w3.org/TR/payment-handler/), and
 [PaymentManifest](https://www.w3.org/TR/payment-method-manifest/) in the growing
-cemetery of discontinued Google/W3C payment intiatives.
+cemetery of discontinued Google/W3C payment specifications.
 
 Personally, I think it would have been very cool if SPC had challenged
 the "app" revolution.
