@@ -69,7 +69,7 @@ this appears to be a hard sale because the moderate gain (which is?),
 does not compensate for the additional customer hassles and costs.
 
 ## Unclear Branding
-Existing payment methods (like "PayPal") are usually represented as icons/text on checkout pages.
+Existing payment methods like "PayPal" are usually represented as icons/text on checkout pages.
 SPC will apparently not follow the established pattern:
 https://github.com/w3c/secure-payment-confirmation/issues/65#issuecomment-837081658
 This will undoubtedly complicate marketing of SPC.
