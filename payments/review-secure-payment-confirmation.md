@@ -21,7 +21,7 @@ This sounds like a worthy competitor to the gazillion of proprietary native paym
 
 *Well, here things gets "complicated"...*
 
-If SPC would be competitive with native apps it would also
+If SPC would be competitive with native apps it could potentially also
 challenge the Web Payment WG members' own offerings like:
 - Apple: Apple Pay
 - Google: G-Pay
