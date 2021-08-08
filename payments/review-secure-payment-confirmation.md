@@ -52,9 +52,9 @@ the last couple of years, is also slightly worrying.
 ## Technical Issues
 SPC was inspired by 3D Secure which was designed *long before* consumers had access to
 advanced security solutions like FIDO.  This heritage also comes with quite a bunch of 3D Secure shortcomings:  
-- Awkward UX where you have to type your card number everywhere since there "by design" is no wallet ("Card Not Present" using 3DS terms).
-- State-of-the-art payment systems like Apple Pay do not build on users handing over GUIDs (card numbers) to third-parties (merchants).
-- Limited to card networks although many countries in the EU have been quite successful enabling account-to-account payments.
+- Awkward UX where you have to type your card number each time since there "by design" is no wallet ("Card Not Present" using 3DS terms).
+- Departs from established "privacy-by-design" principles by requiring users handing over GUIDs (card numbers) to *third-parties* (merchants).
+- Limited to card networks although many countries have been quite successful enabling account-to-account payments.
 - No support for PoS payments.  Google/W3C seem to be fairly alone pushing on-line-only payment systems
 as can be seen in this recent study: https://www.arkwright.de/wp-content/uploads/2021/08/ARKWRIGHT-EUROPEAN-MOBILE-PAYMENT.pdf.
 - Cumbersome merchant integration, making outsourcing to Stripe etc., the only realistic alternative for the majority of merchants.
