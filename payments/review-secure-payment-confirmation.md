@@ -55,7 +55,7 @@ advanced security solutions like FIDO.  This heritage also comes with quite a bu
 - Awkward UX where you have to type your card number each time since there "by design" is no wallet ("Card Not Present" using 3DS terminology).
 - Departs from established privacy by design principles by requiring users handing over GUIDs (card numbers) to *third-parties* (merchants).
 - Limited to card networks although many countries have been quite successful enabling account-to-account payments.
-- No support for PoS payments.  Google/W3C seem to be fairly alone pushing on-line-only payment systems
+- No PoS payments.  Google/W3C seem to be fairly alone pushing on-line-only payment systems
 as can be seen in this recent study: https://www.arkwright.de/wp-content/uploads/2021/08/ARKWRIGHT-EUROPEAN-MOBILE-PAYMENT.pdf.
 - Cumbersome merchant integration, making outsourcing to Stripe etc., the only realistic alternative for the majority of merchants.
 
