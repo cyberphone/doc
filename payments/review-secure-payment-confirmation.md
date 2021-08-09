@@ -52,7 +52,7 @@ the last couple of years, is also slightly worrying.
 ## Technical Issues
 SPC was inspired by 3D Secure which was designed *long before* consumers had access to
 advanced security solutions like FIDO.  Unfortunately this heritage also introduces a number of significant shortcomings:  
-- Awkward UX where you have to *type card data* for each purchase since there is no wallet ("Card Not Present" using 3DS terminology).
+- Awkward UX where users have to *type card data* for each purchase since there is no wallet ("Card Not Present" using 3DS terminology).
 - Departs from established privacy by design principles by requiring users handing over GUIDs (card numbers) to *third-parties* (merchants).
 - Limited to card networks although many countries have been quite successful enabling account-to-account payments.
 - No support for PoS payments.  Google/W3C seem to be fairly alone pushing on-line-only payment systems
@@ -65,9 +65,11 @@ the banks in the EU are (*after intensive pressure from banking regulators*), es
 That is, to succeed, SPC presumes that banks would abandon their
 huge (and on-going) investments in pretty well functioning mobile banking apps.
 
-In theory, Stripe et al could try to force banks to also support SPC but
-this appears to be a hard sale because the moderate gain (which is?),
-does not compensate for the additional customer hassles and costs.
+Unlike SPC, mobile banking apps usually eliminate the 3D Secure enrollment
+process for the cards issued by the particular bank.
+
+Persuading banks to also support SPC appears to be a hard sale
+given the additional customer hassles and costs.
 
 ## Unclear Branding
 Existing payment methods like "PayPal" are usually represented as icons/text on checkout pages.
@@ -84,4 +86,4 @@ cemetery of discontinued Google/W3C payment specifications.
 Personally, I think it would have been very cool if SPC had challenged
 the "app" revolution.
 
-Anders Rundgren 2021-08-08
+Anders Rundgren 2021-08-09
