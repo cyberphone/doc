@@ -66,7 +66,7 @@ That is, to succeed, SPC presumes that banks would abandon their
 huge (and on-going) investments in pretty well functioning mobile banking apps.
 
 Unlike SPC, mobile banking apps usually eliminate the 3D Secure enrollment
-process for the cards issued by the particular bank.
+process for the cards issued by the associated bank.
 
 Persuading banks to also support SPC appears to be a hard sale
 given the additional customer hassles and costs.
