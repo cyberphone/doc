@@ -56,7 +56,7 @@ advanced security solutions like FIDO.  Unfortunately this heritage also comes w
 - Limited to card networks although many countries have been quite successful enabling account-to-account payments.
 - No support for PoS payments.  Google/W3C seem to be fairly alone pushing on-line-only payment systems
 as can be seen in this recent study: https://www.arkwright.de/wp-content/uploads/2021/08/ARKWRIGHT-EUROPEAN-MOBILE-PAYMENT.pdf.
-- Due the need for merchants accessing registers holding sensitive card data as well as authenticating users
+- Due to the need for merchants accessing registers holding sensitive card data as well as authenticating users
 aided by their respective bank, merchant integration gets quite complex, making outsourcing (*including
 SPC invocation*) to payment integrators like Stripe etc.,
 the only realistic alternative for the majority of merchants.![Untitled](https://user-images.githubusercontent.com/8044211/128663115-f192fb27-2edc-4eed-996f-7c86f8526bf6.png)
