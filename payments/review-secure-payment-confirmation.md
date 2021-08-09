@@ -63,9 +63,7 @@ aided by their respective bank, merchant integration gets quite complex, making 
 SPC invocation*) to payment integrators like Stripe etc.,
 the only realistic alternative for the majority of merchants.![Untitled](https://user-images.githubusercontent.com/8044211/128663115-f192fb27-2edc-4eed-996f-7c86f8526bf6.png)
 
-
-
-## Deployment Hurdles
+## Commercialization Hurdles
 Although the use of FIDO/WebAuthn adds PSD2 compatible SCA (Strong Customer Authentication) and "dynamic linking",
 the banks in the EU are (*after intensive pressure from banking regulators*), essentially done with this upgrade.
 That is, to succeed, SPC presumes that banks would abandon their
