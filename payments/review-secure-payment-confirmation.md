@@ -8,7 +8,7 @@ In this review I am dissecting its "successor", [Secure Payment Confirmation](ht
 
 ### Background
 In 2020 Google and Stripe prototyped a system consisting of PaymentRequest, a browser-resident (built-in)
-payment handler, and using FIDO/WebAuthn as authenticator.
+payment handler, and using FIDO/WebAuthn for authentication.
 
 By building the payment handler inside of the browser itself, SPC could do the things
 that ordinary (transiently downloaded and untrusted), web code cannot including
