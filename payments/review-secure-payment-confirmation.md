@@ -61,7 +61,7 @@ as can be seen in this recent study: https://www.arkwright.de/wp-content/uploads
 - Due to the need for merchants accessing registers holding sensitive card data as well as authenticating users
 aided by their respective bank, merchant integration gets quite complex, making outsourcing (*including
 SPC invocation*) to payment integrators like Stripe etc.,
-the only realistic alternative for the vast majority of merchants.![Untitled](https://user-images.githubusercontent.com/8044211/128663115-f192fb27-2edc-4eed-996f-7c86f8526bf6.png)
+the only realistic alternative for the vast majority of merchants.![Untitled](https://user-images.githubusercontent.com/8044211/128663115-f192fb27-2edc-4eed-996f-7c86f8526bf6.png) As a comparison, other payment systems typically only require a secure connection to the payment provider.
 
 ## Commercialization Hurdles
 Although the use of FIDO/WebAuthn adds PSD2 compatible SCA (Strong Customer Authentication) and "dynamic linking",
