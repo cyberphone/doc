@@ -50,7 +50,7 @@ the last couple of years, is also slightly worrying.
 
 ## Technical Issues
 SPC was inspired by 3D Secure which was designed *long before* consumers had access to
-advanced security solutions like FIDO.  Unfortunately this heritage also introduces a number of significant shortcomings:  
+advanced security solutions like FIDO.  Unfortunately this heritage also comes with a number of significant shortcomings:  
 - Awkward UX where users have to *type card data* for each purchase since there is no wallet ("Card Not Present" using 3DS terminology).
 - Departs from established *privacy by design principles* by requiring users handing over GUIDs (card numbers) to *third-parties* (merchants).
 - Limited to card networks although many countries have been quite successful enabling account-to-account payments.
