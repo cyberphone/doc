@@ -13,7 +13,7 @@ payment handler, and using FIDO/WebAuthn for authentication.
 By integrating the payment handler in the browser, SPC could do the things
 that ordinary (transiently downloaded and untrusted), web code cannot like
 offering a "Trusted UI", and not being hampered by the Same Origin Policy (SOP).  The latter is crucial for payments
-since a single payment resource (e.g. payment card) needs to be usable with any
+since a payment resource (e.g. payment card) needs to be usable with any
 number of merchants.  Not having to install or download anything is of course
 also a great asset.
 
