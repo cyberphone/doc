@@ -30,8 +30,10 @@ challenge the Web Payment WG members' own offerings like:
 - EMVCo: Secure Remote Commerce and 3D Secure standards
 
 Since such a proposal would obviously create friction,
-W3C adopted the system developed by Google and Stripe (*which has
-virtually nothing in common with Apple Pay*), more or less "as is", without further ado.
+W3C adopted the system developed by Google and Stripe, more or less "as is", without further ado.
+
+It is in this context worth mentioning that *SPC has
+virtually nothing in common with state-of-the-art systems like Apple Pay*.
 
 ## Business Proposal or Standardization Effort?
 The participant list in https://www.w3.org/2021/07/26-wpwg-spc-minutes
