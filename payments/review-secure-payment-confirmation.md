@@ -1,6 +1,6 @@
 ## External Review: Google/W3C Secure Payment Confirmation (SPC)
 I have earlier performed a [critical review](https://github.com/cyberphone/doc/blob/gh-pages/payments/paymenthandler.md#the-w3c-paymenthandler) of the Google/W3C PaymentHandler proposal
-where I concluded that it lagged considerably compared to native mode technology powering solutions like Apple Pay.
+where I concluded that it lagged considerably compared to native mode technology powering solutions like Apple Pay®.
 That PaymentHandler recently [was abandoned](https://www.w3.org/Payments/WG/charter-2021.html)
 as a TR candidate by the W3C, did not come as a surprise.
 
@@ -23,8 +23,8 @@ This sounds like a worthy competitor to the gazillion of proprietary native paym
 
 If SPC would be competitive with native apps it could potentially also
 challenge the Web Payment WG members' own offerings like:
-- Apple: Apple Pay
-- Google: G-Pay
+- Apple: Apple Pay®
+- Google: G-Pay®
 - Stripe, Adyen, Worldline, et al: Unique payment experiences
 - VISA/MC/AMEX: Click-to-Pay
 - EMVCo: Secure Remote Commerce and 3D Secure standards
