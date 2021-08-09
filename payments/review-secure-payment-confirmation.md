@@ -29,7 +29,7 @@ challenge the Web Payment WG members' own offerings like:
 - VISA/MC/AMEX: Click-to-Pay
 - EMVCo: Secure Remote Commerce and 3D Secure standards
 
-Since only discussing such a proposal would create friction,
+Since only mentioning such a possibility would create friction,
 W3C adopted the system developed by Google and Stripe, more or less "as is", without further ado.
 
 It is in this context worth mentioning that *SPC has
