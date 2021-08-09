@@ -82,7 +82,7 @@ Due to the "framework" approach, SPC does not follow this pattern:
 https://github.com/w3c/secure-payment-confirmation/issues/65#issuecomment-837081658<br>This will undoubtedly complicate market communication.
 
 ## Verdict
-Given the numerous downsides, a not overly wild guess is that SPC (*in its current shape will NB*),
+Given the numerous downsides, a not overly wild guess is that SPC (*in its current incarnation NB*),
 will later join [BasicCard](https://www.w3.org/TR/payment-method-basic-card/),
 [PaymentHandler](https://www.w3.org/TR/payment-handler/), and
 [PaymentManifest](https://www.w3.org/TR/payment-method-manifest/) in the growing
