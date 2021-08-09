@@ -89,6 +89,6 @@ will later join [BasicCard](https://www.w3.org/TR/payment-method-basic-card/),
 cemetery of discontinued Google/W3C payment specifications.
 
 Personally, I think it would have been very cool if SPC had challenged
-the "app" revolution.
+the "app" market.
 
 Anders Rundgren 2021-08-09
