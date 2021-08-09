@@ -33,7 +33,7 @@ Since only mentioning such a possibility would create friction,
 W3C adopted the system developed by Google and Stripe, more or less "as is", without further ado.
 
 It is in this context worth mentioning that *SPC has
-virtually nothing in common with state-of-the-art systems like Apple Pay*.
+virtually nothing in common with state-of-the-art systems like Apple Pay®*.
 
 ## Business Proposal or Standardization Effort?
 The participant list in https://www.w3.org/2021/07/26-wpwg-spc-minutes
@@ -77,7 +77,7 @@ Persuading banks to also support SPC appears to be a hard sale
 given the additional customer hassles and costs.
 
 ## Unclear Branding
-Existing payment methods like "PayPal" are usually represented as icons/text on checkout pages.
+Existing payment methods like PayPal®, are usually represented as icons/text in merchant checkout pages.
 Due to the "framework" approach, SPC does not follow this pattern:
 https://github.com/w3c/secure-payment-confirmation/issues/65#issuecomment-837081658<br>This will undoubtedly complicate market communication.
 
