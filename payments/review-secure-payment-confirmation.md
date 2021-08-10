@@ -25,8 +25,8 @@ If SPC would be competitive with native apps it could potentially also
 challenge the Web Payment WG members' own offerings like:
 - Apple: Apple Pay®
 - Google: G-Pay®
-- Stripe, Adyen, Worldline, et al: Unique payment experiences
-- VISA/MC/AMEX: Click-to-Pay
+- Stripe, Adyen, Worldline, Entersekt, et al: Unique payment experiences
+- VISA, MasterCard, and AMEX: Click-to-Pay
 - EMVCo: Secure Remote Commerce and 3D Secure standards
 
 Since only *mentioning* such a possibility would create friction,
