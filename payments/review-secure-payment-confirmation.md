@@ -63,7 +63,7 @@ as can be seen in this recent study: https://www.arkwright.de/wp-content/uploads
 - Due to the need for merchants accessing registers holding sensitive card data as well as authenticating users
 aided by their respective bank, merchant integration gets quite complex, making outsourcing (*including
 SPC invocation*) to payment integrators like Stripe etc.,
-the only realistic alternative for most merchants.![Untitled](https://user-images.githubusercontent.com/8044211/128723712-f7830b57-4bff-4435-a380-61374b51c6a5.png)
+the only realistic alternative for the majority of merchants.![Untitled](https://user-images.githubusercontent.com/8044211/128723712-f7830b57-4bff-4435-a380-61374b51c6a5.png)
  As a comparison, other payment systems typically only require a secure connection to the payment provider.
 
 ## Commercialization Hurdles
