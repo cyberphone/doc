@@ -11,7 +11,7 @@ In 2020 Google and Stripe prototyped a system consisting of PaymentRequest, a br
 payment handler, and using FIDO/WebAuthn for authentication.
 
 By integrating the payment handler in the browser, SPC could do the things
-that ordinary (transiently downloaded and untrusted), web code cannot like
+that ordinary (transiently downloaded and untrusted), Web code cannot like
 offering a "Trusted UI", and not being hampered by the Same Origin Policy (SOP).  The latter is crucial for payments
 since a payment resource (e.g. payment card) needs to be usable with any
 number of merchants.  Not having to install or download anything is of course
