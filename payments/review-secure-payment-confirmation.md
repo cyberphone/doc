@@ -69,7 +69,7 @@ the only realistic alternative for the majority of merchants.![Untitled](https:/
 ## Commercialization Hurdles
 Although the use of FIDO/WebAuthn adds PSD2 compatible SCA (Strong Customer Authentication) and "dynamic linking",
 the banks in the EU are (*after intensive pressure from banking regulators*), essentially done with this upgrade.
-That is, to succeed, SPC presumes that banks would abandon their
+That is, to succeed, SPC presumes that banks would deprecate their
 huge (and on-going) investments in pretty well functioning mobile banking apps.
 
 Unlike SPC, mobile banking apps usually eliminate the 3D Secure enrollment
