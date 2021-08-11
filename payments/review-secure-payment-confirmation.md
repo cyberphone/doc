@@ -33,7 +33,7 @@ Since such a possibility would create friction,
 W3C adopted the system developed by Google and Stripe, more or less "as is", without further ado.
 
 <table><tr><td>
-It is in this context worth mentioning that <i>SPC has
+It is in this context worth noting that <i>SPC has
  virtually nothing in common with state-of-the-art systems like Apple Pay®</i>.
  </td></tr></table>
 
