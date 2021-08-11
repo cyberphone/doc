@@ -56,7 +56,8 @@ organization that calls itself WORLD Wide Web Consortium.
 
 ## Technical Issues
 SPC was inspired by 3D Secure which was designed *long before* consumers had access to
-advanced security solutions like FIDO.  Unfortunately this heritage also comes with a number of significant shortcomings:  
+advanced security solutions like FIDO and powerful mobile devices.
+Unfortunately this heritage also comes with a number of significant shortcomings:  
 - Awkward UX where users have to *type card data* for each purchase since there is no wallet ("Card Not Present" using 3DS terminology).
 - Departs from established *privacy by design principles* by requiring users handing over GUIDs (card numbers) to *third-parties* (merchants).
 Note that merchants do not really need card numbers; they need assurances that they actually will get paid which only can be provided by banks and similar.
