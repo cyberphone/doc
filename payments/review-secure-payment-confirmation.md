@@ -32,8 +32,10 @@ challenge the Web Payment WG members' own offerings like:
 Since such a possibility would create friction,
 W3C adopted the system developed by Google and Stripe, more or less "as is", without further ado.
 
-It is in this context worth mentioning that *SPC has
-virtually nothing in common with state-of-the-art systems like Apple Pay®*.
+<table><tr><td>
+It is in this context worth mentioning that <i>SPC has
+ virtually nothing in common with state-of-the-art systems like Apple Pay®</i>.
+ </td></tr></table>
 
 ## Business Proposal or Standardization Effort?
 The participant list in https://www.w3.org/2021/07/26-wpwg-spc-minutes
@@ -44,11 +46,13 @@ unique checkout solutions and payment networks.
 Representatives for *merchants*, *consumers*, and *banks* on the other hand, appear to be entirely absent from the plot,
 not to mention *independent* payment technologists and thinkers.
 
-This situation seems a bit unsatisfactory for a *standards*
-organization that calls itself WORLD Wide Web Consortium.
-
 That the *other browser vendors* have not been active in the payment WG
 the last couple of years, is also slightly worrying.
+
+<table><tr><td>
+This situation seems a bit unsatisfactory for a <i>standards</i>
+organization that calls itself WORLD Wide Web Consortium.
+ </td></tr></table>
 
 ## Technical Issues
 SPC was inspired by 3D Secure which was designed *long before* consumers had access to
@@ -56,7 +60,7 @@ advanced security solutions like FIDO.  Unfortunately this heritage also comes w
 - Awkward UX where users have to *type card data* for each purchase since there is no wallet ("Card Not Present" using 3DS terminology).
 - Departs from established *privacy by design principles* by requiring users handing over GUIDs (card numbers) to *third-parties* (merchants).
 Note that merchants do not really need card numbers; they need assurances that they actually will get paid which only can be provided by banks and similar.
-- Limited to card networks although many countries have been quite successful enabling account-to-account payments
+- Limited to card networks although many countries have been quite successful enabling account-to-account (A2A) payments
 like iDEAL in the Netherlands.
 - No support for PoS payments.  Google/W3C seem to be fairly alone pushing on-line-only payment systems
 as can be seen in this recent study: https://www.arkwright.de/wp-content/uploads/2021/08/ARKWRIGHT-EUROPEAN-MOBILE-PAYMENT.pdf.
@@ -64,8 +68,11 @@ as can be seen in this recent study: https://www.arkwright.de/wp-content/uploads
 aided by their respective bank, merchant integration gets quite complex, making outsourcing (*including
 SPC invocation*) to payment integrators like Stripe etc.,
 the only realistic alternative for the majority of merchants.![Untitled](https://user-images.githubusercontent.com/8044211/128723712-f7830b57-4bff-4435-a380-61374b51c6a5.png)
- As a comparison, other payment systems typically only require a secure connection to the payment provider.
 
+<table><tr><td>
+Apple Pay® which was introduced back in 2014, does not suffer from these problems, with A2A support as sole exception.
+ </td></tr></table>
+ 
 ## Commercialization Hurdles
 Although the use of FIDO/WebAuthn adds PSD2 compatible SCA (Strong Customer Authentication) and "dynamic linking",
 the banks in the EU are (*after intensive pressure from banking regulators*), essentially done with this upgrade.
@@ -75,13 +82,17 @@ huge (and on-going) investments in pretty well functioning mobile banking apps.
 Unlike SPC, mobile banking apps usually eliminate the 3D Secure enrollment
 process for cards issued by the associated bank.
 
+<table><tr><td>
 Persuading banks to also support SPC appears to be a hard sale
 given the additional customer hassles and costs.
+ </td></tr></table>
 
 ## Unclear Branding
 Existing payment methods like PayPal®, are usually represented as icons/text in merchant checkout pages.
 Due to the "framework" approach, SPC does not follow this pattern:
-https://github.com/w3c/secure-payment-confirmation/issues/65#issuecomment-837081658<br>This will undoubtedly complicate market communication.
+https://github.com/w3c/secure-payment-confirmation/issues/65#issuecomment-837081658
+
+<table><tr><td>The lack of a brand will undoubtedly complicate market communication.</td></tr></table>
 
 ## Verdict
 Given the numerous downsides, a not overly wild guess is that SPC (*in its current incarnation NB*),
@@ -93,4 +104,4 @@ cemetery of discontinued Google/W3C payment specifications.
 Personally, I think it would have been very cool if SPC had challenged
 the "app" market.
 
-Anders Rundgren 2021-08-10
+Anders Rundgren 2021-08-11
