@@ -66,9 +66,9 @@ like iDEAL in the Netherlands.
 - No support for PoS payments.  Google/W3C seem to be fairly alone pushing on-line-only payment systems
 as can be seen in this recent study: https://www.arkwright.de/wp-content/uploads/2021/08/ARKWRIGHT-EUROPEAN-MOBILE-PAYMENT.pdf.
 - Due to the need for merchants accessing registers holding sensitive card data as well as authenticating users
-aided by their respective bank, merchant integration gets quite complex, making outsourcing (*including
-SPC invocation*) to payment integrators like Stripe etc.,
+aided by their respective bank, merchant integration gets quite complex, making outsourcing to payment integrators like Stripe etc.,
 the only realistic alternative for the majority of merchants.![Untitled](https://user-images.githubusercontent.com/8044211/128723712-f7830b57-4bff-4435-a380-61374b51c6a5.png)
+That is, *although SPC is a Web API targeting merchants, it can in most cases not be used in that way*. 
 
 <table><tr><td>
 Apple Pay® which was introduced back in 2014, does not suffer from these problems, with A2A support as sole exception.
@@ -105,4 +105,4 @@ cemetery of discontinued Google/W3C payment specifications.
 Personally, I think it would have been very cool if SPC had challenged
 the "app" market.
 
-Anders Rundgren 2021-08-11
+Anders Rundgren 2021-08-12
