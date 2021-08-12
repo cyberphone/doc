@@ -71,7 +71,7 @@ the only realistic alternative for the majority of merchants.![Untitled](https:/
 That is, *although SPC is a Web API targeting merchants, it can in most cases not be used in that way*. 
 
 <table><tr><td>
-Apple Pay® which was introduced back in 2014, does not suffer from these problems, with A2A support as sole exception.
+Apple Pay® which was introduced back in 2014, does not suffer from these issues, with A2A support as sole exception.
  </td></tr></table>
  
 ## Commercialization Hurdles
