@@ -68,7 +68,7 @@ as can be seen in this recent study: https://www.arkwright.de/wp-content/uploads
 - <a name="integration"></a>Due to the need for merchants accessing registers holding sensitive card data as well as authenticating users
 aided by their respective bank, merchant integration gets quite complex, making outsourcing to payment integrators like Stripe etc.,
 the only realistic alternative for the majority of merchants.![Untitled](https://user-images.githubusercontent.com/8044211/128723712-f7830b57-4bff-4435-a380-61374b51c6a5.png)
-That is, *although SPC is a Web API targeting merchants, it can in most cases not be used in that way*. 
+That is, *although SPC is a Web API targeting merchants, it can in most cases not be used in that way*. Also see [business proposal](https://github.com/cyberphone/doc/blob/gh-pages/payments/review-secure-payment-confirmation.md#standardization-effort-or-business-proposal).
 
 <table><tr><td>
 Apple Pay® which was introduced back in 2014, does not suffer from these issues, with A2A support as sole exception.
