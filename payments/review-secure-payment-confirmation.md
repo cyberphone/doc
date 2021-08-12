@@ -65,7 +65,7 @@ Note that merchants do not really need card numbers; they need assurances that t
 like iDEAL in the Netherlands.
 - No support for PoS payments.  Google/W3C seem to be fairly alone pushing on-line-only payment systems
 as can be seen in this recent study: https://www.arkwright.de/wp-content/uploads/2021/08/ARKWRIGHT-EUROPEAN-MOBILE-PAYMENT.pdf.
-- Due to the need for merchants accessing registers holding sensitive card data as well as authenticating users
+- <a name="integration"></a>Due to the need for merchants accessing registers holding sensitive card data as well as authenticating users
 aided by their respective bank, merchant integration gets quite complex, making outsourcing to payment integrators like Stripe etc.,
 the only realistic alternative for the majority of merchants.![Untitled](https://user-images.githubusercontent.com/8044211/128723712-f7830b57-4bff-4435-a380-61374b51c6a5.png)
 That is, *although SPC is a Web API targeting merchants, it can in most cases not be used in that way*. 
