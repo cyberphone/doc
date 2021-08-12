@@ -37,7 +37,7 @@ It is in this context worth noting that <i>SPC has
  virtually nothing in common with state-of-the-art systems like Apple Pay®</i>.
  </td></tr></table>
 
-## Business Proposal or Standardization Effort?
+## Standardization Effort or Business Proposal?
 The participant list in https://www.w3.org/2021/07/26-wpwg-spc-minutes
 shows that the majority represent organizations that benefit from 
 a "framework" approach, which enables tying ("lock-in") merchants to
