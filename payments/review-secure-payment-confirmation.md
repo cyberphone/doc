@@ -95,6 +95,8 @@ https://github.com/w3c/secure-payment-confirmation/issues/65#issuecomment-837081
 
 <table><tr><td>The lack of a brand will undoubtedly complicate market communication.</td></tr></table>
 
+Put in another way, *who* is going to market *what* and to *whom*?
+
 ## Verdict
 Given the numerous downsides, a not overly wild guess is that SPC (*in its current incarnation NB*),
 will later join [BasicCard](https://www.w3.org/TR/payment-method-basic-card/),
@@ -105,4 +107,4 @@ cemetery of discontinued Google/W3C payment specifications.
 Personally, I think it would have been very cool if SPC had challenged
 the "app" market.
 
-Anders Rundgren 2021-08-12
+Anders Rundgren 2021-08-13
