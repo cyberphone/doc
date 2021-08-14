@@ -93,7 +93,7 @@ dedicated payment applications like Apple Pay®, AliPay®, Swish®, etc.,
 the reliance on the Chrome browser will most likely slow down and limit adoption
 in the same way as it did for [PaymentHandler](https://www.w3.org/TR/payment-handler/).
 
-SPC lacks a "must have" feature; saving a click or redirect may not be enough to move the market.
+SPC also lacks a "must have" feature; saving a click or redirect may not be enough to move the market.
 
 ## Unclear Branding
 Existing payment methods like PayPal®, are usually represented as icons/text in merchant checkout pages.
