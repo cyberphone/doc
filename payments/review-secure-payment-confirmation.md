@@ -87,6 +87,13 @@ process for cards issued by the associated bank.
 Persuading banks to also support SPC appears to be a hard sale
 given the additional customer hassles and costs.
  </td></tr></table>
+ 
+In addition to stiff competition from established and more functional
+dedicated payment applications like ApplePay, AliPay, Swish, etc.,
+the reliance on the Chrome browser will most likely slow down and limit adoption
+in the same way as it did for [PaymentHandler](https://www.w3.org/TR/payment-handler/).
+
+SPC lacks a "must have" feature; saving a click or redirect may not be enough to move the market.
 
 ## Unclear Branding
 Existing payment methods like PayPal®, are usually represented as icons/text in merchant checkout pages.
@@ -107,4 +114,4 @@ cemetery of discontinued Google/W3C payment specifications.
 Personally, I think it would have been very cool if SPC had challenged
 the "app" market.
 
-Anders Rundgren 2021-08-13
+Anders Rundgren 2021-08-14
