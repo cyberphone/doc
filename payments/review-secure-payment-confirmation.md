@@ -89,7 +89,7 @@ given the additional customer hassles and costs.
  </td></tr></table>
  
 In addition to stiff competition from established and more functional
-dedicated payment applications like ApplePay, AliPay, Swish, etc.,
+dedicated payment applications like Apple Pay®, AliPay®, Swish®, etc.,
 the reliance on the Chrome browser will most likely slow down and limit adoption
 in the same way as it did for [PaymentHandler](https://www.w3.org/TR/payment-handler/).
 
