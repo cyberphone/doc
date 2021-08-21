@@ -73,7 +73,12 @@ That is, *although SPC is a Web API targeting merchants, it can in most cases no
 <table><tr><td>
 Apple Pay® which was introduced back in 2014, does not suffer from these issues, with A2A support as sole exception.
  </td></tr></table>
- 
+
+*Clarification*: Since SPC does not support payment instrument selection, this part
+(including locating the proper issuer authentication service which depends on the selected payment instrument),
+is supposed to have been dealt with *before* SPC is invoked.
+That is, how payment instrument related data is gathered is *deliberately* implementation specific.
+
 ## Commercialization Hurdles
 Although the use of FIDO/WebAuthn adds PSD2 compatible SCA (Strong Customer Authentication) and "dynamic linking",
 the banks in the EU are (*after intensive pressure from banking regulators*), essentially done with this upgrade.
@@ -114,4 +119,4 @@ cemetery of discontinued Google/W3C payment specifications.
 Personally, I think it would have been very cool if SPC had challenged
 the "app" market.
 
-Anders Rundgren 2021-08-14
+Anders Rundgren 2021-08-20
