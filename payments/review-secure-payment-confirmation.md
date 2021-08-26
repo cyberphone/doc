@@ -85,6 +85,8 @@ since instrument handling must be delegated to *untrusted* (regular) Web code.
 Another downside of the SPC scheme is that users are confronted with potentially highly variant UIs.
 This contrasts to wallet based systems where the user authorization process is performed in an integrated fashion,
 making them appear like "black boxes" for merchants while offering unified UIs for users.
+![w3creview](https://user-images.githubusercontent.com/8044211/130892465-af7dac90-99df-4df2-a8a4-085dee57d806.png)
+
 
 ## Commercialization Hurdles
 Although the use of FIDO/WebAuthn adds PSD2 compatible SCA (Strong Customer Authentication) and "dynamic linking",
