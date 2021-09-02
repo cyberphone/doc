@@ -130,8 +130,8 @@ while security with respect to user presumably is *identical*.
 
 Although the opposite (a *standardized* system for user payment authorizations),
 would not automatically solve
-all fragmentation issues, it could surely be an important step in this direction,
-as well as clearly establishing W3C as a force in the payment space.
+all fragmentation issues, it would be an important step in this direction,
+as well as clearly establishing W3C/FIDO alliance as a force in the payment space.
 
 ## Verdict
 Given the numerous downsides, a not overly wild guess is that SPC (*in its current incarnation NB*),
