@@ -122,15 +122,15 @@ Put in another way, *who* is going to market *what* and to *whom*?
 
 ## Fragmentation
 The payment market is currently highly fragmented.  The "framework" approach
-will further increase fragmentation which is unlikely to be in the interest of
-consumers, merchants, and banks.
+will further increase fragmentation which is hardly in the interest of
+*consumers*, *merchants*, and *banks*.
 It is hard to see the point supporting both 3DS and SRC since they
 in the end accomplish the same thing, albeit in a slightly different way,
-while security with respect to user presumably is identical.
+while security with respect to user presumably is *identical*.
 
 Although the opposite (a *standardized* system for user payment authorizations),
 would not automatically solve
-all fragmentation issues, it could surely be a very important step in this direction,
+all fragmentation issues, it could surely be an important step in this direction,
 as well as clearly establishing W3C as a force in the payment space.
 
 ## Verdict
