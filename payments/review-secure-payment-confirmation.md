@@ -124,7 +124,7 @@ Put in another way, *who* is going to market *what* and to *whom*?
 The payment market is currently highly fragmented.  The "framework" approach
 will further increase fragmentation which is hardly in the interest of
 *consumers*, *merchants*, and *banks*.
-It is hard to see the point supporting both 3DS and SRC since they
+There is no obvious reason to support both 3DS and SRC since they
 in the end accomplish the same thing, albeit in a slightly different way,
 while security with respect to user presumably is *identical*.
 
