@@ -59,7 +59,8 @@ SPC was inspired by 3D Secure which was designed *long before* consumers had acc
 advanced security solutions like FIDO and powerful mobile devices.
 Unfortunately this heritage also comes with a number of significant shortcomings:  
 - <a name="ux"></a>Awkward UX where users have to *type card data* for each purchase since there is no wallet ("Card Not Present" using 3DS terminology).
-- <a name="privacy"></a>Departs from established *privacy by design principles* by forcing users handing over "tracking data"
+- <a name="privacy"></a>Departs from established *privacy by design principles* by forcing users handing over
+PII (Personal Identifiable Information)
 like `credentialId` and card numbers to *untrusted third-parties* (merchants).
 Note that merchants do not really need card numbers; they need assurances that they actually will get paid which only can be provided by banks and similar.
 - <a name="a2a"></a>Limited to card networks although many countries have been quite successful enabling account-to-account (A2A) payments
@@ -129,4 +130,4 @@ cemetery of discontinued Google/W3C payment specifications.
 Personally, I think it would have been very cool if SPC had challenged
 the "app" market.
 
-Anders Rundgren 2021-08-24
+Anders Rundgren 2021-09-02
