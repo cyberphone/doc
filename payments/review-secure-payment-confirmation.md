@@ -118,7 +118,7 @@ https://github.com/w3c/secure-payment-confirmation/issues/65#issuecomment-837081
 
 <table><tr><td>The lack of a brand will undoubtedly complicate market communication.</td></tr></table>
 
-Put in another way, *who* is going to market *what* and to *whom*?
+Put in another way, *Who* is going to market *What* and to *Whom*?
 
 ## Fragmentation
 The payment market is currently highly fragmented.  The "framework" approach
