@@ -88,7 +88,9 @@ Another downside of the SPC scheme is that users are confronted with potentially
 This contrasts to wallet based systems where the user authorization process is performed in an integrated fashion,
 making them appear like "black boxes" for merchants while offering unified UIs for users.
 ![w3creview](https://user-images.githubusercontent.com/8044211/130892465-af7dac90-99df-4df2-a8a4-085dee57d806.png)
-The reliance on untrusted Web code is compensated for by the certification requirement. 
+The reliance on untrusted Web code is compensated for by the *certification* and *authentication* requirements.
+
+Since wallet based schemes do not depend on external services for user authorization, *they are inherently more reliable*.
 
 ## Commercialization Hurdles
 Although the use of FIDO/WebAuthn adds PSD2 compatible SCA (Strong Customer Authentication) and "dynamic linking",
@@ -143,4 +145,4 @@ cemetery of discontinued Google/W3C payment specifications.
 Personally, I think it would have been very cool if SPC had challenged
 the "app" market.
 
-Anders Rundgren 2021-09-02
+Anders Rundgren 2021-09-12
