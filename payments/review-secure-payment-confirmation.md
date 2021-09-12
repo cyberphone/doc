@@ -121,7 +121,7 @@ https://github.com/w3c/secure-payment-confirmation/issues/65#issuecomment-837081
 Put in another way, *Who* is going to market *What* and to *Whom*?
 
 ## Fragmentation
-The payment market is currently highly fragmented.  The "framework" approach
+The payment market is highly fragmented.  The "framework" approach
 will further increase fragmentation which is hardly in the interest of
 *consumers*, *merchants*, and *banks*.
 There are no technical reasons for supporting both 3DS and SRC since they
