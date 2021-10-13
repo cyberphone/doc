@@ -43,7 +43,7 @@ shows that the majority represent organizations that benefit from
 a "framework" approach, which enables tying ("lock-in") merchants to
 unique checkout solutions and payment networks.
 
-Representatives for *merchants*, *consumers*, and *banks* on the other hand, appear to be entirely absent from the plot,
+Representatives for *Merchants*, *Consumers*, and *Banks* on the other hand, appear to be entirely absent from the plot,
 not to mention *independent* payment technologists and thinkers.
 
 That the *other browser vendors* have not been active in the payment WG
@@ -125,7 +125,7 @@ Put in another way, *Who* is going to market *What* and to *Whom*?
 ## Fragmentation
 The payment market is highly fragmented.  The "framework" approach
 will further increase fragmentation which is hardly in the interest of
-*consumers*, *merchants*, and *banks*.
+*Consumers*, *Merchants*, and *Banks*.
 There are no technical reasons for supporting both 3DS and SRC since they
 in the end accomplish the same thing, albeit in a slightly different way,
 while security with respect to the user presumably is *identical*.
@@ -133,7 +133,7 @@ while security with respect to the user presumably is *identical*.
 Although the opposite (a *standardized* system for user payment authorizations),
 would not automatically solve
 all fragmentation issues, it would be an important step in this direction,
-as well as clearly establishing W3C/FIDO alliance as a force in the payment space.
+as well as clearly establishing the W3C/FIDO alliance as a force in the payment space.
 
 ## Verdict
 Given the numerous downsides, a not overly wild guess is that SPC (*in its current incarnation NB*),
