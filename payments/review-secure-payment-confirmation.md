@@ -95,8 +95,8 @@ Since wallet based schemes do not depend on external services for user authoriza
 ## A2A Payments
 Since there are thousands of banks, selecting bank becomes a major hassle unless you
 also become a registered user of the payment provider who can hold your current bank
-and account data.  _Although working, this in practice means that SPC will contribute to
-aggregation and data harvesting which already is a major concern._
+and account data.  _This will in practice lead to that SPC contributes to consumer data
+aggregation and harvesting which already is a major concern._
 
 ## Commercialization Hurdles
 Although the use of FIDO/WebAuthn adds PSD2 compatible SCA (Strong Customer Authentication) and "dynamic linking",
