@@ -1,4 +1,4 @@
-## Integrating New Crypto Systems into the Java® Platform
+## Integrating New Crypto Systems into the JavaÂ® Platform
 _This short discussion paper illustrates two different approaches 
 for integrating support for new crypto systems in the Java JCA/JCE
 subsystem, using BLS as an example.
