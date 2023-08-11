@@ -75,8 +75,8 @@ is working with another design, characterized by:
 ASN.1 libraries targeting high-end platforms.
 - Keeping integer and floating point nunbers separated.
 - Bidirectional deterministic encoding.
-- Diagnostic Notatation also as input language.
+- Diagnostic Notatation also as <i>input</i> language.
 
-https://www.ietf.org/archive/id/draft-rundgren-deterministic-cbor-01.html
+Internet-Draft: https://www.ietf.org/archive/id/draft-rundgren-deterministic-cbor-01.html
 
 Current version: 2023-08-11
