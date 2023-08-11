@@ -19,7 +19,7 @@ are (in "normal" applications), hardly measurable.</i>
 In the ASN.1 world, there are two established ways of serializing
 data:
 
-- Low&nbsp;Level: `writeInt(platform-value)`, `writeString(platform-string)`, etc.
+- Low&nbsp;Level: `writeASN1Integer(platform-value)`, `writeASN1String(platform-string)`, etc.
 - Object&nbsp;Oriented: type specific class objects
 like `ASN1Integer(platform-value)`, `ASN1String(platform-string)`, etc.,
 derived from a common base class.
