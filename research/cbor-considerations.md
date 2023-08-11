@@ -55,7 +55,7 @@ not to mention specifying a suitable default profile.</i>
 
 The discussion on the mailing list have not bothered much
 about application level APIs.  However, application level
-APIs may be highly dependent of the choice of CBOR core API.
+APIs may also be dependent on the choice of CBOR core API.
 
 Comment: <i>By using abstraction concepts like the "builder" API,
 application developers can:
