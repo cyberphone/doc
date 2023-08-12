@@ -57,7 +57,7 @@ The discussion on the mailing list have not bothered much
 about application level APIs.  However, application level
 APIs may also be dependent on the choice of CBOR core API.
 
-Comment: <i>By using abstraction concepts like the "builder" API,
+Comment: <i>By using abstraction concepts like "builder" APIs,
 application developers can:
 
 - Be shielded from CBOR altogether, including 
