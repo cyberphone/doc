@@ -43,7 +43,7 @@ basic knowledge of CBOR.  Most developers probably also code
 against a CBOR document schema of some kind.</i>
 
 ### Layering
-Recent drafts consider certain aspects of CBOR encoding
+Recent drafts consider certain aspects of deterministic CBOR encoding
 (including Numeric Reduction), to belong to an
 "application profile" residing in another API layer.
 
@@ -79,4 +79,4 @@ ASN.1 libraries targeting high-end platforms.
 
 Internet-Draft: https://www.ietf.org/archive/id/draft-rundgren-deterministic-cbor-01.html
 
-Current version: 2023-08-11
+Current version: 2023-08-12
