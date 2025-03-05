@@ -4,43 +4,44 @@
 <meta charset="utf-8">
 <meta content="Common,Latin" name="scripts">
 <meta content="initial-scale=1.0" name="viewport">
-<title>Universal CBOR</title>
+<title>Universal CBOR (U-CBOR)</title>
 <meta content="Anders Rundgren" name="author">
 <meta content='
        
-        This document describes a strict subset of CBOR (RFC 8949), intended to serve
-        as a viable replacement for JSON and XML.  To foster interoperability, and to
-        support cryptographic constructs that also can operate on "raw" (unwrapped)
-        CBOR data, deterministic encoding is mandatory.  Although the encoding scheme
-        associated with this specification has been proved to be deployable in constrained
-        environments, the primary target is rather mainstream platforms like mobile
-        phones and Web servers.
+This document defines Universal CBOR (U-CBOR),
+a strict subset of CBOR (RFC 8949)
+intended to serve as a viable replacement for JSON.
+To foster interoperability, deterministic encoding
+is mandated.  Furthermore, the document outlines how
+deterministic encoding combined with enhanced CBOR tools,
+enables the support of cryptographic constructs that
+operate on "raw" (non-wrapped) CBOR data.
+This document mainly targets CBOR tool developers.
        
     ' name="description">
-<meta content="xml2rfc 3.27.0" name="generator">
+<meta content="xml2rfc 3.28.0" name="generator">
 <meta content="CBOR" name="keyword">
 <meta content="Deterministic" name="keyword">
 <meta content="Encoding" name="keyword">
 <meta content="Cryptography" name="keyword">
 <meta content="Enveloped" name="keyword">
 <meta content="Signature" name="keyword">
-<meta content="draft-rundgren-universal-cbor-00" name="ietf.draft">
+<meta content="draft-rundgren-universal-cbor-03" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.27.0
+  xml2rfc 3.28.0
     Python 3.12.3
     ConfigArgParse 1.7
     google-i18n-address 3.1.1
     intervaltree 3.1.0
     Jinja2 3.1.5
-    lxml 5.3.0
+    lxml 5.3.1
     platformdirs 4.3.6
     pycountry 24.6.1
-    pydyf 0.9.0
     PyYAML 6.0.2
     requests 2.32.3
-    setuptools 75.8.0
+    setuptools 75.8.2
     wcwidth 0.2.13
-    weasyprint 61.2
+    weasyprint 64.1
 -->
 <link href="draft-rundgren-universal-cbor.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -1224,12 +1225,12 @@ li > p:last-of-type:only-child {
 <table class="ears">
 <thead><tr>
 <td class="left">Internet-Draft</td>
-<td class="center">CBOR/U</td>
-<td class="right">February 2025</td>
+<td class="center">U-CBOR</td>
+<td class="right">March 2025</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Rundgren</td>
-<td class="center">Expires 31 August 2025</td>
+<td class="center">Expires 6 September 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1239,15 +1240,15 @@ li > p:last-of-type:only-child {
 <dt class="label-workgroup">Workgroup:</dt>
 <dd class="workgroup">Internet Engineering Task Force</dd>
 <dt class="label-internet-draft">Internet-Draft:</dt>
-<dd class="internet-draft">draft-rundgren-universal-cbor-00</dd>
+<dd class="internet-draft">draft-rundgren-universal-cbor-03</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-02-27" class="published">27 February 2025</time>
+<time datetime="2025-03-05" class="published">5 March 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-08-31">31 August 2025</time></dd>
+<dd class="expires"><time datetime="2025-09-06">6 September 2025</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
@@ -1258,18 +1259,19 @@ li > p:last-of-type:only-child {
 </dd>
 </dl>
 </div>
-<h1 id="title">Universal CBOR</h1>
+<h1 id="title">Universal CBOR (U-CBOR)</h1>
 <section id="section-abstract">
-  <h2> NOT RELEASED YET</h2>
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
 <p id="section-abstract-1">
-        This document describes a strict subset of CBOR (RFC 8949), intended to serve
-        as a viable replacement for JSON and XML.  To foster interoperability, and to
-        support cryptographic constructs that also can operate on "raw" (unwrapped)
-        CBOR data, deterministic encoding is mandatory.  Although the encoding scheme
-        associated with this specification has been proved to be deployable in constrained
-        environments, the primary target is rather mainstream platforms like mobile
-        phones and Web servers.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+This document defines Universal CBOR (U-CBOR),
+a strict subset of CBOR (RFC 8949)
+intended to serve as a viable replacement for JSON.
+To foster interoperability, deterministic encoding
+is mandated.  Furthermore, the document outlines how
+deterministic encoding combined with enhanced CBOR tools,
+enables the support of cryptographic constructs that
+operate on "raw" (non-wrapped) CBOR data.
+This document mainly targets CBOR tool developers.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <div id="status-of-memo">
 <section id="section-boilerplate.1">
@@ -1290,7 +1292,7 @@ li > p:last-of-type:only-child {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 31 August 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 6 September 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1340,7 +1342,7 @@ li > p:last-of-type:only-child {
                 <p id="section-toc.1-1.2.2.2.1"><a href="#section-2.2" class="auto internal xref">2.2</a>.  <a href="#name-deterministic-encoding-sche" class="internal xref">Deterministic Encoding Scheme</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.3">
-                <p id="section-toc.1-1.2.2.3.1"><a href="#section-2.3" class="auto internal xref">2.3</a>.  <a href="#name-encoder-decoder-enhancement" class="internal xref">Encoder/Decoder Enhancements</a></p>
+                <p id="section-toc.1-1.2.2.3.1"><a href="#section-2.3" class="auto internal xref">2.3</a>.  <a href="#name-cbor-tool-requirements" class="internal xref">CBOR Tool Requirements</a></p>
 </li>
             </ul>
 </li>
@@ -1362,10 +1364,16 @@ li > p:last-of-type:only-child {
             </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6">
-            <p id="section-toc.1-1.6.1"><a href="#appendix-A" class="auto internal xref">Appendix A</a>.  <a href="#name-sample-values" class="internal xref">Sample Values</a></p>
+            <p id="section-toc.1-1.6.1"><a href="#appendix-A" class="auto internal xref">Appendix A</a>.  <a href="#name-deterministic-encoding-samp" class="internal xref">Deterministic Encoding Samples</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.1">
                 <p id="section-toc.1-1.6.2.1.1"><a href="#appendix-A.1" class="auto internal xref">A.1</a>.  <a href="#name-integers" class="internal xref">Integers</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.2">
+                <p id="section-toc.1-1.6.2.2.1"><a href="#appendix-A.2" class="auto internal xref">A.2</a>.  <a href="#name-floating-point-numbers" class="internal xref">Floating Point Numbers</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.3">
+                <p id="section-toc.1-1.6.2.3.1"><a href="#appendix-A.3" class="auto internal xref">A.3</a>.  <a href="#name-invalid-encodings" class="internal xref">Invalid Encodings</a></p>
 </li>
             </ul>
 </li>
@@ -1384,19 +1392,28 @@ li > p:last-of-type:only-child {
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.4">
                 <p id="section-toc.1-1.7.2.4.1"><a href="#appendix-B.4" class="auto internal xref">B.4</a>.  <a href="#name-example-parameters" class="internal xref">Example Parameters</a></p>
 </li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.5">
+                <p id="section-toc.1-1.7.2.5.1"><a href="#appendix-B.5" class="auto internal xref">B.5</a>.  <a href="#name-code-example" class="internal xref">Code Example</a></p>
+</li>
             </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8">
-            <p id="section-toc.1-1.8.1"><a href="#appendix-C" class="auto internal xref">Appendix C</a>.  <a href="#name-compatible-online-tools" class="internal xref">Compatible Online Tools</a></p>
+            <p id="section-toc.1-1.8.1"><a href="#appendix-C" class="auto internal xref">Appendix C</a>.  <a href="#name-supporting-existing-systems" class="internal xref">Supporting Existing Systems</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.9">
-            <p id="section-toc.1-1.9.1"><a href="#appendix-D" class="auto internal xref">Appendix D</a>.  <a href="#name-compatible-implementations" class="internal xref">Compatible Implementations</a></p>
+            <p id="section-toc.1-1.9.1"><a href="#appendix-D" class="auto internal xref">Appendix D</a>.  <a href="#name-compatible-online-tools" class="internal xref">Compatible Online Tools</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.10">
-            <p id="section-toc.1-1.10.1"><a href="#appendix-E" class="auto internal xref"></a><a href="#name-acknowledgements" class="internal xref">Acknowledgements</a></p>
+            <p id="section-toc.1-1.10.1"><a href="#appendix-E" class="auto internal xref">Appendix E</a>.  <a href="#name-compatible-implementations" class="internal xref">Compatible Implementations</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.11">
-            <p id="section-toc.1-1.11.1"><a href="#appendix-F" class="auto internal xref"></a><a href="#name-authors-address" class="internal xref">Author's Address</a></p>
+            <p id="section-toc.1-1.11.1"><a href="#appendix-F" class="auto internal xref"></a><a href="#name-document-history" class="internal xref">Document History</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.12">
+            <p id="section-toc.1-1.12.1"><a href="#appendix-G" class="auto internal xref"></a><a href="#name-acknowledgements" class="internal xref">Acknowledgements</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.13">
+            <p id="section-toc.1-1.13.1"><a href="#appendix-H" class="auto internal xref"></a><a href="#name-authors-address" class="internal xref">Author's Address</a></p>
 </li>
         </ul>
 </nav>
@@ -1406,6 +1423,35 @@ li > p:last-of-type:only-child {
       <h2 id="name-introduction">
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
+<p id="section-1-1">
+The Universal CBOR (U-CBOR) specification is based on CBOR <span>[<a href="#RFC8949" class="cite xref">RFC8949</a>]</span>.
+While there are different ways you can encode certain CBOR objects,
+this is non-trivial to support in general purpose platform-based tools,
+not to mention the limited utility of such measures.
+To cope with this, U-CBOR defines a specific (non-variant) encoding scheme,
+aka "Deterministic Encoding".  The selected encoding
+scheme is believed to be <em>compatible</em> with most existing
+<em>systems</em> using CBOR.
+See also <a href="#legacy.systems" class="auto internal xref">Appendix C</a>.<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-2">
+U-CBOR is intended to be agnostic with respect to programming
+languages.<a href="#section-1-2" class="pilcrow">¶</a></p>
+<p id="section-1-3">
+By combining the compact binary representation and the rich set of
+data types offered by CBOR, with a deterministic encoding scheme,
+U-CBOR could for <em>new designs</em>, serve as viable alternative
+to JSON <span>[<a href="#RFC8259" class="cite xref">RFC8259</a>]</span>.
+Although the mandated encoding scheme has proved to be
+deployable in constrained environments, the primary target is rather
+mainstream platforms like mobile phones and Web servers.<a href="#section-1-3" class="pilcrow">¶</a></p>
+<p id="section-1-4">
+However, for unleashing the full power of deterministic encoding,
+the ability to perform cryptographic operations on "raw" (non-wrapped)
+CBOR data, compliant U-CBOR tools need additional functionality.
+See also <a href="#enveloped.signatures" class="auto internal xref">Appendix B</a>.<a href="#section-1-4" class="pilcrow">¶</a></p>
+<p id="section-1-5">
+<a href="#detailed.description" class="auto internal xref">Section 2</a> contains the
+actual specification.<a href="#section-1-5" class="pilcrow">¶</a></p>
 <section id="section-1.1">
         <h3 id="name-requirements-language">
 <a href="#section-1.1" class="section-number selfRef">1.1. </a><a href="#name-requirements-language" class="section-name selfRef">Requirements Language</a>
@@ -1422,41 +1468,252 @@ li > p:last-of-type:only-child {
 <a href="#section-1.2" class="section-number selfRef">1.2. </a><a href="#name-common-definitions" class="section-name selfRef">Common Definitions</a>
         </h3>
 <ul class="normal">
-<li class="normal" id="section-1.2-1.1">This document use the conventions defined in CDDL <span>[<a href="#RFC8610" class="cite xref">RFC8610</a>]</span> 
-        for expressing the type of CBOR <span>[<a href="#RFC8949" class="cite xref">RFC8949</a>]</span> data items.<a href="#section-1.2-1.1" class="pilcrow">¶</a>
+<li class="normal" id="section-1.2-1.1">This document uses the conventions defined in CDDL <span>[<a href="#RFC8610" class="cite xref">RFC8610</a>]</span> 
+for expressing the type of CBOR <span>[<a href="#RFC8949" class="cite xref">RFC8949</a>]</span> data items.<a href="#section-1.2-1.1" class="pilcrow">¶</a>
 </li>
           <li class="normal" id="section-1.2-1.2">Examples showing CBOR data, are expressed in "diagnostic notation" as defined
-        in section 8 of CBOR <span>[<a href="#RFC8949" class="cite xref">RFC8949</a>]</span>.<a href="#section-1.2-1.2" class="pilcrow">¶</a>
+in section 8 of <span>[<a href="#RFC8949" class="cite xref">RFC8949</a>]</span>.<a href="#section-1.2-1.2" class="pilcrow">¶</a>
 </li>
           <li class="normal" id="section-1.2-1.3">The term "CBOR object" is equivalent to "CBOR data item"
-        used in CBOR <span>[<a href="#RFC8949" class="cite xref">RFC8949</a>]</span>.<a href="#section-1.2-1.3" class="pilcrow">¶</a>
+used in <span>[<a href="#RFC8949" class="cite xref">RFC8949</a>]</span>.<a href="#section-1.2-1.3" class="pilcrow">¶</a>
 </li>
-          <li class="normal" id="section-1.2-1.4">The term "Universal CBOR" is in this document abbreviated to "CBOR/U".<a href="#section-1.2-1.4" class="pilcrow">¶</a>
+          <li class="normal" id="section-1.2-1.4">The term "Universal CBOR" is in this document abbreviated to "U-CBOR".<a href="#section-1.2-1.4" class="pilcrow">¶</a>
 </li>
         </ul>
 </section>
 </section>
+<div id="detailed.description">
 <section id="section-2">
       <h2 id="name-detailed-description">
 <a href="#section-2" class="section-number selfRef">2. </a><a href="#name-detailed-description" class="section-name selfRef">Detailed Description</a>
       </h2>
-<p id="section-2-1"><b>NOT PUBLISHED YET</b><a href="#section-2-1" class="pilcrow">¶</a></p>
+<p id="section-2-1">This section describes the three pillars that U-CBOR relies on.<a href="#section-2-1" class="pilcrow">¶</a></p>
+<div id="ucbor.objects">
 <section id="section-2.1">
         <h3 id="name-supported-cbor-objects">
 <a href="#section-2.1" class="section-number selfRef">2.1. </a><a href="#name-supported-cbor-objects" class="section-name selfRef">Supported CBOR Objects</a>
-      </h3>
+        </h3>
+<p id="section-2.1-1">The following table shows the CBOR subset supported by U-CBOR:<a href="#section-2.1-1" class="pilcrow">¶</a></p>
+<span id="name-supported-cbor-objects-2"></span><table class="center" id="table-1">
+          <caption>
+<a href="#table-1" class="selfRef">Table 1</a>:
+<a href="#name-supported-cbor-objects-2" class="selfRef">Supported CBOR Objects</a>
+          </caption>
+<thead>
+            <tr>
+              <th class="text-center" rowspan="1" colspan="1">CDDL</th>
+              <th class="text-center" rowspan="1" colspan="1">Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-center" rowspan="1" colspan="1">
+                <code>int</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Integer</td>
+            </tr>
+            <tr>
+              <td class="text-center" rowspan="1" colspan="1">
+                <code>bigint</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Big integer</td>
+            </tr>
+            <tr>
+              <td class="text-center" rowspan="1" colspan="1">
+                <code>float</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">16-, 32-, and 64-bit <span>[<a href="#IEEE754" class="cite xref">IEEE754</a>]</span> numbers</td>
+            </tr>
+            <tr>
+              <td class="text-center" rowspan="1" colspan="1">
+                <code>tstr</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Text string encoded as UTF-8 <span>[<a href="#RFC3629" class="cite xref">RFC3629</a>]</span>
+</td>
+            </tr>
+            <tr>
+              <td class="text-center" rowspan="1" colspan="1">
+                <code>bstr</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Byte string</td>
+            </tr>
+            <tr>
+              <td class="text-center" rowspan="1" colspan="1">
+                <code>bool</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Boolean <code>true</code> and <code>false</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-center" rowspan="1" colspan="1">
+                <code>null</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Represents a <code>null</code> object</td>
+            </tr>
+            <tr>
+              <td class="text-center" rowspan="1" colspan="1">
+                <code>[]</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Array</td>
+            </tr>
+            <tr>
+              <td class="text-center" rowspan="1" colspan="1">
+                <code>{}</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Map</td>
+            </tr>
+            <tr>
+              <td class="text-center" rowspan="1" colspan="1">
+                <code>#6.nnn(type)</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Tagged data</td>
+            </tr>
+          </tbody>
+        </table>
+<p id="section-2.1-3">
+Conforming implementations (of course) only have to implement the U-CBOR types
+required by the targeted application(s).<a href="#section-2.1-3" class="pilcrow">¶</a></p>
+<p id="section-2.1-4">
+Although extensions are imaginable (like supporting all
+"simple" types), extensions will most likely cause
+<em>interoperability issues</em> and are thus NOT RECOMMENDED.  In addition,
+the mandated CBOR subset is compatible with most computer languages and platforms.
+Compared to the current state-of-the-art, JSON <span>[<a href="#RFC8259" class="cite xref">RFC8259</a>]</span>,
+the availability of <code>bigint</code>, <code>bstr</code>, and "tagged data"
+represent major improvements.<a href="#section-2.1-4" class="pilcrow">¶</a></p>
+<p id="section-2.1-5">
+However, nothing prevents developers from at the application (API) level, 
+through mapping concepts, support additional, "virtual" data types,
+analogous to how you map an application's data model to the
+set of data types available, be it a data interchange format,
+a database, or a programming language.<a href="#section-2.1-5" class="pilcrow">¶</a></p>
 </section>
+</div>
+<div id="ucbor.encoding">
 <section id="section-2.2">
         <h3 id="name-deterministic-encoding-sche">
 <a href="#section-2.2" class="section-number selfRef">2.2. </a><a href="#name-deterministic-encoding-sche" class="section-name selfRef">Deterministic Encoding Scheme</a>
-      </h3>
+        </h3>
+<p id="section-2.2-1">
+The U-CBOR encoding scheme adheres to section 4.2 of <span>[<a href="#RFC8949" class="cite xref">RFC8949</a>]</span>,
+but adds a few constraints (denoted by RFC+), where the RFC offers choices.
+The deterministic encoding rules are as follows:<a href="#section-2.2-1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-2.2-2.1">
+RFC+: Floating point and integer objects MUST be treated as <em>distinct types</em>
+regardless of their numeric value. This is compliant with
+Rule 2 in section 4.2.2 of <span>[<a href="#RFC8949" class="cite xref">RFC8949</a>]</span>.<a href="#section-2.2-2.1" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-2.2-2.2">
+            <p id="section-2.2-2.2.1">
+RFC: Integers, represented by the <code>int</code> and
+<code>bigint</code> types, MUST use the <code>int</code>
+type if the value is between <code>-2<sup>64</sup></code>
+and <code>2<sup>64</sup>-1</code>,
+otherwise the <code>bigint</code> type MUST be used.
+<a href="#ucbor.integers" class="auto internal xref">Appendix A.1</a>
+features a list of compliant integer sample values.<a href="#section-2.2-2.2.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-2.2-2.3">
+            <p id="section-2.2-2.3.1">
+RFC+: Floating point numbers MUST always use the shortest
+<span>[<a href="#IEEE754" class="cite xref">IEEE754</a>]</span> variant that
+preserves the precision of the original value.
+<a href="#ucbor.floats" class="auto internal xref">Appendix A.2</a>
+features a list of compliant floating point sample values.<a href="#section-2.2-2.3.1" class="pilcrow">¶</a></p>
+<p id="section-2.2-2.3.2">
+Note that <code>NaN</code> "signaling" (like <code>f97e01</code>),
+MUST be <em>rejected</em>.<a href="#section-2.2-2.3.2" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-2.2-2.4">
+            <p id="section-2.2-2.4.1">
+RFC: Map keys MUST be sorted in the bytewise lexicographic
+order of their deterministic encoding.
+Duplicate keys MUST be <em>rejected</em>.
+Somewhat surprisingly the following represents a properly sorted map:<a href="#section-2.2-2.4.1" class="pilcrow">¶</a></p>
+<div class="lang-cbor sourcecode" id="section-2.2-2.4.2">
+<pre>
+{
+  "a": ... ,
+  "b": ... ,
+  "aa": ...
+}</pre><a href="#section-2.2-2.4.2" class="pilcrow">¶</a>
+</div>
+</li>
+          <li class="normal" id="section-2.2-2.5">
+RFC+: Since CBOR encoding according to this specification
+maintains type and data uniqueness, there are no specific restrictions or
+tests needed in order to determine map key equivalence.
+As an example, the floating-point numbers <code>0.0</code> and
+<code>-0.0</code>, and the integer number <code>0</code>
+represent the distinct keys
+<code>f90000</code>, <code>f98000</code>, and <code>00</code> respectively.<a href="#section-2.2-2.5" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-2.2-2.6">
+RFC+: Indefinite length objects MUST be <em>rejected</em>.<a href="#section-2.2-2.6" class="pilcrow">¶</a>
+</li>
+        </ul>
 </section>
+</div>
+<div id="ucbor.tools">
 <section id="section-2.3">
-        <h3 id="name-encoder-decoder-enhancement">
-<a href="#section-2.3" class="section-number selfRef">2.3. </a><a href="#name-encoder-decoder-enhancement" class="section-name selfRef">Encoder/Decoder Enhancements</a>
-      </h3>
+        <h3 id="name-cbor-tool-requirements">
+<a href="#section-2.3" class="section-number selfRef">2.3. </a><a href="#name-cbor-tool-requirements" class="section-name selfRef">CBOR Tool Requirements</a>
+        </h3>
+<p id="section-2.3-1">
+The primary feature that deterministic encoding brings to the table is
+that wrapping CBOR data to be signed in <code>bstr</code> objects, like
+specified by COSE <span>[<a href="#RFC9052" class="cite xref">RFC9052</a>]</span> (Section 2), no longer is a prerequisite.
+That is, cryptographic operations can <em>optionally</em> be performed
+on "raw" CBOR data.
+Turn to <a href="#enveloped.signatures" class="auto internal xref">Appendix B</a> for
+an example of an application depending on such features.<a href="#section-2.3-1" class="pilcrow">¶</a></p>
+<p id="section-2.3-2">
+However, to make this a reality, the following functionality MUST be
+provided by CBOR tools compliant with this specification:<a href="#section-2.3-2" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-2.3-3.1">
+  It MUST be possible to <em>add</em>, <em>delete</em>, and
+  <em>update</em> the contents of CBOR <code>map</code> and <code>array</code> objects, of
+  received and decoded CBOR data.  Note: CBOR primitives MUST remain <em>immutable</em>.<a href="#section-2.3-3.1" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-2.3-3.2">
+  It MUST be possible to <em>reserialize</em> received CBOR data,
+  be it updated or not.<a href="#section-2.3-3.2" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-2.3-3.3">
+  Irrespective of if CBOR data was received, updated, or created 
+  programmatically, deterministic encoding MUST be maintained.<a href="#section-2.3-3.3" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-2.3-3.4">
+  Invalid or unsupported CBOR constructs, as well as CBOR data not adhering
+  to the deterministic encoding scheme MUST be <em>rejected</em>.
+  See also <a href="#legacy.systems" class="auto internal xref">Appendix C</a> and <a href="#ucbor.invalid" class="auto internal xref">Appendix A.3</a>.<a href="#section-2.3-3.4" class="pilcrow">¶</a>
+</li>
+        </ul>
+<p id="section-2.3-4">
+It is RECOMMENDED <em>separating</em> CBOR data and 
+application / platform-level data,
+since the latter may not always <em>reserialize</em> as expected,
+like in this Chrome browser console example:<a href="#section-2.3-4" class="pilcrow">¶</a></p>
+<div class="lang-cbor sourcecode" id="section-2.3-5">
+<pre>
+&gt; let date = new Date('2025-03-02T13:08:55.0001Z');
+&gt; date.toISOString()
+'2025-03-02T13:08:55.000Z'
+</pre><a href="#section-2.3-5" class="pilcrow">¶</a>
+</div>
+<p id="section-2.3-6">
+How this separation actually is accomplished is out of scope for this specification.
+However, <em>encapsulation</em> of CBOR data in <em>high-level</em>, and
+<em>self-rendering objects</em>, represents a usable method.
+Similar approaches are used by most ASN.1 tools.
+The code in <a href="#example.code" class="auto internal xref">Appendix B.5</a> shows an example
+that <em>updates</em> and <em>reserializes</em> decoded CBOR data.<a href="#section-2.3-6" class="pilcrow">¶</a></p>
 </section>
+</div>
 </section>
+</div>
 <div id="IANA">
 <section id="section-3">
       <h2 id="name-iana-considerations">
@@ -1495,8 +1752,16 @@ li > p:last-of-type:only-child {
 <span class="refAuthor">Bormann, C.</span> and <span class="refAuthor">P. Hoffman</span>, <span class="refTitle">"Concise Binary Object Representation (CBOR)"</span>, <span class="seriesInfo">STD 94</span>, <span class="seriesInfo">RFC 8949</span>, <span class="seriesInfo">DOI 10.17487/RFC8949</span>, <time datetime="2020-12" class="refDate">December 2020</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc8949">https://www.rfc-editor.org/info/rfc8949</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8610">[RFC8610]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Birkholz, H.</span>, <span class="refAuthor">Vigano, C.</span>, and <span class="refAuthor">C. Bormann</span>, <span class="refTitle">"Concise Data Definition Language (CDDL): A Notational Convention to Express Concise Binary Object Representation (CBOR) and JSON Data Structures"</span>, <span class="seriesInfo">RFC 8610</span>, <span class="seriesInfo">DOI 10.17487/RFC8610</span>, <time datetime="2019-06" class="refDate">June 2019</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc8610">https://www.rfc-editor.org/info/rfc8610</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC3629">[RFC3629]</dt>
+        <dd>
+<span class="refAuthor">Yergeau, F.</span>, <span class="refTitle">"UTF-8, a transformation format of ISO 10646"</span>, <span class="seriesInfo">STD 63</span>, <span class="seriesInfo">RFC 3629</span>, <span class="seriesInfo">DOI 10.17487/RFC3629</span>, <time datetime="2003-11" class="refDate">November 2003</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc3629">https://www.rfc-editor.org/info/rfc3629</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="IEEE754">[IEEE754]</dt>
+      <dd>
+<span class="refAuthor">IEEE</span>, <span class="refTitle">"IEEE Standard for Floating-Point Arithmetic"</span>, <span class="seriesInfo">IEEE Std 754-2019</span>, <span class="seriesInfo">DOI 10.1109/IEEESTD.2019.8766229</span>, <span>&lt;<a href="https://ieeexplore.ieee.org/document/8766229">https://ieeexplore.ieee.org/document/8766229</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
 </section>
@@ -1513,36 +1778,58 @@ li > p:last-of-type:only-child {
         <dd>
 <span class="refAuthor">Schaad, J.</span>, <span class="refTitle">"CBOR Object Signing and Encryption (COSE): Initial Algorithms"</span>, <span class="seriesInfo">RFC 9053</span>, <span class="seriesInfo">DOI 10.17487/RFC9053</span>, <time datetime="2022-08" class="refDate">August 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc9053">https://www.rfc-editor.org/info/rfc9053</a>&gt;</span>. </dd>
 <dd class="break"></dd>
+<dt id="RFC8785">[RFC8785]</dt>
+        <dd>
+<span class="refAuthor">Rundgren, A.</span>, <span class="refAuthor">Jordan, B.</span>, and <span class="refAuthor">S. Erdtman</span>, <span class="refTitle">"JSON Canonicalization Scheme (JCS)"</span>, <span class="seriesInfo">RFC 8785</span>, <span class="seriesInfo">DOI 10.17487/RFC8785</span>, <time datetime="2020-06" class="refDate">June 2020</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc8785">https://www.rfc-editor.org/info/rfc8785</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8259">[RFC8259]</dt>
+        <dd>
+<span class="refAuthor">Bray, T., Ed.</span>, <span class="refTitle">"The JavaScript Object Notation (JSON) Data Interchange Format"</span>, <span class="seriesInfo">STD 90</span>, <span class="seriesInfo">RFC 8259</span>, <span class="seriesInfo">DOI 10.17487/RFC8259</span>, <time datetime="2017-12" class="refDate">December 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc8259">https://www.rfc-editor.org/info/rfc8259</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="CSF">[CSF]</dt>
         <dd>
-<span class="refAuthor">Rundgren, A.</span>, <span class="refTitle">"CBOR Signature Format (CSF)"</span>, <time datetime="2025" class="refDate">2025</time>, <span>&lt;<a href="https://cyberphone.github.io/javaapi/org/webpki/cbor/doc-files/signatures.html">https://cyberphone.github.io/javaapi/org/webpki/cbor/doc-files/signatures.html</a>&gt;</span>. </dd>
+<span class="refAuthor">Rundgren, A.</span>, <span class="refTitle">"CBOR Signature Format (CSF)"</span>, <span>&lt;<a href="https://cyberphone.github.io/javaapi/org/webpki/cbor/doc-files/signatures.html">https://cyberphone.github.io/javaapi/org/webpki/cbor/doc-files/signatures.html</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="CEF">[CEF]</dt>
+        <dd>
+<span class="refAuthor">Rundgren, A.</span>, <span class="refTitle">"CBOR Encryption Format (CEF)"</span>, <span>&lt;<a href="https://cyberphone.github.io/javaapi/org/webpki/cbor/doc-files/encryption.html">https://cyberphone.github.io/javaapi/org/webpki/cbor/doc-files/encryption.html</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="CREDENTIALS">[CREDENTIALS]</dt>
+        <dd>
+<span class="refAuthor">Sporny (et al), M.</span>, <span class="refTitle">"Verifiable Credential Data Integrity 1.0"</span>, <time datetime="2025" class="refDate">2025</time>, <span>&lt;<a href="https://www.w3.org/TR/vc-data-integrity/">https://www.w3.org/TR/vc-data-integrity/</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="ECMASCRIPT">[ECMASCRIPT]</dt>
+        <dd>
+<span class="refAuthor">Ecma International</span>, <span class="refTitle">"ECMAScript 2020 Language Specification"</span>, <span class="refContent">Standard ECMA-262, 11th Edition</span>, <time datetime="2020-06" class="refDate">June 2020</time>, <span>&lt;<a href="https://www.ecma-international.org/publications/standards/Ecma-262.htm">https://www.ecma-international.org/publications/standards/Ecma-262.htm</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="GordianEnvelope">[GordianEnvelope]</dt>
       <dd>
-<span class="refAuthor">Rundgren, A.</span>, <span class="refTitle">"CBOR Encryption Format (CEF)"</span>, <time datetime="2025" class="refDate">2025</time>, <span>&lt;<a href="https://cyberphone.github.io/javaapi/org/webpki/cbor/doc-files/encryption.html">https://cyberphone.github.io/javaapi/org/webpki/cbor/doc-files/encryption.html</a>&gt;</span>. </dd>
+<span class="refAuthor">McNally, W.</span> and <span class="refAuthor">C. Allen</span>, <span class="refTitle">"The Gordian Envelope Structured Data Format"</span>, <span>&lt;<a href="https://datatracker.ietf.org/doc/draft-mcnally-envelope/">https://datatracker.ietf.org/doc/draft-mcnally-envelope/</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
 </section>
 </section>
 <div id="sample.values">
 <section id="appendix-A">
-      <h2 id="name-sample-values">
-<a href="#appendix-A" class="section-number selfRef">Appendix A. </a><a href="#name-sample-values" class="section-name selfRef">Sample Values</a>
+      <h2 id="name-deterministic-encoding-samp">
+<a href="#appendix-A" class="section-number selfRef">Appendix A. </a><a href="#name-deterministic-encoding-samp" class="section-name selfRef">Deterministic Encoding Samples</a>
       </h2>
-<div id="sample.integers">
+<div id="ucbor.integers">
 <section id="appendix-A.1">
         <h3 id="name-integers">
 <a href="#appendix-A.1" class="section-number selfRef">A.1. </a><a href="#name-integers" class="section-name selfRef">Integers</a>
         </h3>
-<span id="name-integers-2"></span><table class="center" id="table-1">
+<p id="appendix-A.1-1">This <em>normative</em> section holds a selection
+of CBOR integer values, with an emphasize on edge cases.<a href="#appendix-A.1-1" class="pilcrow">¶</a></p>
+<span id="name-integers-2"></span><table class="center" id="table-2">
           <caption>
-<a href="#table-1" class="selfRef">Table 1</a>:
+<a href="#table-2" class="selfRef">Table 2</a>:
 <a href="#name-integers-2" class="selfRef">Integers</a>
           </caption>
 <thead>
             <tr>
               <th class="text-center" rowspan="1" colspan="1">Value</th>
-              <th class="text-center" rowspan="1" colspan="1">Encoding</th>
+              <th class="text-center" rowspan="1" colspan="1">CBOR Encoding</th>
               <th class="text-center" rowspan="1" colspan="1">Note</th>
             </tr>
           </thead>
@@ -1554,7 +1841,178 @@ li > p:last-of-type:only-child {
               <td class="text-right" rowspan="1" colspan="1">
                 <code>00</code>
 </td>
-              <td class="text-left" rowspan="1" colspan="1">Zero</td>
+              <td class="text-left" rowspan="1" colspan="1">Smallest positive implicit <code>int</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>-1</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>20</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Smallest negative implicit <code>int</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>23</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>17</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Largest positive implicit <code>int</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>-24</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>37</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Largest negative implicit <code>int</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>24</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>1818</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Smallest positive one-byte <code>int</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>-25</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>3818</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Smallest negative one-byte <code>int</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>255</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>18ff</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Largest positive one-byte <code>int</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>-256</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>38ff</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Largest negative one-byte <code>int</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>256</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>190100</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Smallest positive two-byte <code>int</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>-257</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>390100</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Smallest negative two-byte <code>int</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>65535</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>19ffff</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Largest positive two-byte <code>int</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>-65536</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>39ffff</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Largest negative two-byte <code>int</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>65536</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>1a00010000</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Smallest positive four-byte <code>int</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>-65537</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>3a00010000</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Smallest negative four-byte <code>int</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>4294967295</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>1affffffff</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Largest positive four-byte <code>int</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>-4294967296</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>3affffffff</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Largest negative four-byte <code>int</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>4294967296</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>1b0000000100000000</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Smallest positive eight-byte <code>int</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>-4294967297</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>3b0000000100000000</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Smallest negative eight-byte <code>int</code>
+</td>
             </tr>
             <tr>
               <td class="text-right" rowspan="1" colspan="1">
@@ -1563,7 +2021,18 @@ li > p:last-of-type:only-child {
               <td class="text-right" rowspan="1" colspan="1">
                 <code>1bffffffffffffffff</code>
 </td>
-              <td class="text-left" rowspan="1" colspan="1">Largest positive "int"</td>
+              <td class="text-left" rowspan="1" colspan="1">Largest positive eight-byte <code>int</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>-18446744073709551616</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>3bffffffffffffffff</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Largest negative eight-byte <code>int</code>
+</td>
             </tr>
             <tr>
               <td class="text-right" rowspan="1" colspan="1">
@@ -1572,10 +2041,565 @@ li > p:last-of-type:only-child {
               <td class="text-right" rowspan="1" colspan="1">
                 <code>c249010000000000000000</code>
 </td>
-              <td class="text-left" rowspan="1" colspan="1">Smallest positive "bigint"</td>
+              <td class="text-left" rowspan="1" colspan="1">Smallest positive <code>bigint</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>-18446744073709551617</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>c349010000000000000000</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Smallest negative <code>bigint</code>
+</td>
             </tr>
           </tbody>
         </table>
+</section>
+</div>
+<div id="ucbor.floats">
+<section id="appendix-A.2">
+        <h3 id="name-floating-point-numbers">
+<a href="#appendix-A.2" class="section-number selfRef">A.2. </a><a href="#name-floating-point-numbers" class="section-name selfRef">Floating Point Numbers</a>
+        </h3>
+<p id="appendix-A.2-1">This <em>normative</em> section holds a selection
+of <span>[<a href="#IEEE754" class="cite xref">IEEE754</a>]</span> 16, 32, and 64-bit values,
+with an emphasize on edge cases.<a href="#appendix-A.2-1" class="pilcrow">¶</a></p>
+<p id="appendix-A.2-2">The textual representation of the values is based on
+the serialization method for the <code>Number</code> data type,
+defined by <span>[<a href="#ECMASCRIPT" class="cite xref">ECMASCRIPT</a>]</span> with one change:
+to comply with diagnostic notation
+(section 8 of <span>[<a href="#RFC8949" class="cite xref">RFC8949</a>]</span>), all values are
+expressed as floating point numbers.
+The rationale for using <span>[<a href="#ECMASCRIPT" class="cite xref">ECMASCRIPT</a>]</span> serialization is
+because it supposed to generate the shortest and most
+correct representation of <span>[<a href="#IEEE754" class="cite xref">IEEE754</a>]</span> numbers.<a href="#appendix-A.2-2" class="pilcrow">¶</a></p>
+<span id="name-floating-point-numbers-2"></span><table class="center" id="table-3">
+          <caption>
+<a href="#table-3" class="selfRef">Table 3</a>:
+<a href="#name-floating-point-numbers-2" class="selfRef">Floating Point Numbers</a>
+          </caption>
+<thead>
+            <tr>
+              <th class="text-center" rowspan="1" colspan="1">Value</th>
+              <th class="text-center" rowspan="1" colspan="1">CBOR Encoding</th>
+              <th class="text-center" rowspan="1" colspan="1">Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>0.0</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>f90000</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Zero</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>-0.0</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>f98000</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Negative zero</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>Infinity</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>f97c00</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Infinity</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>-Infinity</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>f9fc00</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">-Infinity</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>NaN</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>f97e00</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">NaN</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>5.960464477539063e-8</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>f90001</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Smallest positive <em>subnormal</em> 16-bit <code>float</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>0.00006097555160522461</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>f903ff</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Largest positive <em>subnormal</em> 16-bit <code>float</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>0.00006103515625</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>f90400</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Smallest positive 16-bit <code>float</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>65504.0</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>f97bff</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Largest positive 16-bit <code>float</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>1.401298464324817e-45</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fa00000001</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Smallest positive <em>subnormal</em> 32-bit <code>float</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>1.1754942106924411e-38</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fa007fffff</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Largest positive <em>subnormal</em> 32-bit <code>float</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>1.1754943508222875e-38</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fa00800000</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Smallest positive 32-bit <code>float</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>3.4028234663852886e+38</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fa7f7fffff</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Largest positive 32-bit <code>float</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>5.0e-324</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fb0000000000000001</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Smallest positive <em>subnormal</em> 64-bit <code>float</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>2.225073858507201e-308</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fb000fffffffffffff</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Largest positive <em>subnormal</em> 64-bit <code>float</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>2.2250738585072014e-308</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fb0010000000000000</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Smallest positive 64-bit <code>float</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>1.7976931348623157e+308</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fb7fefffffffffffff</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Largest positive 64-bit <code>float</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>-0.0000033333333333333333</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fbbecbf647612f3696</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Randomly selected number</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>295147905179352830000.0</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fa61800000</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">
+                <code>~2<sup>68</sup></code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>2.0</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>f94000</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Number without a fractional part</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>-5.960464477539063e-8</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>f98001</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Smallest negative <em>subnormal</em> 16-bit <code>float</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>-5.960464477539062e-8</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fbbe6fffffffffffff</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Close to smallest negative <em>subnormal</em> 16-bit <code>float</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>-5.960464477539064e-8</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fbbe70000000000001</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">         ""</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>-5.960465188081798e-8</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fab3800001</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">         ""</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>0.0000609755516052246</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fb3f0ff7ffffffffff</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Close to largest <em>subnormal</em> 16-bit <code>float</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>0.000060975551605224616</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fb3f0ff80000000001</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">         ""</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>0.000060975555243203416</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fa387fc001</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">         ""</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>0.00006103515624999999</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fb3f0fffffffffffff</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Close to smallest 16-bit <code>float</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>0.00006103515625000001</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fb3f10000000000001</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">         ""</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>0.00006103516352595761</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fa38800001</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">         ""</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>65503.99999999999</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fb40effbffffffffff</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Close to largest 16-bit <code>float</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>65504.00000000001</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fb40effc0000000001</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">         ""</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>65504.00390625</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fa477fe001</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">         ""</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>1.4012984643248169e-45</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fb369fffffffffffff</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Close to smallest <em>subnormal</em> 32-bit <code>float</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>1.4012984643248174e-45</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fb36a0000000000001</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">         ""</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>1.175494210692441e-38</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fb380fffffbfffffff</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Close to largest <em>subnormal</em> 32-bit <code>float</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>1.1754942106924412e-38</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fb380fffffc0000001</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">         ""</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>1.1754943508222874e-38</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fb380fffffffffffff</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Close to smallest 32-bit <code>float</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>1.1754943508222878e-38</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fb3810000000000001</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">         ""</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>3.4028234663852882e+38</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fb47efffffdfffffff</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Close to largest 32-bit <code>float</code>
+</td>
+            </tr>
+            <tr>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>3.402823466385289e+38</code>
+</td>
+              <td class="text-right" rowspan="1" colspan="1">
+                <code>fb47efffffe0000001</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">         ""</td>
+            </tr>
+          </tbody>
+        </table>
+</section>
+</div>
+<div id="ucbor.invalid">
+<section id="appendix-A.3">
+        <h3 id="name-invalid-encodings">
+<a href="#appendix-A.3" class="section-number selfRef">A.3. </a><a href="#name-invalid-encodings" class="section-name selfRef">Invalid Encodings</a>
+        </h3>
+<p id="appendix-A.3-1">The following table holds a selection of valid CBOR objects,
+      not permitted by U-CBOR.<a href="#appendix-A.3-1" class="pilcrow">¶</a></p>
+<span id="name-invalid-encodings-2"></span><table class="center" id="table-4">
+          <caption>
+<a href="#table-4" class="selfRef">Table 4</a>:
+<a href="#name-invalid-encodings-2" class="selfRef">Invalid Encodings</a>
+          </caption>
+<thead>
+            <tr>
+              <th class="text-center" rowspan="1" colspan="1">CBOR Encoding</th>
+              <th class="text-center" rowspan="1" colspan="1">Diagnostic Notation</th>
+              <th class="text-center" rowspan="1" colspan="1">Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">
+                <code>a2616200616101</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">
+                <code>{"b":0,"a":1}</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Improper map key ordering [1]</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">
+                <code>1900ff</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">
+                <code>255</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Number with leading zero bytes [1]</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">
+                <code>c34a00010000000000000000</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">
+                <code>-18446744073709551617</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Number with leading zero bytes [1]</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">
+                <code>Fa41280000</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">
+                <code>10.5</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Not in shortest encoding [1]</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">
+                <code>fa7fc00000</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">
+                <code>NaN</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Not in shortest encoding [1]</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">
+                <code>c243010000</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">
+                <code>65536</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Incorrect value for <code>bigint</code> [1]</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">
+                <code>f97e01</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">
+                <code>NaN</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">NaN with payload [1]</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">
+                <code>f7</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">
+                <code>undefined</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Unsupported simple type</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">
+                <code>f0</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">
+                <code>simple(16)</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Unsupported simple type</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">
+                <code>5f4101420203ff</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">
+                <code>(_ h'01', h'0203')</code>
+</td>
+              <td class="text-left" rowspan="1" colspan="1">Unsupported indefinite length object</td>
+            </tr>
+          </tbody>
+        </table>
+<ol start="1" type="1" class="normal type-1" id="appendix-A.3-3">
+<li id="appendix-A.3-3.1">See also <a href="#legacy.systems" class="auto internal xref">Appendix C</a>.<a href="#appendix-A.3-3.1" class="pilcrow">¶</a>
+</li>
+        </ol>
 </section>
 </div>
 </section>
@@ -1585,7 +2609,7 @@ li > p:last-of-type:only-child {
       <h2 id="name-enveloped-signatures">
 <a href="#appendix-B" class="section-number selfRef">Appendix B. </a><a href="#name-enveloped-signatures" class="section-name selfRef">Enveloped Signatures</a>
       </h2>
-<p id="appendix-B-1">This is a <em>non-normative</em> appendix showing how CBOR/U
+<p id="appendix-B-1">This is a <em>non-normative</em> appendix showing how U-CBOR
       can be used for supporting enveloped signatures.<a href="#appendix-B-1" class="pilcrow">¶</a></p>
 <p id="appendix-B-2">The primary advantages with enveloped signatures compared to
       the approach used by COSE <span>[<a href="#RFC9052" class="cite xref">RFC9052</a>]</span> include:<a href="#appendix-B-2" class="pilcrow">¶</a></p>
@@ -1598,12 +2622,18 @@ li > p:last-of-type:only-child {
         having to wrap data in CBOR "bstr" objects.<a href="#appendix-B-3.2" class="pilcrow">¶</a>
 </li>
       </ul>
-<p id="appendix-B-4">Although this specification is not "married" to any particular
-      signature schema, the examples build on the CBOR Signature Format
+<p id="appendix-B-4">Enveloped signatures are for example featured in Verified Credentials 
+      <span>[<a href="#CREDENTIALS" class="cite xref">CREDENTIALS</a>]</span>.
+      A drawback with designs based on JSON <span>[<a href="#RFC8259" class="cite xref">RFC8259</a>]</span> is that they
+      rely on <em>canonicalization schemes</em> like JCS <span>[<a href="#RFC8785" class="cite xref">RFC8785</a>]</span>,
+      that require specialized encoders and decoders, whereas U-CBOR works
+      "straight out of the box".<a href="#appendix-B-4" class="pilcrow">¶</a></p>
+<p id="appendix-B-5">Although this specification is not "married" to any particular
+      signature schema, the example uses the CBOR Signature Format
       <span>[<a href="#CSF" class="cite xref">CSF</a>]</span>.
-      For the sake of simplicity, the examples use an HMAC
+      For the sake of simplicity, the example uses an HMAC
       (see <a href="#example.parameters" class="auto internal xref">Appendix B.4</a>)
-      as signature algorithm.<a href="#appendix-B-4" class="pilcrow">¶</a></p>
+      as signature algorithm.<a href="#appendix-B-5" class="pilcrow">¶</a></p>
 <div id="example.unsigned">
 <section id="appendix-B.1">
         <h3 id="name-unsigned-data">
@@ -1650,7 +2680,10 @@ li > p:last-of-type:only-child {
               <li class="normal" id="appendix-B.2-2.4.2.2">the designated signature algorithm.<a href="#appendix-B.2-2.4.2.2" class="pilcrow">¶</a>
 </li>
               <li class="normal" id="appendix-B.2-2.4.2.3">the <em>deterministic encoding</em> of the
-          current CBOR object in its <em>entirety</em>.<a href="#appendix-B.2-2.4.2.3" class="pilcrow">¶</a>
+          current CBOR object in its <em>entirety</em>.
+          In the example that would be 
+          <code>a301646461746102696d6f7265206461746120a10105</code>,
+          if expressed in hex code.<a href="#appendix-B.2-2.4.2.3" class="pilcrow">¶</a>
 </li>
             </ul>
 </li>
@@ -1737,7 +2770,7 @@ li > p:last-of-type:only-child {
         <h3 id="name-example-parameters">
 <a href="#appendix-B.4" class="section-number selfRef">B.4. </a><a href="#name-example-parameters" class="section-name selfRef">Example Parameters</a>
         </h3>
-<p id="appendix-B.4-1">The signature and validation examples depend on the
+<p id="appendix-B.4-1">The signature and validation processes depend on the
         COSE <span>[<a href="#RFC9053" class="cite xref">RFC9053</a>]</span> algorithm "HMAC 256/256" and an
         associated 256-bit key, here provided in hex code:<a href="#appendix-B.4-1" class="pilcrow">¶</a></p>
 <div class="lang-any sourcecode" id="appendix-B.4-2">
@@ -1746,63 +2779,187 @@ li > p:last-of-type:only-child {
 </div>
 </section>
 </div>
+<div id="example.code">
+<section id="appendix-B.5">
+        <h3 id="name-code-example">
+<a href="#appendix-B.5" class="section-number selfRef">B.5. </a><a href="#name-code-example" class="section-name selfRef">Code Example</a>
+        </h3>
+<p id="appendix-B.5-1">Using the JavaScript implementation mentioned in
+        <a href="#tools.implementations" class="auto internal xref">Appendix E</a> together with Nodejs,
+        basic signature creation and validation validation supporting
+        the example in  <a href="#example.unsigned" class="auto internal xref">Appendix B.1</a>,
+        could be performed by the following code:<a href="#appendix-B.5-1" class="pilcrow">¶</a></p>
+<div class="breakable lang-any sourcecode" id="appendix-B.5-2">
+<pre>
+// hmac.mjs
+import CBOR from 'cbor-object';
+const crypto = await import('node:crypto');
+
+// CSF constants
+const CSF_ALG_LBL = CBOR.Int(1);
+const CSF_SIG_LBL = CBOR.Int(6);
+
+// COSE =&gt; Node.js algorithm translation
+const HASH_ALGORITHMS = new Map()
+    .set(5, "sha256") .set(6, "sha384").set(7, "sha512");
+
+function hmac(coseAlg, key, data) {
+    let alg = HASH_ALGORITHMS.get(coseAlg);
+    if (alg === undefined) throw "Unknown alg: " + coseAlg;
+    return crypto.createHmac(alg, key).update(data).digest();
+}
+
+const SHARED_KEY = crypto.createSecretKey(
+    '7fdd851a3b9d2dafc5f0d00030e22b9343900cd42ede4948568a4a2ee655291a', 'hex');
+const APP_SIG_LBL = CBOR.Int(-1);
+
+////////////////////////////////////
+// Create an unsigned CBOR object //
+////////////////////////////////////
+let object = CBOR.Map()
+    .set(CBOR.Int(1), CBOR.String("data"))         // Application data
+    .set(CBOR.Int(2), CBOR.String("more data"));   //        ""
+
+////////////////////////////////////////
+// Add a signature to the CBOR object //
+////////////////////////////////////////
+const COSE_ALG = 5;                                // Selected algorithm
+
+let csf = CBOR.Map()                               // Create CSF container
+    .set(CSF_ALG_LBL, CBOR.Int(COSE_ALG));         // Add algorithm
+object.set(APP_SIG_LBL, csf);                      // Add CSF container to object
+// Generate signature and add it to the CSF container
+csf.set(CSF_SIG_LBL, CBOR.Bytes(hmac(COSE_ALG, SHARED_KEY, object.encode())));
+let cborBinary = object.encode();                  // Uint8Array
+
+console.log(object.toString());                    // Show in Diagnostic Notation
+
+/////////////////////////////////////
+// Validate the signed CBOR object //
+/////////////////////////////////////
+object = CBOR.decode(cborBinary);                  // Decode
+csf = object.get(APP_SIG_LBL);                     // Get CSF container
+let alg = csf.get(CSF_ALG_LBL).getInt();           // Get COSE algorithm
+let sig = csf.remove(CSF_SIG_LBL).getBytes();      // Get and remove signature value
+let res = hmac(alg, SHARED_KEY, object.encode());  // Note that object.encode()
+                                                   // reserializes all but sig.
+if (CBOR.compareArrays(res, sig)) {
+    throw "Didn't validate";
+}
+// Validated object, access the "payload":
+let param = object.get(CBOR.Int(1)).getString();   // param should now contain "data"</pre><a href="#appendix-B.5-2" class="pilcrow">¶</a>
+</div>
+<p id="appendix-B.5-3">
+Note that this code depends heavily on the CBOR tool features
+outlined in <a href="#ucbor.tools" class="auto internal xref">Section 2.3</a>.<a href="#appendix-B.5-3" class="pilcrow">¶</a></p>
+</section>
+</div>
+</section>
+</div>
+<div id="legacy.systems">
+<section id="appendix-C">
+      <h2 id="name-supporting-existing-systems">
+<a href="#appendix-C" class="section-number selfRef">Appendix C. </a><a href="#name-supporting-existing-systems" class="section-name selfRef">Supporting Existing Systems</a>
+      </h2>
+<p id="appendix-C-1">
+It is assumed that <em>most</em>
+systems using CBOR are able to process an (<em>application specific</em>), 
+selection of CBOR data items that are encoded in compliance with
+<span>[<a href="#RFC8949" class="cite xref">RFC8949</a>]</span>.  Since the deterministic encoding scheme
+mandated by U-CBOR, also is compliant with <span>[<a href="#RFC8949" class="cite xref">RFC8949</a>]</span>,
+there should be no major interoperability issues. 
+That is, if the previous assumption actually is correct 😏<a href="#appendix-C-1" class="pilcrow">¶</a></p>
+<p id="appendix-C-2">
+However, in the <em>other</em> direction (U-CBOR tools processing
+data from Systems using "legacy" CBOR encoding schemes),
+the situation is likely to be considerably more challenging
+since deterministic encoding "by design" is <em>strict</em>.
+Due to this potential obstacle, implementers of U-CBOR tools,
+are RECOMMENDED to offer <em>decoder</em> options that permit "relaxing"
+the rigidness of deterministic encoding with respect to:<a href="#appendix-C-2" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="appendix-C-3.1">Numbers.  Numbers MUST still be compliant with <span>[<a href="#RFC8949" class="cite xref">RFC8949</a>]</span>.<a href="#appendix-C-3.1" class="pilcrow">¶</a>
+</li>
+        <li class="normal" id="appendix-C-3.2">Sorted maps.  Duplicate keys MUST still be rejected.<a href="#appendix-C-3.2" class="pilcrow">¶</a>
+</li>
+      </ul>
+<p id="appendix-C-4">Note that regardless of the format of received CBOR data, a compliant
+U-CBOR implementation MUST maintain deterministic encoding.
+See also <a href="#ucbor.invalid" class="auto internal xref">Appendix A.3</a>.<a href="#appendix-C-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="tools.online">
-<section id="appendix-C">
+<section id="appendix-D">
       <h2 id="name-compatible-online-tools">
-<a href="#appendix-C" class="section-number selfRef">Appendix C. </a><a href="#name-compatible-online-tools" class="section-name selfRef">Compatible Online Tools</a>
+<a href="#appendix-D" class="section-number selfRef">Appendix D. </a><a href="#name-compatible-online-tools" class="section-name selfRef">Compatible Online Tools</a>
       </h2>
-<p id="appendix-C-1">For testing and learning about CBOR/U,
+<p id="appendix-D-1">For testing and learning about U-CBOR,
       there are currently a number of compatible
-      online tools (subject to availability...).<a href="#appendix-C-1" class="pilcrow">¶</a></p>
-<span class="break"></span><dl class="dlNewline" id="appendix-C-2">
-        <dt id="appendix-C-2.1">Browser-based CBOR "playground":</dt>
-        <dd style="margin-left: 1.5em" id="appendix-C-2.2">https://cyberphone.github.io/CBOR.js/doc/playground.html<a href="#appendix-C-2.2" class="pilcrow">¶</a>
+      online tools (subject to availability...).<a href="#appendix-D-1" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlNewline" id="appendix-D-2">
+        <dt id="appendix-D-2.1">Browser-based CBOR "playground":</dt>
+        <dd style="margin-left: 1.5em" id="appendix-D-2.2">https://cyberphone.github.io/CBOR.js/doc/playground.html<a href="#appendix-D-2.2" class="pilcrow">¶</a>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-C-2.3">Server-based CBOR and <span>[<a href="#CSF" class="cite xref">CSF</a>]</span> test system:</dt>
-        <dd style="margin-left: 1.5em" id="appendix-C-2.4">https://test.webpki.org/csf-lab<a href="#appendix-C-2.4" class="pilcrow">¶</a>
+<dt id="appendix-D-2.3">Server-based CBOR and <span>[<a href="#CSF" class="cite xref">CSF</a>]</span> test system:</dt>
+        <dd style="margin-left: 1.5em" id="appendix-D-2.4">https://test.webpki.org/csf-lab<a href="#appendix-D-2.4" class="pilcrow">¶</a>
 </dd>
       <dd class="break"></dd>
 </dl>
 </section>
 </div>
 <div id="tools.implementations">
-<section id="appendix-D">
+<section id="appendix-E">
       <h2 id="name-compatible-implementations">
-<a href="#appendix-D" class="section-number selfRef">Appendix D. </a><a href="#name-compatible-implementations" class="section-name selfRef">Compatible Implementations</a>
+<a href="#appendix-E" class="section-number selfRef">Appendix E. </a><a href="#name-compatible-implementations" class="section-name selfRef">Compatible Implementations</a>
       </h2>
-<p id="appendix-D-1">For using CBOR/U in applications, there are
-      currently a number of compatible ibraries.<a href="#appendix-D-1" class="pilcrow">¶</a></p>
-<span class="break"></span><dl class="dlNewline" id="appendix-D-2">
-        <dt id="appendix-D-2.1">JavaScript-based implementation:</dt>
-        <dd style="margin-left: 1.5em" id="appendix-D-2.2">https://github.com/cyberphone/CBOR.js<a href="#appendix-D-2.2" class="pilcrow">¶</a>
+<p id="appendix-E-1">For using U-CBOR in applications, there are
+      currently a number of compatible ibraries.<a href="#appendix-E-1" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlNewline" id="appendix-E-2">
+        <dt id="appendix-E-2.1">JavaScript-based implementation:</dt>
+        <dd style="margin-left: 1.5em" id="appendix-E-2.2">https://github.com/cyberphone/CBOR.js<a href="#appendix-E-2.2" class="pilcrow">¶</a>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-D-2.3">Java-based implementation that also 
+<dt id="appendix-E-2.3">Java-based implementation that also 
         supports <span>[<a href="#CSF" class="cite xref">CSF</a>]</span> and <span>[<a href="#CEF" class="cite xref">CEF</a>]</span>:</dt>
-        <dd style="margin-left: 1.5em" id="appendix-D-2.4">https://github.com/cyberphone/openkeystore<a href="#appendix-D-2.4" class="pilcrow">¶</a>
+        <dd style="margin-left: 1.5em" id="appendix-E-2.4">https://github.com/cyberphone/openkeystore<a href="#appendix-E-2.4" class="pilcrow">¶</a>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-D-2.5">Android Java-based implementation that also 
+<dt id="appendix-E-2.5">Android Java-based implementation that also 
         supports <span>[<a href="#CSF" class="cite xref">CSF</a>]</span> and <span>[<a href="#CEF" class="cite xref">CEF</a>]</span>:</dt>
-        <dd style="margin-left: 1.5em" id="appendix-D-2.6">https://github.com/cyberphone/android-cbor<a href="#appendix-D-2.6" class="pilcrow">¶</a>
+        <dd style="margin-left: 1.5em" id="appendix-E-2.6">https://github.com/cyberphone/android-cbor<a href="#appendix-E-2.6" class="pilcrow">¶</a>
 </dd>
       <dd class="break"></dd>
 </dl>
 </section>
 </div>
+<div id="DocHistory">
+<section id="appendix-F">
+      <h2 id="name-document-history">
+<a href="#name-document-history" class="section-name selfRef">Document History</a>
+      </h2>
+<ul class="normal">
+<li class="normal" id="appendix-F-1.1">00. First cut.<a href="#appendix-F-1.1" class="pilcrow">¶</a>
+</li>
+        <li class="normal" id="appendix-F-1.2">01. Editorial.  Changed order of columns in invalid encoding.<a href="#appendix-F-1.2" class="pilcrow">¶</a>
+</li>
+        <li class="normal" id="appendix-F-1.3">02. Editorial.  "unwrapped" changed to "non-wrapped".<a href="#appendix-F-1.3" class="pilcrow">¶</a>
+</li>
+      </ul>
+</section>
+</div>
 <div id="Acknowledgements">
-<section id="appendix-E">
+<section id="appendix-G">
       <h2 id="name-acknowledgements">
 <a href="#name-acknowledgements" class="section-name selfRef">Acknowledgements</a>
       </h2>
-<p id="appendix-E-1">None at the time of writing 😸<a href="#appendix-E-1" class="pilcrow">¶</a></p>
+<p id="appendix-G-1">This work was inspired by a CBOR based project known as
+      <span>[<a href="#GordianEnvelope" class="cite xref">GordianEnvelope</a>]</span>, pioneered by Wolf McNally and Christopher Allen.
+      This project also exploits the ability to hash "raw" (non-wrapped) CBOR data, enabled by the use of a deterministic encoding scheme.<a href="#appendix-G-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="authors-addresses">
-<section id="appendix-F">
+<section id="appendix-H">
       <h2 id="name-authors-address">
 <a href="#name-authors-address" class="section-name selfRef">Author's Address</a>
       </h2>
