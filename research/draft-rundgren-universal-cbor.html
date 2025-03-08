@@ -16,8 +16,8 @@ mobile phones, and Web servers.
 To foster interoperability, deterministic encoding
 is mandated.  Furthermore, the document outlines how
 deterministic encoding combined with enhanced CBOR tools,
-can be used for cryptographic constructs that
-operate on "raw" (non-wrapped) CBOR data.
+enable cryptographic methods like signing and hashing,
+to optionally use "raw" (non-wrapped) CBOR data as input.
 This document mainly targets CBOR tool developers.
        
     ' name="description">
@@ -1273,8 +1273,8 @@ mobile phones, and Web servers.
 To foster interoperability, deterministic encoding
 is mandated.  Furthermore, the document outlines how
 deterministic encoding combined with enhanced CBOR tools,
-can be used for cryptographic constructs that
-operate on "raw" (non-wrapped) CBOR data.
+enable cryptographic methods like signing and hashing,
+to optionally use "raw" (non-wrapped) CBOR data as input.
 This document mainly targets CBOR tool developers.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <div id="status-of-memo">
@@ -1809,8 +1809,8 @@ provided by CBOR tools compliant with this specification:<a href="#section-2.3-2
 <ul class="normal">
 <li class="normal" id="section-2.3-3.1">
   It MUST be possible to <em>add</em>, <em>delete</em>, and
-  <em>update</em> the contents of CBOR <code>map</code> and <code>array</code> objects, of
-  decoded CBOR data.  Note: CBOR primitives MUST remain <em>immutable</em>.<a href="#section-2.3-3.1" class="pilcrow">¶</a>
+  <em>update</em> the contents of CBOR <code>map</code> and <code>array</code> objects,
+  of decoded CBOR data.  Note: CBOR primitives MUST remain <em>immutable</em>.<a href="#section-2.3-3.1" class="pilcrow">¶</a>
 </li>
           <li class="normal" id="section-2.3-3.2">
   It MUST be possible to <em>reserialize</em> decoded CBOR data,
@@ -1841,8 +1841,8 @@ like in this Chrome browser console example:<a href="#section-2.3-4" class="pilc
 <p id="section-2.3-6">
 How this separation actually is accomplished is out of scope for this specification.
 However, <em>encapsulation</em> of CBOR data in <em>high-level</em>, and
-<em>self-rendering objects</em>, represents a usable method.
-Similar approaches are used by most ASN.1 tools.
+<em>self-rendering objects</em>, represents an established method,
+featured in similar tools for ASN.1.
 The code in <a href="#example.code" class="auto internal xref">Appendix B.5</a> shows an example
 that <em>updates</em> and <em>reserializes</em> decoded CBOR data.<a href="#section-2.3-6" class="pilcrow">¶</a></p>
 </section>
