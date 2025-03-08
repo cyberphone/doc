@@ -1810,14 +1810,14 @@ provided by CBOR tools compliant with this specification:<a href="#section-2.3-2
 <li class="normal" id="section-2.3-3.1">
   It MUST be possible to <em>add</em>, <em>delete</em>, and
   <em>update</em> the contents of CBOR <code>map</code> and <code>array</code> objects, of
-  received and decoded CBOR data.  Note: CBOR primitives MUST remain <em>immutable</em>.<a href="#section-2.3-3.1" class="pilcrow">¶</a>
+  decoded CBOR data.  Note: CBOR primitives MUST remain <em>immutable</em>.<a href="#section-2.3-3.1" class="pilcrow">¶</a>
 </li>
           <li class="normal" id="section-2.3-3.2">
-  It MUST be possible to <em>reserialize</em> received CBOR data,
+  It MUST be possible to <em>reserialize</em> decoded CBOR data,
   be it updated or not.<a href="#section-2.3-3.2" class="pilcrow">¶</a>
 </li>
           <li class="normal" id="section-2.3-3.3">
-  Irrespective of if CBOR data was received, updated, or created 
+  Irrespective of if CBOR data was decoded, updated, or created 
   programmatically, deterministic encoding MUST be maintained.<a href="#section-2.3-3.3" class="pilcrow">¶</a>
 </li>
           <li class="normal" id="section-2.3-3.4">
