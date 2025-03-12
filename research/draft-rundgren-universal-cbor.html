@@ -1223,6 +1223,7 @@ li > p:last-of-type:only-child {
 <script type="application/javascript">async function addMetadata(){try{const e=document.styleSheets[0].cssRules;for(let t=0;t<e.length;t++)if(/#identifiers/.exec(e[t].selectorText)){const a=e[t].cssText.replace("#identifiers","#external-updates");document.styleSheets[0].insertRule(a,document.styleSheets[0].cssRules.length)}}catch(e){console.log(e)}const e=document.getElementById("external-metadata");if(e)try{var t,a="",o=function(e){const t=document.getElementsByTagName("meta");for(let a=0;a<t.length;a++)if(t[a].getAttribute("name")===e)return t[a].getAttribute("content");return""}("rfc.number");if(o){t="https://www.rfc-editor.org/rfc/rfc"+o+".json";try{const e=await fetch(t);a=await e.json()}catch(e){t=document.URL.indexOf("html")>=0?document.URL.replace(/html$/,"json"):document.URL+".json";const o=await fetch(t);a=await o.json()}}if(!a)return;e.style.display="block";const s="",d="https://datatracker.ietf.org/doc",n="https://datatracker.ietf.org/ipr/search",c="https://www.rfc-editor.org/info",l=a.doc_id.toLowerCase(),i=a.doc_id.slice(0,3).toLowerCase(),f=a.doc_id.slice(3).replace(/^0+/,""),u={status:"Status",obsoletes:"Obsoletes",obsoleted_by:"Obsoleted By",updates:"Updates",updated_by:"Updated By",see_also:"See Also",errata_url:"Errata"};let h="<dl style='overflow:hidden' id='external-updates'>";["status","obsoletes","obsoleted_by","updates","updated_by","see_also","errata_url"].forEach(e=>{if("status"==e){a[e]=a[e].toLowerCase();var t=a[e].split(" "),o=t.length,w="",p=1;for(let e=0;e<o;e++)p<o?w=w+r(t[e])+" ":w+=r(t[e]),p++;a[e]=w}else if("obsoletes"==e||"obsoleted_by"==e||"updates"==e||"updated_by"==e){var g,m="",b=1;g=a[e].length;for(let t=0;t<g;t++)a[e][t]&&(a[e][t]=String(a[e][t]).toLowerCase(),m=b<g?m+"<a href='"+s+"/rfc/".concat(a[e][t])+"'>"+a[e][t].slice(3)+"</a>, ":m+"<a href='"+s+"/rfc/".concat(a[e][t])+"'>"+a[e][t].slice(3)+"</a>",b++);a[e]=m}else if("see_also"==e){var y,L="",C=1;y=a[e].length;for(let t=0;t<y;t++)if(a[e][t]){a[e][t]=String(a[e][t]);var _=a[e][t].slice(0,3),v=a[e][t].slice(3).replace(/^0+/,"");L=C<y?"RFC"!=_?L+"<a href='"+s+"/info/"+_.toLowerCase().concat(v.toLowerCase())+"'>"+_+" "+v+"</a>, ":L+"<a href='"+s+"/info/"+_.toLowerCase().concat(v.toLowerCase())+"'>"+v+"</a>, ":"RFC"!=_?L+"<a href='"+s+"/info/"+_.toLowerCase().concat(v.toLowerCase())+"'>"+_+" "+v+"</a>":L+"<a href='"+s+"/info/"+_.toLowerCase().concat(v.toLowerCase())+"'>"+v+"</a>",C++}a[e]=L}else if("errata_url"==e){var R="";R=a[e]?R+"<a href='"+a[e]+"'>Errata exist</a> | <a href='"+d+"/"+l+"'>Datatracker</a>| <a href='"+n+"/?"+i+"="+f+"&submit="+i+"'>IPR</a> | <a href='"+c+"/"+l+"'>Info page</a>":"<a href='"+d+"/"+l+"'>Datatracker</a> | <a href='"+n+"/?"+i+"="+f+"&submit="+i+"'>IPR</a> | <a href='"+c+"/"+l+"'>Info page</a>",a[e]=R}""!=a[e]?"Errata"==u[e]?h+=`<dt>More info:</dt><dd>${a[e]}</dd>`:h+=`<dt>${u[e]}:</dt><dd>${a[e]}</dd>`:"Errata"==u[e]&&(h+=`<dt>More info:</dt><dd>${a[e]}</dd>`)}),h+="</dl>",e.innerHTML=h}catch(e){console.log(e)}else console.log("Could not locate metadata <div> element");function r(e){return e.charAt(0).toUpperCase()+e.slice(1)}}window.removeEventListener("load",addMetadata),window.addEventListener("load",addMetadata);</script>
 </head>
 <body class="xml2rfc">
+<img src="editors-copy.png" style="position:absolute;z-index:-1;width:30em">
 <script src="metadata.min.js"></script>
 <table class="ears">
 <thead><tr>
@@ -1232,7 +1233,7 @@ li > p:last-of-type:only-child {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Rundgren</td>
-<td class="center">Expires 9 September 2025</td>
+<td class="center">Expires 13 September 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1245,12 +1246,12 @@ li > p:last-of-type:only-child {
 <dd class="internet-draft">draft-rundgren-universal-cbor-03</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-03-08" class="published">8 March 2025</time>
+<time datetime="2025-03-12" class="published">12 March 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-09-09">9 September 2025</time></dd>
+<dd class="expires"><time datetime="2025-09-13">13 September 2025</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
@@ -1296,7 +1297,7 @@ This document mainly targets CBOR tool developers.<a href="#section-abstract-1" 
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 9 September 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 13 September 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1709,8 +1710,10 @@ CBOR major type 0 and 1 objects.  See also <a href="#ucbor.integers" class="auto
               <p id="section-2.1.1-3.3.1">
 Some platforms do not natively support <code>float32</code> and/or <code>float16</code>.
 In this case a hypothetical <code>getFloat16()</code> would
-need to use a bigger floating-point type for the return value.  
-Range checking SHOULD be performed.<a href="#section-2.1.1-3.3.1" class="pilcrow">¶</a></p>
+need to use a bigger floating-point type for the return value.<a href="#section-2.1.1-3.3.1" class="pilcrow">¶</a></p>
+<p id="section-2.1.1-3.3.2">
+Note that a hypothetical <code>getFloat16()</code> MUST <em>reject</em> encountered
+<code>Float32</code> and <code>Float64</code> objects.  See also <a href="#legacy.systems" class="auto internal xref">Appendix C</a>.<a href="#section-2.1.1-3.3.2" class="pilcrow">¶</a></p>
 </li>
           </ol>
 <p id="section-2.1.1-4">
@@ -1729,9 +1732,10 @@ for dealing with 64-bit integers.<a href="#section-2.1.1-4" class="pilcrow">¶</
 <a href="#section-2.2" class="section-number selfRef">2.2. </a><a href="#name-deterministic-encoding-sche" class="section-name selfRef">Deterministic Encoding Scheme</a>
         </h3>
 <p id="section-2.2-1">
-The U-CBOR encoding scheme adheres to <span><a href="https://rfc-editor.org/rfc/rfc8949#section-4.2" class="relref">Section 4.2</a> of [<a href="#RFC8949" class="cite xref">RFC8949</a>]</span>,
+In U-CBOR deterministic encoding is <em>mandatory</em>.
+The encoding scheme adheres to <span><a href="https://rfc-editor.org/rfc/rfc8949#section-4.2" class="relref">Section 4.2</a> of [<a href="#RFC8949" class="cite xref">RFC8949</a>]</span>,
 but adds a few constraints (denoted by RFC+), where the RFC offers choices.
-The deterministic encoding rules are as follows:<a href="#section-2.2-1" class="pilcrow">¶</a></p>
+The following list contains a summary of the U-CBOR deterministic encoding rules:<a href="#section-2.2-1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-2.2-2.1">
 RFC+: Floating point and integer objects MUST be treated as <em>distinct types</em>
@@ -1775,16 +1779,16 @@ Somewhat surprisingly the following represents a properly sorted map:<a href="#s
 </div>
 </li>
           <li class="normal" id="section-2.2-2.5">
-RFC+: Since CBOR encoding according to this specification
-maintains type and data uniqueness, there are no specific restrictions or
+RFC+: Since CBOR encodings according to this specification
+maintain uniqueness, there are no specific restrictions or
 tests needed in order to determine map key equivalence.
-As an example, the floating-point numbers <code>0.0</code> and
+As an (extreme) example, the floating-point numbers <code>0.0</code> and
 <code>-0.0</code>, and the integer number <code>0</code>
-represent the distinct keys
+could represent the distinct keys
 <code>f90000</code>, <code>f98000</code>, and <code>00</code> respectively.<a href="#section-2.2-2.5" class="pilcrow">¶</a>
 </li>
           <li class="normal" id="section-2.2-2.6">
-RFC+: Indefinite length objects MUST be <em>rejected</em>.<a href="#section-2.2-2.6" class="pilcrow">¶</a>
+RFC: Indefinite length objects MUST be <em>rejected</em>.<a href="#section-2.2-2.6" class="pilcrow">¶</a>
 </li>
         </ul>
 </section>
@@ -1833,9 +1837,9 @@ since the latter may not always <em>reserialize</em> as expected,
 like in this Chrome browser console example:<a href="#section-2.3-4" class="pilcrow">¶</a></p>
 <div class="lang-cbor sourcecode" id="section-2.3-5">
 <pre>
-&gt; let date = new Date('2025-03-02T13:08:55.0001Z');
+&gt; let date = new Date('2025-03-02T13:08:55.0001+03:00');
 &gt; date.toISOString()
-'2025-03-02T13:08:55.000Z'
+'2025-03-02T10:08:55.000Z'
 </pre><a href="#section-2.3-5" class="pilcrow">¶</a>
 </div>
 <p id="section-2.3-6">
@@ -1863,6 +1867,10 @@ that <em>updates</em> and <em>reserializes</em> decoded CBOR data.<a href="#sect
 <a href="#section-4" class="section-number selfRef">4. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
       </h2>
 <p id="section-4-1">All is good 😸<a href="#section-4-1" class="pilcrow">¶</a></p>
+<p id="section-4-2">U-CBOR does not introduce security issues beyond
+      what is already applicable to  <span>[<a href="#RFC8949" class="cite xref">RFC8949</a>]</span>.
+      Applications may certainly add security issues, but these are
+      out of scope for this specification.<a href="#section-4-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <section id="section-5">
@@ -1929,6 +1937,10 @@ that <em>updates</em> and <em>reserializes</em> decoded CBOR data.<a href="#sect
         <dd>
 <span class="refAuthor">Rundgren, A.</span>, <span class="refTitle">"CBOR Encryption Format (CEF)"</span>, <span>&lt;<a href="https://cyberphone.github.io/javaapi/org/webpki/cbor/doc-files/encryption.html">https://cyberphone.github.io/javaapi/org/webpki/cbor/doc-files/encryption.html</a>&gt;</span>. </dd>
 <dd class="break"></dd>
+<dt id="COTX">[COTX]</dt>
+        <dd>
+<span class="refAuthor">Rundgren, A.</span>, <span class="refTitle">"CBOR Object Type Extension (COTX)"</span>, <span>&lt;<a href="https://www.ietf.org/archive/id/draft-rundgren-cotx-04.html">https://www.ietf.org/archive/id/draft-rundgren-cotx-04.html</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="CONSTR">[CONSTR]</dt>
         <dd>
 <span class="refTitle">"D-CBOR for Constrained Devices"</span>, <span>&lt;<a href="https://github.com/cyberphone/D-CBOR/blob/main/d-cbor-4-constrained-devices.md">https://github.com/cyberphone/D-CBOR/blob/main/d-cbor-4-constrained-devices.md</a>&gt;</span>. </dd>
@@ -1941,6 +1953,22 @@ that <em>updates</em> and <em>reserializes</em> decoded CBOR data.<a href="#sect
         <dd>
 <span class="refTitle">"CBOR.js - CBOR for JavaScript"</span>, <span>&lt;<a href="https://github.com/cyberphone/CBOR.js">https://github.com/cyberphone/CBOR.js</a>&gt;</span>. </dd>
 <dd class="break"></dd>
+<dt id="CSF-LAB">[CSF-LAB]</dt>
+        <dd>
+<span class="refTitle">"Online CBOR and CSF test tool"</span>, <span>&lt;<a href="https://test.webpki.org/csf-lab">https://test.webpki.org/csf-lab</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="PLAYGROUND">[PLAYGROUND]</dt>
+        <dd>
+<span class="refTitle">"Online CBOR testing tool"</span>, <span>&lt;<a href="https://cyberphone.github.io/CBOR.js/doc/playground.html">https://cyberphone.github.io/CBOR.js/doc/playground.html</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="OPENKEYSTORE">[OPENKEYSTORE]</dt>
+        <dd>
+<span class="refTitle">"Java library supporting JSON, CBOR, and Crypto"</span>, <span>&lt;<a href="https://github.com/cyberphone/openkeystore">https://github.com/cyberphone/openkeystore</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="ANDROID-CBOR">[ANDROID-CBOR]</dt>
+        <dd>
+<span class="refTitle">"Android/Java library supporting CBOR and Crypto"</span>, <span>&lt;<a href="https://github.com/cyberphone/android-cbor">https://github.com/cyberphone/android-cbor</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="OPENAPI">[OPENAPI]</dt>
         <dd>
 <span class="refTitle">"The OpenAPI Initiative"</span>, <span>&lt;<a href="https://openapis.org/">https://openapis.org/</a>&gt;</span>. </dd>
@@ -1949,9 +1977,13 @@ that <em>updates</em> and <em>reserializes</em> decoded CBOR data.<a href="#sect
         <dd>
 <span class="refAuthor">Sporny (et al), M.</span>, <span class="refTitle">"Verifiable Credential Data Integrity 1.0"</span>, <time datetime="2025" class="refDate">2025</time>, <span>&lt;<a href="https://www.w3.org/TR/vc-data-integrity/">https://www.w3.org/TR/vc-data-integrity/</a>&gt;</span>. </dd>
 <dd class="break"></dd>
+<dt id="CBOR.ME">[CBOR.ME]</dt>
+        <dd>
+<span class="refAuthor">Bormann, C.</span>, <span class="refTitle">"Online CBOR testing tool"</span>, <span>&lt;<a href="https://cbor.me/">https://cbor.me/</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="ECMASCRIPT">[ECMASCRIPT]</dt>
         <dd>
-<span class="refAuthor">Ecma International</span>, <span class="refTitle">"ECMAScript 2020 Language Specification"</span>, <span class="refContent">Standard ECMA-262, 11th Edition</span>, <time datetime="2020-06" class="refDate">June 2020</time>, <span>&lt;<a href="https://www.ecma-international.org/publications/standards/Ecma-262.htm">https://www.ecma-international.org/publications/standards/Ecma-262.htm</a>&gt;</span>. </dd>
+<span class="refAuthor">Ecma International</span>, <span class="refTitle">"ECMAScript® 2024 Language Specification"</span>, <span class="refContent">Standard ECMA-262, 15th Edition</span>, <time datetime="2024-06" class="refDate">June 2024</time>, <span>&lt;<a href="https://www.ecma-international.org/publications/standards/Ecma-262.htm">https://www.ecma-international.org/publications/standards/Ecma-262.htm</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="GORDIAN">[GORDIAN]</dt>
       <dd>
@@ -2786,9 +2818,24 @@ correct representation of <span>[<a href="#IEEE754" class="cite xref">IEEE754</a
 <li class="normal" id="appendix-B-3.1">Keeping the <em>structure</em> of the original (unsigned) data intact,
         by simply making signatures an additional attribute.<a href="#appendix-B-3.1" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="appendix-B-3.2">Permitting signing CBOR data and associated security
+        <li class="normal" id="appendix-B-3.2">
+          <p id="appendix-B-3.2.1">
+        Enabling top-level, <em>object identifiers</em> 
+        to become a part of the signed data as well:<a href="#appendix-B-3.2.1" class="pilcrow">¶</a></p>
+<div class="lang-cbor sourcecode" id="appendix-B-3.2.2">
+<pre>
+123456789({       # CBOR tag object
+  1: "data",
+  2: "more data",
+  3: «signature covering the entire object»
+})</pre><a href="#appendix-B-3.2.2" class="pilcrow">¶</a>
+</div>
+<p id="appendix-B-3.2.3">
+See also <span>[<a href="#COTX" class="cite xref">COTX</a>]</span>.<a href="#appendix-B-3.2.3" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="appendix-B-3.3">Permitting signing CBOR data and associated security
         attributes (aka "headers"), <em>in one go</em>, without
-        having to wrap data in CBOR "bstr" objects.<a href="#appendix-B-3.2" class="pilcrow">¶</a>
+        having to wrap data in CBOR "bstr" objects.<a href="#appendix-B-3.3" class="pilcrow">¶</a>
 </li>
       </ul>
 <p id="appendix-B-4">Enveloped signatures are for example featured in Verified Credentials 
@@ -2996,28 +3043,31 @@ let object = CBOR.Map()
 ////////////////////////////////////////
 // Add a signature to the CBOR object //
 ////////////////////////////////////////
-const COSE_ALG = 5;                                // Selected algorithm
+const COSE_ALG = 5;                                // Selected HMAC algorithm
 
-let csf = CBOR.Map()                               // Create CSF container
-    .set(CSF_ALG_LBL, CBOR.Int(COSE_ALG));         // Add algorithm
+let csf = CBOR.Map()                               // Create CSF container and
+    .set(CSF_ALG_LBL, CBOR.Int(COSE_ALG));         // add COSE algorithm to it
 object.set(APP_CSF_LBL, csf);                      // Add CSF container to object
-// Generate signature and add it to the CSF container
-csf.set(CSF_SIG_LBL, CBOR.Bytes(hmac(COSE_ALG, SHARED_KEY, object.encode())));
-let cborBinary = object.encode();                  // Uint8Array
+let sig = hmac(COSE_ALG,                           // Generate signature over
+               SHARED_KEY,                         // the current object
+               object.encode());                   // encode(): all we got so far
+csf.set(CSF_SIG_LBL, CBOR.Bytes(sig));             // Add signature to CSF container
+let cborBinary = object.encode();                  // Return CBOR as an Uint8Array
 
 console.log(object.toString());                    // Show in Diagnostic Notation
 
 /////////////////////////////////////
 // Validate the signed CBOR object //
 /////////////////////////////////////
-object = CBOR.decode(cborBinary);                  // Decode
+object = CBOR.decode(cborBinary);                  // Decode CBOR object
 csf = object.get(APP_CSF_LBL);                     // Get CSF container
 let alg = csf.get(CSF_ALG_LBL).getInt();           // Get COSE algorithm
-let sig = csf.remove(CSF_SIG_LBL).getBytes();      // Get and remove signature value
-let res = hmac(alg, SHARED_KEY, object.encode());  // Note that object.encode()
-                                                   // reserializes all but sig.
-if (CBOR.compareArrays(res, sig)) {
-    throw "Didn't validate";
+let readSig = csf.remove(CSF_SIG_LBL).getBytes();  // Get and REMOVE signature value
+let actualSig = hmac(alg,                          // Calculate signature over
+                     SHARED_KEY,                   // the current object
+                     object.encode());             // encode(): all but the signature
+if (CBOR.compareArrays(readSig, actualSig)) {      // HMAC validation
+    throw "Signature did not validate";
 }
 // Validated object, access the "payload":
 let p1 = object.get(APP_P1_LBL).getString();       // p1 should now contain "data"</pre><a href="#appendix-B.5-2" class="pilcrow">¶</a>
@@ -3069,16 +3119,13 @@ See also <a href="#ucbor.invalid" class="auto internal xref">Appendix A.3</a>.<a
 <p id="appendix-D-1">For testing and learning about U-CBOR,
       there are currently a number of compatible
       online tools (subject to availability...).<a href="#appendix-D-1" class="pilcrow">¶</a></p>
-<span class="break"></span><dl class="dlNewline" id="appendix-D-2">
-        <dt id="appendix-D-2.1">Browser-based CBOR "playground":</dt>
-        <dd style="margin-left: 1.5em" id="appendix-D-2.2">https://cyberphone.github.io/CBOR.js/doc/playground.html<a href="#appendix-D-2.2" class="pilcrow">¶</a>
-</dd>
-        <dd class="break"></dd>
-<dt id="appendix-D-2.3">Server-based CBOR and <span>[<a href="#CSF" class="cite xref">CSF</a>]</span> test system:</dt>
-        <dd style="margin-left: 1.5em" id="appendix-D-2.4">https://test.webpki.org/csf-lab<a href="#appendix-D-2.4" class="pilcrow">¶</a>
-</dd>
-      <dd class="break"></dd>
-</dl>
+<ul class="normal">
+<li class="normal" id="appendix-D-2.1">Browser-based CBOR "playground": <span>[<a href="#PLAYGROUND" class="cite xref">PLAYGROUND</a>]</span><a href="#appendix-D-2.1" class="pilcrow">¶</a>
+</li>
+        <li class="normal" id="appendix-D-2.2">Server-based CBOR and <span>[<a href="#CSF" class="cite xref">CSF</a>]</span> 
+        test system: <span>[<a href="#CSF-LAB" class="cite xref">CSF-LAB</a>]</span><a href="#appendix-D-2.2" class="pilcrow">¶</a>
+</li>
+      </ul>
 </section>
 </div>
 <div id="tools.implementations">
@@ -3088,22 +3135,17 @@ See also <a href="#ucbor.invalid" class="auto internal xref">Appendix A.3</a>.<a
       </h2>
 <p id="appendix-E-1">For using U-CBOR in applications, there are
       currently a number of compatible ibraries.<a href="#appendix-E-1" class="pilcrow">¶</a></p>
-<span class="break"></span><dl class="dlNewline" id="appendix-E-2">
-        <dt id="appendix-E-2.1">JavaScript-based implementation:</dt>
-        <dd style="margin-left: 1.5em" id="appendix-E-2.2">https://github.com/cyberphone/CBOR.js<a href="#appendix-E-2.2" class="pilcrow">¶</a>
-</dd>
-        <dd class="break"></dd>
-<dt id="appendix-E-2.3">Java-based implementation that also 
-        supports <span>[<a href="#CSF" class="cite xref">CSF</a>]</span> and <span>[<a href="#CEF" class="cite xref">CEF</a>]</span>:</dt>
-        <dd style="margin-left: 1.5em" id="appendix-E-2.4">https://github.com/cyberphone/openkeystore<a href="#appendix-E-2.4" class="pilcrow">¶</a>
-</dd>
-        <dd class="break"></dd>
-<dt id="appendix-E-2.5">Android Java-based implementation that also 
-        supports <span>[<a href="#CSF" class="cite xref">CSF</a>]</span> and <span>[<a href="#CEF" class="cite xref">CEF</a>]</span>:</dt>
-        <dd style="margin-left: 1.5em" id="appendix-E-2.6">https://github.com/cyberphone/android-cbor<a href="#appendix-E-2.6" class="pilcrow">¶</a>
-</dd>
-      <dd class="break"></dd>
-</dl>
+<ul class="normal">
+<li class="normal" id="appendix-E-2.1">JavaScript-based implementation supporting
+        browsers as well as <span>[<a href="#NODE.JS" class="cite xref">NODE.JS</a>]</span>: <span>[<a href="#CBOR.JS" class="cite xref">CBOR.JS</a>]</span><a href="#appendix-E-2.1" class="pilcrow">¶</a>
+</li>
+        <li class="normal" id="appendix-E-2.2">Java-based implementation that also 
+        supports <span>[<a href="#CSF" class="cite xref">CSF</a>]</span> and <span>[<a href="#CEF" class="cite xref">CEF</a>]</span>: <span>[<a href="#OPENKEYSTORE" class="cite xref">OPENKEYSTORE</a>]</span><a href="#appendix-E-2.2" class="pilcrow">¶</a>
+</li>
+        <li class="normal" id="appendix-E-2.3">Android Java-based implementation that also 
+        supports <span>[<a href="#CSF" class="cite xref">CSF</a>]</span> and <span>[<a href="#CEF" class="cite xref">CEF</a>]</span>: <span>[<a href="#ANDROID-CBOR" class="cite xref">ANDROID-CBOR</a>]</span><a href="#appendix-E-2.3" class="pilcrow">¶</a>
+</li>
+      </ul>
 </section>
 </div>
 <div id="DocHistory">
@@ -3123,6 +3165,8 @@ See also <a href="#ucbor.invalid" class="auto internal xref">Appendix A.3</a>.<a
 <p id="appendix-F-1.4.2">Tweaking the abstract.<a href="#appendix-F-1.4.2" class="pilcrow">¶</a></p>
 <p id="appendix-F-1.4.3">Updated code example to actually use crypto<a href="#appendix-F-1.4.3" class="pilcrow">¶</a></p>
 <p id="appendix-F-1.4.4">Platform Number Support sub-sction added.<a href="#appendix-F-1.4.4" class="pilcrow">¶</a></p>
+<p id="appendix-F-1.4.5">Updated Acknowledgements.<a href="#appendix-F-1.4.5" class="pilcrow">¶</a></p>
+<p id="appendix-F-1.4.6">Updated Security Considerations.<a href="#appendix-F-1.4.6" class="pilcrow">¶</a></p>
 </li>
       </ul>
 </section>
@@ -3135,6 +3179,9 @@ See also <a href="#ucbor.invalid" class="auto internal xref">Appendix A.3</a>.<a
 <p id="appendix-G-1">This work was inspired by a CBOR based project known as Gordian Envelope
       <span>[<a href="#GORDIAN" class="cite xref">GORDIAN</a>]</span>, pioneered by Wolf McNally and Christopher Allen.
       This project also exploits the ability to hash "raw" (non-wrapped) CBOR data, enabled by the use of a deterministic encoding scheme.<a href="#appendix-G-1" class="pilcrow">¶</a></p>
+<p id="appendix-G-2">For verifying the correctness of the encoding scheme, the <span>[<a href="#CBOR.ME" class="cite xref">CBOR.ME</a>]</span> 
+      on-line CBOR tool, by the <span>[<a href="#RFC8949" class="cite xref">RFC8949</a>]</span> author,
+      Carsten Bormann, proved to be invaluable.<a href="#appendix-G-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="authors-addresses">
