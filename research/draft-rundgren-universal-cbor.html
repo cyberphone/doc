@@ -1512,7 +1512,7 @@ used in <span>[<a href="#RFC8949" class="cite xref">RFC8949</a>]</span>.<a href=
 <thead>
             <tr>
               <th class="text-center" rowspan="1" colspan="1">CDDL</th>
-              <th class="text-center" rowspan="1" colspan="1">Note</th>
+              <th class="text-center" rowspan="1" colspan="1">Description</th>
             </tr>
           </thead>
           <tbody>
@@ -1778,7 +1778,7 @@ but adds a few constraints (denoted by RFC+), where the RFC offers choices.
 The following list contains a summary of the U-CBOR deterministic encoding rules:<a href="#section-2.2-1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-2.2-2.1">
-RFC+: Floating point and integer objects MUST be treated as <em>distinct types</em>
+RFC+: Floating-point and integer objects MUST be treated as <em>distinct types</em>
 regardless of their numeric value. This is compliant with
 Rule 2 in <span><a href="https://rfc-editor.org/rfc/rfc8949#section-4.2.2" class="relref">Section 4.2.2</a> of [<a href="#RFC8949" class="cite xref">RFC8949</a>]</span>.<a href="#section-2.2-2.1" class="pilcrow">¶</a>
 </li>
@@ -1794,11 +1794,11 @@ features a list of compliant integer sample values.<a href="#section-2.2-2.2.1" 
 </li>
           <li class="normal" id="section-2.2-2.3">
             <p id="section-2.2-2.3.1">
-RFC+: Floating point numbers MUST always use the shortest
+RFC+: Floating-point numbers MUST always use the shortest
 <span>[<a href="#IEEE754" class="cite xref">IEEE754</a>]</span> variant that
 preserves the precision of the original value.
 <a href="#ucbor.floats" class="auto internal xref">Appendix A.2</a>
-features a list of compliant floating point sample values.<a href="#section-2.2-2.3.1" class="pilcrow">¶</a></p>
+features a list of compliant floating-point sample values.<a href="#section-2.2-2.3.1" class="pilcrow">¶</a></p>
 <p id="section-2.2-2.3.2">
 Note that <code>NaN</code> "signaling" (like <code>f97e01</code>),
 MUST be <em>rejected</em>.<a href="#section-2.2-2.3.2" class="pilcrow">¶</a></p>
@@ -1871,10 +1871,9 @@ provided by CBOR tools compliant with this specification:<a href="#section-2.3-2
 </li>
         </ul>
 <p id="section-2.3-4">
-It is RECOMMENDED <em>separating</em> CBOR data and 
-application / platform-level data,
-since the latter may not always <em>reserialize</em> as expected,
-like in this Chrome browser console example:<a href="#section-2.3-4" class="pilcrow">¶</a></p>
+In practice this means that CBOR data and application / platform-level data,
+MUST be <em>separated</em> for cases where <em>reserialization</em>
+could present a problem, like in this Chrome browser console example:<a href="#section-2.3-4" class="pilcrow">¶</a></p>
 <div class="lang-cbor sourcecode" id="section-2.3-5">
 <pre>
 &gt; let date = new Date('2025-03-02T13:08:55.0001+03:00');
@@ -2294,7 +2293,7 @@ the serialization method for the <code>Number</code> data type,
 defined by <span>[<a href="#ECMASCRIPT" class="cite xref">ECMASCRIPT</a>]</span> with one change:
 to comply with diagnostic notation
 (section 8 of <span>[<a href="#RFC8949" class="cite xref">RFC8949</a>]</span>), all values are
-expressed as floating point numbers.
+expressed as floating-point numbers.
 The rationale for using <span>[<a href="#ECMASCRIPT" class="cite xref">ECMASCRIPT</a>]</span> serialization is
 because it supposed to generate the shortest and most
 correct representation of <span>[<a href="#IEEE754" class="cite xref">IEEE754</a>]</span> numbers.<a href="#appendix-A.2-2" class="pilcrow">¶</a></p>
