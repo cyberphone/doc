@@ -1223,7 +1223,7 @@ li > p:last-of-type:only-child {
 <script type="application/javascript">async function addMetadata(){try{const e=document.styleSheets[0].cssRules;for(let t=0;t<e.length;t++)if(/#identifiers/.exec(e[t].selectorText)){const a=e[t].cssText.replace("#identifiers","#external-updates");document.styleSheets[0].insertRule(a,document.styleSheets[0].cssRules.length)}}catch(e){console.log(e)}const e=document.getElementById("external-metadata");if(e)try{var t,a="",o=function(e){const t=document.getElementsByTagName("meta");for(let a=0;a<t.length;a++)if(t[a].getAttribute("name")===e)return t[a].getAttribute("content");return""}("rfc.number");if(o){t="https://www.rfc-editor.org/rfc/rfc"+o+".json";try{const e=await fetch(t);a=await e.json()}catch(e){t=document.URL.indexOf("html")>=0?document.URL.replace(/html$/,"json"):document.URL+".json";const o=await fetch(t);a=await o.json()}}if(!a)return;e.style.display="block";const s="",d="https://datatracker.ietf.org/doc",n="https://datatracker.ietf.org/ipr/search",c="https://www.rfc-editor.org/info",l=a.doc_id.toLowerCase(),i=a.doc_id.slice(0,3).toLowerCase(),f=a.doc_id.slice(3).replace(/^0+/,""),u={status:"Status",obsoletes:"Obsoletes",obsoleted_by:"Obsoleted By",updates:"Updates",updated_by:"Updated By",see_also:"See Also",errata_url:"Errata"};let h="<dl style='overflow:hidden' id='external-updates'>";["status","obsoletes","obsoleted_by","updates","updated_by","see_also","errata_url"].forEach(e=>{if("status"==e){a[e]=a[e].toLowerCase();var t=a[e].split(" "),o=t.length,w="",p=1;for(let e=0;e<o;e++)p<o?w=w+r(t[e])+" ":w+=r(t[e]),p++;a[e]=w}else if("obsoletes"==e||"obsoleted_by"==e||"updates"==e||"updated_by"==e){var g,m="",b=1;g=a[e].length;for(let t=0;t<g;t++)a[e][t]&&(a[e][t]=String(a[e][t]).toLowerCase(),m=b<g?m+"<a href='"+s+"/rfc/".concat(a[e][t])+"'>"+a[e][t].slice(3)+"</a>, ":m+"<a href='"+s+"/rfc/".concat(a[e][t])+"'>"+a[e][t].slice(3)+"</a>",b++);a[e]=m}else if("see_also"==e){var y,L="",C=1;y=a[e].length;for(let t=0;t<y;t++)if(a[e][t]){a[e][t]=String(a[e][t]);var _=a[e][t].slice(0,3),v=a[e][t].slice(3).replace(/^0+/,"");L=C<y?"RFC"!=_?L+"<a href='"+s+"/info/"+_.toLowerCase().concat(v.toLowerCase())+"'>"+_+" "+v+"</a>, ":L+"<a href='"+s+"/info/"+_.toLowerCase().concat(v.toLowerCase())+"'>"+v+"</a>, ":"RFC"!=_?L+"<a href='"+s+"/info/"+_.toLowerCase().concat(v.toLowerCase())+"'>"+_+" "+v+"</a>":L+"<a href='"+s+"/info/"+_.toLowerCase().concat(v.toLowerCase())+"'>"+v+"</a>",C++}a[e]=L}else if("errata_url"==e){var R="";R=a[e]?R+"<a href='"+a[e]+"'>Errata exist</a> | <a href='"+d+"/"+l+"'>Datatracker</a>| <a href='"+n+"/?"+i+"="+f+"&submit="+i+"'>IPR</a> | <a href='"+c+"/"+l+"'>Info page</a>":"<a href='"+d+"/"+l+"'>Datatracker</a> | <a href='"+n+"/?"+i+"="+f+"&submit="+i+"'>IPR</a> | <a href='"+c+"/"+l+"'>Info page</a>",a[e]=R}""!=a[e]?"Errata"==u[e]?h+=`<dt>More info:</dt><dd>${a[e]}</dd>`:h+=`<dt>${u[e]}:</dt><dd>${a[e]}</dd>`:"Errata"==u[e]&&(h+=`<dt>More info:</dt><dd>${a[e]}</dd>`)}),h+="</dl>",e.innerHTML=h}catch(e){console.log(e)}else console.log("Could not locate metadata <div> element");function r(e){return e.charAt(0).toUpperCase()+e.slice(1)}}window.removeEventListener("load",addMetadata),window.addEventListener("load",addMetadata);</script>
 </head>
 <body class="xml2rfc">
-<img src="editors-copy.png" style="position:absolute;z-index:-1;width:30em">
+ <img src="editors-copy.png" style="position:absolute;z-index:-1;width:30em">
 <script src="metadata.min.js"></script>
 <table class="ears">
 <thead><tr>
@@ -1391,19 +1391,24 @@ This document mainly targets CBOR tool developers.<a href="#section-abstract-1" 
             <p id="section-toc.1-1.7.1"><a href="#appendix-B" class="auto internal xref">Appendix B</a>.  <a href="#name-enveloped-signatures" class="internal xref">Enveloped Signatures</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.1">
-                <p id="section-toc.1-1.7.2.1.1"><a href="#appendix-B.1" class="auto internal xref">B.1</a>.  <a href="#name-unsigned-data" class="internal xref">Unsigned Data</a></p>
+                <p id="section-toc.1-1.7.2.1.1"><a href="#appendix-B.1" class="auto internal xref">B.1</a>.  <a href="#name-sample-signature" class="internal xref">Sample Signature</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.1.2.1">
+                    <p id="section-toc.1-1.7.2.1.2.1.1"><a href="#appendix-B.1.1" class="auto internal xref">B.1.1</a>.  <a href="#name-unsigned-data" class="internal xref">Unsigned Data</a></p>
+</li>
+                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.1.2.2">
+                    <p id="section-toc.1-1.7.2.1.2.2.1"><a href="#appendix-B.1.2" class="auto internal xref">B.1.2</a>.  <a href="#name-signature-process" class="internal xref">Signature Process</a></p>
+</li>
+                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.1.2.3">
+                    <p id="section-toc.1-1.7.2.1.2.3.1"><a href="#appendix-B.1.3" class="auto internal xref">B.1.3</a>.  <a href="#name-validation-process" class="internal xref">Validation Process</a></p>
+</li>
+                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.1.2.4">
+                    <p id="section-toc.1-1.7.2.1.2.4.1"><a href="#appendix-B.1.4" class="auto internal xref">B.1.4</a>.  <a href="#name-example-parameters" class="internal xref">Example Parameters</a></p>
+</li>
+                </ul>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.2">
-                <p id="section-toc.1-1.7.2.2.1"><a href="#appendix-B.2" class="auto internal xref">B.2</a>.  <a href="#name-signature-process" class="internal xref">Signature Process</a></p>
-</li>
-              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.3">
-                <p id="section-toc.1-1.7.2.3.1"><a href="#appendix-B.3" class="auto internal xref">B.3</a>.  <a href="#name-validation-process" class="internal xref">Validation Process</a></p>
-</li>
-              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.4">
-                <p id="section-toc.1-1.7.2.4.1"><a href="#appendix-B.4" class="auto internal xref">B.4</a>.  <a href="#name-example-parameters" class="internal xref">Example Parameters</a></p>
-</li>
-              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.5">
-                <p id="section-toc.1-1.7.2.5.1"><a href="#appendix-B.5" class="auto internal xref">B.5</a>.  <a href="#name-code-example" class="internal xref">Code Example</a></p>
+                <p id="section-toc.1-1.7.2.2.1"><a href="#appendix-B.2" class="auto internal xref">B.2</a>.  <a href="#name-code-example" class="internal xref">Code Example</a></p>
 </li>
             </ul>
 </li>
@@ -1886,7 +1891,7 @@ How this separation actually is accomplished is out of scope for this specificat
 However, <em>encapsulation</em> of CBOR data in <em>high-level</em>, and
 <em>self-rendering objects</em>, represents an established method,
 featured in similar tools for ASN.1.
-The code in <a href="#example.code" class="auto internal xref">Appendix B.5</a> shows an example
+The code in <a href="#example.code" class="auto internal xref">Appendix B.2</a> shows an example
 that <em>updates</em> and <em>reserializes</em> decoded CBOR data.<a href="#section-2.3-6" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -2897,73 +2902,76 @@ See also <span>[<a href="#COTX" class="cite xref">COTX</a>]</span>.<a href="#app
       rely on <em>canonicalization schemes</em> like JCS <span>[<a href="#RFC8785" class="cite xref">RFC8785</a>]</span>,
       that require specialized encoders and decoders, whereas U-CBOR works
       "straight out of the box".<a href="#appendix-B-4" class="pilcrow">¶</a></p>
-<p id="appendix-B-5">Although this specification is not "married" to any particular
-      signature schema, the example uses the CBOR Signature Format
+<div id="example.signature">
+<section id="appendix-B.1">
+        <h3 id="name-sample-signature">
+<a href="#appendix-B.1" class="section-number selfRef">B.1. </a><a href="#name-sample-signature" class="section-name selfRef">Sample Signature</a>
+        </h3>
+<p id="appendix-B.1-1">Although this specification is not "married" to any particular
+      signature schema, the following example uses the CBOR Signature Format
       <span>[<a href="#CSF" class="cite xref">CSF</a>]</span>.
       For the sake of simplicity, the example uses an HMAC
-      (see <a href="#example.parameters" class="auto internal xref">Appendix B.4</a>)
-      as signature algorithm.<a href="#appendix-B-5" class="pilcrow">¶</a></p>
+      (see <a href="#example.parameters" class="auto internal xref">Appendix B.1.4</a>)
+      as signature algorithm.<a href="#appendix-B.1-1" class="pilcrow">¶</a></p>
 <div id="example.unsigned">
-<section id="appendix-B.1">
-        <h3 id="name-unsigned-data">
-<a href="#appendix-B.1" class="section-number selfRef">B.1. </a><a href="#name-unsigned-data" class="section-name selfRef">Unsigned Data</a>
-        </h3>
-<p id="appendix-B.1-1">Imagine you have a CBOR map object like the following
-        that you want to sign:<a href="#appendix-B.1-1" class="pilcrow">¶</a></p>
-<div class="lang-cbor sourcecode" id="appendix-B.1-2">
+<section id="appendix-B.1.1">
+          <h4 id="name-unsigned-data">
+<a href="#appendix-B.1.1" class="section-number selfRef">B.1.1. </a><a href="#name-unsigned-data" class="section-name selfRef">Unsigned Data</a>
+          </h4>
+<p id="appendix-B.1.1-1">Imagine you have a CBOR map object like the following
+        that you want to sign:<a href="#appendix-B.1.1-1" class="pilcrow">¶</a></p>
+<div class="lang-cbor sourcecode" id="appendix-B.1.1-2">
 <pre>
 {
   1: "data",
   2: "more data"
-}</pre><a href="#appendix-B.1-2" class="pilcrow">¶</a>
+}</pre><a href="#appendix-B.1.1-2" class="pilcrow">¶</a>
 </div>
-<p id="appendix-B.1-3">Then continue to the next section 
-      (<a href="#example.signing" class="auto internal xref">Appendix B.2</a>)...<a href="#appendix-B.1-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="example.signing">
-<section id="appendix-B.2">
-        <h3 id="name-signature-process">
-<a href="#appendix-B.2" class="section-number selfRef">B.2. </a><a href="#name-signature-process" class="section-name selfRef">Signature Process</a>
-        </h3>
-<p id="appendix-B.2-1">This section describes the steps required for adding an
+<section id="appendix-B.1.2">
+          <h4 id="name-signature-process">
+<a href="#appendix-B.1.2" class="section-number selfRef">B.1.2. </a><a href="#name-signature-process" class="section-name selfRef">Signature Process</a>
+          </h4>
+<p id="appendix-B.1.2-1">This section describes the steps required for adding an
         enveloped signature to the CBOR map object in
-        <a href="#example.unsigned" class="auto internal xref">Appendix B.1</a>.<a href="#appendix-B.2-1" class="pilcrow">¶</a></p>
-<ol start="1" type="1" class="normal type-1" id="appendix-B.2-2">
-        <li id="appendix-B.2-2.1">Add an empty CSF container (a CBOR map) to the unsigned CBOR map
-        using an <em>application-defined</em> label (-1).<a href="#appendix-B.2-2.1" class="pilcrow">¶</a>
+        <a href="#example.unsigned" class="auto internal xref">Appendix B.1.1</a>.<a href="#appendix-B.1.2-1" class="pilcrow">¶</a></p>
+<ol start="1" type="1" class="normal type-1" id="appendix-B.1.2-2">
+        <li id="appendix-B.1.2-2.1">Add an empty CSF container (a CBOR map) to the unsigned CBOR map
+        using an <em>application-defined</em> label (-1).<a href="#appendix-B.1.2-2.1" class="pilcrow">¶</a>
 </li>
-          <li id="appendix-B.2-2.2">Add the designated signature algorithm to the
-        CSF container using the CSF algorithm label (1).<a href="#appendix-B.2-2.2" class="pilcrow">¶</a>
+            <li id="appendix-B.1.2-2.2">Add the designated signature algorithm to the
+        CSF container using the CSF algorithm label (1).<a href="#appendix-B.1.2-2.2" class="pilcrow">¶</a>
 </li>
-          <li id="appendix-B.2-2.3">
-            <em>Optional</em>. Add other signature meta data to the
-        CSF container. Not used in the example.<a href="#appendix-B.2-2.3" class="pilcrow">¶</a>
+            <li id="appendix-B.1.2-2.3">
+              <em>Optional</em>. Add other signature meta data to the
+        CSF container. Not used in the example.<a href="#appendix-B.1.2-2.3" class="pilcrow">¶</a>
 </li>
-          <li id="appendix-B.2-2.4">
-            <p id="appendix-B.2-2.4.1">Generate a signature by invoking a (hypothetical)
-        signature method with the following arguments:<a href="#appendix-B.2-2.4.1" class="pilcrow">¶</a></p>
+            <li id="appendix-B.1.2-2.4">
+              <p id="appendix-B.1.2-2.4.1">Generate a signature by invoking a (hypothetical)
+        signature method with the following arguments:<a href="#appendix-B.1.2-2.4.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="appendix-B.2-2.4.2.1">the designated signature key.<a href="#appendix-B.2-2.4.2.1" class="pilcrow">¶</a>
+<li class="normal" id="appendix-B.1.2-2.4.2.1">the designated signature key.<a href="#appendix-B.1.2-2.4.2.1" class="pilcrow">¶</a>
 </li>
-              <li class="normal" id="appendix-B.2-2.4.2.2">the designated signature algorithm.<a href="#appendix-B.2-2.4.2.2" class="pilcrow">¶</a>
+                <li class="normal" id="appendix-B.1.2-2.4.2.2">the designated signature algorithm.<a href="#appendix-B.1.2-2.4.2.2" class="pilcrow">¶</a>
 </li>
-              <li class="normal" id="appendix-B.2-2.4.2.3">the <em>deterministic encoding</em> of the
+                <li class="normal" id="appendix-B.1.2-2.4.2.3">the <em>deterministic encoding</em> of the
           current CBOR object in its <em>entirety</em>.
           In the example that would be 
           <code>a301646461746102696d6f7265206461746120a10105</code>,
-          if expressed in hex code.<a href="#appendix-B.2-2.4.2.3" class="pilcrow">¶</a>
+          if expressed in hex code.<a href="#appendix-B.1.2-2.4.2.3" class="pilcrow">¶</a>
 </li>
-            </ul>
+              </ul>
 </li>
-          <li id="appendix-B.2-2.5">Add the returned signature value to the CSF container
-        using the CSF signature label (6).<a href="#appendix-B.2-2.5" class="pilcrow">¶</a>
+            <li id="appendix-B.1.2-2.5">Add the returned signature value to the CSF container
+        using the CSF signature label (6).<a href="#appendix-B.1.2-2.5" class="pilcrow">¶</a>
 </li>
-        </ol>
-<p id="appendix-B.2-3">The result after the final step (using the parameters 
-        from <a href="#example.parameters" class="auto internal xref">Appendix B.4</a>), should
-        match the following CBOR object:<a href="#appendix-B.2-3" class="pilcrow">¶</a></p>
-<div class="lang-cbor sourcecode" id="appendix-B.2-4">
+          </ol>
+<p id="appendix-B.1.2-3">The result after the final step (using the parameters 
+        from <a href="#example.parameters" class="auto internal xref">Appendix B.1.4</a>), should
+        match the following CBOR object:<a href="#appendix-B.1.2-3" class="pilcrow">¶</a></p>
+<div class="lang-cbor sourcecode" id="appendix-B.1.2-4">
 <pre>
 {
   1: "data",
@@ -2972,37 +2980,37 @@ See also <span>[<a href="#COTX" class="cite xref">COTX</a>]</span>.<a href="#app
     1: 5,
     6: h'4853d7730cc1340682b1748dc346cf627a5e91ce62c67fff15c40257ed2a37a1'
   }
-}</pre><a href="#appendix-B.2-4" class="pilcrow">¶</a>
+}</pre><a href="#appendix-B.1.2-4" class="pilcrow">¶</a>
 </div>
-<p id="appendix-B.2-5">Note that the signature covers the <em>entire</em> CBOR object except for
-      the CSF signature value and label (6).<a href="#appendix-B.2-5" class="pilcrow">¶</a></p>
+<p id="appendix-B.1.2-5">Note that the signature covers the <em>entire</em> CBOR object except for
+      the CSF signature value and label (6).<a href="#appendix-B.1.2-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="example.validation">
-<section id="appendix-B.3">
-        <h3 id="name-validation-process">
-<a href="#appendix-B.3" class="section-number selfRef">B.3. </a><a href="#name-validation-process" class="section-name selfRef">Validation Process</a>
-        </h3>
-<p id="appendix-B.3-1">In order to validate the enveloped signature created in the
-        <a href="#example.signing" class="auto internal xref">Appendix B.2</a>,
-        the following steps are performed:<a href="#appendix-B.3-1" class="pilcrow">¶</a></p>
-<ol start="1" type="1" class="normal type-1" id="appendix-B.3-2">
-        <li id="appendix-B.3-2.1">
-            <p id="appendix-B.3-2.1.1">Fetch a <em>reference</em> to the CSF container using the
+<section id="appendix-B.1.3">
+          <h4 id="name-validation-process">
+<a href="#appendix-B.1.3" class="section-number selfRef">B.1.3. </a><a href="#name-validation-process" class="section-name selfRef">Validation Process</a>
+          </h4>
+<p id="appendix-B.1.3-1">In order to validate the enveloped signature created in the
+        <a href="#example.signing" class="auto internal xref">Appendix B.1.2</a>,
+        the following steps are performed:<a href="#appendix-B.1.3-1" class="pilcrow">¶</a></p>
+<ol start="1" type="1" class="normal type-1" id="appendix-B.1.3-2">
+        <li id="appendix-B.1.3-2.1">
+              <p id="appendix-B.1.3-2.1.1">Fetch a <em>reference</em> to the CSF container using the
         <em>application-defined</em> label (-1).
-        Next perform the following operations using the reference:<a href="#appendix-B.3-2.1.1" class="pilcrow">¶</a></p>
-<ol start="1" type="1" class="normal type-1" id="appendix-B.3-2.1.2">
-          <li id="appendix-B.3-2.1.2.1">Retrieve the signature algorithm using the CSF algorithm label (1).<a href="#appendix-B.3-2.1.2.1" class="pilcrow">¶</a>
+        Next perform the following operations using the reference:<a href="#appendix-B.1.3-2.1.1" class="pilcrow">¶</a></p>
+<ol start="1" type="1" class="normal type-1" id="appendix-B.1.3-2.1.2">
+          <li id="appendix-B.1.3-2.1.2.1">Retrieve the signature algorithm using the CSF algorithm label (1).<a href="#appendix-B.1.3-2.1.2.1" class="pilcrow">¶</a>
 </li>
-              <li id="appendix-B.3-2.1.2.2">Retrieve the signature value using the CSF algorithm label (6).<a href="#appendix-B.3-2.1.2.2" class="pilcrow">¶</a>
+                <li id="appendix-B.1.3-2.1.2.2">Retrieve the signature value using the CSF algorithm label (6).<a href="#appendix-B.1.3-2.1.2.2" class="pilcrow">¶</a>
 </li>
-              <li id="appendix-B.3-2.1.2.3">Remove the CSF algorithm label (6) and its associated value.<a href="#appendix-B.3-2.1.2.3" class="pilcrow">¶</a>
+                <li id="appendix-B.1.3-2.1.2.3">Remove the CSF algorithm label (6) and its associated value.<a href="#appendix-B.1.3-2.1.2.3" class="pilcrow">¶</a>
 </li>
-            </ol>
-<p id="appendix-B.3-2.1.3">Now we should have exactly the same CBOR object as we had <em>before</em>
-        step #4 in <a href="#example.signing" class="auto internal xref">Appendix B.2</a>.
-        That is:<a href="#appendix-B.3-2.1.3" class="pilcrow">¶</a></p>
-<div class="lang-cbor sourcecode" id="appendix-B.3-2.1.4">
+              </ol>
+<p id="appendix-B.1.3-2.1.3">Now we should have exactly the same CBOR object as we had <em>before</em>
+        step #4 in <a href="#example.signing" class="auto internal xref">Appendix B.1.2</a>.
+        That is:<a href="#appendix-B.1.3-2.1.3" class="pilcrow">¶</a></p>
+<div class="lang-cbor sourcecode" id="appendix-B.1.3-2.1.4">
 <pre>
 {
   1: "data",
@@ -3010,56 +3018,58 @@ See also <span>[<a href="#COTX" class="cite xref">COTX</a>]</span>.<a href="#app
   -1: {
     1: 5
   }
-}</pre><a href="#appendix-B.3-2.1.4" class="pilcrow">¶</a>
+}</pre><a href="#appendix-B.1.3-2.1.4" class="pilcrow">¶</a>
 </div>
 </li>
-          <li id="appendix-B.3-2.2">
-            <p id="appendix-B.3-2.2.1">Validate the signature data by invoking a (hypothetical)
-        signature validation method with the following arguments:<a href="#appendix-B.3-2.2.1" class="pilcrow">¶</a></p>
+            <li id="appendix-B.1.3-2.2">
+              <p id="appendix-B.1.3-2.2.1">Validate the signature data by invoking a (hypothetical)
+        signature validation method with the following arguments:<a href="#appendix-B.1.3-2.2.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="appendix-B.3-2.2.2.1">the designated signature key
-          (in the example taken from <a href="#example.parameters" class="auto internal xref">Appendix B.4</a>).<a href="#appendix-B.3-2.2.2.1" class="pilcrow">¶</a>
+<li class="normal" id="appendix-B.1.3-2.2.2.1">the designated signature key
+          (in the example taken from <a href="#example.parameters" class="auto internal xref">Appendix B.1.4</a>).<a href="#appendix-B.1.3-2.2.2.1" class="pilcrow">¶</a>
 </li>
-              <li class="normal" id="appendix-B.3-2.2.2.2">the signature algorithm retrieved in step #1.<a href="#appendix-B.3-2.2.2.2" class="pilcrow">¶</a>
+                <li class="normal" id="appendix-B.1.3-2.2.2.2">the signature algorithm retrieved in step #1.<a href="#appendix-B.1.3-2.2.2.2" class="pilcrow">¶</a>
 </li>
-              <li class="normal" id="appendix-B.3-2.2.2.3">the signature value retrieved in step #1.<a href="#appendix-B.3-2.2.2.3" class="pilcrow">¶</a>
+                <li class="normal" id="appendix-B.1.3-2.2.2.3">the signature value retrieved in step #1.<a href="#appendix-B.1.3-2.2.2.3" class="pilcrow">¶</a>
 </li>
-              <li class="normal" id="appendix-B.3-2.2.2.4">the <em>deterministic encoding</em> of the
-          current CBOR object in its <em>entirety</em>.<a href="#appendix-B.3-2.2.2.4" class="pilcrow">¶</a>
+                <li class="normal" id="appendix-B.1.3-2.2.2.4">the <em>deterministic encoding</em> of the
+          current CBOR object in its <em>entirety</em>.<a href="#appendix-B.1.3-2.2.2.4" class="pilcrow">¶</a>
 </li>
-            </ul>
+              </ul>
 </li>
-        </ol>
-<p id="appendix-B.3-3">Note: this is a "bare-bones" validation process, lacking the ruggedness
-        of a real-world implementation.<a href="#appendix-B.3-3" class="pilcrow">¶</a></p>
+          </ol>
+<p id="appendix-B.1.3-3">Note: this is a "bare-bones" validation process, lacking the ruggedness
+        of a real-world implementation.<a href="#appendix-B.1.3-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="example.parameters">
-<section id="appendix-B.4">
-        <h3 id="name-example-parameters">
-<a href="#appendix-B.4" class="section-number selfRef">B.4. </a><a href="#name-example-parameters" class="section-name selfRef">Example Parameters</a>
-        </h3>
-<p id="appendix-B.4-1">The signature and validation processes depend on the
+<section id="appendix-B.1.4">
+          <h4 id="name-example-parameters">
+<a href="#appendix-B.1.4" class="section-number selfRef">B.1.4. </a><a href="#name-example-parameters" class="section-name selfRef">Example Parameters</a>
+          </h4>
+<p id="appendix-B.1.4-1">The signature and validation processes depend on the
         COSE <span>[<a href="#RFC9053" class="cite xref">RFC9053</a>]</span> algorithm "HMAC 256/256" and an
-        associated 256-bit key, here provided in hex code:<a href="#appendix-B.4-1" class="pilcrow">¶</a></p>
-<div class="lang-any sourcecode" id="appendix-B.4-2">
+        associated 256-bit key, here provided in hex code:<a href="#appendix-B.1.4-1" class="pilcrow">¶</a></p>
+<div class="lang-any sourcecode" id="appendix-B.1.4-2">
 <pre>
-7fdd851a3b9d2dafc5f0d00030e22b9343900cd42ede4948568a4a2ee655291a</pre><a href="#appendix-B.4-2" class="pilcrow">¶</a>
+7fdd851a3b9d2dafc5f0d00030e22b9343900cd42ede4948568a4a2ee655291a</pre><a href="#appendix-B.1.4-2" class="pilcrow">¶</a>
+</div>
+</section>
 </div>
 </section>
 </div>
 <div id="example.code">
-<section id="appendix-B.5">
+<section id="appendix-B.2">
         <h3 id="name-code-example">
-<a href="#appendix-B.5" class="section-number selfRef">B.5. </a><a href="#name-code-example" class="section-name selfRef">Code Example</a>
+<a href="#appendix-B.2" class="section-number selfRef">B.2. </a><a href="#name-code-example" class="section-name selfRef">Code Example</a>
         </h3>
-<p id="appendix-B.5-1">Using a JavaScript implementation <span>[<a href="#CBOR.JS" class="cite xref">CBOR.JS</a>]</span>
+<p id="appendix-B.2-1">Using a JavaScript implementation <span>[<a href="#CBOR.JS" class="cite xref">CBOR.JS</a>]</span>
         of U-CBOR, together with Node.js
         <span>[<a href="#NODE.JS" class="cite xref">NODE.JS</a>]</span>,
         basic signature creation and validation supporting
-        the example in  <a href="#example.unsigned" class="auto internal xref">Appendix B.1</a>,
-        could be performed by the following code:<a href="#appendix-B.5-1" class="pilcrow">¶</a></p>
-<div class="breakable lang-javascript sourcecode" id="appendix-B.5-2">
+        the example in  <a href="#example.signature" class="auto internal xref">Appendix B.1</a>,
+        could be performed by the following code:<a href="#appendix-B.2-1" class="pilcrow">¶</a></p>
+<div class="breakable lang-javascript sourcecode" id="appendix-B.2-2">
 <pre>
 // hmac.mjs
 import CBOR from 'cbor-object';
@@ -3123,11 +3133,11 @@ if (CBOR.compareArrays(readSig, actualSig)) {      // HMAC validation
     throw "Signature did not validate";
 }
 // Validated object, access the "payload":
-let p1 = object.get(APP_P1_LBL).getString();       // p1 should now contain "data"</pre><a href="#appendix-B.5-2" class="pilcrow">¶</a>
+let p1 = object.get(APP_P1_LBL).getString();       // p1 should now contain "data"</pre><a href="#appendix-B.2-2" class="pilcrow">¶</a>
 </div>
-<p id="appendix-B.5-3">
+<p id="appendix-B.2-3">
 Note that this code depends heavily on the CBOR tool features
-outlined in <a href="#ucbor.tools" class="auto internal xref">Section 2.3</a>.<a href="#appendix-B.5-3" class="pilcrow">¶</a></p>
+outlined in <a href="#ucbor.tools" class="auto internal xref">Section 2.3</a>.<a href="#appendix-B.2-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
