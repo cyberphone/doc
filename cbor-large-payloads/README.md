@@ -1,7 +1,7 @@
-# CBOR + Large attached fike
+# CBOR + Large attached file
 This repository shows how you can combine CBOR sequences with a large attached file without embedding the file in CBOR.  That is, using as little RAM as possible.
 
-Prerequiste: a CBOR decoder being able to read a single CBOR object while leaving the rest of the input-stream untouched.  Using the Java implementation of CBOR::Core this works out of the box.
+Prerequisite: a CBOR decoder being able to read a single CBOR object while leaving the rest of the input-stream untouched.  Using the Java implementation of [CBOR::Core](https://www.ietf.org/archive/id/draft-rundgren-cbor-core-24.html) this works out of the box.
 
 CBOR file in diagnostic notation:
 ```cbor
@@ -13,9 +13,91 @@ CBOR file in diagnostic notation:
 ```
 Encoded, this is furnished in the file `metadata.cbor`
 
-The concatnation of `metadata.cbor` and `shanty-the-cat.jpg` in is stored in a file called `payload.bin`.
+The concatnation of `metadata.cbor` and `shanty-the-cat.jpg` is subsequently stored in a file called `payload.bin`.
 
-The sample code below show how `payload.bin` could be processed by a receiver:
-```cbor
+The sample code below shows how `payload.bin` could be processed by a receiver:
+```java
+// test.java
 
+import java.io.IOException;
+import java.io.InputStream;
+
+import java.net.URI;
+
+import java.util.HexFormat;
+import java.util.Arrays;
+
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.net.http.HttpResponse.BodyHandlers;
+
+import java.security.MessageDigest;
+
+import org.webpki.cbor.CBORDecoder;
+import org.webpki.cbor.CBORMap;
+import org.webpki.cbor.CBORString;
+
+
+public class test {
+
+  static final CBORString FILE_KEY = new CBORString("file");
+  static final CBORString SHA256_KEY = new CBORString("sha256");
+
+  static final int BUFFER_SIZE = 1024;
+
+  public static void main(String[] args) {
+    byte[] sha256 = HexFormat.of().parseHex("08d1440f4bf1e12b6e6815eaa636a573f1cac6d046a8bd517c32e22b6df0ec96");
+    try {
+      // Perform an HTTP request and get a stream to the returned body.
+      HttpRequest request = HttpRequest.newBuilder()
+        .uri(new URI("https://cyberphone.github.io/doc/cbor-large-payloads/payload.bin"))
+         .GET()
+        .build();
+      HttpResponse<InputStream> response = HttpClient.newBuilder()
+        .build()
+        .send(request, BodyHandlers.ofInputStream());
+      InputStream inputStream = response.body();
+
+      // Begin by reading and decoding the CBOR metadata.
+      CBORMap metaData = new CBORDecoder(inputStream, 
+                                         CBORDecoder.SEQUENCE_MODE,
+                                         10000).decodeWithOptions().getMap();
+
+      // The rest of the payload is assumed to hold the attached file.
+      // Initialize the SHA256 digest system.
+      MessageDigest hashFunction = MessageDigest.getInstance("SHA256");
+
+      // Now read (in modest chunks), the potentially very large payload.
+      byte[] buffer = new byte[BUFFER_SIZE];
+      int byteCount = 0;
+      for (int n; (n = inputStream.read(buffer)) > 0; byteCount += n) {
+        // Each chunk updates the SHA256 calculation.
+        hashFunction.update(buffer, 0, n);
+        /////////////////////////////////////////////////////////////////////////////////////
+        // Here you are supposed to store the chunk but that is out of scope for the demo. //
+        /////////////////////////////////////////////////////////////////////////////////////
+      }
+      inputStream.close();
+    
+      // All is read, now get the completed digest.
+      byte[] calculatedSha256 = hashFunction.digest();
+      // Verify the hash.
+      if (Arrays.compare(calculatedSha256, metaData.get(SHA256_KEY).getBytes()) != 0) {
+        // Oops!
+        throw new IOException("Failed on SHA256");
+      }
+
+      // We actually did it!
+      System.out.printf("\nSuccessfully received: %s (%d)\n", metaData.get(FILE_KEY).getString(), byteCount);
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+}
+
+```
+If all is good the result should be:
+```
+Successfully received: shanty-the-cat.jpg (2239423)
 ```
