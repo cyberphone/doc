@@ -105,3 +105,5 @@ Successfully received: shanty-the-cat.jpg (2239423)
 
 ## Other solutions
 Server-based attachments may also be be provided as URLs.
+
+Yet another approach is outlined in https://www.rfc-editor.org/rfc/rfc9277#appendix-D
