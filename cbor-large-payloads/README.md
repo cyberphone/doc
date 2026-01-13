@@ -52,7 +52,7 @@ public class test {
       // Perform an HTTP request and get a stream to the returned body.
       HttpRequest request = HttpRequest.newBuilder()
         .uri(new URI("https://cyberphone.github.io/doc/cbor-large-payloads/payload.bin"))
-         .GET()
+        .GET()
         .build();
       HttpResponse<InputStream> response = HttpClient.newBuilder()
         .build()
@@ -101,3 +101,6 @@ If all is good the result should be:
 ```
 Successfully received: shanty-the-cat.jpg (2239423)
 ```
+
+## Other solutions
+Server-based attachments may also be be provided as URLs.
