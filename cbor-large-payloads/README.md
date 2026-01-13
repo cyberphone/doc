@@ -75,7 +75,7 @@ public class test {
       // Initialize the SHA256 digest system.
       MessageDigest hashFunction = MessageDigest.getInstance("SHA256");
 
-      // Now read (in modest chunks), the potentially very large payload.
+      // Now read (in modest chunks), the potentially large attached file.
       byte[] buffer = new byte[BUFFER_SIZE];
       int byteCount = 0;
       for (int n; (n = inputStream.read(buffer)) > 0; byteCount += n) {
