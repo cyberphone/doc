@@ -13,7 +13,14 @@ CBOR file in diagnostic notation:
 ```
 Encoded, this is furnished in the file `metadata.cbor`
 
-The concatnation of `metadata.cbor` and `shanty-the-cat.jpg` is subsequently stored in a file called `payload.bin`.
+The concatnation of `metadata.cbor` and `shanty-the-cat.jpg` is subsequently stored in a file called `payload.bin`:
+```
+|--------------------|
+|   CBOR meta-data   |
+|--------------------|
+|    attached file   |
+|--------------------|
+```
 
 The sample code below shows how `payload.bin` could be processed by a receiver:
 ```java
