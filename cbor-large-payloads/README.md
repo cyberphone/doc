@@ -54,7 +54,6 @@ public class test {
   static final int BUFFER_SIZE = 1024;
 
   public static void main(String[] args) {
-    byte[] sha256 = HexFormat.of().parseHex("08d1440f4bf1e12b6e6815eaa636a573f1cac6d046a8bd517c32e22b6df0ec96");
     try {
       // Perform an HTTP request and get a stream to the returned body.
       HttpRequest request = HttpRequest.newBuilder()
