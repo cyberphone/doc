@@ -84,13 +84,14 @@ public class test {
       byte[] calculatedSha256 = hashFunction.digest();
       // Verify the hash.
       if (Arrays.compare(calculatedSha256, metaData.get(SHA256_KEY).getBytes()) != 0) {
-        // Oops!
         throw new IOException("Failed on SHA256");
       }
 
       // We actually did it!
       System.out.printf("\nSuccessfully received: %s (%d)\n", metaData.get(FILE_KEY).getString(), byteCount);
+
     } catch (Exception e) {
+      // Something is wrong...
       e.printStackTrace();
     }
   }
