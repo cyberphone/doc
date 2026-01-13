@@ -1,7 +1,7 @@
 # CBOR + Large attached file
-This repository shows how you can combine CBOR with large attached files without embedding the files in CBOR.  That is, using as little RAM as possible.
+This repository shows how you can combine CBOR with large attached files without embedding the files in CBOR.  The primary goal is to use as little RAM as possible.
 
-Prerequisite: a CBOR decoder being able to read a CBOR object from an _input stream_, while leaving the remaing part of the stream untouched.  Using the Java implementation of [CBOR::Core](https://www.ietf.org/archive/id/draft-rundgren-cbor-core-24.html) this works out of the box.
+Prerequisite: a CBOR decoder being able to read a CBOR object from an _input stream_, while leaving the remaing part of the stream _untouched_.  Using the Java implementation of [CBOR::Core](https://www.ietf.org/archive/id/draft-rundgren-cbor-core-24.html), this works out of the box.
 
 CBOR file in diagnostic notation:
 ```cbor
