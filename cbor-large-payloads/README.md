@@ -1,7 +1,7 @@
 # CBOR + Large attached file
 This repository shows how you can combine CBOR sequences with a large attached file without embedding the file in CBOR.  That is, using as little RAM as possible.
 
-Prerequisite: a CBOR decoder being able to read a single CBOR object while leaving the rest of the input-stream untouched.  Using the Java implementation of [CBOR::Core](https://www.ietf.org/archive/id/draft-rundgren-cbor-core-24.html) this works out of the box.
+Prerequisite: a CBOR decoder being able to read a single CBOR object from a _single input stream_, while leaving the remaing part of the stream untouched.  Using the Java implementation of [CBOR::Core](https://www.ietf.org/archive/id/draft-rundgren-cbor-core-24.html) this works out of the box.
 
 CBOR file in diagnostic notation:
 ```cbor
