@@ -18,7 +18,7 @@ The concatnation of `metadata.cbor` and `shanty-the-cat.jpg` is subsequently sto
 |--------------------|
 |   CBOR meta-data   |
 |--------------------|
-|    attached file   |
+|   attached file    |
 |--------------------|
 ```
 
