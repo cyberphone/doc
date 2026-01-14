@@ -81,9 +81,9 @@ public class test {
       for (int n; (n = inputStream.read(buffer)) > 0; byteCount += n) {
         // Each chunk updates the SHA256 calculation.
         hashFunction.update(buffer, 0, n);
-        /////////////////////////////////////////////////////////////////////////////////////
-        // Here you are supposed to store the chunk but that is out of scope for the demo. //
-        /////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////
+        // Store the chunk in an application-specific way. //
+        /////////////////////////////////////////////////////
       }
       inputStream.close();
     
